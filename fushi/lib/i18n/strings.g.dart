@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74086 (4358 per locale)
+/// Strings: 75446 (4438 per locale)
 ///
-/// Built on 2026-09-06 at 19:59 UTC
+/// Built on 2026-09-07 at 11:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4059,7 +4059,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_scrape_status_interrupted => 'Interrupted';
   String get video_source_scrape_locale => 'Metadata language';
   String get video_source_scrape_locale_hint =>
-      'Preferred language for titles, summaries and images';
+      'Preferred language for TMDB fallback and supplementary details. MAL uses the titles and text supplied by MAL.';
   String get video_source_scrape_confirmation_title => 'Confirm metadata match';
   String get video_source_scrape_confirmation_hint =>
       'Multiple exact matches were found. Choose the correct work to save its provider binding.';
@@ -4930,10 +4930,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_style_title => 'Dictionary styling';
   String get video_source_scrape_anidb_client => 'AniDB client name';
   String get video_source_scrape_anidb_client_hint =>
-      'Registered AniDB HTTP API client name; leave blank to use the cached title catalog only';
+      'Fushi includes a registered app client. Leave this blank normally; set a custom registered client only if needed.';
   String get video_source_scrape_anidb_client_version => 'AniDB client version';
   String get video_source_scrape_anidb_client_version_hint =>
-      'Positive version registered with AniDB; HTTP API stays disabled until both fields are valid';
+      'Only custom clients need their own registered version here. Fushi maintains the default app identity; your personal AniDB login is still required.';
   String get video_scrape_view_source => 'View source details';
   String get video_setting_auto_scrape_hint =>
       'Automatically identify and fetch video metadata after library scans';
@@ -6026,6 +6026,124 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  String get onboarding_pack_download_discard => 'Discard download';
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  String get download_task_group_by => 'Group by';
+  String get download_task_group_none => 'No grouping';
+  String get download_task_group_collection => 'Collection / series';
+  String get download_task_group_kind => 'Media type';
+  String get download_task_group_status => 'Status';
+  String get download_task_collection_unassigned => 'No collection';
+  String get download_task_groups_collapse => 'Collapse all groups';
+  String get download_task_groups_expand => 'Expand all groups';
+  String get download_task_sort_direction => 'Reverse sort order';
+  String get download_task_status_attention => 'Needs attention';
+  String get download_task_status_active => 'In progress';
+  String get download_task_status_filter => 'Task status';
+  String get video_source_scrape_background_hint =>
+      'Tasks continue when this window is closed.';
+  String get video_source_scrape_queue_cancel_all => 'Cancel all tasks';
+  String get video_source_scrape_queue_waiting => 'Queued';
+  String get video_source_scrape_queue_remove => 'Remove from queue';
+  String get video_source_scrape_queue_submitted => 'Submitted';
+  String get video_source_scrape_pending_empty =>
+      'No works need manual matching.';
+  String get video_source_scrape_list_load_failed =>
+      'Could not load this list. Try again.';
+  String get video_source_scrape_list_reload => 'Reload';
+  String get video_source_scrape_manual_current_work => 'Current work';
+  String get video_source_scrape_manual_query_hint =>
+      'Search by title, or select MAL / TMDB movie / TMDB TV and enter an ID or official URL. Select a result to apply it to the current work.';
+  String get video_source_scrape_manual_id_invalid =>
+      'Enter a positive work ID or an official URL matching the selected source and type.';
+  String get video_source_scrape_manual_by_title => 'By title';
+  String get video_source_scrape_manual_by_id => 'Work ID';
+  String get video_source_grouping_mode => 'Video organization';
+  String get video_source_grouping_folder => 'By folder';
+  String get video_source_grouping_series => 'By work';
+  String get video_source_grouping_folder_hint =>
+      'Create one collection per first-level subfolder. Files directly in the selected folder share a collection. Metadata scraping is unavailable in this mode; switch to By work to scrape.';
+  String get video_source_grouping_series_hint =>
+      'Recognize works and episodes from filenames, then match metadata.';
+  String get video_source_grouping_change_hint =>
+      'The next scan uses this setting. Existing collections and metadata are kept.';
+  String get video_source_scrape_manual_ambiguous =>
+      'Several works have this title. Open the pending works tab and select the specific item to match.';
+  String get video_source_scrape_pending_tab => 'Unmatched';
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB movie';
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB TV';
+  String get video_source_scrape_provider_policy =>
+      'MAL (via Jikan) is the primary metadata source; TMDB is the fallback.';
+  String get video_anidb_hash_enabled => 'Identify files with AniDB ED2K';
+  String get video_anidb_hash_hint =>
+      'Requires an AniDB account and a registered client. Uploads only file size and hash. AniDB UDP login is unencrypted; enable only on a trusted network.';
+  String get video_anidb_username => 'AniDB username';
+  String get video_anidb_password => 'AniDB password';
+  String get onboarding_online_services_title => 'Online services (optional)';
+  String get onboarding_online_services_hint =>
+      'Explore accounts, API keys and available services';
+  String get onboarding_online_services_body =>
+      'Set up only the services you need, or skip this step. Selecting this tutorial does not enable services or submit credentials, and leaving it unselected does not change existing settings.';
+  String get onboarding_online_services_configure =>
+      'Open online service settings';
+  String get onboarding_online_services_link =>
+      'Open official account / API page';
+  String get onboarding_online_services_account => 'Personal account required';
+  String get onboarding_online_services_ready => 'No registration required';
+  String get onboarding_online_services_embedded => 'App credentials included';
+  String get onboarding_online_services_key => 'API key required';
+  String get onboarding_online_services_build_missing =>
+      'App credentials missing in this build';
+  String get onboarding_online_services_server => 'Connect an existing server';
+  String get onboarding_online_services_anidb =>
+      'Identify anime and episodes by file fingerprint. Fushi has a registered app client; you still need your own AniDB account. Enter it in settings and enable file hash identification when wanted.';
+  String get onboarding_online_services_public =>
+      'MAL / Jikan provides metadata; AniList supports discovery and related queries. Public read-only queries need no personal account or API key.';
+  String get onboarding_online_services_tmdb =>
+      'This build includes a TMDB key for metadata fallback and missing fields. Add your own key only if you want your own quota.';
+  String get onboarding_online_services_tmdb_missing =>
+      'This build has no TMDB key. Request an API key and enter it in settings if you need TMDB metadata fallback; MAL / Jikan remains available.';
+  String get onboarding_online_services_jimaku =>
+      'Find subtitles. Register or sign in to Jimaku, generate a personal API key on your account page, then enter it in settings and enable this subtitle source.';
+  String get onboarding_online_services_opensubtitles =>
+      'Find and download subtitles. Register an account, create an API consumer and obtain an API key. User login is optional and uses the account download quota.';
+  String get onboarding_online_services_dandanplay =>
+      'This build includes the danmaku service app credentials. Users do not need to apply for an API; enable online danmaku matching when wanted.';
+  String get onboarding_online_services_dandanplay_missing =>
+      'This build has no danmaku app credentials, so official online matching is unavailable. The developer provides these credentials; you do not need to register a personal API.';
+  String get onboarding_online_services_servers =>
+      'These services have no shared registration page. Enter your existing server address and the account or key provided by its administrator, or skip if you do not have a server.';
+  String get video_online_services_setup_title =>
+      'Configure optional online services';
+  String get video_online_services_setup_description =>
+      'Optional accounts and API keys can improve video identification and subtitle search. Basic playback works without them.';
+  String get video_online_services_setup_register =>
+      'Learn about and register services';
+  String get video_online_services_setup_settings => 'Open settings';
+  String get video_online_services_setup_dismiss => 'Never show again';
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'The app API key is included. You can optionally sign in to your OpenSubtitles account for your download allowance, or use your own API key.';
+  String get video_opensubtitles_app_key_hint =>
+      'Leave blank to use the bundled app API key.';
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -12929,7 +13047,7 @@ class _StringsAr extends _StringsEn {
   String get video_source_scrape_locale => 'لغة البيانات الوصفية';
   @override
   String get video_source_scrape_locale_hint =>
-      'اللغة المفضلة للعناوين والملخصات والصور';
+      'اللغة المفضلة لبيانات TMDB البديلة والتفاصيل التكميلية. يستخدم MAL العناوين والنصوص الأصلية التي يوفّرها.';
   @override
   String get video_source_scrape_confirmation_title =>
       'تأكيد مطابقة البيانات الوصفية';
@@ -14423,12 +14541,12 @@ class _StringsAr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'اسم عميل AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'اسم عميل AniDB HTTP API المسجّل؛ اتركه فارغاً لاستخدام كتالوج العناوين المخزّن فقط';
+      'يتضمن Fushi عميل تطبيق مسجّلاً. اترك هذا الحقل فارغًا عادةً؛ حدّد عميلاً مسجّلاً مخصصًا عند الحاجة فقط.';
   @override
   String get video_source_scrape_anidb_client_version => 'إصدار عميل AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'إصدار موجب مسجّل لدى AniDB؛ تبقى HTTP API معطّلة حتى يكون كلا الحقلين صالحين';
+      'العملاء المخصصون فقط يحتاجون إلى إدخال إصدارهم المسجّل هنا. يتولى Fushi إدارة هوية التطبيق الافتراضية؛ وما زلت بحاجة إلى بيانات دخول حسابك الشخصي في AniDB.';
   @override
   String get video_scrape_view_source => 'عرض تفاصيل المصدر';
   @override
@@ -16237,6 +16355,206 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'تستمر المهام بعد إغلاق هذه النافذة.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'إلغاء جميع المهام';
+  @override
+  String get video_source_scrape_queue_waiting => 'في قائمة الانتظار';
+  @override
+  String get video_source_scrape_queue_remove => 'إزالة من قائمة الانتظار';
+  @override
+  String get video_source_scrape_queue_submitted => 'تم الإرسال';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'لا توجد أعمال تحتاج إلى مطابقة يدوية.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'تعذّر تحميل هذه القائمة. حاول مرة أخرى.';
+  @override
+  String get video_source_scrape_list_reload => 'إعادة التحميل';
+  @override
+  String get video_source_scrape_manual_current_work => 'العمل الحالي';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'ابحث بالعنوان، أو اختر MAL أو أفلام TMDB أو مسلسلات TMDB وأدخل المعرّف أو الرابط الرسمي. اختر نتيجة لتطبيقها على العمل الحالي.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'أدخل معرّف عمل صحيحًا موجبًا أو رابطًا رسميًا يطابق المصدر والنوع المحدّدين.';
+  @override
+  String get video_source_scrape_manual_by_title => 'حسب العنوان';
+  @override
+  String get video_source_scrape_manual_by_id => 'معرّف العمل';
+  @override
+  String get video_source_grouping_mode => 'تنظيم الفيديوهات';
+  @override
+  String get video_source_grouping_folder => 'حسب المجلد';
+  @override
+  String get video_source_grouping_series => 'حسب العمل';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'يُنشأ تجميع لكل مجلد فرعي من المستوى الأول. وتُجمع الملفات الموجودة مباشرة في المجلد المحدد في تجميع واحد. لا يتوفر جلب البيانات الوصفية في هذا الوضع؛ انتقل إلى «حسب العمل» لجلبها.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'سيستخدم الفحص التالي هذا الإعداد. ستُحفظ التجميعات والبيانات الوصفية الحالية.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'توجد عدة أعمال بهذا العنوان. افتح تبويب الأعمال المعلّقة واختر العنصر المحدد لمطابقته.';
+  @override
+  String get video_source_scrape_pending_tab => 'غير مطابق';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'أفلام TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'مسلسلات TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (عبر Jikan) هو المصدر الرئيسي للبيانات الوصفية؛ وTMDB هو المصدر البديل.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'التعرّف على الملفات باستخدام AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'يتطلب حساب AniDB وعميلاً مسجّلاً. يُرسل حجم الملف وقيمة التجزئة فقط. تسجيل الدخول إلى AniDB عبر UDP غير مشفّر؛ فعّل هذه الميزة على شبكة موثوقة فقط.';
+  @override
+  String get video_anidb_username => 'اسم مستخدم AniDB';
+  @override
+  String get video_anidb_password => 'كلمة مرور AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'الخدمات عبر الإنترنت (اختيارية)';
+  @override
+  String get onboarding_online_services_hint =>
+      'تعرّف على الحسابات ومفاتيح API والخدمات المتاحة';
+  @override
+  String get onboarding_online_services_body =>
+      'أعدّ الخدمات التي تحتاجها فقط، أو تخطّ هذه الخطوة. اختيار هذا الدليل لا يفعّل الخدمات ولا يرسل بيانات الدخول، وعدم اختياره لا يغيّر الإعدادات الحالية.';
+  @override
+  String get onboarding_online_services_configure =>
+      'فتح إعدادات الخدمات عبر الإنترنت';
+  @override
+  String get onboarding_online_services_link => 'فتح صفحة الحساب / API الرسمية';
+  @override
+  String get onboarding_online_services_account => 'يتطلب حسابًا شخصيًا';
+  @override
+  String get onboarding_online_services_ready => 'لا يتطلب التسجيل';
+  @override
+  String get onboarding_online_services_embedded =>
+      'بيانات اعتماد التطبيق مضمّنة';
+  @override
+  String get onboarding_online_services_key => 'يتطلب مفتاح API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'بيانات اعتماد التطبيق غير متوفرة في هذا الإصدار';
+  @override
+  String get onboarding_online_services_server => 'الاتصال بخادم موجود';
+  @override
+  String get onboarding_online_services_anidb =>
+      'التعرّف على الأنمي والحلقات باستخدام بصمة الملف. لدى Fushi عميل تطبيق مسجّل؛ لكنك ما زلت بحاجة إلى حساب AniDB خاص بك. أدخله في الإعدادات وفعّل التعرّف على الملفات بالتجزئة عندما تريد.';
+  @override
+  String get onboarding_online_services_public =>
+      'يوفّر MAL / Jikan البيانات الوصفية؛ ويدعم AniList الاستكشاف والاستعلامات ذات الصلة. الاستعلامات العامة للقراءة فقط لا تتطلب حسابًا شخصيًا أو مفتاح API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'يتضمن هذا الإصدار مفتاح TMDB للبيانات الوصفية البديلة والحقول الناقصة. أضف مفتاحك الخاص فقط إذا أردت استخدام حصتك الخاصة.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'لا يتضمن هذا الإصدار مفتاح TMDB. اطلب مفتاح API وأدخله في الإعدادات إذا احتجت إلى TMDB كمصدر بديل للبيانات الوصفية؛ ويظل MAL / Jikan متاحًا.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'البحث عن الترجمات. سجّل أو ادخل إلى Jimaku، وأنشئ مفتاح API شخصيًا من صفحة حسابك، ثم أدخله في الإعدادات وفعّل مصدر الترجمات هذا.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'البحث عن الترجمات وتنزيلها. سجّل حسابًا، وأنشئ تطبيقًا لاستخدام API للحصول على مفتاح API. تسجيل دخول المستخدم اختياري ويتيح استخدام حصة التنزيل الخاصة بالحساب.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'يتضمن هذا الإصدار بيانات اعتماد التطبيق لخدمة التعليقات المتحركة. لا يحتاج المستخدمون إلى طلب API؛ فعّل مطابقة التعليقات المتحركة عبر الإنترنت عندما تريد.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'لا يتضمن هذا الإصدار بيانات اعتماد تطبيق التعليقات المتحركة، لذا فإن المطابقة الرسمية عبر الإنترنت غير متاحة. يوفّر المطوّر هذه البيانات؛ ولا تحتاج إلى تسجيل API شخصي.';
+  @override
+  String get onboarding_online_services_servers =>
+      'لا توجد صفحة تسجيل موحّدة لهذه الخدمات. أدخل عنوان خادمك الموجود والحساب أو المفتاح الذي يقدّمه مسؤول الخادم، أو تخطّ هذه الخطوة إن لم يكن لديك خادم.';
+  @override
+  String get video_online_services_setup_title =>
+      'إعداد الخدمات الاختيارية عبر الإنترنت';
+  @override
+  String get video_online_services_setup_description =>
+      'يمكن للحسابات ومفاتيح API الاختيارية تحسين التعرّف على الفيديو والبحث عن الترجمات. يعمل التشغيل الأساسي بدونها.';
+  @override
+  String get video_online_services_setup_register =>
+      'التعرّف على الخدمات والتسجيل فيها';
+  @override
+  String get video_online_services_setup_settings => 'فتح الإعدادات';
+  @override
+  String get video_online_services_setup_dismiss => 'عدم العرض مجددًا';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'مفتاح API الخاص بالتطبيق مضمّن. يمكنك اختياريًا تسجيل الدخول إلى حسابك في OpenSubtitles لاستخدام حصة التنزيل الشخصية، أو استخدام مفتاح API الخاص بك.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'اتركه فارغًا لاستخدام مفتاح API المضمّن في التطبيق.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -23291,7 +23609,7 @@ class _StringsDe extends _StringsEn {
   String get video_source_scrape_locale => 'Metadatensprache';
   @override
   String get video_source_scrape_locale_hint =>
-      'Bevorzugte Sprache für Titel, Zusammenfassungen und Bilder';
+      'Bevorzugte Sprache für TMDB-Ersatzdaten und ergänzende Details. MAL verwendet die von MAL bereitgestellten Titel und Originaltexte.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Metadaten-Abgleich bestätigen';
@@ -24826,12 +25144,12 @@ class _StringsDe extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB-Clientname';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Registrierter AniDB-HTTP-API-Clientname; leer lassen, um nur den zwischengespeicherten Titelkatalog zu verwenden';
+      'Fushi enthält einen registrierten App-Client. Normalerweise leer lassen; nur bei Bedarf einen eigenen registrierten Client angeben.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB-Clientversion';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Positive, bei AniDB registrierte Version; die HTTP-API bleibt deaktiviert, bis beide Felder gültig sind';
+      'Nur eigene Clients benötigen hier ihre registrierte Version. Fushi verwaltet die standardmäßige App-Identität; deine persönlichen AniDB-Zugangsdaten sind weiterhin erforderlich.';
   @override
   String get video_scrape_view_source => 'Quelldetails anzeigen';
   @override
@@ -26672,6 +26990,209 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Die Aufgaben laufen nach dem Schließen dieses Fensters weiter.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Alle Aufgaben abbrechen';
+  @override
+  String get video_source_scrape_queue_waiting => 'In Warteschlange';
+  @override
+  String get video_source_scrape_queue_remove => 'Aus Warteschlange entfernen';
+  @override
+  String get video_source_scrape_queue_submitted => 'Übermittelt';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Keine Werke müssen manuell zugeordnet werden.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Diese Liste konnte nicht geladen werden. Bitte erneut versuchen.';
+  @override
+  String get video_source_scrape_list_reload => 'Neu laden';
+  @override
+  String get video_source_scrape_manual_current_work => 'Aktuelles Werk';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Nach Titel suchen oder MAL, TMDB-Film bzw. TMDB-Serie auswählen und eine ID oder offizielle URL eingeben. Ein Ergebnis auswählen, um es auf das aktuelle Werk anzuwenden.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Eine positive ganzzahlige Werk-ID oder eine offizielle URL eingeben, die zur gewählten Quelle und zum Typ passt.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Nach Titel';
+  @override
+  String get video_source_scrape_manual_by_id => 'Werk-ID';
+  @override
+  String get video_source_grouping_mode => 'Videos organisieren';
+  @override
+  String get video_source_grouping_folder => 'Nach Ordner';
+  @override
+  String get video_source_grouping_series => 'Nach Werk';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Für jeden direkten Unterordner wird eine Sammlung erstellt. Dateien direkt im ausgewählten Ordner bilden eine gemeinsame Sammlung. In diesem Modus können keine Metadaten abgerufen werden. Dafür zu „Nach Werk“ wechseln.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Der nächste Scan verwendet diese Einstellung. Vorhandene Sammlungen und Metadaten bleiben erhalten.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Mehrere Werke haben diesen Titel. Öffne den Tab für ausstehende Werke und wähle den konkreten Eintrag zur Zuordnung aus.';
+  @override
+  String get video_source_scrape_pending_tab => 'Nicht zugeordnet';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB-Film';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB-Serie';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (über Jikan) ist die primäre Metadatenquelle; TMDB dient als Ersatz.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'Dateien mit AniDB ED2K identifizieren';
+  @override
+  String get video_anidb_hash_hint =>
+      'Erfordert ein AniDB-Konto und einen registrierten Client. Überträgt nur Dateigröße und Hash. Die AniDB-Anmeldung über UDP ist unverschlüsselt; nur in einem vertrauenswürdigen Netzwerk aktivieren.';
+  @override
+  String get video_anidb_username => 'AniDB-Benutzername';
+  @override
+  String get video_anidb_password => 'AniDB-Passwort';
+  @override
+  String get onboarding_online_services_title => 'Onlinedienste (optional)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Konten, API-Schlüssel und verfügbare Dienste kennenlernen';
+  @override
+  String get onboarding_online_services_body =>
+      'Richte nur die benötigten Dienste ein oder überspringe diesen Schritt. Die Auswahl dieser Anleitung aktiviert keine Dienste und übermittelt keine Zugangsdaten. Ohne Auswahl bleiben vorhandene Einstellungen unverändert.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Einstellungen für Onlinedienste öffnen';
+  @override
+  String get onboarding_online_services_link =>
+      'Offizielle Konto-/API-Seite öffnen';
+  @override
+  String get onboarding_online_services_account =>
+      'Persönliches Konto erforderlich';
+  @override
+  String get onboarding_online_services_ready =>
+      'Keine Registrierung erforderlich';
+  @override
+  String get onboarding_online_services_embedded =>
+      'App-Zugangsdaten enthalten';
+  @override
+  String get onboarding_online_services_key => 'API-Schlüssel erforderlich';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'App-Zugangsdaten fehlen in diesem Build';
+  @override
+  String get onboarding_online_services_server =>
+      'Vorhandenen Server verbinden';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Anime und Folgen anhand des Dateifingerabdrucks identifizieren. Fushi hat einen registrierten App-Client; du benötigst weiterhin ein eigenes AniDB-Konto. Trage es in den Einstellungen ein und aktiviere bei Bedarf die Dateierkennung per Hash.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan liefert Metadaten; AniList unterstützt Entdecken und zugehörige Abfragen. Öffentliche Leseabfragen benötigen weder ein persönliches Konto noch einen API-Schlüssel.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Dieser Build enthält einen TMDB-Schlüssel für Ersatzdaten und fehlende Felder. Trage nur dann einen eigenen Schlüssel ein, wenn du dein eigenes Kontingent nutzen möchtest.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Dieser Build enthält keinen TMDB-Schlüssel. Beantrage einen API-Schlüssel und trage ihn in den Einstellungen ein, wenn du TMDB als Ersatzquelle benötigst. MAL / Jikan bleibt verfügbar.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Untertitel suchen. Registriere dich bei Jimaku oder melde dich an, erstelle auf deiner Kontoseite einen persönlichen API-Schlüssel, trage ihn in den Einstellungen ein und aktiviere diese Untertitelquelle.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Untertitel suchen und herunterladen. Registriere ein Konto, erstelle einen API-Consumer und hole dir einen API-Schlüssel. Die Benutzeranmeldung ist optional und nutzt das Downloadkontingent des Kontos.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Dieser Build enthält die App-Zugangsdaten für den Danmaku-Dienst. Nutzer müssen keinen API-Zugang beantragen; aktiviere bei Bedarf die Online-Danmaku-Zuordnung.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Diesem Build fehlen die App-Zugangsdaten für Danmaku. Die offizielle Online-Zuordnung ist daher nicht verfügbar. Der Entwickler stellt diese Zugangsdaten bereit; du musst keinen persönlichen API-Zugang registrieren.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Diese Dienste haben keine gemeinsame Registrierungsseite. Gib die Adresse deines vorhandenen Servers und das vom Administrator bereitgestellte Konto oder den Schlüssel ein. Ohne Server kannst du diesen Schritt überspringen.';
+  @override
+  String get video_online_services_setup_title =>
+      'Optionale Onlinedienste einrichten';
+  @override
+  String get video_online_services_setup_description =>
+      'Optionale Konten und API-Schlüssel verbessern Videoerkennung und Untertitelsuche. Die Wiedergabe funktioniert auch ohne sie.';
+  @override
+  String get video_online_services_setup_register =>
+      'Dienste kennenlernen und registrieren';
+  @override
+  String get video_online_services_setup_settings => 'Einstellungen öffnen';
+  @override
+  String get video_online_services_setup_dismiss => 'Nie wieder anzeigen';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Der API-Schlüssel der App ist enthalten. Du kannst dich optional bei deinem OpenSubtitles-Konto anmelden, um dein Downloadkontingent zu nutzen, oder einen eigenen API-Schlüssel verwenden.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Leer lassen, um den enthaltenen API-Schlüssel der App zu verwenden.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -33760,7 +34281,7 @@ class _StringsEs extends _StringsEn {
   String get video_source_scrape_locale => 'Idioma de metadatos';
   @override
   String get video_source_scrape_locale_hint =>
-      'Idioma preferido para títulos, resúmenes e imágenes';
+      'Idioma preferido para los datos alternativos y complementarios de TMDB. MAL utiliza los títulos y textos originales que proporciona.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Confirmar coincidencia de metadatos';
@@ -35303,13 +35824,13 @@ class _StringsEs extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nombre de cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nombre de cliente registrado de la API HTTP de AniDB; deje en blanco para usar solo el catálogo de títulos en caché';
+      'Fushi incluye un cliente de aplicación registrado. Normalmente puedes dejar este campo vacío; indica un cliente registrado personalizado solo si lo necesitas.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versión de cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versión positiva registrada en AniDB; la API HTTP se mantiene desactivada hasta que ambos campos sean válidos';
+      'Solo los clientes personalizados necesitan su versión registrada aquí. Fushi mantiene la identidad predeterminada de la aplicación; sigue siendo necesario configurar tu cuenta personal de AniDB.';
   @override
   String get video_scrape_view_source => 'Ver detalles de fuente';
   @override
@@ -37160,6 +37681,209 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Las tareas continúan después de cerrar esta ventana.';
+  @override
+  String get video_source_scrape_queue_cancel_all =>
+      'Cancelar todas las tareas';
+  @override
+  String get video_source_scrape_queue_waiting => 'En cola';
+  @override
+  String get video_source_scrape_queue_remove => 'Quitar de la cola';
+  @override
+  String get video_source_scrape_queue_submitted => 'Enviada';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'No hay obras que necesiten una coincidencia manual.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'No se pudo cargar esta lista. Inténtalo de nuevo.';
+  @override
+  String get video_source_scrape_list_reload => 'Volver a cargar';
+  @override
+  String get video_source_scrape_manual_current_work => 'Obra actual';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Busca por título o selecciona MAL, película de TMDB o serie de TMDB e introduce un ID o una URL oficial. Selecciona un resultado para aplicarlo a la obra actual.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Introduce un ID de obra entero positivo o una URL oficial que coincida con la fuente y el tipo seleccionados.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Por título';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID de obra';
+  @override
+  String get video_source_grouping_mode => 'Organización de vídeos';
+  @override
+  String get video_source_grouping_folder => 'Por carpeta';
+  @override
+  String get video_source_grouping_series => 'Por obra';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Se crea una colección por cada subcarpeta de primer nivel. Los archivos situados directamente en la carpeta seleccionada comparten una colección. Este modo no permite obtener metadatos; cambia a «Por obra» para hacerlo.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'El próximo escaneo usará este ajuste. Se conservarán las colecciones y los metadatos existentes.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Hay varias obras con este título. Abre la pestaña de obras pendientes y selecciona el elemento concreto que quieras vincular.';
+  @override
+  String get video_source_scrape_pending_tab => 'Sin vincular';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Película de TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Serie de TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (mediante Jikan) es la fuente principal de metadatos; TMDB es la alternativa.';
+  @override
+  String get video_anidb_hash_enabled => 'Identificar archivos con AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Requiere una cuenta de AniDB y un cliente registrado. Solo envía el tamaño y el hash del archivo. El inicio de sesión de AniDB por UDP no está cifrado; actívalo solo en una red de confianza.';
+  @override
+  String get video_anidb_username => 'Nombre de usuario de AniDB';
+  @override
+  String get video_anidb_password => 'Contraseña de AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'Servicios en línea (opcionales)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Conoce las cuentas, claves API y servicios disponibles';
+  @override
+  String get onboarding_online_services_body =>
+      'Configura solo los servicios que necesites o salta este paso. Seleccionar este tutorial no activa servicios ni envía credenciales, y no seleccionarlo no cambia los ajustes existentes.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Abrir ajustes de servicios en línea';
+  @override
+  String get onboarding_online_services_link =>
+      'Abrir la página oficial de cuenta / API';
+  @override
+  String get onboarding_online_services_account =>
+      'Requiere una cuenta personal';
+  @override
+  String get onboarding_online_services_ready => 'No requiere registro';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Credenciales de la aplicación incluidas';
+  @override
+  String get onboarding_online_services_key => 'Requiere una clave API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Esta compilación no incluye credenciales de la aplicación';
+  @override
+  String get onboarding_online_services_server =>
+      'Conectar un servidor existente';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifica anime y episodios mediante la huella del archivo. Fushi tiene un cliente de aplicación registrado; aún necesitas tu propia cuenta de AniDB. Introdúcela en los ajustes y activa la identificación por hash cuando quieras.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan proporciona metadatos; AniList permite descubrir contenido y realizar consultas relacionadas. Las consultas públicas de solo lectura no necesitan cuenta personal ni clave API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Esta compilación incluye una clave de TMDB para datos alternativos y campos ausentes. Añade tu propia clave solo si quieres usar tu propia cuota.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Esta compilación no incluye una clave de TMDB. Solicita una clave API e introdúcela en los ajustes si necesitas TMDB como fuente alternativa de metadatos; MAL / Jikan sigue disponible.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Busca subtítulos. Regístrate o inicia sesión en Jimaku, genera una clave API personal en la página de tu cuenta, introdúcela en los ajustes y activa esta fuente de subtítulos.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Busca y descarga subtítulos. Registra una cuenta, crea un consumidor de API y obtén una clave API. Iniciar sesión es opcional y permite usar la cuota de descargas de la cuenta.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Esta compilación incluye las credenciales de la aplicación del servicio de danmaku. No necesitas solicitar acceso a la API; activa la coincidencia de danmaku en línea cuando quieras.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Esta compilación no incluye credenciales de la aplicación de danmaku, por lo que la coincidencia oficial en línea no está disponible. El desarrollador proporciona estas credenciales; no necesitas registrar una API personal.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Estos servicios no tienen una página de registro común. Introduce la dirección de tu servidor existente y la cuenta o clave proporcionada por su administrador, o salta este paso si no tienes servidor.';
+  @override
+  String get video_online_services_setup_title =>
+      'Configurar servicios en línea opcionales';
+  @override
+  String get video_online_services_setup_description =>
+      'Las cuentas y claves API opcionales mejoran la identificación de videos y la búsqueda de subtítulos. Puedes reproducir sin ellas.';
+  @override
+  String get video_online_services_setup_register =>
+      'Conocer y registrar servicios';
+  @override
+  String get video_online_services_setup_settings => 'Abrir ajustes';
+  @override
+  String get video_online_services_setup_dismiss => 'No volver a mostrar';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'La clave API de la aplicación está incluida. Puedes iniciar sesión opcionalmente en tu cuenta de OpenSubtitles para usar tu cuota de descargas, o utilizar tu propia clave API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Déjalo vacío para usar la clave API incluida en la aplicación.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -44265,7 +44989,7 @@ class _StringsFr extends _StringsEn {
   String get video_source_scrape_locale => 'Langue des métadonnées';
   @override
   String get video_source_scrape_locale_hint =>
-      'Langue préférée pour les titres, résumés et images';
+      'Langue préférée pour les données de repli et les détails complémentaires de TMDB. MAL utilise les titres et les textes originaux qu’il fournit.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Confirmer la correspondance de métadonnées';
@@ -45817,13 +46541,13 @@ class _StringsFr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nom de client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nom de client API HTTP AniDB enregistré ; laissez vide pour utiliser uniquement le catalogue de titres en cache';
+      'Fushi inclut un client d’application enregistré. Laissez normalement ce champ vide ; indiquez un client enregistré personnalisé uniquement si nécessaire.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Version du client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Version positive enregistrée auprès d\'AniDB ; l\'API HTTP reste désactivée tant que les deux champs ne sont pas valides';
+      'Seuls les clients personnalisés nécessitent leur propre version enregistrée ici. Fushi gère l’identité par défaut de l’application ; vos identifiants AniDB personnels restent nécessaires.';
   @override
   String get video_scrape_view_source => 'Voir les détails de la source';
   @override
@@ -47681,6 +48405,210 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Les tâches continuent après la fermeture de cette fenêtre.';
+  @override
+  String get video_source_scrape_queue_cancel_all =>
+      'Annuler toutes les tâches';
+  @override
+  String get video_source_scrape_queue_waiting => 'En attente';
+  @override
+  String get video_source_scrape_queue_remove => 'Retirer de la file';
+  @override
+  String get video_source_scrape_queue_submitted => 'Envoyée';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Aucune œuvre ne nécessite de correspondance manuelle.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Impossible de charger cette liste. Réessayez.';
+  @override
+  String get video_source_scrape_list_reload => 'Recharger';
+  @override
+  String get video_source_scrape_manual_current_work => 'Œuvre actuelle';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Recherchez par titre, ou choisissez MAL, film TMDB ou série TMDB et saisissez un identifiant ou une URL officielle. Sélectionnez un résultat pour l’appliquer à l’œuvre actuelle.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Saisissez un identifiant d’œuvre entier positif ou une URL officielle correspondant à la source et au type sélectionnés.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Par titre';
+  @override
+  String get video_source_scrape_manual_by_id => 'Identifiant de l’œuvre';
+  @override
+  String get video_source_grouping_mode => 'Organisation des vidéos';
+  @override
+  String get video_source_grouping_folder => 'Par dossier';
+  @override
+  String get video_source_grouping_series => 'Par œuvre';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Crée une collection par sous-dossier de premier niveau. Les fichiers placés directement dans le dossier sélectionné partagent une collection. La récupération des métadonnées n’est pas disponible dans ce mode ; passez à « Par œuvre » pour l’utiliser.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'La prochaine analyse utilisera ce réglage. Les collections et les métadonnées existantes seront conservées.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Plusieurs œuvres portent ce titre. Ouvrez l’onglet des œuvres en attente et sélectionnez l’élément précis à associer.';
+  @override
+  String get video_source_scrape_pending_tab => 'À associer';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Film TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Série TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (via Jikan) est la source principale de métadonnées ; TMDB sert de solution de repli.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'Identifier les fichiers avec AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Nécessite un compte AniDB et un client enregistré. Seuls la taille et le hachage du fichier sont envoyés. La connexion à AniDB par UDP n’est pas chiffrée ; activez cette option uniquement sur un réseau de confiance.';
+  @override
+  String get video_anidb_username => 'Nom d’utilisateur AniDB';
+  @override
+  String get video_anidb_password => 'Mot de passe AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'Services en ligne (facultatifs)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Découvrir les comptes, les clés API et les services disponibles';
+  @override
+  String get onboarding_online_services_body =>
+      'Configurez uniquement les services nécessaires, ou ignorez cette étape. Sélectionner ce tutoriel n’active aucun service et n’envoie aucun identifiant ; ne pas le sélectionner ne modifie pas les réglages existants.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Ouvrir les réglages des services en ligne';
+  @override
+  String get onboarding_online_services_link =>
+      'Ouvrir la page officielle du compte / de l’API';
+  @override
+  String get onboarding_online_services_account => 'Compte personnel requis';
+  @override
+  String get onboarding_online_services_ready =>
+      'Aucune inscription nécessaire';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Identifiants de l’application inclus';
+  @override
+  String get onboarding_online_services_key => 'Clé API requise';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Identifiants de l’application absents de cette version';
+  @override
+  String get onboarding_online_services_server =>
+      'Connecter un serveur existant';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifier les anime et les épisodes grâce à l’empreinte du fichier. Fushi dispose d’un client d’application enregistré ; votre propre compte AniDB reste nécessaire. Renseignez-le dans les réglages et activez l’identification par hachage si vous le souhaitez.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan fournit les métadonnées ; AniList permet la découverte et les recherches associées. Les requêtes publiques en lecture seule ne nécessitent ni compte personnel ni clé API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Cette version inclut une clé TMDB pour les métadonnées de repli et les champs manquants. Ajoutez votre propre clé uniquement si vous souhaitez utiliser votre propre quota.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Cette version n’inclut pas de clé TMDB. Demandez une clé API et saisissez-la dans les réglages si vous souhaitez utiliser TMDB comme source de repli ; MAL / Jikan reste disponible.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Rechercher des sous-titres. Inscrivez-vous ou connectez-vous à Jimaku, générez une clé API personnelle sur la page de votre compte, saisissez-la dans les réglages et activez cette source de sous-titres.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Rechercher et télécharger des sous-titres. Créez un compte, puis un consommateur d’API pour obtenir une clé API. La connexion utilisateur est facultative et permet d’utiliser le quota de téléchargement du compte.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Cette version inclut les identifiants d’application du service de danmaku. Les utilisateurs n’ont pas besoin de demander un accès API ; activez la correspondance des danmaku en ligne si vous le souhaitez.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Cette version n’inclut pas les identifiants d’application pour les danmaku ; la correspondance officielle en ligne est donc indisponible. Ces identifiants sont fournis par le développeur ; vous n’avez pas besoin d’enregistrer une API personnelle.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Ces services n’ont pas de page d’inscription commune. Saisissez l’adresse de votre serveur existant et le compte ou la clé fournis par son administrateur, ou ignorez cette étape si vous n’avez pas de serveur.';
+  @override
+  String get video_online_services_setup_title =>
+      'Configurer les services en ligne facultatifs';
+  @override
+  String get video_online_services_setup_description =>
+      'Des comptes et clés API facultatifs améliorent l’identification des vidéos et la recherche de sous-titres. La lecture fonctionne sans eux.';
+  @override
+  String get video_online_services_setup_register =>
+      'Découvrir les services et s’inscrire';
+  @override
+  String get video_online_services_setup_settings => 'Ouvrir les réglages';
+  @override
+  String get video_online_services_setup_dismiss => 'Ne plus afficher';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'La clé API de l’application est incluse. Vous pouvez vous connecter à votre compte OpenSubtitles pour utiliser votre quota de téléchargement, ou utiliser votre propre clé API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Laissez vide pour utiliser la clé API incluse dans l’application.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -54669,7 +55597,7 @@ class _StringsId extends _StringsEn {
   String get video_source_scrape_locale => 'Bahasa metadata';
   @override
   String get video_source_scrape_locale_hint =>
-      'Bahasa yang diutamakan untuk judul, ringkasan, dan gambar';
+      'Bahasa pilihan untuk data cadangan dan detail tambahan dari TMDB. MAL menggunakan judul dan teks asli yang disediakan oleh MAL.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Konfirmasi kecocokan metadata';
@@ -56184,12 +57112,12 @@ class _StringsId extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nama klien AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nama klien API HTTP AniDB terdaftar; biarkan kosong untuk hanya menggunakan katalog judul yang di-cache';
+      'Fushi menyertakan klien aplikasi terdaftar. Biasanya biarkan kosong; atur klien terdaftar khusus hanya jika diperlukan.';
   @override
   String get video_source_scrape_anidb_client_version => 'Versi klien AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versi positif yang terdaftar di AniDB; API HTTP tetap nonaktif sampai kedua kolom valid';
+      'Hanya klien khusus yang perlu memasukkan versi terdaftarnya di sini. Fushi mengelola identitas aplikasi bawaan; kredensial akun AniDB pribadi Anda tetap diperlukan.';
   @override
   String get video_scrape_view_source => 'Lihat detail sumber';
   @override
@@ -58009,6 +58937,206 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Tugas tetap berjalan setelah jendela ini ditutup.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Batalkan semua tugas';
+  @override
+  String get video_source_scrape_queue_waiting => 'Dalam antrean';
+  @override
+  String get video_source_scrape_queue_remove => 'Hapus dari antrean';
+  @override
+  String get video_source_scrape_queue_submitted => 'Dikirim';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Tidak ada karya yang perlu dicocokkan secara manual.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Daftar ini tidak dapat dimuat. Coba lagi.';
+  @override
+  String get video_source_scrape_list_reload => 'Muat ulang';
+  @override
+  String get video_source_scrape_manual_current_work => 'Karya saat ini';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Cari berdasarkan judul, atau pilih MAL, film TMDB, atau serial TV TMDB lalu masukkan ID atau URL resmi. Pilih hasil untuk menerapkannya ke karya saat ini.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Masukkan ID karya berupa bilangan bulat positif atau URL resmi yang sesuai dengan sumber dan jenis yang dipilih.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Berdasarkan judul';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID karya';
+  @override
+  String get video_source_grouping_mode => 'Pengaturan video';
+  @override
+  String get video_source_grouping_folder => 'Berdasarkan folder';
+  @override
+  String get video_source_grouping_series => 'Berdasarkan karya';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Buat satu koleksi untuk setiap subfolder tingkat pertama. File yang berada langsung di folder terpilih dikelompokkan dalam satu koleksi. Pengambilan metadata tidak tersedia dalam mode ini; beralihlah ke Berdasarkan karya untuk mengambilnya.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Pemindaian berikutnya akan menggunakan pengaturan ini. Koleksi dan metadata yang sudah ada tetap disimpan.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Ada beberapa karya dengan judul ini. Buka tab karya yang menunggu konfirmasi dan pilih item yang ingin dicocokkan.';
+  @override
+  String get video_source_scrape_pending_tab => 'Belum cocok';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Film TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Serial TV TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (melalui Jikan) adalah sumber metadata utama; TMDB menjadi cadangan.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'Identifikasi berkas dengan AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Memerlukan akun AniDB dan klien terdaftar. Hanya mengirim ukuran dan hash berkas. Login AniDB melalui UDP tidak terenkripsi; aktifkan hanya di jaringan tepercaya.';
+  @override
+  String get video_anidb_username => 'Nama pengguna AniDB';
+  @override
+  String get video_anidb_password => 'Kata sandi AniDB';
+  @override
+  String get onboarding_online_services_title => 'Layanan daring (opsional)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Pelajari akun, kunci API, dan layanan yang tersedia';
+  @override
+  String get onboarding_online_services_body =>
+      'Atur hanya layanan yang diperlukan, atau lewati langkah ini. Memilih tutorial ini tidak mengaktifkan layanan atau mengirim kredensial, dan tidak memilihnya tidak mengubah pengaturan yang sudah ada.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Buka pengaturan layanan daring';
+  @override
+  String get onboarding_online_services_link => 'Buka halaman akun / API resmi';
+  @override
+  String get onboarding_online_services_account => 'Memerlukan akun pribadi';
+  @override
+  String get onboarding_online_services_ready => 'Tidak perlu mendaftar';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Kredensial aplikasi disertakan';
+  @override
+  String get onboarding_online_services_key => 'Memerlukan kunci API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Kredensial aplikasi tidak tersedia dalam build ini';
+  @override
+  String get onboarding_online_services_server =>
+      'Hubungkan server yang sudah ada';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifikasi anime dan episode dengan sidik jari berkas. Fushi memiliki klien aplikasi terdaftar; Anda tetap memerlukan akun AniDB sendiri. Masukkan akun di pengaturan dan aktifkan identifikasi hash berkas bila diinginkan.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan menyediakan metadata; AniList mendukung penemuan dan pencarian terkait. Kueri publik hanya-baca tidak memerlukan akun pribadi atau kunci API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Build ini menyertakan kunci TMDB untuk metadata cadangan dan kolom yang belum terisi. Tambahkan kunci sendiri hanya jika ingin menggunakan kuota sendiri.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Build ini tidak menyertakan kunci TMDB. Ajukan kunci API dan masukkan di pengaturan jika memerlukan TMDB sebagai sumber metadata cadangan; MAL / Jikan tetap tersedia.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Cari takarir. Daftar atau masuk ke Jimaku, buat kunci API pribadi di halaman akun, lalu masukkan di pengaturan dan aktifkan sumber takarir ini.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Cari dan unduh takarir. Daftarkan akun, buat konsumen API, dan dapatkan kunci API. Login pengguna bersifat opsional dan menggunakan kuota unduhan akun tersebut.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Build ini menyertakan kredensial aplikasi layanan danmaku. Pengguna tidak perlu mengajukan akses API; aktifkan pencocokan danmaku daring bila diinginkan.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Build ini tidak menyertakan kredensial aplikasi danmaku, sehingga pencocokan daring resmi tidak tersedia. Pengembang menyediakan kredensial ini; Anda tidak perlu mendaftarkan API pribadi.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Layanan ini tidak memiliki halaman pendaftaran bersama. Masukkan alamat server yang sudah Anda miliki beserta akun atau kunci dari administratornya, atau lewati jika tidak memiliki server.';
+  @override
+  String get video_online_services_setup_title =>
+      'Atur layanan daring opsional';
+  @override
+  String get video_online_services_setup_description =>
+      'Akun dan kunci API opsional dapat meningkatkan identifikasi video dan pencarian takarir. Pemutaran dasar tetap berjalan tanpanya.';
+  @override
+  String get video_online_services_setup_register =>
+      'Pelajari dan daftar layanan';
+  @override
+  String get video_online_services_setup_settings => 'Buka pengaturan';
+  @override
+  String get video_online_services_setup_dismiss => 'Jangan tampilkan lagi';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Kunci API aplikasi sudah disertakan. Anda dapat memilih untuk masuk ke akun OpenSubtitles sendiri guna memakai kuota unduhan pribadi, atau menggunakan kunci API sendiri.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Biarkan kosong untuk menggunakan kunci API bawaan aplikasi.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -65053,7 +66181,7 @@ class _StringsIt extends _StringsEn {
   String get video_source_scrape_locale => 'Lingua metadati';
   @override
   String get video_source_scrape_locale_hint =>
-      'Lingua preferita per titoli, riepiloghi e immagini';
+      'Lingua preferita per i dati di riserva e i dettagli aggiuntivi di TMDB. MAL usa i titoli e i testi originali forniti da MAL.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Conferma abbinamento metadati';
@@ -66580,13 +67708,13 @@ class _StringsIt extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nome client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nome client registrato per l\'API HTTP AniDB; lascia vuoto per usare solo il catalogo titoli in cache';
+      'Fushi include un client dell’app registrato. Normalmente puoi lasciare vuoto questo campo; imposta un client registrato personalizzato solo se necessario.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versione client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versione positiva registrata con AniDB; l\'API HTTP resta disabilitata finché entrambi i campi non sono validi';
+      'Solo i client personalizzati richiedono qui la propria versione registrata. Fushi gestisce l’identità predefinita dell’app; sono comunque necessarie le tue credenziali personali AniDB.';
   @override
   String get video_scrape_view_source => 'Visualizza dettagli fonte';
   @override
@@ -68426,6 +69554,208 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Le attività continuano dopo la chiusura di questa finestra.';
+  @override
+  String get video_source_scrape_queue_cancel_all =>
+      'Annulla tutte le attività';
+  @override
+  String get video_source_scrape_queue_waiting => 'In coda';
+  @override
+  String get video_source_scrape_queue_remove => 'Rimuovi dalla coda';
+  @override
+  String get video_source_scrape_queue_submitted => 'Inviata';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Nessuna opera richiede un abbinamento manuale.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Impossibile caricare questo elenco. Riprova.';
+  @override
+  String get video_source_scrape_list_reload => 'Ricarica';
+  @override
+  String get video_source_scrape_manual_current_work => 'Opera attuale';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Cerca per titolo oppure seleziona MAL, film TMDB o serie TV TMDB e inserisci un ID o un URL ufficiale. Seleziona un risultato per applicarlo all’opera attuale.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Inserisci un ID dell’opera intero positivo o un URL ufficiale corrispondente alla fonte e al tipo selezionati.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Per titolo';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID dell’opera';
+  @override
+  String get video_source_grouping_mode => 'Organizzazione dei video';
+  @override
+  String get video_source_grouping_folder => 'Per cartella';
+  @override
+  String get video_source_grouping_series => 'Per opera';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Crea una raccolta per ogni sottocartella di primo livello. I file direttamente nella cartella selezionata condividono una raccolta. Il recupero dei metadati non è disponibile in questa modalità; passa a «Per opera» per utilizzarlo.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'La prossima scansione userà questa impostazione. Le raccolte e i metadati esistenti verranno conservati.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Più opere hanno questo titolo. Apri la scheda delle opere in attesa e seleziona l’elemento specifico da abbinare.';
+  @override
+  String get video_source_scrape_pending_tab => 'Da abbinare';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Film TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Serie TV TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (tramite Jikan) è la fonte principale dei metadati; TMDB è la fonte di riserva.';
+  @override
+  String get video_anidb_hash_enabled => 'Identifica i file con AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Richiede un account AniDB e un client registrato. Invia solo dimensione e hash del file. L’accesso ad AniDB tramite UDP non è crittografato; attiva solo su una rete fidata.';
+  @override
+  String get video_anidb_username => 'Nome utente AniDB';
+  @override
+  String get video_anidb_password => 'Password AniDB';
+  @override
+  String get onboarding_online_services_title => 'Servizi online (facoltativi)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Scopri account, chiavi API e servizi disponibili';
+  @override
+  String get onboarding_online_services_body =>
+      'Configura solo i servizi necessari oppure salta questo passaggio. Selezionare questo tutorial non attiva servizi né invia credenziali; non selezionarlo non modifica le impostazioni esistenti.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Apri le impostazioni dei servizi online';
+  @override
+  String get onboarding_online_services_link =>
+      'Apri la pagina ufficiale dell’account / API';
+  @override
+  String get onboarding_online_services_account =>
+      'Account personale richiesto';
+  @override
+  String get onboarding_online_services_ready =>
+      'Nessuna registrazione richiesta';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Credenziali dell’app incluse';
+  @override
+  String get onboarding_online_services_key => 'Chiave API richiesta';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Credenziali dell’app assenti in questa build';
+  @override
+  String get onboarding_online_services_server => 'Collega un server esistente';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifica anime ed episodi tramite l’impronta del file. Fushi dispone di un client dell’app registrato; serve comunque un tuo account AniDB. Inseriscilo nelle impostazioni e attiva l’identificazione tramite hash quando vuoi.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan fornisce i metadati; AniList supporta la scoperta e le ricerche correlate. Le interrogazioni pubbliche in sola lettura non richiedono account personali o chiavi API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Questa build include una chiave TMDB per i metadati di riserva e i campi mancanti. Aggiungi una tua chiave solo se vuoi usare la tua quota.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Questa build non include una chiave TMDB. Richiedi una chiave API e inseriscila nelle impostazioni se ti serve TMDB come fonte di riserva; MAL / Jikan rimane disponibile.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Trova sottotitoli. Registrati o accedi a Jimaku, genera una chiave API personale nella pagina del tuo account, inseriscila nelle impostazioni e attiva questa fonte di sottotitoli.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Trova e scarica sottotitoli. Registra un account, crea un consumatore API e ottieni una chiave API. L’accesso utente è facoltativo e permette di usare la quota di download dell’account.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Questa build include le credenziali dell’app per il servizio danmaku. Non occorre richiedere l’accesso API; attiva l’abbinamento dei danmaku online quando vuoi.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Questa build non include le credenziali dell’app per i danmaku, quindi l’abbinamento ufficiale online non è disponibile. Le credenziali sono fornite dallo sviluppatore; non devi registrare un’API personale.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Questi servizi non hanno una pagina di registrazione comune. Inserisci l’indirizzo del tuo server esistente e l’account o la chiave forniti dall’amministratore, oppure salta se non hai un server.';
+  @override
+  String get video_online_services_setup_title =>
+      'Configura servizi online facoltativi';
+  @override
+  String get video_online_services_setup_description =>
+      'Account e chiavi API facoltativi migliorano l’identificazione dei video e la ricerca di sottotitoli. La riproduzione funziona anche senza.';
+  @override
+  String get video_online_services_setup_register =>
+      'Scopri i servizi e registrati';
+  @override
+  String get video_online_services_setup_settings => 'Apri impostazioni';
+  @override
+  String get video_online_services_setup_dismiss => 'Non mostrare più';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'La chiave API dell’app è inclusa. Puoi accedere facoltativamente al tuo account OpenSubtitles per usare la tua quota di download, oppure usare una tua chiave API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Lascia vuoto per usare la chiave API inclusa nell’app.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -75055,7 +76385,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_locale => 'メタデータの言語';
   @override
-  String get video_source_scrape_locale_hint => 'タイトル、あらすじ、画像の優先言語';
+  String get video_source_scrape_locale_hint =>
+      'TMDB の代替・補足情報で優先する言語です。MAL の情報には、MAL が提供するタイトルと原文を使用します。';
   @override
   String get video_source_scrape_confirmation_title => 'メタデータの一致を確認';
   @override
@@ -76465,12 +77796,12 @@ class _StringsJa extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDBクライアント名';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '登録済みのAniDB HTTP APIクライアント名。空欄にするとキャッシュされたタイトルカタログのみ使用します';
+      'Fushi には登録済みのアプリクライアントが含まれています。通常は空欄のままで構いません。必要な場合のみ、独自の登録済みクライアントを指定してください。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDBクライアントバージョン';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDBに登録された正のバージョン番号。両方のフィールドが有効になるまでHTTP APIは無効のままです';
+      'ここに登録済みバージョンを入力する必要があるのは独自クライアントのみです。既定のアプリ識別情報は Fushi が管理しますが、個人の AniDB ログイン情報は引き続き必要です。';
   @override
   String get video_scrape_view_source => 'ソースの詳細を表示';
   @override
@@ -78235,6 +79566,195 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint => 'このウィンドウを閉じてもタスクは続行されます。';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'すべてのタスクをキャンセル';
+  @override
+  String get video_source_scrape_queue_waiting => '待機中';
+  @override
+  String get video_source_scrape_queue_remove => 'キューから削除';
+  @override
+  String get video_source_scrape_queue_submitted => '送信済み';
+  @override
+  String get video_source_scrape_pending_empty => '手動で照合する必要がある作品はありません。';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'リストを読み込めませんでした。もう一度お試しください。';
+  @override
+  String get video_source_scrape_list_reload => '再読み込み';
+  @override
+  String get video_source_scrape_manual_current_work => '現在の作品';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'タイトルで検索するか、MAL・TMDB 映画・TMDB テレビシリーズを選択して ID または公式 URL を入力してください。検索結果を選択すると現在の作品に適用されます。';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      '正の整数の作品 ID、または選択したソースと種類に一致する公式 URL を入力してください。';
+  @override
+  String get video_source_scrape_manual_by_title => 'タイトルで検索';
+  @override
+  String get video_source_scrape_manual_by_id => '作品 ID';
+  @override
+  String get video_source_grouping_mode => '動画のまとめ方';
+  @override
+  String get video_source_grouping_folder => 'フォルダー別';
+  @override
+  String get video_source_grouping_series => '作品別';
+  @override
+  String get video_source_grouping_folder_hint =>
+      '直下のサブフォルダーごとにコレクションを作成します。選択したフォルダーに直接含まれるファイルは、同じコレクションにまとめられます。このモードではメタデータを取得できません。取得するには「作品別」に切り替えてください。';
+  @override
+  String get video_source_grouping_series_hint =>
+      'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
+  @override
+  String get video_source_grouping_change_hint =>
+      '次回のスキャンからこの設定が適用されます。既存のコレクションとメタデータは保持されます。';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      '同じタイトルの作品が複数あります。確認待ちタブを開き、照合する項目を選択してください。';
+  @override
+  String get video_source_scrape_pending_tab => '未照合';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB 映画';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB テレビシリーズ';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL（Jikan 経由）を主なメタデータソースとし、TMDB を予備ソースとして使用します。';
+  @override
+  String get video_anidb_hash_enabled => 'AniDB ED2K でファイルを識別';
+  @override
+  String get video_anidb_hash_hint =>
+      'AniDB アカウントと登録済みクライアントが必要です。送信するファイル情報はサイズとハッシュのみです。AniDB の UDP ログインは暗号化されないため、信頼できるネットワークでのみ有効にしてください。';
+  @override
+  String get video_anidb_username => 'AniDB ユーザー名';
+  @override
+  String get video_anidb_password => 'AniDB パスワード';
+  @override
+  String get onboarding_online_services_title => 'オンラインサービス（任意）';
+  @override
+  String get onboarding_online_services_hint => 'アカウント、API キー、利用できるサービスを確認';
+  @override
+  String get onboarding_online_services_body =>
+      '必要なサービスだけ設定するか、この手順をスキップできます。このチュートリアルを選択しても、サービスの有効化や認証情報の送信は行われません。選択しなくても既存の設定は変わりません。';
+  @override
+  String get onboarding_online_services_configure => 'オンラインサービスの設定を開く';
+  @override
+  String get onboarding_online_services_link => '公式のアカウント / API ページを開く';
+  @override
+  String get onboarding_online_services_account => '個人アカウントが必要';
+  @override
+  String get onboarding_online_services_ready => '登録不要';
+  @override
+  String get onboarding_online_services_embedded => 'アプリ認証情報を内蔵';
+  @override
+  String get onboarding_online_services_key => 'API キーが必要';
+  @override
+  String get onboarding_online_services_build_missing => 'このビルドにはアプリ認証情報がありません';
+  @override
+  String get onboarding_online_services_server => '既存のサーバーに接続';
+  @override
+  String get onboarding_online_services_anidb =>
+      'ファイルの指紋情報からアニメ作品とエピソードを識別します。Fushi はアプリクライアントを登録済みですが、ご自身の AniDB アカウントは必要です。設定で入力し、必要に応じてファイルのハッシュ識別を有効にしてください。';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan は作品情報を提供し、AniList は発見機能と関連検索に使われます。公開情報の読み取り専用検索には、個人アカウントや API キーは不要です。';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'このビルドには、情報の代替取得や不足項目の補完に使う TMDB キーが含まれています。ご自身の利用枠を使いたい場合のみ、個人のキーを設定してください。';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'このビルドには TMDB キーが含まれていません。TMDB からの代替情報取得が必要な場合は、API キーを申請して設定に入力してください。MAL / Jikan は引き続き利用できます。';
+  @override
+  String get onboarding_online_services_jimaku =>
+      '字幕を検索します。Jimaku に登録またはログインし、アカウントページで個人の API キーを作成して設定に入力し、この字幕ソースを有効にしてください。';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      '字幕を検索してダウンロードします。アカウント登録後、API 利用アプリを作成して API キーを取得してください。ユーザーログインは任意で、ログインするとアカウントのダウンロード枠を利用できます。';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'このビルドには弾幕サービスのアプリ認証情報が含まれています。ユーザーごとの API 申請は不要です。必要に応じてオンライン弾幕マッチングを有効にしてください。';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'このビルドには弾幕サービスのアプリ認証情報がないため、公式のオンラインマッチングは利用できません。この認証情報は開発者が用意するもので、個人で API を登録する必要はありません。';
+  @override
+  String get onboarding_online_services_servers =>
+      'これらのサービスには共通の登録ページがありません。既存のサーバーのアドレスと、管理者から提供されたアカウントまたはキーを入力してください。サーバーがなければスキップできます。';
+  @override
+  String get video_online_services_setup_title => '任意のオンラインサービスを設定';
+  @override
+  String get video_online_services_setup_description =>
+      '任意のアカウントや API キーを設定すると、動画の識別や字幕検索を強化できます。基本的な再生には不要です。';
+  @override
+  String get video_online_services_setup_register => 'サービスの説明と登録';
+  @override
+  String get video_online_services_setup_settings => '設定を開く';
+  @override
+  String get video_online_services_setup_dismiss => '今後表示しない';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'アプリの API キーは内蔵されています。ご自身の OpenSubtitles アカウントにログインして個人のダウンロード枠を使うか、ご自身の API キーを設定することもできます。';
+  @override
+  String get video_opensubtitles_app_key_hint => '空欄の場合、アプリ内蔵の API キーを使用します。';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -84879,7 +86399,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_locale => '메타데이터 언어';
   @override
-  String get video_source_scrape_locale_hint => '제목, 요약 및 이미지에 선호하는 언어';
+  String get video_source_scrape_locale_hint =>
+      'TMDB 대체 및 보충 정보에 사용할 선호 언어입니다. MAL은 MAL에서 제공하는 제목과 원문을 사용합니다.';
   @override
   String get video_source_scrape_confirmation_title => '메타데이터 매칭 확인';
   @override
@@ -86288,12 +87809,12 @@ class _StringsKo extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 클라이언트 이름';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '등록된 AniDB HTTP API 클라이언트 이름; 캐시된 제목 카탈로그만 사용하려면 비워 두세요';
+      'Fushi에는 등록된 앱 클라이언트가 포함되어 있습니다. 보통은 비워 두세요. 필요한 경우에만 별도로 등록한 클라이언트를 입력하세요.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 클라이언트 버전';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDB에 등록된 양수 버전; 두 필드가 모두 유효할 때까지 HTTP API는 비활성 상태입니다';
+      '별도 클라이언트만 여기에 등록된 버전을 입력해야 합니다. 기본 앱 식별 정보는 Fushi가 관리하지만, 개인 AniDB 로그인 정보는 여전히 필요합니다.';
   @override
   String get video_scrape_view_source => '소스 상세 보기';
   @override
@@ -88054,6 +89575,195 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint => '이 창을 닫아도 작업은 계속됩니다.';
+  @override
+  String get video_source_scrape_queue_cancel_all => '모든 작업 취소';
+  @override
+  String get video_source_scrape_queue_waiting => '대기 중';
+  @override
+  String get video_source_scrape_queue_remove => '대기열에서 제거';
+  @override
+  String get video_source_scrape_queue_submitted => '제출됨';
+  @override
+  String get video_source_scrape_pending_empty => '수동으로 일치시킬 작품이 없습니다.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      '목록을 불러올 수 없습니다. 다시 시도하세요.';
+  @override
+  String get video_source_scrape_list_reload => '새로고침';
+  @override
+  String get video_source_scrape_manual_current_work => '현재 작품';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      '제목으로 검색하거나 MAL, TMDB 영화, TMDB TV 시리즈를 선택하고 ID 또는 공식 URL을 입력하세요. 결과를 선택하면 현재 작품에 적용됩니다.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      '양의 정수로 된 작품 ID 또는 선택한 소스와 유형에 맞는 공식 URL을 입력하세요.';
+  @override
+  String get video_source_scrape_manual_by_title => '제목으로 검색';
+  @override
+  String get video_source_scrape_manual_by_id => '작품 ID';
+  @override
+  String get video_source_grouping_mode => '동영상 정리 방식';
+  @override
+  String get video_source_grouping_folder => '폴더별';
+  @override
+  String get video_source_grouping_series => '작품별';
+  @override
+  String get video_source_grouping_folder_hint =>
+      '바로 아래 하위 폴더마다 컬렉션을 만듭니다. 선택한 폴더에 직접 들어 있는 파일은 하나의 컬렉션으로 묶습니다. 이 모드에서는 메타데이터를 가져올 수 없습니다. 가져오려면 작품별로 전환하세요.';
+  @override
+  String get video_source_grouping_series_hint =>
+      '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
+  @override
+  String get video_source_grouping_change_hint =>
+      '다음 스캔부터 이 설정을 사용합니다. 기존 컬렉션과 메타데이터는 유지됩니다.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      '같은 제목의 작품이 여러 개 있습니다. 확인 대기 탭을 열고 일치시킬 항목을 선택하세요.';
+  @override
+  String get video_source_scrape_pending_tab => '미일치';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB 영화';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB TV 시리즈';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL(Jikan 경유)을 기본 메타데이터 소스로 사용하고, TMDB를 대체 소스로 사용합니다.';
+  @override
+  String get video_anidb_hash_enabled => 'AniDB ED2K로 파일 식별';
+  @override
+  String get video_anidb_hash_hint =>
+      'AniDB 계정과 등록된 클라이언트가 필요합니다. 파일 크기와 해시만 전송합니다. AniDB UDP 로그인은 암호화되지 않으므로 신뢰할 수 있는 네트워크에서만 활성화하세요.';
+  @override
+  String get video_anidb_username => 'AniDB 사용자 이름';
+  @override
+  String get video_anidb_password => 'AniDB 비밀번호';
+  @override
+  String get onboarding_online_services_title => '온라인 서비스(선택 사항)';
+  @override
+  String get onboarding_online_services_hint => '계정, API 키 및 이용 가능한 서비스 알아보기';
+  @override
+  String get onboarding_online_services_body =>
+      '필요한 서비스만 설정하거나 이 단계를 건너뛰세요. 이 튜토리얼을 선택해도 서비스가 활성화되거나 로그인 정보가 전송되지 않으며, 선택하지 않아도 기존 설정은 바뀌지 않습니다.';
+  @override
+  String get onboarding_online_services_configure => '온라인 서비스 설정 열기';
+  @override
+  String get onboarding_online_services_link => '공식 계정 / API 페이지 열기';
+  @override
+  String get onboarding_online_services_account => '개인 계정 필요';
+  @override
+  String get onboarding_online_services_ready => '가입 불필요';
+  @override
+  String get onboarding_online_services_embedded => '앱 인증 정보 내장';
+  @override
+  String get onboarding_online_services_key => 'API 키 필요';
+  @override
+  String get onboarding_online_services_build_missing => '이 빌드에는 앱 인증 정보가 없습니다';
+  @override
+  String get onboarding_online_services_server => '기존 서버 연결';
+  @override
+  String get onboarding_online_services_anidb =>
+      '파일 지문으로 애니메이션 작품과 에피소드를 식별합니다. Fushi에 등록된 앱 클라이언트가 있지만, 본인의 AniDB 계정은 여전히 필요합니다. 설정에 계정을 입력하고 필요할 때 파일 해시 식별을 활성화하세요.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan은 작품 정보를 제공하고, AniList는 발견 기능과 관련 검색에 사용됩니다. 공개 읽기 전용 조회에는 개인 계정이나 API 키가 필요하지 않습니다.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      '이 빌드에는 대체 정보 조회와 누락된 항목 보충을 위한 TMDB 키가 내장되어 있습니다. 본인의 사용 할당량을 쓰고 싶은 경우에만 개인 키를 추가하세요.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      '이 빌드에는 TMDB 키가 없습니다. TMDB 대체 정보가 필요하다면 API 키를 신청해 설정에 입력하세요. MAL / Jikan은 계속 사용할 수 있습니다.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      '자막을 찾습니다. Jimaku에 가입하거나 로그인한 후 계정 페이지에서 개인 API 키를 생성하고, 설정에 입력한 뒤 이 자막 소스를 활성화하세요.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      '자막을 찾고 다운로드합니다. 계정을 등록하고 API 사용 앱을 만들어 API 키를 발급받으세요. 사용자 로그인은 선택 사항이며, 로그인하면 해당 계정의 다운로드 할당량을 사용합니다.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      '이 빌드에는 탄막 서비스의 앱 인증 정보가 내장되어 있습니다. 사용자가 따로 API를 신청할 필요 없이 원하는 때 온라인 탄막 매칭을 활성화하면 됩니다.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      '이 빌드에는 탄막 서비스의 앱 인증 정보가 없어 공식 온라인 매칭을 사용할 수 없습니다. 이 정보는 개발자가 제공하므로 개인 API를 등록할 필요가 없습니다.';
+  @override
+  String get onboarding_online_services_servers =>
+      '이 서비스들에는 공통 가입 페이지가 없습니다. 기존 서버 주소와 관리자가 제공한 계정 또는 키를 입력하세요. 서버가 없으면 건너뛰어도 됩니다.';
+  @override
+  String get video_online_services_setup_title => '선택적 온라인 서비스 설정';
+  @override
+  String get video_online_services_setup_description =>
+      '선택적으로 계정이나 API 키를 설정하면 영상 식별과 자막 검색을 개선할 수 있습니다. 기본 재생에는 필요하지 않습니다.';
+  @override
+  String get video_online_services_setup_register => '서비스 알아보기 및 가입';
+  @override
+  String get video_online_services_setup_settings => '설정 열기';
+  @override
+  String get video_online_services_setup_dismiss => '다시 표시하지 않기';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      '앱 API 키가 내장되어 있습니다. 원하는 경우 본인의 OpenSubtitles 계정에 로그인해 개인 다운로드 할당량을 사용하거나, 본인의 API 키를 입력할 수 있습니다.';
+  @override
+  String get video_opensubtitles_app_key_hint => '비워 두면 앱에 내장된 API 키를 사용합니다.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -95066,7 +96776,7 @@ class _StringsNl extends _StringsEn {
   String get video_source_scrape_locale => 'Metadatataal';
   @override
   String get video_source_scrape_locale_hint =>
-      'Voorkeurstaal voor titels, samenvattingen en afbeeldingen';
+      'Voorkeurstaal voor vervangende gegevens en aanvullende details van TMDB. MAL gebruikt de titels en oorspronkelijke teksten die MAL aanlevert.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Metadatamatch bevestigen';
@@ -96587,12 +98297,12 @@ class _StringsNl extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB-clientnaam';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Geregistreerde AniDB HTTP API-clientnaam; leeg laten om alleen de gecachte titelcatalogus te gebruiken';
+      'Fushi bevat een geregistreerde app-client. Laat dit normaal gesproken leeg; stel alleen indien nodig een eigen geregistreerde client in.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB-clientversie';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Positieve versie geregistreerd bij AniDB; HTTP API blijft uitgeschakeld tot beide velden geldig zijn';
+      'Alleen eigen clients hebben hier hun geregistreerde versie nodig. Fushi beheert de standaardidentiteit van de app; je persoonlijke AniDB-inloggegevens blijven vereist.';
   @override
   String get video_scrape_view_source => 'Brondetails bekijken';
   @override
@@ -98429,6 +100139,208 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Taken blijven doorgaan nadat dit venster is gesloten.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Alle taken annuleren';
+  @override
+  String get video_source_scrape_queue_waiting => 'In wachtrij';
+  @override
+  String get video_source_scrape_queue_remove => 'Uit wachtrij verwijderen';
+  @override
+  String get video_source_scrape_queue_submitted => 'Verzonden';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Er zijn geen werken die handmatig gekoppeld moeten worden.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Deze lijst kon niet worden geladen. Probeer het opnieuw.';
+  @override
+  String get video_source_scrape_list_reload => 'Opnieuw laden';
+  @override
+  String get video_source_scrape_manual_current_work => 'Huidig werk';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Zoek op titel of selecteer MAL, TMDB-film of TMDB-serie en voer een ID of officiële URL in. Selecteer een resultaat om het op het huidige werk toe te passen.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Voer een positieve gehele werk-ID in of een officiële URL die overeenkomt met de geselecteerde bron en het type.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Op titel';
+  @override
+  String get video_source_scrape_manual_by_id => 'Werk-ID';
+  @override
+  String get video_source_grouping_mode => 'Video’s indelen';
+  @override
+  String get video_source_grouping_folder => 'Op map';
+  @override
+  String get video_source_grouping_series => 'Op werk';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Maak één collectie per submap op het eerste niveau. Bestanden die direct in de geselecteerde map staan, delen een collectie. Metadata ophalen is niet beschikbaar in deze modus; schakel hiervoor over naar Op werk.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'De volgende scan gebruikt deze instelling. Bestaande collecties en metadata blijven behouden.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Meerdere werken hebben deze titel. Open het tabblad met werken die nog moeten worden bevestigd en selecteer het specifieke item om te koppelen.';
+  @override
+  String get video_source_scrape_pending_tab => 'Ongekoppeld';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB-film';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB-serie';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (via Jikan) is de primaire bron voor metadata; TMDB is de terugvaloptie.';
+  @override
+  String get video_anidb_hash_enabled =>
+      'Bestanden identificeren met AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Vereist een AniDB-account en een geregistreerde client. Verstuurt alleen de bestandsgrootte en hash. Aanmelden bij AniDB via UDP is niet versleuteld; schakel dit alleen in op een vertrouwd netwerk.';
+  @override
+  String get video_anidb_username => 'AniDB-gebruikersnaam';
+  @override
+  String get video_anidb_password => 'AniDB-wachtwoord';
+  @override
+  String get onboarding_online_services_title => 'Onlinediensten (optioneel)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Meer over accounts, API-sleutels en beschikbare diensten';
+  @override
+  String get onboarding_online_services_body =>
+      'Stel alleen de benodigde diensten in of sla deze stap over. Het selecteren van deze uitleg activeert geen diensten en verstuurt geen inloggegevens. Niet selecteren verandert niets aan bestaande instellingen.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Instellingen voor onlinediensten openen';
+  @override
+  String get onboarding_online_services_link =>
+      'Officiële account- / API-pagina openen';
+  @override
+  String get onboarding_online_services_account =>
+      'Persoonlijk account vereist';
+  @override
+  String get onboarding_online_services_ready => 'Geen registratie nodig';
+  @override
+  String get onboarding_online_services_embedded =>
+      'App-inloggegevens inbegrepen';
+  @override
+  String get onboarding_online_services_key => 'API-sleutel vereist';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'App-inloggegevens ontbreken in deze build';
+  @override
+  String get onboarding_online_services_server =>
+      'Een bestaande server verbinden';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identificeer anime en afleveringen via de bestandsvingerafdruk. Fushi heeft een geregistreerde app-client; je hebt nog wel een eigen AniDB-account nodig. Vul het in bij de instellingen en schakel desgewenst bestandsidentificatie via hash in.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan levert metadata; AniList ondersteunt ontdekken en gerelateerde zoekopdrachten. Openbare alleen-lezenzoekopdrachten vereisen geen persoonlijk account of API-sleutel.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Deze build bevat een TMDB-sleutel voor vervangende metadata en ontbrekende velden. Voeg alleen een eigen sleutel toe als je je eigen quotum wilt gebruiken.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Deze build bevat geen TMDB-sleutel. Vraag een API-sleutel aan en vul deze in bij de instellingen als je TMDB als reservebron nodig hebt; MAL / Jikan blijft beschikbaar.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Zoek ondertitels. Registreer je of meld je aan bij Jimaku, maak op je accountpagina een persoonlijke API-sleutel aan, vul deze in bij de instellingen en schakel deze ondertitelbron in.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Zoek en download ondertitels. Registreer een account, maak een API-consumer aan en verkrijg een API-sleutel. Aanmelden als gebruiker is optioneel en gebruikt het downloadquotum van het account.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Deze build bevat de app-inloggegevens voor de danmaku-dienst. Gebruikers hoeven geen API-toegang aan te vragen; schakel desgewenst online danmaku-matching in.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Deze build bevat geen app-inloggegevens voor danmaku, dus officiële online matching is niet beschikbaar. De ontwikkelaar levert deze gegevens; je hoeft geen persoonlijke API te registreren.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Deze diensten hebben geen gezamenlijke registratiepagina. Vul het adres van je bestaande server in, samen met het account of de sleutel van de beheerder. Sla dit over als je geen server hebt.';
+  @override
+  String get video_online_services_setup_title =>
+      'Optionele onlinediensten instellen';
+  @override
+  String get video_online_services_setup_description =>
+      'Optionele accounts en API-sleutels verbeteren videoherkenning en ondertitelzoeken. Afspelen werkt ook zonder.';
+  @override
+  String get video_online_services_setup_register =>
+      'Diensten verkennen en registreren';
+  @override
+  String get video_online_services_setup_settings => 'Instellingen openen';
+  @override
+  String get video_online_services_setup_dismiss => 'Nooit meer tonen';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'De API-sleutel van de app is inbegrepen. Je kunt je desgewenst aanmelden bij je OpenSubtitles-account voor je eigen downloadquotum, of je eigen API-sleutel gebruiken.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Laat leeg om de meegeleverde API-sleutel van de app te gebruiken.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -105474,7 +107386,7 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_scrape_locale => 'Idioma dos metadados';
   @override
   String get video_source_scrape_locale_hint =>
-      'Idioma preferido para títulos, sinopses e imagens';
+      'Idioma preferido para os dados alternativos e complementares do TMDB. O MAL usa os títulos e textos originais fornecidos pelo MAL.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Confirmar correspondência de metadados';
@@ -107013,13 +108925,13 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nome do cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nome de cliente de API HTTP AniDB registrado; deixe em branco para usar apenas o catálogo de títulos em cache';
+      'O Fushi inclui um cliente de aplicativo registrado. Normalmente, deixe este campo vazio; configure um cliente registrado personalizado apenas se necessário.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versão do cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versão positiva registrada no AniDB; a API HTTP permanece desativada até ambos os campos serem válidos';
+      'Apenas clientes personalizados precisam de sua própria versão registrada aqui. O Fushi mantém a identidade padrão do aplicativo; suas credenciais pessoais do AniDB continuam sendo necessárias.';
   @override
   String get video_scrape_view_source => 'Ver detalhes da fonte';
   @override
@@ -108857,6 +110769,207 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'As tarefas continuam após fechar esta janela.';
+  @override
+  String get video_source_scrape_queue_cancel_all =>
+      'Cancelar todas as tarefas';
+  @override
+  String get video_source_scrape_queue_waiting => 'Na fila';
+  @override
+  String get video_source_scrape_queue_remove => 'Remover da fila';
+  @override
+  String get video_source_scrape_queue_submitted => 'Enviada';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Nenhuma obra precisa de correspondência manual.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Não foi possível carregar esta lista. Tente novamente.';
+  @override
+  String get video_source_scrape_list_reload => 'Recarregar';
+  @override
+  String get video_source_scrape_manual_current_work => 'Obra atual';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Pesquise pelo título ou selecione MAL, filme do TMDB ou série do TMDB e insira um ID ou URL oficial. Selecione um resultado para aplicá-lo à obra atual.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Insira um ID de obra inteiro positivo ou uma URL oficial que corresponda à fonte e ao tipo selecionados.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Por título';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID da obra';
+  @override
+  String get video_source_grouping_mode => 'Organização de vídeos';
+  @override
+  String get video_source_grouping_folder => 'Por pasta';
+  @override
+  String get video_source_grouping_series => 'Por obra';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Cria uma coleção para cada subpasta de primeiro nível. Os arquivos diretamente na pasta selecionada compartilham uma coleção. A busca de metadados não está disponível neste modo; mude para Por obra para usá-la.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'A próxima verificação usará esta configuração. As coleções e os metadados existentes serão mantidos.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Há várias obras com este título. Abra a aba de obras pendentes e selecione o item específico para fazer a correspondência.';
+  @override
+  String get video_source_scrape_pending_tab => 'Não vinculados';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Filme do TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Série do TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (via Jikan) é a fonte principal de metadados; TMDB é a alternativa.';
+  @override
+  String get video_anidb_hash_enabled => 'Identificar arquivos com AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Requer uma conta AniDB e um cliente registrado. Envia apenas o tamanho e o hash do arquivo. O login no AniDB via UDP não é criptografado; ative apenas em uma rede confiável.';
+  @override
+  String get video_anidb_username => 'Nome de usuário do AniDB';
+  @override
+  String get video_anidb_password => 'Senha do AniDB';
+  @override
+  String get onboarding_online_services_title => 'Serviços on-line (opcionais)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Conheça as contas, chaves API e serviços disponíveis';
+  @override
+  String get onboarding_online_services_body =>
+      'Configure apenas os serviços necessários ou pule esta etapa. Selecionar este tutorial não ativa serviços nem envia credenciais, e não selecioná-lo não altera as configurações existentes.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Abrir configurações dos serviços on-line';
+  @override
+  String get onboarding_online_services_link =>
+      'Abrir página oficial de conta / API';
+  @override
+  String get onboarding_online_services_account => 'Requer conta pessoal';
+  @override
+  String get onboarding_online_services_ready => 'Não requer cadastro';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Credenciais do aplicativo incluídas';
+  @override
+  String get onboarding_online_services_key => 'Requer chave API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Esta compilação não inclui credenciais do aplicativo';
+  @override
+  String get onboarding_online_services_server =>
+      'Conectar um servidor existente';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifique animes e episódios pela impressão digital do arquivo. O Fushi tem um cliente de aplicativo registrado; você ainda precisa de sua própria conta AniDB. Insira-a nas configurações e ative a identificação por hash quando desejar.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan fornece metadados; AniList oferece descoberta e consultas relacionadas. Consultas públicas somente de leitura não exigem conta pessoal nem chave API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Esta compilação inclui uma chave TMDB para metadados alternativos e campos ausentes. Adicione sua própria chave apenas se quiser usar sua própria cota.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Esta compilação não inclui uma chave TMDB. Solicite uma chave API e insira-a nas configurações se precisar do TMDB como fonte alternativa de metadados; MAL / Jikan continua disponível.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Encontre legendas. Cadastre-se ou entre no Jimaku, gere uma chave API pessoal na página da sua conta, insira-a nas configurações e ative esta fonte de legendas.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Encontre e baixe legendas. Cadastre uma conta, crie um consumidor de API e obtenha uma chave API. O login do usuário é opcional e permite usar a cota de downloads da conta.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Esta compilação inclui as credenciais do aplicativo para o serviço de danmaku. Os usuários não precisam solicitar acesso à API; basta ativar a correspondência de danmaku on-line quando desejarem.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Esta compilação não inclui credenciais do aplicativo para danmaku, então a correspondência oficial on-line está indisponível. O desenvolvedor fornece essas credenciais; você não precisa registrar uma API pessoal.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Esses serviços não têm uma página de cadastro comum. Insira o endereço do seu servidor existente e a conta ou chave fornecida pelo administrador, ou pule se não tiver um servidor.';
+  @override
+  String get video_online_services_setup_title =>
+      'Configurar serviços on-line opcionais';
+  @override
+  String get video_online_services_setup_description =>
+      'Contas e chaves API opcionais melhoram a identificação de vídeos e a busca de legendas. A reprodução básica funciona sem elas.';
+  @override
+  String get video_online_services_setup_register =>
+      'Conhecer os serviços e se cadastrar';
+  @override
+  String get video_online_services_setup_settings => 'Abrir configurações';
+  @override
+  String get video_online_services_setup_dismiss => 'Não mostrar novamente';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'A chave API do aplicativo está incluída. Você pode entrar opcionalmente em sua conta OpenSubtitles para usar sua cota de downloads ou usar sua própria chave API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Deixe vazio para usar a chave API incluída no aplicativo.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -115886,7 +117999,7 @@ class _StringsRu extends _StringsEn {
   String get video_source_scrape_locale => 'Язык метаданных';
   @override
   String get video_source_scrape_locale_hint =>
-      'Предпочтительный язык для названий, описаний и изображений';
+      'Предпочтительный язык резервных и дополнительных данных TMDB. Для MAL используются названия и исходные тексты, предоставленные MAL.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Подтвердите совпадение метаданных';
@@ -117415,12 +119528,12 @@ class _StringsRu extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Имя клиента AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Зарегистрированное имя клиента AniDB HTTP API; оставьте пустым, чтобы использовать только кэшированный каталог';
+      'Fushi включает зарегистрированный клиент приложения. Обычно оставляйте это поле пустым; указывайте собственный зарегистрированный клиент только при необходимости.';
   @override
   String get video_source_scrape_anidb_client_version => 'Версия клиента AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Положительный номер версии, зарегистрированный в AniDB; HTTP API остаётся отключённым, пока оба поля не заполнены корректно';
+      'Только для собственного клиента нужно указать здесь его зарегистрированную версию. Fushi поддерживает стандартный идентификатор приложения; личные данные для входа в AniDB всё равно необходимы.';
   @override
   String get video_scrape_view_source => 'Подробности источника';
   @override
@@ -119263,6 +121376,207 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Задачи продолжают выполняться после закрытия этого окна.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Отменить все задачи';
+  @override
+  String get video_source_scrape_queue_waiting => 'В очереди';
+  @override
+  String get video_source_scrape_queue_remove => 'Убрать из очереди';
+  @override
+  String get video_source_scrape_queue_submitted => 'Отправлено';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Нет произведений, требующих ручного сопоставления.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Не удалось загрузить список. Попробуйте ещё раз.';
+  @override
+  String get video_source_scrape_list_reload => 'Перезагрузить';
+  @override
+  String get video_source_scrape_manual_current_work => 'Текущее произведение';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Ищите по названию или выберите MAL, фильм TMDB или сериал TMDB и введите ID либо официальную ссылку. Выберите результат, чтобы применить его к текущему произведению.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Введите ID произведения в виде положительного целого числа или официальную ссылку, соответствующую выбранному источнику и типу.';
+  @override
+  String get video_source_scrape_manual_by_title => 'По названию';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID произведения';
+  @override
+  String get video_source_grouping_mode => 'Группировка видео';
+  @override
+  String get video_source_grouping_folder => 'По папкам';
+  @override
+  String get video_source_grouping_series => 'По произведениям';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Для каждой вложенной папки первого уровня создаётся отдельная коллекция. Файлы непосредственно в выбранной папке объединяются в одну коллекцию. В этом режиме загрузка метаданных недоступна; для неё переключитесь на «По произведениям».';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Следующее сканирование будет использовать эту настройку. Существующие коллекции и метаданные сохранятся.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Есть несколько произведений с таким названием. Откройте вкладку ожидающих подтверждения и выберите конкретную запись для сопоставления.';
+  @override
+  String get video_source_scrape_pending_tab => 'Не сопоставлено';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Фильм TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Сериал TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (через Jikan) — основной источник метаданных; TMDB — резервный.';
+  @override
+  String get video_anidb_hash_enabled => 'Определять файлы через AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Требуются учётная запись AniDB и зарегистрированный клиент. Отправляются только размер и хеш файла. Вход в AniDB по UDP не шифруется; включайте только в доверенной сети.';
+  @override
+  String get video_anidb_username => 'Имя пользователя AniDB';
+  @override
+  String get video_anidb_password => 'Пароль AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'Онлайн-сервисы (необязательно)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Узнайте об аккаунтах, ключах API и доступных сервисах';
+  @override
+  String get onboarding_online_services_body =>
+      'Настройте только нужные сервисы или пропустите этот шаг. Выбор этого руководства не включает сервисы и не отправляет данные для входа. Если не выбирать его, существующие настройки не изменятся.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Открыть настройки онлайн-сервисов';
+  @override
+  String get onboarding_online_services_link =>
+      'Открыть официальную страницу аккаунта / API';
+  @override
+  String get onboarding_online_services_account => 'Нужен личный аккаунт';
+  @override
+  String get onboarding_online_services_ready => 'Регистрация не нужна';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Учётные данные приложения включены';
+  @override
+  String get onboarding_online_services_key => 'Нужен ключ API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'В этой сборке нет учётных данных приложения';
+  @override
+  String get onboarding_online_services_server =>
+      'Подключить существующий сервер';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Определение аниме и эпизодов по отпечатку файла. У Fushi есть зарегистрированный клиент приложения, но вам по-прежнему нужен собственный аккаунт AniDB. Укажите его в настройках и при желании включите определение файлов по хешу.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan предоставляет метаданные; AniList используется для поиска нового контента и связанных запросов. Публичные запросы только для чтения не требуют личного аккаунта или ключа API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Эта сборка включает ключ TMDB для резервных метаданных и заполнения недостающих полей. Добавляйте свой ключ только если хотите использовать собственную квоту.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'В этой сборке нет ключа TMDB. Получите ключ API и укажите его в настройках, если вам нужны резервные метаданные TMDB. MAL / Jikan остаётся доступным.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Поиск субтитров. Зарегистрируйтесь или войдите в Jimaku, создайте личный ключ API на странице аккаунта, укажите его в настройках и включите этот источник субтитров.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Поиск и скачивание субтитров. Зарегистрируйте аккаунт, создайте приложение для использования API и получите ключ API. Вход пользователя необязателен и позволяет использовать квоту скачиваний аккаунта.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Эта сборка включает учётные данные приложения для сервиса данмаку. Пользователям не нужно подавать заявку на API; при желании включите онлайн-сопоставление данмаку.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'В этой сборке нет учётных данных приложения для данмаку, поэтому официальное онлайн-сопоставление недоступно. Эти данные предоставляет разработчик; вам не нужно регистрировать личный API.';
+  @override
+  String get onboarding_online_services_servers =>
+      'У этих сервисов нет общей страницы регистрации. Укажите адрес своего существующего сервера и аккаунт или ключ, предоставленный администратором. Если сервера нет, пропустите этот шаг.';
+  @override
+  String get video_online_services_setup_title =>
+      'Настроить необязательные онлайн-сервисы';
+  @override
+  String get video_online_services_setup_description =>
+      'Необязательные аккаунты и ключи API улучшают распознавание видео и поиск субтитров. Воспроизведение работает и без них.';
+  @override
+  String get video_online_services_setup_register =>
+      'Узнать о сервисах и зарегистрироваться';
+  @override
+  String get video_online_services_setup_settings => 'Открыть настройки';
+  @override
+  String get video_online_services_setup_dismiss => 'Больше не показывать';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Ключ API приложения уже включён. При желании можно войти в свой аккаунт OpenSubtitles для использования личной квоты скачиваний или указать собственный ключ API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Оставьте пустым, чтобы использовать встроенный ключ API приложения.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -126155,7 +128469,7 @@ class _StringsTh extends _StringsEn {
   String get video_source_scrape_locale => 'ภาษาข้อมูลเมตา';
   @override
   String get video_source_scrape_locale_hint =>
-      'ภาษาที่ต้องการสำหรับชื่อ สรุปเนื้อหา และรูปภาพ';
+      'ภาษาที่ต้องการสำหรับข้อมูลสำรองและข้อมูลเสริมจาก TMDB ส่วน MAL ใช้ชื่อเรื่องและข้อความต้นฉบับที่ MAL ให้มา';
   @override
   String get video_source_scrape_confirmation_title =>
       'ยืนยันการจับคู่ข้อมูลเมตา';
@@ -127652,13 +129966,13 @@ class _StringsTh extends _StringsEn {
   String get video_source_scrape_anidb_client => 'ชื่อไคลเอนต์ AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'ชื่อไคลเอนต์ HTTP API ของ AniDB ที่ลงทะเบียนแล้ว เว้นว่างเพื่อใช้เฉพาะแค็ตตาล็อกชื่อเรื่องที่แคชไว้';
+      'Fushi มีไคลเอนต์แอปที่ลงทะเบียนไว้แล้ว โดยปกติให้เว้นว่างไว้ ระบุไคลเอนต์ที่ลงทะเบียนเองเฉพาะเมื่อจำเป็น';
   @override
   String get video_source_scrape_anidb_client_version =>
       'เวอร์ชันไคลเอนต์ AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'เวอร์ชันเลขบวกที่ลงทะเบียนกับ AniDB HTTP API จะไม่ทำงานจนกว่าทั้งสองช่องจะถูกต้อง';
+      'เฉพาะไคลเอนต์ที่กำหนดเองเท่านั้นที่ต้องระบุเวอร์ชันที่ลงทะเบียนไว้ที่นี่ Fushi ดูแลข้อมูลประจำตัวแอปเริ่มต้นให้ แต่ยังต้องใช้ข้อมูลเข้าสู่ระบบ AniDB ส่วนตัวของคุณ';
   @override
   String get video_scrape_view_source => 'ดูรายละเอียดแหล่ง';
   @override
@@ -129469,6 +131783,205 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'งานจะดำเนินต่อแม้ปิดหน้าต่างนี้แล้ว';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'ยกเลิกงานทั้งหมด';
+  @override
+  String get video_source_scrape_queue_waiting => 'อยู่ในคิว';
+  @override
+  String get video_source_scrape_queue_remove => 'นำออกจากคิว';
+  @override
+  String get video_source_scrape_queue_submitted => 'ส่งแล้ว';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'ไม่มีผลงานที่ต้องจับคู่ด้วยตนเอง';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'โหลดรายการนี้ไม่ได้ โปรดลองอีกครั้ง';
+  @override
+  String get video_source_scrape_list_reload => 'โหลดใหม่';
+  @override
+  String get video_source_scrape_manual_current_work => 'ผลงานปัจจุบัน';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'ค้นหาด้วยชื่อเรื่อง หรือเลือก MAL, ภาพยนตร์ TMDB หรือซีรีส์ TMDB แล้วป้อน ID หรือ URL ทางการ เลือกผลลัพธ์เพื่อนำไปใช้กับผลงานปัจจุบัน';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'ป้อน ID ผลงานที่เป็นจำนวนเต็มบวก หรือ URL ทางการที่ตรงกับแหล่งข้อมูลและประเภทที่เลือก';
+  @override
+  String get video_source_scrape_manual_by_title => 'ตามชื่อ';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID ผลงาน';
+  @override
+  String get video_source_grouping_mode => 'การจัดกลุ่มวิดีโอ';
+  @override
+  String get video_source_grouping_folder => 'ตามโฟลเดอร์';
+  @override
+  String get video_source_grouping_series => 'ตามผลงาน';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'สร้างหนึ่งคอลเลกชันต่อโฟลเดอร์ย่อยระดับแรก ไฟล์ที่อยู่ในโฟลเดอร์ที่เลือกโดยตรงจะรวมอยู่ในคอลเลกชันเดียวกัน โหมดนี้ไม่รองรับการดึงข้อมูลเมตา ให้เปลี่ยนเป็น «ตามผลงาน» เพื่อดึงข้อมูลเมตา';
+  @override
+  String get video_source_grouping_series_hint =>
+      'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
+  @override
+  String get video_source_grouping_change_hint =>
+      'การสแกนครั้งถัดไปจะใช้การตั้งค่านี้ คอลเลกชันและข้อมูลเมตาที่มีอยู่จะยังคงอยู่';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'มีหลายผลงานที่ใช้ชื่อนี้ เปิดแท็บผลงานที่รอยืนยัน แล้วเลือกรายการที่ต้องการจับคู่';
+  @override
+  String get video_source_scrape_pending_tab => 'ยังไม่จับคู่';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'ภาพยนตร์ TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'ซีรีส์ TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (ผ่าน Jikan) เป็นแหล่งข้อมูลเมตาหลัก และใช้ TMDB เป็นแหล่งสำรอง';
+  @override
+  String get video_anidb_hash_enabled => 'ระบุไฟล์ด้วย AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'ต้องมีบัญชี AniDB และไคลเอนต์ที่ลงทะเบียนแล้ว ส่งเฉพาะขนาดไฟล์และค่าแฮช การเข้าสู่ระบบ AniDB ผ่าน UDP ไม่ได้เข้ารหัส โปรดเปิดใช้เฉพาะบนเครือข่ายที่เชื่อถือได้';
+  @override
+  String get video_anidb_username => 'ชื่อผู้ใช้ AniDB';
+  @override
+  String get video_anidb_password => 'รหัสผ่าน AniDB';
+  @override
+  String get onboarding_online_services_title => 'บริการออนไลน์ (ไม่บังคับ)';
+  @override
+  String get onboarding_online_services_hint =>
+      'ดูข้อมูลบัญชี คีย์ API และบริการที่มีให้ใช้';
+  @override
+  String get onboarding_online_services_body =>
+      'ตั้งค่าเฉพาะบริการที่ต้องการ หรือข้ามขั้นตอนนี้ การเลือกบทแนะนำนี้จะไม่เปิดใช้บริการหรือส่งข้อมูลเข้าสู่ระบบ และการไม่เลือกจะไม่เปลี่ยนการตั้งค่าเดิม';
+  @override
+  String get onboarding_online_services_configure =>
+      'เปิดการตั้งค่าบริการออนไลน์';
+  @override
+  String get onboarding_online_services_link =>
+      'เปิดหน้าบัญชี / API อย่างเป็นทางการ';
+  @override
+  String get onboarding_online_services_account => 'ต้องมีบัญชีส่วนตัว';
+  @override
+  String get onboarding_online_services_ready => 'ไม่ต้องลงทะเบียน';
+  @override
+  String get onboarding_online_services_embedded => 'มีข้อมูลรับรองของแอปในตัว';
+  @override
+  String get onboarding_online_services_key => 'ต้องมีคีย์ API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'บิลด์นี้ไม่มีข้อมูลรับรองของแอป';
+  @override
+  String get onboarding_online_services_server =>
+      'เชื่อมต่อเซิร์ฟเวอร์ที่มีอยู่';
+  @override
+  String get onboarding_online_services_anidb =>
+      'ระบุอนิเมะและตอนด้วยลายนิ้วมือไฟล์ Fushi มีไคลเอนต์แอปที่ลงทะเบียนไว้แล้ว แต่คุณยังต้องมีบัญชี AniDB ของตนเอง กรอกบัญชีในการตั้งค่าและเปิดใช้การระบุไฟล์ด้วยแฮชเมื่อต้องการ';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan ให้ข้อมูลเมตา ส่วน AniList รองรับการค้นพบและการค้นหาที่เกี่ยวข้อง การค้นหาข้อมูลสาธารณะแบบอ่านอย่างเดียวไม่ต้องใช้บัญชีส่วนตัวหรือคีย์ API';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'บิลด์นี้มีคีย์ TMDB ในตัวสำหรับข้อมูลเมตาสำรองและข้อมูลที่ขาดหาย เพิ่มคีย์ของคุณเองเฉพาะเมื่อต้องการใช้โควตาของตนเอง';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'บิลด์นี้ไม่มีคีย์ TMDB หากต้องการใช้ TMDB เป็นแหล่งข้อมูลเมตาสำรอง ให้ขอคีย์ API แล้วกรอกในการตั้งค่า โดย MAL / Jikan ยังใช้ได้ตามปกติ';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'ค้นหาคำบรรยาย ลงทะเบียนหรือเข้าสู่ระบบ Jimaku สร้างคีย์ API ส่วนตัวในหน้าบัญชี แล้วกรอกในการตั้งค่าและเปิดใช้แหล่งคำบรรยายนี้';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'ค้นหาและดาวน์โหลดคำบรรยาย ลงทะเบียนบัญชี สร้างแอปสำหรับใช้ API และรับคีย์ API การเข้าสู่ระบบผู้ใช้เป็นทางเลือก โดยจะใช้โควตาดาวน์โหลดของบัญชีนั้น';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'บิลด์นี้มีข้อมูลรับรองแอปสำหรับบริการดันมาคุในตัว ผู้ใช้ไม่ต้องขอ API เพียงเปิดใช้การจับคู่ดันมาคุออนไลน์เมื่อต้องการ';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'บิลด์นี้ไม่มีข้อมูลรับรองแอปสำหรับดันมาคุ จึงไม่สามารถจับคู่ออนไลน์ผ่านบริการอย่างเป็นทางการได้ ผู้พัฒนาจะเป็นผู้จัดหาข้อมูลนี้ คุณไม่ต้องลงทะเบียน API ส่วนตัว';
+  @override
+  String get onboarding_online_services_servers =>
+      'บริการเหล่านี้ไม่มีหน้าลงทะเบียนร่วมกัน กรอกที่อยู่เซิร์ฟเวอร์ที่คุณมีอยู่ พร้อมบัญชีหรือคีย์จากผู้ดูแลเซิร์ฟเวอร์ หรือข้ามได้หากไม่มีเซิร์ฟเวอร์';
+  @override
+  String get video_online_services_setup_title =>
+      'ตั้งค่าบริการออนไลน์ที่ไม่บังคับ';
+  @override
+  String get video_online_services_setup_description =>
+      'บัญชีและคีย์ API เสริมช่วยปรับปรุงการระบุวิดีโอและค้นหาคำบรรยาย การเล่นพื้นฐานใช้งานได้โดยไม่ต้องตั้งค่า';
+  @override
+  String get video_online_services_setup_register =>
+      'เรียนรู้และลงทะเบียนบริการ';
+  @override
+  String get video_online_services_setup_settings => 'เปิดการตั้งค่า';
+  @override
+  String get video_online_services_setup_dismiss => 'ไม่ต้องแสดงอีก';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'แอปมีคีย์ API ในตัว คุณสามารถเลือกเข้าสู่ระบบบัญชี OpenSubtitles ของตนเองเพื่อใช้โควตาดาวน์โหลดส่วนตัว หรือใช้คีย์ API ของคุณเองได้';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'เว้นว่างไว้เพื่อใช้คีย์ API ที่มีอยู่ในแอป';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -136443,7 +138956,7 @@ class _StringsTr extends _StringsEn {
   String get video_source_scrape_locale => 'Meta veri dili';
   @override
   String get video_source_scrape_locale_hint =>
-      'Başlıklar, özetler ve görseller için tercih edilen dil';
+      'TMDB yedek verileri ve ek ayrıntıları için tercih edilen dil. MAL, MAL tarafından sağlanan başlıkları ve özgün metinleri kullanır.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Meta veri eşleşmesini onayla';
@@ -137959,12 +140472,12 @@ class _StringsTr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB istemci adı';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Kayıtlı AniDB HTTP API istemci adı; yalnızca önbelleğe alınmış başlık kataloğunu kullanmak için boş bırakın';
+      'Fushi kayıtlı bir uygulama istemcisi içerir. Normalde boş bırakın; yalnızca gerekirse özel bir kayıtlı istemci belirtin.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB istemci sürümü';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDB\'ye kayıtlı pozitif sürüm; her iki alan da geçerli olana kadar HTTP API devre dışı kalır';
+      'Burada yalnızca özel istemcilerin kendi kayıtlı sürümü gerekir. Fushi varsayılan uygulama kimliğini yönetir; kişisel AniDB giriş bilgileriniz yine de gereklidir.';
   @override
   String get video_scrape_view_source => 'Kaynak ayrıntılarını görüntüle';
   @override
@@ -139792,6 +142305,206 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Bu pencere kapatıldıktan sonra görevler devam eder.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Tüm görevleri iptal et';
+  @override
+  String get video_source_scrape_queue_waiting => 'Sırada';
+  @override
+  String get video_source_scrape_queue_remove => 'Kuyruktan kaldır';
+  @override
+  String get video_source_scrape_queue_submitted => 'Gönderildi';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Elle eşleştirilmesi gereken eser yok.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Bu liste yüklenemedi. Tekrar deneyin.';
+  @override
+  String get video_source_scrape_list_reload => 'Yeniden yükle';
+  @override
+  String get video_source_scrape_manual_current_work => 'Geçerli eser';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Başlığa göre arayın veya MAL, TMDB filmi ya da TMDB dizisini seçip bir kimlik veya resmî URL girin. Geçerli esere uygulamak için bir sonuç seçin.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Pozitif tam sayı olan bir eser kimliği veya seçilen kaynak ve türle eşleşen resmî bir URL girin.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Ada göre';
+  @override
+  String get video_source_scrape_manual_by_id => 'Eser kimliği';
+  @override
+  String get video_source_grouping_mode => 'Video düzeni';
+  @override
+  String get video_source_grouping_folder => 'Klasöre göre';
+  @override
+  String get video_source_grouping_series => 'Esere göre';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Birinci düzeydeki her alt klasör için bir koleksiyon oluşturur. Doğrudan seçilen klasörde bulunan dosyalar aynı koleksiyonda toplanır. Bu modda meta veriler alınamaz; almak için Esere göre moduna geçin.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Sonraki tarama bu ayarı kullanır. Mevcut koleksiyonlar ve meta veriler korunur.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Bu ada sahip birden fazla eser var. Onay bekleyen eserler sekmesini açın ve eşleştirilecek öğeyi seçin.';
+  @override
+  String get video_source_scrape_pending_tab => 'Eşleşmemiş';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB filmi';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB dizisi';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (Jikan üzerinden) birincil meta veri kaynağıdır; TMDB yedek kaynaktır.';
+  @override
+  String get video_anidb_hash_enabled => 'Dosyaları AniDB ED2K ile tanımla';
+  @override
+  String get video_anidb_hash_hint =>
+      'AniDB hesabı ve kayıtlı bir istemci gerektirir. Yalnızca dosya boyutunu ve karma değerini gönderir. AniDB UDP oturumu şifrelenmeden açılır; yalnızca güvenilir bir ağda etkinleştirin.';
+  @override
+  String get video_anidb_username => 'AniDB kullanıcı adı';
+  @override
+  String get video_anidb_password => 'AniDB parolası';
+  @override
+  String get onboarding_online_services_title =>
+      'Çevrimiçi hizmetler (isteğe bağlı)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Hesapları, API anahtarlarını ve kullanılabilir hizmetleri keşfedin';
+  @override
+  String get onboarding_online_services_body =>
+      'Yalnızca ihtiyaç duyduğunuz hizmetleri kurun veya bu adımı atlayın. Bu öğreticiyi seçmek hizmetleri etkinleştirmez ya da kimlik bilgilerini göndermez; seçmemek de mevcut ayarları değiştirmez.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Çevrimiçi hizmet ayarlarını aç';
+  @override
+  String get onboarding_online_services_link =>
+      'Resmî hesap / API sayfasını aç';
+  @override
+  String get onboarding_online_services_account => 'Kişisel hesap gerekli';
+  @override
+  String get onboarding_online_services_ready => 'Kayıt gerekmiyor';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Uygulama kimlik bilgileri dahil';
+  @override
+  String get onboarding_online_services_key => 'API anahtarı gerekli';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Bu derlemede uygulama kimlik bilgileri yok';
+  @override
+  String get onboarding_online_services_server => 'Mevcut bir sunucuya bağlan';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Anime ve bölümleri dosya parmak iziyle tanımlayın. Fushi kayıtlı bir uygulama istemcisine sahiptir; yine de kendi AniDB hesabınız gerekir. Ayarlara girin ve istediğinizde dosya karmasıyla tanımlamayı etkinleştirin.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan meta veri sağlar; AniList keşfi ve ilgili sorguları destekler. Herkese açık salt okunur sorgular için kişisel hesap veya API anahtarı gerekmez.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Bu derleme, yedek meta veriler ve eksik alanlar için bir TMDB anahtarı içerir. Yalnızca kendi kotanızı kullanmak istiyorsanız kendi anahtarınızı ekleyin.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Bu derlemede TMDB anahtarı yok. TMDB yedek meta verilerine ihtiyacınız varsa bir API anahtarı edinin ve ayarlara girin; MAL / Jikan kullanılabilir olmaya devam eder.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Altyazı bulun. Jimaku’ya kaydolun veya giriş yapın, hesap sayfanızda kişisel bir API anahtarı oluşturun, ardından ayarlara girip bu altyazı kaynağını etkinleştirin.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Altyazı bulun ve indirin. Bir hesap açın, API tüketicisi oluşturun ve API anahtarı alın. Kullanıcı girişi isteğe bağlıdır ve hesabın indirme kotasını kullanır.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Bu derleme danmaku hizmetinin uygulama kimlik bilgilerini içerir. Kullanıcıların API başvurusu yapması gerekmez; istediğinizde çevrimiçi danmaku eşleştirmesini etkinleştirin.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Bu derlemede danmaku uygulama kimlik bilgileri olmadığından resmî çevrimiçi eşleştirme kullanılamaz. Bu bilgileri geliştirici sağlar; kişisel API kaydı yapmanız gerekmez.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Bu hizmetlerin ortak bir kayıt sayfası yoktur. Mevcut sunucunuzun adresini ve yöneticisinin sağladığı hesabı veya anahtarı girin; sunucunuz yoksa atlayın.';
+  @override
+  String get video_online_services_setup_title =>
+      'İsteğe bağlı çevrimiçi hizmetleri yapılandır';
+  @override
+  String get video_online_services_setup_description =>
+      'İsteğe bağlı hesaplar ve API anahtarları video tanımlamayı ve altyazı aramayı iyileştirebilir. Temel oynatma bunlar olmadan da çalışır.';
+  @override
+  String get video_online_services_setup_register =>
+      'Hizmetleri öğren ve kaydol';
+  @override
+  String get video_online_services_setup_settings => 'Ayarları aç';
+  @override
+  String get video_online_services_setup_dismiss => 'Bir daha gösterme';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Uygulamanın API anahtarı dahildir. İsterseniz kişisel indirme kotanız için OpenSubtitles hesabınıza giriş yapabilir veya kendi API anahtarınızı kullanabilirsiniz.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Uygulamayla gelen API anahtarını kullanmak için boş bırakın.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -146749,7 +149462,7 @@ class _StringsVi extends _StringsEn {
   String get video_source_scrape_locale => 'Ngôn ngữ metadata';
   @override
   String get video_source_scrape_locale_hint =>
-      'Ngôn ngữ ưu tiên cho tiêu đề, tóm tắt và hình ảnh';
+      'Ngôn ngữ ưu tiên cho dữ liệu dự phòng và thông tin bổ sung từ TMDB. MAL sử dụng tiêu đề và văn bản gốc do MAL cung cấp.';
   @override
   String get video_source_scrape_confirmation_title =>
       'Xác nhận kết quả khớp metadata';
@@ -148259,13 +150972,13 @@ class _StringsVi extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Tên client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Tên client HTTP API AniDB đã đăng ký; để trống để chỉ sử dụng danh mục tiêu đề đã lưu';
+      'Fushi đã tích hợp ứng dụng khách đã đăng ký. Thông thường hãy để trống; chỉ nhập ứng dụng khách tùy chỉnh đã đăng ký khi cần.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Phiên bản client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Phiên bản dương đã đăng ký với AniDB; HTTP API bị vô hiệu hóa cho đến khi cả hai trường hợp lệ';
+      'Chỉ ứng dụng khách tùy chỉnh mới cần nhập phiên bản đã đăng ký tại đây. Fushi quản lý danh tính ứng dụng mặc định; bạn vẫn cần thông tin đăng nhập AniDB cá nhân.';
   @override
   String get video_scrape_view_source => 'Xem chi tiết nguồn';
   @override
@@ -150086,6 +152799,206 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint =>
+      'Các tác vụ vẫn tiếp tục khi đóng cửa sổ này.';
+  @override
+  String get video_source_scrape_queue_cancel_all => 'Hủy tất cả tác vụ';
+  @override
+  String get video_source_scrape_queue_waiting => 'Trong hàng đợi';
+  @override
+  String get video_source_scrape_queue_remove => 'Xóa khỏi hàng đợi';
+  @override
+  String get video_source_scrape_queue_submitted => 'Đã gửi';
+  @override
+  String get video_source_scrape_pending_empty =>
+      'Không có tác phẩm nào cần ghép thủ công.';
+  @override
+  String get video_source_scrape_list_load_failed =>
+      'Không thể tải danh sách này. Vui lòng thử lại.';
+  @override
+  String get video_source_scrape_list_reload => 'Tải lại';
+  @override
+  String get video_source_scrape_manual_current_work => 'Tác phẩm hiện tại';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      'Tìm theo tiêu đề, hoặc chọn MAL, phim điện ảnh TMDB hay phim truyền hình TMDB rồi nhập ID hoặc URL chính thức. Chọn một kết quả để áp dụng cho tác phẩm hiện tại.';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      'Nhập ID tác phẩm là số nguyên dương hoặc URL chính thức khớp với nguồn và loại đã chọn.';
+  @override
+  String get video_source_scrape_manual_by_title => 'Theo tên';
+  @override
+  String get video_source_scrape_manual_by_id => 'ID tác phẩm';
+  @override
+  String get video_source_grouping_mode => 'Cách nhóm video';
+  @override
+  String get video_source_grouping_folder => 'Theo thư mục';
+  @override
+  String get video_source_grouping_series => 'Theo tác phẩm';
+  @override
+  String get video_source_grouping_folder_hint =>
+      'Tạo một bộ sưu tập cho mỗi thư mục con cấp đầu tiên. Các tệp nằm trực tiếp trong thư mục đã chọn được gom vào cùng một bộ sưu tập. Chế độ này không hỗ trợ lấy siêu dữ liệu; hãy chuyển sang Theo tác phẩm để lấy.';
+  @override
+  String get video_source_grouping_series_hint =>
+      'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
+  @override
+  String get video_source_grouping_change_hint =>
+      'Lần quét tiếp theo sẽ dùng thiết lập này. Các bộ sưu tập và siêu dữ liệu hiện có sẽ được giữ nguyên.';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      'Có nhiều tác phẩm trùng tên này. Mở thẻ tác phẩm chờ xác nhận và chọn mục cụ thể để ghép.';
+  @override
+  String get video_source_scrape_pending_tab => 'Chưa ghép';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'Phim điện ảnh TMDB';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'Phim truyền hình TMDB';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL (qua Jikan) là nguồn siêu dữ liệu chính; TMDB là nguồn dự phòng.';
+  @override
+  String get video_anidb_hash_enabled => 'Nhận diện tệp bằng AniDB ED2K';
+  @override
+  String get video_anidb_hash_hint =>
+      'Cần tài khoản AniDB và ứng dụng khách đã đăng ký. Chỉ gửi kích thước và mã băm của tệp. Đăng nhập AniDB qua UDP không được mã hóa; chỉ bật trên mạng đáng tin cậy.';
+  @override
+  String get video_anidb_username => 'Tên người dùng AniDB';
+  @override
+  String get video_anidb_password => 'Mật khẩu AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'Dịch vụ trực tuyến (tùy chọn)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Tìm hiểu tài khoản, khóa API và các dịch vụ hiện có';
+  @override
+  String get onboarding_online_services_body =>
+      'Chỉ thiết lập các dịch vụ bạn cần hoặc bỏ qua bước này. Chọn hướng dẫn này không bật dịch vụ hay gửi thông tin đăng nhập; không chọn cũng không thay đổi cài đặt hiện có.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Mở cài đặt dịch vụ trực tuyến';
+  @override
+  String get onboarding_online_services_link =>
+      'Mở trang tài khoản / API chính thức';
+  @override
+  String get onboarding_online_services_account => 'Cần tài khoản cá nhân';
+  @override
+  String get onboarding_online_services_ready => 'Không cần đăng ký';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Đã tích hợp thông tin xác thực ứng dụng';
+  @override
+  String get onboarding_online_services_key => 'Cần khóa API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Bản dựng này thiếu thông tin xác thực ứng dụng';
+  @override
+  String get onboarding_online_services_server => 'Kết nối máy chủ hiện có';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Nhận diện anime và tập phim bằng dấu vân tay tệp. Fushi có ứng dụng khách đã đăng ký; bạn vẫn cần tài khoản AniDB của riêng mình. Nhập tài khoản trong cài đặt và bật nhận diện tệp bằng mã băm khi muốn.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan cung cấp siêu dữ liệu; AniList hỗ trợ khám phá và các truy vấn liên quan. Truy vấn công khai chỉ đọc không cần tài khoản cá nhân hoặc khóa API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Bản dựng này đã tích hợp khóa TMDB cho dữ liệu dự phòng và các trường còn thiếu. Chỉ thêm khóa riêng nếu bạn muốn dùng hạn mức của mình.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Bản dựng này chưa có khóa TMDB. Hãy xin khóa API rồi nhập trong cài đặt nếu cần TMDB làm nguồn siêu dữ liệu dự phòng; MAL / Jikan vẫn dùng được.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Tìm phụ đề. Đăng ký hoặc đăng nhập Jimaku, tạo khóa API cá nhân trên trang tài khoản, nhập khóa vào cài đặt rồi bật nguồn phụ đề này.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Tìm và tải phụ đề. Đăng ký tài khoản, tạo ứng dụng sử dụng API để lấy khóa API. Đăng nhập người dùng là tùy chọn và sử dụng hạn mức tải xuống của tài khoản.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Bản dựng này đã tích hợp thông tin xác thực ứng dụng cho dịch vụ bình luận chạy trên màn hình. Người dùng không cần xin API; chỉ cần bật khớp bình luận trực tuyến khi muốn.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Bản dựng này chưa có thông tin xác thực ứng dụng cho dịch vụ bình luận chạy trên màn hình, nên chưa dùng được tính năng khớp trực tuyến chính thức. Nhà phát triển cung cấp thông tin này; bạn không cần đăng ký API cá nhân.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Các dịch vụ này không có trang đăng ký chung. Nhập địa chỉ máy chủ hiện có và tài khoản hoặc khóa do quản trị viên cung cấp, hoặc bỏ qua nếu bạn chưa có máy chủ.';
+  @override
+  String get video_online_services_setup_title =>
+      'Thiết lập dịch vụ trực tuyến tùy chọn';
+  @override
+  String get video_online_services_setup_description =>
+      'Tài khoản và khóa API tùy chọn giúp cải thiện nhận diện video và tìm phụ đề. Phát video cơ bản không cần chúng.';
+  @override
+  String get video_online_services_setup_register =>
+      'Tìm hiểu và đăng ký dịch vụ';
+  @override
+  String get video_online_services_setup_settings => 'Mở cài đặt';
+  @override
+  String get video_online_services_setup_dismiss => 'Không hiển thị lại';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Ứng dụng đã tích hợp khóa API. Bạn có thể đăng nhập tài khoản OpenSubtitles của mình để dùng hạn mức tải xuống cá nhân hoặc sử dụng khóa API riêng.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Để trống để dùng khóa API tích hợp trong ứng dụng.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -156531,7 +159444,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_scrape_locale => '资料语言';
   @override
-  String get video_source_scrape_locale_hint => '标题、简介与图片的首选语言';
+  String get video_source_scrape_locale_hint =>
+      'TMDB 兜底及补充资料的首选语言；MAL 使用其提供的标题和原始文本。';
   @override
   String get video_source_scrape_confirmation_title => '确认资料匹配';
   @override
@@ -157876,12 +160790,12 @@ class _StringsZhCn extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 客户端名称';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '已登记的 AniDB HTTP API 客户端名称；留空时仅使用缓存标题目录';
+      'Fushi 已内置注册的应用客户端，通常留空即可；仅按需填写自定义注册客户端。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 客户端版本';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      '在 AniDB 登记的正整数版本；两项均有效前不会启用 HTTP API';
+      '仅自定义客户端需要在此填写其注册版本。默认应用身份由 Fushi 维护，个人 AniDB 登录仍需自行配置。';
   @override
   String get video_scrape_view_source => '查看来源详情';
   @override
@@ -159539,6 +162453,187 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       '运行于 ${provider} · 静态融合图';
+  @override
+  String get onboarding_pack_download_discard => '放弃下载';
+  @override
+  String get onboarding_pack_discard_confirm => '盘上的半截包会被删除，以后要重新下载就得从头开始。';
+  @override
+  String get onboarding_pack_discard_failed => '无法删除下载文件。请关闭占用文件的程序后重试。';
+  @override
+  String get onboarding_pack_discard_running => '正在清理下载文件…';
+  @override
+  String get onboarding_pack_tutorial_ready => '资源已准备好';
+  @override
+  String get onboarding_pack_tutorial_desc => '词典和发音资源已就绪，试试第一次查词吧。';
+  @override
+  String get onboarding_pack_tutorial_start => '开始查词教程';
+  @override
+  String get onboarding_pack_tutorial_skip => '暂时跳过';
+  @override
+  String get onboarding_pack_download_ready_hint => '导入后即可使用词典和发音资源，也可以稍后再导入。';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      '推荐包已下载。准备好后，点击底部的「现在导入」。';
+  @override
+  String get download_task_group_by => '分组';
+  @override
+  String get download_task_group_none => '不分组';
+  @override
+  String get download_task_group_collection => '合集／作品';
+  @override
+  String get download_task_group_kind => '媒体类型';
+  @override
+  String get download_task_group_status => '状态';
+  @override
+  String get download_task_collection_unassigned => '未归属合集';
+  @override
+  String get download_task_groups_collapse => '收起所有分组';
+  @override
+  String get download_task_groups_expand => '展开所有分组';
+  @override
+  String get download_task_sort_direction => '切换升降序';
+  @override
+  String get download_task_status_attention => '需要处理';
+  @override
+  String get download_task_status_active => '进行中';
+  @override
+  String get download_task_status_filter => '任务状态';
+  @override
+  String get video_source_scrape_background_hint => '关闭窗口后，任务会继续在后台执行。';
+  @override
+  String get video_source_scrape_queue_cancel_all => '取消全部任务';
+  @override
+  String get video_source_scrape_queue_waiting => '排队中';
+  @override
+  String get video_source_scrape_queue_remove => '撤回此任务';
+  @override
+  String get video_source_scrape_queue_submitted => '已加入队列';
+  @override
+  String get video_source_scrape_pending_empty => '没有需要手动匹配的作品。';
+  @override
+  String get video_source_scrape_list_load_failed => '列表加载失败，请重试。';
+  @override
+  String get video_source_scrape_list_reload => '重新加载';
+  @override
+  String get video_source_scrape_manual_current_work => '当前作品';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      '按标题搜索，或选择 MAL、TMDB 电影、TMDB 电视剧并输入 ID 或官方链接。选择结果后才会应用到当前作品。';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      '请输入正整数作品 ID，或与所选来源及类型一致的官方链接。';
+  @override
+  String get video_source_scrape_manual_by_title => '按标题';
+  @override
+  String get video_source_scrape_manual_by_id => '按作品 ID';
+  @override
+  String get video_source_grouping_mode => '视频分组方式';
+  @override
+  String get video_source_grouping_folder => '按文件夹';
+  @override
+  String get video_source_grouping_series => '按作品';
+  @override
+  String get video_source_grouping_folder_hint =>
+      '每个一级子文件夹创建一个合集，根目录中的视频归入根合集。此模式仅整理视频，不刮削作品资料；如需刮削，请切换为按作品。';
+  @override
+  String get video_source_grouping_series_hint => '按文件名识别作品与分集，再匹配作品资料。';
+  @override
+  String get video_source_grouping_change_hint => '下次扫描使用此设置，已有合集和资料会保留。';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      '存在多个同名作品。请打开待确认页，选择具体条目进行匹配。';
+  @override
+  String get video_source_scrape_pending_tab => '待确认';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB 电影';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB 电视剧';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL（经 Jikan）为主要资料源，TMDB 兜底。';
+  @override
+  String get video_anidb_hash_enabled => '通过 AniDB ED2K 识别文件';
+  @override
+  String get video_anidb_hash_hint =>
+      '需要 AniDB 账号和已注册客户端，仅提交文件大小与哈希。AniDB UDP 登录未加密，请仅在可信网络下开启。';
+  @override
+  String get video_anidb_username => 'AniDB 用户名';
+  @override
+  String get video_anidb_password => 'AniDB 密码';
+  @override
+  String get onboarding_online_services_title => '在线服务（可选）';
+  @override
+  String get onboarding_online_services_hint => '按需了解账号、API 密钥和已有服务';
+  @override
+  String get onboarding_online_services_body =>
+      '按需配置你要用的服务，也可以跳过。勾选此教程不会启用服务或提交账号，未勾选也不会改变已有设置。';
+  @override
+  String get onboarding_online_services_configure => '打开在线服务设置';
+  @override
+  String get onboarding_online_services_link => '打开官方账号 / API 页面';
+  @override
+  String get onboarding_online_services_account => '需要个人账号';
+  @override
+  String get onboarding_online_services_ready => '无需注册';
+  @override
+  String get onboarding_online_services_embedded => '应用身份已内置';
+  @override
+  String get onboarding_online_services_key => '需要 API 密钥';
+  @override
+  String get onboarding_online_services_build_missing => '此构建未配置应用身份';
+  @override
+  String get onboarding_online_services_server => '连接已有服务器';
+  @override
+  String get onboarding_online_services_anidb =>
+      '文件指纹辅助识别动画作品和分集。Fushi 已注册应用客户端，你仍需注册自己的 AniDB 账号，在设置中填写账号并自行开启文件哈希识别。';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan 提供作品资料；AniList 用于发现和相关查询。公共只读查询无需个人账号或 API 密钥。';
+  @override
+  String get onboarding_online_services_tmdb =>
+      '此构建已内置 TMDB 密钥，用于资料补缺与兜底。只有需要自己的配额时才配置个人密钥。';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      '此构建未内置 TMDB 密钥。需要 TMDB 资料兜底时，请申请 API 密钥并填入设置；MAL / Jikan 仍可使用。';
+  @override
+  String get onboarding_online_services_jimaku =>
+      '用于查找字幕。注册或登录 Jimaku 后，在账号页面生成个人 API 密钥，填入设置并开启字幕来源。';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      '用于查找和下载字幕。注册账号后在 API 页面创建应用并获取 API 密钥。用户登录为可选项，可使用对应账号的下载配额。';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      '此构建已内置弹幕服务应用身份，无需每位用户申请 API；按需开启在线弹幕匹配即可。';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      '此构建未配置弹幕服务应用身份，官方在线匹配暂不可用。应用身份由开发者申请，不需要你注册个人 API。';
+  @override
+  String get onboarding_online_services_servers =>
+      '这些服务没有统一注册入口。请填写你已有服务器的地址，以及服务管理员提供的账号或密钥；没有服务器可跳过。';
+  @override
+  String get video_online_services_setup_title => '配置可选在线服务';
+  @override
+  String get video_online_services_setup_description =>
+      '按需配置账号或 API 密钥，可增强文件识别和字幕搜索。基础播放不受影响。';
+  @override
+  String get video_online_services_setup_register => '了解和注册服务';
+  @override
+  String get video_online_services_setup_settings => '去设置';
+  @override
+  String get video_online_services_setup_dismiss => '永久关闭提示';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      '应用已内置 API 密钥。可选登录自己的 OpenSubtitles 账号使用个人下载额度，也可以填写自己的 API 密钥。';
+  @override
+  String get video_opensubtitles_app_key_hint => '留空使用应用内置 API 密钥。';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList 官方因服务器稳定性问题暂时停用了公开 API。这不是你的网络或代理的问题——请求已经打到 AniList 并被它当面拒绝了。请稍后再试。';
+  @override
+  String get video_anilist_error_rate_limited => 'AniList 正在对本应用限流。稍等一会儿再重试。';
+  @override
+  String get video_anilist_error_unreachable =>
+      '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
 }
 
 // Path: <root>
@@ -165986,7 +169081,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_locale => '資料語言';
   @override
-  String get video_source_scrape_locale_hint => '標題、簡介與圖片的首選語言';
+  String get video_source_scrape_locale_hint =>
+      'TMDB 後備及補充資料的首選語言；MAL 使用其提供的標題和原始文字。';
   @override
   String get video_source_scrape_confirmation_title => '確認資料匹配';
   @override
@@ -167335,12 +170431,12 @@ class _StringsZhHk extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 客戶端名稱';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '已登記的 AniDB HTTP API 客戶端名稱；留空時僅使用緩存標題目錄';
+      'Fushi 已內置註冊的應用程式用戶端，通常留空即可；僅按需填寫自訂的已註冊用戶端。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 客戶端版本';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      '在 AniDB 登記的正整數版本；兩項均有效前不會啟用 HTTP API';
+      '只有自訂用戶端需要在此填寫其註冊版本。預設應用程式身份由 Fushi 維護，個人 AniDB 登入仍需自行設定。';
   @override
   String get video_scrape_view_source => '查看來源詳情';
   @override
@@ -169041,6 +172137,191 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
+  @override
+  String get video_source_scrape_background_hint => '關閉此視窗後，任務仍會繼續執行。';
+  @override
+  String get video_source_scrape_queue_cancel_all => '取消所有任務';
+  @override
+  String get video_source_scrape_queue_waiting => '排隊中';
+  @override
+  String get video_source_scrape_queue_remove => '從佇列移除';
+  @override
+  String get video_source_scrape_queue_submitted => '已提交';
+  @override
+  String get video_source_scrape_pending_empty => '沒有需要手動配對的作品。';
+  @override
+  String get video_source_scrape_list_load_failed => '無法載入此清單，請重試。';
+  @override
+  String get video_source_scrape_list_reload => '重新載入';
+  @override
+  String get video_source_scrape_manual_current_work => '目前作品';
+  @override
+  String get video_source_scrape_manual_query_hint =>
+      '按標題搜尋，或選擇 MAL、TMDB 電影、TMDB 電視劇並輸入 ID 或官方連結。選擇結果後才會套用至目前作品。';
+  @override
+  String get video_source_scrape_manual_id_invalid =>
+      '請輸入正整數作品 ID，或與所選來源及類型一致的官方連結。';
+  @override
+  String get video_source_scrape_manual_by_title => '按名稱';
+  @override
+  String get video_source_scrape_manual_by_id => '按作品 ID';
+  @override
+  String get video_source_grouping_mode => '影片整理方式';
+  @override
+  String get video_source_grouping_folder => '按資料夾';
+  @override
+  String get video_source_grouping_series => '按作品';
+  @override
+  String get video_source_grouping_folder_hint =>
+      '為每個第一層子資料夾建立一個合集。直接放在所選資料夾內的檔案會歸入同一合集。此模式不支援刮削中繼資料；如需刮削，請切換至「按作品」。';
+  @override
+  String get video_source_grouping_series_hint => '從檔案名稱識別作品及集數，再配對中繼資料。';
+  @override
+  String get video_source_grouping_change_hint => '下次掃描會使用此設定。現有合集及中繼資料會保留。';
+  @override
+  String get video_source_scrape_manual_ambiguous =>
+      '有多個同名作品。請開啟待確認頁，選擇具體項目進行配對。';
+  @override
+  String get video_source_scrape_pending_tab => '待確認';
+  @override
+  String get video_source_scrape_manual_tmdb_movie => 'TMDB 電影';
+  @override
+  String get video_source_scrape_manual_tmdb_tv => 'TMDB 電視劇';
+  @override
+  String get video_source_scrape_provider_policy =>
+      'MAL（經 Jikan）為主要資料來源，TMDB 作後備。';
+  @override
+  String get video_anidb_hash_enabled => '透過 AniDB ED2K 識別檔案';
+  @override
+  String get video_anidb_hash_hint =>
+      '需要 AniDB 帳戶和已註冊用戶端，僅傳送檔案大小與雜湊值。AniDB UDP 登入未加密，請僅在可信網絡下啟用。';
+  @override
+  String get video_anidb_username => 'AniDB 使用者名稱';
+  @override
+  String get video_anidb_password => 'AniDB 密碼';
+  @override
+  String get onboarding_online_services_title => '網上服務（可選）';
+  @override
+  String get onboarding_online_services_hint => '按需了解帳戶、API 金鑰和可用服務';
+  @override
+  String get onboarding_online_services_body =>
+      '按需設定你要使用的服務，也可以略過。勾選此教學不會啟用服務或提交帳戶資料，不勾選亦不會更改現有設定。';
+  @override
+  String get onboarding_online_services_configure => '開啟網上服務設定';
+  @override
+  String get onboarding_online_services_link => '開啟官方帳戶 / API 頁面';
+  @override
+  String get onboarding_online_services_account => '需要個人帳戶';
+  @override
+  String get onboarding_online_services_ready => '毋須註冊';
+  @override
+  String get onboarding_online_services_embedded => '已內置應用程式憑證';
+  @override
+  String get onboarding_online_services_key => '需要 API 金鑰';
+  @override
+  String get onboarding_online_services_build_missing => '此版本未設定應用程式憑證';
+  @override
+  String get onboarding_online_services_server => '連接現有伺服器';
+  @override
+  String get onboarding_online_services_anidb =>
+      '透過檔案指紋輔助識別動畫作品和分集。Fushi 已註冊應用程式用戶端，你仍需註冊自己的 AniDB 帳戶，在設定中填寫帳戶並自行啟用檔案雜湊識別。';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan 提供作品資料；AniList 用於探索和相關查詢。公開唯讀查詢毋須個人帳戶或 API 金鑰。';
+  @override
+  String get onboarding_online_services_tmdb =>
+      '此版本已內置 TMDB 金鑰，用於資料補缺及後備。只有需要自己的配額時才設定個人金鑰。';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      '此版本未內置 TMDB 金鑰。如需 TMDB 後備資料，請申請 API 金鑰並填入設定；MAL / Jikan 仍可使用。';
+  @override
+  String get onboarding_online_services_jimaku =>
+      '用於尋找字幕。註冊或登入 Jimaku 後，在帳戶頁面產生個人 API 金鑰，填入設定並啟用此字幕來源。';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      '用於尋找和下載字幕。註冊帳戶後在 API 頁面建立應用程式並取得 API 金鑰。使用者登入屬可選項目，可使用對應帳戶的下載配額。';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      '此版本已內置彈幕服務應用程式憑證，毋須每位使用者申請 API；按需啟用網上彈幕配對即可。';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      '此版本未設定彈幕服務應用程式憑證，官方網上配對暫時無法使用。應用程式憑證由開發者申請，毋須你註冊個人 API。';
+  @override
+  String get onboarding_online_services_servers =>
+      '這些服務沒有統一註冊頁面。請填寫現有伺服器的地址，以及服務管理員提供的帳戶或金鑰；沒有伺服器可略過。';
+  @override
+  String get video_online_services_setup_title => '設定可選網上服務';
+  @override
+  String get video_online_services_setup_description =>
+      '按需設定帳戶或 API 金鑰，可增強檔案識別和字幕搜尋。基本播放不受影響。';
+  @override
+  String get video_online_services_setup_register => '了解及註冊服務';
+  @override
+  String get video_online_services_setup_settings => '前往設定';
+  @override
+  String get video_online_services_setup_dismiss => '不再顯示提示';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      '應用程式已內置 API 金鑰。可選擇登入自己的 OpenSubtitles 帳戶使用個人下載配額，亦可填寫自己的 API 金鑰。';
+  @override
+  String get video_opensubtitles_app_key_hint => '留空以使用應用程式內置的 API 金鑰。';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList 官方因伺服器穩定性問題暫時停用了公開 API。這不是你的網絡或代理的問題——請求已經打到 AniList 並被它當面拒絕了。請稍後再試。';
+  @override
+  String get video_anilist_error_rate_limited => 'AniList 正在對本應用限流。稍等一會兒再重試。';
+  @override
+  String get video_anilist_error_unreachable =>
+      '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
 }
 
 /// Flat map(s) containing all translations.
@@ -175219,7 +178500,7 @@ extension on _StringsEn {
       case 'video_source_scrape_locale':
         return 'Metadata language';
       case 'video_source_scrape_locale_hint':
-        return 'Preferred language for titles, summaries and images';
+        return 'Preferred language for TMDB fallback and supplementary details. MAL uses the titles and text supplied by MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Confirm metadata match';
       case 'video_source_scrape_confirmation_hint':
@@ -176496,11 +179777,11 @@ extension on _StringsEn {
       case 'video_source_scrape_anidb_client':
         return 'AniDB client name';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Registered AniDB HTTP API client name; leave blank to use the cached title catalog only';
+        return 'Fushi includes a registered app client. Leave this blank normally; set a custom registered client only if needed.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB client version';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Positive version registered with AniDB; HTTP API stays disabled until both fields are valid';
+        return 'Only custom clients need their own registered version here. Fushi maintains the default app identity; your personal AniDB login is still required.';
       case 'video_scrape_view_source':
         return 'View source details';
       case 'video_setting_auto_scrape_hint':
@@ -178000,6 +181281,166 @@ extension on _StringsEn {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Tasks continue when this window is closed.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Cancel all tasks';
+      case 'video_source_scrape_queue_waiting':
+        return 'Queued';
+      case 'video_source_scrape_queue_remove':
+        return 'Remove from queue';
+      case 'video_source_scrape_queue_submitted':
+        return 'Submitted';
+      case 'video_source_scrape_pending_empty':
+        return 'No works need manual matching.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Could not load this list. Try again.';
+      case 'video_source_scrape_list_reload':
+        return 'Reload';
+      case 'video_source_scrape_manual_current_work':
+        return 'Current work';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Search by title, or select MAL / TMDB movie / TMDB TV and enter an ID or official URL. Select a result to apply it to the current work.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Enter a positive work ID or an official URL matching the selected source and type.';
+      case 'video_source_scrape_manual_by_title':
+        return 'By title';
+      case 'video_source_scrape_manual_by_id':
+        return 'Work ID';
+      case 'video_source_grouping_mode':
+        return 'Video organization';
+      case 'video_source_grouping_folder':
+        return 'By folder';
+      case 'video_source_grouping_series':
+        return 'By work';
+      case 'video_source_grouping_folder_hint':
+        return 'Create one collection per first-level subfolder. Files directly in the selected folder share a collection. Metadata scraping is unavailable in this mode; switch to By work to scrape.';
+      case 'video_source_grouping_series_hint':
+        return 'Recognize works and episodes from filenames, then match metadata.';
+      case 'video_source_grouping_change_hint':
+        return 'The next scan uses this setting. Existing collections and metadata are kept.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Several works have this title. Open the pending works tab and select the specific item to match.';
+      case 'video_source_scrape_pending_tab':
+        return 'Unmatched';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB movie';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB TV';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (via Jikan) is the primary metadata source; TMDB is the fallback.';
+      case 'video_anidb_hash_enabled':
+        return 'Identify files with AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Requires an AniDB account and a registered client. Uploads only file size and hash. AniDB UDP login is unencrypted; enable only on a trusted network.';
+      case 'video_anidb_username':
+        return 'AniDB username';
+      case 'video_anidb_password':
+        return 'AniDB password';
+      case 'onboarding_online_services_title':
+        return 'Online services (optional)';
+      case 'onboarding_online_services_hint':
+        return 'Explore accounts, API keys and available services';
+      case 'onboarding_online_services_body':
+        return 'Set up only the services you need, or skip this step. Selecting this tutorial does not enable services or submit credentials, and leaving it unselected does not change existing settings.';
+      case 'onboarding_online_services_configure':
+        return 'Open online service settings';
+      case 'onboarding_online_services_link':
+        return 'Open official account / API page';
+      case 'onboarding_online_services_account':
+        return 'Personal account required';
+      case 'onboarding_online_services_ready':
+        return 'No registration required';
+      case 'onboarding_online_services_embedded':
+        return 'App credentials included';
+      case 'onboarding_online_services_key':
+        return 'API key required';
+      case 'onboarding_online_services_build_missing':
+        return 'App credentials missing in this build';
+      case 'onboarding_online_services_server':
+        return 'Connect an existing server';
+      case 'onboarding_online_services_anidb':
+        return 'Identify anime and episodes by file fingerprint. Fushi has a registered app client; you still need your own AniDB account. Enter it in settings and enable file hash identification when wanted.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan provides metadata; AniList supports discovery and related queries. Public read-only queries need no personal account or API key.';
+      case 'onboarding_online_services_tmdb':
+        return 'This build includes a TMDB key for metadata fallback and missing fields. Add your own key only if you want your own quota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'This build has no TMDB key. Request an API key and enter it in settings if you need TMDB metadata fallback; MAL / Jikan remains available.';
+      case 'onboarding_online_services_jimaku':
+        return 'Find subtitles. Register or sign in to Jimaku, generate a personal API key on your account page, then enter it in settings and enable this subtitle source.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Find and download subtitles. Register an account, create an API consumer and obtain an API key. User login is optional and uses the account download quota.';
+      case 'onboarding_online_services_dandanplay':
+        return 'This build includes the danmaku service app credentials. Users do not need to apply for an API; enable online danmaku matching when wanted.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'This build has no danmaku app credentials, so official online matching is unavailable. The developer provides these credentials; you do not need to register a personal API.';
+      case 'onboarding_online_services_servers':
+        return 'These services have no shared registration page. Enter your existing server address and the account or key provided by its administrator, or skip if you do not have a server.';
+      case 'video_online_services_setup_title':
+        return 'Configure optional online services';
+      case 'video_online_services_setup_description':
+        return 'Optional accounts and API keys can improve video identification and subtitle search. Basic playback works without them.';
+      case 'video_online_services_setup_register':
+        return 'Learn about and register services';
+      case 'video_online_services_setup_settings':
+        return 'Open settings';
+      case 'video_online_services_setup_dismiss':
+        return 'Never show again';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'The app API key is included. You can optionally sign in to your OpenSubtitles account for your download allowance, or use your own API key.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Leave blank to use the bundled app API key.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -184171,7 +187612,7 @@ extension on _StringsAr {
       case 'video_source_scrape_locale':
         return 'لغة البيانات الوصفية';
       case 'video_source_scrape_locale_hint':
-        return 'اللغة المفضلة للعناوين والملخصات والصور';
+        return 'اللغة المفضلة لبيانات TMDB البديلة والتفاصيل التكميلية. يستخدم MAL العناوين والنصوص الأصلية التي يوفّرها.';
       case 'video_source_scrape_confirmation_title':
         return 'تأكيد مطابقة البيانات الوصفية';
       case 'video_source_scrape_confirmation_hint':
@@ -185451,11 +188892,11 @@ extension on _StringsAr {
       case 'video_source_scrape_anidb_client':
         return 'اسم عميل AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'اسم عميل AniDB HTTP API المسجّل؛ اتركه فارغاً لاستخدام كتالوج العناوين المخزّن فقط';
+        return 'يتضمن Fushi عميل تطبيق مسجّلاً. اترك هذا الحقل فارغًا عادةً؛ حدّد عميلاً مسجّلاً مخصصًا عند الحاجة فقط.';
       case 'video_source_scrape_anidb_client_version':
         return 'إصدار عميل AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'إصدار موجب مسجّل لدى AniDB؛ تبقى HTTP API معطّلة حتى يكون كلا الحقلين صالحين';
+        return 'العملاء المخصصون فقط يحتاجون إلى إدخال إصدارهم المسجّل هنا. يتولى Fushi إدارة هوية التطبيق الافتراضية؛ وما زلت بحاجة إلى بيانات دخول حسابك الشخصي في AniDB.';
       case 'video_scrape_view_source':
         return 'عرض تفاصيل المصدر';
       case 'video_setting_auto_scrape_hint':
@@ -186954,6 +190395,166 @@ extension on _StringsAr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'تستمر المهام بعد إغلاق هذه النافذة.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'إلغاء جميع المهام';
+      case 'video_source_scrape_queue_waiting':
+        return 'في قائمة الانتظار';
+      case 'video_source_scrape_queue_remove':
+        return 'إزالة من قائمة الانتظار';
+      case 'video_source_scrape_queue_submitted':
+        return 'تم الإرسال';
+      case 'video_source_scrape_pending_empty':
+        return 'لا توجد أعمال تحتاج إلى مطابقة يدوية.';
+      case 'video_source_scrape_list_load_failed':
+        return 'تعذّر تحميل هذه القائمة. حاول مرة أخرى.';
+      case 'video_source_scrape_list_reload':
+        return 'إعادة التحميل';
+      case 'video_source_scrape_manual_current_work':
+        return 'العمل الحالي';
+      case 'video_source_scrape_manual_query_hint':
+        return 'ابحث بالعنوان، أو اختر MAL أو أفلام TMDB أو مسلسلات TMDB وأدخل المعرّف أو الرابط الرسمي. اختر نتيجة لتطبيقها على العمل الحالي.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'أدخل معرّف عمل صحيحًا موجبًا أو رابطًا رسميًا يطابق المصدر والنوع المحدّدين.';
+      case 'video_source_scrape_manual_by_title':
+        return 'حسب العنوان';
+      case 'video_source_scrape_manual_by_id':
+        return 'معرّف العمل';
+      case 'video_source_grouping_mode':
+        return 'تنظيم الفيديوهات';
+      case 'video_source_grouping_folder':
+        return 'حسب المجلد';
+      case 'video_source_grouping_series':
+        return 'حسب العمل';
+      case 'video_source_grouping_folder_hint':
+        return 'يُنشأ تجميع لكل مجلد فرعي من المستوى الأول. وتُجمع الملفات الموجودة مباشرة في المجلد المحدد في تجميع واحد. لا يتوفر جلب البيانات الوصفية في هذا الوضع؛ انتقل إلى «حسب العمل» لجلبها.';
+      case 'video_source_grouping_series_hint':
+        return 'تحديد الأعمال والحلقات من أسماء الملفات، ثم مطابقة البيانات الوصفية.';
+      case 'video_source_grouping_change_hint':
+        return 'سيستخدم الفحص التالي هذا الإعداد. ستُحفظ التجميعات والبيانات الوصفية الحالية.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'توجد عدة أعمال بهذا العنوان. افتح تبويب الأعمال المعلّقة واختر العنصر المحدد لمطابقته.';
+      case 'video_source_scrape_pending_tab':
+        return 'غير مطابق';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'أفلام TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'مسلسلات TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (عبر Jikan) هو المصدر الرئيسي للبيانات الوصفية؛ وTMDB هو المصدر البديل.';
+      case 'video_anidb_hash_enabled':
+        return 'التعرّف على الملفات باستخدام AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'يتطلب حساب AniDB وعميلاً مسجّلاً. يُرسل حجم الملف وقيمة التجزئة فقط. تسجيل الدخول إلى AniDB عبر UDP غير مشفّر؛ فعّل هذه الميزة على شبكة موثوقة فقط.';
+      case 'video_anidb_username':
+        return 'اسم مستخدم AniDB';
+      case 'video_anidb_password':
+        return 'كلمة مرور AniDB';
+      case 'onboarding_online_services_title':
+        return 'الخدمات عبر الإنترنت (اختيارية)';
+      case 'onboarding_online_services_hint':
+        return 'تعرّف على الحسابات ومفاتيح API والخدمات المتاحة';
+      case 'onboarding_online_services_body':
+        return 'أعدّ الخدمات التي تحتاجها فقط، أو تخطّ هذه الخطوة. اختيار هذا الدليل لا يفعّل الخدمات ولا يرسل بيانات الدخول، وعدم اختياره لا يغيّر الإعدادات الحالية.';
+      case 'onboarding_online_services_configure':
+        return 'فتح إعدادات الخدمات عبر الإنترنت';
+      case 'onboarding_online_services_link':
+        return 'فتح صفحة الحساب / API الرسمية';
+      case 'onboarding_online_services_account':
+        return 'يتطلب حسابًا شخصيًا';
+      case 'onboarding_online_services_ready':
+        return 'لا يتطلب التسجيل';
+      case 'onboarding_online_services_embedded':
+        return 'بيانات اعتماد التطبيق مضمّنة';
+      case 'onboarding_online_services_key':
+        return 'يتطلب مفتاح API';
+      case 'onboarding_online_services_build_missing':
+        return 'بيانات اعتماد التطبيق غير متوفرة في هذا الإصدار';
+      case 'onboarding_online_services_server':
+        return 'الاتصال بخادم موجود';
+      case 'onboarding_online_services_anidb':
+        return 'التعرّف على الأنمي والحلقات باستخدام بصمة الملف. لدى Fushi عميل تطبيق مسجّل؛ لكنك ما زلت بحاجة إلى حساب AniDB خاص بك. أدخله في الإعدادات وفعّل التعرّف على الملفات بالتجزئة عندما تريد.';
+      case 'onboarding_online_services_public':
+        return 'يوفّر MAL / Jikan البيانات الوصفية؛ ويدعم AniList الاستكشاف والاستعلامات ذات الصلة. الاستعلامات العامة للقراءة فقط لا تتطلب حسابًا شخصيًا أو مفتاح API.';
+      case 'onboarding_online_services_tmdb':
+        return 'يتضمن هذا الإصدار مفتاح TMDB للبيانات الوصفية البديلة والحقول الناقصة. أضف مفتاحك الخاص فقط إذا أردت استخدام حصتك الخاصة.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'لا يتضمن هذا الإصدار مفتاح TMDB. اطلب مفتاح API وأدخله في الإعدادات إذا احتجت إلى TMDB كمصدر بديل للبيانات الوصفية؛ ويظل MAL / Jikan متاحًا.';
+      case 'onboarding_online_services_jimaku':
+        return 'البحث عن الترجمات. سجّل أو ادخل إلى Jimaku، وأنشئ مفتاح API شخصيًا من صفحة حسابك، ثم أدخله في الإعدادات وفعّل مصدر الترجمات هذا.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'البحث عن الترجمات وتنزيلها. سجّل حسابًا، وأنشئ تطبيقًا لاستخدام API للحصول على مفتاح API. تسجيل دخول المستخدم اختياري ويتيح استخدام حصة التنزيل الخاصة بالحساب.';
+      case 'onboarding_online_services_dandanplay':
+        return 'يتضمن هذا الإصدار بيانات اعتماد التطبيق لخدمة التعليقات المتحركة. لا يحتاج المستخدمون إلى طلب API؛ فعّل مطابقة التعليقات المتحركة عبر الإنترنت عندما تريد.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'لا يتضمن هذا الإصدار بيانات اعتماد تطبيق التعليقات المتحركة، لذا فإن المطابقة الرسمية عبر الإنترنت غير متاحة. يوفّر المطوّر هذه البيانات؛ ولا تحتاج إلى تسجيل API شخصي.';
+      case 'onboarding_online_services_servers':
+        return 'لا توجد صفحة تسجيل موحّدة لهذه الخدمات. أدخل عنوان خادمك الموجود والحساب أو المفتاح الذي يقدّمه مسؤول الخادم، أو تخطّ هذه الخطوة إن لم يكن لديك خادم.';
+      case 'video_online_services_setup_title':
+        return 'إعداد الخدمات الاختيارية عبر الإنترنت';
+      case 'video_online_services_setup_description':
+        return 'يمكن للحسابات ومفاتيح API الاختيارية تحسين التعرّف على الفيديو والبحث عن الترجمات. يعمل التشغيل الأساسي بدونها.';
+      case 'video_online_services_setup_register':
+        return 'التعرّف على الخدمات والتسجيل فيها';
+      case 'video_online_services_setup_settings':
+        return 'فتح الإعدادات';
+      case 'video_online_services_setup_dismiss':
+        return 'عدم العرض مجددًا';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'مفتاح API الخاص بالتطبيق مضمّن. يمكنك اختياريًا تسجيل الدخول إلى حسابك في OpenSubtitles لاستخدام حصة التنزيل الشخصية، أو استخدام مفتاح API الخاص بك.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'اتركه فارغًا لاستخدام مفتاح API المضمّن في التطبيق.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -193161,7 +196762,7 @@ extension on _StringsDe {
       case 'video_source_scrape_locale':
         return 'Metadatensprache';
       case 'video_source_scrape_locale_hint':
-        return 'Bevorzugte Sprache für Titel, Zusammenfassungen und Bilder';
+        return 'Bevorzugte Sprache für TMDB-Ersatzdaten und ergänzende Details. MAL verwendet die von MAL bereitgestellten Titel und Originaltexte.';
       case 'video_source_scrape_confirmation_title':
         return 'Metadaten-Abgleich bestätigen';
       case 'video_source_scrape_confirmation_hint':
@@ -194444,11 +198045,11 @@ extension on _StringsDe {
       case 'video_source_scrape_anidb_client':
         return 'AniDB-Clientname';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Registrierter AniDB-HTTP-API-Clientname; leer lassen, um nur den zwischengespeicherten Titelkatalog zu verwenden';
+        return 'Fushi enthält einen registrierten App-Client. Normalerweise leer lassen; nur bei Bedarf einen eigenen registrierten Client angeben.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB-Clientversion';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Positive, bei AniDB registrierte Version; die HTTP-API bleibt deaktiviert, bis beide Felder gültig sind';
+        return 'Nur eigene Clients benötigen hier ihre registrierte Version. Fushi verwaltet die standardmäßige App-Identität; deine persönlichen AniDB-Zugangsdaten sind weiterhin erforderlich.';
       case 'video_scrape_view_source':
         return 'Quelldetails anzeigen';
       case 'video_setting_auto_scrape_hint':
@@ -195953,6 +199554,166 @@ extension on _StringsDe {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Die Aufgaben laufen nach dem Schließen dieses Fensters weiter.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Alle Aufgaben abbrechen';
+      case 'video_source_scrape_queue_waiting':
+        return 'In Warteschlange';
+      case 'video_source_scrape_queue_remove':
+        return 'Aus Warteschlange entfernen';
+      case 'video_source_scrape_queue_submitted':
+        return 'Übermittelt';
+      case 'video_source_scrape_pending_empty':
+        return 'Keine Werke müssen manuell zugeordnet werden.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Diese Liste konnte nicht geladen werden. Bitte erneut versuchen.';
+      case 'video_source_scrape_list_reload':
+        return 'Neu laden';
+      case 'video_source_scrape_manual_current_work':
+        return 'Aktuelles Werk';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Nach Titel suchen oder MAL, TMDB-Film bzw. TMDB-Serie auswählen und eine ID oder offizielle URL eingeben. Ein Ergebnis auswählen, um es auf das aktuelle Werk anzuwenden.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Eine positive ganzzahlige Werk-ID oder eine offizielle URL eingeben, die zur gewählten Quelle und zum Typ passt.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Nach Titel';
+      case 'video_source_scrape_manual_by_id':
+        return 'Werk-ID';
+      case 'video_source_grouping_mode':
+        return 'Videos organisieren';
+      case 'video_source_grouping_folder':
+        return 'Nach Ordner';
+      case 'video_source_grouping_series':
+        return 'Nach Werk';
+      case 'video_source_grouping_folder_hint':
+        return 'Für jeden direkten Unterordner wird eine Sammlung erstellt. Dateien direkt im ausgewählten Ordner bilden eine gemeinsame Sammlung. In diesem Modus können keine Metadaten abgerufen werden. Dafür zu „Nach Werk“ wechseln.';
+      case 'video_source_grouping_series_hint':
+        return 'Werke und Episoden anhand der Dateinamen erkennen und anschließend Metadaten zuordnen.';
+      case 'video_source_grouping_change_hint':
+        return 'Der nächste Scan verwendet diese Einstellung. Vorhandene Sammlungen und Metadaten bleiben erhalten.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Mehrere Werke haben diesen Titel. Öffne den Tab für ausstehende Werke und wähle den konkreten Eintrag zur Zuordnung aus.';
+      case 'video_source_scrape_pending_tab':
+        return 'Nicht zugeordnet';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB-Film';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB-Serie';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (über Jikan) ist die primäre Metadatenquelle; TMDB dient als Ersatz.';
+      case 'video_anidb_hash_enabled':
+        return 'Dateien mit AniDB ED2K identifizieren';
+      case 'video_anidb_hash_hint':
+        return 'Erfordert ein AniDB-Konto und einen registrierten Client. Überträgt nur Dateigröße und Hash. Die AniDB-Anmeldung über UDP ist unverschlüsselt; nur in einem vertrauenswürdigen Netzwerk aktivieren.';
+      case 'video_anidb_username':
+        return 'AniDB-Benutzername';
+      case 'video_anidb_password':
+        return 'AniDB-Passwort';
+      case 'onboarding_online_services_title':
+        return 'Onlinedienste (optional)';
+      case 'onboarding_online_services_hint':
+        return 'Konten, API-Schlüssel und verfügbare Dienste kennenlernen';
+      case 'onboarding_online_services_body':
+        return 'Richte nur die benötigten Dienste ein oder überspringe diesen Schritt. Die Auswahl dieser Anleitung aktiviert keine Dienste und übermittelt keine Zugangsdaten. Ohne Auswahl bleiben vorhandene Einstellungen unverändert.';
+      case 'onboarding_online_services_configure':
+        return 'Einstellungen für Onlinedienste öffnen';
+      case 'onboarding_online_services_link':
+        return 'Offizielle Konto-/API-Seite öffnen';
+      case 'onboarding_online_services_account':
+        return 'Persönliches Konto erforderlich';
+      case 'onboarding_online_services_ready':
+        return 'Keine Registrierung erforderlich';
+      case 'onboarding_online_services_embedded':
+        return 'App-Zugangsdaten enthalten';
+      case 'onboarding_online_services_key':
+        return 'API-Schlüssel erforderlich';
+      case 'onboarding_online_services_build_missing':
+        return 'App-Zugangsdaten fehlen in diesem Build';
+      case 'onboarding_online_services_server':
+        return 'Vorhandenen Server verbinden';
+      case 'onboarding_online_services_anidb':
+        return 'Anime und Folgen anhand des Dateifingerabdrucks identifizieren. Fushi hat einen registrierten App-Client; du benötigst weiterhin ein eigenes AniDB-Konto. Trage es in den Einstellungen ein und aktiviere bei Bedarf die Dateierkennung per Hash.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan liefert Metadaten; AniList unterstützt Entdecken und zugehörige Abfragen. Öffentliche Leseabfragen benötigen weder ein persönliches Konto noch einen API-Schlüssel.';
+      case 'onboarding_online_services_tmdb':
+        return 'Dieser Build enthält einen TMDB-Schlüssel für Ersatzdaten und fehlende Felder. Trage nur dann einen eigenen Schlüssel ein, wenn du dein eigenes Kontingent nutzen möchtest.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Dieser Build enthält keinen TMDB-Schlüssel. Beantrage einen API-Schlüssel und trage ihn in den Einstellungen ein, wenn du TMDB als Ersatzquelle benötigst. MAL / Jikan bleibt verfügbar.';
+      case 'onboarding_online_services_jimaku':
+        return 'Untertitel suchen. Registriere dich bei Jimaku oder melde dich an, erstelle auf deiner Kontoseite einen persönlichen API-Schlüssel, trage ihn in den Einstellungen ein und aktiviere diese Untertitelquelle.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Untertitel suchen und herunterladen. Registriere ein Konto, erstelle einen API-Consumer und hole dir einen API-Schlüssel. Die Benutzeranmeldung ist optional und nutzt das Downloadkontingent des Kontos.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Dieser Build enthält die App-Zugangsdaten für den Danmaku-Dienst. Nutzer müssen keinen API-Zugang beantragen; aktiviere bei Bedarf die Online-Danmaku-Zuordnung.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Diesem Build fehlen die App-Zugangsdaten für Danmaku. Die offizielle Online-Zuordnung ist daher nicht verfügbar. Der Entwickler stellt diese Zugangsdaten bereit; du musst keinen persönlichen API-Zugang registrieren.';
+      case 'onboarding_online_services_servers':
+        return 'Diese Dienste haben keine gemeinsame Registrierungsseite. Gib die Adresse deines vorhandenen Servers und das vom Administrator bereitgestellte Konto oder den Schlüssel ein. Ohne Server kannst du diesen Schritt überspringen.';
+      case 'video_online_services_setup_title':
+        return 'Optionale Onlinedienste einrichten';
+      case 'video_online_services_setup_description':
+        return 'Optionale Konten und API-Schlüssel verbessern Videoerkennung und Untertitelsuche. Die Wiedergabe funktioniert auch ohne sie.';
+      case 'video_online_services_setup_register':
+        return 'Dienste kennenlernen und registrieren';
+      case 'video_online_services_setup_settings':
+        return 'Einstellungen öffnen';
+      case 'video_online_services_setup_dismiss':
+        return 'Nie wieder anzeigen';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Der API-Schlüssel der App ist enthalten. Du kannst dich optional bei deinem OpenSubtitles-Konto anmelden, um dein Downloadkontingent zu nutzen, oder einen eigenen API-Schlüssel verwenden.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Leer lassen, um den enthaltenen API-Schlüssel der App zu verwenden.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -202154,7 +205915,7 @@ extension on _StringsEs {
       case 'video_source_scrape_locale':
         return 'Idioma de metadatos';
       case 'video_source_scrape_locale_hint':
-        return 'Idioma preferido para títulos, resúmenes e imágenes';
+        return 'Idioma preferido para los datos alternativos y complementarios de TMDB. MAL utiliza los títulos y textos originales que proporciona.';
       case 'video_source_scrape_confirmation_title':
         return 'Confirmar coincidencia de metadatos';
       case 'video_source_scrape_confirmation_hint':
@@ -203435,11 +207196,11 @@ extension on _StringsEs {
       case 'video_source_scrape_anidb_client':
         return 'Nombre de cliente AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nombre de cliente registrado de la API HTTP de AniDB; deje en blanco para usar solo el catálogo de títulos en caché';
+        return 'Fushi incluye un cliente de aplicación registrado. Normalmente puedes dejar este campo vacío; indica un cliente registrado personalizado solo si lo necesitas.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versión de cliente AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versión positiva registrada en AniDB; la API HTTP se mantiene desactivada hasta que ambos campos sean válidos';
+        return 'Solo los clientes personalizados necesitan su versión registrada aquí. Fushi mantiene la identidad predeterminada de la aplicación; sigue siendo necesario configurar tu cuenta personal de AniDB.';
       case 'video_scrape_view_source':
         return 'Ver detalles de fuente';
       case 'video_setting_auto_scrape_hint':
@@ -204943,6 +208704,166 @@ extension on _StringsEs {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Las tareas continúan después de cerrar esta ventana.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Cancelar todas las tareas';
+      case 'video_source_scrape_queue_waiting':
+        return 'En cola';
+      case 'video_source_scrape_queue_remove':
+        return 'Quitar de la cola';
+      case 'video_source_scrape_queue_submitted':
+        return 'Enviada';
+      case 'video_source_scrape_pending_empty':
+        return 'No hay obras que necesiten una coincidencia manual.';
+      case 'video_source_scrape_list_load_failed':
+        return 'No se pudo cargar esta lista. Inténtalo de nuevo.';
+      case 'video_source_scrape_list_reload':
+        return 'Volver a cargar';
+      case 'video_source_scrape_manual_current_work':
+        return 'Obra actual';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Busca por título o selecciona MAL, película de TMDB o serie de TMDB e introduce un ID o una URL oficial. Selecciona un resultado para aplicarlo a la obra actual.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Introduce un ID de obra entero positivo o una URL oficial que coincida con la fuente y el tipo seleccionados.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Por título';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID de obra';
+      case 'video_source_grouping_mode':
+        return 'Organización de vídeos';
+      case 'video_source_grouping_folder':
+        return 'Por carpeta';
+      case 'video_source_grouping_series':
+        return 'Por obra';
+      case 'video_source_grouping_folder_hint':
+        return 'Se crea una colección por cada subcarpeta de primer nivel. Los archivos situados directamente en la carpeta seleccionada comparten una colección. Este modo no permite obtener metadatos; cambia a «Por obra» para hacerlo.';
+      case 'video_source_grouping_series_hint':
+        return 'Identifica obras y episodios a partir de los nombres de archivo y después busca los metadatos correspondientes.';
+      case 'video_source_grouping_change_hint':
+        return 'El próximo escaneo usará este ajuste. Se conservarán las colecciones y los metadatos existentes.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Hay varias obras con este título. Abre la pestaña de obras pendientes y selecciona el elemento concreto que quieras vincular.';
+      case 'video_source_scrape_pending_tab':
+        return 'Sin vincular';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Película de TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Serie de TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (mediante Jikan) es la fuente principal de metadatos; TMDB es la alternativa.';
+      case 'video_anidb_hash_enabled':
+        return 'Identificar archivos con AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Requiere una cuenta de AniDB y un cliente registrado. Solo envía el tamaño y el hash del archivo. El inicio de sesión de AniDB por UDP no está cifrado; actívalo solo en una red de confianza.';
+      case 'video_anidb_username':
+        return 'Nombre de usuario de AniDB';
+      case 'video_anidb_password':
+        return 'Contraseña de AniDB';
+      case 'onboarding_online_services_title':
+        return 'Servicios en línea (opcionales)';
+      case 'onboarding_online_services_hint':
+        return 'Conoce las cuentas, claves API y servicios disponibles';
+      case 'onboarding_online_services_body':
+        return 'Configura solo los servicios que necesites o salta este paso. Seleccionar este tutorial no activa servicios ni envía credenciales, y no seleccionarlo no cambia los ajustes existentes.';
+      case 'onboarding_online_services_configure':
+        return 'Abrir ajustes de servicios en línea';
+      case 'onboarding_online_services_link':
+        return 'Abrir la página oficial de cuenta / API';
+      case 'onboarding_online_services_account':
+        return 'Requiere una cuenta personal';
+      case 'onboarding_online_services_ready':
+        return 'No requiere registro';
+      case 'onboarding_online_services_embedded':
+        return 'Credenciales de la aplicación incluidas';
+      case 'onboarding_online_services_key':
+        return 'Requiere una clave API';
+      case 'onboarding_online_services_build_missing':
+        return 'Esta compilación no incluye credenciales de la aplicación';
+      case 'onboarding_online_services_server':
+        return 'Conectar un servidor existente';
+      case 'onboarding_online_services_anidb':
+        return 'Identifica anime y episodios mediante la huella del archivo. Fushi tiene un cliente de aplicación registrado; aún necesitas tu propia cuenta de AniDB. Introdúcela en los ajustes y activa la identificación por hash cuando quieras.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan proporciona metadatos; AniList permite descubrir contenido y realizar consultas relacionadas. Las consultas públicas de solo lectura no necesitan cuenta personal ni clave API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Esta compilación incluye una clave de TMDB para datos alternativos y campos ausentes. Añade tu propia clave solo si quieres usar tu propia cuota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Esta compilación no incluye una clave de TMDB. Solicita una clave API e introdúcela en los ajustes si necesitas TMDB como fuente alternativa de metadatos; MAL / Jikan sigue disponible.';
+      case 'onboarding_online_services_jimaku':
+        return 'Busca subtítulos. Regístrate o inicia sesión en Jimaku, genera una clave API personal en la página de tu cuenta, introdúcela en los ajustes y activa esta fuente de subtítulos.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Busca y descarga subtítulos. Registra una cuenta, crea un consumidor de API y obtén una clave API. Iniciar sesión es opcional y permite usar la cuota de descargas de la cuenta.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Esta compilación incluye las credenciales de la aplicación del servicio de danmaku. No necesitas solicitar acceso a la API; activa la coincidencia de danmaku en línea cuando quieras.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Esta compilación no incluye credenciales de la aplicación de danmaku, por lo que la coincidencia oficial en línea no está disponible. El desarrollador proporciona estas credenciales; no necesitas registrar una API personal.';
+      case 'onboarding_online_services_servers':
+        return 'Estos servicios no tienen una página de registro común. Introduce la dirección de tu servidor existente y la cuenta o clave proporcionada por su administrador, o salta este paso si no tienes servidor.';
+      case 'video_online_services_setup_title':
+        return 'Configurar servicios en línea opcionales';
+      case 'video_online_services_setup_description':
+        return 'Las cuentas y claves API opcionales mejoran la identificación de videos y la búsqueda de subtítulos. Puedes reproducir sin ellas.';
+      case 'video_online_services_setup_register':
+        return 'Conocer y registrar servicios';
+      case 'video_online_services_setup_settings':
+        return 'Abrir ajustes';
+      case 'video_online_services_setup_dismiss':
+        return 'No volver a mostrar';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'La clave API de la aplicación está incluida. Puedes iniciar sesión opcionalmente en tu cuenta de OpenSubtitles para usar tu cuota de descargas, o utilizar tu propia clave API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Déjalo vacío para usar la clave API incluida en la aplicación.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -211152,7 +215073,7 @@ extension on _StringsFr {
       case 'video_source_scrape_locale':
         return 'Langue des métadonnées';
       case 'video_source_scrape_locale_hint':
-        return 'Langue préférée pour les titres, résumés et images';
+        return 'Langue préférée pour les données de repli et les détails complémentaires de TMDB. MAL utilise les titres et les textes originaux qu’il fournit.';
       case 'video_source_scrape_confirmation_title':
         return 'Confirmer la correspondance de métadonnées';
       case 'video_source_scrape_confirmation_hint':
@@ -212433,11 +216354,11 @@ extension on _StringsFr {
       case 'video_source_scrape_anidb_client':
         return 'Nom de client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nom de client API HTTP AniDB enregistré ; laissez vide pour utiliser uniquement le catalogue de titres en cache';
+        return 'Fushi inclut un client d’application enregistré. Laissez normalement ce champ vide ; indiquez un client enregistré personnalisé uniquement si nécessaire.';
       case 'video_source_scrape_anidb_client_version':
         return 'Version du client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Version positive enregistrée auprès d\'AniDB ; l\'API HTTP reste désactivée tant que les deux champs ne sont pas valides';
+        return 'Seuls les clients personnalisés nécessitent leur propre version enregistrée ici. Fushi gère l’identité par défaut de l’application ; vos identifiants AniDB personnels restent nécessaires.';
       case 'video_scrape_view_source':
         return 'Voir les détails de la source';
       case 'video_setting_auto_scrape_hint':
@@ -213942,6 +217863,166 @@ extension on _StringsFr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Les tâches continuent après la fermeture de cette fenêtre.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Annuler toutes les tâches';
+      case 'video_source_scrape_queue_waiting':
+        return 'En attente';
+      case 'video_source_scrape_queue_remove':
+        return 'Retirer de la file';
+      case 'video_source_scrape_queue_submitted':
+        return 'Envoyée';
+      case 'video_source_scrape_pending_empty':
+        return 'Aucune œuvre ne nécessite de correspondance manuelle.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Impossible de charger cette liste. Réessayez.';
+      case 'video_source_scrape_list_reload':
+        return 'Recharger';
+      case 'video_source_scrape_manual_current_work':
+        return 'Œuvre actuelle';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Recherchez par titre, ou choisissez MAL, film TMDB ou série TMDB et saisissez un identifiant ou une URL officielle. Sélectionnez un résultat pour l’appliquer à l’œuvre actuelle.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Saisissez un identifiant d’œuvre entier positif ou une URL officielle correspondant à la source et au type sélectionnés.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Par titre';
+      case 'video_source_scrape_manual_by_id':
+        return 'Identifiant de l’œuvre';
+      case 'video_source_grouping_mode':
+        return 'Organisation des vidéos';
+      case 'video_source_grouping_folder':
+        return 'Par dossier';
+      case 'video_source_grouping_series':
+        return 'Par œuvre';
+      case 'video_source_grouping_folder_hint':
+        return 'Crée une collection par sous-dossier de premier niveau. Les fichiers placés directement dans le dossier sélectionné partagent une collection. La récupération des métadonnées n’est pas disponible dans ce mode ; passez à « Par œuvre » pour l’utiliser.';
+      case 'video_source_grouping_series_hint':
+        return 'Identifie les œuvres et les épisodes à partir des noms de fichiers, puis recherche les métadonnées correspondantes.';
+      case 'video_source_grouping_change_hint':
+        return 'La prochaine analyse utilisera ce réglage. Les collections et les métadonnées existantes seront conservées.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Plusieurs œuvres portent ce titre. Ouvrez l’onglet des œuvres en attente et sélectionnez l’élément précis à associer.';
+      case 'video_source_scrape_pending_tab':
+        return 'À associer';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Film TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Série TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (via Jikan) est la source principale de métadonnées ; TMDB sert de solution de repli.';
+      case 'video_anidb_hash_enabled':
+        return 'Identifier les fichiers avec AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Nécessite un compte AniDB et un client enregistré. Seuls la taille et le hachage du fichier sont envoyés. La connexion à AniDB par UDP n’est pas chiffrée ; activez cette option uniquement sur un réseau de confiance.';
+      case 'video_anidb_username':
+        return 'Nom d’utilisateur AniDB';
+      case 'video_anidb_password':
+        return 'Mot de passe AniDB';
+      case 'onboarding_online_services_title':
+        return 'Services en ligne (facultatifs)';
+      case 'onboarding_online_services_hint':
+        return 'Découvrir les comptes, les clés API et les services disponibles';
+      case 'onboarding_online_services_body':
+        return 'Configurez uniquement les services nécessaires, ou ignorez cette étape. Sélectionner ce tutoriel n’active aucun service et n’envoie aucun identifiant ; ne pas le sélectionner ne modifie pas les réglages existants.';
+      case 'onboarding_online_services_configure':
+        return 'Ouvrir les réglages des services en ligne';
+      case 'onboarding_online_services_link':
+        return 'Ouvrir la page officielle du compte / de l’API';
+      case 'onboarding_online_services_account':
+        return 'Compte personnel requis';
+      case 'onboarding_online_services_ready':
+        return 'Aucune inscription nécessaire';
+      case 'onboarding_online_services_embedded':
+        return 'Identifiants de l’application inclus';
+      case 'onboarding_online_services_key':
+        return 'Clé API requise';
+      case 'onboarding_online_services_build_missing':
+        return 'Identifiants de l’application absents de cette version';
+      case 'onboarding_online_services_server':
+        return 'Connecter un serveur existant';
+      case 'onboarding_online_services_anidb':
+        return 'Identifier les anime et les épisodes grâce à l’empreinte du fichier. Fushi dispose d’un client d’application enregistré ; votre propre compte AniDB reste nécessaire. Renseignez-le dans les réglages et activez l’identification par hachage si vous le souhaitez.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan fournit les métadonnées ; AniList permet la découverte et les recherches associées. Les requêtes publiques en lecture seule ne nécessitent ni compte personnel ni clé API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Cette version inclut une clé TMDB pour les métadonnées de repli et les champs manquants. Ajoutez votre propre clé uniquement si vous souhaitez utiliser votre propre quota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Cette version n’inclut pas de clé TMDB. Demandez une clé API et saisissez-la dans les réglages si vous souhaitez utiliser TMDB comme source de repli ; MAL / Jikan reste disponible.';
+      case 'onboarding_online_services_jimaku':
+        return 'Rechercher des sous-titres. Inscrivez-vous ou connectez-vous à Jimaku, générez une clé API personnelle sur la page de votre compte, saisissez-la dans les réglages et activez cette source de sous-titres.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Rechercher et télécharger des sous-titres. Créez un compte, puis un consommateur d’API pour obtenir une clé API. La connexion utilisateur est facultative et permet d’utiliser le quota de téléchargement du compte.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Cette version inclut les identifiants d’application du service de danmaku. Les utilisateurs n’ont pas besoin de demander un accès API ; activez la correspondance des danmaku en ligne si vous le souhaitez.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Cette version n’inclut pas les identifiants d’application pour les danmaku ; la correspondance officielle en ligne est donc indisponible. Ces identifiants sont fournis par le développeur ; vous n’avez pas besoin d’enregistrer une API personnelle.';
+      case 'onboarding_online_services_servers':
+        return 'Ces services n’ont pas de page d’inscription commune. Saisissez l’adresse de votre serveur existant et le compte ou la clé fournis par son administrateur, ou ignorez cette étape si vous n’avez pas de serveur.';
+      case 'video_online_services_setup_title':
+        return 'Configurer les services en ligne facultatifs';
+      case 'video_online_services_setup_description':
+        return 'Des comptes et clés API facultatifs améliorent l’identification des vidéos et la recherche de sous-titres. La lecture fonctionne sans eux.';
+      case 'video_online_services_setup_register':
+        return 'Découvrir les services et s’inscrire';
+      case 'video_online_services_setup_settings':
+        return 'Ouvrir les réglages';
+      case 'video_online_services_setup_dismiss':
+        return 'Ne plus afficher';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'La clé API de l’application est incluse. Vous pouvez vous connecter à votre compte OpenSubtitles pour utiliser votre quota de téléchargement, ou utiliser votre propre clé API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Laissez vide pour utiliser la clé API incluse dans l’application.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -220128,7 +224209,7 @@ extension on _StringsId {
       case 'video_source_scrape_locale':
         return 'Bahasa metadata';
       case 'video_source_scrape_locale_hint':
-        return 'Bahasa yang diutamakan untuk judul, ringkasan, dan gambar';
+        return 'Bahasa pilihan untuk data cadangan dan detail tambahan dari TMDB. MAL menggunakan judul dan teks asli yang disediakan oleh MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Konfirmasi kecocokan metadata';
       case 'video_source_scrape_confirmation_hint':
@@ -221408,11 +225489,11 @@ extension on _StringsId {
       case 'video_source_scrape_anidb_client':
         return 'Nama klien AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nama klien API HTTP AniDB terdaftar; biarkan kosong untuk hanya menggunakan katalog judul yang di-cache';
+        return 'Fushi menyertakan klien aplikasi terdaftar. Biasanya biarkan kosong; atur klien terdaftar khusus hanya jika diperlukan.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versi klien AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versi positif yang terdaftar di AniDB; API HTTP tetap nonaktif sampai kedua kolom valid';
+        return 'Hanya klien khusus yang perlu memasukkan versi terdaftarnya di sini. Fushi mengelola identitas aplikasi bawaan; kredensial akun AniDB pribadi Anda tetap diperlukan.';
       case 'video_scrape_view_source':
         return 'Lihat detail sumber';
       case 'video_setting_auto_scrape_hint':
@@ -222912,6 +226993,166 @@ extension on _StringsId {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Tugas tetap berjalan setelah jendela ini ditutup.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Batalkan semua tugas';
+      case 'video_source_scrape_queue_waiting':
+        return 'Dalam antrean';
+      case 'video_source_scrape_queue_remove':
+        return 'Hapus dari antrean';
+      case 'video_source_scrape_queue_submitted':
+        return 'Dikirim';
+      case 'video_source_scrape_pending_empty':
+        return 'Tidak ada karya yang perlu dicocokkan secara manual.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Daftar ini tidak dapat dimuat. Coba lagi.';
+      case 'video_source_scrape_list_reload':
+        return 'Muat ulang';
+      case 'video_source_scrape_manual_current_work':
+        return 'Karya saat ini';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Cari berdasarkan judul, atau pilih MAL, film TMDB, atau serial TV TMDB lalu masukkan ID atau URL resmi. Pilih hasil untuk menerapkannya ke karya saat ini.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Masukkan ID karya berupa bilangan bulat positif atau URL resmi yang sesuai dengan sumber dan jenis yang dipilih.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Berdasarkan judul';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID karya';
+      case 'video_source_grouping_mode':
+        return 'Pengaturan video';
+      case 'video_source_grouping_folder':
+        return 'Berdasarkan folder';
+      case 'video_source_grouping_series':
+        return 'Berdasarkan karya';
+      case 'video_source_grouping_folder_hint':
+        return 'Buat satu koleksi untuk setiap subfolder tingkat pertama. File yang berada langsung di folder terpilih dikelompokkan dalam satu koleksi. Pengambilan metadata tidak tersedia dalam mode ini; beralihlah ke Berdasarkan karya untuk mengambilnya.';
+      case 'video_source_grouping_series_hint':
+        return 'Kenali karya dan episode dari nama file, lalu cocokkan metadatanya.';
+      case 'video_source_grouping_change_hint':
+        return 'Pemindaian berikutnya akan menggunakan pengaturan ini. Koleksi dan metadata yang sudah ada tetap disimpan.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Ada beberapa karya dengan judul ini. Buka tab karya yang menunggu konfirmasi dan pilih item yang ingin dicocokkan.';
+      case 'video_source_scrape_pending_tab':
+        return 'Belum cocok';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Film TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Serial TV TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (melalui Jikan) adalah sumber metadata utama; TMDB menjadi cadangan.';
+      case 'video_anidb_hash_enabled':
+        return 'Identifikasi berkas dengan AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Memerlukan akun AniDB dan klien terdaftar. Hanya mengirim ukuran dan hash berkas. Login AniDB melalui UDP tidak terenkripsi; aktifkan hanya di jaringan tepercaya.';
+      case 'video_anidb_username':
+        return 'Nama pengguna AniDB';
+      case 'video_anidb_password':
+        return 'Kata sandi AniDB';
+      case 'onboarding_online_services_title':
+        return 'Layanan daring (opsional)';
+      case 'onboarding_online_services_hint':
+        return 'Pelajari akun, kunci API, dan layanan yang tersedia';
+      case 'onboarding_online_services_body':
+        return 'Atur hanya layanan yang diperlukan, atau lewati langkah ini. Memilih tutorial ini tidak mengaktifkan layanan atau mengirim kredensial, dan tidak memilihnya tidak mengubah pengaturan yang sudah ada.';
+      case 'onboarding_online_services_configure':
+        return 'Buka pengaturan layanan daring';
+      case 'onboarding_online_services_link':
+        return 'Buka halaman akun / API resmi';
+      case 'onboarding_online_services_account':
+        return 'Memerlukan akun pribadi';
+      case 'onboarding_online_services_ready':
+        return 'Tidak perlu mendaftar';
+      case 'onboarding_online_services_embedded':
+        return 'Kredensial aplikasi disertakan';
+      case 'onboarding_online_services_key':
+        return 'Memerlukan kunci API';
+      case 'onboarding_online_services_build_missing':
+        return 'Kredensial aplikasi tidak tersedia dalam build ini';
+      case 'onboarding_online_services_server':
+        return 'Hubungkan server yang sudah ada';
+      case 'onboarding_online_services_anidb':
+        return 'Identifikasi anime dan episode dengan sidik jari berkas. Fushi memiliki klien aplikasi terdaftar; Anda tetap memerlukan akun AniDB sendiri. Masukkan akun di pengaturan dan aktifkan identifikasi hash berkas bila diinginkan.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan menyediakan metadata; AniList mendukung penemuan dan pencarian terkait. Kueri publik hanya-baca tidak memerlukan akun pribadi atau kunci API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Build ini menyertakan kunci TMDB untuk metadata cadangan dan kolom yang belum terisi. Tambahkan kunci sendiri hanya jika ingin menggunakan kuota sendiri.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Build ini tidak menyertakan kunci TMDB. Ajukan kunci API dan masukkan di pengaturan jika memerlukan TMDB sebagai sumber metadata cadangan; MAL / Jikan tetap tersedia.';
+      case 'onboarding_online_services_jimaku':
+        return 'Cari takarir. Daftar atau masuk ke Jimaku, buat kunci API pribadi di halaman akun, lalu masukkan di pengaturan dan aktifkan sumber takarir ini.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Cari dan unduh takarir. Daftarkan akun, buat konsumen API, dan dapatkan kunci API. Login pengguna bersifat opsional dan menggunakan kuota unduhan akun tersebut.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Build ini menyertakan kredensial aplikasi layanan danmaku. Pengguna tidak perlu mengajukan akses API; aktifkan pencocokan danmaku daring bila diinginkan.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Build ini tidak menyertakan kredensial aplikasi danmaku, sehingga pencocokan daring resmi tidak tersedia. Pengembang menyediakan kredensial ini; Anda tidak perlu mendaftarkan API pribadi.';
+      case 'onboarding_online_services_servers':
+        return 'Layanan ini tidak memiliki halaman pendaftaran bersama. Masukkan alamat server yang sudah Anda miliki beserta akun atau kunci dari administratornya, atau lewati jika tidak memiliki server.';
+      case 'video_online_services_setup_title':
+        return 'Atur layanan daring opsional';
+      case 'video_online_services_setup_description':
+        return 'Akun dan kunci API opsional dapat meningkatkan identifikasi video dan pencarian takarir. Pemutaran dasar tetap berjalan tanpanya.';
+      case 'video_online_services_setup_register':
+        return 'Pelajari dan daftar layanan';
+      case 'video_online_services_setup_settings':
+        return 'Buka pengaturan';
+      case 'video_online_services_setup_dismiss':
+        return 'Jangan tampilkan lagi';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Kunci API aplikasi sudah disertakan. Anda dapat memilih untuk masuk ke akun OpenSubtitles sendiri guna memakai kuota unduhan pribadi, atau menggunakan kunci API sendiri.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Biarkan kosong untuk menggunakan kunci API bawaan aplikasi.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -229116,7 +233357,7 @@ extension on _StringsIt {
       case 'video_source_scrape_locale':
         return 'Lingua metadati';
       case 'video_source_scrape_locale_hint':
-        return 'Lingua preferita per titoli, riepiloghi e immagini';
+        return 'Lingua preferita per i dati di riserva e i dettagli aggiuntivi di TMDB. MAL usa i titoli e i testi originali forniti da MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Conferma abbinamento metadati';
       case 'video_source_scrape_confirmation_hint':
@@ -230397,11 +234638,11 @@ extension on _StringsIt {
       case 'video_source_scrape_anidb_client':
         return 'Nome client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nome client registrato per l\'API HTTP AniDB; lascia vuoto per usare solo il catalogo titoli in cache';
+        return 'Fushi include un client dell’app registrato. Normalmente puoi lasciare vuoto questo campo; imposta un client registrato personalizzato solo se necessario.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versione client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versione positiva registrata con AniDB; l\'API HTTP resta disabilitata finché entrambi i campi non sono validi';
+        return 'Solo i client personalizzati richiedono qui la propria versione registrata. Fushi gestisce l’identità predefinita dell’app; sono comunque necessarie le tue credenziali personali AniDB.';
       case 'video_scrape_view_source':
         return 'Visualizza dettagli fonte';
       case 'video_setting_auto_scrape_hint':
@@ -231904,6 +236145,166 @@ extension on _StringsIt {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Le attività continuano dopo la chiusura di questa finestra.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Annulla tutte le attività';
+      case 'video_source_scrape_queue_waiting':
+        return 'In coda';
+      case 'video_source_scrape_queue_remove':
+        return 'Rimuovi dalla coda';
+      case 'video_source_scrape_queue_submitted':
+        return 'Inviata';
+      case 'video_source_scrape_pending_empty':
+        return 'Nessuna opera richiede un abbinamento manuale.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Impossibile caricare questo elenco. Riprova.';
+      case 'video_source_scrape_list_reload':
+        return 'Ricarica';
+      case 'video_source_scrape_manual_current_work':
+        return 'Opera attuale';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Cerca per titolo oppure seleziona MAL, film TMDB o serie TV TMDB e inserisci un ID o un URL ufficiale. Seleziona un risultato per applicarlo all’opera attuale.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Inserisci un ID dell’opera intero positivo o un URL ufficiale corrispondente alla fonte e al tipo selezionati.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Per titolo';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID dell’opera';
+      case 'video_source_grouping_mode':
+        return 'Organizzazione dei video';
+      case 'video_source_grouping_folder':
+        return 'Per cartella';
+      case 'video_source_grouping_series':
+        return 'Per opera';
+      case 'video_source_grouping_folder_hint':
+        return 'Crea una raccolta per ogni sottocartella di primo livello. I file direttamente nella cartella selezionata condividono una raccolta. Il recupero dei metadati non è disponibile in questa modalità; passa a «Per opera» per utilizzarlo.';
+      case 'video_source_grouping_series_hint':
+        return 'Riconosci opere ed episodi dai nomi dei file, quindi abbina i metadati.';
+      case 'video_source_grouping_change_hint':
+        return 'La prossima scansione userà questa impostazione. Le raccolte e i metadati esistenti verranno conservati.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Più opere hanno questo titolo. Apri la scheda delle opere in attesa e seleziona l’elemento specifico da abbinare.';
+      case 'video_source_scrape_pending_tab':
+        return 'Da abbinare';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Film TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Serie TV TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (tramite Jikan) è la fonte principale dei metadati; TMDB è la fonte di riserva.';
+      case 'video_anidb_hash_enabled':
+        return 'Identifica i file con AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Richiede un account AniDB e un client registrato. Invia solo dimensione e hash del file. L’accesso ad AniDB tramite UDP non è crittografato; attiva solo su una rete fidata.';
+      case 'video_anidb_username':
+        return 'Nome utente AniDB';
+      case 'video_anidb_password':
+        return 'Password AniDB';
+      case 'onboarding_online_services_title':
+        return 'Servizi online (facoltativi)';
+      case 'onboarding_online_services_hint':
+        return 'Scopri account, chiavi API e servizi disponibili';
+      case 'onboarding_online_services_body':
+        return 'Configura solo i servizi necessari oppure salta questo passaggio. Selezionare questo tutorial non attiva servizi né invia credenziali; non selezionarlo non modifica le impostazioni esistenti.';
+      case 'onboarding_online_services_configure':
+        return 'Apri le impostazioni dei servizi online';
+      case 'onboarding_online_services_link':
+        return 'Apri la pagina ufficiale dell’account / API';
+      case 'onboarding_online_services_account':
+        return 'Account personale richiesto';
+      case 'onboarding_online_services_ready':
+        return 'Nessuna registrazione richiesta';
+      case 'onboarding_online_services_embedded':
+        return 'Credenziali dell’app incluse';
+      case 'onboarding_online_services_key':
+        return 'Chiave API richiesta';
+      case 'onboarding_online_services_build_missing':
+        return 'Credenziali dell’app assenti in questa build';
+      case 'onboarding_online_services_server':
+        return 'Collega un server esistente';
+      case 'onboarding_online_services_anidb':
+        return 'Identifica anime ed episodi tramite l’impronta del file. Fushi dispone di un client dell’app registrato; serve comunque un tuo account AniDB. Inseriscilo nelle impostazioni e attiva l’identificazione tramite hash quando vuoi.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan fornisce i metadati; AniList supporta la scoperta e le ricerche correlate. Le interrogazioni pubbliche in sola lettura non richiedono account personali o chiavi API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Questa build include una chiave TMDB per i metadati di riserva e i campi mancanti. Aggiungi una tua chiave solo se vuoi usare la tua quota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Questa build non include una chiave TMDB. Richiedi una chiave API e inseriscila nelle impostazioni se ti serve TMDB come fonte di riserva; MAL / Jikan rimane disponibile.';
+      case 'onboarding_online_services_jimaku':
+        return 'Trova sottotitoli. Registrati o accedi a Jimaku, genera una chiave API personale nella pagina del tuo account, inseriscila nelle impostazioni e attiva questa fonte di sottotitoli.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Trova e scarica sottotitoli. Registra un account, crea un consumatore API e ottieni una chiave API. L’accesso utente è facoltativo e permette di usare la quota di download dell’account.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Questa build include le credenziali dell’app per il servizio danmaku. Non occorre richiedere l’accesso API; attiva l’abbinamento dei danmaku online quando vuoi.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Questa build non include le credenziali dell’app per i danmaku, quindi l’abbinamento ufficiale online non è disponibile. Le credenziali sono fornite dallo sviluppatore; non devi registrare un’API personale.';
+      case 'onboarding_online_services_servers':
+        return 'Questi servizi non hanno una pagina di registrazione comune. Inserisci l’indirizzo del tuo server esistente e l’account o la chiave forniti dall’amministratore, oppure salta se non hai un server.';
+      case 'video_online_services_setup_title':
+        return 'Configura servizi online facoltativi';
+      case 'video_online_services_setup_description':
+        return 'Account e chiavi API facoltativi migliorano l’identificazione dei video e la ricerca di sottotitoli. La riproduzione funziona anche senza.';
+      case 'video_online_services_setup_register':
+        return 'Scopri i servizi e registrati';
+      case 'video_online_services_setup_settings':
+        return 'Apri impostazioni';
+      case 'video_online_services_setup_dismiss':
+        return 'Non mostrare più';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'La chiave API dell’app è inclusa. Puoi accedere facoltativamente al tuo account OpenSubtitles per usare la tua quota di download, oppure usare una tua chiave API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Lascia vuoto per usare la chiave API inclusa nell’app.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -238049,7 +242450,7 @@ extension on _StringsJa {
       case 'video_source_scrape_locale':
         return 'メタデータの言語';
       case 'video_source_scrape_locale_hint':
-        return 'タイトル、あらすじ、画像の優先言語';
+        return 'TMDB の代替・補足情報で優先する言語です。MAL の情報には、MAL が提供するタイトルと原文を使用します。';
       case 'video_source_scrape_confirmation_title':
         return 'メタデータの一致を確認';
       case 'video_source_scrape_confirmation_hint':
@@ -239326,11 +243727,11 @@ extension on _StringsJa {
       case 'video_source_scrape_anidb_client':
         return 'AniDBクライアント名';
       case 'video_source_scrape_anidb_client_hint':
-        return '登録済みのAniDB HTTP APIクライアント名。空欄にするとキャッシュされたタイトルカタログのみ使用します';
+        return 'Fushi には登録済みのアプリクライアントが含まれています。通常は空欄のままで構いません。必要な場合のみ、独自の登録済みクライアントを指定してください。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDBクライアントバージョン';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDBに登録された正のバージョン番号。両方のフィールドが有効になるまでHTTP APIは無効のままです';
+        return 'ここに登録済みバージョンを入力する必要があるのは独自クライアントのみです。既定のアプリ識別情報は Fushi が管理しますが、個人の AniDB ログイン情報は引き続き必要です。';
       case 'video_scrape_view_source':
         return 'ソースの詳細を表示';
       case 'video_setting_auto_scrape_hint':
@@ -240823,6 +245224,166 @@ extension on _StringsJa {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'このウィンドウを閉じてもタスクは続行されます。';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'すべてのタスクをキャンセル';
+      case 'video_source_scrape_queue_waiting':
+        return '待機中';
+      case 'video_source_scrape_queue_remove':
+        return 'キューから削除';
+      case 'video_source_scrape_queue_submitted':
+        return '送信済み';
+      case 'video_source_scrape_pending_empty':
+        return '手動で照合する必要がある作品はありません。';
+      case 'video_source_scrape_list_load_failed':
+        return 'リストを読み込めませんでした。もう一度お試しください。';
+      case 'video_source_scrape_list_reload':
+        return '再読み込み';
+      case 'video_source_scrape_manual_current_work':
+        return '現在の作品';
+      case 'video_source_scrape_manual_query_hint':
+        return 'タイトルで検索するか、MAL・TMDB 映画・TMDB テレビシリーズを選択して ID または公式 URL を入力してください。検索結果を選択すると現在の作品に適用されます。';
+      case 'video_source_scrape_manual_id_invalid':
+        return '正の整数の作品 ID、または選択したソースと種類に一致する公式 URL を入力してください。';
+      case 'video_source_scrape_manual_by_title':
+        return 'タイトルで検索';
+      case 'video_source_scrape_manual_by_id':
+        return '作品 ID';
+      case 'video_source_grouping_mode':
+        return '動画のまとめ方';
+      case 'video_source_grouping_folder':
+        return 'フォルダー別';
+      case 'video_source_grouping_series':
+        return '作品別';
+      case 'video_source_grouping_folder_hint':
+        return '直下のサブフォルダーごとにコレクションを作成します。選択したフォルダーに直接含まれるファイルは、同じコレクションにまとめられます。このモードではメタデータを取得できません。取得するには「作品別」に切り替えてください。';
+      case 'video_source_grouping_series_hint':
+        return 'ファイル名から作品とエピソードを識別し、メタデータを照合します。';
+      case 'video_source_grouping_change_hint':
+        return '次回のスキャンからこの設定が適用されます。既存のコレクションとメタデータは保持されます。';
+      case 'video_source_scrape_manual_ambiguous':
+        return '同じタイトルの作品が複数あります。確認待ちタブを開き、照合する項目を選択してください。';
+      case 'video_source_scrape_pending_tab':
+        return '未照合';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB 映画';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB テレビシリーズ';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL（Jikan 経由）を主なメタデータソースとし、TMDB を予備ソースとして使用します。';
+      case 'video_anidb_hash_enabled':
+        return 'AniDB ED2K でファイルを識別';
+      case 'video_anidb_hash_hint':
+        return 'AniDB アカウントと登録済みクライアントが必要です。送信するファイル情報はサイズとハッシュのみです。AniDB の UDP ログインは暗号化されないため、信頼できるネットワークでのみ有効にしてください。';
+      case 'video_anidb_username':
+        return 'AniDB ユーザー名';
+      case 'video_anidb_password':
+        return 'AniDB パスワード';
+      case 'onboarding_online_services_title':
+        return 'オンラインサービス（任意）';
+      case 'onboarding_online_services_hint':
+        return 'アカウント、API キー、利用できるサービスを確認';
+      case 'onboarding_online_services_body':
+        return '必要なサービスだけ設定するか、この手順をスキップできます。このチュートリアルを選択しても、サービスの有効化や認証情報の送信は行われません。選択しなくても既存の設定は変わりません。';
+      case 'onboarding_online_services_configure':
+        return 'オンラインサービスの設定を開く';
+      case 'onboarding_online_services_link':
+        return '公式のアカウント / API ページを開く';
+      case 'onboarding_online_services_account':
+        return '個人アカウントが必要';
+      case 'onboarding_online_services_ready':
+        return '登録不要';
+      case 'onboarding_online_services_embedded':
+        return 'アプリ認証情報を内蔵';
+      case 'onboarding_online_services_key':
+        return 'API キーが必要';
+      case 'onboarding_online_services_build_missing':
+        return 'このビルドにはアプリ認証情報がありません';
+      case 'onboarding_online_services_server':
+        return '既存のサーバーに接続';
+      case 'onboarding_online_services_anidb':
+        return 'ファイルの指紋情報からアニメ作品とエピソードを識別します。Fushi はアプリクライアントを登録済みですが、ご自身の AniDB アカウントは必要です。設定で入力し、必要に応じてファイルのハッシュ識別を有効にしてください。';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan は作品情報を提供し、AniList は発見機能と関連検索に使われます。公開情報の読み取り専用検索には、個人アカウントや API キーは不要です。';
+      case 'onboarding_online_services_tmdb':
+        return 'このビルドには、情報の代替取得や不足項目の補完に使う TMDB キーが含まれています。ご自身の利用枠を使いたい場合のみ、個人のキーを設定してください。';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'このビルドには TMDB キーが含まれていません。TMDB からの代替情報取得が必要な場合は、API キーを申請して設定に入力してください。MAL / Jikan は引き続き利用できます。';
+      case 'onboarding_online_services_jimaku':
+        return '字幕を検索します。Jimaku に登録またはログインし、アカウントページで個人の API キーを作成して設定に入力し、この字幕ソースを有効にしてください。';
+      case 'onboarding_online_services_opensubtitles':
+        return '字幕を検索してダウンロードします。アカウント登録後、API 利用アプリを作成して API キーを取得してください。ユーザーログインは任意で、ログインするとアカウントのダウンロード枠を利用できます。';
+      case 'onboarding_online_services_dandanplay':
+        return 'このビルドには弾幕サービスのアプリ認証情報が含まれています。ユーザーごとの API 申請は不要です。必要に応じてオンライン弾幕マッチングを有効にしてください。';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'このビルドには弾幕サービスのアプリ認証情報がないため、公式のオンラインマッチングは利用できません。この認証情報は開発者が用意するもので、個人で API を登録する必要はありません。';
+      case 'onboarding_online_services_servers':
+        return 'これらのサービスには共通の登録ページがありません。既存のサーバーのアドレスと、管理者から提供されたアカウントまたはキーを入力してください。サーバーがなければスキップできます。';
+      case 'video_online_services_setup_title':
+        return '任意のオンラインサービスを設定';
+      case 'video_online_services_setup_description':
+        return '任意のアカウントや API キーを設定すると、動画の識別や字幕検索を強化できます。基本的な再生には不要です。';
+      case 'video_online_services_setup_register':
+        return 'サービスの説明と登録';
+      case 'video_online_services_setup_settings':
+        return '設定を開く';
+      case 'video_online_services_setup_dismiss':
+        return '今後表示しない';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'アプリの API キーは内蔵されています。ご自身の OpenSubtitles アカウントにログインして個人のダウンロード枠を使うか、ご自身の API キーを設定することもできます。';
+      case 'video_opensubtitles_app_key_hint':
+        return '空欄の場合、アプリ内蔵の API キーを使用します。';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -246971,7 +251532,7 @@ extension on _StringsKo {
       case 'video_source_scrape_locale':
         return '메타데이터 언어';
       case 'video_source_scrape_locale_hint':
-        return '제목, 요약 및 이미지에 선호하는 언어';
+        return 'TMDB 대체 및 보충 정보에 사용할 선호 언어입니다. MAL은 MAL에서 제공하는 제목과 원문을 사용합니다.';
       case 'video_source_scrape_confirmation_title':
         return '메타데이터 매칭 확인';
       case 'video_source_scrape_confirmation_hint':
@@ -248247,11 +252808,11 @@ extension on _StringsKo {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 클라이언트 이름';
       case 'video_source_scrape_anidb_client_hint':
-        return '등록된 AniDB HTTP API 클라이언트 이름; 캐시된 제목 카탈로그만 사용하려면 비워 두세요';
+        return 'Fushi에는 등록된 앱 클라이언트가 포함되어 있습니다. 보통은 비워 두세요. 필요한 경우에만 별도로 등록한 클라이언트를 입력하세요.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 클라이언트 버전';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDB에 등록된 양수 버전; 두 필드가 모두 유효할 때까지 HTTP API는 비활성 상태입니다';
+        return '별도 클라이언트만 여기에 등록된 버전을 입력해야 합니다. 기본 앱 식별 정보는 Fushi가 관리하지만, 개인 AniDB 로그인 정보는 여전히 필요합니다.';
       case 'video_scrape_view_source':
         return '소스 상세 보기';
       case 'video_setting_auto_scrape_hint':
@@ -249746,6 +254307,166 @@ extension on _StringsKo {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return '이 창을 닫아도 작업은 계속됩니다.';
+      case 'video_source_scrape_queue_cancel_all':
+        return '모든 작업 취소';
+      case 'video_source_scrape_queue_waiting':
+        return '대기 중';
+      case 'video_source_scrape_queue_remove':
+        return '대기열에서 제거';
+      case 'video_source_scrape_queue_submitted':
+        return '제출됨';
+      case 'video_source_scrape_pending_empty':
+        return '수동으로 일치시킬 작품이 없습니다.';
+      case 'video_source_scrape_list_load_failed':
+        return '목록을 불러올 수 없습니다. 다시 시도하세요.';
+      case 'video_source_scrape_list_reload':
+        return '새로고침';
+      case 'video_source_scrape_manual_current_work':
+        return '현재 작품';
+      case 'video_source_scrape_manual_query_hint':
+        return '제목으로 검색하거나 MAL, TMDB 영화, TMDB TV 시리즈를 선택하고 ID 또는 공식 URL을 입력하세요. 결과를 선택하면 현재 작품에 적용됩니다.';
+      case 'video_source_scrape_manual_id_invalid':
+        return '양의 정수로 된 작품 ID 또는 선택한 소스와 유형에 맞는 공식 URL을 입력하세요.';
+      case 'video_source_scrape_manual_by_title':
+        return '제목으로 검색';
+      case 'video_source_scrape_manual_by_id':
+        return '작품 ID';
+      case 'video_source_grouping_mode':
+        return '동영상 정리 방식';
+      case 'video_source_grouping_folder':
+        return '폴더별';
+      case 'video_source_grouping_series':
+        return '작품별';
+      case 'video_source_grouping_folder_hint':
+        return '바로 아래 하위 폴더마다 컬렉션을 만듭니다. 선택한 폴더에 직접 들어 있는 파일은 하나의 컬렉션으로 묶습니다. 이 모드에서는 메타데이터를 가져올 수 없습니다. 가져오려면 작품별로 전환하세요.';
+      case 'video_source_grouping_series_hint':
+        return '파일 이름에서 작품과 에피소드를 식별한 후 메타데이터를 일치시킵니다.';
+      case 'video_source_grouping_change_hint':
+        return '다음 스캔부터 이 설정을 사용합니다. 기존 컬렉션과 메타데이터는 유지됩니다.';
+      case 'video_source_scrape_manual_ambiguous':
+        return '같은 제목의 작품이 여러 개 있습니다. 확인 대기 탭을 열고 일치시킬 항목을 선택하세요.';
+      case 'video_source_scrape_pending_tab':
+        return '미일치';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB 영화';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB TV 시리즈';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL(Jikan 경유)을 기본 메타데이터 소스로 사용하고, TMDB를 대체 소스로 사용합니다.';
+      case 'video_anidb_hash_enabled':
+        return 'AniDB ED2K로 파일 식별';
+      case 'video_anidb_hash_hint':
+        return 'AniDB 계정과 등록된 클라이언트가 필요합니다. 파일 크기와 해시만 전송합니다. AniDB UDP 로그인은 암호화되지 않으므로 신뢰할 수 있는 네트워크에서만 활성화하세요.';
+      case 'video_anidb_username':
+        return 'AniDB 사용자 이름';
+      case 'video_anidb_password':
+        return 'AniDB 비밀번호';
+      case 'onboarding_online_services_title':
+        return '온라인 서비스(선택 사항)';
+      case 'onboarding_online_services_hint':
+        return '계정, API 키 및 이용 가능한 서비스 알아보기';
+      case 'onboarding_online_services_body':
+        return '필요한 서비스만 설정하거나 이 단계를 건너뛰세요. 이 튜토리얼을 선택해도 서비스가 활성화되거나 로그인 정보가 전송되지 않으며, 선택하지 않아도 기존 설정은 바뀌지 않습니다.';
+      case 'onboarding_online_services_configure':
+        return '온라인 서비스 설정 열기';
+      case 'onboarding_online_services_link':
+        return '공식 계정 / API 페이지 열기';
+      case 'onboarding_online_services_account':
+        return '개인 계정 필요';
+      case 'onboarding_online_services_ready':
+        return '가입 불필요';
+      case 'onboarding_online_services_embedded':
+        return '앱 인증 정보 내장';
+      case 'onboarding_online_services_key':
+        return 'API 키 필요';
+      case 'onboarding_online_services_build_missing':
+        return '이 빌드에는 앱 인증 정보가 없습니다';
+      case 'onboarding_online_services_server':
+        return '기존 서버 연결';
+      case 'onboarding_online_services_anidb':
+        return '파일 지문으로 애니메이션 작품과 에피소드를 식별합니다. Fushi에 등록된 앱 클라이언트가 있지만, 본인의 AniDB 계정은 여전히 필요합니다. 설정에 계정을 입력하고 필요할 때 파일 해시 식별을 활성화하세요.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan은 작품 정보를 제공하고, AniList는 발견 기능과 관련 검색에 사용됩니다. 공개 읽기 전용 조회에는 개인 계정이나 API 키가 필요하지 않습니다.';
+      case 'onboarding_online_services_tmdb':
+        return '이 빌드에는 대체 정보 조회와 누락된 항목 보충을 위한 TMDB 키가 내장되어 있습니다. 본인의 사용 할당량을 쓰고 싶은 경우에만 개인 키를 추가하세요.';
+      case 'onboarding_online_services_tmdb_missing':
+        return '이 빌드에는 TMDB 키가 없습니다. TMDB 대체 정보가 필요하다면 API 키를 신청해 설정에 입력하세요. MAL / Jikan은 계속 사용할 수 있습니다.';
+      case 'onboarding_online_services_jimaku':
+        return '자막을 찾습니다. Jimaku에 가입하거나 로그인한 후 계정 페이지에서 개인 API 키를 생성하고, 설정에 입력한 뒤 이 자막 소스를 활성화하세요.';
+      case 'onboarding_online_services_opensubtitles':
+        return '자막을 찾고 다운로드합니다. 계정을 등록하고 API 사용 앱을 만들어 API 키를 발급받으세요. 사용자 로그인은 선택 사항이며, 로그인하면 해당 계정의 다운로드 할당량을 사용합니다.';
+      case 'onboarding_online_services_dandanplay':
+        return '이 빌드에는 탄막 서비스의 앱 인증 정보가 내장되어 있습니다. 사용자가 따로 API를 신청할 필요 없이 원하는 때 온라인 탄막 매칭을 활성화하면 됩니다.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return '이 빌드에는 탄막 서비스의 앱 인증 정보가 없어 공식 온라인 매칭을 사용할 수 없습니다. 이 정보는 개발자가 제공하므로 개인 API를 등록할 필요가 없습니다.';
+      case 'onboarding_online_services_servers':
+        return '이 서비스들에는 공통 가입 페이지가 없습니다. 기존 서버 주소와 관리자가 제공한 계정 또는 키를 입력하세요. 서버가 없으면 건너뛰어도 됩니다.';
+      case 'video_online_services_setup_title':
+        return '선택적 온라인 서비스 설정';
+      case 'video_online_services_setup_description':
+        return '선택적으로 계정이나 API 키를 설정하면 영상 식별과 자막 검색을 개선할 수 있습니다. 기본 재생에는 필요하지 않습니다.';
+      case 'video_online_services_setup_register':
+        return '서비스 알아보기 및 가입';
+      case 'video_online_services_setup_settings':
+        return '설정 열기';
+      case 'video_online_services_setup_dismiss':
+        return '다시 표시하지 않기';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return '앱 API 키가 내장되어 있습니다. 원하는 경우 본인의 OpenSubtitles 계정에 로그인해 개인 다운로드 할당량을 사용하거나, 본인의 API 키를 입력할 수 있습니다.';
+      case 'video_opensubtitles_app_key_hint':
+        return '비워 두면 앱에 내장된 API 키를 사용합니다.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -255943,7 +260664,7 @@ extension on _StringsNl {
       case 'video_source_scrape_locale':
         return 'Metadatataal';
       case 'video_source_scrape_locale_hint':
-        return 'Voorkeurstaal voor titels, samenvattingen en afbeeldingen';
+        return 'Voorkeurstaal voor vervangende gegevens en aanvullende details van TMDB. MAL gebruikt de titels en oorspronkelijke teksten die MAL aanlevert.';
       case 'video_source_scrape_confirmation_title':
         return 'Metadatamatch bevestigen';
       case 'video_source_scrape_confirmation_hint':
@@ -257224,11 +261945,11 @@ extension on _StringsNl {
       case 'video_source_scrape_anidb_client':
         return 'AniDB-clientnaam';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Geregistreerde AniDB HTTP API-clientnaam; leeg laten om alleen de gecachte titelcatalogus te gebruiken';
+        return 'Fushi bevat een geregistreerde app-client. Laat dit normaal gesproken leeg; stel alleen indien nodig een eigen geregistreerde client in.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB-clientversie';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Positieve versie geregistreerd bij AniDB; HTTP API blijft uitgeschakeld tot beide velden geldig zijn';
+        return 'Alleen eigen clients hebben hier hun geregistreerde versie nodig. Fushi beheert de standaardidentiteit van de app; je persoonlijke AniDB-inloggegevens blijven vereist.';
       case 'video_scrape_view_source':
         return 'Brondetails bekijken';
       case 'video_setting_auto_scrape_hint':
@@ -258731,6 +263452,166 @@ extension on _StringsNl {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Taken blijven doorgaan nadat dit venster is gesloten.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Alle taken annuleren';
+      case 'video_source_scrape_queue_waiting':
+        return 'In wachtrij';
+      case 'video_source_scrape_queue_remove':
+        return 'Uit wachtrij verwijderen';
+      case 'video_source_scrape_queue_submitted':
+        return 'Verzonden';
+      case 'video_source_scrape_pending_empty':
+        return 'Er zijn geen werken die handmatig gekoppeld moeten worden.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Deze lijst kon niet worden geladen. Probeer het opnieuw.';
+      case 'video_source_scrape_list_reload':
+        return 'Opnieuw laden';
+      case 'video_source_scrape_manual_current_work':
+        return 'Huidig werk';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Zoek op titel of selecteer MAL, TMDB-film of TMDB-serie en voer een ID of officiële URL in. Selecteer een resultaat om het op het huidige werk toe te passen.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Voer een positieve gehele werk-ID in of een officiële URL die overeenkomt met de geselecteerde bron en het type.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Op titel';
+      case 'video_source_scrape_manual_by_id':
+        return 'Werk-ID';
+      case 'video_source_grouping_mode':
+        return 'Video’s indelen';
+      case 'video_source_grouping_folder':
+        return 'Op map';
+      case 'video_source_grouping_series':
+        return 'Op werk';
+      case 'video_source_grouping_folder_hint':
+        return 'Maak één collectie per submap op het eerste niveau. Bestanden die direct in de geselecteerde map staan, delen een collectie. Metadata ophalen is niet beschikbaar in deze modus; schakel hiervoor over naar Op werk.';
+      case 'video_source_grouping_series_hint':
+        return 'Herken werken en afleveringen aan de bestandsnamen en koppel vervolgens metadata.';
+      case 'video_source_grouping_change_hint':
+        return 'De volgende scan gebruikt deze instelling. Bestaande collecties en metadata blijven behouden.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Meerdere werken hebben deze titel. Open het tabblad met werken die nog moeten worden bevestigd en selecteer het specifieke item om te koppelen.';
+      case 'video_source_scrape_pending_tab':
+        return 'Ongekoppeld';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB-film';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB-serie';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (via Jikan) is de primaire bron voor metadata; TMDB is de terugvaloptie.';
+      case 'video_anidb_hash_enabled':
+        return 'Bestanden identificeren met AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Vereist een AniDB-account en een geregistreerde client. Verstuurt alleen de bestandsgrootte en hash. Aanmelden bij AniDB via UDP is niet versleuteld; schakel dit alleen in op een vertrouwd netwerk.';
+      case 'video_anidb_username':
+        return 'AniDB-gebruikersnaam';
+      case 'video_anidb_password':
+        return 'AniDB-wachtwoord';
+      case 'onboarding_online_services_title':
+        return 'Onlinediensten (optioneel)';
+      case 'onboarding_online_services_hint':
+        return 'Meer over accounts, API-sleutels en beschikbare diensten';
+      case 'onboarding_online_services_body':
+        return 'Stel alleen de benodigde diensten in of sla deze stap over. Het selecteren van deze uitleg activeert geen diensten en verstuurt geen inloggegevens. Niet selecteren verandert niets aan bestaande instellingen.';
+      case 'onboarding_online_services_configure':
+        return 'Instellingen voor onlinediensten openen';
+      case 'onboarding_online_services_link':
+        return 'Officiële account- / API-pagina openen';
+      case 'onboarding_online_services_account':
+        return 'Persoonlijk account vereist';
+      case 'onboarding_online_services_ready':
+        return 'Geen registratie nodig';
+      case 'onboarding_online_services_embedded':
+        return 'App-inloggegevens inbegrepen';
+      case 'onboarding_online_services_key':
+        return 'API-sleutel vereist';
+      case 'onboarding_online_services_build_missing':
+        return 'App-inloggegevens ontbreken in deze build';
+      case 'onboarding_online_services_server':
+        return 'Een bestaande server verbinden';
+      case 'onboarding_online_services_anidb':
+        return 'Identificeer anime en afleveringen via de bestandsvingerafdruk. Fushi heeft een geregistreerde app-client; je hebt nog wel een eigen AniDB-account nodig. Vul het in bij de instellingen en schakel desgewenst bestandsidentificatie via hash in.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan levert metadata; AniList ondersteunt ontdekken en gerelateerde zoekopdrachten. Openbare alleen-lezenzoekopdrachten vereisen geen persoonlijk account of API-sleutel.';
+      case 'onboarding_online_services_tmdb':
+        return 'Deze build bevat een TMDB-sleutel voor vervangende metadata en ontbrekende velden. Voeg alleen een eigen sleutel toe als je je eigen quotum wilt gebruiken.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Deze build bevat geen TMDB-sleutel. Vraag een API-sleutel aan en vul deze in bij de instellingen als je TMDB als reservebron nodig hebt; MAL / Jikan blijft beschikbaar.';
+      case 'onboarding_online_services_jimaku':
+        return 'Zoek ondertitels. Registreer je of meld je aan bij Jimaku, maak op je accountpagina een persoonlijke API-sleutel aan, vul deze in bij de instellingen en schakel deze ondertitelbron in.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Zoek en download ondertitels. Registreer een account, maak een API-consumer aan en verkrijg een API-sleutel. Aanmelden als gebruiker is optioneel en gebruikt het downloadquotum van het account.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Deze build bevat de app-inloggegevens voor de danmaku-dienst. Gebruikers hoeven geen API-toegang aan te vragen; schakel desgewenst online danmaku-matching in.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Deze build bevat geen app-inloggegevens voor danmaku, dus officiële online matching is niet beschikbaar. De ontwikkelaar levert deze gegevens; je hoeft geen persoonlijke API te registreren.';
+      case 'onboarding_online_services_servers':
+        return 'Deze diensten hebben geen gezamenlijke registratiepagina. Vul het adres van je bestaande server in, samen met het account of de sleutel van de beheerder. Sla dit over als je geen server hebt.';
+      case 'video_online_services_setup_title':
+        return 'Optionele onlinediensten instellen';
+      case 'video_online_services_setup_description':
+        return 'Optionele accounts en API-sleutels verbeteren videoherkenning en ondertitelzoeken. Afspelen werkt ook zonder.';
+      case 'video_online_services_setup_register':
+        return 'Diensten verkennen en registreren';
+      case 'video_online_services_setup_settings':
+        return 'Instellingen openen';
+      case 'video_online_services_setup_dismiss':
+        return 'Nooit meer tonen';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'De API-sleutel van de app is inbegrepen. Je kunt je desgewenst aanmelden bij je OpenSubtitles-account voor je eigen downloadquotum, of je eigen API-sleutel gebruiken.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Laat leeg om de meegeleverde API-sleutel van de app te gebruiken.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -264923,7 +269804,7 @@ extension on _StringsPtBr {
       case 'video_source_scrape_locale':
         return 'Idioma dos metadados';
       case 'video_source_scrape_locale_hint':
-        return 'Idioma preferido para títulos, sinopses e imagens';
+        return 'Idioma preferido para os dados alternativos e complementares do TMDB. O MAL usa os títulos e textos originais fornecidos pelo MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Confirmar correspondência de metadados';
       case 'video_source_scrape_confirmation_hint':
@@ -266205,11 +271086,11 @@ extension on _StringsPtBr {
       case 'video_source_scrape_anidb_client':
         return 'Nome do cliente AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nome de cliente de API HTTP AniDB registrado; deixe em branco para usar apenas o catálogo de títulos em cache';
+        return 'O Fushi inclui um cliente de aplicativo registrado. Normalmente, deixe este campo vazio; configure um cliente registrado personalizado apenas se necessário.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versão do cliente AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versão positiva registrada no AniDB; a API HTTP permanece desativada até ambos os campos serem válidos';
+        return 'Apenas clientes personalizados precisam de sua própria versão registrada aqui. O Fushi mantém a identidade padrão do aplicativo; suas credenciais pessoais do AniDB continuam sendo necessárias.';
       case 'video_scrape_view_source':
         return 'Ver detalhes da fonte';
       case 'video_setting_auto_scrape_hint':
@@ -267711,6 +272592,166 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'As tarefas continuam após fechar esta janela.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Cancelar todas as tarefas';
+      case 'video_source_scrape_queue_waiting':
+        return 'Na fila';
+      case 'video_source_scrape_queue_remove':
+        return 'Remover da fila';
+      case 'video_source_scrape_queue_submitted':
+        return 'Enviada';
+      case 'video_source_scrape_pending_empty':
+        return 'Nenhuma obra precisa de correspondência manual.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Não foi possível carregar esta lista. Tente novamente.';
+      case 'video_source_scrape_list_reload':
+        return 'Recarregar';
+      case 'video_source_scrape_manual_current_work':
+        return 'Obra atual';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Pesquise pelo título ou selecione MAL, filme do TMDB ou série do TMDB e insira um ID ou URL oficial. Selecione um resultado para aplicá-lo à obra atual.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Insira um ID de obra inteiro positivo ou uma URL oficial que corresponda à fonte e ao tipo selecionados.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Por título';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID da obra';
+      case 'video_source_grouping_mode':
+        return 'Organização de vídeos';
+      case 'video_source_grouping_folder':
+        return 'Por pasta';
+      case 'video_source_grouping_series':
+        return 'Por obra';
+      case 'video_source_grouping_folder_hint':
+        return 'Cria uma coleção para cada subpasta de primeiro nível. Os arquivos diretamente na pasta selecionada compartilham uma coleção. A busca de metadados não está disponível neste modo; mude para Por obra para usá-la.';
+      case 'video_source_grouping_series_hint':
+        return 'Identifica obras e episódios pelos nomes dos arquivos e depois busca os metadados correspondentes.';
+      case 'video_source_grouping_change_hint':
+        return 'A próxima verificação usará esta configuração. As coleções e os metadados existentes serão mantidos.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Há várias obras com este título. Abra a aba de obras pendentes e selecione o item específico para fazer a correspondência.';
+      case 'video_source_scrape_pending_tab':
+        return 'Não vinculados';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Filme do TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Série do TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (via Jikan) é a fonte principal de metadados; TMDB é a alternativa.';
+      case 'video_anidb_hash_enabled':
+        return 'Identificar arquivos com AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Requer uma conta AniDB e um cliente registrado. Envia apenas o tamanho e o hash do arquivo. O login no AniDB via UDP não é criptografado; ative apenas em uma rede confiável.';
+      case 'video_anidb_username':
+        return 'Nome de usuário do AniDB';
+      case 'video_anidb_password':
+        return 'Senha do AniDB';
+      case 'onboarding_online_services_title':
+        return 'Serviços on-line (opcionais)';
+      case 'onboarding_online_services_hint':
+        return 'Conheça as contas, chaves API e serviços disponíveis';
+      case 'onboarding_online_services_body':
+        return 'Configure apenas os serviços necessários ou pule esta etapa. Selecionar este tutorial não ativa serviços nem envia credenciais, e não selecioná-lo não altera as configurações existentes.';
+      case 'onboarding_online_services_configure':
+        return 'Abrir configurações dos serviços on-line';
+      case 'onboarding_online_services_link':
+        return 'Abrir página oficial de conta / API';
+      case 'onboarding_online_services_account':
+        return 'Requer conta pessoal';
+      case 'onboarding_online_services_ready':
+        return 'Não requer cadastro';
+      case 'onboarding_online_services_embedded':
+        return 'Credenciais do aplicativo incluídas';
+      case 'onboarding_online_services_key':
+        return 'Requer chave API';
+      case 'onboarding_online_services_build_missing':
+        return 'Esta compilação não inclui credenciais do aplicativo';
+      case 'onboarding_online_services_server':
+        return 'Conectar um servidor existente';
+      case 'onboarding_online_services_anidb':
+        return 'Identifique animes e episódios pela impressão digital do arquivo. O Fushi tem um cliente de aplicativo registrado; você ainda precisa de sua própria conta AniDB. Insira-a nas configurações e ative a identificação por hash quando desejar.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan fornece metadados; AniList oferece descoberta e consultas relacionadas. Consultas públicas somente de leitura não exigem conta pessoal nem chave API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Esta compilação inclui uma chave TMDB para metadados alternativos e campos ausentes. Adicione sua própria chave apenas se quiser usar sua própria cota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Esta compilação não inclui uma chave TMDB. Solicite uma chave API e insira-a nas configurações se precisar do TMDB como fonte alternativa de metadados; MAL / Jikan continua disponível.';
+      case 'onboarding_online_services_jimaku':
+        return 'Encontre legendas. Cadastre-se ou entre no Jimaku, gere uma chave API pessoal na página da sua conta, insira-a nas configurações e ative esta fonte de legendas.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Encontre e baixe legendas. Cadastre uma conta, crie um consumidor de API e obtenha uma chave API. O login do usuário é opcional e permite usar a cota de downloads da conta.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Esta compilação inclui as credenciais do aplicativo para o serviço de danmaku. Os usuários não precisam solicitar acesso à API; basta ativar a correspondência de danmaku on-line quando desejarem.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Esta compilação não inclui credenciais do aplicativo para danmaku, então a correspondência oficial on-line está indisponível. O desenvolvedor fornece essas credenciais; você não precisa registrar uma API pessoal.';
+      case 'onboarding_online_services_servers':
+        return 'Esses serviços não têm uma página de cadastro comum. Insira o endereço do seu servidor existente e a conta ou chave fornecida pelo administrador, ou pule se não tiver um servidor.';
+      case 'video_online_services_setup_title':
+        return 'Configurar serviços on-line opcionais';
+      case 'video_online_services_setup_description':
+        return 'Contas e chaves API opcionais melhoram a identificação de vídeos e a busca de legendas. A reprodução básica funciona sem elas.';
+      case 'video_online_services_setup_register':
+        return 'Conhecer os serviços e se cadastrar';
+      case 'video_online_services_setup_settings':
+        return 'Abrir configurações';
+      case 'video_online_services_setup_dismiss':
+        return 'Não mostrar novamente';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'A chave API do aplicativo está incluída. Você pode entrar opcionalmente em sua conta OpenSubtitles para usar sua cota de downloads ou usar sua própria chave API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Deixe vazio para usar a chave API incluída no aplicativo.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -273911,7 +278952,7 @@ extension on _StringsRu {
       case 'video_source_scrape_locale':
         return 'Язык метаданных';
       case 'video_source_scrape_locale_hint':
-        return 'Предпочтительный язык для названий, описаний и изображений';
+        return 'Предпочтительный язык резервных и дополнительных данных TMDB. Для MAL используются названия и исходные тексты, предоставленные MAL.';
       case 'video_source_scrape_confirmation_title':
         return 'Подтвердите совпадение метаданных';
       case 'video_source_scrape_confirmation_hint':
@@ -275192,11 +280233,11 @@ extension on _StringsRu {
       case 'video_source_scrape_anidb_client':
         return 'Имя клиента AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Зарегистрированное имя клиента AniDB HTTP API; оставьте пустым, чтобы использовать только кэшированный каталог';
+        return 'Fushi включает зарегистрированный клиент приложения. Обычно оставляйте это поле пустым; указывайте собственный зарегистрированный клиент только при необходимости.';
       case 'video_source_scrape_anidb_client_version':
         return 'Версия клиента AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Положительный номер версии, зарегистрированный в AniDB; HTTP API остаётся отключённым, пока оба поля не заполнены корректно';
+        return 'Только для собственного клиента нужно указать здесь его зарегистрированную версию. Fushi поддерживает стандартный идентификатор приложения; личные данные для входа в AniDB всё равно необходимы.';
       case 'video_scrape_view_source':
         return 'Подробности источника';
       case 'video_setting_auto_scrape_hint':
@@ -276698,6 +281739,166 @@ extension on _StringsRu {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Задачи продолжают выполняться после закрытия этого окна.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Отменить все задачи';
+      case 'video_source_scrape_queue_waiting':
+        return 'В очереди';
+      case 'video_source_scrape_queue_remove':
+        return 'Убрать из очереди';
+      case 'video_source_scrape_queue_submitted':
+        return 'Отправлено';
+      case 'video_source_scrape_pending_empty':
+        return 'Нет произведений, требующих ручного сопоставления.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Не удалось загрузить список. Попробуйте ещё раз.';
+      case 'video_source_scrape_list_reload':
+        return 'Перезагрузить';
+      case 'video_source_scrape_manual_current_work':
+        return 'Текущее произведение';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Ищите по названию или выберите MAL, фильм TMDB или сериал TMDB и введите ID либо официальную ссылку. Выберите результат, чтобы применить его к текущему произведению.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Введите ID произведения в виде положительного целого числа или официальную ссылку, соответствующую выбранному источнику и типу.';
+      case 'video_source_scrape_manual_by_title':
+        return 'По названию';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID произведения';
+      case 'video_source_grouping_mode':
+        return 'Группировка видео';
+      case 'video_source_grouping_folder':
+        return 'По папкам';
+      case 'video_source_grouping_series':
+        return 'По произведениям';
+      case 'video_source_grouping_folder_hint':
+        return 'Для каждой вложенной папки первого уровня создаётся отдельная коллекция. Файлы непосредственно в выбранной папке объединяются в одну коллекцию. В этом режиме загрузка метаданных недоступна; для неё переключитесь на «По произведениям».';
+      case 'video_source_grouping_series_hint':
+        return 'Определять произведения и эпизоды по именам файлов, затем сопоставлять метаданные.';
+      case 'video_source_grouping_change_hint':
+        return 'Следующее сканирование будет использовать эту настройку. Существующие коллекции и метаданные сохранятся.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Есть несколько произведений с таким названием. Откройте вкладку ожидающих подтверждения и выберите конкретную запись для сопоставления.';
+      case 'video_source_scrape_pending_tab':
+        return 'Не сопоставлено';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Фильм TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Сериал TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (через Jikan) — основной источник метаданных; TMDB — резервный.';
+      case 'video_anidb_hash_enabled':
+        return 'Определять файлы через AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Требуются учётная запись AniDB и зарегистрированный клиент. Отправляются только размер и хеш файла. Вход в AniDB по UDP не шифруется; включайте только в доверенной сети.';
+      case 'video_anidb_username':
+        return 'Имя пользователя AniDB';
+      case 'video_anidb_password':
+        return 'Пароль AniDB';
+      case 'onboarding_online_services_title':
+        return 'Онлайн-сервисы (необязательно)';
+      case 'onboarding_online_services_hint':
+        return 'Узнайте об аккаунтах, ключах API и доступных сервисах';
+      case 'onboarding_online_services_body':
+        return 'Настройте только нужные сервисы или пропустите этот шаг. Выбор этого руководства не включает сервисы и не отправляет данные для входа. Если не выбирать его, существующие настройки не изменятся.';
+      case 'onboarding_online_services_configure':
+        return 'Открыть настройки онлайн-сервисов';
+      case 'onboarding_online_services_link':
+        return 'Открыть официальную страницу аккаунта / API';
+      case 'onboarding_online_services_account':
+        return 'Нужен личный аккаунт';
+      case 'onboarding_online_services_ready':
+        return 'Регистрация не нужна';
+      case 'onboarding_online_services_embedded':
+        return 'Учётные данные приложения включены';
+      case 'onboarding_online_services_key':
+        return 'Нужен ключ API';
+      case 'onboarding_online_services_build_missing':
+        return 'В этой сборке нет учётных данных приложения';
+      case 'onboarding_online_services_server':
+        return 'Подключить существующий сервер';
+      case 'onboarding_online_services_anidb':
+        return 'Определение аниме и эпизодов по отпечатку файла. У Fushi есть зарегистрированный клиент приложения, но вам по-прежнему нужен собственный аккаунт AniDB. Укажите его в настройках и при желании включите определение файлов по хешу.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan предоставляет метаданные; AniList используется для поиска нового контента и связанных запросов. Публичные запросы только для чтения не требуют личного аккаунта или ключа API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Эта сборка включает ключ TMDB для резервных метаданных и заполнения недостающих полей. Добавляйте свой ключ только если хотите использовать собственную квоту.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'В этой сборке нет ключа TMDB. Получите ключ API и укажите его в настройках, если вам нужны резервные метаданные TMDB. MAL / Jikan остаётся доступным.';
+      case 'onboarding_online_services_jimaku':
+        return 'Поиск субтитров. Зарегистрируйтесь или войдите в Jimaku, создайте личный ключ API на странице аккаунта, укажите его в настройках и включите этот источник субтитров.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Поиск и скачивание субтитров. Зарегистрируйте аккаунт, создайте приложение для использования API и получите ключ API. Вход пользователя необязателен и позволяет использовать квоту скачиваний аккаунта.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Эта сборка включает учётные данные приложения для сервиса данмаку. Пользователям не нужно подавать заявку на API; при желании включите онлайн-сопоставление данмаку.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'В этой сборке нет учётных данных приложения для данмаку, поэтому официальное онлайн-сопоставление недоступно. Эти данные предоставляет разработчик; вам не нужно регистрировать личный API.';
+      case 'onboarding_online_services_servers':
+        return 'У этих сервисов нет общей страницы регистрации. Укажите адрес своего существующего сервера и аккаунт или ключ, предоставленный администратором. Если сервера нет, пропустите этот шаг.';
+      case 'video_online_services_setup_title':
+        return 'Настроить необязательные онлайн-сервисы';
+      case 'video_online_services_setup_description':
+        return 'Необязательные аккаунты и ключи API улучшают распознавание видео и поиск субтитров. Воспроизведение работает и без них.';
+      case 'video_online_services_setup_register':
+        return 'Узнать о сервисах и зарегистрироваться';
+      case 'video_online_services_setup_settings':
+        return 'Открыть настройки';
+      case 'video_online_services_setup_dismiss':
+        return 'Больше не показывать';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Ключ API приложения уже включён. При желании можно войти в свой аккаунт OpenSubtitles для использования личной квоты скачиваний или указать собственный ключ API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Оставьте пустым, чтобы использовать встроенный ключ API приложения.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -282875,7 +288076,7 @@ extension on _StringsTh {
       case 'video_source_scrape_locale':
         return 'ภาษาข้อมูลเมตา';
       case 'video_source_scrape_locale_hint':
-        return 'ภาษาที่ต้องการสำหรับชื่อ สรุปเนื้อหา และรูปภาพ';
+        return 'ภาษาที่ต้องการสำหรับข้อมูลสำรองและข้อมูลเสริมจาก TMDB ส่วน MAL ใช้ชื่อเรื่องและข้อความต้นฉบับที่ MAL ให้มา';
       case 'video_source_scrape_confirmation_title':
         return 'ยืนยันการจับคู่ข้อมูลเมตา';
       case 'video_source_scrape_confirmation_hint':
@@ -284154,11 +289355,11 @@ extension on _StringsTh {
       case 'video_source_scrape_anidb_client':
         return 'ชื่อไคลเอนต์ AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'ชื่อไคลเอนต์ HTTP API ของ AniDB ที่ลงทะเบียนแล้ว เว้นว่างเพื่อใช้เฉพาะแค็ตตาล็อกชื่อเรื่องที่แคชไว้';
+        return 'Fushi มีไคลเอนต์แอปที่ลงทะเบียนไว้แล้ว โดยปกติให้เว้นว่างไว้ ระบุไคลเอนต์ที่ลงทะเบียนเองเฉพาะเมื่อจำเป็น';
       case 'video_source_scrape_anidb_client_version':
         return 'เวอร์ชันไคลเอนต์ AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'เวอร์ชันเลขบวกที่ลงทะเบียนกับ AniDB HTTP API จะไม่ทำงานจนกว่าทั้งสองช่องจะถูกต้อง';
+        return 'เฉพาะไคลเอนต์ที่กำหนดเองเท่านั้นที่ต้องระบุเวอร์ชันที่ลงทะเบียนไว้ที่นี่ Fushi ดูแลข้อมูลประจำตัวแอปเริ่มต้นให้ แต่ยังต้องใช้ข้อมูลเข้าสู่ระบบ AniDB ส่วนตัวของคุณ';
       case 'video_scrape_view_source':
         return 'ดูรายละเอียดแหล่ง';
       case 'video_setting_auto_scrape_hint':
@@ -285657,6 +290858,166 @@ extension on _StringsTh {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'งานจะดำเนินต่อแม้ปิดหน้าต่างนี้แล้ว';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'ยกเลิกงานทั้งหมด';
+      case 'video_source_scrape_queue_waiting':
+        return 'อยู่ในคิว';
+      case 'video_source_scrape_queue_remove':
+        return 'นำออกจากคิว';
+      case 'video_source_scrape_queue_submitted':
+        return 'ส่งแล้ว';
+      case 'video_source_scrape_pending_empty':
+        return 'ไม่มีผลงานที่ต้องจับคู่ด้วยตนเอง';
+      case 'video_source_scrape_list_load_failed':
+        return 'โหลดรายการนี้ไม่ได้ โปรดลองอีกครั้ง';
+      case 'video_source_scrape_list_reload':
+        return 'โหลดใหม่';
+      case 'video_source_scrape_manual_current_work':
+        return 'ผลงานปัจจุบัน';
+      case 'video_source_scrape_manual_query_hint':
+        return 'ค้นหาด้วยชื่อเรื่อง หรือเลือก MAL, ภาพยนตร์ TMDB หรือซีรีส์ TMDB แล้วป้อน ID หรือ URL ทางการ เลือกผลลัพธ์เพื่อนำไปใช้กับผลงานปัจจุบัน';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'ป้อน ID ผลงานที่เป็นจำนวนเต็มบวก หรือ URL ทางการที่ตรงกับแหล่งข้อมูลและประเภทที่เลือก';
+      case 'video_source_scrape_manual_by_title':
+        return 'ตามชื่อ';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID ผลงาน';
+      case 'video_source_grouping_mode':
+        return 'การจัดกลุ่มวิดีโอ';
+      case 'video_source_grouping_folder':
+        return 'ตามโฟลเดอร์';
+      case 'video_source_grouping_series':
+        return 'ตามผลงาน';
+      case 'video_source_grouping_folder_hint':
+        return 'สร้างหนึ่งคอลเลกชันต่อโฟลเดอร์ย่อยระดับแรก ไฟล์ที่อยู่ในโฟลเดอร์ที่เลือกโดยตรงจะรวมอยู่ในคอลเลกชันเดียวกัน โหมดนี้ไม่รองรับการดึงข้อมูลเมตา ให้เปลี่ยนเป็น «ตามผลงาน» เพื่อดึงข้อมูลเมตา';
+      case 'video_source_grouping_series_hint':
+        return 'ระบุผลงานและตอนจากชื่อไฟล์ แล้วจับคู่ข้อมูลเมตา';
+      case 'video_source_grouping_change_hint':
+        return 'การสแกนครั้งถัดไปจะใช้การตั้งค่านี้ คอลเลกชันและข้อมูลเมตาที่มีอยู่จะยังคงอยู่';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'มีหลายผลงานที่ใช้ชื่อนี้ เปิดแท็บผลงานที่รอยืนยัน แล้วเลือกรายการที่ต้องการจับคู่';
+      case 'video_source_scrape_pending_tab':
+        return 'ยังไม่จับคู่';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'ภาพยนตร์ TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'ซีรีส์ TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (ผ่าน Jikan) เป็นแหล่งข้อมูลเมตาหลัก และใช้ TMDB เป็นแหล่งสำรอง';
+      case 'video_anidb_hash_enabled':
+        return 'ระบุไฟล์ด้วย AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'ต้องมีบัญชี AniDB และไคลเอนต์ที่ลงทะเบียนแล้ว ส่งเฉพาะขนาดไฟล์และค่าแฮช การเข้าสู่ระบบ AniDB ผ่าน UDP ไม่ได้เข้ารหัส โปรดเปิดใช้เฉพาะบนเครือข่ายที่เชื่อถือได้';
+      case 'video_anidb_username':
+        return 'ชื่อผู้ใช้ AniDB';
+      case 'video_anidb_password':
+        return 'รหัสผ่าน AniDB';
+      case 'onboarding_online_services_title':
+        return 'บริการออนไลน์ (ไม่บังคับ)';
+      case 'onboarding_online_services_hint':
+        return 'ดูข้อมูลบัญชี คีย์ API และบริการที่มีให้ใช้';
+      case 'onboarding_online_services_body':
+        return 'ตั้งค่าเฉพาะบริการที่ต้องการ หรือข้ามขั้นตอนนี้ การเลือกบทแนะนำนี้จะไม่เปิดใช้บริการหรือส่งข้อมูลเข้าสู่ระบบ และการไม่เลือกจะไม่เปลี่ยนการตั้งค่าเดิม';
+      case 'onboarding_online_services_configure':
+        return 'เปิดการตั้งค่าบริการออนไลน์';
+      case 'onboarding_online_services_link':
+        return 'เปิดหน้าบัญชี / API อย่างเป็นทางการ';
+      case 'onboarding_online_services_account':
+        return 'ต้องมีบัญชีส่วนตัว';
+      case 'onboarding_online_services_ready':
+        return 'ไม่ต้องลงทะเบียน';
+      case 'onboarding_online_services_embedded':
+        return 'มีข้อมูลรับรองของแอปในตัว';
+      case 'onboarding_online_services_key':
+        return 'ต้องมีคีย์ API';
+      case 'onboarding_online_services_build_missing':
+        return 'บิลด์นี้ไม่มีข้อมูลรับรองของแอป';
+      case 'onboarding_online_services_server':
+        return 'เชื่อมต่อเซิร์ฟเวอร์ที่มีอยู่';
+      case 'onboarding_online_services_anidb':
+        return 'ระบุอนิเมะและตอนด้วยลายนิ้วมือไฟล์ Fushi มีไคลเอนต์แอปที่ลงทะเบียนไว้แล้ว แต่คุณยังต้องมีบัญชี AniDB ของตนเอง กรอกบัญชีในการตั้งค่าและเปิดใช้การระบุไฟล์ด้วยแฮชเมื่อต้องการ';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan ให้ข้อมูลเมตา ส่วน AniList รองรับการค้นพบและการค้นหาที่เกี่ยวข้อง การค้นหาข้อมูลสาธารณะแบบอ่านอย่างเดียวไม่ต้องใช้บัญชีส่วนตัวหรือคีย์ API';
+      case 'onboarding_online_services_tmdb':
+        return 'บิลด์นี้มีคีย์ TMDB ในตัวสำหรับข้อมูลเมตาสำรองและข้อมูลที่ขาดหาย เพิ่มคีย์ของคุณเองเฉพาะเมื่อต้องการใช้โควตาของตนเอง';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'บิลด์นี้ไม่มีคีย์ TMDB หากต้องการใช้ TMDB เป็นแหล่งข้อมูลเมตาสำรอง ให้ขอคีย์ API แล้วกรอกในการตั้งค่า โดย MAL / Jikan ยังใช้ได้ตามปกติ';
+      case 'onboarding_online_services_jimaku':
+        return 'ค้นหาคำบรรยาย ลงทะเบียนหรือเข้าสู่ระบบ Jimaku สร้างคีย์ API ส่วนตัวในหน้าบัญชี แล้วกรอกในการตั้งค่าและเปิดใช้แหล่งคำบรรยายนี้';
+      case 'onboarding_online_services_opensubtitles':
+        return 'ค้นหาและดาวน์โหลดคำบรรยาย ลงทะเบียนบัญชี สร้างแอปสำหรับใช้ API และรับคีย์ API การเข้าสู่ระบบผู้ใช้เป็นทางเลือก โดยจะใช้โควตาดาวน์โหลดของบัญชีนั้น';
+      case 'onboarding_online_services_dandanplay':
+        return 'บิลด์นี้มีข้อมูลรับรองแอปสำหรับบริการดันมาคุในตัว ผู้ใช้ไม่ต้องขอ API เพียงเปิดใช้การจับคู่ดันมาคุออนไลน์เมื่อต้องการ';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'บิลด์นี้ไม่มีข้อมูลรับรองแอปสำหรับดันมาคุ จึงไม่สามารถจับคู่ออนไลน์ผ่านบริการอย่างเป็นทางการได้ ผู้พัฒนาจะเป็นผู้จัดหาข้อมูลนี้ คุณไม่ต้องลงทะเบียน API ส่วนตัว';
+      case 'onboarding_online_services_servers':
+        return 'บริการเหล่านี้ไม่มีหน้าลงทะเบียนร่วมกัน กรอกที่อยู่เซิร์ฟเวอร์ที่คุณมีอยู่ พร้อมบัญชีหรือคีย์จากผู้ดูแลเซิร์ฟเวอร์ หรือข้ามได้หากไม่มีเซิร์ฟเวอร์';
+      case 'video_online_services_setup_title':
+        return 'ตั้งค่าบริการออนไลน์ที่ไม่บังคับ';
+      case 'video_online_services_setup_description':
+        return 'บัญชีและคีย์ API เสริมช่วยปรับปรุงการระบุวิดีโอและค้นหาคำบรรยาย การเล่นพื้นฐานใช้งานได้โดยไม่ต้องตั้งค่า';
+      case 'video_online_services_setup_register':
+        return 'เรียนรู้และลงทะเบียนบริการ';
+      case 'video_online_services_setup_settings':
+        return 'เปิดการตั้งค่า';
+      case 'video_online_services_setup_dismiss':
+        return 'ไม่ต้องแสดงอีก';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'แอปมีคีย์ API ในตัว คุณสามารถเลือกเข้าสู่ระบบบัญชี OpenSubtitles ของตนเองเพื่อใช้โควตาดาวน์โหลดส่วนตัว หรือใช้คีย์ API ของคุณเองได้';
+      case 'video_opensubtitles_app_key_hint':
+        return 'เว้นว่างไว้เพื่อใช้คีย์ API ที่มีอยู่ในแอป';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -291847,7 +297208,7 @@ extension on _StringsTr {
       case 'video_source_scrape_locale':
         return 'Meta veri dili';
       case 'video_source_scrape_locale_hint':
-        return 'Başlıklar, özetler ve görseller için tercih edilen dil';
+        return 'TMDB yedek verileri ve ek ayrıntıları için tercih edilen dil. MAL, MAL tarafından sağlanan başlıkları ve özgün metinleri kullanır.';
       case 'video_source_scrape_confirmation_title':
         return 'Meta veri eşleşmesini onayla';
       case 'video_source_scrape_confirmation_hint':
@@ -293128,11 +298489,11 @@ extension on _StringsTr {
       case 'video_source_scrape_anidb_client':
         return 'AniDB istemci adı';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Kayıtlı AniDB HTTP API istemci adı; yalnızca önbelleğe alınmış başlık kataloğunu kullanmak için boş bırakın';
+        return 'Fushi kayıtlı bir uygulama istemcisi içerir. Normalde boş bırakın; yalnızca gerekirse özel bir kayıtlı istemci belirtin.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB istemci sürümü';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDB\'ye kayıtlı pozitif sürüm; her iki alan da geçerli olana kadar HTTP API devre dışı kalır';
+        return 'Burada yalnızca özel istemcilerin kendi kayıtlı sürümü gerekir. Fushi varsayılan uygulama kimliğini yönetir; kişisel AniDB giriş bilgileriniz yine de gereklidir.';
       case 'video_scrape_view_source':
         return 'Kaynak ayrıntılarını görüntüle';
       case 'video_setting_auto_scrape_hint':
@@ -294631,6 +299992,166 @@ extension on _StringsTr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Bu pencere kapatıldıktan sonra görevler devam eder.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Tüm görevleri iptal et';
+      case 'video_source_scrape_queue_waiting':
+        return 'Sırada';
+      case 'video_source_scrape_queue_remove':
+        return 'Kuyruktan kaldır';
+      case 'video_source_scrape_queue_submitted':
+        return 'Gönderildi';
+      case 'video_source_scrape_pending_empty':
+        return 'Elle eşleştirilmesi gereken eser yok.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Bu liste yüklenemedi. Tekrar deneyin.';
+      case 'video_source_scrape_list_reload':
+        return 'Yeniden yükle';
+      case 'video_source_scrape_manual_current_work':
+        return 'Geçerli eser';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Başlığa göre arayın veya MAL, TMDB filmi ya da TMDB dizisini seçip bir kimlik veya resmî URL girin. Geçerli esere uygulamak için bir sonuç seçin.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Pozitif tam sayı olan bir eser kimliği veya seçilen kaynak ve türle eşleşen resmî bir URL girin.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Ada göre';
+      case 'video_source_scrape_manual_by_id':
+        return 'Eser kimliği';
+      case 'video_source_grouping_mode':
+        return 'Video düzeni';
+      case 'video_source_grouping_folder':
+        return 'Klasöre göre';
+      case 'video_source_grouping_series':
+        return 'Esere göre';
+      case 'video_source_grouping_folder_hint':
+        return 'Birinci düzeydeki her alt klasör için bir koleksiyon oluşturur. Doğrudan seçilen klasörde bulunan dosyalar aynı koleksiyonda toplanır. Bu modda meta veriler alınamaz; almak için Esere göre moduna geçin.';
+      case 'video_source_grouping_series_hint':
+        return 'Dosya adlarından eserleri ve bölümleri tanır, ardından meta verileri eşleştirir.';
+      case 'video_source_grouping_change_hint':
+        return 'Sonraki tarama bu ayarı kullanır. Mevcut koleksiyonlar ve meta veriler korunur.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Bu ada sahip birden fazla eser var. Onay bekleyen eserler sekmesini açın ve eşleştirilecek öğeyi seçin.';
+      case 'video_source_scrape_pending_tab':
+        return 'Eşleşmemiş';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB filmi';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB dizisi';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (Jikan üzerinden) birincil meta veri kaynağıdır; TMDB yedek kaynaktır.';
+      case 'video_anidb_hash_enabled':
+        return 'Dosyaları AniDB ED2K ile tanımla';
+      case 'video_anidb_hash_hint':
+        return 'AniDB hesabı ve kayıtlı bir istemci gerektirir. Yalnızca dosya boyutunu ve karma değerini gönderir. AniDB UDP oturumu şifrelenmeden açılır; yalnızca güvenilir bir ağda etkinleştirin.';
+      case 'video_anidb_username':
+        return 'AniDB kullanıcı adı';
+      case 'video_anidb_password':
+        return 'AniDB parolası';
+      case 'onboarding_online_services_title':
+        return 'Çevrimiçi hizmetler (isteğe bağlı)';
+      case 'onboarding_online_services_hint':
+        return 'Hesapları, API anahtarlarını ve kullanılabilir hizmetleri keşfedin';
+      case 'onboarding_online_services_body':
+        return 'Yalnızca ihtiyaç duyduğunuz hizmetleri kurun veya bu adımı atlayın. Bu öğreticiyi seçmek hizmetleri etkinleştirmez ya da kimlik bilgilerini göndermez; seçmemek de mevcut ayarları değiştirmez.';
+      case 'onboarding_online_services_configure':
+        return 'Çevrimiçi hizmet ayarlarını aç';
+      case 'onboarding_online_services_link':
+        return 'Resmî hesap / API sayfasını aç';
+      case 'onboarding_online_services_account':
+        return 'Kişisel hesap gerekli';
+      case 'onboarding_online_services_ready':
+        return 'Kayıt gerekmiyor';
+      case 'onboarding_online_services_embedded':
+        return 'Uygulama kimlik bilgileri dahil';
+      case 'onboarding_online_services_key':
+        return 'API anahtarı gerekli';
+      case 'onboarding_online_services_build_missing':
+        return 'Bu derlemede uygulama kimlik bilgileri yok';
+      case 'onboarding_online_services_server':
+        return 'Mevcut bir sunucuya bağlan';
+      case 'onboarding_online_services_anidb':
+        return 'Anime ve bölümleri dosya parmak iziyle tanımlayın. Fushi kayıtlı bir uygulama istemcisine sahiptir; yine de kendi AniDB hesabınız gerekir. Ayarlara girin ve istediğinizde dosya karmasıyla tanımlamayı etkinleştirin.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan meta veri sağlar; AniList keşfi ve ilgili sorguları destekler. Herkese açık salt okunur sorgular için kişisel hesap veya API anahtarı gerekmez.';
+      case 'onboarding_online_services_tmdb':
+        return 'Bu derleme, yedek meta veriler ve eksik alanlar için bir TMDB anahtarı içerir. Yalnızca kendi kotanızı kullanmak istiyorsanız kendi anahtarınızı ekleyin.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Bu derlemede TMDB anahtarı yok. TMDB yedek meta verilerine ihtiyacınız varsa bir API anahtarı edinin ve ayarlara girin; MAL / Jikan kullanılabilir olmaya devam eder.';
+      case 'onboarding_online_services_jimaku':
+        return 'Altyazı bulun. Jimaku’ya kaydolun veya giriş yapın, hesap sayfanızda kişisel bir API anahtarı oluşturun, ardından ayarlara girip bu altyazı kaynağını etkinleştirin.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Altyazı bulun ve indirin. Bir hesap açın, API tüketicisi oluşturun ve API anahtarı alın. Kullanıcı girişi isteğe bağlıdır ve hesabın indirme kotasını kullanır.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Bu derleme danmaku hizmetinin uygulama kimlik bilgilerini içerir. Kullanıcıların API başvurusu yapması gerekmez; istediğinizde çevrimiçi danmaku eşleştirmesini etkinleştirin.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Bu derlemede danmaku uygulama kimlik bilgileri olmadığından resmî çevrimiçi eşleştirme kullanılamaz. Bu bilgileri geliştirici sağlar; kişisel API kaydı yapmanız gerekmez.';
+      case 'onboarding_online_services_servers':
+        return 'Bu hizmetlerin ortak bir kayıt sayfası yoktur. Mevcut sunucunuzun adresini ve yöneticisinin sağladığı hesabı veya anahtarı girin; sunucunuz yoksa atlayın.';
+      case 'video_online_services_setup_title':
+        return 'İsteğe bağlı çevrimiçi hizmetleri yapılandır';
+      case 'video_online_services_setup_description':
+        return 'İsteğe bağlı hesaplar ve API anahtarları video tanımlamayı ve altyazı aramayı iyileştirebilir. Temel oynatma bunlar olmadan da çalışır.';
+      case 'video_online_services_setup_register':
+        return 'Hizmetleri öğren ve kaydol';
+      case 'video_online_services_setup_settings':
+        return 'Ayarları aç';
+      case 'video_online_services_setup_dismiss':
+        return 'Bir daha gösterme';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Uygulamanın API anahtarı dahildir. İsterseniz kişisel indirme kotanız için OpenSubtitles hesabınıza giriş yapabilir veya kendi API anahtarınızı kullanabilirsiniz.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Uygulamayla gelen API anahtarını kullanmak için boş bırakın.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -300816,7 +306337,7 @@ extension on _StringsVi {
       case 'video_source_scrape_locale':
         return 'Ngôn ngữ metadata';
       case 'video_source_scrape_locale_hint':
-        return 'Ngôn ngữ ưu tiên cho tiêu đề, tóm tắt và hình ảnh';
+        return 'Ngôn ngữ ưu tiên cho dữ liệu dự phòng và thông tin bổ sung từ TMDB. MAL sử dụng tiêu đề và văn bản gốc do MAL cung cấp.';
       case 'video_source_scrape_confirmation_title':
         return 'Xác nhận kết quả khớp metadata';
       case 'video_source_scrape_confirmation_hint':
@@ -302095,11 +307616,11 @@ extension on _StringsVi {
       case 'video_source_scrape_anidb_client':
         return 'Tên client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Tên client HTTP API AniDB đã đăng ký; để trống để chỉ sử dụng danh mục tiêu đề đã lưu';
+        return 'Fushi đã tích hợp ứng dụng khách đã đăng ký. Thông thường hãy để trống; chỉ nhập ứng dụng khách tùy chỉnh đã đăng ký khi cần.';
       case 'video_source_scrape_anidb_client_version':
         return 'Phiên bản client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Phiên bản dương đã đăng ký với AniDB; HTTP API bị vô hiệu hóa cho đến khi cả hai trường hợp lệ';
+        return 'Chỉ ứng dụng khách tùy chỉnh mới cần nhập phiên bản đã đăng ký tại đây. Fushi quản lý danh tính ứng dụng mặc định; bạn vẫn cần thông tin đăng nhập AniDB cá nhân.';
       case 'video_scrape_view_source':
         return 'Xem chi tiết nguồn';
       case 'video_setting_auto_scrape_hint':
@@ -303599,6 +309120,166 @@ extension on _StringsVi {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return 'Các tác vụ vẫn tiếp tục khi đóng cửa sổ này.';
+      case 'video_source_scrape_queue_cancel_all':
+        return 'Hủy tất cả tác vụ';
+      case 'video_source_scrape_queue_waiting':
+        return 'Trong hàng đợi';
+      case 'video_source_scrape_queue_remove':
+        return 'Xóa khỏi hàng đợi';
+      case 'video_source_scrape_queue_submitted':
+        return 'Đã gửi';
+      case 'video_source_scrape_pending_empty':
+        return 'Không có tác phẩm nào cần ghép thủ công.';
+      case 'video_source_scrape_list_load_failed':
+        return 'Không thể tải danh sách này. Vui lòng thử lại.';
+      case 'video_source_scrape_list_reload':
+        return 'Tải lại';
+      case 'video_source_scrape_manual_current_work':
+        return 'Tác phẩm hiện tại';
+      case 'video_source_scrape_manual_query_hint':
+        return 'Tìm theo tiêu đề, hoặc chọn MAL, phim điện ảnh TMDB hay phim truyền hình TMDB rồi nhập ID hoặc URL chính thức. Chọn một kết quả để áp dụng cho tác phẩm hiện tại.';
+      case 'video_source_scrape_manual_id_invalid':
+        return 'Nhập ID tác phẩm là số nguyên dương hoặc URL chính thức khớp với nguồn và loại đã chọn.';
+      case 'video_source_scrape_manual_by_title':
+        return 'Theo tên';
+      case 'video_source_scrape_manual_by_id':
+        return 'ID tác phẩm';
+      case 'video_source_grouping_mode':
+        return 'Cách nhóm video';
+      case 'video_source_grouping_folder':
+        return 'Theo thư mục';
+      case 'video_source_grouping_series':
+        return 'Theo tác phẩm';
+      case 'video_source_grouping_folder_hint':
+        return 'Tạo một bộ sưu tập cho mỗi thư mục con cấp đầu tiên. Các tệp nằm trực tiếp trong thư mục đã chọn được gom vào cùng một bộ sưu tập. Chế độ này không hỗ trợ lấy siêu dữ liệu; hãy chuyển sang Theo tác phẩm để lấy.';
+      case 'video_source_grouping_series_hint':
+        return 'Nhận diện tác phẩm và tập phim từ tên tệp, sau đó ghép siêu dữ liệu.';
+      case 'video_source_grouping_change_hint':
+        return 'Lần quét tiếp theo sẽ dùng thiết lập này. Các bộ sưu tập và siêu dữ liệu hiện có sẽ được giữ nguyên.';
+      case 'video_source_scrape_manual_ambiguous':
+        return 'Có nhiều tác phẩm trùng tên này. Mở thẻ tác phẩm chờ xác nhận và chọn mục cụ thể để ghép.';
+      case 'video_source_scrape_pending_tab':
+        return 'Chưa ghép';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'Phim điện ảnh TMDB';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'Phim truyền hình TMDB';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL (qua Jikan) là nguồn siêu dữ liệu chính; TMDB là nguồn dự phòng.';
+      case 'video_anidb_hash_enabled':
+        return 'Nhận diện tệp bằng AniDB ED2K';
+      case 'video_anidb_hash_hint':
+        return 'Cần tài khoản AniDB và ứng dụng khách đã đăng ký. Chỉ gửi kích thước và mã băm của tệp. Đăng nhập AniDB qua UDP không được mã hóa; chỉ bật trên mạng đáng tin cậy.';
+      case 'video_anidb_username':
+        return 'Tên người dùng AniDB';
+      case 'video_anidb_password':
+        return 'Mật khẩu AniDB';
+      case 'onboarding_online_services_title':
+        return 'Dịch vụ trực tuyến (tùy chọn)';
+      case 'onboarding_online_services_hint':
+        return 'Tìm hiểu tài khoản, khóa API và các dịch vụ hiện có';
+      case 'onboarding_online_services_body':
+        return 'Chỉ thiết lập các dịch vụ bạn cần hoặc bỏ qua bước này. Chọn hướng dẫn này không bật dịch vụ hay gửi thông tin đăng nhập; không chọn cũng không thay đổi cài đặt hiện có.';
+      case 'onboarding_online_services_configure':
+        return 'Mở cài đặt dịch vụ trực tuyến';
+      case 'onboarding_online_services_link':
+        return 'Mở trang tài khoản / API chính thức';
+      case 'onboarding_online_services_account':
+        return 'Cần tài khoản cá nhân';
+      case 'onboarding_online_services_ready':
+        return 'Không cần đăng ký';
+      case 'onboarding_online_services_embedded':
+        return 'Đã tích hợp thông tin xác thực ứng dụng';
+      case 'onboarding_online_services_key':
+        return 'Cần khóa API';
+      case 'onboarding_online_services_build_missing':
+        return 'Bản dựng này thiếu thông tin xác thực ứng dụng';
+      case 'onboarding_online_services_server':
+        return 'Kết nối máy chủ hiện có';
+      case 'onboarding_online_services_anidb':
+        return 'Nhận diện anime và tập phim bằng dấu vân tay tệp. Fushi có ứng dụng khách đã đăng ký; bạn vẫn cần tài khoản AniDB của riêng mình. Nhập tài khoản trong cài đặt và bật nhận diện tệp bằng mã băm khi muốn.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan cung cấp siêu dữ liệu; AniList hỗ trợ khám phá và các truy vấn liên quan. Truy vấn công khai chỉ đọc không cần tài khoản cá nhân hoặc khóa API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Bản dựng này đã tích hợp khóa TMDB cho dữ liệu dự phòng và các trường còn thiếu. Chỉ thêm khóa riêng nếu bạn muốn dùng hạn mức của mình.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Bản dựng này chưa có khóa TMDB. Hãy xin khóa API rồi nhập trong cài đặt nếu cần TMDB làm nguồn siêu dữ liệu dự phòng; MAL / Jikan vẫn dùng được.';
+      case 'onboarding_online_services_jimaku':
+        return 'Tìm phụ đề. Đăng ký hoặc đăng nhập Jimaku, tạo khóa API cá nhân trên trang tài khoản, nhập khóa vào cài đặt rồi bật nguồn phụ đề này.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Tìm và tải phụ đề. Đăng ký tài khoản, tạo ứng dụng sử dụng API để lấy khóa API. Đăng nhập người dùng là tùy chọn và sử dụng hạn mức tải xuống của tài khoản.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Bản dựng này đã tích hợp thông tin xác thực ứng dụng cho dịch vụ bình luận chạy trên màn hình. Người dùng không cần xin API; chỉ cần bật khớp bình luận trực tuyến khi muốn.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Bản dựng này chưa có thông tin xác thực ứng dụng cho dịch vụ bình luận chạy trên màn hình, nên chưa dùng được tính năng khớp trực tuyến chính thức. Nhà phát triển cung cấp thông tin này; bạn không cần đăng ký API cá nhân.';
+      case 'onboarding_online_services_servers':
+        return 'Các dịch vụ này không có trang đăng ký chung. Nhập địa chỉ máy chủ hiện có và tài khoản hoặc khóa do quản trị viên cung cấp, hoặc bỏ qua nếu bạn chưa có máy chủ.';
+      case 'video_online_services_setup_title':
+        return 'Thiết lập dịch vụ trực tuyến tùy chọn';
+      case 'video_online_services_setup_description':
+        return 'Tài khoản và khóa API tùy chọn giúp cải thiện nhận diện video và tìm phụ đề. Phát video cơ bản không cần chúng.';
+      case 'video_online_services_setup_register':
+        return 'Tìm hiểu và đăng ký dịch vụ';
+      case 'video_online_services_setup_settings':
+        return 'Mở cài đặt';
+      case 'video_online_services_setup_dismiss':
+        return 'Không hiển thị lại';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Ứng dụng đã tích hợp khóa API. Bạn có thể đăng nhập tài khoản OpenSubtitles của mình để dùng hạn mức tải xuống cá nhân hoặc sử dụng khóa API riêng.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Để trống để dùng khóa API tích hợp trong ứng dụng.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -309729,7 +315410,7 @@ extension on _StringsZhCn {
       case 'video_source_scrape_locale':
         return '资料语言';
       case 'video_source_scrape_locale_hint':
-        return '标题、简介与图片的首选语言';
+        return 'TMDB 兜底及补充资料的首选语言；MAL 使用其提供的标题和原始文本。';
       case 'video_source_scrape_confirmation_title':
         return '确认资料匹配';
       case 'video_source_scrape_confirmation_hint':
@@ -311002,11 +316683,11 @@ extension on _StringsZhCn {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 客户端名称';
       case 'video_source_scrape_anidb_client_hint':
-        return '已登记的 AniDB HTTP API 客户端名称；留空时仅使用缓存标题目录';
+        return 'Fushi 已内置注册的应用客户端，通常留空即可；仅按需填写自定义注册客户端。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 客户端版本';
       case 'video_source_scrape_anidb_client_version_hint':
-        return '在 AniDB 登记的正整数版本；两项均有效前不会启用 HTTP API';
+        return '仅自定义客户端需要在此填写其注册版本。默认应用身份由 Fushi 维护，个人 AniDB 登录仍需自行配置。';
       case 'video_scrape_view_source':
         return '查看来源详情';
       case 'video_setting_auto_scrape_hint':
@@ -312488,6 +318169,166 @@ extension on _StringsZhCn {
         return '打开有声书面板';
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) => '运行于 ${provider} · 静态融合图';
+      case 'onboarding_pack_download_discard':
+        return '放弃下载';
+      case 'onboarding_pack_discard_confirm':
+        return '盘上的半截包会被删除，以后要重新下载就得从头开始。';
+      case 'onboarding_pack_discard_failed':
+        return '无法删除下载文件。请关闭占用文件的程序后重试。';
+      case 'onboarding_pack_discard_running':
+        return '正在清理下载文件…';
+      case 'onboarding_pack_tutorial_ready':
+        return '资源已准备好';
+      case 'onboarding_pack_tutorial_desc':
+        return '词典和发音资源已就绪，试试第一次查词吧。';
+      case 'onboarding_pack_tutorial_start':
+        return '开始查词教程';
+      case 'onboarding_pack_tutorial_skip':
+        return '暂时跳过';
+      case 'onboarding_pack_download_ready_hint':
+        return '导入后即可使用词典和发音资源，也可以稍后再导入。';
+      case 'onboarding_pack_download_ready_notice':
+        return '推荐包已下载。准备好后，点击底部的「现在导入」。';
+      case 'download_task_group_by':
+        return '分组';
+      case 'download_task_group_none':
+        return '不分组';
+      case 'download_task_group_collection':
+        return '合集／作品';
+      case 'download_task_group_kind':
+        return '媒体类型';
+      case 'download_task_group_status':
+        return '状态';
+      case 'download_task_collection_unassigned':
+        return '未归属合集';
+      case 'download_task_groups_collapse':
+        return '收起所有分组';
+      case 'download_task_groups_expand':
+        return '展开所有分组';
+      case 'download_task_sort_direction':
+        return '切换升降序';
+      case 'download_task_status_attention':
+        return '需要处理';
+      case 'download_task_status_active':
+        return '进行中';
+      case 'download_task_status_filter':
+        return '任务状态';
+      case 'video_source_scrape_background_hint':
+        return '关闭窗口后，任务会继续在后台执行。';
+      case 'video_source_scrape_queue_cancel_all':
+        return '取消全部任务';
+      case 'video_source_scrape_queue_waiting':
+        return '排队中';
+      case 'video_source_scrape_queue_remove':
+        return '撤回此任务';
+      case 'video_source_scrape_queue_submitted':
+        return '已加入队列';
+      case 'video_source_scrape_pending_empty':
+        return '没有需要手动匹配的作品。';
+      case 'video_source_scrape_list_load_failed':
+        return '列表加载失败，请重试。';
+      case 'video_source_scrape_list_reload':
+        return '重新加载';
+      case 'video_source_scrape_manual_current_work':
+        return '当前作品';
+      case 'video_source_scrape_manual_query_hint':
+        return '按标题搜索，或选择 MAL、TMDB 电影、TMDB 电视剧并输入 ID 或官方链接。选择结果后才会应用到当前作品。';
+      case 'video_source_scrape_manual_id_invalid':
+        return '请输入正整数作品 ID，或与所选来源及类型一致的官方链接。';
+      case 'video_source_scrape_manual_by_title':
+        return '按标题';
+      case 'video_source_scrape_manual_by_id':
+        return '按作品 ID';
+      case 'video_source_grouping_mode':
+        return '视频分组方式';
+      case 'video_source_grouping_folder':
+        return '按文件夹';
+      case 'video_source_grouping_series':
+        return '按作品';
+      case 'video_source_grouping_folder_hint':
+        return '每个一级子文件夹创建一个合集，根目录中的视频归入根合集。此模式仅整理视频，不刮削作品资料；如需刮削，请切换为按作品。';
+      case 'video_source_grouping_series_hint':
+        return '按文件名识别作品与分集，再匹配作品资料。';
+      case 'video_source_grouping_change_hint':
+        return '下次扫描使用此设置，已有合集和资料会保留。';
+      case 'video_source_scrape_manual_ambiguous':
+        return '存在多个同名作品。请打开待确认页，选择具体条目进行匹配。';
+      case 'video_source_scrape_pending_tab':
+        return '待确认';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB 电影';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB 电视剧';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL（经 Jikan）为主要资料源，TMDB 兜底。';
+      case 'video_anidb_hash_enabled':
+        return '通过 AniDB ED2K 识别文件';
+      case 'video_anidb_hash_hint':
+        return '需要 AniDB 账号和已注册客户端，仅提交文件大小与哈希。AniDB UDP 登录未加密，请仅在可信网络下开启。';
+      case 'video_anidb_username':
+        return 'AniDB 用户名';
+      case 'video_anidb_password':
+        return 'AniDB 密码';
+      case 'onboarding_online_services_title':
+        return '在线服务（可选）';
+      case 'onboarding_online_services_hint':
+        return '按需了解账号、API 密钥和已有服务';
+      case 'onboarding_online_services_body':
+        return '按需配置你要用的服务，也可以跳过。勾选此教程不会启用服务或提交账号，未勾选也不会改变已有设置。';
+      case 'onboarding_online_services_configure':
+        return '打开在线服务设置';
+      case 'onboarding_online_services_link':
+        return '打开官方账号 / API 页面';
+      case 'onboarding_online_services_account':
+        return '需要个人账号';
+      case 'onboarding_online_services_ready':
+        return '无需注册';
+      case 'onboarding_online_services_embedded':
+        return '应用身份已内置';
+      case 'onboarding_online_services_key':
+        return '需要 API 密钥';
+      case 'onboarding_online_services_build_missing':
+        return '此构建未配置应用身份';
+      case 'onboarding_online_services_server':
+        return '连接已有服务器';
+      case 'onboarding_online_services_anidb':
+        return '文件指纹辅助识别动画作品和分集。Fushi 已注册应用客户端，你仍需注册自己的 AniDB 账号，在设置中填写账号并自行开启文件哈希识别。';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan 提供作品资料；AniList 用于发现和相关查询。公共只读查询无需个人账号或 API 密钥。';
+      case 'onboarding_online_services_tmdb':
+        return '此构建已内置 TMDB 密钥，用于资料补缺与兜底。只有需要自己的配额时才配置个人密钥。';
+      case 'onboarding_online_services_tmdb_missing':
+        return '此构建未内置 TMDB 密钥。需要 TMDB 资料兜底时，请申请 API 密钥并填入设置；MAL / Jikan 仍可使用。';
+      case 'onboarding_online_services_jimaku':
+        return '用于查找字幕。注册或登录 Jimaku 后，在账号页面生成个人 API 密钥，填入设置并开启字幕来源。';
+      case 'onboarding_online_services_opensubtitles':
+        return '用于查找和下载字幕。注册账号后在 API 页面创建应用并获取 API 密钥。用户登录为可选项，可使用对应账号的下载配额。';
+      case 'onboarding_online_services_dandanplay':
+        return '此构建已内置弹幕服务应用身份，无需每位用户申请 API；按需开启在线弹幕匹配即可。';
+      case 'onboarding_online_services_dandanplay_missing':
+        return '此构建未配置弹幕服务应用身份，官方在线匹配暂不可用。应用身份由开发者申请，不需要你注册个人 API。';
+      case 'onboarding_online_services_servers':
+        return '这些服务没有统一注册入口。请填写你已有服务器的地址，以及服务管理员提供的账号或密钥；没有服务器可跳过。';
+      case 'video_online_services_setup_title':
+        return '配置可选在线服务';
+      case 'video_online_services_setup_description':
+        return '按需配置账号或 API 密钥，可增强文件识别和字幕搜索。基础播放不受影响。';
+      case 'video_online_services_setup_register':
+        return '了解和注册服务';
+      case 'video_online_services_setup_settings':
+        return '去设置';
+      case 'video_online_services_setup_dismiss':
+        return '永久关闭提示';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return '应用已内置 API 密钥。可选登录自己的 OpenSubtitles 账号使用个人下载额度，也可以填写自己的 API 密钥。';
+      case 'video_opensubtitles_app_key_hint':
+        return '留空使用应用内置 API 密钥。';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList 官方因服务器稳定性问题暂时停用了公开 API。这不是你的网络或代理的问题——请求已经打到 AniList 并被它当面拒绝了。请稍后再试。';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList 正在对本应用限流。稍等一会儿再重试。';
+      case 'video_anilist_error_unreachable':
+        return '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
       default:
         return null;
     }
@@ -318617,7 +324458,7 @@ extension on _StringsZhHk {
       case 'video_source_scrape_locale':
         return '資料語言';
       case 'video_source_scrape_locale_hint':
-        return '標題、簡介與圖片的首選語言';
+        return 'TMDB 後備及補充資料的首選語言；MAL 使用其提供的標題和原始文字。';
       case 'video_source_scrape_confirmation_title':
         return '確認資料匹配';
       case 'video_source_scrape_confirmation_hint':
@@ -319892,11 +325733,11 @@ extension on _StringsZhHk {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 客戶端名稱';
       case 'video_source_scrape_anidb_client_hint':
-        return '已登記的 AniDB HTTP API 客戶端名稱；留空時僅使用緩存標題目錄';
+        return 'Fushi 已內置註冊的應用程式用戶端，通常留空即可；僅按需填寫自訂的已註冊用戶端。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 客戶端版本';
       case 'video_source_scrape_anidb_client_version_hint':
-        return '在 AniDB 登記的正整數版本；兩項均有效前不會啟用 HTTP API';
+        return '只有自訂用戶端需要在此填寫其註冊版本。預設應用程式身份由 Fushi 維護，個人 AniDB 登入仍需自行設定。';
       case 'video_scrape_view_source':
         return '查看來源詳情';
       case 'video_setting_auto_scrape_hint':
@@ -321385,6 +327226,166 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
+      case 'video_source_scrape_background_hint':
+        return '關閉此視窗後，任務仍會繼續執行。';
+      case 'video_source_scrape_queue_cancel_all':
+        return '取消所有任務';
+      case 'video_source_scrape_queue_waiting':
+        return '排隊中';
+      case 'video_source_scrape_queue_remove':
+        return '從佇列移除';
+      case 'video_source_scrape_queue_submitted':
+        return '已提交';
+      case 'video_source_scrape_pending_empty':
+        return '沒有需要手動配對的作品。';
+      case 'video_source_scrape_list_load_failed':
+        return '無法載入此清單，請重試。';
+      case 'video_source_scrape_list_reload':
+        return '重新載入';
+      case 'video_source_scrape_manual_current_work':
+        return '目前作品';
+      case 'video_source_scrape_manual_query_hint':
+        return '按標題搜尋，或選擇 MAL、TMDB 電影、TMDB 電視劇並輸入 ID 或官方連結。選擇結果後才會套用至目前作品。';
+      case 'video_source_scrape_manual_id_invalid':
+        return '請輸入正整數作品 ID，或與所選來源及類型一致的官方連結。';
+      case 'video_source_scrape_manual_by_title':
+        return '按名稱';
+      case 'video_source_scrape_manual_by_id':
+        return '按作品 ID';
+      case 'video_source_grouping_mode':
+        return '影片整理方式';
+      case 'video_source_grouping_folder':
+        return '按資料夾';
+      case 'video_source_grouping_series':
+        return '按作品';
+      case 'video_source_grouping_folder_hint':
+        return '為每個第一層子資料夾建立一個合集。直接放在所選資料夾內的檔案會歸入同一合集。此模式不支援刮削中繼資料；如需刮削，請切換至「按作品」。';
+      case 'video_source_grouping_series_hint':
+        return '從檔案名稱識別作品及集數，再配對中繼資料。';
+      case 'video_source_grouping_change_hint':
+        return '下次掃描會使用此設定。現有合集及中繼資料會保留。';
+      case 'video_source_scrape_manual_ambiguous':
+        return '有多個同名作品。請開啟待確認頁，選擇具體項目進行配對。';
+      case 'video_source_scrape_pending_tab':
+        return '待確認';
+      case 'video_source_scrape_manual_tmdb_movie':
+        return 'TMDB 電影';
+      case 'video_source_scrape_manual_tmdb_tv':
+        return 'TMDB 電視劇';
+      case 'video_source_scrape_provider_policy':
+        return 'MAL（經 Jikan）為主要資料來源，TMDB 作後備。';
+      case 'video_anidb_hash_enabled':
+        return '透過 AniDB ED2K 識別檔案';
+      case 'video_anidb_hash_hint':
+        return '需要 AniDB 帳戶和已註冊用戶端，僅傳送檔案大小與雜湊值。AniDB UDP 登入未加密，請僅在可信網絡下啟用。';
+      case 'video_anidb_username':
+        return 'AniDB 使用者名稱';
+      case 'video_anidb_password':
+        return 'AniDB 密碼';
+      case 'onboarding_online_services_title':
+        return '網上服務（可選）';
+      case 'onboarding_online_services_hint':
+        return '按需了解帳戶、API 金鑰和可用服務';
+      case 'onboarding_online_services_body':
+        return '按需設定你要使用的服務，也可以略過。勾選此教學不會啟用服務或提交帳戶資料，不勾選亦不會更改現有設定。';
+      case 'onboarding_online_services_configure':
+        return '開啟網上服務設定';
+      case 'onboarding_online_services_link':
+        return '開啟官方帳戶 / API 頁面';
+      case 'onboarding_online_services_account':
+        return '需要個人帳戶';
+      case 'onboarding_online_services_ready':
+        return '毋須註冊';
+      case 'onboarding_online_services_embedded':
+        return '已內置應用程式憑證';
+      case 'onboarding_online_services_key':
+        return '需要 API 金鑰';
+      case 'onboarding_online_services_build_missing':
+        return '此版本未設定應用程式憑證';
+      case 'onboarding_online_services_server':
+        return '連接現有伺服器';
+      case 'onboarding_online_services_anidb':
+        return '透過檔案指紋輔助識別動畫作品和分集。Fushi 已註冊應用程式用戶端，你仍需註冊自己的 AniDB 帳戶，在設定中填寫帳戶並自行啟用檔案雜湊識別。';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan 提供作品資料；AniList 用於探索和相關查詢。公開唯讀查詢毋須個人帳戶或 API 金鑰。';
+      case 'onboarding_online_services_tmdb':
+        return '此版本已內置 TMDB 金鑰，用於資料補缺及後備。只有需要自己的配額時才設定個人金鑰。';
+      case 'onboarding_online_services_tmdb_missing':
+        return '此版本未內置 TMDB 金鑰。如需 TMDB 後備資料，請申請 API 金鑰並填入設定；MAL / Jikan 仍可使用。';
+      case 'onboarding_online_services_jimaku':
+        return '用於尋找字幕。註冊或登入 Jimaku 後，在帳戶頁面產生個人 API 金鑰，填入設定並啟用此字幕來源。';
+      case 'onboarding_online_services_opensubtitles':
+        return '用於尋找和下載字幕。註冊帳戶後在 API 頁面建立應用程式並取得 API 金鑰。使用者登入屬可選項目，可使用對應帳戶的下載配額。';
+      case 'onboarding_online_services_dandanplay':
+        return '此版本已內置彈幕服務應用程式憑證，毋須每位使用者申請 API；按需啟用網上彈幕配對即可。';
+      case 'onboarding_online_services_dandanplay_missing':
+        return '此版本未設定彈幕服務應用程式憑證，官方網上配對暫時無法使用。應用程式憑證由開發者申請，毋須你註冊個人 API。';
+      case 'onboarding_online_services_servers':
+        return '這些服務沒有統一註冊頁面。請填寫現有伺服器的地址，以及服務管理員提供的帳戶或金鑰；沒有伺服器可略過。';
+      case 'video_online_services_setup_title':
+        return '設定可選網上服務';
+      case 'video_online_services_setup_description':
+        return '按需設定帳戶或 API 金鑰，可增強檔案識別和字幕搜尋。基本播放不受影響。';
+      case 'video_online_services_setup_register':
+        return '了解及註冊服務';
+      case 'video_online_services_setup_settings':
+        return '前往設定';
+      case 'video_online_services_setup_dismiss':
+        return '不再顯示提示';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return '應用程式已內置 API 金鑰。可選擇登入自己的 OpenSubtitles 帳戶使用個人下載配額，亦可填寫自己的 API 金鑰。';
+      case 'video_opensubtitles_app_key_hint':
+        return '留空以使用應用程式內置的 API 金鑰。';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList 官方因伺服器穩定性問題暫時停用了公開 API。這不是你的網絡或代理的問題——請求已經打到 AniList 並被它當面拒絕了。請稍後再試。';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList 正在對本應用限流。稍等一會兒再重試。';
+      case 'video_anilist_error_unreachable':
+        return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
       default:
         return null;
     }
