@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 75446 (4438 per locale)
 ///
-/// Built on 2026-09-07 at 11:03 UTC
+/// Built on 2026-09-07 at 18:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4592,7 +4592,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_youtube_quality_hint =>
       'Start streams at the highest tier up to this target; Auto prefers smooth playback (hardware-friendly codec, up to 1080p)';
   String get library_view_discover => 'Discover';
-  String get manga_discovery_section_trending => 'Trending';
   String get manga_discovery_section_popular => 'Popular';
   String get manga_discovery_section_top_rated => 'Top rated';
   String get manga_discovery_section_latest_finished => 'Recently completed';
@@ -6144,6 +6143,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AniList is rate-limiting this app right now. Wait a moment and retry.';
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -13950,8 +13950,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get library_view_discover => 'اكتشاف';
   @override
-  String get manga_discovery_section_trending => 'رائج';
-  @override
   String get manga_discovery_section_popular => 'شائع';
   @override
   String get manga_discovery_section_top_rated => 'الأعلى تقييماً';
@@ -16555,6 +16553,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -24539,8 +24539,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get library_view_discover => 'Entdecken';
   @override
-  String get manga_discovery_section_trending => 'Im Trend';
-  @override
   String get manga_discovery_section_popular => 'Beliebt';
   @override
   String get manga_discovery_section_top_rated => 'Bestbewertet';
@@ -27193,6 +27191,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -35211,8 +35211,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get library_view_discover => 'Descubrir';
   @override
-  String get manga_discovery_section_trending => 'Tendencia';
-  @override
   String get manga_discovery_section_popular => 'Popular';
   @override
   String get manga_discovery_section_top_rated => 'Mejor puntuados';
@@ -37884,6 +37882,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -45931,8 +45931,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get library_view_discover => 'Découvrir';
   @override
-  String get manga_discovery_section_trending => 'Tendances';
-  @override
   String get manga_discovery_section_popular => 'Populaires';
   @override
   String get manga_discovery_section_top_rated => 'Mieux notés';
@@ -48609,6 +48607,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -56514,8 +56514,6 @@ class _StringsId extends _StringsEn {
   @override
   String get library_view_discover => 'Jelajahi';
   @override
-  String get manga_discovery_section_trending => 'Trending';
-  @override
   String get manga_discovery_section_popular => 'Populer';
   @override
   String get manga_discovery_section_top_rated => 'Rating tertinggi';
@@ -59137,6 +59135,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -67105,8 +67105,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get library_view_discover => 'Scopri';
   @override
-  String get manga_discovery_section_trending => 'Di tendenza';
-  @override
   String get manga_discovery_section_popular => 'Popolari';
   @override
   String get manga_discovery_section_top_rated => 'Più votati';
@@ -69756,6 +69754,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -77241,8 +77241,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get library_view_discover => '見つける';
   @override
-  String get manga_discovery_section_trending => 'トレンド';
-  @override
   String get manga_discovery_section_popular => '人気';
   @override
   String get manga_discovery_section_top_rated => '高評価';
@@ -79755,6 +79753,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -87251,8 +87251,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get library_view_discover => '발견';
   @override
-  String get manga_discovery_section_trending => '트렌딩';
-  @override
   String get manga_discovery_section_popular => '인기';
   @override
   String get manga_discovery_section_top_rated => '최고 평점';
@@ -89764,6 +89762,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -97696,8 +97696,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get library_view_discover => 'Ontdekken';
   @override
-  String get manga_discovery_section_trending => 'Trending';
-  @override
   String get manga_discovery_section_popular => 'Populair';
   @override
   String get manga_discovery_section_top_rated => 'Hoogst beoordeeld';
@@ -100341,6 +100339,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -108316,8 +108316,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get library_view_discover => 'Descobrir';
   @override
-  String get manga_discovery_section_trending => 'Em alta';
-  @override
   String get manga_discovery_section_popular => 'Popular';
   @override
   String get manga_discovery_section_top_rated => 'Mais bem avaliados';
@@ -110970,6 +110968,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -118924,8 +118924,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get library_view_discover => 'Обзор';
   @override
-  String get manga_discovery_section_trending => 'В тренде';
-  @override
   String get manga_discovery_section_popular => 'Популярное';
   @override
   String get manga_discovery_section_top_rated => 'Лучшие по оценкам';
@@ -121577,6 +121575,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -129370,8 +129370,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get library_view_discover => 'ค้นพบ';
   @override
-  String get manga_discovery_section_trending => 'กำลังมาแรง';
-  @override
   String get manga_discovery_section_popular => 'ยอดนิยม';
   @override
   String get manga_discovery_section_top_rated => 'คะแนนสูงสุด';
@@ -131982,6 +131980,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -139871,8 +139871,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get library_view_discover => 'Keşfet';
   @override
-  String get manga_discovery_section_trending => 'Trend';
-  @override
   String get manga_discovery_section_popular => 'Popüler';
   @override
   String get manga_discovery_section_top_rated => 'En yüksek puanlı';
@@ -142505,6 +142503,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -150371,8 +150371,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get library_view_discover => 'Khám phá';
   @override
-  String get manga_discovery_section_trending => 'Thịnh hành';
-  @override
   String get manga_discovery_section_popular => 'Phổ biến';
   @override
   String get manga_discovery_section_top_rated => 'Đánh giá cao nhất';
@@ -152999,6 +152997,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -160256,8 +160256,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get library_view_discover => '发现';
   @override
-  String get manga_discovery_section_trending => '趋势';
-  @override
   String get manga_discovery_section_popular => '热门';
   @override
   String get manga_discovery_section_top_rated => '高分';
@@ -162634,6 +162632,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
+  @override
+  String get manga_discovery_section_publishing => '连载热门';
 }
 
 // Path: <root>
@@ -169897,8 +169897,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get library_view_discover => '發現';
   @override
-  String get manga_discovery_section_trending => '趨勢';
-  @override
   String get manga_discovery_section_popular => '熱門';
   @override
   String get manga_discovery_section_top_rated => '高分';
@@ -172322,6 +172320,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 /// Flat map(s) containing all translations.
@@ -179264,8 +179264,6 @@ extension on _StringsEn {
         return 'Start streams at the highest tier up to this target; Auto prefers smooth playback (hardware-friendly codec, up to 1080p)';
       case 'library_view_discover':
         return 'Discover';
-      case 'manga_discovery_section_trending':
-        return 'Trending';
       case 'manga_discovery_section_popular':
         return 'Popular';
       case 'manga_discovery_section_top_rated':
@@ -181441,6 +181439,8 @@ extension on _StringsEn {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -188379,8 +188379,6 @@ extension on _StringsAr {
         return 'بدء البث بأعلى مستوى حتى هذا الهدف؛ التلقائي يفضّل التشغيل السلس (ترميز متوافق مع العتاد، حتى 1080p)';
       case 'library_view_discover':
         return 'اكتشاف';
-      case 'manga_discovery_section_trending':
-        return 'رائج';
       case 'manga_discovery_section_popular':
         return 'شائع';
       case 'manga_discovery_section_top_rated':
@@ -190555,6 +190553,8 @@ extension on _StringsAr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -197530,8 +197530,6 @@ extension on _StringsDe {
         return 'Streams mit der höchsten Stufe bis zu diesem Ziel starten; Auto bevorzugt flüssige Wiedergabe (hardwarefreundlicher Codec, bis 1080p)';
       case 'library_view_discover':
         return 'Entdecken';
-      case 'manga_discovery_section_trending':
-        return 'Im Trend';
       case 'manga_discovery_section_popular':
         return 'Beliebt';
       case 'manga_discovery_section_top_rated':
@@ -199714,6 +199712,8 @@ extension on _StringsDe {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -206682,8 +206682,6 @@ extension on _StringsEs {
         return 'Inicia streams en el nivel más alto hasta este objetivo; Auto prefiere reproducción fluida (códec amigable con hardware, hasta 1080p)';
       case 'library_view_discover':
         return 'Descubrir';
-      case 'manga_discovery_section_trending':
-        return 'Tendencia';
       case 'manga_discovery_section_popular':
         return 'Popular';
       case 'manga_discovery_section_top_rated':
@@ -208864,6 +208862,8 @@ extension on _StringsEs {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -215841,8 +215841,6 @@ extension on _StringsFr {
         return 'Démarrer les flux au niveau le plus élevé jusqu\'à cette cible ; Auto préfère une lecture fluide (codec compatible matériel, jusqu\'à 1080p)';
       case 'library_view_discover':
         return 'Découvrir';
-      case 'manga_discovery_section_trending':
-        return 'Tendances';
       case 'manga_discovery_section_popular':
         return 'Populaires';
       case 'manga_discovery_section_top_rated':
@@ -218023,6 +218021,8 @@ extension on _StringsFr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -224976,8 +224976,6 @@ extension on _StringsId {
         return 'Mulai streaming pada tier tertinggi hingga target ini; Otomatis mengutamakan pemutaran lancar (codec ramah perangkat keras, hingga 1080p)';
       case 'library_view_discover':
         return 'Jelajahi';
-      case 'manga_discovery_section_trending':
-        return 'Trending';
       case 'manga_discovery_section_popular':
         return 'Populer';
       case 'manga_discovery_section_top_rated':
@@ -227153,6 +227151,8 @@ extension on _StringsId {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -234124,8 +234124,6 @@ extension on _StringsIt {
         return 'Avvia gli stream al livello più alto fino a questo target; Auto preferisce una riproduzione fluida (codec hardware-friendly, fino a 1080p)';
       case 'library_view_discover':
         return 'Scopri';
-      case 'manga_discovery_section_trending':
-        return 'Di tendenza';
       case 'manga_discovery_section_popular':
         return 'Popolari';
       case 'manga_discovery_section_top_rated':
@@ -236305,6 +236303,8 @@ extension on _StringsIt {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -243214,8 +243214,6 @@ extension on _StringsJa {
         return 'この目標までの最高画質でストリームを開始します。自動はスムーズな再生を優先します（ハードウェア対応コーデック、最大1080p）';
       case 'library_view_discover':
         return '見つける';
-      case 'manga_discovery_section_trending':
-        return 'トレンド';
       case 'manga_discovery_section_popular':
         return '人気';
       case 'manga_discovery_section_top_rated':
@@ -245384,6 +245382,8 @@ extension on _StringsJa {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -252295,8 +252295,6 @@ extension on _StringsKo {
         return '이 목표까지의 최고 등급으로 스트림을 시작합니다. 자동은 원활한 재생을 선호합니다 (하드웨어 친화적 코덱, 최대 1080p)';
       case 'library_view_discover':
         return '발견';
-      case 'manga_discovery_section_trending':
-        return '트렌딩';
       case 'manga_discovery_section_popular':
         return '인기';
       case 'manga_discovery_section_top_rated':
@@ -254467,6 +254465,8 @@ extension on _StringsKo {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -261431,8 +261431,6 @@ extension on _StringsNl {
         return 'Start streams op de hoogste laag tot dit doel; Automatisch geeft voorkeur aan vloeiende weergave (hardwarevriendelijke codec, tot 1080p)';
       case 'library_view_discover':
         return 'Ontdekken';
-      case 'manga_discovery_section_trending':
-        return 'Trending';
       case 'manga_discovery_section_popular':
         return 'Populair';
       case 'manga_discovery_section_top_rated':
@@ -263612,6 +263610,8 @@ extension on _StringsNl {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -270572,8 +270572,6 @@ extension on _StringsPtBr {
         return 'Iniciar streams no nível mais alto até este alvo; Auto prefere reprodução fluida (codec amigável ao hardware, até 1080p)';
       case 'library_view_discover':
         return 'Descobrir';
-      case 'manga_discovery_section_trending':
-        return 'Em alta';
       case 'manga_discovery_section_popular':
         return 'Popular';
       case 'manga_discovery_section_top_rated':
@@ -272752,6 +272750,8 @@ extension on _StringsPtBr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -279719,8 +279719,6 @@ extension on _StringsRu {
         return 'Начинать потоки с наивысшего уровня до выбранного предела; «Авто» предпочитает плавное воспроизведение (совместимый с оборудованием кодек, до 1080p)';
       case 'library_view_discover':
         return 'Обзор';
-      case 'manga_discovery_section_trending':
-        return 'В тренде';
       case 'manga_discovery_section_popular':
         return 'Популярное';
       case 'manga_discovery_section_top_rated':
@@ -281899,6 +281897,8 @@ extension on _StringsRu {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -288842,8 +288842,6 @@ extension on _StringsTh {
         return 'เริ่มสตรีมที่ระดับสูงสุดไม่เกินเป้าหมายนี้ อัตโนมัติจะเน้นการเล่นที่ราบรื่น (codec ที่เป็นมิตรกับฮาร์ดแวร์ สูงสุด 1080p)';
       case 'library_view_discover':
         return 'ค้นพบ';
-      case 'manga_discovery_section_trending':
-        return 'กำลังมาแรง';
       case 'manga_discovery_section_popular':
         return 'ยอดนิยม';
       case 'manga_discovery_section_top_rated':
@@ -291018,6 +291016,8 @@ extension on _StringsTh {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -297975,8 +297975,6 @@ extension on _StringsTr {
         return 'Yayınları bu hedefe kadar en yüksek katmanda başlat; Otomatik akıcı oynatmayı tercih eder (donanım dostu kodek, 1080p\'ye kadar)';
       case 'library_view_discover':
         return 'Keşfet';
-      case 'manga_discovery_section_trending':
-        return 'Trend';
       case 'manga_discovery_section_popular':
         return 'Popüler';
       case 'manga_discovery_section_top_rated':
@@ -300152,6 +300150,8 @@ extension on _StringsTr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -307103,8 +307103,6 @@ extension on _StringsVi {
         return 'Bắt đầu stream ở mức cao nhất đến mục tiêu này; Tự động ưu tiên phát mượt (codec thân thiện phần cứng, tối đa 1080p)';
       case 'library_view_discover':
         return 'Khám phá';
-      case 'manga_discovery_section_trending':
-        return 'Thịnh hành';
       case 'manga_discovery_section_popular':
         return 'Phổ biến';
       case 'manga_discovery_section_top_rated':
@@ -309280,6 +309278,8 @@ extension on _StringsVi {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -316170,8 +316170,6 @@ extension on _StringsZhCn {
         return '起播自动选不超过目标的最高档；「自动」优先流畅（硬解友好编码，最高 1080p）';
       case 'library_view_discover':
         return '发现';
-      case 'manga_discovery_section_trending':
-        return '趋势';
       case 'manga_discovery_section_popular':
         return '热门';
       case 'manga_discovery_section_top_rated':
@@ -318329,6 +318327,8 @@ extension on _StringsZhCn {
         return 'AniList 正在对本应用限流。稍等一会儿再重试。';
       case 'video_anilist_error_unreachable':
         return '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
+      case 'manga_discovery_section_publishing':
+        return '连载热门';
       default:
         return null;
     }
@@ -325220,8 +325220,6 @@ extension on _StringsZhHk {
         return '起播自動選不超過目標的最高檔；「自動」優先流暢（硬解友好編碼，最高 1080p）';
       case 'library_view_discover':
         return '發現';
-      case 'manga_discovery_section_trending':
-        return '趨勢';
       case 'manga_discovery_section_popular':
         return '熱門';
       case 'manga_discovery_section_top_rated':
@@ -327386,6 +327384,8 @@ extension on _StringsZhHk {
         return 'AniList 正在對本應用限流。稍等一會兒再重試。';
       case 'video_anilist_error_unreachable':
         return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
