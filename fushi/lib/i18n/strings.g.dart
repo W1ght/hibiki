@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 75395 (4435 per locale)
+/// Strings: 75446 (4438 per locale)
 ///
-/// Built on 2026-09-07 at 10:52 UTC
+/// Built on 2026-09-07 at 11:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6138,6 +6138,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The app API key is included. You can optionally sign in to your OpenSubtitles account for your download allowance, or use your own API key.';
   String get video_opensubtitles_app_key_hint =>
       'Leave blank to use the bundled app API key.';
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -16540,6 +16546,15 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'اتركه فارغًا لاستخدام مفتاح API المضمّن في التطبيق.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -27169,6 +27184,15 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Leer lassen, um den enthaltenen API-Schlüssel der App zu verwenden.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -37851,6 +37875,15 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Déjalo vacío para usar la clave API incluida en la aplicación.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -48567,6 +48600,15 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Laissez vide pour utiliser la clé API incluse dans l’application.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -59086,6 +59128,15 @@ class _StringsId extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Biarkan kosong untuk menggunakan kunci API bawaan aplikasi.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -69696,6 +69747,15 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Lascia vuoto per usare la chiave API inclusa nell’app.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -79686,6 +79746,15 @@ class _StringsJa extends _StringsEn {
       'アプリの API キーは内蔵されています。ご自身の OpenSubtitles アカウントにログインして個人のダウンロード枠を使うか、ご自身の API キーを設定することもできます。';
   @override
   String get video_opensubtitles_app_key_hint => '空欄の場合、アプリ内蔵の API キーを使用します。';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -89686,6 +89755,15 @@ class _StringsKo extends _StringsEn {
       '앱 API 키가 내장되어 있습니다. 원하는 경우 본인의 OpenSubtitles 계정에 로그인해 개인 다운로드 할당량을 사용하거나, 본인의 API 키를 입력할 수 있습니다.';
   @override
   String get video_opensubtitles_app_key_hint => '비워 두면 앱에 내장된 API 키를 사용합니다.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -100254,6 +100332,15 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Laat leeg om de meegeleverde API-sleutel van de app te gebruiken.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -110874,6 +110961,15 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Deixe vazio para usar a chave API incluída no aplicativo.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -121472,6 +121568,15 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Оставьте пустым, чтобы использовать встроенный ключ API приложения.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -131868,6 +131973,15 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'เว้นว่างไว้เพื่อใช้คีย์ API ที่มีอยู่ในแอป';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -142382,6 +142496,15 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Uygulamayla gelen API anahtarını kullanmak için boş bırakın.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -152867,6 +152990,15 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_opensubtitles_app_key_hint =>
       'Để trống để dùng khóa API tích hợp trong ứng dụng.';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -162494,6 +162626,14 @@ class _StringsZhCn extends _StringsEn {
       '应用已内置 API 密钥。可选登录自己的 OpenSubtitles 账号使用个人下载额度，也可以填写自己的 API 密钥。';
   @override
   String get video_opensubtitles_app_key_hint => '留空使用应用内置 API 密钥。';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList 官方因服务器稳定性问题暂时停用了公开 API。这不是你的网络或代理的问题——请求已经打到 AniList 并被它当面拒绝了。请稍后再试。';
+  @override
+  String get video_anilist_error_rate_limited => 'AniList 正在对本应用限流。稍等一会儿再重试。';
+  @override
+  String get video_anilist_error_unreachable =>
+      '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
 }
 
 // Path: <root>
@@ -172174,6 +172314,14 @@ class _StringsZhHk extends _StringsEn {
       '應用程式已內置 API 金鑰。可選擇登入自己的 OpenSubtitles 帳戶使用個人下載配額，亦可填寫自己的 API 金鑰。';
   @override
   String get video_opensubtitles_app_key_hint => '留空以使用應用程式內置的 API 金鑰。';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList 官方因伺服器穩定性問題暫時停用了公開 API。這不是你的網絡或代理的問題——請求已經打到 AniList 並被它當面拒絕了。請稍後再試。';
+  @override
+  String get video_anilist_error_rate_limited => 'AniList 正在對本應用限流。稍等一會兒再重試。';
+  @override
+  String get video_anilist_error_unreachable =>
+      '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
 }
 
 /// Flat map(s) containing all translations.
@@ -181287,6 +181435,12 @@ extension on _StringsEn {
         return 'The app API key is included. You can optionally sign in to your OpenSubtitles account for your download allowance, or use your own API key.';
       case 'video_opensubtitles_app_key_hint':
         return 'Leave blank to use the bundled app API key.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -190395,6 +190549,12 @@ extension on _StringsAr {
         return 'مفتاح API الخاص بالتطبيق مضمّن. يمكنك اختياريًا تسجيل الدخول إلى حسابك في OpenSubtitles لاستخدام حصة التنزيل الشخصية، أو استخدام مفتاح API الخاص بك.';
       case 'video_opensubtitles_app_key_hint':
         return 'اتركه فارغًا لاستخدام مفتاح API المضمّن في التطبيق.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -199548,6 +199708,12 @@ extension on _StringsDe {
         return 'Der API-Schlüssel der App ist enthalten. Du kannst dich optional bei deinem OpenSubtitles-Konto anmelden, um dein Downloadkontingent zu nutzen, oder einen eigenen API-Schlüssel verwenden.';
       case 'video_opensubtitles_app_key_hint':
         return 'Leer lassen, um den enthaltenen API-Schlüssel der App zu verwenden.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -208692,6 +208858,12 @@ extension on _StringsEs {
         return 'La clave API de la aplicación está incluida. Puedes iniciar sesión opcionalmente en tu cuenta de OpenSubtitles para usar tu cuota de descargas, o utilizar tu propia clave API.';
       case 'video_opensubtitles_app_key_hint':
         return 'Déjalo vacío para usar la clave API incluida en la aplicación.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -217845,6 +218017,12 @@ extension on _StringsFr {
         return 'La clé API de l’application est incluse. Vous pouvez vous connecter à votre compte OpenSubtitles pour utiliser votre quota de téléchargement, ou utiliser votre propre clé API.';
       case 'video_opensubtitles_app_key_hint':
         return 'Laissez vide pour utiliser la clé API incluse dans l’application.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -226969,6 +227147,12 @@ extension on _StringsId {
         return 'Kunci API aplikasi sudah disertakan. Anda dapat memilih untuk masuk ke akun OpenSubtitles sendiri guna memakai kuota unduhan pribadi, atau menggunakan kunci API sendiri.';
       case 'video_opensubtitles_app_key_hint':
         return 'Biarkan kosong untuk menggunakan kunci API bawaan aplikasi.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -236115,6 +236299,12 @@ extension on _StringsIt {
         return 'La chiave API dell’app è inclusa. Puoi accedere facoltativamente al tuo account OpenSubtitles per usare la tua quota di download, oppure usare una tua chiave API.';
       case 'video_opensubtitles_app_key_hint':
         return 'Lascia vuoto per usare la chiave API inclusa nell’app.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -245188,6 +245378,12 @@ extension on _StringsJa {
         return 'アプリの API キーは内蔵されています。ご自身の OpenSubtitles アカウントにログインして個人のダウンロード枠を使うか、ご自身の API キーを設定することもできます。';
       case 'video_opensubtitles_app_key_hint':
         return '空欄の場合、アプリ内蔵の API キーを使用します。';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -254265,6 +254461,12 @@ extension on _StringsKo {
         return '앱 API 키가 내장되어 있습니다. 원하는 경우 본인의 OpenSubtitles 계정에 로그인해 개인 다운로드 할당량을 사용하거나, 본인의 API 키를 입력할 수 있습니다.';
       case 'video_opensubtitles_app_key_hint':
         return '비워 두면 앱에 내장된 API 키를 사용합니다.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -263404,6 +263606,12 @@ extension on _StringsNl {
         return 'De API-sleutel van de app is inbegrepen. Je kunt je desgewenst aanmelden bij je OpenSubtitles-account voor je eigen downloadquotum, of je eigen API-sleutel gebruiken.';
       case 'video_opensubtitles_app_key_hint':
         return 'Laat leeg om de meegeleverde API-sleutel van de app te gebruiken.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -272538,6 +272746,12 @@ extension on _StringsPtBr {
         return 'A chave API do aplicativo está incluída. Você pode entrar opcionalmente em sua conta OpenSubtitles para usar sua cota de downloads ou usar sua própria chave API.';
       case 'video_opensubtitles_app_key_hint':
         return 'Deixe vazio para usar a chave API incluída no aplicativo.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -281679,6 +281893,12 @@ extension on _StringsRu {
         return 'Ключ API приложения уже включён. При желании можно войти в свой аккаунт OpenSubtitles для использования личной квоты скачиваний или указать собственный ключ API.';
       case 'video_opensubtitles_app_key_hint':
         return 'Оставьте пустым, чтобы использовать встроенный ключ API приложения.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -290792,6 +291012,12 @@ extension on _StringsTh {
         return 'แอปมีคีย์ API ในตัว คุณสามารถเลือกเข้าสู่ระบบบัญชี OpenSubtitles ของตนเองเพื่อใช้โควตาดาวน์โหลดส่วนตัว หรือใช้คีย์ API ของคุณเองได้';
       case 'video_opensubtitles_app_key_hint':
         return 'เว้นว่างไว้เพื่อใช้คีย์ API ที่มีอยู่ในแอป';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -299920,6 +300146,12 @@ extension on _StringsTr {
         return 'Uygulamanın API anahtarı dahildir. İsterseniz kişisel indirme kotanız için OpenSubtitles hesabınıza giriş yapabilir veya kendi API anahtarınızı kullanabilirsiniz.';
       case 'video_opensubtitles_app_key_hint':
         return 'Uygulamayla gelen API anahtarını kullanmak için boş bırakın.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -309042,6 +309274,12 @@ extension on _StringsVi {
         return 'Ứng dụng đã tích hợp khóa API. Bạn có thể đăng nhập tài khoản OpenSubtitles của mình để dùng hạn mức tải xuống cá nhân hoặc sử dụng khóa API riêng.';
       case 'video_opensubtitles_app_key_hint':
         return 'Để trống để dùng khóa API tích hợp trong ứng dụng.';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -318085,6 +318323,12 @@ extension on _StringsZhCn {
         return '应用已内置 API 密钥。可选登录自己的 OpenSubtitles 账号使用个人下载额度，也可以填写自己的 API 密钥。';
       case 'video_opensubtitles_app_key_hint':
         return '留空使用应用内置 API 密钥。';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList 官方因服务器稳定性问题暂时停用了公开 API。这不是你的网络或代理的问题——请求已经打到 AniList 并被它当面拒绝了。请稍后再试。';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList 正在对本应用限流。稍等一会儿再重试。';
+      case 'video_anilist_error_unreachable':
+        return '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
       default:
         return null;
     }
@@ -327136,6 +327380,12 @@ extension on _StringsZhHk {
         return '應用程式已內置 API 金鑰。可選擇登入自己的 OpenSubtitles 帳戶使用個人下載配額，亦可填寫自己的 API 金鑰。';
       case 'video_opensubtitles_app_key_hint':
         return '留空以使用應用程式內置的 API 金鑰。';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList 官方因伺服器穩定性問題暫時停用了公開 API。這不是你的網絡或代理的問題——請求已經打到 AniList 並被它當面拒絕了。請稍後再試。';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList 正在對本應用限流。稍等一會兒再重試。';
+      case 'video_anilist_error_unreachable':
+        return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
       default:
         return null;
     }
