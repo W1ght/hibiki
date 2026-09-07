@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74256 (4368 per locale)
+/// Strings: 74460 (4380 per locale)
 ///
-/// Built on 2026-09-07 at 07:18 UTC
+/// Built on 2026-09-07 at 07:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6041,6 +6041,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  String get download_task_group_by => 'Group by';
+  String get download_task_group_none => 'No grouping';
+  String get download_task_group_collection => 'Collection / series';
+  String get download_task_group_kind => 'Media type';
+  String get download_task_group_status => 'Status';
+  String get download_task_collection_unassigned => 'No collection';
+  String get download_task_groups_collapse => 'Collapse all groups';
+  String get download_task_groups_expand => 'Expand all groups';
+  String get download_task_sort_direction => 'Reverse sort order';
+  String get download_task_status_attention => 'Needs attention';
+  String get download_task_status_active => 'In progress';
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -16277,6 +16289,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -26737,6 +26773,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -37250,6 +37310,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -47796,6 +47880,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -58149,6 +58257,30 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -68591,6 +68723,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -78425,6 +78581,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -88269,6 +88449,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -98669,6 +98873,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -109122,6 +109350,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -119553,6 +119805,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -129784,6 +130060,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -140132,6 +140432,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -150451,6 +150775,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -159925,6 +160273,30 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       '推荐包已下载。准备好后，点击底部的「现在导入」。';
+  @override
+  String get download_task_group_by => '分组';
+  @override
+  String get download_task_group_none => '不分组';
+  @override
+  String get download_task_group_collection => '合集／作品';
+  @override
+  String get download_task_group_kind => '媒体类型';
+  @override
+  String get download_task_group_status => '状态';
+  @override
+  String get download_task_collection_unassigned => '未归属合集';
+  @override
+  String get download_task_groups_collapse => '收起所有分组';
+  @override
+  String get download_task_groups_expand => '展开所有分组';
+  @override
+  String get download_task_sort_direction => '切换升降序';
+  @override
+  String get download_task_status_attention => '需要处理';
+  @override
+  String get download_task_status_active => '进行中';
+  @override
+  String get download_task_status_filter => '任务状态';
 }
 
 // Path: <root>
@@ -169452,6 +169824,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_download_ready_notice =>
       'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 /// Flat map(s) containing all translations.
@@ -178431,6 +178827,30 @@ extension on _StringsEn {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -187405,6 +187825,30 @@ extension on _StringsAr {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -196424,6 +196868,30 @@ extension on _StringsDe {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -205434,6 +205902,30 @@ extension on _StringsEs {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -214453,6 +214945,30 @@ extension on _StringsFr {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -223443,6 +223959,30 @@ extension on _StringsId {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -232455,6 +232995,30 @@ extension on _StringsIt {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -241394,6 +241958,30 @@ extension on _StringsJa {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -250337,6 +250925,30 @@ extension on _StringsKo {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -259342,6 +259954,30 @@ extension on _StringsNl {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -268342,6 +268978,30 @@ extension on _StringsPtBr {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -277349,6 +278009,30 @@ extension on _StringsRu {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -286328,6 +287012,30 @@ extension on _StringsTh {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -295322,6 +296030,30 @@ extension on _StringsTr {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -304310,6 +305042,30 @@ extension on _StringsVi {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -313219,6 +313975,30 @@ extension on _StringsZhCn {
         return '导入后即可使用词典和发音资源，也可以稍后再导入。';
       case 'onboarding_pack_download_ready_notice':
         return '推荐包已下载。准备好后，点击底部的「现在导入」。';
+      case 'download_task_group_by':
+        return '分组';
+      case 'download_task_group_none':
+        return '不分组';
+      case 'download_task_group_collection':
+        return '合集／作品';
+      case 'download_task_group_kind':
+        return '媒体类型';
+      case 'download_task_group_status':
+        return '状态';
+      case 'download_task_collection_unassigned':
+        return '未归属合集';
+      case 'download_task_groups_collapse':
+        return '收起所有分组';
+      case 'download_task_groups_expand':
+        return '展开所有分组';
+      case 'download_task_sort_direction':
+        return '切换升降序';
+      case 'download_task_status_attention':
+        return '需要处理';
+      case 'download_task_status_active':
+        return '进行中';
+      case 'download_task_status_filter':
+        return '任务状态';
       default:
         return null;
     }
@@ -322136,6 +322916,30 @@ extension on _StringsZhHk {
         return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
       case 'onboarding_pack_download_ready_notice':
         return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
