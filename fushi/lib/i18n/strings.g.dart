@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74086 (4358 per locale)
+/// Strings: 74120 (4360 per locale)
 ///
-/// Built on 2026-09-06 at 19:59 UTC
+/// Built on 2026-09-07 at 06:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6026,6 +6026,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  String get onboarding_pack_download_discard => 'Discard download';
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -16237,6 +16240,11 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -26672,6 +26680,11 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -37160,6 +37173,11 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -47681,6 +47699,11 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -58009,6 +58032,11 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -68426,6 +68454,11 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -78235,6 +78268,11 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -88054,6 +88092,11 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -98429,6 +98472,11 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -108857,6 +108905,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -119263,6 +119316,11 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -129469,6 +129527,11 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -139792,6 +139855,11 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -150086,6 +150154,11 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 // Path: <root>
@@ -159539,6 +159612,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       '运行于 ${provider} · 静态融合图';
+  @override
+  String get onboarding_pack_download_discard => '放弃下载';
+  @override
+  String get onboarding_pack_discard_confirm => '盘上的半截包会被删除，以后要重新下载就得从头开始。';
 }
 
 // Path: <root>
@@ -169041,6 +169118,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
 }
 
 /// Flat map(s) containing all translations.
@@ -178000,6 +178082,10 @@ extension on _StringsEn {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -186954,6 +187040,10 @@ extension on _StringsAr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -195953,6 +196043,10 @@ extension on _StringsDe {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -204943,6 +205037,10 @@ extension on _StringsEs {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -213942,6 +214040,10 @@ extension on _StringsFr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -222912,6 +223014,10 @@ extension on _StringsId {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -231904,6 +232010,10 @@ extension on _StringsIt {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -240823,6 +240933,10 @@ extension on _StringsJa {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -249746,6 +249860,10 @@ extension on _StringsKo {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -258731,6 +258849,10 @@ extension on _StringsNl {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -267711,6 +267833,10 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -276698,6 +276824,10 @@ extension on _StringsRu {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -285657,6 +285787,10 @@ extension on _StringsTh {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -294631,6 +294765,10 @@ extension on _StringsTr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -303599,6 +303737,10 @@ extension on _StringsVi {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
@@ -312488,6 +312630,10 @@ extension on _StringsZhCn {
         return '打开有声书面板';
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) => '运行于 ${provider} · 静态融合图';
+      case 'onboarding_pack_download_discard':
+        return '放弃下载';
+      case 'onboarding_pack_discard_confirm':
+        return '盘上的半截包会被删除，以后要重新下载就得从头开始。';
       default:
         return null;
     }
@@ -321385,6 +321531,10 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
       default:
         return null;
     }
