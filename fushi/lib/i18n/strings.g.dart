@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74460 (4380 per locale)
+/// Strings: 74511 (4383 per locale)
 ///
-/// Built on 2026-09-07 at 07:53 UTC
+/// Built on 2026-09-07 at 09:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6053,6 +6053,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get download_task_status_attention => 'Needs attention';
   String get download_task_status_active => 'In progress';
   String get download_task_status_filter => 'Task status';
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -16313,6 +16319,15 @@ class _StringsAr extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -26797,6 +26812,15 @@ class _StringsDe extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -37334,6 +37358,15 @@ class _StringsEs extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -47904,6 +47937,15 @@ class _StringsFr extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -58281,6 +58323,15 @@ class _StringsId extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -68747,6 +68798,15 @@ class _StringsIt extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -78605,6 +78665,15 @@ class _StringsJa extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -88473,6 +88542,15 @@ class _StringsKo extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -98897,6 +98975,15 @@ class _StringsNl extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -109374,6 +109461,15 @@ class _StringsPtBr extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -119829,6 +119925,15 @@ class _StringsRu extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -130084,6 +130189,15 @@ class _StringsTh extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -140456,6 +140570,15 @@ class _StringsTr extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -150799,6 +150922,15 @@ class _StringsVi extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+  @override
+  String get video_anilist_error_rate_limited =>
+      'AniList is rate-limiting this app right now. Wait a moment and retry.';
+  @override
+  String get video_anilist_error_unreachable =>
+      'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
 }
 
 // Path: <root>
@@ -160297,6 +160429,14 @@ class _StringsZhCn extends _StringsEn {
   String get download_task_status_active => '进行中';
   @override
   String get download_task_status_filter => '任务状态';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList 官方因服务器稳定性问题暂时停用了公开 API。这不是你的网络或代理的问题——请求已经打到 AniList 并被它当面拒绝了。请稍后再试。';
+  @override
+  String get video_anilist_error_rate_limited => 'AniList 正在对本应用限流。稍等一会儿再重试。';
+  @override
+  String get video_anilist_error_unreachable =>
+      '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
 }
 
 // Path: <root>
@@ -169848,6 +169988,14 @@ class _StringsZhHk extends _StringsEn {
   String get download_task_status_active => 'In progress';
   @override
   String get download_task_status_filter => 'Task status';
+  @override
+  String get video_anilist_error_api_disabled =>
+      'AniList 官方因伺服器穩定性問題暫時停用了公開 API。這不是你的網絡或代理的問題——請求已經打到 AniList 並被它當面拒絕了。請稍後再試。';
+  @override
+  String get video_anilist_error_rate_limited => 'AniList 正在對本應用限流。稍等一會兒再重試。';
+  @override
+  String get video_anilist_error_unreachable =>
+      '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
 }
 
 /// Flat map(s) containing all translations.
@@ -178851,6 +178999,12 @@ extension on _StringsEn {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -187849,6 +188003,12 @@ extension on _StringsAr {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -196892,6 +197052,12 @@ extension on _StringsDe {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -205926,6 +206092,12 @@ extension on _StringsEs {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -214969,6 +215141,12 @@ extension on _StringsFr {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -223983,6 +224161,12 @@ extension on _StringsId {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -233019,6 +233203,12 @@ extension on _StringsIt {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -241982,6 +242172,12 @@ extension on _StringsJa {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -250949,6 +251145,12 @@ extension on _StringsKo {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -259978,6 +260180,12 @@ extension on _StringsNl {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -269002,6 +269210,12 @@ extension on _StringsPtBr {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -278033,6 +278247,12 @@ extension on _StringsRu {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -287036,6 +287256,12 @@ extension on _StringsTh {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -296054,6 +296280,12 @@ extension on _StringsTr {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -305066,6 +305298,12 @@ extension on _StringsVi {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList has temporarily disabled its public API because of server-side stability problems. This is not a problem with your network or proxy - the request reached AniList and was refused. Please try again later.';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
+      case 'video_anilist_error_unreachable':
+        return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       default:
         return null;
     }
@@ -313999,6 +314237,12 @@ extension on _StringsZhCn {
         return '进行中';
       case 'download_task_status_filter':
         return '任务状态';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList 官方因服务器稳定性问题暂时停用了公开 API。这不是你的网络或代理的问题——请求已经打到 AniList 并被它当面拒绝了。请稍后再试。';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList 正在对本应用限流。稍等一会儿再重试。';
+      case 'video_anilist_error_unreachable':
+        return '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
       default:
         return null;
     }
@@ -322940,6 +323184,12 @@ extension on _StringsZhHk {
         return 'In progress';
       case 'download_task_status_filter':
         return 'Task status';
+      case 'video_anilist_error_api_disabled':
+        return 'AniList 官方因伺服器穩定性問題暫時停用了公開 API。這不是你的網絡或代理的問題——請求已經打到 AniList 並被它當面拒絕了。請稍後再試。';
+      case 'video_anilist_error_rate_limited':
+        return 'AniList 正在對本應用限流。稍等一會兒再重試。';
+      case 'video_anilist_error_unreachable':
+        return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
       default:
         return null;
     }
