@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74120 (4360 per locale)
+/// Strings: 74256 (4368 per locale)
 ///
-/// Built on 2026-09-07 at 06:31 UTC
+/// Built on 2026-09-07 at 07:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6029,6 +6029,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_pack_download_discard => 'Discard download';
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -16245,6 +16257,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -26685,6 +26717,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -37178,6 +37230,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -47704,6 +47776,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -58037,6 +58129,26 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -68459,6 +68571,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -78273,6 +78405,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -88097,6 +88249,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -98477,6 +98649,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -108910,6 +109102,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -119321,6 +119533,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -129532,6 +129764,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -139860,6 +140112,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -150159,6 +150431,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 // Path: <root>
@@ -159616,6 +159908,23 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_pack_download_discard => '放弃下载';
   @override
   String get onboarding_pack_discard_confirm => '盘上的半截包会被删除，以后要重新下载就得从头开始。';
+  @override
+  String get onboarding_pack_discard_failed => '无法删除下载文件。请关闭占用文件的程序后重试。';
+  @override
+  String get onboarding_pack_discard_running => '正在清理下载文件…';
+  @override
+  String get onboarding_pack_tutorial_ready => '资源已准备好';
+  @override
+  String get onboarding_pack_tutorial_desc => '词典和发音资源已就绪，试试第一次查词吧。';
+  @override
+  String get onboarding_pack_tutorial_start => '开始查词教程';
+  @override
+  String get onboarding_pack_tutorial_skip => '暂时跳过';
+  @override
+  String get onboarding_pack_download_ready_hint => '导入后即可使用词典和发音资源，也可以稍后再导入。';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      '推荐包已下载。准备好后，点击底部的「现在导入」。';
 }
 
 // Path: <root>
@@ -169123,6 +169432,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_pack_discard_confirm =>
       'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
 }
 
 /// Flat map(s) containing all translations.
@@ -178086,6 +178415,22 @@ extension on _StringsEn {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -187044,6 +187389,22 @@ extension on _StringsAr {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -196047,6 +196408,22 @@ extension on _StringsDe {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -205041,6 +205418,22 @@ extension on _StringsEs {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -214044,6 +214437,22 @@ extension on _StringsFr {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -223018,6 +223427,22 @@ extension on _StringsId {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -232014,6 +232439,22 @@ extension on _StringsIt {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -240937,6 +241378,22 @@ extension on _StringsJa {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -249864,6 +250321,22 @@ extension on _StringsKo {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -258853,6 +259326,22 @@ extension on _StringsNl {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -267837,6 +268326,22 @@ extension on _StringsPtBr {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -276828,6 +277333,22 @@ extension on _StringsRu {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -285791,6 +286312,22 @@ extension on _StringsTh {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -294769,6 +295306,22 @@ extension on _StringsTr {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -303741,6 +304294,22 @@ extension on _StringsVi {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
@@ -312634,6 +313203,22 @@ extension on _StringsZhCn {
         return '放弃下载';
       case 'onboarding_pack_discard_confirm':
         return '盘上的半截包会被删除，以后要重新下载就得从头开始。';
+      case 'onboarding_pack_discard_failed':
+        return '无法删除下载文件。请关闭占用文件的程序后重试。';
+      case 'onboarding_pack_discard_running':
+        return '正在清理下载文件…';
+      case 'onboarding_pack_tutorial_ready':
+        return '资源已准备好';
+      case 'onboarding_pack_tutorial_desc':
+        return '词典和发音资源已就绪，试试第一次查词吧。';
+      case 'onboarding_pack_tutorial_start':
+        return '开始查词教程';
+      case 'onboarding_pack_tutorial_skip':
+        return '暂时跳过';
+      case 'onboarding_pack_download_ready_hint':
+        return '导入后即可使用词典和发音资源，也可以稍后再导入。';
+      case 'onboarding_pack_download_ready_notice':
+        return '推荐包已下载。准备好后，点击底部的「现在导入」。';
       default:
         return null;
     }
@@ -321535,6 +322120,22 @@ extension on _StringsZhHk {
         return 'Discard download';
       case 'onboarding_pack_discard_confirm':
         return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
       default:
         return null;
     }
