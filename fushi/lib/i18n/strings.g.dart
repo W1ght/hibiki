@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 75446 (4438 per locale)
 ///
-/// Built on 2026-09-07 at 11:03 UTC
+/// Built on 2026-09-07 at 14:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5891,9 +5891,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_pack_paused_desc =>
       'Progress is kept on disk — resuming picks up where it stopped.';
   String get onboarding_pack_mini_bar_hide => 'Hide';
-  String get video_setting_subtitle_obscure_reveal => 'Reveal on hover or tap';
+  String get video_setting_subtitle_obscure_reveal =>
+      'Reveal when paused or hovered';
   String get video_setting_subtitle_obscure_reveal_hint =>
-      'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+      'While subtitles are blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} works still need identity confirmation';
   String get video_library_scrape_pending_banner_action => 'Confirm';
@@ -162252,10 +162253,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_pack_mini_bar_hide => '收起';
   @override
-  String get video_setting_subtitle_obscure_reveal => '悬停或点击显形';
+  String get video_setting_subtitle_obscure_reveal => '暂停或悬停时显形';
   @override
   String get video_setting_subtitle_obscure_reveal_hint =>
-      '字幕处于模糊或隐藏时，桌面悬停、移动端点击可临时显形；关掉后遮蔽始终保持，不会被误触揭开。';
+      '字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
   @override
   String video_library_scrape_pending_banner({required Object count}) =>
       '${count} 部作品还没确认身份，资料和封面都没刮出来';
@@ -181092,9 +181093,9 @@ extension on _StringsEn {
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
       case 'video_setting_subtitle_obscure_reveal':
-        return 'Reveal on hover or tap';
+        return 'Reveal when paused or hovered';
       case 'video_setting_subtitle_obscure_reveal_hint':
-        return 'While subtitles are blurred or hidden, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
+        return 'While subtitles are blurred or hidden, pausing, looking a word up, hovering (desktop) or tapping them reveals them temporarily. Turn this off to keep them obscured no matter what.';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) =>
             '${count} works still need identity confirmation';
@@ -317983,9 +317984,9 @@ extension on _StringsZhCn {
       case 'onboarding_pack_mini_bar_hide':
         return '收起';
       case 'video_setting_subtitle_obscure_reveal':
-        return '悬停或点击显形';
+        return '暂停或悬停时显形';
       case 'video_setting_subtitle_obscure_reveal_hint':
-        return '字幕处于模糊或隐藏时，桌面悬停、移动端点击可临时显形；关掉后遮蔽始终保持，不会被误触揭开。';
+        return '字幕处于模糊或隐藏时，暂停、查词、桌面悬停或移动端点击可临时显形；关掉后遮蔽始终保持，暂停也不会露出来。';
       case 'video_library_scrape_pending_banner':
         return ({required Object count}) => '${count} 部作品还没确认身份，资料和封面都没刮出来';
       case 'video_library_scrape_pending_banner_action':
