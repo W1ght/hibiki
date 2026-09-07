@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74562 (4386 per locale)
+/// Strings: 75021 (4413 per locale)
 ///
-/// Built on 2026-09-07 at 08:23 UTC
+/// Built on 2026-09-07 at 09:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4930,10 +4930,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_style_title => 'Dictionary styling';
   String get video_source_scrape_anidb_client => 'AniDB client name';
   String get video_source_scrape_anidb_client_hint =>
-      'Registered AniDB client name for UDP file identification; hashing is unavailable without a registered client.';
+      'Fushi includes a registered app client. Leave this blank normally; set a custom registered client only if needed.';
   String get video_source_scrape_anidb_client_version => 'AniDB client version';
   String get video_source_scrape_anidb_client_version_hint =>
-      'Positive client version registered with AniDB. UDP file identification also requires your account credentials.';
+      'Only custom clients need their own registered version here. Fushi maintains the default app identity; your personal AniDB login is still required.';
   String get video_scrape_view_source => 'View source details';
   String get video_setting_auto_scrape_hint =>
       'Automatically identify and fetch video metadata after library scans';
@@ -6065,6 +6065,52 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Requires an AniDB account and a registered client. Uploads only file size and hash. AniDB UDP login is unencrypted; enable only on a trusted network.';
   String get video_anidb_username => 'AniDB username';
   String get video_anidb_password => 'AniDB password';
+  String get onboarding_online_services_title => 'Online services (optional)';
+  String get onboarding_online_services_hint =>
+      'Explore accounts, API keys and available services';
+  String get onboarding_online_services_body =>
+      'Set up only the services you need, or skip this step. Selecting this tutorial does not enable services or submit credentials, and leaving it unselected does not change existing settings.';
+  String get onboarding_online_services_configure =>
+      'Open online service settings';
+  String get onboarding_online_services_link =>
+      'Open official account / API page';
+  String get onboarding_online_services_account => 'Personal account required';
+  String get onboarding_online_services_ready => 'No registration required';
+  String get onboarding_online_services_embedded => 'App credentials included';
+  String get onboarding_online_services_key => 'API key required';
+  String get onboarding_online_services_build_missing =>
+      'App credentials missing in this build';
+  String get onboarding_online_services_server => 'Connect an existing server';
+  String get onboarding_online_services_anidb =>
+      'Identify anime and episodes by file fingerprint. Fushi has a registered app client; you still need your own AniDB account. Enter it in settings and enable file hash identification when wanted.';
+  String get onboarding_online_services_public =>
+      'MAL / Jikan provides metadata; AniList supports discovery and related queries. Public read-only queries need no personal account or API key.';
+  String get onboarding_online_services_tmdb =>
+      'This build includes a TMDB key for metadata fallback and missing fields. Add your own key only if you want your own quota.';
+  String get onboarding_online_services_tmdb_missing =>
+      'This build has no TMDB key. Request an API key and enter it in settings if you need TMDB metadata fallback; MAL / Jikan remains available.';
+  String get onboarding_online_services_jimaku =>
+      'Find subtitles. Register or sign in to Jimaku, generate a personal API key on your account page, then enter it in settings and enable this subtitle source.';
+  String get onboarding_online_services_opensubtitles =>
+      'Find and download subtitles. Register an account, create an API consumer and obtain an API key. User login is optional and uses the account download quota.';
+  String get onboarding_online_services_dandanplay =>
+      'This build includes the danmaku service app credentials. Users do not need to apply for an API; enable online danmaku matching when wanted.';
+  String get onboarding_online_services_dandanplay_missing =>
+      'This build has no danmaku app credentials, so official online matching is unavailable. The developer provides these credentials; you do not need to register a personal API.';
+  String get onboarding_online_services_servers =>
+      'These services have no shared registration page. Enter your existing server address and the account or key provided by its administrator, or skip if you do not have a server.';
+  String get video_online_services_setup_title =>
+      'Configure optional online services';
+  String get video_online_services_setup_description =>
+      'Optional accounts and API keys can improve video identification and subtitle search. Basic playback works without them.';
+  String get video_online_services_setup_register =>
+      'Learn about and register services';
+  String get video_online_services_setup_settings => 'Open settings';
+  String get video_online_services_setup_dismiss => 'Never show again';
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'The app API key is included. You can optionally sign in to your OpenSubtitles account for your download allowance, or use your own API key.';
+  String get video_opensubtitles_app_key_hint =>
+      'Leave blank to use the bundled app API key.';
 }
 
 // Path: <root>
@@ -14462,12 +14508,12 @@ class _StringsAr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'اسم عميل AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'اسم عميل AniDB المسجّل للتعرّف على الملفات عبر UDP؛ لا يتوفر التعرّف بالتجزئة دون عميل مسجّل.';
+      'يتضمن Fushi عميل تطبيق مسجّلاً. اترك هذا الحقل فارغًا عادةً؛ حدّد عميلاً مسجّلاً مخصصًا عند الحاجة فقط.';
   @override
   String get video_source_scrape_anidb_client_version => 'إصدار عميل AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'إصدار العميل المسجّل لدى AniDB، ويجب أن يكون عددًا صحيحًا موجبًا. يتطلب التعرّف على الملفات عبر UDP أيضًا بيانات تسجيل الدخول إلى حسابك.';
+      'العملاء المخصصون فقط يحتاجون إلى إدخال إصدارهم المسجّل هنا. يتولى Fushi إدارة هوية التطبيق الافتراضية؛ وما زلت بحاجة إلى بيانات دخول حسابك الشخصي في AniDB.';
   @override
   String get video_scrape_view_source => 'عرض تفاصيل المصدر';
   @override
@@ -16344,6 +16390,80 @@ class _StringsAr extends _StringsEn {
   String get video_anidb_username => 'اسم مستخدم AniDB';
   @override
   String get video_anidb_password => 'كلمة مرور AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'الخدمات عبر الإنترنت (اختيارية)';
+  @override
+  String get onboarding_online_services_hint =>
+      'تعرّف على الحسابات ومفاتيح API والخدمات المتاحة';
+  @override
+  String get onboarding_online_services_body =>
+      'أعدّ الخدمات التي تحتاجها فقط، أو تخطّ هذه الخطوة. اختيار هذا الدليل لا يفعّل الخدمات ولا يرسل بيانات الدخول، وعدم اختياره لا يغيّر الإعدادات الحالية.';
+  @override
+  String get onboarding_online_services_configure =>
+      'فتح إعدادات الخدمات عبر الإنترنت';
+  @override
+  String get onboarding_online_services_link => 'فتح صفحة الحساب / API الرسمية';
+  @override
+  String get onboarding_online_services_account => 'يتطلب حسابًا شخصيًا';
+  @override
+  String get onboarding_online_services_ready => 'لا يتطلب التسجيل';
+  @override
+  String get onboarding_online_services_embedded =>
+      'بيانات اعتماد التطبيق مضمّنة';
+  @override
+  String get onboarding_online_services_key => 'يتطلب مفتاح API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'بيانات اعتماد التطبيق غير متوفرة في هذا الإصدار';
+  @override
+  String get onboarding_online_services_server => 'الاتصال بخادم موجود';
+  @override
+  String get onboarding_online_services_anidb =>
+      'التعرّف على الأنمي والحلقات باستخدام بصمة الملف. لدى Fushi عميل تطبيق مسجّل؛ لكنك ما زلت بحاجة إلى حساب AniDB خاص بك. أدخله في الإعدادات وفعّل التعرّف على الملفات بالتجزئة عندما تريد.';
+  @override
+  String get onboarding_online_services_public =>
+      'يوفّر MAL / Jikan البيانات الوصفية؛ ويدعم AniList الاستكشاف والاستعلامات ذات الصلة. الاستعلامات العامة للقراءة فقط لا تتطلب حسابًا شخصيًا أو مفتاح API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'يتضمن هذا الإصدار مفتاح TMDB للبيانات الوصفية البديلة والحقول الناقصة. أضف مفتاحك الخاص فقط إذا أردت استخدام حصتك الخاصة.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'لا يتضمن هذا الإصدار مفتاح TMDB. اطلب مفتاح API وأدخله في الإعدادات إذا احتجت إلى TMDB كمصدر بديل للبيانات الوصفية؛ ويظل MAL / Jikan متاحًا.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'البحث عن الترجمات. سجّل أو ادخل إلى Jimaku، وأنشئ مفتاح API شخصيًا من صفحة حسابك، ثم أدخله في الإعدادات وفعّل مصدر الترجمات هذا.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'البحث عن الترجمات وتنزيلها. سجّل حسابًا، وأنشئ تطبيقًا لاستخدام API للحصول على مفتاح API. تسجيل دخول المستخدم اختياري ويتيح استخدام حصة التنزيل الخاصة بالحساب.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'يتضمن هذا الإصدار بيانات اعتماد التطبيق لخدمة التعليقات المتحركة. لا يحتاج المستخدمون إلى طلب API؛ فعّل مطابقة التعليقات المتحركة عبر الإنترنت عندما تريد.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'لا يتضمن هذا الإصدار بيانات اعتماد تطبيق التعليقات المتحركة، لذا فإن المطابقة الرسمية عبر الإنترنت غير متاحة. يوفّر المطوّر هذه البيانات؛ ولا تحتاج إلى تسجيل API شخصي.';
+  @override
+  String get onboarding_online_services_servers =>
+      'لا توجد صفحة تسجيل موحّدة لهذه الخدمات. أدخل عنوان خادمك الموجود والحساب أو المفتاح الذي يقدّمه مسؤول الخادم، أو تخطّ هذه الخطوة إن لم يكن لديك خادم.';
+  @override
+  String get video_online_services_setup_title =>
+      'إعداد الخدمات الاختيارية عبر الإنترنت';
+  @override
+  String get video_online_services_setup_description =>
+      'يمكن للحسابات ومفاتيح API الاختيارية تحسين التعرّف على الفيديو والبحث عن الترجمات. يعمل التشغيل الأساسي بدونها.';
+  @override
+  String get video_online_services_setup_register =>
+      'التعرّف على الخدمات والتسجيل فيها';
+  @override
+  String get video_online_services_setup_settings => 'فتح الإعدادات';
+  @override
+  String get video_online_services_setup_dismiss => 'عدم العرض مجددًا';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'مفتاح API الخاص بالتطبيق مضمّن. يمكنك اختياريًا تسجيل الدخول إلى حسابك في OpenSubtitles لاستخدام حصة التنزيل الشخصية، أو استخدام مفتاح API الخاص بك.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'اتركه فارغًا لاستخدام مفتاح API المضمّن في التطبيق.';
 }
 
 // Path: <root>
@@ -24933,12 +25053,12 @@ class _StringsDe extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB-Clientname';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Registrierter AniDB-Clientname zur Dateiidentifikation über UDP; ohne registrierten Client ist keine Hash-Erkennung möglich.';
+      'Fushi enthält einen registrierten App-Client. Normalerweise leer lassen; nur bei Bedarf einen eigenen registrierten Client angeben.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB-Clientversion';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Bei AniDB registrierte Clientversion als positive ganze Zahl. Die Dateiidentifikation über UDP erfordert außerdem deine Zugangsdaten.';
+      'Nur eigene Clients benötigen hier ihre registrierte Version. Fushi verwaltet die standardmäßige App-Identität; deine persönlichen AniDB-Zugangsdaten sind weiterhin erforderlich.';
   @override
   String get video_scrape_view_source => 'Quelldetails anzeigen';
   @override
@@ -26847,6 +26967,83 @@ class _StringsDe extends _StringsEn {
   String get video_anidb_username => 'AniDB-Benutzername';
   @override
   String get video_anidb_password => 'AniDB-Passwort';
+  @override
+  String get onboarding_online_services_title => 'Onlinedienste (optional)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Konten, API-Schlüssel und verfügbare Dienste kennenlernen';
+  @override
+  String get onboarding_online_services_body =>
+      'Richte nur die benötigten Dienste ein oder überspringe diesen Schritt. Die Auswahl dieser Anleitung aktiviert keine Dienste und übermittelt keine Zugangsdaten. Ohne Auswahl bleiben vorhandene Einstellungen unverändert.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Einstellungen für Onlinedienste öffnen';
+  @override
+  String get onboarding_online_services_link =>
+      'Offizielle Konto-/API-Seite öffnen';
+  @override
+  String get onboarding_online_services_account =>
+      'Persönliches Konto erforderlich';
+  @override
+  String get onboarding_online_services_ready =>
+      'Keine Registrierung erforderlich';
+  @override
+  String get onboarding_online_services_embedded =>
+      'App-Zugangsdaten enthalten';
+  @override
+  String get onboarding_online_services_key => 'API-Schlüssel erforderlich';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'App-Zugangsdaten fehlen in diesem Build';
+  @override
+  String get onboarding_online_services_server =>
+      'Vorhandenen Server verbinden';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Anime und Folgen anhand des Dateifingerabdrucks identifizieren. Fushi hat einen registrierten App-Client; du benötigst weiterhin ein eigenes AniDB-Konto. Trage es in den Einstellungen ein und aktiviere bei Bedarf die Dateierkennung per Hash.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan liefert Metadaten; AniList unterstützt Entdecken und zugehörige Abfragen. Öffentliche Leseabfragen benötigen weder ein persönliches Konto noch einen API-Schlüssel.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Dieser Build enthält einen TMDB-Schlüssel für Ersatzdaten und fehlende Felder. Trage nur dann einen eigenen Schlüssel ein, wenn du dein eigenes Kontingent nutzen möchtest.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Dieser Build enthält keinen TMDB-Schlüssel. Beantrage einen API-Schlüssel und trage ihn in den Einstellungen ein, wenn du TMDB als Ersatzquelle benötigst. MAL / Jikan bleibt verfügbar.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Untertitel suchen. Registriere dich bei Jimaku oder melde dich an, erstelle auf deiner Kontoseite einen persönlichen API-Schlüssel, trage ihn in den Einstellungen ein und aktiviere diese Untertitelquelle.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Untertitel suchen und herunterladen. Registriere ein Konto, erstelle einen API-Consumer und hole dir einen API-Schlüssel. Die Benutzeranmeldung ist optional und nutzt das Downloadkontingent des Kontos.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Dieser Build enthält die App-Zugangsdaten für den Danmaku-Dienst. Nutzer müssen keinen API-Zugang beantragen; aktiviere bei Bedarf die Online-Danmaku-Zuordnung.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Diesem Build fehlen die App-Zugangsdaten für Danmaku. Die offizielle Online-Zuordnung ist daher nicht verfügbar. Der Entwickler stellt diese Zugangsdaten bereit; du musst keinen persönlichen API-Zugang registrieren.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Diese Dienste haben keine gemeinsame Registrierungsseite. Gib die Adresse deines vorhandenen Servers und das vom Administrator bereitgestellte Konto oder den Schlüssel ein. Ohne Server kannst du diesen Schritt überspringen.';
+  @override
+  String get video_online_services_setup_title =>
+      'Optionale Onlinedienste einrichten';
+  @override
+  String get video_online_services_setup_description =>
+      'Optionale Konten und API-Schlüssel verbessern Videoerkennung und Untertitelsuche. Die Wiedergabe funktioniert auch ohne sie.';
+  @override
+  String get video_online_services_setup_register =>
+      'Dienste kennenlernen und registrieren';
+  @override
+  String get video_online_services_setup_settings => 'Einstellungen öffnen';
+  @override
+  String get video_online_services_setup_dismiss => 'Nie wieder anzeigen';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Der API-Schlüssel der App ist enthalten. Du kannst dich optional bei deinem OpenSubtitles-Konto anmelden, um dein Downloadkontingent zu nutzen, oder einen eigenen API-Schlüssel verwenden.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Leer lassen, um den enthaltenen API-Schlüssel der App zu verwenden.';
 }
 
 // Path: <root>
@@ -35478,13 +35675,13 @@ class _StringsEs extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nombre de cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nombre del cliente registrado de AniDB para identificar archivos por UDP; la identificación por hash no está disponible sin un cliente registrado.';
+      'Fushi incluye un cliente de aplicación registrado. Normalmente puedes dejar este campo vacío; indica un cliente registrado personalizado solo si lo necesitas.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versión de cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versión del cliente registrada en AniDB, expresada como un entero positivo. La identificación de archivos por UDP también requiere las credenciales de tu cuenta.';
+      'Solo los clientes personalizados necesitan su versión registrada aquí. Fushi mantiene la identidad predeterminada de la aplicación; sigue siendo necesario configurar tu cuenta personal de AniDB.';
   @override
   String get video_scrape_view_source => 'Ver detalles de fuente';
   @override
@@ -37403,6 +37600,83 @@ class _StringsEs extends _StringsEn {
   String get video_anidb_username => 'Nombre de usuario de AniDB';
   @override
   String get video_anidb_password => 'Contraseña de AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'Servicios en línea (opcionales)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Conoce las cuentas, claves API y servicios disponibles';
+  @override
+  String get onboarding_online_services_body =>
+      'Configura solo los servicios que necesites o salta este paso. Seleccionar este tutorial no activa servicios ni envía credenciales, y no seleccionarlo no cambia los ajustes existentes.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Abrir ajustes de servicios en línea';
+  @override
+  String get onboarding_online_services_link =>
+      'Abrir la página oficial de cuenta / API';
+  @override
+  String get onboarding_online_services_account =>
+      'Requiere una cuenta personal';
+  @override
+  String get onboarding_online_services_ready => 'No requiere registro';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Credenciales de la aplicación incluidas';
+  @override
+  String get onboarding_online_services_key => 'Requiere una clave API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Esta compilación no incluye credenciales de la aplicación';
+  @override
+  String get onboarding_online_services_server =>
+      'Conectar un servidor existente';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifica anime y episodios mediante la huella del archivo. Fushi tiene un cliente de aplicación registrado; aún necesitas tu propia cuenta de AniDB. Introdúcela en los ajustes y activa la identificación por hash cuando quieras.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan proporciona metadatos; AniList permite descubrir contenido y realizar consultas relacionadas. Las consultas públicas de solo lectura no necesitan cuenta personal ni clave API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Esta compilación incluye una clave de TMDB para datos alternativos y campos ausentes. Añade tu propia clave solo si quieres usar tu propia cuota.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Esta compilación no incluye una clave de TMDB. Solicita una clave API e introdúcela en los ajustes si necesitas TMDB como fuente alternativa de metadatos; MAL / Jikan sigue disponible.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Busca subtítulos. Regístrate o inicia sesión en Jimaku, genera una clave API personal en la página de tu cuenta, introdúcela en los ajustes y activa esta fuente de subtítulos.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Busca y descarga subtítulos. Registra una cuenta, crea un consumidor de API y obtén una clave API. Iniciar sesión es opcional y permite usar la cuota de descargas de la cuenta.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Esta compilación incluye las credenciales de la aplicación del servicio de danmaku. No necesitas solicitar acceso a la API; activa la coincidencia de danmaku en línea cuando quieras.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Esta compilación no incluye credenciales de la aplicación de danmaku, por lo que la coincidencia oficial en línea no está disponible. El desarrollador proporciona estas credenciales; no necesitas registrar una API personal.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Estos servicios no tienen una página de registro común. Introduce la dirección de tu servidor existente y la cuenta o clave proporcionada por su administrador, o salta este paso si no tienes servidor.';
+  @override
+  String get video_online_services_setup_title =>
+      'Configurar servicios en línea opcionales';
+  @override
+  String get video_online_services_setup_description =>
+      'Las cuentas y claves API opcionales mejoran la identificación de videos y la búsqueda de subtítulos. Puedes reproducir sin ellas.';
+  @override
+  String get video_online_services_setup_register =>
+      'Conocer y registrar servicios';
+  @override
+  String get video_online_services_setup_settings => 'Abrir ajustes';
+  @override
+  String get video_online_services_setup_dismiss => 'No volver a mostrar';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'La clave API de la aplicación está incluida. Puedes iniciar sesión opcionalmente en tu cuenta de OpenSubtitles para usar tu cuota de descargas, o utilizar tu propia clave API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Déjalo vacío para usar la clave API incluida en la aplicación.';
 }
 
 // Path: <root>
@@ -46060,13 +46334,13 @@ class _StringsFr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nom de client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nom du client AniDB enregistré pour identifier les fichiers par UDP ; l’identification par hachage est indisponible sans client enregistré.';
+      'Fushi inclut un client d’application enregistré. Laissez normalement ce champ vide ; indiquez un client enregistré personnalisé uniquement si nécessaire.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Version du client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Version du client enregistrée auprès d’AniDB, sous forme d’entier positif. L’identification des fichiers par UDP nécessite également les identifiants de votre compte.';
+      'Seuls les clients personnalisés nécessitent leur propre version enregistrée ici. Fushi gère l’identité par défaut de l’application ; vos identifiants AniDB personnels restent nécessaires.';
   @override
   String get video_scrape_view_source => 'Voir les détails de la source';
   @override
@@ -47993,6 +48267,83 @@ class _StringsFr extends _StringsEn {
   String get video_anidb_username => 'Nom d’utilisateur AniDB';
   @override
   String get video_anidb_password => 'Mot de passe AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'Services en ligne (facultatifs)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Découvrir les comptes, les clés API et les services disponibles';
+  @override
+  String get onboarding_online_services_body =>
+      'Configurez uniquement les services nécessaires, ou ignorez cette étape. Sélectionner ce tutoriel n’active aucun service et n’envoie aucun identifiant ; ne pas le sélectionner ne modifie pas les réglages existants.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Ouvrir les réglages des services en ligne';
+  @override
+  String get onboarding_online_services_link =>
+      'Ouvrir la page officielle du compte / de l’API';
+  @override
+  String get onboarding_online_services_account => 'Compte personnel requis';
+  @override
+  String get onboarding_online_services_ready =>
+      'Aucune inscription nécessaire';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Identifiants de l’application inclus';
+  @override
+  String get onboarding_online_services_key => 'Clé API requise';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Identifiants de l’application absents de cette version';
+  @override
+  String get onboarding_online_services_server =>
+      'Connecter un serveur existant';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifier les anime et les épisodes grâce à l’empreinte du fichier. Fushi dispose d’un client d’application enregistré ; votre propre compte AniDB reste nécessaire. Renseignez-le dans les réglages et activez l’identification par hachage si vous le souhaitez.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan fournit les métadonnées ; AniList permet la découverte et les recherches associées. Les requêtes publiques en lecture seule ne nécessitent ni compte personnel ni clé API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Cette version inclut une clé TMDB pour les métadonnées de repli et les champs manquants. Ajoutez votre propre clé uniquement si vous souhaitez utiliser votre propre quota.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Cette version n’inclut pas de clé TMDB. Demandez une clé API et saisissez-la dans les réglages si vous souhaitez utiliser TMDB comme source de repli ; MAL / Jikan reste disponible.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Rechercher des sous-titres. Inscrivez-vous ou connectez-vous à Jimaku, générez une clé API personnelle sur la page de votre compte, saisissez-la dans les réglages et activez cette source de sous-titres.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Rechercher et télécharger des sous-titres. Créez un compte, puis un consommateur d’API pour obtenir une clé API. La connexion utilisateur est facultative et permet d’utiliser le quota de téléchargement du compte.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Cette version inclut les identifiants d’application du service de danmaku. Les utilisateurs n’ont pas besoin de demander un accès API ; activez la correspondance des danmaku en ligne si vous le souhaitez.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Cette version n’inclut pas les identifiants d’application pour les danmaku ; la correspondance officielle en ligne est donc indisponible. Ces identifiants sont fournis par le développeur ; vous n’avez pas besoin d’enregistrer une API personnelle.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Ces services n’ont pas de page d’inscription commune. Saisissez l’adresse de votre serveur existant et le compte ou la clé fournis par son administrateur, ou ignorez cette étape si vous n’avez pas de serveur.';
+  @override
+  String get video_online_services_setup_title =>
+      'Configurer les services en ligne facultatifs';
+  @override
+  String get video_online_services_setup_description =>
+      'Des comptes et clés API facultatifs améliorent l’identification des vidéos et la recherche de sous-titres. La lecture fonctionne sans eux.';
+  @override
+  String get video_online_services_setup_register =>
+      'Découvrir les services et s’inscrire';
+  @override
+  String get video_online_services_setup_settings => 'Ouvrir les réglages';
+  @override
+  String get video_online_services_setup_dismiss => 'Ne plus afficher';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'La clé API de l’application est incluse. Vous pouvez vous connecter à votre compte OpenSubtitles pour utiliser votre quota de téléchargement, ou utiliser votre propre clé API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Laissez vide pour utiliser la clé API incluse dans l’application.';
 }
 
 // Path: <root>
@@ -56496,12 +56847,12 @@ class _StringsId extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nama klien AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nama klien AniDB terdaftar untuk identifikasi berkas melalui UDP; identifikasi hash tidak tersedia tanpa klien terdaftar.';
+      'Fushi menyertakan klien aplikasi terdaftar. Biasanya biarkan kosong; atur klien terdaftar khusus hanya jika diperlukan.';
   @override
   String get video_source_scrape_anidb_client_version => 'Versi klien AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versi klien berupa bilangan bulat positif yang terdaftar di AniDB. Identifikasi berkas melalui UDP juga memerlukan kredensial akun Anda.';
+      'Hanya klien khusus yang perlu memasukkan versi terdaftarnya di sini. Fushi mengelola identitas aplikasi bawaan; kredensial akun AniDB pribadi Anda tetap diperlukan.';
   @override
   String get video_scrape_view_source => 'Lihat detail sumber';
   @override
@@ -58389,6 +58740,80 @@ class _StringsId extends _StringsEn {
   String get video_anidb_username => 'Nama pengguna AniDB';
   @override
   String get video_anidb_password => 'Kata sandi AniDB';
+  @override
+  String get onboarding_online_services_title => 'Layanan daring (opsional)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Pelajari akun, kunci API, dan layanan yang tersedia';
+  @override
+  String get onboarding_online_services_body =>
+      'Atur hanya layanan yang diperlukan, atau lewati langkah ini. Memilih tutorial ini tidak mengaktifkan layanan atau mengirim kredensial, dan tidak memilihnya tidak mengubah pengaturan yang sudah ada.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Buka pengaturan layanan daring';
+  @override
+  String get onboarding_online_services_link => 'Buka halaman akun / API resmi';
+  @override
+  String get onboarding_online_services_account => 'Memerlukan akun pribadi';
+  @override
+  String get onboarding_online_services_ready => 'Tidak perlu mendaftar';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Kredensial aplikasi disertakan';
+  @override
+  String get onboarding_online_services_key => 'Memerlukan kunci API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Kredensial aplikasi tidak tersedia dalam build ini';
+  @override
+  String get onboarding_online_services_server =>
+      'Hubungkan server yang sudah ada';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifikasi anime dan episode dengan sidik jari berkas. Fushi memiliki klien aplikasi terdaftar; Anda tetap memerlukan akun AniDB sendiri. Masukkan akun di pengaturan dan aktifkan identifikasi hash berkas bila diinginkan.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan menyediakan metadata; AniList mendukung penemuan dan pencarian terkait. Kueri publik hanya-baca tidak memerlukan akun pribadi atau kunci API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Build ini menyertakan kunci TMDB untuk metadata cadangan dan kolom yang belum terisi. Tambahkan kunci sendiri hanya jika ingin menggunakan kuota sendiri.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Build ini tidak menyertakan kunci TMDB. Ajukan kunci API dan masukkan di pengaturan jika memerlukan TMDB sebagai sumber metadata cadangan; MAL / Jikan tetap tersedia.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Cari takarir. Daftar atau masuk ke Jimaku, buat kunci API pribadi di halaman akun, lalu masukkan di pengaturan dan aktifkan sumber takarir ini.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Cari dan unduh takarir. Daftarkan akun, buat konsumen API, dan dapatkan kunci API. Login pengguna bersifat opsional dan menggunakan kuota unduhan akun tersebut.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Build ini menyertakan kredensial aplikasi layanan danmaku. Pengguna tidak perlu mengajukan akses API; aktifkan pencocokan danmaku daring bila diinginkan.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Build ini tidak menyertakan kredensial aplikasi danmaku, sehingga pencocokan daring resmi tidak tersedia. Pengembang menyediakan kredensial ini; Anda tidak perlu mendaftarkan API pribadi.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Layanan ini tidak memiliki halaman pendaftaran bersama. Masukkan alamat server yang sudah Anda miliki beserta akun atau kunci dari administratornya, atau lewati jika tidak memiliki server.';
+  @override
+  String get video_online_services_setup_title =>
+      'Atur layanan daring opsional';
+  @override
+  String get video_online_services_setup_description =>
+      'Akun dan kunci API opsional dapat meningkatkan identifikasi video dan pencarian takarir. Pemutaran dasar tetap berjalan tanpanya.';
+  @override
+  String get video_online_services_setup_register =>
+      'Pelajari dan daftar layanan';
+  @override
+  String get video_online_services_setup_settings => 'Buka pengaturan';
+  @override
+  String get video_online_services_setup_dismiss => 'Jangan tampilkan lagi';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Kunci API aplikasi sudah disertakan. Anda dapat memilih untuk masuk ke akun OpenSubtitles sendiri guna memakai kuota unduhan pribadi, atau menggunakan kunci API sendiri.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Biarkan kosong untuk menggunakan kunci API bawaan aplikasi.';
 }
 
 // Path: <root>
@@ -66960,13 +67385,13 @@ class _StringsIt extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nome client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nome del client AniDB registrato per identificare i file tramite UDP; l’identificazione tramite hash non è disponibile senza un client registrato.';
+      'Fushi include un client dell’app registrato. Normalmente puoi lasciare vuoto questo campo; imposta un client registrato personalizzato solo se necessario.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versione client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versione del client registrata presso AniDB, espressa come intero positivo. L’identificazione dei file tramite UDP richiede anche le credenziali del tuo account.';
+      'Solo i client personalizzati richiedono qui la propria versione registrata. Fushi gestisce l’identità predefinita dell’app; sono comunque necessarie le tue credenziali personali AniDB.';
   @override
   String get video_scrape_view_source => 'Visualizza dettagli fonte';
   @override
@@ -68874,6 +69299,82 @@ class _StringsIt extends _StringsEn {
   String get video_anidb_username => 'Nome utente AniDB';
   @override
   String get video_anidb_password => 'Password AniDB';
+  @override
+  String get onboarding_online_services_title => 'Servizi online (facoltativi)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Scopri account, chiavi API e servizi disponibili';
+  @override
+  String get onboarding_online_services_body =>
+      'Configura solo i servizi necessari oppure salta questo passaggio. Selezionare questo tutorial non attiva servizi né invia credenziali; non selezionarlo non modifica le impostazioni esistenti.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Apri le impostazioni dei servizi online';
+  @override
+  String get onboarding_online_services_link =>
+      'Apri la pagina ufficiale dell’account / API';
+  @override
+  String get onboarding_online_services_account =>
+      'Account personale richiesto';
+  @override
+  String get onboarding_online_services_ready =>
+      'Nessuna registrazione richiesta';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Credenziali dell’app incluse';
+  @override
+  String get onboarding_online_services_key => 'Chiave API richiesta';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Credenziali dell’app assenti in questa build';
+  @override
+  String get onboarding_online_services_server => 'Collega un server esistente';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifica anime ed episodi tramite l’impronta del file. Fushi dispone di un client dell’app registrato; serve comunque un tuo account AniDB. Inseriscilo nelle impostazioni e attiva l’identificazione tramite hash quando vuoi.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan fornisce i metadati; AniList supporta la scoperta e le ricerche correlate. Le interrogazioni pubbliche in sola lettura non richiedono account personali o chiavi API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Questa build include una chiave TMDB per i metadati di riserva e i campi mancanti. Aggiungi una tua chiave solo se vuoi usare la tua quota.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Questa build non include una chiave TMDB. Richiedi una chiave API e inseriscila nelle impostazioni se ti serve TMDB come fonte di riserva; MAL / Jikan rimane disponibile.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Trova sottotitoli. Registrati o accedi a Jimaku, genera una chiave API personale nella pagina del tuo account, inseriscila nelle impostazioni e attiva questa fonte di sottotitoli.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Trova e scarica sottotitoli. Registra un account, crea un consumatore API e ottieni una chiave API. L’accesso utente è facoltativo e permette di usare la quota di download dell’account.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Questa build include le credenziali dell’app per il servizio danmaku. Non occorre richiedere l’accesso API; attiva l’abbinamento dei danmaku online quando vuoi.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Questa build non include le credenziali dell’app per i danmaku, quindi l’abbinamento ufficiale online non è disponibile. Le credenziali sono fornite dallo sviluppatore; non devi registrare un’API personale.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Questi servizi non hanno una pagina di registrazione comune. Inserisci l’indirizzo del tuo server esistente e l’account o la chiave forniti dall’amministratore, oppure salta se non hai un server.';
+  @override
+  String get video_online_services_setup_title =>
+      'Configura servizi online facoltativi';
+  @override
+  String get video_online_services_setup_description =>
+      'Account e chiavi API facoltativi migliorano l’identificazione dei video e la ricerca di sottotitoli. La riproduzione funziona anche senza.';
+  @override
+  String get video_online_services_setup_register =>
+      'Scopri i servizi e registrati';
+  @override
+  String get video_online_services_setup_settings => 'Apri impostazioni';
+  @override
+  String get video_online_services_setup_dismiss => 'Non mostrare più';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'La chiave API dell’app è inclusa. Puoi accedere facoltativamente al tuo account OpenSubtitles per usare la tua quota di download, oppure usare una tua chiave API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Lascia vuoto per usare la chiave API inclusa nell’app.';
 }
 
 // Path: <root>
@@ -76914,12 +77415,12 @@ class _StringsJa extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDBクライアント名';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'UDP によるファイル識別に使う登録済み AniDB クライアント名です。登録済みクライアントが未設定の場合、ハッシュによる識別は利用できません。';
+      'Fushi には登録済みのアプリクライアントが含まれています。通常は空欄のままで構いません。必要な場合のみ、独自の登録済みクライアントを指定してください。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDBクライアントバージョン';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDB に登録した正の整数のクライアントバージョンです。UDP によるファイル識別には、アカウントの認証情報も必要です。';
+      'ここに登録済みバージョンを入力する必要があるのは独自クライアントのみです。既定のアプリ識別情報は Fushi が管理しますが、個人の AniDB ログイン情報は引き続き必要です。';
   @override
   String get video_scrape_view_source => 'ソースの詳細を表示';
   @override
@@ -78749,6 +79250,72 @@ class _StringsJa extends _StringsEn {
   String get video_anidb_username => 'AniDB ユーザー名';
   @override
   String get video_anidb_password => 'AniDB パスワード';
+  @override
+  String get onboarding_online_services_title => 'オンラインサービス（任意）';
+  @override
+  String get onboarding_online_services_hint => 'アカウント、API キー、利用できるサービスを確認';
+  @override
+  String get onboarding_online_services_body =>
+      '必要なサービスだけ設定するか、この手順をスキップできます。このチュートリアルを選択しても、サービスの有効化や認証情報の送信は行われません。選択しなくても既存の設定は変わりません。';
+  @override
+  String get onboarding_online_services_configure => 'オンラインサービスの設定を開く';
+  @override
+  String get onboarding_online_services_link => '公式のアカウント / API ページを開く';
+  @override
+  String get onboarding_online_services_account => '個人アカウントが必要';
+  @override
+  String get onboarding_online_services_ready => '登録不要';
+  @override
+  String get onboarding_online_services_embedded => 'アプリ認証情報を内蔵';
+  @override
+  String get onboarding_online_services_key => 'API キーが必要';
+  @override
+  String get onboarding_online_services_build_missing => 'このビルドにはアプリ認証情報がありません';
+  @override
+  String get onboarding_online_services_server => '既存のサーバーに接続';
+  @override
+  String get onboarding_online_services_anidb =>
+      'ファイルの指紋情報からアニメ作品とエピソードを識別します。Fushi はアプリクライアントを登録済みですが、ご自身の AniDB アカウントは必要です。設定で入力し、必要に応じてファイルのハッシュ識別を有効にしてください。';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan は作品情報を提供し、AniList は発見機能と関連検索に使われます。公開情報の読み取り専用検索には、個人アカウントや API キーは不要です。';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'このビルドには、情報の代替取得や不足項目の補完に使う TMDB キーが含まれています。ご自身の利用枠を使いたい場合のみ、個人のキーを設定してください。';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'このビルドには TMDB キーが含まれていません。TMDB からの代替情報取得が必要な場合は、API キーを申請して設定に入力してください。MAL / Jikan は引き続き利用できます。';
+  @override
+  String get onboarding_online_services_jimaku =>
+      '字幕を検索します。Jimaku に登録またはログインし、アカウントページで個人の API キーを作成して設定に入力し、この字幕ソースを有効にしてください。';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      '字幕を検索してダウンロードします。アカウント登録後、API 利用アプリを作成して API キーを取得してください。ユーザーログインは任意で、ログインするとアカウントのダウンロード枠を利用できます。';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'このビルドには弾幕サービスのアプリ認証情報が含まれています。ユーザーごとの API 申請は不要です。必要に応じてオンライン弾幕マッチングを有効にしてください。';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'このビルドには弾幕サービスのアプリ認証情報がないため、公式のオンラインマッチングは利用できません。この認証情報は開発者が用意するもので、個人で API を登録する必要はありません。';
+  @override
+  String get onboarding_online_services_servers =>
+      'これらのサービスには共通の登録ページがありません。既存のサーバーのアドレスと、管理者から提供されたアカウントまたはキーを入力してください。サーバーがなければスキップできます。';
+  @override
+  String get video_online_services_setup_title => '任意のオンラインサービスを設定';
+  @override
+  String get video_online_services_setup_description =>
+      '任意のアカウントや API キーを設定すると、動画の識別や字幕検索を強化できます。基本的な再生には不要です。';
+  @override
+  String get video_online_services_setup_register => 'サービスの説明と登録';
+  @override
+  String get video_online_services_setup_settings => '設定を開く';
+  @override
+  String get video_online_services_setup_dismiss => '今後表示しない';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'アプリの API キーは内蔵されています。ご自身の OpenSubtitles アカウントにログインして個人のダウンロード枠を使うか、ご自身の API キーを設定することもできます。';
+  @override
+  String get video_opensubtitles_app_key_hint => '空欄の場合、アプリ内蔵の API キーを使用します。';
 }
 
 // Path: <root>
@@ -86803,12 +87370,12 @@ class _StringsKo extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 클라이언트 이름';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'UDP 파일 식별에 사용할 등록된 AniDB 클라이언트 이름입니다. 등록된 클라이언트가 없으면 해시 식별을 사용할 수 없습니다.';
+      'Fushi에는 등록된 앱 클라이언트가 포함되어 있습니다. 보통은 비워 두세요. 필요한 경우에만 별도로 등록한 클라이언트를 입력하세요.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 클라이언트 버전';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDB에 등록된 양의 정수 클라이언트 버전입니다. UDP 파일 식별에는 계정 로그인 정보도 필요합니다.';
+      '별도 클라이언트만 여기에 등록된 버전을 입력해야 합니다. 기본 앱 식별 정보는 Fushi가 관리하지만, 개인 AniDB 로그인 정보는 여전히 필요합니다.';
   @override
   String get video_scrape_view_source => '소스 상세 보기';
   @override
@@ -88634,6 +89201,72 @@ class _StringsKo extends _StringsEn {
   String get video_anidb_username => 'AniDB 사용자 이름';
   @override
   String get video_anidb_password => 'AniDB 비밀번호';
+  @override
+  String get onboarding_online_services_title => '온라인 서비스(선택 사항)';
+  @override
+  String get onboarding_online_services_hint => '계정, API 키 및 이용 가능한 서비스 알아보기';
+  @override
+  String get onboarding_online_services_body =>
+      '필요한 서비스만 설정하거나 이 단계를 건너뛰세요. 이 튜토리얼을 선택해도 서비스가 활성화되거나 로그인 정보가 전송되지 않으며, 선택하지 않아도 기존 설정은 바뀌지 않습니다.';
+  @override
+  String get onboarding_online_services_configure => '온라인 서비스 설정 열기';
+  @override
+  String get onboarding_online_services_link => '공식 계정 / API 페이지 열기';
+  @override
+  String get onboarding_online_services_account => '개인 계정 필요';
+  @override
+  String get onboarding_online_services_ready => '가입 불필요';
+  @override
+  String get onboarding_online_services_embedded => '앱 인증 정보 내장';
+  @override
+  String get onboarding_online_services_key => 'API 키 필요';
+  @override
+  String get onboarding_online_services_build_missing => '이 빌드에는 앱 인증 정보가 없습니다';
+  @override
+  String get onboarding_online_services_server => '기존 서버 연결';
+  @override
+  String get onboarding_online_services_anidb =>
+      '파일 지문으로 애니메이션 작품과 에피소드를 식별합니다. Fushi에 등록된 앱 클라이언트가 있지만, 본인의 AniDB 계정은 여전히 필요합니다. 설정에 계정을 입력하고 필요할 때 파일 해시 식별을 활성화하세요.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan은 작품 정보를 제공하고, AniList는 발견 기능과 관련 검색에 사용됩니다. 공개 읽기 전용 조회에는 개인 계정이나 API 키가 필요하지 않습니다.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      '이 빌드에는 대체 정보 조회와 누락된 항목 보충을 위한 TMDB 키가 내장되어 있습니다. 본인의 사용 할당량을 쓰고 싶은 경우에만 개인 키를 추가하세요.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      '이 빌드에는 TMDB 키가 없습니다. TMDB 대체 정보가 필요하다면 API 키를 신청해 설정에 입력하세요. MAL / Jikan은 계속 사용할 수 있습니다.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      '자막을 찾습니다. Jimaku에 가입하거나 로그인한 후 계정 페이지에서 개인 API 키를 생성하고, 설정에 입력한 뒤 이 자막 소스를 활성화하세요.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      '자막을 찾고 다운로드합니다. 계정을 등록하고 API 사용 앱을 만들어 API 키를 발급받으세요. 사용자 로그인은 선택 사항이며, 로그인하면 해당 계정의 다운로드 할당량을 사용합니다.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      '이 빌드에는 탄막 서비스의 앱 인증 정보가 내장되어 있습니다. 사용자가 따로 API를 신청할 필요 없이 원하는 때 온라인 탄막 매칭을 활성화하면 됩니다.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      '이 빌드에는 탄막 서비스의 앱 인증 정보가 없어 공식 온라인 매칭을 사용할 수 없습니다. 이 정보는 개발자가 제공하므로 개인 API를 등록할 필요가 없습니다.';
+  @override
+  String get onboarding_online_services_servers =>
+      '이 서비스들에는 공통 가입 페이지가 없습니다. 기존 서버 주소와 관리자가 제공한 계정 또는 키를 입력하세요. 서버가 없으면 건너뛰어도 됩니다.';
+  @override
+  String get video_online_services_setup_title => '선택적 온라인 서비스 설정';
+  @override
+  String get video_online_services_setup_description =>
+      '선택적으로 계정이나 API 키를 설정하면 영상 식별과 자막 검색을 개선할 수 있습니다. 기본 재생에는 필요하지 않습니다.';
+  @override
+  String get video_online_services_setup_register => '서비스 알아보기 및 가입';
+  @override
+  String get video_online_services_setup_settings => '설정 열기';
+  @override
+  String get video_online_services_setup_dismiss => '다시 표시하지 않기';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      '앱 API 키가 내장되어 있습니다. 원하는 경우 본인의 OpenSubtitles 계정에 로그인해 개인 다운로드 할당량을 사용하거나, 본인의 API 키를 입력할 수 있습니다.';
+  @override
+  String get video_opensubtitles_app_key_hint => '비워 두면 앱에 내장된 API 키를 사용합니다.';
 }
 
 // Path: <root>
@@ -97167,12 +97800,12 @@ class _StringsNl extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB-clientnaam';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Geregistreerde AniDB-clientnaam voor bestandsidentificatie via UDP; hashidentificatie is niet beschikbaar zonder geregistreerde client.';
+      'Fushi bevat een geregistreerde app-client. Laat dit normaal gesproken leeg; stel alleen indien nodig een eigen geregistreerde client in.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB-clientversie';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Bij AniDB geregistreerde clientversie als positief geheel getal. Bestandsidentificatie via UDP vereist ook de inloggegevens van je account.';
+      'Alleen eigen clients hebben hier hun geregistreerde versie nodig. Fushi beheert de standaardidentiteit van de app; je persoonlijke AniDB-inloggegevens blijven vereist.';
   @override
   String get video_scrape_view_source => 'Brondetails bekijken';
   @override
@@ -99077,6 +99710,82 @@ class _StringsNl extends _StringsEn {
   String get video_anidb_username => 'AniDB-gebruikersnaam';
   @override
   String get video_anidb_password => 'AniDB-wachtwoord';
+  @override
+  String get onboarding_online_services_title => 'Onlinediensten (optioneel)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Meer over accounts, API-sleutels en beschikbare diensten';
+  @override
+  String get onboarding_online_services_body =>
+      'Stel alleen de benodigde diensten in of sla deze stap over. Het selecteren van deze uitleg activeert geen diensten en verstuurt geen inloggegevens. Niet selecteren verandert niets aan bestaande instellingen.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Instellingen voor onlinediensten openen';
+  @override
+  String get onboarding_online_services_link =>
+      'Officiële account- / API-pagina openen';
+  @override
+  String get onboarding_online_services_account =>
+      'Persoonlijk account vereist';
+  @override
+  String get onboarding_online_services_ready => 'Geen registratie nodig';
+  @override
+  String get onboarding_online_services_embedded =>
+      'App-inloggegevens inbegrepen';
+  @override
+  String get onboarding_online_services_key => 'API-sleutel vereist';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'App-inloggegevens ontbreken in deze build';
+  @override
+  String get onboarding_online_services_server =>
+      'Een bestaande server verbinden';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identificeer anime en afleveringen via de bestandsvingerafdruk. Fushi heeft een geregistreerde app-client; je hebt nog wel een eigen AniDB-account nodig. Vul het in bij de instellingen en schakel desgewenst bestandsidentificatie via hash in.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan levert metadata; AniList ondersteunt ontdekken en gerelateerde zoekopdrachten. Openbare alleen-lezenzoekopdrachten vereisen geen persoonlijk account of API-sleutel.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Deze build bevat een TMDB-sleutel voor vervangende metadata en ontbrekende velden. Voeg alleen een eigen sleutel toe als je je eigen quotum wilt gebruiken.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Deze build bevat geen TMDB-sleutel. Vraag een API-sleutel aan en vul deze in bij de instellingen als je TMDB als reservebron nodig hebt; MAL / Jikan blijft beschikbaar.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Zoek ondertitels. Registreer je of meld je aan bij Jimaku, maak op je accountpagina een persoonlijke API-sleutel aan, vul deze in bij de instellingen en schakel deze ondertitelbron in.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Zoek en download ondertitels. Registreer een account, maak een API-consumer aan en verkrijg een API-sleutel. Aanmelden als gebruiker is optioneel en gebruikt het downloadquotum van het account.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Deze build bevat de app-inloggegevens voor de danmaku-dienst. Gebruikers hoeven geen API-toegang aan te vragen; schakel desgewenst online danmaku-matching in.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Deze build bevat geen app-inloggegevens voor danmaku, dus officiële online matching is niet beschikbaar. De ontwikkelaar levert deze gegevens; je hoeft geen persoonlijke API te registreren.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Deze diensten hebben geen gezamenlijke registratiepagina. Vul het adres van je bestaande server in, samen met het account of de sleutel van de beheerder. Sla dit over als je geen server hebt.';
+  @override
+  String get video_online_services_setup_title =>
+      'Optionele onlinediensten instellen';
+  @override
+  String get video_online_services_setup_description =>
+      'Optionele accounts en API-sleutels verbeteren videoherkenning en ondertitelzoeken. Afspelen werkt ook zonder.';
+  @override
+  String get video_online_services_setup_register =>
+      'Diensten verkennen en registreren';
+  @override
+  String get video_online_services_setup_settings => 'Instellingen openen';
+  @override
+  String get video_online_services_setup_dismiss => 'Nooit meer tonen';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'De API-sleutel van de app is inbegrepen. Je kunt je desgewenst aanmelden bij je OpenSubtitles-account voor je eigen downloadquotum, of je eigen API-sleutel gebruiken.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Laat leeg om de meegeleverde API-sleutel van de app te gebruiken.';
 }
 
 // Path: <root>
@@ -107661,13 +108370,13 @@ class _StringsPtBr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Nome do cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Nome do cliente AniDB registrado para identificar arquivos via UDP; a identificação por hash não está disponível sem um cliente registrado.';
+      'O Fushi inclui um cliente de aplicativo registrado. Normalmente, deixe este campo vazio; configure um cliente registrado personalizado apenas se necessário.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Versão do cliente AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Versão do cliente registrada no AniDB, expressa como um inteiro positivo. A identificação de arquivos via UDP também exige as credenciais da sua conta.';
+      'Apenas clientes personalizados precisam de sua própria versão registrada aqui. O Fushi mantém a identidade padrão do aplicativo; suas credenciais pessoais do AniDB continuam sendo necessárias.';
   @override
   String get video_scrape_view_source => 'Ver detalhes da fonte';
   @override
@@ -109573,6 +110282,81 @@ class _StringsPtBr extends _StringsEn {
   String get video_anidb_username => 'Nome de usuário do AniDB';
   @override
   String get video_anidb_password => 'Senha do AniDB';
+  @override
+  String get onboarding_online_services_title => 'Serviços on-line (opcionais)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Conheça as contas, chaves API e serviços disponíveis';
+  @override
+  String get onboarding_online_services_body =>
+      'Configure apenas os serviços necessários ou pule esta etapa. Selecionar este tutorial não ativa serviços nem envia credenciais, e não selecioná-lo não altera as configurações existentes.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Abrir configurações dos serviços on-line';
+  @override
+  String get onboarding_online_services_link =>
+      'Abrir página oficial de conta / API';
+  @override
+  String get onboarding_online_services_account => 'Requer conta pessoal';
+  @override
+  String get onboarding_online_services_ready => 'Não requer cadastro';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Credenciais do aplicativo incluídas';
+  @override
+  String get onboarding_online_services_key => 'Requer chave API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Esta compilação não inclui credenciais do aplicativo';
+  @override
+  String get onboarding_online_services_server =>
+      'Conectar um servidor existente';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Identifique animes e episódios pela impressão digital do arquivo. O Fushi tem um cliente de aplicativo registrado; você ainda precisa de sua própria conta AniDB. Insira-a nas configurações e ative a identificação por hash quando desejar.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan fornece metadados; AniList oferece descoberta e consultas relacionadas. Consultas públicas somente de leitura não exigem conta pessoal nem chave API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Esta compilação inclui uma chave TMDB para metadados alternativos e campos ausentes. Adicione sua própria chave apenas se quiser usar sua própria cota.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Esta compilação não inclui uma chave TMDB. Solicite uma chave API e insira-a nas configurações se precisar do TMDB como fonte alternativa de metadados; MAL / Jikan continua disponível.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Encontre legendas. Cadastre-se ou entre no Jimaku, gere uma chave API pessoal na página da sua conta, insira-a nas configurações e ative esta fonte de legendas.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Encontre e baixe legendas. Cadastre uma conta, crie um consumidor de API e obtenha uma chave API. O login do usuário é opcional e permite usar a cota de downloads da conta.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Esta compilação inclui as credenciais do aplicativo para o serviço de danmaku. Os usuários não precisam solicitar acesso à API; basta ativar a correspondência de danmaku on-line quando desejarem.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Esta compilação não inclui credenciais do aplicativo para danmaku, então a correspondência oficial on-line está indisponível. O desenvolvedor fornece essas credenciais; você não precisa registrar uma API pessoal.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Esses serviços não têm uma página de cadastro comum. Insira o endereço do seu servidor existente e a conta ou chave fornecida pelo administrador, ou pule se não tiver um servidor.';
+  @override
+  String get video_online_services_setup_title =>
+      'Configurar serviços on-line opcionais';
+  @override
+  String get video_online_services_setup_description =>
+      'Contas e chaves API opcionais melhoram a identificação de vídeos e a busca de legendas. A reprodução básica funciona sem elas.';
+  @override
+  String get video_online_services_setup_register =>
+      'Conhecer os serviços e se cadastrar';
+  @override
+  String get video_online_services_setup_settings => 'Abrir configurações';
+  @override
+  String get video_online_services_setup_dismiss => 'Não mostrar novamente';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'A chave API do aplicativo está incluída. Você pode entrar opcionalmente em sua conta OpenSubtitles para usar sua cota de downloads ou usar sua própria chave API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Deixe vazio para usar a chave API incluída no aplicativo.';
 }
 
 // Path: <root>
@@ -118131,12 +118915,12 @@ class _StringsRu extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Имя клиента AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Имя зарегистрированного клиента AniDB для определения файлов по UDP; без зарегистрированного клиента определение по хешу недоступно.';
+      'Fushi включает зарегистрированный клиент приложения. Обычно оставляйте это поле пустым; указывайте собственный зарегистрированный клиент только при необходимости.';
   @override
   String get video_source_scrape_anidb_client_version => 'Версия клиента AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Версия клиента, зарегистрированная в AniDB, в виде положительного целого числа. Для определения файлов по UDP также нужны данные для входа в вашу учётную запись.';
+      'Только для собственного клиента нужно указать здесь его зарегистрированную версию. Fushi поддерживает стандартный идентификатор приложения; личные данные для входа в AniDB всё равно необходимы.';
   @override
   String get video_scrape_view_source => 'Подробности источника';
   @override
@@ -120046,6 +120830,82 @@ class _StringsRu extends _StringsEn {
   String get video_anidb_username => 'Имя пользователя AniDB';
   @override
   String get video_anidb_password => 'Пароль AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'Онлайн-сервисы (необязательно)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Узнайте об аккаунтах, ключах API и доступных сервисах';
+  @override
+  String get onboarding_online_services_body =>
+      'Настройте только нужные сервисы или пропустите этот шаг. Выбор этого руководства не включает сервисы и не отправляет данные для входа. Если не выбирать его, существующие настройки не изменятся.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Открыть настройки онлайн-сервисов';
+  @override
+  String get onboarding_online_services_link =>
+      'Открыть официальную страницу аккаунта / API';
+  @override
+  String get onboarding_online_services_account => 'Нужен личный аккаунт';
+  @override
+  String get onboarding_online_services_ready => 'Регистрация не нужна';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Учётные данные приложения включены';
+  @override
+  String get onboarding_online_services_key => 'Нужен ключ API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'В этой сборке нет учётных данных приложения';
+  @override
+  String get onboarding_online_services_server =>
+      'Подключить существующий сервер';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Определение аниме и эпизодов по отпечатку файла. У Fushi есть зарегистрированный клиент приложения, но вам по-прежнему нужен собственный аккаунт AniDB. Укажите его в настройках и при желании включите определение файлов по хешу.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan предоставляет метаданные; AniList используется для поиска нового контента и связанных запросов. Публичные запросы только для чтения не требуют личного аккаунта или ключа API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Эта сборка включает ключ TMDB для резервных метаданных и заполнения недостающих полей. Добавляйте свой ключ только если хотите использовать собственную квоту.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'В этой сборке нет ключа TMDB. Получите ключ API и укажите его в настройках, если вам нужны резервные метаданные TMDB. MAL / Jikan остаётся доступным.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Поиск субтитров. Зарегистрируйтесь или войдите в Jimaku, создайте личный ключ API на странице аккаунта, укажите его в настройках и включите этот источник субтитров.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Поиск и скачивание субтитров. Зарегистрируйте аккаунт, создайте приложение для использования API и получите ключ API. Вход пользователя необязателен и позволяет использовать квоту скачиваний аккаунта.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Эта сборка включает учётные данные приложения для сервиса данмаку. Пользователям не нужно подавать заявку на API; при желании включите онлайн-сопоставление данмаку.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'В этой сборке нет учётных данных приложения для данмаку, поэтому официальное онлайн-сопоставление недоступно. Эти данные предоставляет разработчик; вам не нужно регистрировать личный API.';
+  @override
+  String get onboarding_online_services_servers =>
+      'У этих сервисов нет общей страницы регистрации. Укажите адрес своего существующего сервера и аккаунт или ключ, предоставленный администратором. Если сервера нет, пропустите этот шаг.';
+  @override
+  String get video_online_services_setup_title =>
+      'Настроить необязательные онлайн-сервисы';
+  @override
+  String get video_online_services_setup_description =>
+      'Необязательные аккаунты и ключи API улучшают распознавание видео и поиск субтитров. Воспроизведение работает и без них.';
+  @override
+  String get video_online_services_setup_register =>
+      'Узнать о сервисах и зарегистрироваться';
+  @override
+  String get video_online_services_setup_settings => 'Открыть настройки';
+  @override
+  String get video_online_services_setup_dismiss => 'Больше не показывать';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Ключ API приложения уже включён. При желании можно войти в свой аккаунт OpenSubtitles для использования личной квоты скачиваний или указать собственный ключ API.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Оставьте пустым, чтобы использовать встроенный ключ API приложения.';
 }
 
 // Path: <root>
@@ -128435,13 +129295,13 @@ class _StringsTh extends _StringsEn {
   String get video_source_scrape_anidb_client => 'ชื่อไคลเอนต์ AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'ชื่อไคลเอนต์ AniDB ที่ลงทะเบียนสำหรับระบุไฟล์ผ่าน UDP หากไม่มีไคลเอนต์ที่ลงทะเบียน จะไม่สามารถระบุไฟล์ด้วยแฮชได้';
+      'Fushi มีไคลเอนต์แอปที่ลงทะเบียนไว้แล้ว โดยปกติให้เว้นว่างไว้ ระบุไคลเอนต์ที่ลงทะเบียนเองเฉพาะเมื่อจำเป็น';
   @override
   String get video_source_scrape_anidb_client_version =>
       'เวอร์ชันไคลเอนต์ AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'เวอร์ชันไคลเอนต์ที่ลงทะเบียนกับ AniDB ต้องเป็นจำนวนเต็มบวก การระบุไฟล์ผ่าน UDP ต้องใช้ข้อมูลเข้าสู่ระบบบัญชีของคุณด้วย';
+      'เฉพาะไคลเอนต์ที่กำหนดเองเท่านั้นที่ต้องระบุเวอร์ชันที่ลงทะเบียนไว้ที่นี่ Fushi ดูแลข้อมูลประจำตัวแอปเริ่มต้นให้ แต่ยังต้องใช้ข้อมูลเข้าสู่ระบบ AniDB ส่วนตัวของคุณ';
   @override
   String get video_scrape_view_source => 'ดูรายละเอียดแหล่ง';
   @override
@@ -130319,6 +131179,80 @@ class _StringsTh extends _StringsEn {
   String get video_anidb_username => 'ชื่อผู้ใช้ AniDB';
   @override
   String get video_anidb_password => 'รหัสผ่าน AniDB';
+  @override
+  String get onboarding_online_services_title => 'บริการออนไลน์ (ไม่บังคับ)';
+  @override
+  String get onboarding_online_services_hint =>
+      'ดูข้อมูลบัญชี คีย์ API และบริการที่มีให้ใช้';
+  @override
+  String get onboarding_online_services_body =>
+      'ตั้งค่าเฉพาะบริการที่ต้องการ หรือข้ามขั้นตอนนี้ การเลือกบทแนะนำนี้จะไม่เปิดใช้บริการหรือส่งข้อมูลเข้าสู่ระบบ และการไม่เลือกจะไม่เปลี่ยนการตั้งค่าเดิม';
+  @override
+  String get onboarding_online_services_configure =>
+      'เปิดการตั้งค่าบริการออนไลน์';
+  @override
+  String get onboarding_online_services_link =>
+      'เปิดหน้าบัญชี / API อย่างเป็นทางการ';
+  @override
+  String get onboarding_online_services_account => 'ต้องมีบัญชีส่วนตัว';
+  @override
+  String get onboarding_online_services_ready => 'ไม่ต้องลงทะเบียน';
+  @override
+  String get onboarding_online_services_embedded => 'มีข้อมูลรับรองของแอปในตัว';
+  @override
+  String get onboarding_online_services_key => 'ต้องมีคีย์ API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'บิลด์นี้ไม่มีข้อมูลรับรองของแอป';
+  @override
+  String get onboarding_online_services_server =>
+      'เชื่อมต่อเซิร์ฟเวอร์ที่มีอยู่';
+  @override
+  String get onboarding_online_services_anidb =>
+      'ระบุอนิเมะและตอนด้วยลายนิ้วมือไฟล์ Fushi มีไคลเอนต์แอปที่ลงทะเบียนไว้แล้ว แต่คุณยังต้องมีบัญชี AniDB ของตนเอง กรอกบัญชีในการตั้งค่าและเปิดใช้การระบุไฟล์ด้วยแฮชเมื่อต้องการ';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan ให้ข้อมูลเมตา ส่วน AniList รองรับการค้นพบและการค้นหาที่เกี่ยวข้อง การค้นหาข้อมูลสาธารณะแบบอ่านอย่างเดียวไม่ต้องใช้บัญชีส่วนตัวหรือคีย์ API';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'บิลด์นี้มีคีย์ TMDB ในตัวสำหรับข้อมูลเมตาสำรองและข้อมูลที่ขาดหาย เพิ่มคีย์ของคุณเองเฉพาะเมื่อต้องการใช้โควตาของตนเอง';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'บิลด์นี้ไม่มีคีย์ TMDB หากต้องการใช้ TMDB เป็นแหล่งข้อมูลเมตาสำรอง ให้ขอคีย์ API แล้วกรอกในการตั้งค่า โดย MAL / Jikan ยังใช้ได้ตามปกติ';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'ค้นหาคำบรรยาย ลงทะเบียนหรือเข้าสู่ระบบ Jimaku สร้างคีย์ API ส่วนตัวในหน้าบัญชี แล้วกรอกในการตั้งค่าและเปิดใช้แหล่งคำบรรยายนี้';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'ค้นหาและดาวน์โหลดคำบรรยาย ลงทะเบียนบัญชี สร้างแอปสำหรับใช้ API และรับคีย์ API การเข้าสู่ระบบผู้ใช้เป็นทางเลือก โดยจะใช้โควตาดาวน์โหลดของบัญชีนั้น';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'บิลด์นี้มีข้อมูลรับรองแอปสำหรับบริการดันมาคุในตัว ผู้ใช้ไม่ต้องขอ API เพียงเปิดใช้การจับคู่ดันมาคุออนไลน์เมื่อต้องการ';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'บิลด์นี้ไม่มีข้อมูลรับรองแอปสำหรับดันมาคุ จึงไม่สามารถจับคู่ออนไลน์ผ่านบริการอย่างเป็นทางการได้ ผู้พัฒนาจะเป็นผู้จัดหาข้อมูลนี้ คุณไม่ต้องลงทะเบียน API ส่วนตัว';
+  @override
+  String get onboarding_online_services_servers =>
+      'บริการเหล่านี้ไม่มีหน้าลงทะเบียนร่วมกัน กรอกที่อยู่เซิร์ฟเวอร์ที่คุณมีอยู่ พร้อมบัญชีหรือคีย์จากผู้ดูแลเซิร์ฟเวอร์ หรือข้ามได้หากไม่มีเซิร์ฟเวอร์';
+  @override
+  String get video_online_services_setup_title =>
+      'ตั้งค่าบริการออนไลน์ที่ไม่บังคับ';
+  @override
+  String get video_online_services_setup_description =>
+      'บัญชีและคีย์ API เสริมช่วยปรับปรุงการระบุวิดีโอและค้นหาคำบรรยาย การเล่นพื้นฐานใช้งานได้โดยไม่ต้องตั้งค่า';
+  @override
+  String get video_online_services_setup_register =>
+      'เรียนรู้และลงทะเบียนบริการ';
+  @override
+  String get video_online_services_setup_settings => 'เปิดการตั้งค่า';
+  @override
+  String get video_online_services_setup_dismiss => 'ไม่ต้องแสดงอีก';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'แอปมีคีย์ API ในตัว คุณสามารถเลือกเข้าสู่ระบบบัญชี OpenSubtitles ของตนเองเพื่อใช้โควตาดาวน์โหลดส่วนตัว หรือใช้คีย์ API ของคุณเองได้';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'เว้นว่างไว้เพื่อใช้คีย์ API ที่มีอยู่ในแอป';
 }
 
 // Path: <root>
@@ -138809,12 +139743,12 @@ class _StringsTr extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB istemci adı';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'UDP üzerinden dosya tanımlama için kayıtlı AniDB istemci adı; kayıtlı bir istemci olmadan karma ile tanımlama kullanılamaz.';
+      'Fushi kayıtlı bir uygulama istemcisi içerir. Normalde boş bırakın; yalnızca gerekirse özel bir kayıtlı istemci belirtin.';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB istemci sürümü';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'AniDB’ye kaydedilmiş, pozitif tam sayı olan istemci sürümü. UDP üzerinden dosya tanımlama için hesap giriş bilgileriniz de gereklidir.';
+      'Burada yalnızca özel istemcilerin kendi kayıtlı sürümü gerekir. Fushi varsayılan uygulama kimliğini yönetir; kişisel AniDB giriş bilgileriniz yine de gereklidir.';
   @override
   String get video_scrape_view_source => 'Kaynak ayrıntılarını görüntüle';
   @override
@@ -140709,6 +141643,81 @@ class _StringsTr extends _StringsEn {
   String get video_anidb_username => 'AniDB kullanıcı adı';
   @override
   String get video_anidb_password => 'AniDB parolası';
+  @override
+  String get onboarding_online_services_title =>
+      'Çevrimiçi hizmetler (isteğe bağlı)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Hesapları, API anahtarlarını ve kullanılabilir hizmetleri keşfedin';
+  @override
+  String get onboarding_online_services_body =>
+      'Yalnızca ihtiyaç duyduğunuz hizmetleri kurun veya bu adımı atlayın. Bu öğreticiyi seçmek hizmetleri etkinleştirmez ya da kimlik bilgilerini göndermez; seçmemek de mevcut ayarları değiştirmez.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Çevrimiçi hizmet ayarlarını aç';
+  @override
+  String get onboarding_online_services_link =>
+      'Resmî hesap / API sayfasını aç';
+  @override
+  String get onboarding_online_services_account => 'Kişisel hesap gerekli';
+  @override
+  String get onboarding_online_services_ready => 'Kayıt gerekmiyor';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Uygulama kimlik bilgileri dahil';
+  @override
+  String get onboarding_online_services_key => 'API anahtarı gerekli';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Bu derlemede uygulama kimlik bilgileri yok';
+  @override
+  String get onboarding_online_services_server => 'Mevcut bir sunucuya bağlan';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Anime ve bölümleri dosya parmak iziyle tanımlayın. Fushi kayıtlı bir uygulama istemcisine sahiptir; yine de kendi AniDB hesabınız gerekir. Ayarlara girin ve istediğinizde dosya karmasıyla tanımlamayı etkinleştirin.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan meta veri sağlar; AniList keşfi ve ilgili sorguları destekler. Herkese açık salt okunur sorgular için kişisel hesap veya API anahtarı gerekmez.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Bu derleme, yedek meta veriler ve eksik alanlar için bir TMDB anahtarı içerir. Yalnızca kendi kotanızı kullanmak istiyorsanız kendi anahtarınızı ekleyin.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Bu derlemede TMDB anahtarı yok. TMDB yedek meta verilerine ihtiyacınız varsa bir API anahtarı edinin ve ayarlara girin; MAL / Jikan kullanılabilir olmaya devam eder.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Altyazı bulun. Jimaku’ya kaydolun veya giriş yapın, hesap sayfanızda kişisel bir API anahtarı oluşturun, ardından ayarlara girip bu altyazı kaynağını etkinleştirin.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Altyazı bulun ve indirin. Bir hesap açın, API tüketicisi oluşturun ve API anahtarı alın. Kullanıcı girişi isteğe bağlıdır ve hesabın indirme kotasını kullanır.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Bu derleme danmaku hizmetinin uygulama kimlik bilgilerini içerir. Kullanıcıların API başvurusu yapması gerekmez; istediğinizde çevrimiçi danmaku eşleştirmesini etkinleştirin.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Bu derlemede danmaku uygulama kimlik bilgileri olmadığından resmî çevrimiçi eşleştirme kullanılamaz. Bu bilgileri geliştirici sağlar; kişisel API kaydı yapmanız gerekmez.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Bu hizmetlerin ortak bir kayıt sayfası yoktur. Mevcut sunucunuzun adresini ve yöneticisinin sağladığı hesabı veya anahtarı girin; sunucunuz yoksa atlayın.';
+  @override
+  String get video_online_services_setup_title =>
+      'İsteğe bağlı çevrimiçi hizmetleri yapılandır';
+  @override
+  String get video_online_services_setup_description =>
+      'İsteğe bağlı hesaplar ve API anahtarları video tanımlamayı ve altyazı aramayı iyileştirebilir. Temel oynatma bunlar olmadan da çalışır.';
+  @override
+  String get video_online_services_setup_register =>
+      'Hizmetleri öğren ve kaydol';
+  @override
+  String get video_online_services_setup_settings => 'Ayarları aç';
+  @override
+  String get video_online_services_setup_dismiss => 'Bir daha gösterme';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Uygulamanın API anahtarı dahildir. İsterseniz kişisel indirme kotanız için OpenSubtitles hesabınıza giriş yapabilir veya kendi API anahtarınızı kullanabilirsiniz.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Uygulamayla gelen API anahtarını kullanmak için boş bırakın.';
 }
 
 // Path: <root>
@@ -149176,13 +150185,13 @@ class _StringsVi extends _StringsEn {
   String get video_source_scrape_anidb_client => 'Tên client AniDB';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      'Tên ứng dụng khách AniDB đã đăng ký để nhận diện tệp qua UDP; không thể nhận diện bằng mã băm nếu chưa có ứng dụng khách đã đăng ký.';
+      'Fushi đã tích hợp ứng dụng khách đã đăng ký. Thông thường hãy để trống; chỉ nhập ứng dụng khách tùy chỉnh đã đăng ký khi cần.';
   @override
   String get video_source_scrape_anidb_client_version =>
       'Phiên bản client AniDB';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      'Phiên bản ứng dụng khách đã đăng ký với AniDB, là số nguyên dương. Nhận diện tệp qua UDP cũng cần thông tin đăng nhập tài khoản của bạn.';
+      'Chỉ ứng dụng khách tùy chỉnh mới cần nhập phiên bản đã đăng ký tại đây. Fushi quản lý danh tính ứng dụng mặc định; bạn vẫn cần thông tin đăng nhập AniDB cá nhân.';
   @override
   String get video_scrape_view_source => 'Xem chi tiết nguồn';
   @override
@@ -151070,6 +152079,81 @@ class _StringsVi extends _StringsEn {
   String get video_anidb_username => 'Tên người dùng AniDB';
   @override
   String get video_anidb_password => 'Mật khẩu AniDB';
+  @override
+  String get onboarding_online_services_title =>
+      'Dịch vụ trực tuyến (tùy chọn)';
+  @override
+  String get onboarding_online_services_hint =>
+      'Tìm hiểu tài khoản, khóa API và các dịch vụ hiện có';
+  @override
+  String get onboarding_online_services_body =>
+      'Chỉ thiết lập các dịch vụ bạn cần hoặc bỏ qua bước này. Chọn hướng dẫn này không bật dịch vụ hay gửi thông tin đăng nhập; không chọn cũng không thay đổi cài đặt hiện có.';
+  @override
+  String get onboarding_online_services_configure =>
+      'Mở cài đặt dịch vụ trực tuyến';
+  @override
+  String get onboarding_online_services_link =>
+      'Mở trang tài khoản / API chính thức';
+  @override
+  String get onboarding_online_services_account => 'Cần tài khoản cá nhân';
+  @override
+  String get onboarding_online_services_ready => 'Không cần đăng ký';
+  @override
+  String get onboarding_online_services_embedded =>
+      'Đã tích hợp thông tin xác thực ứng dụng';
+  @override
+  String get onboarding_online_services_key => 'Cần khóa API';
+  @override
+  String get onboarding_online_services_build_missing =>
+      'Bản dựng này thiếu thông tin xác thực ứng dụng';
+  @override
+  String get onboarding_online_services_server => 'Kết nối máy chủ hiện có';
+  @override
+  String get onboarding_online_services_anidb =>
+      'Nhận diện anime và tập phim bằng dấu vân tay tệp. Fushi có ứng dụng khách đã đăng ký; bạn vẫn cần tài khoản AniDB của riêng mình. Nhập tài khoản trong cài đặt và bật nhận diện tệp bằng mã băm khi muốn.';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan cung cấp siêu dữ liệu; AniList hỗ trợ khám phá và các truy vấn liên quan. Truy vấn công khai chỉ đọc không cần tài khoản cá nhân hoặc khóa API.';
+  @override
+  String get onboarding_online_services_tmdb =>
+      'Bản dựng này đã tích hợp khóa TMDB cho dữ liệu dự phòng và các trường còn thiếu. Chỉ thêm khóa riêng nếu bạn muốn dùng hạn mức của mình.';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      'Bản dựng này chưa có khóa TMDB. Hãy xin khóa API rồi nhập trong cài đặt nếu cần TMDB làm nguồn siêu dữ liệu dự phòng; MAL / Jikan vẫn dùng được.';
+  @override
+  String get onboarding_online_services_jimaku =>
+      'Tìm phụ đề. Đăng ký hoặc đăng nhập Jimaku, tạo khóa API cá nhân trên trang tài khoản, nhập khóa vào cài đặt rồi bật nguồn phụ đề này.';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      'Tìm và tải phụ đề. Đăng ký tài khoản, tạo ứng dụng sử dụng API để lấy khóa API. Đăng nhập người dùng là tùy chọn và sử dụng hạn mức tải xuống của tài khoản.';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      'Bản dựng này đã tích hợp thông tin xác thực ứng dụng cho dịch vụ bình luận chạy trên màn hình. Người dùng không cần xin API; chỉ cần bật khớp bình luận trực tuyến khi muốn.';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      'Bản dựng này chưa có thông tin xác thực ứng dụng cho dịch vụ bình luận chạy trên màn hình, nên chưa dùng được tính năng khớp trực tuyến chính thức. Nhà phát triển cung cấp thông tin này; bạn không cần đăng ký API cá nhân.';
+  @override
+  String get onboarding_online_services_servers =>
+      'Các dịch vụ này không có trang đăng ký chung. Nhập địa chỉ máy chủ hiện có và tài khoản hoặc khóa do quản trị viên cung cấp, hoặc bỏ qua nếu bạn chưa có máy chủ.';
+  @override
+  String get video_online_services_setup_title =>
+      'Thiết lập dịch vụ trực tuyến tùy chọn';
+  @override
+  String get video_online_services_setup_description =>
+      'Tài khoản và khóa API tùy chọn giúp cải thiện nhận diện video và tìm phụ đề. Phát video cơ bản không cần chúng.';
+  @override
+  String get video_online_services_setup_register =>
+      'Tìm hiểu và đăng ký dịch vụ';
+  @override
+  String get video_online_services_setup_settings => 'Mở cài đặt';
+  @override
+  String get video_online_services_setup_dismiss => 'Không hiển thị lại';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      'Ứng dụng đã tích hợp khóa API. Bạn có thể đăng nhập tài khoản OpenSubtitles của mình để dùng hạn mức tải xuống cá nhân hoặc sử dụng khóa API riêng.';
+  @override
+  String get video_opensubtitles_app_key_hint =>
+      'Để trống để dùng khóa API tích hợp trong ứng dụng.';
 }
 
 // Path: <root>
@@ -158861,12 +159945,12 @@ class _StringsZhCn extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 客户端名称';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '用于 UDP 文件识别的已注册 AniDB 客户端名称；未配置注册客户端时无法进行哈希识别。';
+      'Fushi 已内置注册的应用客户端，通常留空即可；仅按需填写自定义注册客户端。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 客户端版本';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      '向 AniDB 登记的正整数客户端版本；UDP 文件识别还需要账号凭据。';
+      '仅自定义客户端需要在此填写其注册版本。默认应用身份由 Fushi 维护，个人 AniDB 登录仍需自行配置。';
   @override
   String get video_scrape_view_source => '查看来源详情';
   @override
@@ -160586,6 +161670,72 @@ class _StringsZhCn extends _StringsEn {
   String get video_anidb_username => 'AniDB 用户名';
   @override
   String get video_anidb_password => 'AniDB 密码';
+  @override
+  String get onboarding_online_services_title => '在线服务（可选）';
+  @override
+  String get onboarding_online_services_hint => '按需了解账号、API 密钥和已有服务';
+  @override
+  String get onboarding_online_services_body =>
+      '按需配置你要用的服务，也可以跳过。勾选此教程不会启用服务或提交账号，未勾选也不会改变已有设置。';
+  @override
+  String get onboarding_online_services_configure => '打开在线服务设置';
+  @override
+  String get onboarding_online_services_link => '打开官方账号 / API 页面';
+  @override
+  String get onboarding_online_services_account => '需要个人账号';
+  @override
+  String get onboarding_online_services_ready => '无需注册';
+  @override
+  String get onboarding_online_services_embedded => '应用身份已内置';
+  @override
+  String get onboarding_online_services_key => '需要 API 密钥';
+  @override
+  String get onboarding_online_services_build_missing => '此构建未配置应用身份';
+  @override
+  String get onboarding_online_services_server => '连接已有服务器';
+  @override
+  String get onboarding_online_services_anidb =>
+      '文件指纹辅助识别动画作品和分集。Fushi 已注册应用客户端，你仍需注册自己的 AniDB 账号，在设置中填写账号并自行开启文件哈希识别。';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan 提供作品资料；AniList 用于发现和相关查询。公共只读查询无需个人账号或 API 密钥。';
+  @override
+  String get onboarding_online_services_tmdb =>
+      '此构建已内置 TMDB 密钥，用于资料补缺与兜底。只有需要自己的配额时才配置个人密钥。';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      '此构建未内置 TMDB 密钥。需要 TMDB 资料兜底时，请申请 API 密钥并填入设置；MAL / Jikan 仍可使用。';
+  @override
+  String get onboarding_online_services_jimaku =>
+      '用于查找字幕。注册或登录 Jimaku 后，在账号页面生成个人 API 密钥，填入设置并开启字幕来源。';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      '用于查找和下载字幕。注册账号后在 API 页面创建应用并获取 API 密钥。用户登录为可选项，可使用对应账号的下载配额。';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      '此构建已内置弹幕服务应用身份，无需每位用户申请 API；按需开启在线弹幕匹配即可。';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      '此构建未配置弹幕服务应用身份，官方在线匹配暂不可用。应用身份由开发者申请，不需要你注册个人 API。';
+  @override
+  String get onboarding_online_services_servers =>
+      '这些服务没有统一注册入口。请填写你已有服务器的地址，以及服务管理员提供的账号或密钥；没有服务器可跳过。';
+  @override
+  String get video_online_services_setup_title => '配置可选在线服务';
+  @override
+  String get video_online_services_setup_description =>
+      '按需配置账号或 API 密钥，可增强文件识别和字幕搜索。基础播放不受影响。';
+  @override
+  String get video_online_services_setup_register => '了解和注册服务';
+  @override
+  String get video_online_services_setup_settings => '去设置';
+  @override
+  String get video_online_services_setup_dismiss => '永久关闭提示';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      '应用已内置 API 密钥。可选登录自己的 OpenSubtitles 账号使用个人下载额度，也可以填写自己的 API 密钥。';
+  @override
+  String get video_opensubtitles_app_key_hint => '留空使用应用内置 API 密钥。';
 }
 
 // Path: <root>
@@ -168383,12 +169533,12 @@ class _StringsZhHk extends _StringsEn {
   String get video_source_scrape_anidb_client => 'AniDB 客戶端名稱';
   @override
   String get video_source_scrape_anidb_client_hint =>
-      '用於 UDP 檔案識別的已註冊 AniDB 用戶端名稱；未設定已註冊用戶端時無法進行雜湊識別。';
+      'Fushi 已內置註冊的應用程式用戶端，通常留空即可；僅按需填寫自訂的已註冊用戶端。';
   @override
   String get video_source_scrape_anidb_client_version => 'AniDB 客戶端版本';
   @override
   String get video_source_scrape_anidb_client_version_hint =>
-      '向 AniDB 登記的正整數用戶端版本；UDP 檔案識別亦需要帳戶憑證。';
+      '只有自訂用戶端需要在此填寫其註冊版本。預設應用程式身份由 Fushi 維護，個人 AniDB 登入仍需自行設定。';
   @override
   String get video_scrape_view_source => '查看來源詳情';
   @override
@@ -170151,6 +171301,72 @@ class _StringsZhHk extends _StringsEn {
   String get video_anidb_username => 'AniDB 使用者名稱';
   @override
   String get video_anidb_password => 'AniDB 密碼';
+  @override
+  String get onboarding_online_services_title => '網上服務（可選）';
+  @override
+  String get onboarding_online_services_hint => '按需了解帳戶、API 金鑰和可用服務';
+  @override
+  String get onboarding_online_services_body =>
+      '按需設定你要使用的服務，也可以略過。勾選此教學不會啟用服務或提交帳戶資料，不勾選亦不會更改現有設定。';
+  @override
+  String get onboarding_online_services_configure => '開啟網上服務設定';
+  @override
+  String get onboarding_online_services_link => '開啟官方帳戶 / API 頁面';
+  @override
+  String get onboarding_online_services_account => '需要個人帳戶';
+  @override
+  String get onboarding_online_services_ready => '毋須註冊';
+  @override
+  String get onboarding_online_services_embedded => '已內置應用程式憑證';
+  @override
+  String get onboarding_online_services_key => '需要 API 金鑰';
+  @override
+  String get onboarding_online_services_build_missing => '此版本未設定應用程式憑證';
+  @override
+  String get onboarding_online_services_server => '連接現有伺服器';
+  @override
+  String get onboarding_online_services_anidb =>
+      '透過檔案指紋輔助識別動畫作品和分集。Fushi 已註冊應用程式用戶端，你仍需註冊自己的 AniDB 帳戶，在設定中填寫帳戶並自行啟用檔案雜湊識別。';
+  @override
+  String get onboarding_online_services_public =>
+      'MAL / Jikan 提供作品資料；AniList 用於探索和相關查詢。公開唯讀查詢毋須個人帳戶或 API 金鑰。';
+  @override
+  String get onboarding_online_services_tmdb =>
+      '此版本已內置 TMDB 金鑰，用於資料補缺及後備。只有需要自己的配額時才設定個人金鑰。';
+  @override
+  String get onboarding_online_services_tmdb_missing =>
+      '此版本未內置 TMDB 金鑰。如需 TMDB 後備資料，請申請 API 金鑰並填入設定；MAL / Jikan 仍可使用。';
+  @override
+  String get onboarding_online_services_jimaku =>
+      '用於尋找字幕。註冊或登入 Jimaku 後，在帳戶頁面產生個人 API 金鑰，填入設定並啟用此字幕來源。';
+  @override
+  String get onboarding_online_services_opensubtitles =>
+      '用於尋找和下載字幕。註冊帳戶後在 API 頁面建立應用程式並取得 API 金鑰。使用者登入屬可選項目，可使用對應帳戶的下載配額。';
+  @override
+  String get onboarding_online_services_dandanplay =>
+      '此版本已內置彈幕服務應用程式憑證，毋須每位使用者申請 API；按需啟用網上彈幕配對即可。';
+  @override
+  String get onboarding_online_services_dandanplay_missing =>
+      '此版本未設定彈幕服務應用程式憑證，官方網上配對暫時無法使用。應用程式憑證由開發者申請，毋須你註冊個人 API。';
+  @override
+  String get onboarding_online_services_servers =>
+      '這些服務沒有統一註冊頁面。請填寫現有伺服器的地址，以及服務管理員提供的帳戶或金鑰；沒有伺服器可略過。';
+  @override
+  String get video_online_services_setup_title => '設定可選網上服務';
+  @override
+  String get video_online_services_setup_description =>
+      '按需設定帳戶或 API 金鑰，可增強檔案識別和字幕搜尋。基本播放不受影響。';
+  @override
+  String get video_online_services_setup_register => '了解及註冊服務';
+  @override
+  String get video_online_services_setup_settings => '前往設定';
+  @override
+  String get video_online_services_setup_dismiss => '不再顯示提示';
+  @override
+  String get onboarding_online_services_opensubtitles_embedded =>
+      '應用程式已內置 API 金鑰。可選擇登入自己的 OpenSubtitles 帳戶使用個人下載配額，亦可填寫自己的 API 金鑰。';
+  @override
+  String get video_opensubtitles_app_key_hint => '留空以使用應用程式內置的 API 金鑰。';
 }
 
 /// Flat map(s) containing all translations.
@@ -177606,11 +178822,11 @@ extension on _StringsEn {
       case 'video_source_scrape_anidb_client':
         return 'AniDB client name';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Registered AniDB client name for UDP file identification; hashing is unavailable without a registered client.';
+        return 'Fushi includes a registered app client. Leave this blank normally; set a custom registered client only if needed.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB client version';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Positive client version registered with AniDB. UDP file identification also requires your account credentials.';
+        return 'Only custom clients need their own registered version here. Fushi maintains the default app identity; your personal AniDB login is still required.';
       case 'video_scrape_view_source':
         return 'View source details';
       case 'video_setting_auto_scrape_hint':
@@ -179166,6 +180382,60 @@ extension on _StringsEn {
         return 'AniDB username';
       case 'video_anidb_password':
         return 'AniDB password';
+      case 'onboarding_online_services_title':
+        return 'Online services (optional)';
+      case 'onboarding_online_services_hint':
+        return 'Explore accounts, API keys and available services';
+      case 'onboarding_online_services_body':
+        return 'Set up only the services you need, or skip this step. Selecting this tutorial does not enable services or submit credentials, and leaving it unselected does not change existing settings.';
+      case 'onboarding_online_services_configure':
+        return 'Open online service settings';
+      case 'onboarding_online_services_link':
+        return 'Open official account / API page';
+      case 'onboarding_online_services_account':
+        return 'Personal account required';
+      case 'onboarding_online_services_ready':
+        return 'No registration required';
+      case 'onboarding_online_services_embedded':
+        return 'App credentials included';
+      case 'onboarding_online_services_key':
+        return 'API key required';
+      case 'onboarding_online_services_build_missing':
+        return 'App credentials missing in this build';
+      case 'onboarding_online_services_server':
+        return 'Connect an existing server';
+      case 'onboarding_online_services_anidb':
+        return 'Identify anime and episodes by file fingerprint. Fushi has a registered app client; you still need your own AniDB account. Enter it in settings and enable file hash identification when wanted.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan provides metadata; AniList supports discovery and related queries. Public read-only queries need no personal account or API key.';
+      case 'onboarding_online_services_tmdb':
+        return 'This build includes a TMDB key for metadata fallback and missing fields. Add your own key only if you want your own quota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'This build has no TMDB key. Request an API key and enter it in settings if you need TMDB metadata fallback; MAL / Jikan remains available.';
+      case 'onboarding_online_services_jimaku':
+        return 'Find subtitles. Register or sign in to Jimaku, generate a personal API key on your account page, then enter it in settings and enable this subtitle source.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Find and download subtitles. Register an account, create an API consumer and obtain an API key. User login is optional and uses the account download quota.';
+      case 'onboarding_online_services_dandanplay':
+        return 'This build includes the danmaku service app credentials. Users do not need to apply for an API; enable online danmaku matching when wanted.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'This build has no danmaku app credentials, so official online matching is unavailable. The developer provides these credentials; you do not need to register a personal API.';
+      case 'onboarding_online_services_servers':
+        return 'These services have no shared registration page. Enter your existing server address and the account or key provided by its administrator, or skip if you do not have a server.';
+      case 'video_online_services_setup_title':
+        return 'Configure optional online services';
+      case 'video_online_services_setup_description':
+        return 'Optional accounts and API keys can improve video identification and subtitle search. Basic playback works without them.';
+      case 'video_online_services_setup_register':
+        return 'Learn about and register services';
+      case 'video_online_services_setup_settings':
+        return 'Open settings';
+      case 'video_online_services_setup_dismiss':
+        return 'Never show again';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'The app API key is included. You can optionally sign in to your OpenSubtitles account for your download allowance, or use your own API key.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Leave blank to use the bundled app API key.';
       default:
         return null;
     }
@@ -186617,11 +187887,11 @@ extension on _StringsAr {
       case 'video_source_scrape_anidb_client':
         return 'اسم عميل AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'اسم عميل AniDB المسجّل للتعرّف على الملفات عبر UDP؛ لا يتوفر التعرّف بالتجزئة دون عميل مسجّل.';
+        return 'يتضمن Fushi عميل تطبيق مسجّلاً. اترك هذا الحقل فارغًا عادةً؛ حدّد عميلاً مسجّلاً مخصصًا عند الحاجة فقط.';
       case 'video_source_scrape_anidb_client_version':
         return 'إصدار عميل AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'إصدار العميل المسجّل لدى AniDB، ويجب أن يكون عددًا صحيحًا موجبًا. يتطلب التعرّف على الملفات عبر UDP أيضًا بيانات تسجيل الدخول إلى حسابك.';
+        return 'العملاء المخصصون فقط يحتاجون إلى إدخال إصدارهم المسجّل هنا. يتولى Fushi إدارة هوية التطبيق الافتراضية؛ وما زلت بحاجة إلى بيانات دخول حسابك الشخصي في AniDB.';
       case 'video_scrape_view_source':
         return 'عرض تفاصيل المصدر';
       case 'video_setting_auto_scrape_hint':
@@ -188176,6 +189446,60 @@ extension on _StringsAr {
         return 'اسم مستخدم AniDB';
       case 'video_anidb_password':
         return 'كلمة مرور AniDB';
+      case 'onboarding_online_services_title':
+        return 'الخدمات عبر الإنترنت (اختيارية)';
+      case 'onboarding_online_services_hint':
+        return 'تعرّف على الحسابات ومفاتيح API والخدمات المتاحة';
+      case 'onboarding_online_services_body':
+        return 'أعدّ الخدمات التي تحتاجها فقط، أو تخطّ هذه الخطوة. اختيار هذا الدليل لا يفعّل الخدمات ولا يرسل بيانات الدخول، وعدم اختياره لا يغيّر الإعدادات الحالية.';
+      case 'onboarding_online_services_configure':
+        return 'فتح إعدادات الخدمات عبر الإنترنت';
+      case 'onboarding_online_services_link':
+        return 'فتح صفحة الحساب / API الرسمية';
+      case 'onboarding_online_services_account':
+        return 'يتطلب حسابًا شخصيًا';
+      case 'onboarding_online_services_ready':
+        return 'لا يتطلب التسجيل';
+      case 'onboarding_online_services_embedded':
+        return 'بيانات اعتماد التطبيق مضمّنة';
+      case 'onboarding_online_services_key':
+        return 'يتطلب مفتاح API';
+      case 'onboarding_online_services_build_missing':
+        return 'بيانات اعتماد التطبيق غير متوفرة في هذا الإصدار';
+      case 'onboarding_online_services_server':
+        return 'الاتصال بخادم موجود';
+      case 'onboarding_online_services_anidb':
+        return 'التعرّف على الأنمي والحلقات باستخدام بصمة الملف. لدى Fushi عميل تطبيق مسجّل؛ لكنك ما زلت بحاجة إلى حساب AniDB خاص بك. أدخله في الإعدادات وفعّل التعرّف على الملفات بالتجزئة عندما تريد.';
+      case 'onboarding_online_services_public':
+        return 'يوفّر MAL / Jikan البيانات الوصفية؛ ويدعم AniList الاستكشاف والاستعلامات ذات الصلة. الاستعلامات العامة للقراءة فقط لا تتطلب حسابًا شخصيًا أو مفتاح API.';
+      case 'onboarding_online_services_tmdb':
+        return 'يتضمن هذا الإصدار مفتاح TMDB للبيانات الوصفية البديلة والحقول الناقصة. أضف مفتاحك الخاص فقط إذا أردت استخدام حصتك الخاصة.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'لا يتضمن هذا الإصدار مفتاح TMDB. اطلب مفتاح API وأدخله في الإعدادات إذا احتجت إلى TMDB كمصدر بديل للبيانات الوصفية؛ ويظل MAL / Jikan متاحًا.';
+      case 'onboarding_online_services_jimaku':
+        return 'البحث عن الترجمات. سجّل أو ادخل إلى Jimaku، وأنشئ مفتاح API شخصيًا من صفحة حسابك، ثم أدخله في الإعدادات وفعّل مصدر الترجمات هذا.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'البحث عن الترجمات وتنزيلها. سجّل حسابًا، وأنشئ تطبيقًا لاستخدام API للحصول على مفتاح API. تسجيل دخول المستخدم اختياري ويتيح استخدام حصة التنزيل الخاصة بالحساب.';
+      case 'onboarding_online_services_dandanplay':
+        return 'يتضمن هذا الإصدار بيانات اعتماد التطبيق لخدمة التعليقات المتحركة. لا يحتاج المستخدمون إلى طلب API؛ فعّل مطابقة التعليقات المتحركة عبر الإنترنت عندما تريد.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'لا يتضمن هذا الإصدار بيانات اعتماد تطبيق التعليقات المتحركة، لذا فإن المطابقة الرسمية عبر الإنترنت غير متاحة. يوفّر المطوّر هذه البيانات؛ ولا تحتاج إلى تسجيل API شخصي.';
+      case 'onboarding_online_services_servers':
+        return 'لا توجد صفحة تسجيل موحّدة لهذه الخدمات. أدخل عنوان خادمك الموجود والحساب أو المفتاح الذي يقدّمه مسؤول الخادم، أو تخطّ هذه الخطوة إن لم يكن لديك خادم.';
+      case 'video_online_services_setup_title':
+        return 'إعداد الخدمات الاختيارية عبر الإنترنت';
+      case 'video_online_services_setup_description':
+        return 'يمكن للحسابات ومفاتيح API الاختيارية تحسين التعرّف على الفيديو والبحث عن الترجمات. يعمل التشغيل الأساسي بدونها.';
+      case 'video_online_services_setup_register':
+        return 'التعرّف على الخدمات والتسجيل فيها';
+      case 'video_online_services_setup_settings':
+        return 'فتح الإعدادات';
+      case 'video_online_services_setup_dismiss':
+        return 'عدم العرض مجددًا';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'مفتاح API الخاص بالتطبيق مضمّن. يمكنك اختياريًا تسجيل الدخول إلى حسابك في OpenSubtitles لاستخدام حصة التنزيل الشخصية، أو استخدام مفتاح API الخاص بك.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'اتركه فارغًا لاستخدام مفتاح API المضمّن في التطبيق.';
       default:
         return null;
     }
@@ -195666,11 +196990,11 @@ extension on _StringsDe {
       case 'video_source_scrape_anidb_client':
         return 'AniDB-Clientname';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Registrierter AniDB-Clientname zur Dateiidentifikation über UDP; ohne registrierten Client ist keine Hash-Erkennung möglich.';
+        return 'Fushi enthält einen registrierten App-Client. Normalerweise leer lassen; nur bei Bedarf einen eigenen registrierten Client angeben.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB-Clientversion';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Bei AniDB registrierte Clientversion als positive ganze Zahl. Die Dateiidentifikation über UDP erfordert außerdem deine Zugangsdaten.';
+        return 'Nur eigene Clients benötigen hier ihre registrierte Version. Fushi verwaltet die standardmäßige App-Identität; deine persönlichen AniDB-Zugangsdaten sind weiterhin erforderlich.';
       case 'video_scrape_view_source':
         return 'Quelldetails anzeigen';
       case 'video_setting_auto_scrape_hint':
@@ -197231,6 +198555,60 @@ extension on _StringsDe {
         return 'AniDB-Benutzername';
       case 'video_anidb_password':
         return 'AniDB-Passwort';
+      case 'onboarding_online_services_title':
+        return 'Onlinedienste (optional)';
+      case 'onboarding_online_services_hint':
+        return 'Konten, API-Schlüssel und verfügbare Dienste kennenlernen';
+      case 'onboarding_online_services_body':
+        return 'Richte nur die benötigten Dienste ein oder überspringe diesen Schritt. Die Auswahl dieser Anleitung aktiviert keine Dienste und übermittelt keine Zugangsdaten. Ohne Auswahl bleiben vorhandene Einstellungen unverändert.';
+      case 'onboarding_online_services_configure':
+        return 'Einstellungen für Onlinedienste öffnen';
+      case 'onboarding_online_services_link':
+        return 'Offizielle Konto-/API-Seite öffnen';
+      case 'onboarding_online_services_account':
+        return 'Persönliches Konto erforderlich';
+      case 'onboarding_online_services_ready':
+        return 'Keine Registrierung erforderlich';
+      case 'onboarding_online_services_embedded':
+        return 'App-Zugangsdaten enthalten';
+      case 'onboarding_online_services_key':
+        return 'API-Schlüssel erforderlich';
+      case 'onboarding_online_services_build_missing':
+        return 'App-Zugangsdaten fehlen in diesem Build';
+      case 'onboarding_online_services_server':
+        return 'Vorhandenen Server verbinden';
+      case 'onboarding_online_services_anidb':
+        return 'Anime und Folgen anhand des Dateifingerabdrucks identifizieren. Fushi hat einen registrierten App-Client; du benötigst weiterhin ein eigenes AniDB-Konto. Trage es in den Einstellungen ein und aktiviere bei Bedarf die Dateierkennung per Hash.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan liefert Metadaten; AniList unterstützt Entdecken und zugehörige Abfragen. Öffentliche Leseabfragen benötigen weder ein persönliches Konto noch einen API-Schlüssel.';
+      case 'onboarding_online_services_tmdb':
+        return 'Dieser Build enthält einen TMDB-Schlüssel für Ersatzdaten und fehlende Felder. Trage nur dann einen eigenen Schlüssel ein, wenn du dein eigenes Kontingent nutzen möchtest.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Dieser Build enthält keinen TMDB-Schlüssel. Beantrage einen API-Schlüssel und trage ihn in den Einstellungen ein, wenn du TMDB als Ersatzquelle benötigst. MAL / Jikan bleibt verfügbar.';
+      case 'onboarding_online_services_jimaku':
+        return 'Untertitel suchen. Registriere dich bei Jimaku oder melde dich an, erstelle auf deiner Kontoseite einen persönlichen API-Schlüssel, trage ihn in den Einstellungen ein und aktiviere diese Untertitelquelle.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Untertitel suchen und herunterladen. Registriere ein Konto, erstelle einen API-Consumer und hole dir einen API-Schlüssel. Die Benutzeranmeldung ist optional und nutzt das Downloadkontingent des Kontos.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Dieser Build enthält die App-Zugangsdaten für den Danmaku-Dienst. Nutzer müssen keinen API-Zugang beantragen; aktiviere bei Bedarf die Online-Danmaku-Zuordnung.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Diesem Build fehlen die App-Zugangsdaten für Danmaku. Die offizielle Online-Zuordnung ist daher nicht verfügbar. Der Entwickler stellt diese Zugangsdaten bereit; du musst keinen persönlichen API-Zugang registrieren.';
+      case 'onboarding_online_services_servers':
+        return 'Diese Dienste haben keine gemeinsame Registrierungsseite. Gib die Adresse deines vorhandenen Servers und das vom Administrator bereitgestellte Konto oder den Schlüssel ein. Ohne Server kannst du diesen Schritt überspringen.';
+      case 'video_online_services_setup_title':
+        return 'Optionale Onlinedienste einrichten';
+      case 'video_online_services_setup_description':
+        return 'Optionale Konten und API-Schlüssel verbessern Videoerkennung und Untertitelsuche. Die Wiedergabe funktioniert auch ohne sie.';
+      case 'video_online_services_setup_register':
+        return 'Dienste kennenlernen und registrieren';
+      case 'video_online_services_setup_settings':
+        return 'Einstellungen öffnen';
+      case 'video_online_services_setup_dismiss':
+        return 'Nie wieder anzeigen';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Der API-Schlüssel der App ist enthalten. Du kannst dich optional bei deinem OpenSubtitles-Konto anmelden, um dein Downloadkontingent zu nutzen, oder einen eigenen API-Schlüssel verwenden.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Leer lassen, um den enthaltenen API-Schlüssel der App zu verwenden.';
       default:
         return null;
     }
@@ -204713,11 +206091,11 @@ extension on _StringsEs {
       case 'video_source_scrape_anidb_client':
         return 'Nombre de cliente AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nombre del cliente registrado de AniDB para identificar archivos por UDP; la identificación por hash no está disponible sin un cliente registrado.';
+        return 'Fushi incluye un cliente de aplicación registrado. Normalmente puedes dejar este campo vacío; indica un cliente registrado personalizado solo si lo necesitas.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versión de cliente AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versión del cliente registrada en AniDB, expresada como un entero positivo. La identificación de archivos por UDP también requiere las credenciales de tu cuenta.';
+        return 'Solo los clientes personalizados necesitan su versión registrada aquí. Fushi mantiene la identidad predeterminada de la aplicación; sigue siendo necesario configurar tu cuenta personal de AniDB.';
       case 'video_scrape_view_source':
         return 'Ver detalles de fuente';
       case 'video_setting_auto_scrape_hint':
@@ -206277,6 +207655,60 @@ extension on _StringsEs {
         return 'Nombre de usuario de AniDB';
       case 'video_anidb_password':
         return 'Contraseña de AniDB';
+      case 'onboarding_online_services_title':
+        return 'Servicios en línea (opcionales)';
+      case 'onboarding_online_services_hint':
+        return 'Conoce las cuentas, claves API y servicios disponibles';
+      case 'onboarding_online_services_body':
+        return 'Configura solo los servicios que necesites o salta este paso. Seleccionar este tutorial no activa servicios ni envía credenciales, y no seleccionarlo no cambia los ajustes existentes.';
+      case 'onboarding_online_services_configure':
+        return 'Abrir ajustes de servicios en línea';
+      case 'onboarding_online_services_link':
+        return 'Abrir la página oficial de cuenta / API';
+      case 'onboarding_online_services_account':
+        return 'Requiere una cuenta personal';
+      case 'onboarding_online_services_ready':
+        return 'No requiere registro';
+      case 'onboarding_online_services_embedded':
+        return 'Credenciales de la aplicación incluidas';
+      case 'onboarding_online_services_key':
+        return 'Requiere una clave API';
+      case 'onboarding_online_services_build_missing':
+        return 'Esta compilación no incluye credenciales de la aplicación';
+      case 'onboarding_online_services_server':
+        return 'Conectar un servidor existente';
+      case 'onboarding_online_services_anidb':
+        return 'Identifica anime y episodios mediante la huella del archivo. Fushi tiene un cliente de aplicación registrado; aún necesitas tu propia cuenta de AniDB. Introdúcela en los ajustes y activa la identificación por hash cuando quieras.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan proporciona metadatos; AniList permite descubrir contenido y realizar consultas relacionadas. Las consultas públicas de solo lectura no necesitan cuenta personal ni clave API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Esta compilación incluye una clave de TMDB para datos alternativos y campos ausentes. Añade tu propia clave solo si quieres usar tu propia cuota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Esta compilación no incluye una clave de TMDB. Solicita una clave API e introdúcela en los ajustes si necesitas TMDB como fuente alternativa de metadatos; MAL / Jikan sigue disponible.';
+      case 'onboarding_online_services_jimaku':
+        return 'Busca subtítulos. Regístrate o inicia sesión en Jimaku, genera una clave API personal en la página de tu cuenta, introdúcela en los ajustes y activa esta fuente de subtítulos.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Busca y descarga subtítulos. Registra una cuenta, crea un consumidor de API y obtén una clave API. Iniciar sesión es opcional y permite usar la cuota de descargas de la cuenta.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Esta compilación incluye las credenciales de la aplicación del servicio de danmaku. No necesitas solicitar acceso a la API; activa la coincidencia de danmaku en línea cuando quieras.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Esta compilación no incluye credenciales de la aplicación de danmaku, por lo que la coincidencia oficial en línea no está disponible. El desarrollador proporciona estas credenciales; no necesitas registrar una API personal.';
+      case 'onboarding_online_services_servers':
+        return 'Estos servicios no tienen una página de registro común. Introduce la dirección de tu servidor existente y la cuenta o clave proporcionada por su administrador, o salta este paso si no tienes servidor.';
+      case 'video_online_services_setup_title':
+        return 'Configurar servicios en línea opcionales';
+      case 'video_online_services_setup_description':
+        return 'Las cuentas y claves API opcionales mejoran la identificación de videos y la búsqueda de subtítulos. Puedes reproducir sin ellas.';
+      case 'video_online_services_setup_register':
+        return 'Conocer y registrar servicios';
+      case 'video_online_services_setup_settings':
+        return 'Abrir ajustes';
+      case 'video_online_services_setup_dismiss':
+        return 'No volver a mostrar';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'La clave API de la aplicación está incluida. Puedes iniciar sesión opcionalmente en tu cuenta de OpenSubtitles para usar tu cuota de descargas, o utilizar tu propia clave API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Déjalo vacío para usar la clave API incluida en la aplicación.';
       default:
         return null;
     }
@@ -213767,11 +215199,11 @@ extension on _StringsFr {
       case 'video_source_scrape_anidb_client':
         return 'Nom de client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nom du client AniDB enregistré pour identifier les fichiers par UDP ; l’identification par hachage est indisponible sans client enregistré.';
+        return 'Fushi inclut un client d’application enregistré. Laissez normalement ce champ vide ; indiquez un client enregistré personnalisé uniquement si nécessaire.';
       case 'video_source_scrape_anidb_client_version':
         return 'Version du client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Version du client enregistrée auprès d’AniDB, sous forme d’entier positif. L’identification des fichiers par UDP nécessite également les identifiants de votre compte.';
+        return 'Seuls les clients personnalisés nécessitent leur propre version enregistrée ici. Fushi gère l’identité par défaut de l’application ; vos identifiants AniDB personnels restent nécessaires.';
       case 'video_scrape_view_source':
         return 'Voir les détails de la source';
       case 'video_setting_auto_scrape_hint':
@@ -215332,6 +216764,60 @@ extension on _StringsFr {
         return 'Nom d’utilisateur AniDB';
       case 'video_anidb_password':
         return 'Mot de passe AniDB';
+      case 'onboarding_online_services_title':
+        return 'Services en ligne (facultatifs)';
+      case 'onboarding_online_services_hint':
+        return 'Découvrir les comptes, les clés API et les services disponibles';
+      case 'onboarding_online_services_body':
+        return 'Configurez uniquement les services nécessaires, ou ignorez cette étape. Sélectionner ce tutoriel n’active aucun service et n’envoie aucun identifiant ; ne pas le sélectionner ne modifie pas les réglages existants.';
+      case 'onboarding_online_services_configure':
+        return 'Ouvrir les réglages des services en ligne';
+      case 'onboarding_online_services_link':
+        return 'Ouvrir la page officielle du compte / de l’API';
+      case 'onboarding_online_services_account':
+        return 'Compte personnel requis';
+      case 'onboarding_online_services_ready':
+        return 'Aucune inscription nécessaire';
+      case 'onboarding_online_services_embedded':
+        return 'Identifiants de l’application inclus';
+      case 'onboarding_online_services_key':
+        return 'Clé API requise';
+      case 'onboarding_online_services_build_missing':
+        return 'Identifiants de l’application absents de cette version';
+      case 'onboarding_online_services_server':
+        return 'Connecter un serveur existant';
+      case 'onboarding_online_services_anidb':
+        return 'Identifier les anime et les épisodes grâce à l’empreinte du fichier. Fushi dispose d’un client d’application enregistré ; votre propre compte AniDB reste nécessaire. Renseignez-le dans les réglages et activez l’identification par hachage si vous le souhaitez.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan fournit les métadonnées ; AniList permet la découverte et les recherches associées. Les requêtes publiques en lecture seule ne nécessitent ni compte personnel ni clé API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Cette version inclut une clé TMDB pour les métadonnées de repli et les champs manquants. Ajoutez votre propre clé uniquement si vous souhaitez utiliser votre propre quota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Cette version n’inclut pas de clé TMDB. Demandez une clé API et saisissez-la dans les réglages si vous souhaitez utiliser TMDB comme source de repli ; MAL / Jikan reste disponible.';
+      case 'onboarding_online_services_jimaku':
+        return 'Rechercher des sous-titres. Inscrivez-vous ou connectez-vous à Jimaku, générez une clé API personnelle sur la page de votre compte, saisissez-la dans les réglages et activez cette source de sous-titres.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Rechercher et télécharger des sous-titres. Créez un compte, puis un consommateur d’API pour obtenir une clé API. La connexion utilisateur est facultative et permet d’utiliser le quota de téléchargement du compte.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Cette version inclut les identifiants d’application du service de danmaku. Les utilisateurs n’ont pas besoin de demander un accès API ; activez la correspondance des danmaku en ligne si vous le souhaitez.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Cette version n’inclut pas les identifiants d’application pour les danmaku ; la correspondance officielle en ligne est donc indisponible. Ces identifiants sont fournis par le développeur ; vous n’avez pas besoin d’enregistrer une API personnelle.';
+      case 'onboarding_online_services_servers':
+        return 'Ces services n’ont pas de page d’inscription commune. Saisissez l’adresse de votre serveur existant et le compte ou la clé fournis par son administrateur, ou ignorez cette étape si vous n’avez pas de serveur.';
+      case 'video_online_services_setup_title':
+        return 'Configurer les services en ligne facultatifs';
+      case 'video_online_services_setup_description':
+        return 'Des comptes et clés API facultatifs améliorent l’identification des vidéos et la recherche de sous-titres. La lecture fonctionne sans eux.';
+      case 'video_online_services_setup_register':
+        return 'Découvrir les services et s’inscrire';
+      case 'video_online_services_setup_settings':
+        return 'Ouvrir les réglages';
+      case 'video_online_services_setup_dismiss':
+        return 'Ne plus afficher';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'La clé API de l’application est incluse. Vous pouvez vous connecter à votre compte OpenSubtitles pour utiliser votre quota de téléchargement, ou utiliser votre propre clé API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Laissez vide pour utiliser la clé API incluse dans l’application.';
       default:
         return null;
     }
@@ -222798,11 +224284,11 @@ extension on _StringsId {
       case 'video_source_scrape_anidb_client':
         return 'Nama klien AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nama klien AniDB terdaftar untuk identifikasi berkas melalui UDP; identifikasi hash tidak tersedia tanpa klien terdaftar.';
+        return 'Fushi menyertakan klien aplikasi terdaftar. Biasanya biarkan kosong; atur klien terdaftar khusus hanya jika diperlukan.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versi klien AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versi klien berupa bilangan bulat positif yang terdaftar di AniDB. Identifikasi berkas melalui UDP juga memerlukan kredensial akun Anda.';
+        return 'Hanya klien khusus yang perlu memasukkan versi terdaftarnya di sini. Fushi mengelola identitas aplikasi bawaan; kredensial akun AniDB pribadi Anda tetap diperlukan.';
       case 'video_scrape_view_source':
         return 'Lihat detail sumber';
       case 'video_setting_auto_scrape_hint':
@@ -224358,6 +225844,60 @@ extension on _StringsId {
         return 'Nama pengguna AniDB';
       case 'video_anidb_password':
         return 'Kata sandi AniDB';
+      case 'onboarding_online_services_title':
+        return 'Layanan daring (opsional)';
+      case 'onboarding_online_services_hint':
+        return 'Pelajari akun, kunci API, dan layanan yang tersedia';
+      case 'onboarding_online_services_body':
+        return 'Atur hanya layanan yang diperlukan, atau lewati langkah ini. Memilih tutorial ini tidak mengaktifkan layanan atau mengirim kredensial, dan tidak memilihnya tidak mengubah pengaturan yang sudah ada.';
+      case 'onboarding_online_services_configure':
+        return 'Buka pengaturan layanan daring';
+      case 'onboarding_online_services_link':
+        return 'Buka halaman akun / API resmi';
+      case 'onboarding_online_services_account':
+        return 'Memerlukan akun pribadi';
+      case 'onboarding_online_services_ready':
+        return 'Tidak perlu mendaftar';
+      case 'onboarding_online_services_embedded':
+        return 'Kredensial aplikasi disertakan';
+      case 'onboarding_online_services_key':
+        return 'Memerlukan kunci API';
+      case 'onboarding_online_services_build_missing':
+        return 'Kredensial aplikasi tidak tersedia dalam build ini';
+      case 'onboarding_online_services_server':
+        return 'Hubungkan server yang sudah ada';
+      case 'onboarding_online_services_anidb':
+        return 'Identifikasi anime dan episode dengan sidik jari berkas. Fushi memiliki klien aplikasi terdaftar; Anda tetap memerlukan akun AniDB sendiri. Masukkan akun di pengaturan dan aktifkan identifikasi hash berkas bila diinginkan.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan menyediakan metadata; AniList mendukung penemuan dan pencarian terkait. Kueri publik hanya-baca tidak memerlukan akun pribadi atau kunci API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Build ini menyertakan kunci TMDB untuk metadata cadangan dan kolom yang belum terisi. Tambahkan kunci sendiri hanya jika ingin menggunakan kuota sendiri.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Build ini tidak menyertakan kunci TMDB. Ajukan kunci API dan masukkan di pengaturan jika memerlukan TMDB sebagai sumber metadata cadangan; MAL / Jikan tetap tersedia.';
+      case 'onboarding_online_services_jimaku':
+        return 'Cari takarir. Daftar atau masuk ke Jimaku, buat kunci API pribadi di halaman akun, lalu masukkan di pengaturan dan aktifkan sumber takarir ini.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Cari dan unduh takarir. Daftarkan akun, buat konsumen API, dan dapatkan kunci API. Login pengguna bersifat opsional dan menggunakan kuota unduhan akun tersebut.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Build ini menyertakan kredensial aplikasi layanan danmaku. Pengguna tidak perlu mengajukan akses API; aktifkan pencocokan danmaku daring bila diinginkan.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Build ini tidak menyertakan kredensial aplikasi danmaku, sehingga pencocokan daring resmi tidak tersedia. Pengembang menyediakan kredensial ini; Anda tidak perlu mendaftarkan API pribadi.';
+      case 'onboarding_online_services_servers':
+        return 'Layanan ini tidak memiliki halaman pendaftaran bersama. Masukkan alamat server yang sudah Anda miliki beserta akun atau kunci dari administratornya, atau lewati jika tidak memiliki server.';
+      case 'video_online_services_setup_title':
+        return 'Atur layanan daring opsional';
+      case 'video_online_services_setup_description':
+        return 'Akun dan kunci API opsional dapat meningkatkan identifikasi video dan pencarian takarir. Pemutaran dasar tetap berjalan tanpanya.';
+      case 'video_online_services_setup_register':
+        return 'Pelajari dan daftar layanan';
+      case 'video_online_services_setup_settings':
+        return 'Buka pengaturan';
+      case 'video_online_services_setup_dismiss':
+        return 'Jangan tampilkan lagi';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Kunci API aplikasi sudah disertakan. Anda dapat memilih untuk masuk ke akun OpenSubtitles sendiri guna memakai kuota unduhan pribadi, atau menggunakan kunci API sendiri.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Biarkan kosong untuk menggunakan kunci API bawaan aplikasi.';
       default:
         return null;
     }
@@ -231843,11 +233383,11 @@ extension on _StringsIt {
       case 'video_source_scrape_anidb_client':
         return 'Nome client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nome del client AniDB registrato per identificare i file tramite UDP; l’identificazione tramite hash non è disponibile senza un client registrato.';
+        return 'Fushi include un client dell’app registrato. Normalmente puoi lasciare vuoto questo campo; imposta un client registrato personalizzato solo se necessario.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versione client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versione del client registrata presso AniDB, espressa come intero positivo. L’identificazione dei file tramite UDP richiede anche le credenziali del tuo account.';
+        return 'Solo i client personalizzati richiedono qui la propria versione registrata. Fushi gestisce l’identità predefinita dell’app; sono comunque necessarie le tue credenziali personali AniDB.';
       case 'video_scrape_view_source':
         return 'Visualizza dettagli fonte';
       case 'video_setting_auto_scrape_hint':
@@ -233406,6 +234946,60 @@ extension on _StringsIt {
         return 'Nome utente AniDB';
       case 'video_anidb_password':
         return 'Password AniDB';
+      case 'onboarding_online_services_title':
+        return 'Servizi online (facoltativi)';
+      case 'onboarding_online_services_hint':
+        return 'Scopri account, chiavi API e servizi disponibili';
+      case 'onboarding_online_services_body':
+        return 'Configura solo i servizi necessari oppure salta questo passaggio. Selezionare questo tutorial non attiva servizi né invia credenziali; non selezionarlo non modifica le impostazioni esistenti.';
+      case 'onboarding_online_services_configure':
+        return 'Apri le impostazioni dei servizi online';
+      case 'onboarding_online_services_link':
+        return 'Apri la pagina ufficiale dell’account / API';
+      case 'onboarding_online_services_account':
+        return 'Account personale richiesto';
+      case 'onboarding_online_services_ready':
+        return 'Nessuna registrazione richiesta';
+      case 'onboarding_online_services_embedded':
+        return 'Credenziali dell’app incluse';
+      case 'onboarding_online_services_key':
+        return 'Chiave API richiesta';
+      case 'onboarding_online_services_build_missing':
+        return 'Credenziali dell’app assenti in questa build';
+      case 'onboarding_online_services_server':
+        return 'Collega un server esistente';
+      case 'onboarding_online_services_anidb':
+        return 'Identifica anime ed episodi tramite l’impronta del file. Fushi dispone di un client dell’app registrato; serve comunque un tuo account AniDB. Inseriscilo nelle impostazioni e attiva l’identificazione tramite hash quando vuoi.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan fornisce i metadati; AniList supporta la scoperta e le ricerche correlate. Le interrogazioni pubbliche in sola lettura non richiedono account personali o chiavi API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Questa build include una chiave TMDB per i metadati di riserva e i campi mancanti. Aggiungi una tua chiave solo se vuoi usare la tua quota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Questa build non include una chiave TMDB. Richiedi una chiave API e inseriscila nelle impostazioni se ti serve TMDB come fonte di riserva; MAL / Jikan rimane disponibile.';
+      case 'onboarding_online_services_jimaku':
+        return 'Trova sottotitoli. Registrati o accedi a Jimaku, genera una chiave API personale nella pagina del tuo account, inseriscila nelle impostazioni e attiva questa fonte di sottotitoli.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Trova e scarica sottotitoli. Registra un account, crea un consumatore API e ottieni una chiave API. L’accesso utente è facoltativo e permette di usare la quota di download dell’account.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Questa build include le credenziali dell’app per il servizio danmaku. Non occorre richiedere l’accesso API; attiva l’abbinamento dei danmaku online quando vuoi.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Questa build non include le credenziali dell’app per i danmaku, quindi l’abbinamento ufficiale online non è disponibile. Le credenziali sono fornite dallo sviluppatore; non devi registrare un’API personale.';
+      case 'onboarding_online_services_servers':
+        return 'Questi servizi non hanno una pagina di registrazione comune. Inserisci l’indirizzo del tuo server esistente e l’account o la chiave forniti dall’amministratore, oppure salta se non hai un server.';
+      case 'video_online_services_setup_title':
+        return 'Configura servizi online facoltativi';
+      case 'video_online_services_setup_description':
+        return 'Account e chiavi API facoltativi migliorano l’identificazione dei video e la ricerca di sottotitoli. La riproduzione funziona anche senza.';
+      case 'video_online_services_setup_register':
+        return 'Scopri i servizi e registrati';
+      case 'video_online_services_setup_settings':
+        return 'Apri impostazioni';
+      case 'video_online_services_setup_dismiss':
+        return 'Non mostrare più';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'La chiave API dell’app è inclusa. Puoi accedere facoltativamente al tuo account OpenSubtitles per usare la tua quota di download, oppure usare una tua chiave API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Lascia vuoto per usare la chiave API inclusa nell’app.';
       default:
         return null;
     }
@@ -240828,11 +242422,11 @@ extension on _StringsJa {
       case 'video_source_scrape_anidb_client':
         return 'AniDBクライアント名';
       case 'video_source_scrape_anidb_client_hint':
-        return 'UDP によるファイル識別に使う登録済み AniDB クライアント名です。登録済みクライアントが未設定の場合、ハッシュによる識別は利用できません。';
+        return 'Fushi には登録済みのアプリクライアントが含まれています。通常は空欄のままで構いません。必要な場合のみ、独自の登録済みクライアントを指定してください。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDBクライアントバージョン';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDB に登録した正の整数のクライアントバージョンです。UDP によるファイル識別には、アカウントの認証情報も必要です。';
+        return 'ここに登録済みバージョンを入力する必要があるのは独自クライアントのみです。既定のアプリ識別情報は Fushi が管理しますが、個人の AniDB ログイン情報は引き続き必要です。';
       case 'video_scrape_view_source':
         return 'ソースの詳細を表示';
       case 'video_setting_auto_scrape_hint':
@@ -242381,6 +243975,60 @@ extension on _StringsJa {
         return 'AniDB ユーザー名';
       case 'video_anidb_password':
         return 'AniDB パスワード';
+      case 'onboarding_online_services_title':
+        return 'オンラインサービス（任意）';
+      case 'onboarding_online_services_hint':
+        return 'アカウント、API キー、利用できるサービスを確認';
+      case 'onboarding_online_services_body':
+        return '必要なサービスだけ設定するか、この手順をスキップできます。このチュートリアルを選択しても、サービスの有効化や認証情報の送信は行われません。選択しなくても既存の設定は変わりません。';
+      case 'onboarding_online_services_configure':
+        return 'オンラインサービスの設定を開く';
+      case 'onboarding_online_services_link':
+        return '公式のアカウント / API ページを開く';
+      case 'onboarding_online_services_account':
+        return '個人アカウントが必要';
+      case 'onboarding_online_services_ready':
+        return '登録不要';
+      case 'onboarding_online_services_embedded':
+        return 'アプリ認証情報を内蔵';
+      case 'onboarding_online_services_key':
+        return 'API キーが必要';
+      case 'onboarding_online_services_build_missing':
+        return 'このビルドにはアプリ認証情報がありません';
+      case 'onboarding_online_services_server':
+        return '既存のサーバーに接続';
+      case 'onboarding_online_services_anidb':
+        return 'ファイルの指紋情報からアニメ作品とエピソードを識別します。Fushi はアプリクライアントを登録済みですが、ご自身の AniDB アカウントは必要です。設定で入力し、必要に応じてファイルのハッシュ識別を有効にしてください。';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan は作品情報を提供し、AniList は発見機能と関連検索に使われます。公開情報の読み取り専用検索には、個人アカウントや API キーは不要です。';
+      case 'onboarding_online_services_tmdb':
+        return 'このビルドには、情報の代替取得や不足項目の補完に使う TMDB キーが含まれています。ご自身の利用枠を使いたい場合のみ、個人のキーを設定してください。';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'このビルドには TMDB キーが含まれていません。TMDB からの代替情報取得が必要な場合は、API キーを申請して設定に入力してください。MAL / Jikan は引き続き利用できます。';
+      case 'onboarding_online_services_jimaku':
+        return '字幕を検索します。Jimaku に登録またはログインし、アカウントページで個人の API キーを作成して設定に入力し、この字幕ソースを有効にしてください。';
+      case 'onboarding_online_services_opensubtitles':
+        return '字幕を検索してダウンロードします。アカウント登録後、API 利用アプリを作成して API キーを取得してください。ユーザーログインは任意で、ログインするとアカウントのダウンロード枠を利用できます。';
+      case 'onboarding_online_services_dandanplay':
+        return 'このビルドには弾幕サービスのアプリ認証情報が含まれています。ユーザーごとの API 申請は不要です。必要に応じてオンライン弾幕マッチングを有効にしてください。';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'このビルドには弾幕サービスのアプリ認証情報がないため、公式のオンラインマッチングは利用できません。この認証情報は開発者が用意するもので、個人で API を登録する必要はありません。';
+      case 'onboarding_online_services_servers':
+        return 'これらのサービスには共通の登録ページがありません。既存のサーバーのアドレスと、管理者から提供されたアカウントまたはキーを入力してください。サーバーがなければスキップできます。';
+      case 'video_online_services_setup_title':
+        return '任意のオンラインサービスを設定';
+      case 'video_online_services_setup_description':
+        return '任意のアカウントや API キーを設定すると、動画の識別や字幕検索を強化できます。基本的な再生には不要です。';
+      case 'video_online_services_setup_register':
+        return 'サービスの説明と登録';
+      case 'video_online_services_setup_settings':
+        return '設定を開く';
+      case 'video_online_services_setup_dismiss':
+        return '今後表示しない';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'アプリの API キーは内蔵されています。ご自身の OpenSubtitles アカウントにログインして個人のダウンロード枠を使うか、ご自身の API キーを設定することもできます。';
+      case 'video_opensubtitles_app_key_hint':
+        return '空欄の場合、アプリ内蔵の API キーを使用します。';
       default:
         return null;
     }
@@ -249805,11 +251453,11 @@ extension on _StringsKo {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 클라이언트 이름';
       case 'video_source_scrape_anidb_client_hint':
-        return 'UDP 파일 식별에 사용할 등록된 AniDB 클라이언트 이름입니다. 등록된 클라이언트가 없으면 해시 식별을 사용할 수 없습니다.';
+        return 'Fushi에는 등록된 앱 클라이언트가 포함되어 있습니다. 보통은 비워 두세요. 필요한 경우에만 별도로 등록한 클라이언트를 입력하세요.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 클라이언트 버전';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDB에 등록된 양의 정수 클라이언트 버전입니다. UDP 파일 식별에는 계정 로그인 정보도 필요합니다.';
+        return '별도 클라이언트만 여기에 등록된 버전을 입력해야 합니다. 기본 앱 식별 정보는 Fushi가 관리하지만, 개인 AniDB 로그인 정보는 여전히 필요합니다.';
       case 'video_scrape_view_source':
         return '소스 상세 보기';
       case 'video_setting_auto_scrape_hint':
@@ -251360,6 +253008,60 @@ extension on _StringsKo {
         return 'AniDB 사용자 이름';
       case 'video_anidb_password':
         return 'AniDB 비밀번호';
+      case 'onboarding_online_services_title':
+        return '온라인 서비스(선택 사항)';
+      case 'onboarding_online_services_hint':
+        return '계정, API 키 및 이용 가능한 서비스 알아보기';
+      case 'onboarding_online_services_body':
+        return '필요한 서비스만 설정하거나 이 단계를 건너뛰세요. 이 튜토리얼을 선택해도 서비스가 활성화되거나 로그인 정보가 전송되지 않으며, 선택하지 않아도 기존 설정은 바뀌지 않습니다.';
+      case 'onboarding_online_services_configure':
+        return '온라인 서비스 설정 열기';
+      case 'onboarding_online_services_link':
+        return '공식 계정 / API 페이지 열기';
+      case 'onboarding_online_services_account':
+        return '개인 계정 필요';
+      case 'onboarding_online_services_ready':
+        return '가입 불필요';
+      case 'onboarding_online_services_embedded':
+        return '앱 인증 정보 내장';
+      case 'onboarding_online_services_key':
+        return 'API 키 필요';
+      case 'onboarding_online_services_build_missing':
+        return '이 빌드에는 앱 인증 정보가 없습니다';
+      case 'onboarding_online_services_server':
+        return '기존 서버 연결';
+      case 'onboarding_online_services_anidb':
+        return '파일 지문으로 애니메이션 작품과 에피소드를 식별합니다. Fushi에 등록된 앱 클라이언트가 있지만, 본인의 AniDB 계정은 여전히 필요합니다. 설정에 계정을 입력하고 필요할 때 파일 해시 식별을 활성화하세요.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan은 작품 정보를 제공하고, AniList는 발견 기능과 관련 검색에 사용됩니다. 공개 읽기 전용 조회에는 개인 계정이나 API 키가 필요하지 않습니다.';
+      case 'onboarding_online_services_tmdb':
+        return '이 빌드에는 대체 정보 조회와 누락된 항목 보충을 위한 TMDB 키가 내장되어 있습니다. 본인의 사용 할당량을 쓰고 싶은 경우에만 개인 키를 추가하세요.';
+      case 'onboarding_online_services_tmdb_missing':
+        return '이 빌드에는 TMDB 키가 없습니다. TMDB 대체 정보가 필요하다면 API 키를 신청해 설정에 입력하세요. MAL / Jikan은 계속 사용할 수 있습니다.';
+      case 'onboarding_online_services_jimaku':
+        return '자막을 찾습니다. Jimaku에 가입하거나 로그인한 후 계정 페이지에서 개인 API 키를 생성하고, 설정에 입력한 뒤 이 자막 소스를 활성화하세요.';
+      case 'onboarding_online_services_opensubtitles':
+        return '자막을 찾고 다운로드합니다. 계정을 등록하고 API 사용 앱을 만들어 API 키를 발급받으세요. 사용자 로그인은 선택 사항이며, 로그인하면 해당 계정의 다운로드 할당량을 사용합니다.';
+      case 'onboarding_online_services_dandanplay':
+        return '이 빌드에는 탄막 서비스의 앱 인증 정보가 내장되어 있습니다. 사용자가 따로 API를 신청할 필요 없이 원하는 때 온라인 탄막 매칭을 활성화하면 됩니다.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return '이 빌드에는 탄막 서비스의 앱 인증 정보가 없어 공식 온라인 매칭을 사용할 수 없습니다. 이 정보는 개발자가 제공하므로 개인 API를 등록할 필요가 없습니다.';
+      case 'onboarding_online_services_servers':
+        return '이 서비스들에는 공통 가입 페이지가 없습니다. 기존 서버 주소와 관리자가 제공한 계정 또는 키를 입력하세요. 서버가 없으면 건너뛰어도 됩니다.';
+      case 'video_online_services_setup_title':
+        return '선택적 온라인 서비스 설정';
+      case 'video_online_services_setup_description':
+        return '선택적으로 계정이나 API 키를 설정하면 영상 식별과 자막 검색을 개선할 수 있습니다. 기본 재생에는 필요하지 않습니다.';
+      case 'video_online_services_setup_register':
+        return '서비스 알아보기 및 가입';
+      case 'video_online_services_setup_settings':
+        return '설정 열기';
+      case 'video_online_services_setup_dismiss':
+        return '다시 표시하지 않기';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return '앱 API 키가 내장되어 있습니다. 원하는 경우 본인의 OpenSubtitles 계정에 로그인해 개인 다운로드 할당량을 사용하거나, 본인의 API 키를 입력할 수 있습니다.';
+      case 'video_opensubtitles_app_key_hint':
+        return '비워 두면 앱에 내장된 API 키를 사용합니다.';
       default:
         return null;
     }
@@ -258838,11 +260540,11 @@ extension on _StringsNl {
       case 'video_source_scrape_anidb_client':
         return 'AniDB-clientnaam';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Geregistreerde AniDB-clientnaam voor bestandsidentificatie via UDP; hashidentificatie is niet beschikbaar zonder geregistreerde client.';
+        return 'Fushi bevat een geregistreerde app-client. Laat dit normaal gesproken leeg; stel alleen indien nodig een eigen geregistreerde client in.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB-clientversie';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Bij AniDB geregistreerde clientversie als positief geheel getal. Bestandsidentificatie via UDP vereist ook de inloggegevens van je account.';
+        return 'Alleen eigen clients hebben hier hun geregistreerde versie nodig. Fushi beheert de standaardidentiteit van de app; je persoonlijke AniDB-inloggegevens blijven vereist.';
       case 'video_scrape_view_source':
         return 'Brondetails bekijken';
       case 'video_setting_auto_scrape_hint':
@@ -260401,6 +262103,60 @@ extension on _StringsNl {
         return 'AniDB-gebruikersnaam';
       case 'video_anidb_password':
         return 'AniDB-wachtwoord';
+      case 'onboarding_online_services_title':
+        return 'Onlinediensten (optioneel)';
+      case 'onboarding_online_services_hint':
+        return 'Meer over accounts, API-sleutels en beschikbare diensten';
+      case 'onboarding_online_services_body':
+        return 'Stel alleen de benodigde diensten in of sla deze stap over. Het selecteren van deze uitleg activeert geen diensten en verstuurt geen inloggegevens. Niet selecteren verandert niets aan bestaande instellingen.';
+      case 'onboarding_online_services_configure':
+        return 'Instellingen voor onlinediensten openen';
+      case 'onboarding_online_services_link':
+        return 'Officiële account- / API-pagina openen';
+      case 'onboarding_online_services_account':
+        return 'Persoonlijk account vereist';
+      case 'onboarding_online_services_ready':
+        return 'Geen registratie nodig';
+      case 'onboarding_online_services_embedded':
+        return 'App-inloggegevens inbegrepen';
+      case 'onboarding_online_services_key':
+        return 'API-sleutel vereist';
+      case 'onboarding_online_services_build_missing':
+        return 'App-inloggegevens ontbreken in deze build';
+      case 'onboarding_online_services_server':
+        return 'Een bestaande server verbinden';
+      case 'onboarding_online_services_anidb':
+        return 'Identificeer anime en afleveringen via de bestandsvingerafdruk. Fushi heeft een geregistreerde app-client; je hebt nog wel een eigen AniDB-account nodig. Vul het in bij de instellingen en schakel desgewenst bestandsidentificatie via hash in.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan levert metadata; AniList ondersteunt ontdekken en gerelateerde zoekopdrachten. Openbare alleen-lezenzoekopdrachten vereisen geen persoonlijk account of API-sleutel.';
+      case 'onboarding_online_services_tmdb':
+        return 'Deze build bevat een TMDB-sleutel voor vervangende metadata en ontbrekende velden. Voeg alleen een eigen sleutel toe als je je eigen quotum wilt gebruiken.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Deze build bevat geen TMDB-sleutel. Vraag een API-sleutel aan en vul deze in bij de instellingen als je TMDB als reservebron nodig hebt; MAL / Jikan blijft beschikbaar.';
+      case 'onboarding_online_services_jimaku':
+        return 'Zoek ondertitels. Registreer je of meld je aan bij Jimaku, maak op je accountpagina een persoonlijke API-sleutel aan, vul deze in bij de instellingen en schakel deze ondertitelbron in.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Zoek en download ondertitels. Registreer een account, maak een API-consumer aan en verkrijg een API-sleutel. Aanmelden als gebruiker is optioneel en gebruikt het downloadquotum van het account.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Deze build bevat de app-inloggegevens voor de danmaku-dienst. Gebruikers hoeven geen API-toegang aan te vragen; schakel desgewenst online danmaku-matching in.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Deze build bevat geen app-inloggegevens voor danmaku, dus officiële online matching is niet beschikbaar. De ontwikkelaar levert deze gegevens; je hoeft geen persoonlijke API te registreren.';
+      case 'onboarding_online_services_servers':
+        return 'Deze diensten hebben geen gezamenlijke registratiepagina. Vul het adres van je bestaande server in, samen met het account of de sleutel van de beheerder. Sla dit over als je geen server hebt.';
+      case 'video_online_services_setup_title':
+        return 'Optionele onlinediensten instellen';
+      case 'video_online_services_setup_description':
+        return 'Optionele accounts en API-sleutels verbeteren videoherkenning en ondertitelzoeken. Afspelen werkt ook zonder.';
+      case 'video_online_services_setup_register':
+        return 'Diensten verkennen en registreren';
+      case 'video_online_services_setup_settings':
+        return 'Instellingen openen';
+      case 'video_online_services_setup_dismiss':
+        return 'Nooit meer tonen';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'De API-sleutel van de app is inbegrepen. Je kunt je desgewenst aanmelden bij je OpenSubtitles-account voor je eigen downloadquotum, of je eigen API-sleutel gebruiken.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Laat leeg om de meegeleverde API-sleutel van de app te gebruiken.';
       default:
         return null;
     }
@@ -267875,11 +269631,11 @@ extension on _StringsPtBr {
       case 'video_source_scrape_anidb_client':
         return 'Nome do cliente AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Nome do cliente AniDB registrado para identificar arquivos via UDP; a identificação por hash não está disponível sem um cliente registrado.';
+        return 'O Fushi inclui um cliente de aplicativo registrado. Normalmente, deixe este campo vazio; configure um cliente registrado personalizado apenas se necessário.';
       case 'video_source_scrape_anidb_client_version':
         return 'Versão do cliente AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Versão do cliente registrada no AniDB, expressa como um inteiro positivo. A identificação de arquivos via UDP também exige as credenciais da sua conta.';
+        return 'Apenas clientes personalizados precisam de sua própria versão registrada aqui. O Fushi mantém a identidade padrão do aplicativo; suas credenciais pessoais do AniDB continuam sendo necessárias.';
       case 'video_scrape_view_source':
         return 'Ver detalhes da fonte';
       case 'video_setting_auto_scrape_hint':
@@ -269437,6 +271193,60 @@ extension on _StringsPtBr {
         return 'Nome de usuário do AniDB';
       case 'video_anidb_password':
         return 'Senha do AniDB';
+      case 'onboarding_online_services_title':
+        return 'Serviços on-line (opcionais)';
+      case 'onboarding_online_services_hint':
+        return 'Conheça as contas, chaves API e serviços disponíveis';
+      case 'onboarding_online_services_body':
+        return 'Configure apenas os serviços necessários ou pule esta etapa. Selecionar este tutorial não ativa serviços nem envia credenciais, e não selecioná-lo não altera as configurações existentes.';
+      case 'onboarding_online_services_configure':
+        return 'Abrir configurações dos serviços on-line';
+      case 'onboarding_online_services_link':
+        return 'Abrir página oficial de conta / API';
+      case 'onboarding_online_services_account':
+        return 'Requer conta pessoal';
+      case 'onboarding_online_services_ready':
+        return 'Não requer cadastro';
+      case 'onboarding_online_services_embedded':
+        return 'Credenciais do aplicativo incluídas';
+      case 'onboarding_online_services_key':
+        return 'Requer chave API';
+      case 'onboarding_online_services_build_missing':
+        return 'Esta compilação não inclui credenciais do aplicativo';
+      case 'onboarding_online_services_server':
+        return 'Conectar um servidor existente';
+      case 'onboarding_online_services_anidb':
+        return 'Identifique animes e episódios pela impressão digital do arquivo. O Fushi tem um cliente de aplicativo registrado; você ainda precisa de sua própria conta AniDB. Insira-a nas configurações e ative a identificação por hash quando desejar.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan fornece metadados; AniList oferece descoberta e consultas relacionadas. Consultas públicas somente de leitura não exigem conta pessoal nem chave API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Esta compilação inclui uma chave TMDB para metadados alternativos e campos ausentes. Adicione sua própria chave apenas se quiser usar sua própria cota.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Esta compilação não inclui uma chave TMDB. Solicite uma chave API e insira-a nas configurações se precisar do TMDB como fonte alternativa de metadados; MAL / Jikan continua disponível.';
+      case 'onboarding_online_services_jimaku':
+        return 'Encontre legendas. Cadastre-se ou entre no Jimaku, gere uma chave API pessoal na página da sua conta, insira-a nas configurações e ative esta fonte de legendas.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Encontre e baixe legendas. Cadastre uma conta, crie um consumidor de API e obtenha uma chave API. O login do usuário é opcional e permite usar a cota de downloads da conta.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Esta compilação inclui as credenciais do aplicativo para o serviço de danmaku. Os usuários não precisam solicitar acesso à API; basta ativar a correspondência de danmaku on-line quando desejarem.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Esta compilação não inclui credenciais do aplicativo para danmaku, então a correspondência oficial on-line está indisponível. O desenvolvedor fornece essas credenciais; você não precisa registrar uma API pessoal.';
+      case 'onboarding_online_services_servers':
+        return 'Esses serviços não têm uma página de cadastro comum. Insira o endereço do seu servidor existente e a conta ou chave fornecida pelo administrador, ou pule se não tiver um servidor.';
+      case 'video_online_services_setup_title':
+        return 'Configurar serviços on-line opcionais';
+      case 'video_online_services_setup_description':
+        return 'Contas e chaves API opcionais melhoram a identificação de vídeos e a busca de legendas. A reprodução básica funciona sem elas.';
+      case 'video_online_services_setup_register':
+        return 'Conhecer os serviços e se cadastrar';
+      case 'video_online_services_setup_settings':
+        return 'Abrir configurações';
+      case 'video_online_services_setup_dismiss':
+        return 'Não mostrar novamente';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'A chave API do aplicativo está incluída. Você pode entrar opcionalmente em sua conta OpenSubtitles para usar sua cota de downloads ou usar sua própria chave API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Deixe vazio para usar a chave API incluída no aplicativo.';
       default:
         return null;
     }
@@ -276918,11 +278728,11 @@ extension on _StringsRu {
       case 'video_source_scrape_anidb_client':
         return 'Имя клиента AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Имя зарегистрированного клиента AniDB для определения файлов по UDP; без зарегистрированного клиента определение по хешу недоступно.';
+        return 'Fushi включает зарегистрированный клиент приложения. Обычно оставляйте это поле пустым; указывайте собственный зарегистрированный клиент только при необходимости.';
       case 'video_source_scrape_anidb_client_version':
         return 'Версия клиента AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Версия клиента, зарегистрированная в AniDB, в виде положительного целого числа. Для определения файлов по UDP также нужны данные для входа в вашу учётную запись.';
+        return 'Только для собственного клиента нужно указать здесь его зарегистрированную версию. Fushi поддерживает стандартный идентификатор приложения; личные данные для входа в AniDB всё равно необходимы.';
       case 'video_scrape_view_source':
         return 'Подробности источника';
       case 'video_setting_auto_scrape_hint':
@@ -278480,6 +280290,60 @@ extension on _StringsRu {
         return 'Имя пользователя AniDB';
       case 'video_anidb_password':
         return 'Пароль AniDB';
+      case 'onboarding_online_services_title':
+        return 'Онлайн-сервисы (необязательно)';
+      case 'onboarding_online_services_hint':
+        return 'Узнайте об аккаунтах, ключах API и доступных сервисах';
+      case 'onboarding_online_services_body':
+        return 'Настройте только нужные сервисы или пропустите этот шаг. Выбор этого руководства не включает сервисы и не отправляет данные для входа. Если не выбирать его, существующие настройки не изменятся.';
+      case 'onboarding_online_services_configure':
+        return 'Открыть настройки онлайн-сервисов';
+      case 'onboarding_online_services_link':
+        return 'Открыть официальную страницу аккаунта / API';
+      case 'onboarding_online_services_account':
+        return 'Нужен личный аккаунт';
+      case 'onboarding_online_services_ready':
+        return 'Регистрация не нужна';
+      case 'onboarding_online_services_embedded':
+        return 'Учётные данные приложения включены';
+      case 'onboarding_online_services_key':
+        return 'Нужен ключ API';
+      case 'onboarding_online_services_build_missing':
+        return 'В этой сборке нет учётных данных приложения';
+      case 'onboarding_online_services_server':
+        return 'Подключить существующий сервер';
+      case 'onboarding_online_services_anidb':
+        return 'Определение аниме и эпизодов по отпечатку файла. У Fushi есть зарегистрированный клиент приложения, но вам по-прежнему нужен собственный аккаунт AniDB. Укажите его в настройках и при желании включите определение файлов по хешу.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan предоставляет метаданные; AniList используется для поиска нового контента и связанных запросов. Публичные запросы только для чтения не требуют личного аккаунта или ключа API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Эта сборка включает ключ TMDB для резервных метаданных и заполнения недостающих полей. Добавляйте свой ключ только если хотите использовать собственную квоту.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'В этой сборке нет ключа TMDB. Получите ключ API и укажите его в настройках, если вам нужны резервные метаданные TMDB. MAL / Jikan остаётся доступным.';
+      case 'onboarding_online_services_jimaku':
+        return 'Поиск субтитров. Зарегистрируйтесь или войдите в Jimaku, создайте личный ключ API на странице аккаунта, укажите его в настройках и включите этот источник субтитров.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Поиск и скачивание субтитров. Зарегистрируйте аккаунт, создайте приложение для использования API и получите ключ API. Вход пользователя необязателен и позволяет использовать квоту скачиваний аккаунта.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Эта сборка включает учётные данные приложения для сервиса данмаку. Пользователям не нужно подавать заявку на API; при желании включите онлайн-сопоставление данмаку.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'В этой сборке нет учётных данных приложения для данмаку, поэтому официальное онлайн-сопоставление недоступно. Эти данные предоставляет разработчик; вам не нужно регистрировать личный API.';
+      case 'onboarding_online_services_servers':
+        return 'У этих сервисов нет общей страницы регистрации. Укажите адрес своего существующего сервера и аккаунт или ключ, предоставленный администратором. Если сервера нет, пропустите этот шаг.';
+      case 'video_online_services_setup_title':
+        return 'Настроить необязательные онлайн-сервисы';
+      case 'video_online_services_setup_description':
+        return 'Необязательные аккаунты и ключи API улучшают распознавание видео и поиск субтитров. Воспроизведение работает и без них.';
+      case 'video_online_services_setup_register':
+        return 'Узнать о сервисах и зарегистрироваться';
+      case 'video_online_services_setup_settings':
+        return 'Открыть настройки';
+      case 'video_online_services_setup_dismiss':
+        return 'Больше не показывать';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Ключ API приложения уже включён. При желании можно войти в свой аккаунт OpenSubtitles для использования личной квоты скачиваний или указать собственный ключ API.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Оставьте пустым, чтобы использовать встроенный ключ API приложения.';
       default:
         return null;
     }
@@ -285936,11 +287800,11 @@ extension on _StringsTh {
       case 'video_source_scrape_anidb_client':
         return 'ชื่อไคลเอนต์ AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'ชื่อไคลเอนต์ AniDB ที่ลงทะเบียนสำหรับระบุไฟล์ผ่าน UDP หากไม่มีไคลเอนต์ที่ลงทะเบียน จะไม่สามารถระบุไฟล์ด้วยแฮชได้';
+        return 'Fushi มีไคลเอนต์แอปที่ลงทะเบียนไว้แล้ว โดยปกติให้เว้นว่างไว้ ระบุไคลเอนต์ที่ลงทะเบียนเองเฉพาะเมื่อจำเป็น';
       case 'video_source_scrape_anidb_client_version':
         return 'เวอร์ชันไคลเอนต์ AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'เวอร์ชันไคลเอนต์ที่ลงทะเบียนกับ AniDB ต้องเป็นจำนวนเต็มบวก การระบุไฟล์ผ่าน UDP ต้องใช้ข้อมูลเข้าสู่ระบบบัญชีของคุณด้วย';
+        return 'เฉพาะไคลเอนต์ที่กำหนดเองเท่านั้นที่ต้องระบุเวอร์ชันที่ลงทะเบียนไว้ที่นี่ Fushi ดูแลข้อมูลประจำตัวแอปเริ่มต้นให้ แต่ยังต้องใช้ข้อมูลเข้าสู่ระบบ AniDB ส่วนตัวของคุณ';
       case 'video_scrape_view_source':
         return 'ดูรายละเอียดแหล่ง';
       case 'video_setting_auto_scrape_hint':
@@ -287495,6 +289359,60 @@ extension on _StringsTh {
         return 'ชื่อผู้ใช้ AniDB';
       case 'video_anidb_password':
         return 'รหัสผ่าน AniDB';
+      case 'onboarding_online_services_title':
+        return 'บริการออนไลน์ (ไม่บังคับ)';
+      case 'onboarding_online_services_hint':
+        return 'ดูข้อมูลบัญชี คีย์ API และบริการที่มีให้ใช้';
+      case 'onboarding_online_services_body':
+        return 'ตั้งค่าเฉพาะบริการที่ต้องการ หรือข้ามขั้นตอนนี้ การเลือกบทแนะนำนี้จะไม่เปิดใช้บริการหรือส่งข้อมูลเข้าสู่ระบบ และการไม่เลือกจะไม่เปลี่ยนการตั้งค่าเดิม';
+      case 'onboarding_online_services_configure':
+        return 'เปิดการตั้งค่าบริการออนไลน์';
+      case 'onboarding_online_services_link':
+        return 'เปิดหน้าบัญชี / API อย่างเป็นทางการ';
+      case 'onboarding_online_services_account':
+        return 'ต้องมีบัญชีส่วนตัว';
+      case 'onboarding_online_services_ready':
+        return 'ไม่ต้องลงทะเบียน';
+      case 'onboarding_online_services_embedded':
+        return 'มีข้อมูลรับรองของแอปในตัว';
+      case 'onboarding_online_services_key':
+        return 'ต้องมีคีย์ API';
+      case 'onboarding_online_services_build_missing':
+        return 'บิลด์นี้ไม่มีข้อมูลรับรองของแอป';
+      case 'onboarding_online_services_server':
+        return 'เชื่อมต่อเซิร์ฟเวอร์ที่มีอยู่';
+      case 'onboarding_online_services_anidb':
+        return 'ระบุอนิเมะและตอนด้วยลายนิ้วมือไฟล์ Fushi มีไคลเอนต์แอปที่ลงทะเบียนไว้แล้ว แต่คุณยังต้องมีบัญชี AniDB ของตนเอง กรอกบัญชีในการตั้งค่าและเปิดใช้การระบุไฟล์ด้วยแฮชเมื่อต้องการ';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan ให้ข้อมูลเมตา ส่วน AniList รองรับการค้นพบและการค้นหาที่เกี่ยวข้อง การค้นหาข้อมูลสาธารณะแบบอ่านอย่างเดียวไม่ต้องใช้บัญชีส่วนตัวหรือคีย์ API';
+      case 'onboarding_online_services_tmdb':
+        return 'บิลด์นี้มีคีย์ TMDB ในตัวสำหรับข้อมูลเมตาสำรองและข้อมูลที่ขาดหาย เพิ่มคีย์ของคุณเองเฉพาะเมื่อต้องการใช้โควตาของตนเอง';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'บิลด์นี้ไม่มีคีย์ TMDB หากต้องการใช้ TMDB เป็นแหล่งข้อมูลเมตาสำรอง ให้ขอคีย์ API แล้วกรอกในการตั้งค่า โดย MAL / Jikan ยังใช้ได้ตามปกติ';
+      case 'onboarding_online_services_jimaku':
+        return 'ค้นหาคำบรรยาย ลงทะเบียนหรือเข้าสู่ระบบ Jimaku สร้างคีย์ API ส่วนตัวในหน้าบัญชี แล้วกรอกในการตั้งค่าและเปิดใช้แหล่งคำบรรยายนี้';
+      case 'onboarding_online_services_opensubtitles':
+        return 'ค้นหาและดาวน์โหลดคำบรรยาย ลงทะเบียนบัญชี สร้างแอปสำหรับใช้ API และรับคีย์ API การเข้าสู่ระบบผู้ใช้เป็นทางเลือก โดยจะใช้โควตาดาวน์โหลดของบัญชีนั้น';
+      case 'onboarding_online_services_dandanplay':
+        return 'บิลด์นี้มีข้อมูลรับรองแอปสำหรับบริการดันมาคุในตัว ผู้ใช้ไม่ต้องขอ API เพียงเปิดใช้การจับคู่ดันมาคุออนไลน์เมื่อต้องการ';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'บิลด์นี้ไม่มีข้อมูลรับรองแอปสำหรับดันมาคุ จึงไม่สามารถจับคู่ออนไลน์ผ่านบริการอย่างเป็นทางการได้ ผู้พัฒนาจะเป็นผู้จัดหาข้อมูลนี้ คุณไม่ต้องลงทะเบียน API ส่วนตัว';
+      case 'onboarding_online_services_servers':
+        return 'บริการเหล่านี้ไม่มีหน้าลงทะเบียนร่วมกัน กรอกที่อยู่เซิร์ฟเวอร์ที่คุณมีอยู่ พร้อมบัญชีหรือคีย์จากผู้ดูแลเซิร์ฟเวอร์ หรือข้ามได้หากไม่มีเซิร์ฟเวอร์';
+      case 'video_online_services_setup_title':
+        return 'ตั้งค่าบริการออนไลน์ที่ไม่บังคับ';
+      case 'video_online_services_setup_description':
+        return 'บัญชีและคีย์ API เสริมช่วยปรับปรุงการระบุวิดีโอและค้นหาคำบรรยาย การเล่นพื้นฐานใช้งานได้โดยไม่ต้องตั้งค่า';
+      case 'video_online_services_setup_register':
+        return 'เรียนรู้และลงทะเบียนบริการ';
+      case 'video_online_services_setup_settings':
+        return 'เปิดการตั้งค่า';
+      case 'video_online_services_setup_dismiss':
+        return 'ไม่ต้องแสดงอีก';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'แอปมีคีย์ API ในตัว คุณสามารถเลือกเข้าสู่ระบบบัญชี OpenSubtitles ของตนเองเพื่อใช้โควตาดาวน์โหลดส่วนตัว หรือใช้คีย์ API ของคุณเองได้';
+      case 'video_opensubtitles_app_key_hint':
+        return 'เว้นว่างไว้เพื่อใช้คีย์ API ที่มีอยู่ในแอป';
       default:
         return null;
     }
@@ -294966,11 +296884,11 @@ extension on _StringsTr {
       case 'video_source_scrape_anidb_client':
         return 'AniDB istemci adı';
       case 'video_source_scrape_anidb_client_hint':
-        return 'UDP üzerinden dosya tanımlama için kayıtlı AniDB istemci adı; kayıtlı bir istemci olmadan karma ile tanımlama kullanılamaz.';
+        return 'Fushi kayıtlı bir uygulama istemcisi içerir. Normalde boş bırakın; yalnızca gerekirse özel bir kayıtlı istemci belirtin.';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB istemci sürümü';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'AniDB’ye kaydedilmiş, pozitif tam sayı olan istemci sürümü. UDP üzerinden dosya tanımlama için hesap giriş bilgileriniz de gereklidir.';
+        return 'Burada yalnızca özel istemcilerin kendi kayıtlı sürümü gerekir. Fushi varsayılan uygulama kimliğini yönetir; kişisel AniDB giriş bilgileriniz yine de gereklidir.';
       case 'video_scrape_view_source':
         return 'Kaynak ayrıntılarını görüntüle';
       case 'video_setting_auto_scrape_hint':
@@ -296525,6 +298443,60 @@ extension on _StringsTr {
         return 'AniDB kullanıcı adı';
       case 'video_anidb_password':
         return 'AniDB parolası';
+      case 'onboarding_online_services_title':
+        return 'Çevrimiçi hizmetler (isteğe bağlı)';
+      case 'onboarding_online_services_hint':
+        return 'Hesapları, API anahtarlarını ve kullanılabilir hizmetleri keşfedin';
+      case 'onboarding_online_services_body':
+        return 'Yalnızca ihtiyaç duyduğunuz hizmetleri kurun veya bu adımı atlayın. Bu öğreticiyi seçmek hizmetleri etkinleştirmez ya da kimlik bilgilerini göndermez; seçmemek de mevcut ayarları değiştirmez.';
+      case 'onboarding_online_services_configure':
+        return 'Çevrimiçi hizmet ayarlarını aç';
+      case 'onboarding_online_services_link':
+        return 'Resmî hesap / API sayfasını aç';
+      case 'onboarding_online_services_account':
+        return 'Kişisel hesap gerekli';
+      case 'onboarding_online_services_ready':
+        return 'Kayıt gerekmiyor';
+      case 'onboarding_online_services_embedded':
+        return 'Uygulama kimlik bilgileri dahil';
+      case 'onboarding_online_services_key':
+        return 'API anahtarı gerekli';
+      case 'onboarding_online_services_build_missing':
+        return 'Bu derlemede uygulama kimlik bilgileri yok';
+      case 'onboarding_online_services_server':
+        return 'Mevcut bir sunucuya bağlan';
+      case 'onboarding_online_services_anidb':
+        return 'Anime ve bölümleri dosya parmak iziyle tanımlayın. Fushi kayıtlı bir uygulama istemcisine sahiptir; yine de kendi AniDB hesabınız gerekir. Ayarlara girin ve istediğinizde dosya karmasıyla tanımlamayı etkinleştirin.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan meta veri sağlar; AniList keşfi ve ilgili sorguları destekler. Herkese açık salt okunur sorgular için kişisel hesap veya API anahtarı gerekmez.';
+      case 'onboarding_online_services_tmdb':
+        return 'Bu derleme, yedek meta veriler ve eksik alanlar için bir TMDB anahtarı içerir. Yalnızca kendi kotanızı kullanmak istiyorsanız kendi anahtarınızı ekleyin.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Bu derlemede TMDB anahtarı yok. TMDB yedek meta verilerine ihtiyacınız varsa bir API anahtarı edinin ve ayarlara girin; MAL / Jikan kullanılabilir olmaya devam eder.';
+      case 'onboarding_online_services_jimaku':
+        return 'Altyazı bulun. Jimaku’ya kaydolun veya giriş yapın, hesap sayfanızda kişisel bir API anahtarı oluşturun, ardından ayarlara girip bu altyazı kaynağını etkinleştirin.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Altyazı bulun ve indirin. Bir hesap açın, API tüketicisi oluşturun ve API anahtarı alın. Kullanıcı girişi isteğe bağlıdır ve hesabın indirme kotasını kullanır.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Bu derleme danmaku hizmetinin uygulama kimlik bilgilerini içerir. Kullanıcıların API başvurusu yapması gerekmez; istediğinizde çevrimiçi danmaku eşleştirmesini etkinleştirin.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Bu derlemede danmaku uygulama kimlik bilgileri olmadığından resmî çevrimiçi eşleştirme kullanılamaz. Bu bilgileri geliştirici sağlar; kişisel API kaydı yapmanız gerekmez.';
+      case 'onboarding_online_services_servers':
+        return 'Bu hizmetlerin ortak bir kayıt sayfası yoktur. Mevcut sunucunuzun adresini ve yöneticisinin sağladığı hesabı veya anahtarı girin; sunucunuz yoksa atlayın.';
+      case 'video_online_services_setup_title':
+        return 'İsteğe bağlı çevrimiçi hizmetleri yapılandır';
+      case 'video_online_services_setup_description':
+        return 'İsteğe bağlı hesaplar ve API anahtarları video tanımlamayı ve altyazı aramayı iyileştirebilir. Temel oynatma bunlar olmadan da çalışır.';
+      case 'video_online_services_setup_register':
+        return 'Hizmetleri öğren ve kaydol';
+      case 'video_online_services_setup_settings':
+        return 'Ayarları aç';
+      case 'video_online_services_setup_dismiss':
+        return 'Bir daha gösterme';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Uygulamanın API anahtarı dahildir. İsterseniz kişisel indirme kotanız için OpenSubtitles hesabınıza giriş yapabilir veya kendi API anahtarınızı kullanabilirsiniz.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Uygulamayla gelen API anahtarını kullanmak için boş bırakın.';
       default:
         return null;
     }
@@ -303989,11 +305961,11 @@ extension on _StringsVi {
       case 'video_source_scrape_anidb_client':
         return 'Tên client AniDB';
       case 'video_source_scrape_anidb_client_hint':
-        return 'Tên ứng dụng khách AniDB đã đăng ký để nhận diện tệp qua UDP; không thể nhận diện bằng mã băm nếu chưa có ứng dụng khách đã đăng ký.';
+        return 'Fushi đã tích hợp ứng dụng khách đã đăng ký. Thông thường hãy để trống; chỉ nhập ứng dụng khách tùy chỉnh đã đăng ký khi cần.';
       case 'video_source_scrape_anidb_client_version':
         return 'Phiên bản client AniDB';
       case 'video_source_scrape_anidb_client_version_hint':
-        return 'Phiên bản ứng dụng khách đã đăng ký với AniDB, là số nguyên dương. Nhận diện tệp qua UDP cũng cần thông tin đăng nhập tài khoản của bạn.';
+        return 'Chỉ ứng dụng khách tùy chỉnh mới cần nhập phiên bản đã đăng ký tại đây. Fushi quản lý danh tính ứng dụng mặc định; bạn vẫn cần thông tin đăng nhập AniDB cá nhân.';
       case 'video_scrape_view_source':
         return 'Xem chi tiết nguồn';
       case 'video_setting_auto_scrape_hint':
@@ -305549,6 +307521,60 @@ extension on _StringsVi {
         return 'Tên người dùng AniDB';
       case 'video_anidb_password':
         return 'Mật khẩu AniDB';
+      case 'onboarding_online_services_title':
+        return 'Dịch vụ trực tuyến (tùy chọn)';
+      case 'onboarding_online_services_hint':
+        return 'Tìm hiểu tài khoản, khóa API và các dịch vụ hiện có';
+      case 'onboarding_online_services_body':
+        return 'Chỉ thiết lập các dịch vụ bạn cần hoặc bỏ qua bước này. Chọn hướng dẫn này không bật dịch vụ hay gửi thông tin đăng nhập; không chọn cũng không thay đổi cài đặt hiện có.';
+      case 'onboarding_online_services_configure':
+        return 'Mở cài đặt dịch vụ trực tuyến';
+      case 'onboarding_online_services_link':
+        return 'Mở trang tài khoản / API chính thức';
+      case 'onboarding_online_services_account':
+        return 'Cần tài khoản cá nhân';
+      case 'onboarding_online_services_ready':
+        return 'Không cần đăng ký';
+      case 'onboarding_online_services_embedded':
+        return 'Đã tích hợp thông tin xác thực ứng dụng';
+      case 'onboarding_online_services_key':
+        return 'Cần khóa API';
+      case 'onboarding_online_services_build_missing':
+        return 'Bản dựng này thiếu thông tin xác thực ứng dụng';
+      case 'onboarding_online_services_server':
+        return 'Kết nối máy chủ hiện có';
+      case 'onboarding_online_services_anidb':
+        return 'Nhận diện anime và tập phim bằng dấu vân tay tệp. Fushi có ứng dụng khách đã đăng ký; bạn vẫn cần tài khoản AniDB của riêng mình. Nhập tài khoản trong cài đặt và bật nhận diện tệp bằng mã băm khi muốn.';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan cung cấp siêu dữ liệu; AniList hỗ trợ khám phá và các truy vấn liên quan. Truy vấn công khai chỉ đọc không cần tài khoản cá nhân hoặc khóa API.';
+      case 'onboarding_online_services_tmdb':
+        return 'Bản dựng này đã tích hợp khóa TMDB cho dữ liệu dự phòng và các trường còn thiếu. Chỉ thêm khóa riêng nếu bạn muốn dùng hạn mức của mình.';
+      case 'onboarding_online_services_tmdb_missing':
+        return 'Bản dựng này chưa có khóa TMDB. Hãy xin khóa API rồi nhập trong cài đặt nếu cần TMDB làm nguồn siêu dữ liệu dự phòng; MAL / Jikan vẫn dùng được.';
+      case 'onboarding_online_services_jimaku':
+        return 'Tìm phụ đề. Đăng ký hoặc đăng nhập Jimaku, tạo khóa API cá nhân trên trang tài khoản, nhập khóa vào cài đặt rồi bật nguồn phụ đề này.';
+      case 'onboarding_online_services_opensubtitles':
+        return 'Tìm và tải phụ đề. Đăng ký tài khoản, tạo ứng dụng sử dụng API để lấy khóa API. Đăng nhập người dùng là tùy chọn và sử dụng hạn mức tải xuống của tài khoản.';
+      case 'onboarding_online_services_dandanplay':
+        return 'Bản dựng này đã tích hợp thông tin xác thực ứng dụng cho dịch vụ bình luận chạy trên màn hình. Người dùng không cần xin API; chỉ cần bật khớp bình luận trực tuyến khi muốn.';
+      case 'onboarding_online_services_dandanplay_missing':
+        return 'Bản dựng này chưa có thông tin xác thực ứng dụng cho dịch vụ bình luận chạy trên màn hình, nên chưa dùng được tính năng khớp trực tuyến chính thức. Nhà phát triển cung cấp thông tin này; bạn không cần đăng ký API cá nhân.';
+      case 'onboarding_online_services_servers':
+        return 'Các dịch vụ này không có trang đăng ký chung. Nhập địa chỉ máy chủ hiện có và tài khoản hoặc khóa do quản trị viên cung cấp, hoặc bỏ qua nếu bạn chưa có máy chủ.';
+      case 'video_online_services_setup_title':
+        return 'Thiết lập dịch vụ trực tuyến tùy chọn';
+      case 'video_online_services_setup_description':
+        return 'Tài khoản và khóa API tùy chọn giúp cải thiện nhận diện video và tìm phụ đề. Phát video cơ bản không cần chúng.';
+      case 'video_online_services_setup_register':
+        return 'Tìm hiểu và đăng ký dịch vụ';
+      case 'video_online_services_setup_settings':
+        return 'Mở cài đặt';
+      case 'video_online_services_setup_dismiss':
+        return 'Không hiển thị lại';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return 'Ứng dụng đã tích hợp khóa API. Bạn có thể đăng nhập tài khoản OpenSubtitles của mình để dùng hạn mức tải xuống cá nhân hoặc sử dụng khóa API riêng.';
+      case 'video_opensubtitles_app_key_hint':
+        return 'Để trống để dùng khóa API tích hợp trong ứng dụng.';
       default:
         return null;
     }
@@ -312952,11 +314978,11 @@ extension on _StringsZhCn {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 客户端名称';
       case 'video_source_scrape_anidb_client_hint':
-        return '用于 UDP 文件识别的已注册 AniDB 客户端名称；未配置注册客户端时无法进行哈希识别。';
+        return 'Fushi 已内置注册的应用客户端，通常留空即可；仅按需填写自定义注册客户端。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 客户端版本';
       case 'video_source_scrape_anidb_client_version_hint':
-        return '向 AniDB 登记的正整数客户端版本；UDP 文件识别还需要账号凭据。';
+        return '仅自定义客户端需要在此填写其注册版本。默认应用身份由 Fushi 维护，个人 AniDB 登录仍需自行配置。';
       case 'video_scrape_view_source':
         return '查看来源详情';
       case 'video_setting_auto_scrape_hint':
@@ -314494,6 +316520,60 @@ extension on _StringsZhCn {
         return 'AniDB 用户名';
       case 'video_anidb_password':
         return 'AniDB 密码';
+      case 'onboarding_online_services_title':
+        return '在线服务（可选）';
+      case 'onboarding_online_services_hint':
+        return '按需了解账号、API 密钥和已有服务';
+      case 'onboarding_online_services_body':
+        return '按需配置你要用的服务，也可以跳过。勾选此教程不会启用服务或提交账号，未勾选也不会改变已有设置。';
+      case 'onboarding_online_services_configure':
+        return '打开在线服务设置';
+      case 'onboarding_online_services_link':
+        return '打开官方账号 / API 页面';
+      case 'onboarding_online_services_account':
+        return '需要个人账号';
+      case 'onboarding_online_services_ready':
+        return '无需注册';
+      case 'onboarding_online_services_embedded':
+        return '应用身份已内置';
+      case 'onboarding_online_services_key':
+        return '需要 API 密钥';
+      case 'onboarding_online_services_build_missing':
+        return '此构建未配置应用身份';
+      case 'onboarding_online_services_server':
+        return '连接已有服务器';
+      case 'onboarding_online_services_anidb':
+        return '文件指纹辅助识别动画作品和分集。Fushi 已注册应用客户端，你仍需注册自己的 AniDB 账号，在设置中填写账号并自行开启文件哈希识别。';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan 提供作品资料；AniList 用于发现和相关查询。公共只读查询无需个人账号或 API 密钥。';
+      case 'onboarding_online_services_tmdb':
+        return '此构建已内置 TMDB 密钥，用于资料补缺与兜底。只有需要自己的配额时才配置个人密钥。';
+      case 'onboarding_online_services_tmdb_missing':
+        return '此构建未内置 TMDB 密钥。需要 TMDB 资料兜底时，请申请 API 密钥并填入设置；MAL / Jikan 仍可使用。';
+      case 'onboarding_online_services_jimaku':
+        return '用于查找字幕。注册或登录 Jimaku 后，在账号页面生成个人 API 密钥，填入设置并开启字幕来源。';
+      case 'onboarding_online_services_opensubtitles':
+        return '用于查找和下载字幕。注册账号后在 API 页面创建应用并获取 API 密钥。用户登录为可选项，可使用对应账号的下载配额。';
+      case 'onboarding_online_services_dandanplay':
+        return '此构建已内置弹幕服务应用身份，无需每位用户申请 API；按需开启在线弹幕匹配即可。';
+      case 'onboarding_online_services_dandanplay_missing':
+        return '此构建未配置弹幕服务应用身份，官方在线匹配暂不可用。应用身份由开发者申请，不需要你注册个人 API。';
+      case 'onboarding_online_services_servers':
+        return '这些服务没有统一注册入口。请填写你已有服务器的地址，以及服务管理员提供的账号或密钥；没有服务器可跳过。';
+      case 'video_online_services_setup_title':
+        return '配置可选在线服务';
+      case 'video_online_services_setup_description':
+        return '按需配置账号或 API 密钥，可增强文件识别和字幕搜索。基础播放不受影响。';
+      case 'video_online_services_setup_register':
+        return '了解和注册服务';
+      case 'video_online_services_setup_settings':
+        return '去设置';
+      case 'video_online_services_setup_dismiss':
+        return '永久关闭提示';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return '应用已内置 API 密钥。可选登录自己的 OpenSubtitles 账号使用个人下载额度，也可以填写自己的 API 密钥。';
+      case 'video_opensubtitles_app_key_hint':
+        return '留空使用应用内置 API 密钥。';
       default:
         return null;
     }
@@ -321898,11 +323978,11 @@ extension on _StringsZhHk {
       case 'video_source_scrape_anidb_client':
         return 'AniDB 客戶端名稱';
       case 'video_source_scrape_anidb_client_hint':
-        return '用於 UDP 檔案識別的已註冊 AniDB 用戶端名稱；未設定已註冊用戶端時無法進行雜湊識別。';
+        return 'Fushi 已內置註冊的應用程式用戶端，通常留空即可；僅按需填寫自訂的已註冊用戶端。';
       case 'video_source_scrape_anidb_client_version':
         return 'AniDB 客戶端版本';
       case 'video_source_scrape_anidb_client_version_hint':
-        return '向 AniDB 登記的正整數用戶端版本；UDP 檔案識別亦需要帳戶憑證。';
+        return '只有自訂用戶端需要在此填寫其註冊版本。預設應用程式身份由 Fushi 維護，個人 AniDB 登入仍需自行設定。';
       case 'video_scrape_view_source':
         return '查看來源詳情';
       case 'video_setting_auto_scrape_hint':
@@ -323447,6 +325527,60 @@ extension on _StringsZhHk {
         return 'AniDB 使用者名稱';
       case 'video_anidb_password':
         return 'AniDB 密碼';
+      case 'onboarding_online_services_title':
+        return '網上服務（可選）';
+      case 'onboarding_online_services_hint':
+        return '按需了解帳戶、API 金鑰和可用服務';
+      case 'onboarding_online_services_body':
+        return '按需設定你要使用的服務，也可以略過。勾選此教學不會啟用服務或提交帳戶資料，不勾選亦不會更改現有設定。';
+      case 'onboarding_online_services_configure':
+        return '開啟網上服務設定';
+      case 'onboarding_online_services_link':
+        return '開啟官方帳戶 / API 頁面';
+      case 'onboarding_online_services_account':
+        return '需要個人帳戶';
+      case 'onboarding_online_services_ready':
+        return '毋須註冊';
+      case 'onboarding_online_services_embedded':
+        return '已內置應用程式憑證';
+      case 'onboarding_online_services_key':
+        return '需要 API 金鑰';
+      case 'onboarding_online_services_build_missing':
+        return '此版本未設定應用程式憑證';
+      case 'onboarding_online_services_server':
+        return '連接現有伺服器';
+      case 'onboarding_online_services_anidb':
+        return '透過檔案指紋輔助識別動畫作品和分集。Fushi 已註冊應用程式用戶端，你仍需註冊自己的 AniDB 帳戶，在設定中填寫帳戶並自行啟用檔案雜湊識別。';
+      case 'onboarding_online_services_public':
+        return 'MAL / Jikan 提供作品資料；AniList 用於探索和相關查詢。公開唯讀查詢毋須個人帳戶或 API 金鑰。';
+      case 'onboarding_online_services_tmdb':
+        return '此版本已內置 TMDB 金鑰，用於資料補缺及後備。只有需要自己的配額時才設定個人金鑰。';
+      case 'onboarding_online_services_tmdb_missing':
+        return '此版本未內置 TMDB 金鑰。如需 TMDB 後備資料，請申請 API 金鑰並填入設定；MAL / Jikan 仍可使用。';
+      case 'onboarding_online_services_jimaku':
+        return '用於尋找字幕。註冊或登入 Jimaku 後，在帳戶頁面產生個人 API 金鑰，填入設定並啟用此字幕來源。';
+      case 'onboarding_online_services_opensubtitles':
+        return '用於尋找和下載字幕。註冊帳戶後在 API 頁面建立應用程式並取得 API 金鑰。使用者登入屬可選項目，可使用對應帳戶的下載配額。';
+      case 'onboarding_online_services_dandanplay':
+        return '此版本已內置彈幕服務應用程式憑證，毋須每位使用者申請 API；按需啟用網上彈幕配對即可。';
+      case 'onboarding_online_services_dandanplay_missing':
+        return '此版本未設定彈幕服務應用程式憑證，官方網上配對暫時無法使用。應用程式憑證由開發者申請，毋須你註冊個人 API。';
+      case 'onboarding_online_services_servers':
+        return '這些服務沒有統一註冊頁面。請填寫現有伺服器的地址，以及服務管理員提供的帳戶或金鑰；沒有伺服器可略過。';
+      case 'video_online_services_setup_title':
+        return '設定可選網上服務';
+      case 'video_online_services_setup_description':
+        return '按需設定帳戶或 API 金鑰，可增強檔案識別和字幕搜尋。基本播放不受影響。';
+      case 'video_online_services_setup_register':
+        return '了解及註冊服務';
+      case 'video_online_services_setup_settings':
+        return '前往設定';
+      case 'video_online_services_setup_dismiss':
+        return '不再顯示提示';
+      case 'onboarding_online_services_opensubtitles_embedded':
+        return '應用程式已內置 API 金鑰。可選擇登入自己的 OpenSubtitles 帳戶使用個人下載配額，亦可填寫自己的 API 金鑰。';
+      case 'video_opensubtitles_app_key_hint':
+        return '留空以使用應用程式內置的 API 金鑰。';
       default:
         return null;
     }
