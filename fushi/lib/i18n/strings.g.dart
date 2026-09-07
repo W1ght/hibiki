@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 74086 (4358 per locale)
+/// Strings: 74460 (4380 per locale)
 ///
-/// Built on 2026-09-06 at 19:59 UTC
+/// Built on 2026-09-07 at 07:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6026,6 +6026,33 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_reader_open_audiobook => 'Open audiobook panel';
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  String get onboarding_pack_download_discard => 'Discard download';
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  String get download_task_group_by => 'Group by';
+  String get download_task_group_none => 'No grouping';
+  String get download_task_group_collection => 'Collection / series';
+  String get download_task_group_kind => 'Media type';
+  String get download_task_group_status => 'Status';
+  String get download_task_collection_unassigned => 'No collection';
+  String get download_task_groups_collapse => 'Collapse all groups';
+  String get download_task_groups_expand => 'Expand all groups';
+  String get download_task_sort_direction => 'Reverse sort order';
+  String get download_task_status_attention => 'Needs attention';
+  String get download_task_status_active => 'In progress';
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -16237,6 +16264,55 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -26672,6 +26748,55 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -37160,6 +37285,55 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -47681,6 +47855,55 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -58009,6 +58232,55 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -68426,6 +68698,55 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -78235,6 +78556,55 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -88054,6 +88424,55 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -98429,6 +98848,55 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -108857,6 +109325,55 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -119263,6 +119780,55 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -129469,6 +130035,55 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -139792,6 +140407,55 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -150086,6 +150750,55 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 // Path: <root>
@@ -159539,6 +160252,51 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       '运行于 ${provider} · 静态融合图';
+  @override
+  String get onboarding_pack_download_discard => '放弃下载';
+  @override
+  String get onboarding_pack_discard_confirm => '盘上的半截包会被删除，以后要重新下载就得从头开始。';
+  @override
+  String get onboarding_pack_discard_failed => '无法删除下载文件。请关闭占用文件的程序后重试。';
+  @override
+  String get onboarding_pack_discard_running => '正在清理下载文件…';
+  @override
+  String get onboarding_pack_tutorial_ready => '资源已准备好';
+  @override
+  String get onboarding_pack_tutorial_desc => '词典和发音资源已就绪，试试第一次查词吧。';
+  @override
+  String get onboarding_pack_tutorial_start => '开始查词教程';
+  @override
+  String get onboarding_pack_tutorial_skip => '暂时跳过';
+  @override
+  String get onboarding_pack_download_ready_hint => '导入后即可使用词典和发音资源，也可以稍后再导入。';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      '推荐包已下载。准备好后，点击底部的「现在导入」。';
+  @override
+  String get download_task_group_by => '分组';
+  @override
+  String get download_task_group_none => '不分组';
+  @override
+  String get download_task_group_collection => '合集／作品';
+  @override
+  String get download_task_group_kind => '媒体类型';
+  @override
+  String get download_task_group_status => '状态';
+  @override
+  String get download_task_collection_unassigned => '未归属合集';
+  @override
+  String get download_task_groups_collapse => '收起所有分组';
+  @override
+  String get download_task_groups_expand => '展开所有分组';
+  @override
+  String get download_task_sort_direction => '切换升降序';
+  @override
+  String get download_task_status_attention => '需要处理';
+  @override
+  String get download_task_status_active => '进行中';
+  @override
+  String get download_task_status_filter => '任务状态';
 }
 
 // Path: <root>
@@ -169041,6 +169799,55 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_running_on_static({required Object provider}) =>
       'Running on ${provider} · fused static graph';
+  @override
+  String get onboarding_pack_download_discard => 'Discard download';
+  @override
+  String get onboarding_pack_discard_confirm =>
+      'The partial download on disk will be deleted. Downloading again later starts from zero.';
+  @override
+  String get onboarding_pack_discard_failed =>
+      'Could not remove the downloaded files. Close any app using them, then try again.';
+  @override
+  String get onboarding_pack_discard_running => 'Removing downloaded files…';
+  @override
+  String get onboarding_pack_tutorial_ready => 'Your resources are ready';
+  @override
+  String get onboarding_pack_tutorial_desc =>
+      'Try looking up a word with your new dictionaries and pronunciation resources.';
+  @override
+  String get onboarding_pack_tutorial_start => 'Start lookup tutorial';
+  @override
+  String get onboarding_pack_tutorial_skip => 'Not now';
+  @override
+  String get onboarding_pack_download_ready_hint =>
+      'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+  @override
+  String get onboarding_pack_download_ready_notice =>
+      'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+  @override
+  String get download_task_group_by => 'Group by';
+  @override
+  String get download_task_group_none => 'No grouping';
+  @override
+  String get download_task_group_collection => 'Collection / series';
+  @override
+  String get download_task_group_kind => 'Media type';
+  @override
+  String get download_task_group_status => 'Status';
+  @override
+  String get download_task_collection_unassigned => 'No collection';
+  @override
+  String get download_task_groups_collapse => 'Collapse all groups';
+  @override
+  String get download_task_groups_expand => 'Expand all groups';
+  @override
+  String get download_task_sort_direction => 'Reverse sort order';
+  @override
+  String get download_task_status_attention => 'Needs attention';
+  @override
+  String get download_task_status_active => 'In progress';
+  @override
+  String get download_task_status_filter => 'Task status';
 }
 
 /// Flat map(s) containing all translations.
@@ -178000,6 +178807,50 @@ extension on _StringsEn {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -186954,6 +187805,50 @@ extension on _StringsAr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -195953,6 +196848,50 @@ extension on _StringsDe {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -204943,6 +205882,50 @@ extension on _StringsEs {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -213942,6 +214925,50 @@ extension on _StringsFr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -222912,6 +223939,50 @@ extension on _StringsId {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -231904,6 +232975,50 @@ extension on _StringsIt {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -240823,6 +241938,50 @@ extension on _StringsJa {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -249746,6 +250905,50 @@ extension on _StringsKo {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -258731,6 +259934,50 @@ extension on _StringsNl {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -267711,6 +268958,50 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -276698,6 +277989,50 @@ extension on _StringsRu {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -285657,6 +286992,50 @@ extension on _StringsTh {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -294631,6 +296010,50 @@ extension on _StringsTr {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -303599,6 +305022,50 @@ extension on _StringsVi {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
@@ -312488,6 +313955,50 @@ extension on _StringsZhCn {
         return '打开有声书面板';
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) => '运行于 ${provider} · 静态融合图';
+      case 'onboarding_pack_download_discard':
+        return '放弃下载';
+      case 'onboarding_pack_discard_confirm':
+        return '盘上的半截包会被删除，以后要重新下载就得从头开始。';
+      case 'onboarding_pack_discard_failed':
+        return '无法删除下载文件。请关闭占用文件的程序后重试。';
+      case 'onboarding_pack_discard_running':
+        return '正在清理下载文件…';
+      case 'onboarding_pack_tutorial_ready':
+        return '资源已准备好';
+      case 'onboarding_pack_tutorial_desc':
+        return '词典和发音资源已就绪，试试第一次查词吧。';
+      case 'onboarding_pack_tutorial_start':
+        return '开始查词教程';
+      case 'onboarding_pack_tutorial_skip':
+        return '暂时跳过';
+      case 'onboarding_pack_download_ready_hint':
+        return '导入后即可使用词典和发音资源，也可以稍后再导入。';
+      case 'onboarding_pack_download_ready_notice':
+        return '推荐包已下载。准备好后，点击底部的「现在导入」。';
+      case 'download_task_group_by':
+        return '分组';
+      case 'download_task_group_none':
+        return '不分组';
+      case 'download_task_group_collection':
+        return '合集／作品';
+      case 'download_task_group_kind':
+        return '媒体类型';
+      case 'download_task_group_status':
+        return '状态';
+      case 'download_task_collection_unassigned':
+        return '未归属合集';
+      case 'download_task_groups_collapse':
+        return '收起所有分组';
+      case 'download_task_groups_expand':
+        return '展开所有分组';
+      case 'download_task_sort_direction':
+        return '切换升降序';
+      case 'download_task_status_attention':
+        return '需要处理';
+      case 'download_task_status_active':
+        return '进行中';
+      case 'download_task_status_filter':
+        return '任务状态';
       default:
         return null;
     }
@@ -321385,6 +322896,50 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_running_on_static':
         return ({required Object provider}) =>
             'Running on ${provider} · fused static graph';
+      case 'onboarding_pack_download_discard':
+        return 'Discard download';
+      case 'onboarding_pack_discard_confirm':
+        return 'The partial download on disk will be deleted. Downloading again later starts from zero.';
+      case 'onboarding_pack_discard_failed':
+        return 'Could not remove the downloaded files. Close any app using them, then try again.';
+      case 'onboarding_pack_discard_running':
+        return 'Removing downloaded files…';
+      case 'onboarding_pack_tutorial_ready':
+        return 'Your resources are ready';
+      case 'onboarding_pack_tutorial_desc':
+        return 'Try looking up a word with your new dictionaries and pronunciation resources.';
+      case 'onboarding_pack_tutorial_start':
+        return 'Start lookup tutorial';
+      case 'onboarding_pack_tutorial_skip':
+        return 'Not now';
+      case 'onboarding_pack_download_ready_hint':
+        return 'Import the pack to use its dictionaries and pronunciation resources. You can do this later.';
+      case 'onboarding_pack_download_ready_notice':
+        return 'Recommended pack downloaded. Choose Import now in the bottom bar when you are ready.';
+      case 'download_task_group_by':
+        return 'Group by';
+      case 'download_task_group_none':
+        return 'No grouping';
+      case 'download_task_group_collection':
+        return 'Collection / series';
+      case 'download_task_group_kind':
+        return 'Media type';
+      case 'download_task_group_status':
+        return 'Status';
+      case 'download_task_collection_unassigned':
+        return 'No collection';
+      case 'download_task_groups_collapse':
+        return 'Collapse all groups';
+      case 'download_task_groups_expand':
+        return 'Expand all groups';
+      case 'download_task_sort_direction':
+        return 'Reverse sort order';
+      case 'download_task_status_attention':
+        return 'Needs attention';
+      case 'download_task_status_active':
+        return 'In progress';
+      case 'download_task_status_filter':
+        return 'Task status';
       default:
         return null;
     }
