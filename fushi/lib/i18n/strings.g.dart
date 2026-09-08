@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76279 (4487 per locale)
+/// Strings: 76466 (4498 per locale)
 ///
-/// Built on 2026-09-08 at 19:03 UTC
+/// Built on 2026-09-08 at 19:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6221,6 +6221,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_metadata_provider_tmdb => 'TMDB';
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  String get discovery_hidden_show => 'Show';
+  String get discovery_nyaa_filter_all => 'All';
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  String get discovery_badge_trusted => 'Trusted';
+  String get discovery_badge_remake => 'Remake';
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -16757,6 +16770,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -27520,6 +27557,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -38336,6 +38397,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -49186,6 +49271,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -59839,6 +59948,30 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -70583,6 +70716,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -80707,6 +80864,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -90841,6 +91022,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -101543,6 +101748,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -112297,6 +112526,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -123029,6 +123282,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -133559,6 +133836,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -144207,6 +144508,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -154826,6 +155151,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 // Path: <root>
@@ -164578,6 +164927,30 @@ class _StringsZhCn extends _StringsEn {
   String get video_metadata_provider_tmdb => 'TMDB';
   @override
   String get video_source_scrape_provider_follow_global => '跟随全局默认';
+  @override
+  String get discovery_filter_hide_zero_seeders => '隐藏无人做种';
+  @override
+  String get discovery_filter_hide_suspected_manga => '隐藏疑似漫画';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '已隐藏 ${n} 条无人做种';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '已隐藏 ${n} 条疑似漫画';
+  @override
+  String get discovery_hidden_show => '显示';
+  @override
+  String get discovery_nyaa_filter_all => '全部';
+  @override
+  String get discovery_nyaa_filter_no_remakes => '排除 remake';
+  @override
+  String get discovery_nyaa_filter_trusted_only => '仅信任发布者';
+  @override
+  String get discovery_badge_trusted => '信任发布者';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => '疑似漫画';
 }
 
 // Path: <root>
@@ -174390,6 +174763,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
 }
 
 /// Flat map(s) containing all translations.
@@ -183617,6 +184014,28 @@ extension on _StringsEn {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -192839,6 +193258,28 @@ extension on _StringsAr {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -202106,6 +202547,28 @@ extension on _StringsDe {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -211364,6 +211827,28 @@ extension on _StringsEs {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -220631,6 +221116,28 @@ extension on _StringsFr {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -229869,6 +230376,28 @@ extension on _StringsId {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -239129,6 +239658,28 @@ extension on _StringsIt {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -248316,6 +248867,28 @@ extension on _StringsJa {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -257507,6 +258080,28 @@ extension on _StringsKo {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -266760,6 +267355,28 @@ extension on _StringsNl {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -276008,6 +276625,28 @@ extension on _StringsPtBr {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -285263,6 +285902,28 @@ extension on _StringsRu {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -294490,6 +295151,28 @@ extension on _StringsTh {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -303732,6 +304415,28 @@ extension on _StringsTr {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -312968,6 +313673,28 @@ extension on _StringsVi {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
@@ -322124,6 +322851,28 @@ extension on _StringsZhCn {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return '跟随全局默认';
+      case 'discovery_filter_hide_zero_seeders':
+        return '隐藏无人做种';
+      case 'discovery_filter_hide_suspected_manga':
+        return '隐藏疑似漫画';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '已隐藏 ${n} 条无人做种';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '已隐藏 ${n} 条疑似漫画';
+      case 'discovery_hidden_show':
+        return '显示';
+      case 'discovery_nyaa_filter_all':
+        return '全部';
+      case 'discovery_nyaa_filter_no_remakes':
+        return '排除 remake';
+      case 'discovery_nyaa_filter_trusted_only':
+        return '仅信任发布者';
+      case 'discovery_badge_trusted':
+        return '信任发布者';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return '疑似漫画';
       default:
         return null;
     }
@@ -331289,6 +332038,28 @@ extension on _StringsZhHk {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       default:
         return null;
     }
