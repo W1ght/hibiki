@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76177 (4481 per locale)
+/// Strings: 76194 (4482 per locale)
 ///
-/// Built on 2026-09-08 at 16:06 UTC
+/// Built on 2026-09-08 at 17:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3955,6 +3955,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_copy_image => 'Copy image';
   String get reader_font_size => 'Font size';
   String get reader_font_vpal => 'VPAL (vertical alt)';
+  String get reader_font_weight => 'Font weight';
   String get reader_furigana_hide => 'Hide';
   String get reader_furigana_mode => 'Furigana';
   String get reader_furigana_mode_hint => '';
@@ -12757,6 +12758,8 @@ class _StringsAr extends _StringsEn {
   String get reader_font_size => 'حجم الخط';
   @override
   String get reader_font_vpal => 'VPAL (بديل عمودي)';
+  @override
+  String get reader_font_weight => 'وزن الخط';
   @override
   String get reader_furigana_hide => 'إخفاء';
   @override
@@ -23419,6 +23422,8 @@ class _StringsDe extends _StringsEn {
   String get reader_font_size => 'Schriftgröße';
   @override
   String get reader_font_vpal => 'VPAL (Vertikale Alt.)';
+  @override
+  String get reader_font_weight => 'Schriftstärke';
   @override
   String get reader_furigana_hide => 'Ausblenden';
   @override
@@ -34188,6 +34193,8 @@ class _StringsEs extends _StringsEn {
   String get reader_font_size => 'Tamaño de fuente';
   @override
   String get reader_font_vpal => 'VPAL (alt. vertical)';
+  @override
+  String get reader_font_weight => 'Grosor de fuente';
   @override
   String get reader_furigana_hide => 'Ocultar';
   @override
@@ -45012,6 +45019,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (alt. vertical)';
   @override
+  String get reader_font_weight => 'Graisse de police';
+  @override
   String get reader_furigana_hide => 'Masquer';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -55733,6 +55742,8 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (Alt Vertikal)';
   @override
+  String get reader_font_weight => 'Ketebalan font';
+  @override
   String get reader_furigana_hide => 'Sembunyikan';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -66425,6 +66436,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (alt. verticale)';
   @override
+  String get reader_font_weight => 'Spessore carattere';
+  @override
   String get reader_furigana_hide => 'Nascondi';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -76789,6 +76802,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL（縦書き代替）';
   @override
+  String get reader_font_weight => 'フォントの太さ';
+  @override
   String get reader_furigana_hide => '非表示';
   @override
   String get reader_furigana_mode => 'ふりがな';
@@ -86903,6 +86918,8 @@ class _StringsKo extends _StringsEn {
   String get reader_font_size => '글꼴 크기';
   @override
   String get reader_font_vpal => 'VPAL (세로 대체)';
+  @override
+  String get reader_font_weight => '글꼴 굵기';
   @override
   String get reader_furigana_hide => '숨기기';
   @override
@@ -97358,6 +97375,8 @@ class _StringsNl extends _StringsEn {
   String get reader_font_size => 'Lettergrootte';
   @override
   String get reader_font_vpal => 'VPAL (vert. alt.)';
+  @override
+  String get reader_font_weight => 'Letterdikte';
   @override
   String get reader_furigana_hide => 'Verbergen';
   @override
@@ -108080,6 +108099,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (alt. vertical)';
   @override
+  String get reader_font_weight => 'Espessura da fonte';
+  @override
   String get reader_furigana_hide => 'Ocultar';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -118801,6 +118822,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (верт. альт.)';
   @override
+  String get reader_font_weight => 'Насыщенность шрифта';
+  @override
   String get reader_furigana_hide => 'Скрыть';
   @override
   String get reader_furigana_mode => 'Фуригана';
@@ -129401,6 +129424,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (ตัวอักษรทดแทน)';
   @override
+  String get reader_font_weight => 'น้ำหนักฟอนต์';
+  @override
   String get reader_furigana_hide => 'ซ่อน';
   @override
   String get reader_furigana_mode => 'ฟุริงานะ';
@@ -139995,6 +140020,8 @@ class _StringsTr extends _StringsEn {
   String get reader_font_size => 'Yazı tipi boyutu';
   @override
   String get reader_font_vpal => 'VPAL (dikey alt.)';
+  @override
+  String get reader_font_weight => 'Yazı tipi kalınlığı';
   @override
   String get reader_furigana_hide => 'Gizle';
   @override
@@ -150617,6 +150644,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (thay thế dọc)';
   @override
+  String get reader_font_weight => 'Độ đậm phông chữ';
+  @override
   String get reader_furigana_hide => 'Ẩn';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -160678,6 +160707,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL 纵排替代';
   @override
+  String get reader_font_weight => '字体粗细';
+  @override
   String get reader_furigana_hide => '隐藏';
   @override
   String get reader_furigana_mode => '振假名';
@@ -170455,6 +170486,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL 直排替代';
   @override
+  String get reader_font_weight => '字型粗細';
+  @override
   String get reader_furigana_hide => '隱藏';
   @override
   String get reader_furigana_mode => '振假名';
@@ -179852,6 +179885,8 @@ extension on _StringsEn {
         return 'Font size';
       case 'reader_font_vpal':
         return 'VPAL (vertical alt)';
+      case 'reader_font_weight':
+        return 'Font weight';
       case 'reader_furigana_hide':
         return 'Hide';
       case 'reader_furigana_mode':
@@ -189065,6 +189100,8 @@ extension on _StringsAr {
         return 'حجم الخط';
       case 'reader_font_vpal':
         return 'VPAL (بديل عمودي)';
+      case 'reader_font_weight':
+        return 'وزن الخط';
       case 'reader_furigana_hide':
         return 'إخفاء';
       case 'reader_furigana_mode':
@@ -198304,6 +198341,8 @@ extension on _StringsDe {
         return 'Schriftgröße';
       case 'reader_font_vpal':
         return 'VPAL (Vertikale Alt.)';
+      case 'reader_font_weight':
+        return 'Schriftstärke';
       case 'reader_furigana_hide':
         return 'Ausblenden';
       case 'reader_furigana_mode':
@@ -207552,6 +207591,8 @@ extension on _StringsEs {
         return 'Tamaño de fuente';
       case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
+      case 'reader_font_weight':
+        return 'Grosor de fuente';
       case 'reader_furigana_hide':
         return 'Ocultar';
       case 'reader_furigana_mode':
@@ -216805,6 +216846,8 @@ extension on _StringsFr {
         return 'Taille de police';
       case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
+      case 'reader_font_weight':
+        return 'Graisse de police';
       case 'reader_furigana_hide':
         return 'Masquer';
       case 'reader_furigana_mode':
@@ -226041,6 +226084,8 @@ extension on _StringsId {
         return 'Ukuran Font';
       case 'reader_font_vpal':
         return 'VPAL (Alt Vertikal)';
+      case 'reader_font_weight':
+        return 'Ketebalan font';
       case 'reader_furigana_hide':
         return 'Sembunyikan';
       case 'reader_furigana_mode':
@@ -235276,6 +235321,8 @@ extension on _StringsIt {
         return 'Dimensione carattere';
       case 'reader_font_vpal':
         return 'VPAL (alt. verticale)';
+      case 'reader_font_weight':
+        return 'Spessore carattere';
       case 'reader_furigana_hide':
         return 'Nascondi';
       case 'reader_furigana_mode':
@@ -244489,6 +244536,8 @@ extension on _StringsJa {
         return 'フォントサイズ';
       case 'reader_font_vpal':
         return 'VPAL（縦書き代替）';
+      case 'reader_font_weight':
+        return 'フォントの太さ';
       case 'reader_furigana_hide':
         return '非表示';
       case 'reader_furigana_mode':
@@ -253665,6 +253714,8 @@ extension on _StringsKo {
         return '글꼴 크기';
       case 'reader_font_vpal':
         return 'VPAL (세로 대체)';
+      case 'reader_font_weight':
+        return '글꼴 굵기';
       case 'reader_furigana_hide':
         return '숨기기';
       case 'reader_furigana_mode':
@@ -262877,6 +262928,8 @@ extension on _StringsNl {
         return 'Lettergrootte';
       case 'reader_font_vpal':
         return 'VPAL (vert. alt.)';
+      case 'reader_font_weight':
+        return 'Letterdikte';
       case 'reader_furigana_hide':
         return 'Verbergen';
       case 'reader_furigana_mode':
@@ -272117,6 +272170,8 @@ extension on _StringsPtBr {
         return 'Tamanho da Fonte';
       case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
+      case 'reader_font_weight':
+        return 'Espessura da fonte';
       case 'reader_furigana_hide':
         return 'Ocultar';
       case 'reader_furigana_mode':
@@ -281360,6 +281415,8 @@ extension on _StringsRu {
         return 'Размер шрифта';
       case 'reader_font_vpal':
         return 'VPAL (верт. альт.)';
+      case 'reader_font_weight':
+        return 'Насыщенность шрифта';
       case 'reader_furigana_hide':
         return 'Скрыть';
       case 'reader_furigana_mode':
@@ -290582,6 +290639,8 @@ extension on _StringsTh {
         return 'ขนาดฟอนต์';
       case 'reader_font_vpal':
         return 'VPAL (ตัวอักษรทดแทน)';
+      case 'reader_font_weight':
+        return 'น้ำหนักฟอนต์';
       case 'reader_furigana_hide':
         return 'ซ่อน';
       case 'reader_furigana_mode':
@@ -299807,6 +299866,8 @@ extension on _StringsTr {
         return 'Yazı tipi boyutu';
       case 'reader_font_vpal':
         return 'VPAL (dikey alt.)';
+      case 'reader_font_weight':
+        return 'Yazı tipi kalınlığı';
       case 'reader_furigana_hide':
         return 'Gizle';
       case 'reader_furigana_mode':
@@ -309033,6 +309094,8 @@ extension on _StringsVi {
         return 'Cỡ chữ';
       case 'reader_font_vpal':
         return 'VPAL (thay thế dọc)';
+      case 'reader_font_weight':
+        return 'Độ đậm phông chữ';
       case 'reader_furigana_hide':
         return 'Ẩn';
       case 'reader_furigana_mode':
@@ -318214,6 +318277,8 @@ extension on _StringsZhCn {
         return '字体大小';
       case 'reader_font_vpal':
         return 'VPAL 纵排替代';
+      case 'reader_font_weight':
+        return '字体粗细';
       case 'reader_furigana_hide':
         return '隐藏';
       case 'reader_furigana_mode':
@@ -327365,6 +327430,8 @@ extension on _StringsZhHk {
         return '字型大小';
       case 'reader_font_vpal':
         return 'VPAL 直排替代';
+      case 'reader_font_weight':
+        return '字型粗細';
       case 'reader_furigana_hide':
         return '隱藏';
       case 'reader_furigana_mode':
