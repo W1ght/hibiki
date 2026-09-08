@@ -237,11 +237,12 @@ void main() {
 
     test('reserve truth source: _readerTopOffset uses _topProgressReserve', () {
       expect(
-        src.contains(
-          '_stableTopInset + _macosWindowTitlebarInset + _topProgressReserve',
-        ),
+        src.contains('_stableTopInset + _topProgressReserve'),
         isTrue,
-        reason: '顶部预留必须经派生 getter（关进度回收空白），并避开 macOS 拖拽区',
+        // macOS 那条 28pt 自绘拖拽带（BUG-1343）随「macOS 改用应用级 MD3 顶栏」
+        // 删除，顶部预留不再含 _macosWindowTitlebarInset；派生 getter 本身仍是
+        // 唯一真相源（关掉进度就回收那段空白）。
+        reason: '顶部预留必须经派生 getter（关进度回收空白）',
       );
       expect(
         src.contains(

@@ -2,24 +2,20 @@ import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
 
-/// Guards the BUG-973 fix: on macOS the app enables a transparent titlebar +
-/// full-size content view (`main.dart`), so the red/yellow/green traffic light
-/// buttons float over the top-left of the Flutter content. The video page draws
-/// its exit/back button (top bar `topLeft` slot) and left-corner OSD toasts in
-/// that same region, and macOS does NOT report the traffic lights as
-/// `MediaQuery.padding`, so they overlap. Unlike the home shell (BUG-869, which
-/// reserves `kMacTitleBarHeight` via `SafeArea.minimum`), the video page is a
-/// full-page route that owns its own chrome, so the fix hides the traffic
-/// lights for the whole video session and restores them on exit.
+import '../helpers/source_guard.dart';
+
+/// BUG-973 的**当前形态**守卫：macOS 上交通灯（红黄绿三个圆点）压住视频页返回按钮 /
+/// 左上角 OSD 的根因，已经不是「视频页忘了隐藏」，而是「窗口上还有交通灯」。
 ///
-/// A source guard is the strongest feasible landing layer: the behaviour is
-/// gated on `dart:io`'s `Platform.isMacOS` (which, unlike
-/// `debugDefaultTargetPlatformOverride`, can't be faked in a widget test on the
-/// Linux/Windows CI host) and drives native `NSWindow.standardWindowButton`
-/// visibility through a method channel, neither of which exists under
-/// `flutter test`. So we pin the wiring instead: the helper must gate on macOS
-/// and toggle all three buttons, and the video lifecycle must hide on enter /
-/// restore on exit / re-assert after leaving native fullscreen.
+/// macOS 改用自绘 MD3 顶栏（[FushiDesktopTitleBar]）后，`main()` 用
+/// `setTitleBarStyle(hidden, windowButtonVisibility: false)` 在启动时就把三个按钮
+/// 永久关掉，窗口控制全部由顶栏的 MD3 按钮提供。于是：
+///  * 视频页不该再「进页隐藏 / 退页恢复」——恢复恰恰把 BUG-973 的症状放回来；
+///  * 唯一仍需重申隐藏的时机是**退出原生全屏**（AppKit 的 `toggleFullScreen` 重建
+///    标题栏视图时会复位 `standardWindowButton.isHidden`）。
+///
+/// 源码守卫是最强可落地层：行为门在 `dart:io` 的 `Platform.isMacOS` 与
+/// `NSWindow.standardWindowButton` 平台通道上，`flutter test` 下两者都不存在。
 void main() {
   test('setMacOSTrafficLightsHidden gates on macOS and toggles all three '
       'traffic-light buttons (BUG-973)', () {
@@ -53,39 +49,28 @@ void main() {
     }
   });
 
-  test('video page hides traffic lights on enter and restores on exit '
-      '(BUG-973)', () {
-    final String source = File(
-      'lib/src/pages/implementations/video_fushi_page.dart',
-    ).readAsStringSync();
-
-    final int initState = source.indexOf('void initState()');
-    final int dispose = source.indexOf('void dispose()');
-    expect(initState, greaterThanOrEqualTo(0));
+  test('交通灯由启动时一次性隐藏，视频页不再进出页开关它（BUG-973）', () {
+    final String main = File('lib/main.dart').readAsStringSync();
     expect(
-      dispose,
-      greaterThan(initState),
-      reason: 'dispose() is expected to follow initState() in the state class.',
-    );
-
-    final String initBody = source.substring(initState, dispose);
-    expect(
-      initBody.contains('setMacOSTrafficLightsHidden(true)'),
+      main.contains('windowButtonVisibility: false'),
       isTrue,
       reason:
-          'initState must hide the macOS traffic lights when the video page '
-          'mounts, or the exit button / OSD stay under them (BUG-973).',
+          'main() 必须在装自绘顶栏的同一次 setTitleBarStyle 里关掉交通灯，'
+          '否则三个系统圆点会浮在自绘顶栏的标题上。',
     );
 
-    // Bound dispose to the next member so we do not accidentally read a later
-    // method. dispose() is large; scan a generous window from its start.
-    final String disposeBody = source.substring(dispose);
+    // 掩掉注释：删除说明里会写到这个调用名，不掩就等于自己命中自己。
+    final String video = maskComments(
+      File(
+        'lib/src/pages/implementations/video_fushi_page.dart',
+      ).readAsStringSync(),
+    );
     expect(
-      disposeBody.contains('setMacOSTrafficLightsHidden(false)'),
-      isTrue,
+      video.contains('setMacOSTrafficLightsHidden(false)'),
+      isFalse,
       reason:
-          'dispose must restore the traffic lights on exit (symmetry with '
-          'the initState hide), so the home shell gets them back (BUG-973).',
+          '退出视频页恢复交通灯 = 把 BUG-973 的遮挡放回来（窗口已无系统标题栏，'
+          '三个圆点会直接压在自绘顶栏上）。',
     );
   });
 

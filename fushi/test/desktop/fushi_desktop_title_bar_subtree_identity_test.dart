@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fushi/src/utils/components/fushi_windows_title_bar.dart';
+import 'package:fushi/src/utils/components/fushi_desktop_title_bar.dart';
 import 'package:window_manager/window_manager.dart';
 
-/// [FushiWindowsTitleBar] 把整棵 app 子树（`FushiAppUiScale` → 全局快捷键 Focus 节点
+/// [FushiDesktopTitleBar] 把整棵 app 子树（`FushiAppUiScale` → 全局快捷键 Focus 节点
 /// → `FushiFocusRoot` 焦点控制器 → Navigator）挂在自己下面。这些层里除 Navigator 外
 /// 都没有 key，所以**它们的 Element 身份完全由本组件 build 出的 widget 树形状决定**。
 ///
@@ -42,7 +42,7 @@ void main() {
 
   tearDown(() {
     // 静态 owner 集合是进程级的，用例之间必须归零，否则会污染后续用例。
-    FushiWindowsTitleBar.setContentFullscreen(owner: owner, enabled: false);
+    FushiDesktopTitleBar.setContentFullscreen(owner: owner, enabled: false);
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(const MethodChannel('window_manager'), null);
   });
@@ -50,7 +50,7 @@ void main() {
   testWidgets('进出全屏不重建标题栏下方子树，焦点保持原位', (WidgetTester tester) async {
     await tester.pumpWidget(
       const MaterialApp(
-        home: FushiWindowsTitleBar(
+        home: FushiDesktopTitleBar(
           title: Text('Fushi'),
           child: _SubtreeProbe(),
         ),
@@ -66,7 +66,7 @@ void main() {
     expect(before.node.hasFocus, isTrue, reason: '前置条件：焦点先落在子树里');
 
     // 进全屏。
-    FushiWindowsTitleBar.setContentFullscreen(owner: owner, enabled: true);
+    FushiDesktopTitleBar.setContentFullscreen(owner: owner, enabled: true);
     await tester.pump();
 
     expect(
@@ -82,7 +82,7 @@ void main() {
     expect(before.node.hasFocus, isTrue, reason: '进全屏后焦点必须仍在原处');
 
     // 出全屏。
-    FushiWindowsTitleBar.setContentFullscreen(owner: owner, enabled: false);
+    FushiDesktopTitleBar.setContentFullscreen(owner: owner, enabled: false);
     await tester.pump();
 
     expect(
@@ -99,7 +99,7 @@ void main() {
   testWidgets('全屏态下 resize 边框零命中区，widget 类型不变', (WidgetTester tester) async {
     await tester.pumpWidget(
       const MaterialApp(
-        home: FushiWindowsTitleBar(
+        home: FushiDesktopTitleBar(
           title: Text('Fushi'),
           child: _SubtreeProbe(),
         ),
@@ -124,7 +124,7 @@ void main() {
     // 顶栏可见。
     expect(find.byIcon(Icons.close_rounded), findsOneWidget);
 
-    FushiWindowsTitleBar.setContentFullscreen(owner: owner, enabled: true);
+    FushiDesktopTitleBar.setContentFullscreen(owner: owner, enabled: true);
     await tester.pump();
 
     expect(

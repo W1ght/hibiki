@@ -84,57 +84,68 @@ extension _VideoLayout on _VideoFushiPageState {
       // Row[Expanded(Video), 面板列]，画面真挤窄、不被遮（见 [_videoWithSubtitlePanel]）。
       child: _videoWithSubtitlePanel(
         controller,
-        // HDR 直通：把 Video 的物理像素矩形喂给 runner 宿主窗（非 HDR 时只是记着，
-        // 进入直通那一刻就有正确矩形可用）。
-        HdrHostRectReporter(
-          onRect: controller.reportHdrHostRect,
-          child: Video(
-            controller: videoController,
-            // 用本页持有的 FocusNode 替换 Video 内置的匿名节点，以便覆盖层（对话框 /
-            // bottom sheet / 文件选择器）关闭后能主动把键盘焦点还给它，恢复空格等内置
-            // 快捷键（见 [_focusOwnership]）。
-            focusNode: _videoFocusNode,
-            // 禁用 media_kit 内置 SubtitleView（TODO-080/092，BUG-190）：字幕统一由
-            // [VideoSubtitleOverlay] 单层承载（cue 同步 + 逐字查词）。SubtitleView 默认
-            // visible:true，会把 libmpv 解析的字幕渲染成一整块不可点 Text（白字 +
-            // 0xaa000000 半透明黑底），叠在可点 overlay 之上 → 点字幕穿透到 media_kit
-            // 自己的手势层（落句首词/点不到句中/呼出键盘，080-3）、随字幕轨异步刷新时有
-            // 时无（080-1 随机透明）、横竖屏 Video 子树重建时残留黑底（092）。这里显式
-            // visible:false 让 video_texture.dart 的 `if(...visible && ...)` 不渲染
-            // SubtitleView；窗口与全屏共享 videoViewParametersNotifier，全屏路由侧再显式
-            // 覆盖一次（不靠隐式传播，消除快照时机竞态）。
-            subtitleViewConfiguration: const SubtitleViewConfiguration(
-              visible: false,
+        // macOS Retina：让 mpv 直接渲染到画面实际占用的物理像素（IINA 同款做法），
+        // 否则 1080p 片源在 Retina 上永远是「原生纹理被 Flutter 双线性拉大」= 发虚。
+        // 非 macOS 恒透传（见 [VideoBackingRenderSize]）。
+        VideoBackingRenderSize(
+          controller: videoController,
+          videoSize: videoNativeSizeOf(
+            controller.videoWidth,
+            controller.videoHeight,
+          ),
+          fit: videoFitModeToBoxFit(_videoFitMode),
+          // HDR 直通：把 Video 的物理像素矩形喂给 runner 宿主窗（非 HDR 时只是记着，
+          // 进入直通那一刻就有正确矩形可用）。
+          child: HdrHostRectReporter(
+            onRect: controller.reportHdrHostRect,
+            child: Video(
+              controller: videoController,
+              // 用本页持有的 FocusNode 替换 Video 内置的匿名节点，以便覆盖层（对话框 /
+              // bottom sheet / 文件选择器）关闭后能主动把键盘焦点还给它，恢复空格等内置
+              // 快捷键（见 [_focusOwnership]）。
+              focusNode: _videoFocusNode,
+              // 禁用 media_kit 内置 SubtitleView（TODO-080/092，BUG-190）：字幕统一由
+              // [VideoSubtitleOverlay] 单层承载（cue 同步 + 逐字查词）。SubtitleView 默认
+              // visible:true，会把 libmpv 解析的字幕渲染成一整块不可点 Text（白字 +
+              // 0xaa000000 半透明黑底），叠在可点 overlay 之上 → 点字幕穿透到 media_kit
+              // 自己的手势层（落句首词/点不到句中/呼出键盘，080-3）、随字幕轨异步刷新时有
+              // 时无（080-1 随机透明）、横竖屏 Video 子树重建时残留黑底（092）。这里显式
+              // visible:false 让 video_texture.dart 的 `if(...visible && ...)` 不渲染
+              // SubtitleView；窗口与全屏共享 videoViewParametersNotifier，全屏路由侧再显式
+              // 覆盖一次（不靠隐式传播，消除快照时机竞态）。
+              subtitleViewConfiguration: const SubtitleViewConfiguration(
+                visible: false,
+              ),
+              // 窗口模式画面缩放/比例由用户偏好 [_videoFitMode] 决定（TODO-152 子B），
+              // 新安装默认 [VideoFitMode.contain] → `BoxFit.contain` 保持比例完整适应；
+              // 已有用户偏好 [cover]/[fill] 会按持久化值恢复；
+              // 不会被新安装初始值覆盖。
+              // 根因背景：media_kit 默认 `BoxFit.contain` 在「媒体框宽高比 ≠ 视频宽高比」时
+              // 两侧补黑。桌面虽有窗口比例锁（[_syncWindowAspectRatioLock] → window_manager
+              // `setAspectRatio`），但其 Windows 实现只在用户**拖动窗口边框**时（WM_SIZING）
+              // 约束比例、不矫正当前窗口尺寸 → 非全屏非最大化的当前窗口若比例不等于视频，
+              // contain 仍留黑边（平台限制）。用户改选 [VideoFitMode.cover] 即铺满并裁切
+              // 超出边缘（比例锁稳态下窗口贴合视频比例 → cover≈contain 几乎不裁）；
+              // [VideoFitMode.fill] 则拉伸填满。
+              // 字幕是独立 overlay 层（[VideoSubtitleOverlay]，不在 [Video] 内）不受裁切影响。
+              // 全屏路由的 Video 在其 builder 内读同一 [_videoFitMode] 换算，跟随同偏好。
+              fit: videoFitModeToBoxFit(_videoFitMode),
+              // letterbox/pillarbox 填充色固定纯黑（TODO-053）：cover 稳态下无外围，但
+              // 视频解码前 / 极端比例残留边缘仍按播放器惯例用黑底，不跟随主题 surface。
+              fill: Colors.black,
+              // 字幕 overlay + 拖拽挂载都包进 controls builder：media_kit 全屏推独立 root
+              // 路由并复用同一 controls，故 overlay 随全屏一起进路由，全屏时字幕仍显示且
+              // 可点查词、拖字幕也能挂载（见 [_buildVideoControls]）。
+              controls: (VideoState state) =>
+                  _buildVideoControls(state, controller),
+              // BUG-221: 替换 media_kit 默认全屏方向回调，禁止移动端退全屏时
+              // `setPreferredOrientations([])` 弹回竖屏。自建全屏路由（[_pushNeutralizedVideoFullscreen]）
+              // 经 `state.widget.onEnterFullscreen`/`onExitFullscreen` 取的就是这俩，故窗口侧设
+              // 一次即覆盖全部全屏方向行为。移动端门控在 helper 内（只锁横屏，永不放开方向）；
+              // 桌面转调 media_kit 默认回调，保留「全屏 = OS 窗口真全屏」（不碰设备方向）。
+              onEnterFullscreen: _enterVideoNativeFullscreen,
+              onExitFullscreen: _exitVideoNativeFullscreen,
             ),
-            // 窗口模式画面缩放/比例由用户偏好 [_videoFitMode] 决定（TODO-152 子B），
-            // 新安装默认 [VideoFitMode.contain] → `BoxFit.contain` 保持比例完整适应；
-            // 已有用户偏好 [cover]/[fill] 会按持久化值恢复；
-            // 不会被新安装初始值覆盖。
-            // 根因背景：media_kit 默认 `BoxFit.contain` 在「媒体框宽高比 ≠ 视频宽高比」时
-            // 两侧补黑。桌面虽有窗口比例锁（[_syncWindowAspectRatioLock] → window_manager
-            // `setAspectRatio`），但其 Windows 实现只在用户**拖动窗口边框**时（WM_SIZING）
-            // 约束比例、不矫正当前窗口尺寸 → 非全屏非最大化的当前窗口若比例不等于视频，
-            // contain 仍留黑边（平台限制）。用户改选 [VideoFitMode.cover] 即铺满并裁切
-            // 超出边缘（比例锁稳态下窗口贴合视频比例 → cover≈contain 几乎不裁）；
-            // [VideoFitMode.fill] 则拉伸填满。
-            // 字幕是独立 overlay 层（[VideoSubtitleOverlay]，不在 [Video] 内）不受裁切影响。
-            // 全屏路由的 Video 在其 builder 内读同一 [_videoFitMode] 换算，跟随同偏好。
-            fit: videoFitModeToBoxFit(_videoFitMode),
-            // letterbox/pillarbox 填充色固定纯黑（TODO-053）：cover 稳态下无外围，但
-            // 视频解码前 / 极端比例残留边缘仍按播放器惯例用黑底，不跟随主题 surface。
-            fill: Colors.black,
-            // 字幕 overlay + 拖拽挂载都包进 controls builder：media_kit 全屏推独立 root
-            // 路由并复用同一 controls，故 overlay 随全屏一起进路由，全屏时字幕仍显示且
-            // 可点查词、拖字幕也能挂载（见 [_buildVideoControls]）。
-            controls: (VideoState state) =>
-                _buildVideoControls(state, controller),
-            // BUG-221: 替换 media_kit 默认全屏方向回调，禁止移动端退全屏时
-            // `setPreferredOrientations([])` 弹回竖屏。自建全屏路由（[_pushNeutralizedVideoFullscreen]）
-            // 经 `state.widget.onEnterFullscreen`/`onExitFullscreen` 取的就是这俩，故窗口侧设
-            // 一次即覆盖全部全屏方向行为。移动端门控在 helper 内（只锁横屏，永不放开方向）；
-            // 桌面转调 media_kit 默认回调，保留「全屏 = OS 窗口真全屏」（不碰设备方向）。
-            onEnterFullscreen: _enterVideoNativeFullscreen,
-            onExitFullscreen: _exitVideoNativeFullscreen,
           ),
         ),
       ),

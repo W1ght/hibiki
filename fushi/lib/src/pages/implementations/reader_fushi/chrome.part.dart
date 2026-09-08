@@ -2164,7 +2164,7 @@ extension _ReaderChrome on _ReaderFushiPageState {
     }
     final Color fg = _themeTextColor();
     return Positioned(
-      top: _stableTopInset + _macosWindowTitlebarInset,
+      top: _stableTopInset,
       left: 0,
       right: 0,
       // 焦点排除在 ReaderDesktopHeader 内部（纯指针面，TODO-700 不变式）；底栏的
@@ -2443,7 +2443,7 @@ extension _ReaderChrome on _ReaderFushiPageState {
       return const SizedBox.shrink();
     }
     return Positioned(
-      top: _stableTopInset + _macosWindowTitlebarInset + _desktopHeaderReserve,
+      top: _stableTopInset + _desktopHeaderReserve,
       left: 0,
       right: 0,
       // BUG-1692：排在 WebView 之后绘制的内容都自带 RepaintBoundary（见状态行）。
@@ -2468,7 +2468,7 @@ extension _ReaderChrome on _ReaderFushiPageState {
       return const SizedBox.shrink();
     }
     return Positioned(
-      top: _stableTopInset + _macosWindowTitlebarInset,
+      top: _stableTopInset,
       left: 0,
       right: 0,
       height: kReaderHoverRevealStripHeight,
@@ -2602,7 +2602,7 @@ extension _ReaderChrome on _ReaderFushiPageState {
           );
 
     return Positioned(
-      top: _stableTopInset + _macosWindowTitlebarInset,
+      top: _stableTopInset,
       left: 16,
       right: 16,
       child: Align(

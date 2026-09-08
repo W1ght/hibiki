@@ -123,7 +123,7 @@ extension _VideoFullscreen on _VideoFushiPageState {
     if (!widget.initialFullscreen || isMobilePlatform) return;
     _ownsHandedOverNativeFullscreen = true;
     if (Platform.isWindows) {
-      FushiWindowsTitleBar.setContentFullscreen(owner: this, enabled: true);
+      FushiDesktopTitleBar.setContentFullscreen(owner: this, enabled: true);
     }
   }
 
@@ -264,11 +264,22 @@ extension _VideoFullscreen on _VideoFushiPageState {
                             }
                             return _videoWithSubtitlePanel(
                               playerController,
-                              // HDR 直通：全屏路由的 Video 同样上报矩形（与窗口侧
-                              // [_buildVideoBody] 一致，宿主窗跟着全屏画面走）。
-                              HdrHostRectReporter(
-                                onRect: playerController.reportHdrHostRect,
-                                child: fullscreenVideo,
+                              // macOS Retina：全屏是「片源被放得最大」的场景，按物理
+                              // 像素渲染的收益也最大（与窗口侧 [_buildVideoBody] 同一
+                              // 组件、同一 fit 偏好）。非 macOS 恒透传。
+                              VideoBackingRenderSize(
+                                controller: controllerValue,
+                                videoSize: videoNativeSizeOf(
+                                  playerController.videoWidth,
+                                  playerController.videoHeight,
+                                ),
+                                fit: videoFitModeToBoxFit(_videoFitMode),
+                                // HDR 直通：全屏路由的 Video 同样上报矩形（与窗口侧
+                                // [_buildVideoBody] 一致，宿主窗跟着全屏画面走）。
+                                child: HdrHostRectReporter(
+                                  onRect: playerController.reportHdrHostRect,
+                                  child: fullscreenVideo,
+                                ),
                               ),
                             );
                           },
@@ -387,7 +398,7 @@ extension _VideoFullscreen on _VideoFushiPageState {
       if (Platform.isWindows) {
         // Hide the app frame before the native transition so no title-bar
         // frame remains above the fullscreen surface.
-        FushiWindowsTitleBar.setContentFullscreen(owner: this, enabled: true);
+        FushiDesktopTitleBar.setContentFullscreen(owner: this, enabled: true);
         // BUG-1933：Windows 不再走 media_kit 的 `Utils.EnterNativeFullscreen`
         // ——它与 window_manager 同技法（剥 WS_CAPTION|WS_THICKFRAME），DWM
         // 重建窗口 visual 时 Flutter 子窗图层缺席一帧，露出表面色（浅色主题
@@ -428,7 +439,7 @@ extension _VideoFullscreen on _VideoFushiPageState {
         // 时 runner 已同步还原窗口矩形，再亮出 app frame——早亮会在退出过程上
         // 闪一下标题栏。
         await WindowCaptionChannel.setFullscreen(false);
-        FushiWindowsTitleBar.setContentFullscreen(owner: this, enabled: false);
+        FushiDesktopTitleBar.setContentFullscreen(owner: this, enabled: false);
         return;
       }
       await defaultExitNativeFullscreen();
