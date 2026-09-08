@@ -42,6 +42,7 @@ typedef _LayoutCssArgs = ({
   bool isVertical,
   _ThemeColors colors,
   String resolvedFontFamily,
+  String fontWeightCss,
   String textSpacingCss,
   String paddingCss,
   String gridCss,
@@ -304,6 +305,18 @@ class ReaderContentStyles {
     final String textSpacingCss =
         'line-height: ${settings.lineHeight} !important;';
 
+    // 正文字重。只声明在 `body` 上，靠继承覆盖正文——不下放到 `p`/`*`，因为 UA
+    // 样式表给 `<strong>`/`<b>` 的是相对值 `bolder`：挂在 body 上时加粗仍相对用户
+    // 选定的基准再上一档（400→700、600→900），书里的强调不会被抹平；一旦改成
+    // 通配选择器 + !important 就会把 `<strong>` 一起钉死成同一字重。
+    // 400 = CSS `normal` 是默认值，此时整条声明不注入：书自带样式表原样生效，
+    // 与本功能引入前的渲染完全一致（零回归），与 `textIndentCss`/`gridCss` 的
+    // 「默认值产出空串」同构。
+    final int fontWeight = settings.fontWeight;
+    final String fontWeightCss = fontWeight == 400
+        ? ''
+        : 'font-weight: $fontWeight !important;';
+
     final String gridCss = settings.enableTextJustification
         ? ''
         : '''
@@ -388,6 +401,7 @@ svg.block-img.blurred {
       isVertical: isVertical,
       colors: colors,
       resolvedFontFamily: resolvedFontFamily,
+      fontWeightCss: fontWeightCss,
       textSpacingCss: textSpacingCss,
       paddingCss: paddingCss,
       gridCss: gridCss,
@@ -859,6 +873,7 @@ a {
     final ReaderSettings settings = a.settings;
     final _ThemeColors colors = a.colors;
     final String resolvedFontFamily = a.resolvedFontFamily;
+    final String fontWeightCss = a.fontWeightCss;
     final String textSpacingCss = a.textSpacingCss;
     final String paddingCss = a.paddingCss;
     final String gridCss = a.gridCss;
@@ -890,6 +905,7 @@ html, body {
 body {
   font-family: $resolvedFontFamily !important;
   font-size: ${settings.fontSize}px !important;
+  $fontWeightCss
   -webkit-text-size-adjust: none !important;
   overflow-wrap: anywhere !important;
   $textSpacingCss
@@ -973,6 +989,7 @@ html::before {
     final bool isVertical = a.isVertical;
     final _ThemeColors colors = a.colors;
     final String resolvedFontFamily = a.resolvedFontFamily;
+    final String fontWeightCss = a.fontWeightCss;
     final String textSpacingCss = a.textSpacingCss;
     final String paddingCss = a.paddingCss;
     final String gridCss = a.gridCss;
@@ -1004,6 +1021,7 @@ html, body {
 body {
   font-family: $resolvedFontFamily !important;
   font-size: ${settings.fontSize}px !important;
+  $fontWeightCss
   -webkit-text-size-adjust: none !important;
   overflow-wrap: anywhere !important;
   box-sizing: border-box !important;
@@ -1058,6 +1076,7 @@ body {
     final bool isVertical = a.isVertical;
     final _ThemeColors colors = a.colors;
     final String resolvedFontFamily = a.resolvedFontFamily;
+    final String fontWeightCss = a.fontWeightCss;
     final String textSpacingCss = a.textSpacingCss;
     final String paddingCss = a.paddingCss;
     final String gridCss = a.gridCss;
@@ -1106,6 +1125,7 @@ html, body {
 body {
   font-family: $resolvedFontFamily !important;
   font-size: ${settings.fontSize}px !important;
+  $fontWeightCss
   -webkit-text-size-adjust: none !important;
   overflow-wrap: anywhere !important;
   $textSpacingCss
