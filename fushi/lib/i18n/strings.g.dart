@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 75446 (4438 per locale)
+/// Strings: 75514 (4442 per locale)
 ///
-/// Built on 2026-09-07 at 14:27 UTC
+/// Built on 2026-09-08 at 04:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6086,8 +6086,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_source_scrape_pending_tab => 'Unmatched';
   String get video_source_scrape_manual_tmdb_movie => 'TMDB movie';
   String get video_source_scrape_manual_tmdb_tv => 'TMDB TV';
-  String get video_source_scrape_provider_policy =>
-      'MAL (via Jikan) is the primary metadata source; TMDB is the fallback.';
   String get video_anidb_hash_enabled => 'Identify files with AniDB ED2K';
   String get video_anidb_hash_hint =>
       'Requires an AniDB account and a registered client. Uploads only file size and hash. AniDB UDP login is unencrypted; enable only on a trusted network.';
@@ -6145,6 +6143,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AniList is rate-limiting this app right now. Wait a moment and retry.';
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  String get video_metadata_provider_tmdb => 'TMDB';
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -16461,9 +16466,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'مسلسلات TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (عبر Jikan) هو المصدر الرئيسي للبيانات الوصفية؛ وTMDB هو المصدر البديل.';
-  @override
   String get video_anidb_hash_enabled =>
       'التعرّف على الملفات باستخدام AniDB ED2K';
   @override
@@ -16556,6 +16558,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -27096,9 +27110,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB-Serie';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (über Jikan) ist die primäre Metadatenquelle; TMDB dient als Ersatz.';
-  @override
   String get video_anidb_hash_enabled =>
       'Dateien mit AniDB ED2K identifizieren';
   @override
@@ -27194,6 +27205,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -37788,9 +37811,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Serie de TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (mediante Jikan) es la fuente principal de metadatos; TMDB es la alternativa.';
-  @override
   String get video_anidb_hash_enabled => 'Identificar archivos con AniDB ED2K';
   @override
   String get video_anidb_hash_hint =>
@@ -37885,6 +37905,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -48512,9 +48544,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Série TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (via Jikan) est la source principale de métadonnées ; TMDB sert de solution de repli.';
-  @override
   String get video_anidb_hash_enabled =>
       'Identifier les fichiers avec AniDB ED2K';
   @override
@@ -48610,6 +48639,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -59043,9 +59084,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Serial TV TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (melalui Jikan) adalah sumber metadata utama; TMDB menjadi cadangan.';
-  @override
   String get video_anidb_hash_enabled =>
       'Identifikasi berkas dengan AniDB ED2K';
   @override
@@ -59138,6 +59176,18 @@ class _StringsId extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -69661,9 +69711,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Serie TV TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (tramite Jikan) è la fonte principale dei metadati; TMDB è la fonte di riserva.';
-  @override
   String get video_anidb_hash_enabled => 'Identifica i file con AniDB ED2K';
   @override
   String get video_anidb_hash_hint =>
@@ -69757,6 +69804,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -79670,9 +79729,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB テレビシリーズ';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL（Jikan 経由）を主なメタデータソースとし、TMDB を予備ソースとして使用します。';
-  @override
   String get video_anidb_hash_enabled => 'AniDB ED2K でファイルを識別';
   @override
   String get video_anidb_hash_hint =>
@@ -79756,6 +79812,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -89679,9 +89747,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB TV 시리즈';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL(Jikan 경유)을 기본 메타데이터 소스로 사용하고, TMDB를 대체 소스로 사용합니다.';
-  @override
   String get video_anidb_hash_enabled => 'AniDB ED2K로 파일 식별';
   @override
   String get video_anidb_hash_hint =>
@@ -89765,6 +89830,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -100245,9 +100322,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB-serie';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (via Jikan) is de primaire bron voor metadata; TMDB is de terugvaloptie.';
-  @override
   String get video_anidb_hash_enabled =>
       'Bestanden identificeren met AniDB ED2K';
   @override
@@ -100342,6 +100416,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -110876,9 +110962,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Série do TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (via Jikan) é a fonte principal de metadados; TMDB é a alternativa.';
-  @override
   String get video_anidb_hash_enabled => 'Identificar arquivos com AniDB ED2K';
   @override
   String get video_anidb_hash_hint =>
@@ -110971,6 +111054,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -121482,9 +121577,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Сериал TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (через Jikan) — основной источник метаданных; TMDB — резервный.';
-  @override
   String get video_anidb_hash_enabled => 'Определять файлы через AniDB ED2K';
   @override
   String get video_anidb_hash_hint =>
@@ -121578,6 +121670,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -131889,9 +131993,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'ซีรีส์ TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (ผ่าน Jikan) เป็นแหล่งข้อมูลเมตาหลัก และใช้ TMDB เป็นแหล่งสำรอง';
-  @override
   String get video_anidb_hash_enabled => 'ระบุไฟล์ด้วย AniDB ED2K';
   @override
   String get video_anidb_hash_hint =>
@@ -131983,6 +132084,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -142411,9 +142524,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB dizisi';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (Jikan üzerinden) birincil meta veri kaynağıdır; TMDB yedek kaynaktır.';
-  @override
   String get video_anidb_hash_enabled => 'Dosyaları AniDB ED2K ile tanımla';
   @override
   String get video_anidb_hash_hint =>
@@ -142506,6 +142616,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -152905,9 +153027,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Phim truyền hình TMDB';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL (qua Jikan) là nguồn siêu dữ liệu chính; TMDB là nguồn dự phòng.';
-  @override
   String get video_anidb_hash_enabled => 'Nhận diện tệp bằng AniDB ED2K';
   @override
   String get video_anidb_hash_hint =>
@@ -153000,6 +153119,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 // Path: <root>
@@ -162550,9 +162681,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB 电视剧';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL（经 Jikan）为主要资料源，TMDB 兜底。';
-  @override
   String get video_anidb_hash_enabled => '通过 AniDB ED2K 识别文件';
   @override
   String get video_anidb_hash_hint =>
@@ -162635,6 +162763,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
+  @override
+  String get video_metadata_primary_provider => '主资料源';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      '主源没有唯一精确命中或不可用时，自动用另一个源兜底。';
+  @override
+  String get video_metadata_provider_mal => 'MAL（经 Jikan）';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global => '跟随全局默认';
 }
 
 // Path: <root>
@@ -172238,9 +172377,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB 電視劇';
   @override
-  String get video_source_scrape_provider_policy =>
-      'MAL（經 Jikan）為主要資料來源，TMDB 作後備。';
-  @override
   String get video_anidb_hash_enabled => '透過 AniDB ED2K 識別檔案';
   @override
   String get video_anidb_hash_hint =>
@@ -172323,6 +172459,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
 }
 
 /// Flat map(s) containing all translations.
@@ -181372,8 +181520,6 @@ extension on _StringsEn {
         return 'TMDB movie';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB TV';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (via Jikan) is the primary metadata source; TMDB is the fallback.';
       case 'video_anidb_hash_enabled':
         return 'Identify files with AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -181442,6 +181588,16 @@ extension on _StringsEn {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -190486,8 +190642,6 @@ extension on _StringsAr {
         return 'أفلام TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'مسلسلات TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (عبر Jikan) هو المصدر الرئيسي للبيانات الوصفية؛ وTMDB هو المصدر البديل.';
       case 'video_anidb_hash_enabled':
         return 'التعرّف على الملفات باستخدام AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -190556,6 +190710,16 @@ extension on _StringsAr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -199645,8 +199809,6 @@ extension on _StringsDe {
         return 'TMDB-Film';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB-Serie';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (über Jikan) ist die primäre Metadatenquelle; TMDB dient als Ersatz.';
       case 'video_anidb_hash_enabled':
         return 'Dateien mit AniDB ED2K identifizieren';
       case 'video_anidb_hash_hint':
@@ -199715,6 +199877,16 @@ extension on _StringsDe {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -208795,8 +208967,6 @@ extension on _StringsEs {
         return 'Película de TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Serie de TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (mediante Jikan) es la fuente principal de metadatos; TMDB es la alternativa.';
       case 'video_anidb_hash_enabled':
         return 'Identificar archivos con AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -208865,6 +209035,16 @@ extension on _StringsEs {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -217954,8 +218134,6 @@ extension on _StringsFr {
         return 'Film TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Série TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (via Jikan) est la source principale de métadonnées ; TMDB sert de solution de repli.';
       case 'video_anidb_hash_enabled':
         return 'Identifier les fichiers avec AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -218024,6 +218202,16 @@ extension on _StringsFr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -227084,8 +227272,6 @@ extension on _StringsId {
         return 'Film TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Serial TV TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (melalui Jikan) adalah sumber metadata utama; TMDB menjadi cadangan.';
       case 'video_anidb_hash_enabled':
         return 'Identifikasi berkas dengan AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -227154,6 +227340,16 @@ extension on _StringsId {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -236236,8 +236432,6 @@ extension on _StringsIt {
         return 'Film TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Serie TV TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (tramite Jikan) è la fonte principale dei metadati; TMDB è la fonte di riserva.';
       case 'video_anidb_hash_enabled':
         return 'Identifica i file con AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -236306,6 +236500,16 @@ extension on _StringsIt {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -245315,8 +245519,6 @@ extension on _StringsJa {
         return 'TMDB 映画';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB テレビシリーズ';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL（Jikan 経由）を主なメタデータソースとし、TMDB を予備ソースとして使用します。';
       case 'video_anidb_hash_enabled':
         return 'AniDB ED2K でファイルを識別';
       case 'video_anidb_hash_hint':
@@ -245385,6 +245587,16 @@ extension on _StringsJa {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -254398,8 +254610,6 @@ extension on _StringsKo {
         return 'TMDB 영화';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB TV 시리즈';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL(Jikan 경유)을 기본 메타데이터 소스로 사용하고, TMDB를 대체 소스로 사용합니다.';
       case 'video_anidb_hash_enabled':
         return 'AniDB ED2K로 파일 식별';
       case 'video_anidb_hash_hint':
@@ -254468,6 +254678,16 @@ extension on _StringsKo {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -263543,8 +263763,6 @@ extension on _StringsNl {
         return 'TMDB-film';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB-serie';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (via Jikan) is de primaire bron voor metadata; TMDB is de terugvaloptie.';
       case 'video_anidb_hash_enabled':
         return 'Bestanden identificeren met AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -263613,6 +263831,16 @@ extension on _StringsNl {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -272683,8 +272911,6 @@ extension on _StringsPtBr {
         return 'Filme do TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Série do TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (via Jikan) é a fonte principal de metadados; TMDB é a alternativa.';
       case 'video_anidb_hash_enabled':
         return 'Identificar arquivos com AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -272753,6 +272979,16 @@ extension on _StringsPtBr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -281830,8 +282066,6 @@ extension on _StringsRu {
         return 'Фильм TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Сериал TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (через Jikan) — основной источник метаданных; TMDB — резервный.';
       case 'video_anidb_hash_enabled':
         return 'Определять файлы через AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -281900,6 +282134,16 @@ extension on _StringsRu {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -290949,8 +291193,6 @@ extension on _StringsTh {
         return 'ภาพยนตร์ TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'ซีรีส์ TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (ผ่าน Jikan) เป็นแหล่งข้อมูลเมตาหลัก และใช้ TMDB เป็นแหล่งสำรอง';
       case 'video_anidb_hash_enabled':
         return 'ระบุไฟล์ด้วย AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -291019,6 +291261,16 @@ extension on _StringsTh {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -300083,8 +300335,6 @@ extension on _StringsTr {
         return 'TMDB filmi';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB dizisi';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (Jikan üzerinden) birincil meta veri kaynağıdır; TMDB yedek kaynaktır.';
       case 'video_anidb_hash_enabled':
         return 'Dosyaları AniDB ED2K ile tanımla';
       case 'video_anidb_hash_hint':
@@ -300153,6 +300403,16 @@ extension on _StringsTr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -309211,8 +309471,6 @@ extension on _StringsVi {
         return 'Phim điện ảnh TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Phim truyền hình TMDB';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL (qua Jikan) là nguồn siêu dữ liệu chính; TMDB là nguồn dự phòng.';
       case 'video_anidb_hash_enabled':
         return 'Nhận diện tệp bằng AniDB ED2K';
       case 'video_anidb_hash_hint':
@@ -309281,6 +309539,16 @@ extension on _StringsVi {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
@@ -318260,8 +318528,6 @@ extension on _StringsZhCn {
         return 'TMDB 电影';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB 电视剧';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL（经 Jikan）为主要资料源，TMDB 兜底。';
       case 'video_anidb_hash_enabled':
         return '通过 AniDB ED2K 识别文件';
       case 'video_anidb_hash_hint':
@@ -318330,6 +318596,16 @@ extension on _StringsZhCn {
         return 'AniList 正在对本应用限流。稍等一会儿再重试。';
       case 'video_anilist_error_unreachable':
         return '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
+      case 'video_metadata_primary_provider':
+        return '主资料源';
+      case 'video_metadata_primary_provider_hint':
+        return '主源没有唯一精确命中或不可用时，自动用另一个源兜底。';
+      case 'video_metadata_provider_mal':
+        return 'MAL（经 Jikan）';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return '跟随全局默认';
       default:
         return null;
     }
@@ -327317,8 +327593,6 @@ extension on _StringsZhHk {
         return 'TMDB 電影';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB 電視劇';
-      case 'video_source_scrape_provider_policy':
-        return 'MAL（經 Jikan）為主要資料來源，TMDB 作後備。';
       case 'video_anidb_hash_enabled':
         return '透過 AniDB ED2K 識別檔案';
       case 'video_anidb_hash_hint':
@@ -327387,6 +327661,16 @@ extension on _StringsZhHk {
         return 'AniList 正在對本應用限流。稍等一會兒再重試。';
       case 'video_anilist_error_unreachable':
         return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       default:
         return null;
     }
