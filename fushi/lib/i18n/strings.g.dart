@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 75446 (4438 per locale)
+/// Strings: 75548 (4444 per locale)
 ///
-/// Built on 2026-09-07 at 14:27 UTC
+/// Built on 2026-09-08 at 11:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6145,6 +6145,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AniList is rate-limiting this app right now. Wait a moment and retry.';
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  String get audiobook_transcribe_run_location => 'Run on';
+  String get audiobook_transcribe_run_local => 'This device';
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -16556,6 +16570,26 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -27194,6 +27228,26 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -37885,6 +37939,26 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -48610,6 +48684,26 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -59138,6 +59232,26 @@ class _StringsId extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -69757,6 +69871,26 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -79756,6 +79890,26 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -89765,6 +89919,26 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -100342,6 +100516,26 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -110971,6 +111165,26 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -121578,6 +121792,26 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -131983,6 +132217,26 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -142506,6 +142760,26 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -153000,6 +153274,26 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 // Path: <root>
@@ -162635,6 +162929,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
+  @override
+  String get audiobook_transcribe_run_location => '运行位置';
+  @override
+  String get audiobook_transcribe_run_local => '本机';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device}（互联主机）';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      '正在上传音频到 ${device}…（${done}/${total}）';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      '${device} 转录中… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} 没有该语言的模型';
 }
 
 // Path: <root>
@@ -172323,6 +172637,26 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
 }
 
 /// Flat map(s) containing all translations.
@@ -181442,6 +181776,24 @@ extension on _StringsEn {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -190556,6 +190908,24 @@ extension on _StringsAr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -199715,6 +200085,24 @@ extension on _StringsDe {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -208865,6 +209253,24 @@ extension on _StringsEs {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -218024,6 +218430,24 @@ extension on _StringsFr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -227154,6 +227578,24 @@ extension on _StringsId {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -236306,6 +236748,24 @@ extension on _StringsIt {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -245385,6 +245845,24 @@ extension on _StringsJa {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -254468,6 +254946,24 @@ extension on _StringsKo {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -263613,6 +264109,24 @@ extension on _StringsNl {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -272753,6 +273267,24 @@ extension on _StringsPtBr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -281900,6 +282432,24 @@ extension on _StringsRu {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -291019,6 +291569,24 @@ extension on _StringsTh {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -300153,6 +300721,24 @@ extension on _StringsTr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -309281,6 +309867,24 @@ extension on _StringsVi {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
@@ -318330,6 +318934,23 @@ extension on _StringsZhCn {
         return 'AniList 正在对本应用限流。稍等一会儿再重试。';
       case 'video_anilist_error_unreachable':
         return '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
+      case 'audiobook_transcribe_run_location':
+        return '运行位置';
+      case 'audiobook_transcribe_run_local':
+        return '本机';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device}（互联主机）';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            '正在上传音频到 ${device}…（${done}/${total}）';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            '${device} 转录中… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) => '${device} 没有该语言的模型';
       default:
         return null;
     }
@@ -327387,6 +328008,24 @@ extension on _StringsZhHk {
         return 'AniList 正在對本應用限流。稍等一會兒再重試。';
       case 'video_anilist_error_unreachable':
         return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
       default:
         return null;
     }
