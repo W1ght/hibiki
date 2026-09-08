@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2045 条。点号进各自文件。
+> 共 2046 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2266](bugs/BUG-2266-eink-swipe-dismiss-animation.md) | ✅ | ✅ | 墨水屏模式：查词弹窗滑动关闭仍有滑出/弹回补间动画 |
 | [BUG-2260](bugs/BUG-2260-macos-reader-panel-transparent-barrier.md) | ✅ | ✅ | macOS 阅读设置/导航抽屉打开后点正文不关闭 |
 | [BUG-2259](bugs/BUG-2259-macos-quit-no-exit-flush.md) | ✅ | ✅ | macOS Cmd+Q 退出不跑退出 flush（阅读位置/有声书进度/阅读统计丢最后一段） |
 | [BUG-2258](bugs/BUG-2258-macos-video-retina-blur.md) | ✅ | ✅ | mac 视频在 Retina 上发虚：media_kit 按视频原生分辨率建纹理，放大交给 Flutter 双线性 |
