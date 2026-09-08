@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 75463 (4439 per locale)
 ///
-/// Built on 2026-09-08 at 06:51 UTC
+/// Built on 2026-09-08 at 13:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6145,7 +6145,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AniList is rate-limiting this app right now. Wait a moment and retry.';
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -16558,7 +16558,7 @@ class _StringsAr extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -27198,7 +27198,7 @@ class _StringsDe extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -37891,7 +37891,7 @@ class _StringsEs extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -48618,7 +48618,7 @@ class _StringsFr extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -59148,7 +59148,7 @@ class _StringsId extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -69769,7 +69769,7 @@ class _StringsIt extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -79770,7 +79770,7 @@ class _StringsJa extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -89781,7 +89781,7 @@ class _StringsKo extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -100360,7 +100360,7 @@ class _StringsNl extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -110991,7 +110991,7 @@ class _StringsPtBr extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -121600,7 +121600,7 @@ class _StringsRu extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -132007,7 +132007,7 @@ class _StringsTh extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -142532,7 +142532,7 @@ class _StringsTr extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -153028,7 +153028,7 @@ class _StringsVi extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 // Path: <root>
@@ -162665,7 +162665,7 @@ class _StringsZhCn extends _StringsEn {
   String get video_anilist_error_unreachable =>
       '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML（FP32，实验性）';
+  String get audiobook_transcribe_accel_coreml => 'CoreML（FP32）';
 }
 
 // Path: <root>
@@ -172355,7 +172355,7 @@ class _StringsZhHk extends _StringsEn {
   String get video_anilist_error_unreachable =>
       '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
   @override
-  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32, experimental)';
+  String get audiobook_transcribe_accel_coreml => 'CoreML (FP32)';
 }
 
 /// Flat map(s) containing all translations.
@@ -181476,7 +181476,7 @@ extension on _StringsEn {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -190592,7 +190592,7 @@ extension on _StringsAr {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -199753,7 +199753,7 @@ extension on _StringsDe {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -208905,7 +208905,7 @@ extension on _StringsEs {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -218066,7 +218066,7 @@ extension on _StringsFr {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -227198,7 +227198,7 @@ extension on _StringsId {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -236352,7 +236352,7 @@ extension on _StringsIt {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -245433,7 +245433,7 @@ extension on _StringsJa {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -254518,7 +254518,7 @@ extension on _StringsKo {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -263665,7 +263665,7 @@ extension on _StringsNl {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -272807,7 +272807,7 @@ extension on _StringsPtBr {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -281956,7 +281956,7 @@ extension on _StringsRu {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -291077,7 +291077,7 @@ extension on _StringsTh {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -300213,7 +300213,7 @@ extension on _StringsTr {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -309343,7 +309343,7 @@ extension on _StringsVi {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
@@ -318394,7 +318394,7 @@ extension on _StringsZhCn {
       case 'video_anilist_error_unreachable':
         return '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML（FP32，实验性）';
+        return 'CoreML（FP32）';
       default:
         return null;
     }
@@ -327453,7 +327453,7 @@ extension on _StringsZhHk {
       case 'video_anilist_error_unreachable':
         return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
       case 'audiobook_transcribe_accel_coreml':
-        return 'CoreML (FP32, experimental)';
+        return 'CoreML (FP32)';
       default:
         return null;
     }
