@@ -1743,6 +1743,13 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   bool get _appearanceSheetOpen => _chrome.appearanceSheetOpen;
   set _appearanceSheetOpen(bool value) => _chrome.appearanceSheetOpen = value;
 
+  // BUG-2260：当前压在正文之上的是**透明遮罩**侧抽屉（showReaderSideSheet 的
+  // 外观 / 导航形态）。只有这一种呈现形态的遮罩不画像素，也只有它会在 macOS 上
+  // 漏掉落在正文 WebView 上的点击——判据与代价见
+  // [readerWebViewPointerClosesSideSheet]。居中对话框 / bottom sheet 形态的遮罩
+  // 有实色，不置此旗。
+  bool _sideSheetOpen = false;
+
   // BUG-969：设置实时预览的合并执行器。拖 slider 时 onSettingsChangedLive 每个
   // tick 触发一次，旧实现每次直接跑「CSS 注入 + 样式重锚 + tap-gate 同步 + 整页
   // setState」→ 一次拖动上百趟 WebView 往返叠加、本页 build 每 tick 全量重建。
