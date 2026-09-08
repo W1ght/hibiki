@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76143 (4479 per locale)
+/// Strings: 76160 (4480 per locale)
 ///
-/// Built on 2026-09-08 at 13:52 UTC
+/// Built on 2026-09-08 at 15:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6210,6 +6210,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  String get reader_font_weight => 'Font weight';
 }
 
 // Path: <root>
@@ -16727,6 +16728,8 @@ class _StringsAr extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'وزن الخط';
 }
 
 // Path: <root>
@@ -27471,6 +27474,8 @@ class _StringsDe extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Schriftstärke';
 }
 
 // Path: <root>
@@ -38268,6 +38273,8 @@ class _StringsEs extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Grosor de fuente';
 }
 
 // Path: <root>
@@ -49099,6 +49106,8 @@ class _StringsFr extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Graisse de police';
 }
 
 // Path: <root>
@@ -59733,6 +59742,8 @@ class _StringsId extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Ketebalan font';
 }
 
 // Path: <root>
@@ -70458,6 +70469,8 @@ class _StringsIt extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Spessore carattere';
 }
 
 // Path: <root>
@@ -80563,6 +80576,8 @@ class _StringsJa extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'フォントの太さ';
 }
 
 // Path: <root>
@@ -90678,6 +90693,8 @@ class _StringsKo extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => '글꼴 굵기';
 }
 
 // Path: <root>
@@ -101361,6 +101378,8 @@ class _StringsNl extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Letterdikte';
 }
 
 // Path: <root>
@@ -112096,6 +112115,8 @@ class _StringsPtBr extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Espessura da fonte';
 }
 
 // Path: <root>
@@ -122809,6 +122830,8 @@ class _StringsRu extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Насыщенность шрифта';
 }
 
 // Path: <root>
@@ -133320,6 +133343,8 @@ class _StringsTh extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'น้ำหนักฟอนต์';
 }
 
 // Path: <root>
@@ -143949,6 +143974,8 @@ class _StringsTr extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Yazı tipi kalınlığı';
 }
 
 // Path: <root>
@@ -154549,6 +154576,8 @@ class _StringsVi extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => 'Độ đậm phông chữ';
 }
 
 // Path: <root>
@@ -164283,6 +164312,8 @@ class _StringsZhCn extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       '已重排 ${count} 张新卡；${skipped} 张已不再是新卡，未改动。';
+  @override
+  String get reader_font_weight => '字体粗细';
 }
 
 // Path: <root>
@@ -174076,6 +174107,8 @@ class _StringsZhHk extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get reader_font_weight => '字型粗細';
 }
 
 /// Flat map(s) containing all translations.
@@ -183287,6 +183320,8 @@ extension on _StringsEn {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Font weight';
       default:
         return null;
     }
@@ -192493,6 +192528,8 @@ extension on _StringsAr {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'وزن الخط';
       default:
         return null;
     }
@@ -201744,6 +201781,8 @@ extension on _StringsDe {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Schriftstärke';
       default:
         return null;
     }
@@ -210986,6 +211025,8 @@ extension on _StringsEs {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Grosor de fuente';
       default:
         return null;
     }
@@ -220237,6 +220278,8 @@ extension on _StringsFr {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Graisse de police';
       default:
         return null;
     }
@@ -229459,6 +229502,8 @@ extension on _StringsId {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Ketebalan font';
       default:
         return null;
     }
@@ -238703,6 +238748,8 @@ extension on _StringsIt {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Spessore carattere';
       default:
         return null;
     }
@@ -247874,6 +247921,8 @@ extension on _StringsJa {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'フォントの太さ';
       default:
         return null;
     }
@@ -257049,6 +257098,8 @@ extension on _StringsKo {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return '글꼴 굵기';
       default:
         return null;
     }
@@ -266286,6 +266337,8 @@ extension on _StringsNl {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Letterdikte';
       default:
         return null;
     }
@@ -275518,6 +275571,8 @@ extension on _StringsPtBr {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Espessura da fonte';
       default:
         return null;
     }
@@ -284757,6 +284812,8 @@ extension on _StringsRu {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Насыщенность шрифта';
       default:
         return null;
     }
@@ -293968,6 +294025,8 @@ extension on _StringsTh {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'น้ำหนักฟอนต์';
       default:
         return null;
     }
@@ -303194,6 +303253,8 @@ extension on _StringsTr {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Yazı tipi kalınlığı';
       default:
         return null;
     }
@@ -312414,6 +312475,8 @@ extension on _StringsVi {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return 'Độ đậm phông chữ';
       default:
         return null;
     }
@@ -321554,6 +321617,8 @@ extension on _StringsZhCn {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             '已重排 ${count} 张新卡；${skipped} 张已不再是新卡，未改动。';
+      case 'reader_font_weight':
+        return '字体粗细';
       default:
         return null;
     }
@@ -330703,6 +330768,8 @@ extension on _StringsZhHk {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'reader_font_weight':
+        return '字型粗細';
       default:
         return null;
     }
