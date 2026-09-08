@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76143 (4479 per locale)
+/// Strings: 76177 (4481 per locale)
 ///
-/// Built on 2026-09-08 at 13:52 UTC
+/// Built on 2026-09-08 at 16:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -643,6 +643,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'No frequency dictionaries are loaded.';
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   String get anki_reposition_empty => 'This deck has no new cards.';
   String anki_reposition_failed({required Object error}) =>
       'Reorder failed: ${error}';
@@ -3869,6 +3872,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_bottom_docked_hint =>
       'Pin the lookup popup as a full-width panel at the bottom of the screen instead of following the looked-up word.';
   String get popup_clear_sentence_draft_tooltip => 'Clear added sentences';
+  String get popup_compact_glossaries => 'Compact glossaries';
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
   String get popup_ctx_adjust_button => 'Adjust context';
   String get popup_ctx_box_current => 'Current sentence';
   String get popup_ctx_box_empty => '(none)';
@@ -6207,9 +6213,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${process} is a critical system process — Fushi will not end it. Change the port instead.';
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -7003,6 +7006,10 @@ class _StringsAr extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -12594,6 +12601,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'مسح الجمل المضافة';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'تعديل السياق';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -16723,10 +16735,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'هذه العملية هي نسخة أخرى قيد التشغيل من هذا التطبيق.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -17536,6 +17544,10 @@ class _StringsDe extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -23251,6 +23263,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'Hinzugefügte Sätze leeren';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Kontext anpassen';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -27467,10 +27484,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Dieser Prozess ist eine weitere laufende Instanz dieser App.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -28282,6 +28295,10 @@ class _StringsEs extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -34014,6 +34031,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'Borrar las frases añadidas';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Ajustar contexto';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -38264,10 +38286,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Este proceso es otra instancia en ejecución de esta app.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -39081,6 +39099,10 @@ class _StringsFr extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -44833,6 +44855,11 @@ class _StringsFr extends _StringsEn {
   String get popup_clear_sentence_draft_tooltip =>
       'Effacer les phrases ajoutées';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Ajuster le contexte';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -49095,10 +49122,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Ce processus est une autre instance en cours d\'exécution de cette application.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -49903,6 +49926,10 @@ class _StringsId extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -55550,6 +55577,11 @@ class _StringsId extends _StringsEn {
   String get popup_clear_sentence_draft_tooltip =>
       'Kosongkan kalimat yang ditambahkan';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Sesuaikan konteks';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -59729,10 +59761,6 @@ class _StringsId extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Proses ini adalah instance lain dari aplikasi ini yang sedang berjalan.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -60539,6 +60567,10 @@ class _StringsIt extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -66236,6 +66268,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'Cancella le frasi aggiunte';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Regola contesto';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -70454,10 +70491,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Questo processo è un\'altra istanza in esecuzione di questa app.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -71226,6 +71259,10 @@ class _StringsJa extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -76598,6 +76635,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => '追加した文をクリア';
   @override
+  String get popup_compact_glossaries => 'コンパクト釈義';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'ポップアップの釈義項目を1行ずつではなく「 | 」区切りで同じ行に表示します。';
+  @override
   String get popup_ctx_adjust_button => '文脈を調整';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -80559,10 +80601,6 @@ class _StringsJa extends _StringsEn {
       '${process}は重要なシステムプロセスです — Fushiでは終了しません。代わりにポートを変更してください。';
   @override
   String get yomitan_port_kill_self_instance => 'このプロセスは、このアプリの別のインスタンスです。';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -81327,6 +81365,10 @@ class _StringsKo extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -86707,6 +86749,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => '추가한 문장 비우기';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => '문맥 조정';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -90674,10 +90721,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       '이 프로세스는 이 앱의 다른 실행 중인 인스턴스입니다.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -91480,6 +91523,10 @@ class _StringsNl extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -97155,6 +97202,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'Toegevoegde zinnen wissen';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Context aanpassen';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -101357,10 +101409,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Dit proces is een andere draaiende instantie van deze app.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -102173,6 +102221,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -107871,6 +107923,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'Limpar frases adicionadas';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Ajustar contexto';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -112092,10 +112149,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Este processo é outra instância deste app em execução.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -112898,6 +112951,10 @@ class _StringsRu extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -118587,6 +118644,11 @@ class _StringsRu extends _StringsEn {
   String get popup_clear_sentence_draft_tooltip =>
       'Очистить добавленные предложения';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Изменить контекст';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -122805,10 +122867,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Этот процесс — другой запущенный экземпляр данного приложения.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -123597,6 +123655,10 @@ class _StringsTh extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -129182,6 +129244,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'ล้างประโยคที่เพิ่มไว้';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'ปรับบริบท';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -133316,10 +133383,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'โปรเซสนี้เป็นอินสแตนซ์อื่นของแอปนี้ที่กำลังทำงานอยู่';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -134119,6 +134182,10 @@ class _StringsTr extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -139771,6 +139838,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'Eklenen cümleleri temizle';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Bağlamı ayarla';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -143945,10 +144017,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Bu işlem, uygulamanın çalışan başka bir örneğidir.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -144750,6 +144818,10 @@ class _StringsVi extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -150388,6 +150460,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => 'Xóa các câu đã thêm';
   @override
+  String get popup_compact_glossaries => 'Compact glossaries';
+  @override
+  String get popup_compact_glossaries_hint =>
+      'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
+  @override
   String get popup_ctx_adjust_button => 'Điều chỉnh ngữ cảnh';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -154545,10 +154622,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Tiến trình này là một phiên bản đang chạy khác của ứng dụng.';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 // Path: <root>
@@ -155284,6 +155357,10 @@ class _StringsZhCn extends _StringsEn {
   String get anki_reposition_dicts_none => '没有已装载的词频词典。';
   @override
   String anki_reposition_done({required Object count}) => '已重排 ${count} 张新卡。';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      '已重排 ${count} 张新卡；${skipped} 张已不再是新卡，未改动。';
   @override
   String get anki_reposition_empty => '该卡组没有新卡。';
   @override
@@ -160451,6 +160528,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => '清空已加句子';
   @override
+  String get popup_compact_glossaries => '紧凑释义';
+  @override
+  String get popup_compact_glossaries_hint =>
+      '查词弹窗里的释义条目改为同行显示、用「 | 」分隔，不再每条占一行。';
+  @override
   String get popup_ctx_adjust_button => '调整上下文';
   @override
   String get popup_ctx_box_current => '当前句';
@@ -164279,10 +164361,6 @@ class _StringsZhCn extends _StringsEn {
       '${process} 是关键系统进程，Fushi 不会结束它；请改用其他端口。';
   @override
   String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      '已重排 ${count} 张新卡；${skipped} 张已不再是新卡，未改动。';
 }
 
 // Path: <root>
@@ -165023,6 +165101,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String anki_reposition_done({required Object count}) =>
       'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_done_skipped(
+          {required Object count, required Object skipped}) =>
+      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
   @override
   String get anki_reposition_empty => 'This deck has no new cards.';
   @override
@@ -170223,6 +170305,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_clear_sentence_draft_tooltip => '清空已加入的句子';
   @override
+  String get popup_compact_glossaries => '緊湊釋義';
+  @override
+  String get popup_compact_glossaries_hint =>
+      '查詞彈窗裡的釋義條目改為同行顯示、用「 | 」分隔，不再每條佔一行。';
+  @override
   String get popup_ctx_adjust_button => '調整上下文';
   @override
   String get popup_ctx_box_current => 'Current';
@@ -174072,10 +174159,6 @@ class _StringsZhHk extends _StringsEn {
       '${process} 是關鍵系統進程，Fushi 不會結束它；請改用其他端口。';
   @override
   String get yomitan_port_kill_self_instance => '該進程是本應用的另一個正在運行的實例。';
-  @override
-  String anki_reposition_done_skipped(
-          {required Object count, required Object skipped}) =>
-      'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
 }
 
 /// Flat map(s) containing all translations.
@@ -174733,6 +174816,9 @@ extension on _StringsEn {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -179618,6 +179704,10 @@ extension on _StringsEn {
         return 'Pin the lookup popup as a full-width panel at the bottom of the screen instead of following the looked-up word.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Clear added sentences';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Adjust context';
       case 'popup_ctx_box_current':
@@ -183284,9 +183374,6 @@ extension on _StringsEn {
             '${process} is a critical system process — Fushi will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -183944,6 +184031,9 @@ extension on _StringsAr {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -188827,6 +188917,10 @@ extension on _StringsAr {
         return 'ثبّت نافذة البحث كلوحة بعرض كامل في أسفل الشاشة بدلًا من اتباع الكلمة المبحوث عنها.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'مسح الجمل المضافة';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'تعديل السياق';
       case 'popup_ctx_box_current':
@@ -192490,9 +192584,6 @@ extension on _StringsAr {
             '${process} هي عملية نظام حرجة — لن يقوم Fushi بإنهائها. غيّر المنفذ بدلاً من ذلك.';
       case 'yomitan_port_kill_self_instance':
         return 'هذه العملية هي نسخة أخرى قيد التشغيل من هذا التطبيق.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -193156,6 +193247,9 @@ extension on _StringsDe {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -198062,6 +198156,10 @@ extension on _StringsDe {
         return 'Verankert das Nachschlage-Popup als bildschirmbreite Leiste am unteren Rand, statt dem nachgeschlagenen Wort zu folgen.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Hinzugefügte Sätze leeren';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Kontext anpassen';
       case 'popup_ctx_box_current':
@@ -201741,9 +201839,6 @@ extension on _StringsDe {
             '${process} ist ein kritischer Systemprozess – Fushi wird ihn nicht beenden. Ändern Sie stattdessen den Port.';
       case 'yomitan_port_kill_self_instance':
         return 'Dieser Prozess ist eine weitere laufende Instanz dieser App.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -202402,6 +202497,9 @@ extension on _StringsEs {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -207305,6 +207403,10 @@ extension on _StringsEs {
         return 'Fija la ventana de consulta como un panel de ancho completo en la parte inferior de la pantalla, en lugar de seguir a la palabra consultada.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Borrar las frases añadidas';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Ajustar contexto';
       case 'popup_ctx_box_current':
@@ -210983,9 +211085,6 @@ extension on _StringsEs {
             '${process} es un proceso crítico del sistema — Fushi no lo finalizará. Cambie el puerto en su lugar.';
       case 'yomitan_port_kill_self_instance':
         return 'Este proceso es otra instancia en ejecución de esta app.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -211645,6 +211744,9 @@ extension on _StringsFr {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -216554,6 +216656,10 @@ extension on _StringsFr {
         return 'Épingle la fenêtre de recherche en un panneau pleine largeur au bas de l\'écran, au lieu de la faire suivre le mot recherché.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Effacer les phrases ajoutées';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Ajuster le contexte';
       case 'popup_ctx_box_current':
@@ -220234,9 +220340,6 @@ extension on _StringsFr {
             '${process} est un processus système critique — Fushi ne l\'arrêtera pas. Changez de port à la place.';
       case 'yomitan_port_kill_self_instance':
         return 'Ce processus est une autre instance en cours d\'exécution de cette application.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -220896,6 +220999,9 @@ extension on _StringsId {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -225787,6 +225893,10 @@ extension on _StringsId {
         return 'Sematkan popup pencarian sebagai panel selebar layar di bagian bawah, bukan mengikuti kata yang dicari.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Kosongkan kalimat yang ditambahkan';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Sesuaikan konteks';
       case 'popup_ctx_box_current':
@@ -229456,9 +229566,6 @@ extension on _StringsId {
             '${process} adalah proses sistem penting — Fushi tidak akan mengakhirinya. Ganti port saja.';
       case 'yomitan_port_kill_self_instance':
         return 'Proses ini adalah instance lain dari aplikasi ini yang sedang berjalan.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -230118,6 +230225,9 @@ extension on _StringsIt {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -235018,6 +235128,10 @@ extension on _StringsIt {
         return 'Fissa il popup di ricerca come un pannello a tutta larghezza in fondo allo schermo invece di seguire la parola cercata.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Cancella le frasi aggiunte';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Regola contesto';
       case 'popup_ctx_box_current':
@@ -238700,9 +238814,6 @@ extension on _StringsIt {
             '${process} è un processo di sistema critico — Fushi non lo terminerà. Cambia la porta.';
       case 'yomitan_port_kill_self_instance':
         return 'Questo processo è un\'altra istanza in esecuzione di questa app.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -239357,6 +239468,9 @@ extension on _StringsJa {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -244227,6 +244341,10 @@ extension on _StringsJa {
         return '辞書ポップアップを、引いた単語に追従させる代わりに、画面下部の全幅パネルとして固定します。';
       case 'popup_clear_sentence_draft_tooltip':
         return '追加した文をクリア';
+      case 'popup_compact_glossaries':
+        return 'コンパクト釈義';
+      case 'popup_compact_glossaries_hint':
+        return 'ポップアップの釈義項目を1行ずつではなく「 | 」区切りで同じ行に表示します。';
       case 'popup_ctx_adjust_button':
         return '文脈を調整';
       case 'popup_ctx_box_current':
@@ -247871,9 +247989,6 @@ extension on _StringsJa {
             '${process}は重要なシステムプロセスです — Fushiでは終了しません。代わりにポートを変更してください。';
       case 'yomitan_port_kill_self_instance':
         return 'このプロセスは、このアプリの別のインスタンスです。';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -248527,6 +248642,9 @@ extension on _StringsKo {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -253399,6 +253517,10 @@ extension on _StringsKo {
         return '단어 찾기 팝업을 찾은 단어를 따라가지 않고 화면 하단의 전체 폭 패널로 고정합니다.';
       case 'popup_clear_sentence_draft_tooltip':
         return '추가한 문장 비우기';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return '문맥 조정';
       case 'popup_ctx_box_current':
@@ -257046,9 +257168,6 @@ extension on _StringsKo {
             '${process}는 중요한 시스템 프로세스입니다. Fushi가 종료하지 않습니다. 대신 포트를 변경하세요.';
       case 'yomitan_port_kill_self_instance':
         return '이 프로세스는 이 앱의 다른 실행 중인 인스턴스입니다.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -257708,6 +257827,9 @@ extension on _StringsNl {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -262607,6 +262729,10 @@ extension on _StringsNl {
         return 'Zet de opzoek-pop-up vast als een paneel over de volle breedte onderaan het scherm in plaats van bij het opgezochte woord.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Toegevoegde zinnen wissen';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Context aanpassen';
       case 'popup_ctx_box_current':
@@ -266283,9 +266409,6 @@ extension on _StringsNl {
             '${process} is een kritiek systeemproces — Fushi beëindigt het niet. Wijzig de poort.';
       case 'yomitan_port_kill_self_instance':
         return 'Dit proces is een andere draaiende instantie van deze app.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -266945,6 +267068,9 @@ extension on _StringsPtBr {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -271843,6 +271969,10 @@ extension on _StringsPtBr {
         return 'Fixa o pop-up de consulta como um painel de largura total na parte inferior da tela, em vez de seguir a palavra consultada.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Limpar frases adicionadas';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Ajustar contexto';
       case 'popup_ctx_box_current':
@@ -275515,9 +275645,6 @@ extension on _StringsPtBr {
             '${process} é um processo crítico do sistema — o Fushi não vai encerrá-lo. Mude a porta.';
       case 'yomitan_port_kill_self_instance':
         return 'Este processo é outra instância deste app em execução.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -276179,6 +276306,9 @@ extension on _StringsRu {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -281082,6 +281212,10 @@ extension on _StringsRu {
         return 'Закрепить окно поиска как панель во всю ширину внизу экрана вместо следования за искомым словом.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Очистить добавленные предложения';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Изменить контекст';
       case 'popup_ctx_box_current':
@@ -284754,9 +284888,6 @@ extension on _StringsRu {
             '${process} — критический системный процесс, Fushi не будет его завершать. Измените порт.';
       case 'yomitan_port_kill_self_instance':
         return 'Этот процесс — другой запущенный экземпляр данного приложения.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -285414,6 +285545,9 @@ extension on _StringsTh {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -290300,6 +290434,10 @@ extension on _StringsTh {
         return 'ปักหน้าต่างค้นคำเป็นแผงเต็มความกว้างที่ด้านล่างของหน้าจอ แทนการตามตำแหน่งคำที่ค้น';
       case 'popup_clear_sentence_draft_tooltip':
         return 'ล้างประโยคที่เพิ่มไว้';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'ปรับบริบท';
       case 'popup_ctx_box_current':
@@ -293965,9 +294103,6 @@ extension on _StringsTh {
             '${process} เป็นโปรเซสระบบที่สำคัญ — Fushi จะไม่จบโปรเซสนี้ เปลี่ยนพอร์ตแทน';
       case 'yomitan_port_kill_self_instance':
         return 'โปรเซสนี้เป็นอินสแตนซ์อื่นของแอปนี้ที่กำลังทำงานอยู่';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -294628,6 +294763,9 @@ extension on _StringsTr {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -299521,6 +299659,10 @@ extension on _StringsTr {
         return 'Arama açılır penceresini, aranan sözcüğü izlemek yerine ekranın altında tam genişlikte bir panel olarak sabitle.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Eklenen cümleleri temizle';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Bağlamı ayarla';
       case 'popup_ctx_box_current':
@@ -303191,9 +303333,6 @@ extension on _StringsTr {
             '${process} kritik bir sistem işlemidir — Fushi onu sonlandırmaz. Bunun yerine portu değiştirin.';
       case 'yomitan_port_kill_self_instance':
         return 'Bu işlem, uygulamanın çalışan başka bir örneğidir.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -303853,6 +303992,9 @@ extension on _StringsVi {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -308743,6 +308885,10 @@ extension on _StringsVi {
         return 'Ghim cửa sổ tra thành một bảng rộng toàn màn hình ở đáy màn hình thay vì bám theo từ được tra.';
       case 'popup_clear_sentence_draft_tooltip':
         return 'Xóa các câu đã thêm';
+      case 'popup_compact_glossaries':
+        return 'Compact glossaries';
+      case 'popup_compact_glossaries_hint':
+        return 'Show dictionary glossary entries inline, separated by \' | \', instead of one per line in the lookup popup.';
       case 'popup_ctx_adjust_button':
         return 'Điều chỉnh ngữ cảnh';
       case 'popup_ctx_box_current':
@@ -312411,9 +312557,6 @@ extension on _StringsVi {
             '${process} là tiến trình hệ thống quan trọng — Fushi sẽ không kết thúc nó. Hãy đổi cổng thay vì vậy.';
       case 'yomitan_port_kill_self_instance':
         return 'Tiến trình này là một phiên bản đang chạy khác của ứng dụng.';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
@@ -313065,6 +313208,9 @@ extension on _StringsZhCn {
         return '没有已装载的词频词典。';
       case 'anki_reposition_done':
         return ({required Object count}) => '已重排 ${count} 张新卡。';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            '已重排 ${count} 张新卡；${skipped} 张已不再是新卡，未改动。';
       case 'anki_reposition_empty':
         return '该卡组没有新卡。';
       case 'anki_reposition_failed':
@@ -317920,6 +318066,10 @@ extension on _StringsZhCn {
         return '将查词弹窗固定为屏幕底部一条整宽面板，而不是跟随被查词的位置。';
       case 'popup_clear_sentence_draft_tooltip':
         return '清空已加句子';
+      case 'popup_compact_glossaries':
+        return '紧凑释义';
+      case 'popup_compact_glossaries_hint':
+        return '查词弹窗里的释义条目改为同行显示、用「 | 」分隔，不再每条占一行。';
       case 'popup_ctx_adjust_button':
         return '调整上下文';
       case 'popup_ctx_box_current':
@@ -321551,9 +321701,6 @@ extension on _StringsZhCn {
             '${process} 是关键系统进程，Fushi 不会结束它；请改用其他端口。';
       case 'yomitan_port_kill_self_instance':
         return '该进程是本应用的另一个正在运行的实例。';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            '已重排 ${count} 张新卡；${skipped} 张已不再是新卡，未改动。';
       default:
         return null;
     }
@@ -322205,6 +322352,9 @@ extension on _StringsZhHk {
         return 'No frequency dictionaries are loaded.';
       case 'anki_reposition_done':
         return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_done_skipped':
+        return ({required Object count, required Object skipped}) =>
+            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       case 'anki_reposition_empty':
         return 'This deck has no new cards.';
       case 'anki_reposition_failed':
@@ -327067,6 +327217,10 @@ extension on _StringsZhHk {
         return '將查詞彈窗固定為螢幕底部一條整寬面板，而非跟隨被查的字詞。';
       case 'popup_clear_sentence_draft_tooltip':
         return '清空已加入的句子';
+      case 'popup_compact_glossaries':
+        return '緊湊釋義';
+      case 'popup_compact_glossaries_hint':
+        return '查詞彈窗裡的釋義條目改為同行顯示、用「 | 」分隔，不再每條佔一行。';
       case 'popup_ctx_adjust_button':
         return '調整上下文';
       case 'popup_ctx_box_current':
@@ -330700,9 +330854,6 @@ extension on _StringsZhHk {
             '${process} 是關鍵系統進程，Fushi 不會結束它；請改用其他端口。';
       case 'yomitan_port_kill_self_instance':
         return '該進程是本應用的另一個正在運行的實例。';
-      case 'anki_reposition_done_skipped':
-        return ({required Object count, required Object skipped}) =>
-            'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
       default:
         return null;
     }
