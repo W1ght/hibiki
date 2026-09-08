@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 75548 (4444 per locale)
+/// Strings: 75633 (4449 per locale)
 ///
-/// Built on 2026-09-08 at 11:06 UTC
+/// Built on 2026-09-08 at 11:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6159,6 +6159,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Transcribing on ${device}… ${percent}%';
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  String get download_target_label => 'Download on';
+  String get download_target_local => 'This device';
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -16590,6 +16597,18 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -27248,6 +27267,18 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -37959,6 +37990,18 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -48704,6 +48747,18 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -59252,6 +59307,18 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -69891,6 +69958,18 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -79910,6 +79989,18 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -89939,6 +90030,18 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -100536,6 +100639,18 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -111185,6 +111300,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -121812,6 +121939,18 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -132237,6 +132376,18 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -142780,6 +142931,18 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -153294,6 +153457,18 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 // Path: <root>
@@ -162949,6 +163124,17 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} 没有该语言的模型';
+  @override
+  String get download_target_label => '下载到';
+  @override
+  String get download_target_local => '本机';
+  @override
+  String download_target_remote({required Object device}) => '${device}（互联主机）';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      '${device} 上的任务';
+  @override
+  String get download_remote_jobs_empty => '主机上还没有任务';
 }
 
 // Path: <root>
@@ -172657,6 +172843,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_remote_model_missing({required Object device}) =>
       '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
 }
 
 /// Flat map(s) containing all translations.
@@ -181794,6 +181992,16 @@ extension on _StringsEn {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -190926,6 +191134,16 @@ extension on _StringsAr {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -200103,6 +200321,16 @@ extension on _StringsDe {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -209271,6 +209499,16 @@ extension on _StringsEs {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -218448,6 +218686,16 @@ extension on _StringsFr {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -227596,6 +227844,16 @@ extension on _StringsId {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -236766,6 +237024,16 @@ extension on _StringsIt {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -245863,6 +246131,16 @@ extension on _StringsJa {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -254964,6 +255242,16 @@ extension on _StringsKo {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -264127,6 +264415,16 @@ extension on _StringsNl {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -273285,6 +273583,16 @@ extension on _StringsPtBr {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -282450,6 +282758,16 @@ extension on _StringsRu {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -291587,6 +291905,16 @@ extension on _StringsTh {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -300739,6 +301067,16 @@ extension on _StringsTr {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -309885,6 +310223,16 @@ extension on _StringsVi {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
@@ -318951,6 +319299,16 @@ extension on _StringsZhCn {
             '${device} 转录中… ${percent}%';
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) => '${device} 没有该语言的模型';
+      case 'download_target_label':
+        return '下载到';
+      case 'download_target_local':
+        return '本机';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device}（互联主机）';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => '${device} 上的任务';
+      case 'download_remote_jobs_empty':
+        return '主机上还没有任务';
       default:
         return null;
     }
@@ -328026,6 +328384,16 @@ extension on _StringsZhHk {
       case 'audiobook_transcribe_remote_model_missing':
         return ({required Object device}) =>
             '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
       default:
         return null;
     }
