@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76466 (4498 per locale)
+/// Strings: 76585 (4505 per locale)
 ///
-/// Built on 2026-09-08 at 19:22 UTC
+/// Built on 2026-09-08 at 19:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6234,6 +6234,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get discovery_badge_trusted => 'Trusted';
   String get discovery_badge_remake => 'Remake';
   String get discovery_content_hint_manga => 'Suspected manga';
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -16794,6 +16809,28 @@ class _StringsAr extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -27581,6 +27618,28 @@ class _StringsDe extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -38421,6 +38480,28 @@ class _StringsEs extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -49295,6 +49376,28 @@ class _StringsFr extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -59972,6 +60075,28 @@ class _StringsId extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -70740,6 +70865,28 @@ class _StringsIt extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -80888,6 +81035,28 @@ class _StringsJa extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -91046,6 +91215,28 @@ class _StringsKo extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -101772,6 +101963,28 @@ class _StringsNl extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -112550,6 +112763,28 @@ class _StringsPtBr extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -123306,6 +123541,28 @@ class _StringsRu extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -133860,6 +134117,28 @@ class _StringsTh extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -144532,6 +144811,28 @@ class _StringsTr extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -155175,6 +155476,28 @@ class _StringsVi extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 // Path: <root>
@@ -164951,6 +165274,27 @@ class _StringsZhCn extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => '疑似漫画';
+  @override
+  String get video_subtitle_retime_action => '用语音模型重定时';
+  @override
+  String get video_subtitle_retime_no_track => '先选一条字幕轨';
+  @override
+  String get video_subtitle_retime_running => '正在用语音模型重定时字幕…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      '已重定时 ${matched}/${total} 句（${percent}%），中位偏移 ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      '只有 ${percent}% 的句子对上了。检查语音语言是否选对、这份字幕是不是这一集的。';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '已剔除 ${count} 条格式异常的字幕';
+  @override
+  String get video_subtitle_retime_failed => '字幕重定时失败';
 }
 
 // Path: <root>
@@ -174787,6 +175131,28 @@ class _StringsZhHk extends _StringsEn {
   String get discovery_badge_remake => 'Remake';
   @override
   String get discovery_content_hint_manga => 'Suspected manga';
+  @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
+  String video_subtitle_retime_done(
+          {required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms}) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
 }
 
 /// Flat map(s) containing all translations.
@@ -184036,6 +184402,27 @@ extension on _StringsEn {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -193280,6 +193667,27 @@ extension on _StringsAr {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -202569,6 +202977,27 @@ extension on _StringsDe {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -211849,6 +212278,27 @@ extension on _StringsEs {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -221138,6 +221588,27 @@ extension on _StringsFr {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -230398,6 +230869,27 @@ extension on _StringsId {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -239680,6 +240172,27 @@ extension on _StringsIt {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -248889,6 +249402,27 @@ extension on _StringsJa {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -258102,6 +258636,27 @@ extension on _StringsKo {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -267377,6 +267932,27 @@ extension on _StringsNl {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -276647,6 +277223,27 @@ extension on _StringsPtBr {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -285924,6 +286521,27 @@ extension on _StringsRu {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -295173,6 +295791,27 @@ extension on _StringsTh {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -304437,6 +305076,27 @@ extension on _StringsTr {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -313695,6 +314355,27 @@ extension on _StringsVi {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
@@ -322873,6 +323554,26 @@ extension on _StringsZhCn {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return '疑似漫画';
+      case 'video_subtitle_retime_action':
+        return '用语音模型重定时';
+      case 'video_subtitle_retime_no_track':
+        return '先选一条字幕轨';
+      case 'video_subtitle_retime_running':
+        return '正在用语音模型重定时字幕…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            '已重定时 ${matched}/${total} 句（${percent}%），中位偏移 ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            '只有 ${percent}% 的句子对上了。检查语音语言是否选对、这份字幕是不是这一集的。';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) => '已剔除 ${count} 条格式异常的字幕';
+      case 'video_subtitle_retime_failed':
+        return '字幕重定时失败';
       default:
         return null;
     }
@@ -332060,6 +332761,27 @@ extension on _StringsZhHk {
         return 'Remake';
       case 'discovery_content_hint_manga':
         return 'Suspected manga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
+      case 'video_subtitle_retime_done':
+        return (
+                {required Object matched,
+                required Object total,
+                required Object percent,
+                required Object ms}) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
       default:
         return null;
     }
