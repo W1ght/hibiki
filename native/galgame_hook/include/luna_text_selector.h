@@ -142,6 +142,62 @@ inline int LunaNormalizedTextLength(const wchar_t* text, int len) {
   return block[0] > 0 ? block[0] : len;
 }
 
+// EmbedKrkrZ 的成对块折叠**视图**（KiriKiri Z 台词 lane 专用）。
+//
+// LunaNormalizedTextLength 只回「首块」，这对 BUG-1175 的 ruby 形状 `A A B B A A`
+// 是对的（A=汉字正文），但 KAGEX 把姓名层和正文层合在同一次 EmbedKrkrZ 输出里时，
+// 形状是 `N N T T`（N=说话人，T=台词）：首块 = 姓名，整句台词被丢掉；姓名短于
+// kLunaMinFoldedLineChars（如「？？？」）时更是一块都配不上，六遍字原样入环
+// （何度目かのはじめまして，2026-09-03 真机）。
+//
+// 这里改成取**末块**：`A A` → A、`A A B B A A` → A、`N N T T` → T、
+// `N N A A B B A A` → A，四种已观测形状都落到正文。块长下限降到 1 字（姓名可以
+// 只有一个字），但整串恰好是一个字二倍（`ああ`）仍原样交给 LunaTextIsArtifact 判噪声。
+// 「所有块都必须成对、否则整串放行」的安全边界不变，`わかったわかった、もう行くよ`
+// 这类合法叠句照旧原样通过。
+//
+// 每个位置优先试**最大**块长：`ああいいああいい`（A=ああいい）若先试小块会拆成
+// [あ][い][あ][い]，末块变成单字「い」；最大块优先直接命中整串二倍。
+struct LunaFoldedView {
+  int offset;
+  int length;
+};
+
+// 成对块 DP 是 O(n^2·k)，最大块优先在全同字串上退化到 O(n^3)；台词行远短于此，
+// 超界按「原样放行」的安全方向处理（全同字串本来也会被 LunaTextIsArtifact 判掉）。
+constexpr int kLunaMaxPairedBlockScanChars = 512;
+
+inline LunaFoldedView LunaLastPairedBlock(const wchar_t* text, int len) {
+  if (text == nullptr || len <= 2 || len > kLunaMaxPairedBlockScanChars) {
+    return LunaFoldedView{0, len};
+  }
+  // block[i] > 0：text[i, len) 可完整拆成成对重复块，值是其首块长度（取最大）；
+  // block[len] = -1 是「尾巴为空、已拆完」的哨兵；0 表示拆不动。
+  std::vector<int> block(static_cast<size_t>(len) + 1, 0);
+  block[static_cast<size_t>(len)] = -1;
+  for (int i = len - 2; i >= 0; --i) {
+    for (int k = (len - i) / 2; k >= 1; --k) {
+      if (block[static_cast<size_t>(i + 2 * k)] == 0) continue;
+      if (std::wmemcmp(text + i, text + i + k, static_cast<size_t>(k)) == 0) {
+        block[static_cast<size_t>(i)] = k;
+        break;
+      }
+    }
+  }
+  if (block[0] <= 0) return LunaFoldedView{0, len};
+  int offset = 0;
+  int length = 0;
+  for (int i = 0; i < len && block[static_cast<size_t>(i)] > 0;) {
+    offset = i;
+    length = block[static_cast<size_t>(i)];
+    i += 2 * length;
+  }
+  return LunaFoldedView{offset, length};
+}
+
+inline LunaFoldedView LunaFoldedViewForHook(const char* hook_name,
+                                            const wchar_t* text, int len);
+
 inline int LunaNormalizedTextLengthForHook(const char* hook_name,
                                            const wchar_t* text, int len) {
   // TYPEMOON/HUNEX uses the same structural double-write shape for the
@@ -159,6 +215,16 @@ inline int LunaNormalizedTextLengthForHook(const char* hook_name,
     return len;
   }
   return LunaNormalizedTextLength(text, len);
+}
+
+// 台词 lane 与线程预览共用的折叠视图：EmbedKrkrZ 取末块（见 LunaLastPairedBlock），
+// 其它 hook 面沿用 LunaNormalizedTextLengthForHook 的首块/原样语义。
+inline LunaFoldedView LunaFoldedViewForHook(const char* hook_name,
+                                            const wchar_t* text, int len) {
+  if (hook_name != nullptr && std::strcmp(hook_name, "EmbedKrkrZ") == 0) {
+    return LunaLastPairedBlock(text, len);
+  }
+  return LunaFoldedView{0, LunaNormalizedTextLengthForHook(hook_name, text, len)};
 }
 
 // Luna's x64 TYPEMOON hook reports the story renderer and the in-game toolbar

@@ -1,5 +1,6 @@
 import 'package:characters/characters.dart';
 import 'package:flutter/foundation.dart';
+import 'package:fushi/src/mining/gal_voice_resource_name.dart';
 import 'package:fushi/src/sync/texthooker_line_fold.dart';
 import 'package:fushi/src/utils/misc/ruby_markup.dart';
 
@@ -223,23 +224,21 @@ class TexthookerTextThread {
     int? observedArtifactCount,
     bool? previewIsArtifact,
     List<String>? recentPreviewTexts,
-  }) =>
-      TexthookerTextThread(
-        key: key,
-        label: label ?? this.label,
-        hookCode: hookCode,
-        nativeThreadId: nativeThreadId,
-        lineCount: lineCount,
-        latestAt: latestAt,
-        latestText: latestText,
-        audioLineCount: audioLineCount,
-        previewText: previewText ?? this.previewText,
-        observedLineCount: observedLineCount ?? this.observedLineCount,
-        observedArtifactCount:
-            observedArtifactCount ?? this.observedArtifactCount,
-        previewIsArtifact: previewIsArtifact ?? this.previewIsArtifact,
-        recentPreviewTexts: recentPreviewTexts ?? this.recentPreviewTexts,
-      );
+  }) => TexthookerTextThread(
+    key: key,
+    label: label ?? this.label,
+    hookCode: hookCode,
+    nativeThreadId: nativeThreadId,
+    lineCount: lineCount,
+    latestAt: latestAt,
+    latestText: latestText,
+    audioLineCount: audioLineCount,
+    previewText: previewText ?? this.previewText,
+    observedLineCount: observedLineCount ?? this.observedLineCount,
+    observedArtifactCount: observedArtifactCount ?? this.observedArtifactCount,
+    previewIsArtifact: previewIsArtifact ?? this.previewIsArtifact,
+    recentPreviewTexts: recentPreviewTexts ?? this.recentPreviewTexts,
+  );
 
   final String key;
   final String label;
@@ -328,6 +327,7 @@ class TexthookerLineEntry {
     this.sourceLabel,
     this.sourceSequence,
     this.hookTimestampMs,
+    this.eventOwnedVoice = false,
     this.textThreadKey,
     this.textThreadLabel,
     this.textHookCode,
@@ -353,6 +353,9 @@ class TexthookerLineEntry {
   final String? sourceLabel;
   final int? sourceSequence;
   final int? hookTimestampMs;
+
+  /// Windows native message producer supplies exact resource event ownership.
+  final bool eventOwnedVoice;
   final String? textThreadKey;
   final String? textThreadLabel;
   final String? textHookCode;
@@ -392,21 +395,20 @@ class TexthookerLineEntry {
   /// 本行是否已有可用句音：matched（配到游戏资源）/ encoded（音频已提取进卡）/
   /// fallback（回退环回声）三态即有音频；pending/missing/unavailable 视作无。
   bool get hasAudio => switch (audioStatus) {
-        TexthookerLineAudioStatus.matched ||
-        TexthookerLineAudioStatus.encoded ||
-        TexthookerLineAudioStatus.fallback =>
-          true,
-        TexthookerLineAudioStatus.pending ||
-        TexthookerLineAudioStatus.missing ||
-        TexthookerLineAudioStatus.unavailable =>
-          false,
-      };
+    TexthookerLineAudioStatus.matched ||
+    TexthookerLineAudioStatus.encoded ||
+    TexthookerLineAudioStatus.fallback => true,
+    TexthookerLineAudioStatus.pending ||
+    TexthookerLineAudioStatus.missing ||
+    TexthookerLineAudioStatus.unavailable => false,
+  };
 
   TexthookerLineEntry copyWith({
     String? text,
     List<RubySpan>? rubySpans,
     int? sourceSequence,
     int? hookTimestampMs,
+    bool? eventOwnedVoice,
     TexthookerLineAudioStatus? audioStatus,
     String? audioBackend,
     String? audioResourceId,
@@ -416,6 +418,7 @@ class TexthookerLineEntry {
     int? minedNoteId,
     bool? favorited,
     bool clearAudioResourceId = false,
+    bool clearAudioDuration = false,
     bool clearFallbackReason = false,
     bool clearMinedNoteId = false,
   }) {
@@ -426,6 +429,7 @@ class TexthookerLineEntry {
       sourceLabel: sourceLabel,
       sourceSequence: sourceSequence ?? this.sourceSequence,
       hookTimestampMs: hookTimestampMs ?? this.hookTimestampMs,
+      eventOwnedVoice: eventOwnedVoice ?? this.eventOwnedVoice,
       textThreadKey: textThreadKey,
       textThreadLabel: textThreadLabel,
       textHookCode: textHookCode,
@@ -433,11 +437,15 @@ class TexthookerLineEntry {
       receivedAt: receivedAt,
       audioStatus: audioStatus ?? this.audioStatus,
       audioBackend: audioBackend ?? this.audioBackend,
-      audioResourceId:
-          clearAudioResourceId ? null : audioResourceId ?? this.audioResourceId,
-      audioDurationMs: audioDurationMs ?? this.audioDurationMs,
-      fallbackReason:
-          clearFallbackReason ? null : fallbackReason ?? this.fallbackReason,
+      audioResourceId: clearAudioResourceId
+          ? null
+          : audioResourceId ?? this.audioResourceId,
+      audioDurationMs: clearAudioDuration
+          ? null
+          : audioDurationMs ?? this.audioDurationMs,
+      fallbackReason: clearFallbackReason
+          ? null
+          : fallbackReason ?? this.fallbackReason,
       mined: mined ?? this.mined,
       minedNoteId: clearMinedNoteId ? null : minedNoteId ?? this.minedNoteId,
       favorited: favorited ?? this.favorited,
@@ -465,8 +473,7 @@ class TexthookerService extends ChangeNotifier {
   ///
   /// [entries] 每次都要复制整张表；折叠判定是**每条 hook 行**都要做一次的热路径，
   /// 走这个 O(1) 的入口。
-  TexthookerLineEntry? get lastEntry =>
-      _entries.isEmpty ? null : _entries.last;
+  TexthookerLineEntry? get lastEntry => _entries.isEmpty ? null : _entries.last;
 
   /// 折叠「同一句台词的多次快照」（见 [isProgressiveTextUpdate]）。
   ///
@@ -522,11 +529,11 @@ class TexthookerService extends ChangeNotifier {
   List<TexthookerTextThread> textThreadsSince(DateTime? startedAt) {
     final Map<String, TexthookerTextThread> byKey =
         <String, TexthookerTextThread>{
-      for (final MapEntry<String, TexthookerTextThread> entry
-          in _discoveredTextThreads.entries)
-        if (startedAt == null || !entry.value.latestAt.isBefore(startedAt))
-          entry.key: entry.value,
-    };
+          for (final MapEntry<String, TexthookerTextThread> entry
+              in _discoveredTextThreads.entries)
+            if (startedAt == null || !entry.value.latestAt.isBefore(startedAt))
+              entry.key: entry.value,
+        };
     for (final TexthookerLineEntry entry in _entries) {
       if (startedAt != null && entry.receivedAt.isBefore(startedAt)) continue;
       final String? key = entry.textThreadKey;
@@ -821,6 +828,7 @@ class TexthookerService extends ChangeNotifier {
     String? sourceLabel,
     int? sourceSequence,
     int? hookTimestampMs,
+    bool eventOwnedVoice = false,
     String? textThreadKey,
     String? textThreadLabel,
     String? textHookCode,
@@ -881,8 +889,10 @@ class TexthookerService extends ChangeNotifier {
         );
         if (tailIndex < 0) break;
         final TexthookerLineEntry tail = _entries[tailIndex];
-        final bool layoutRefresh =
-            isWhitespaceOnlyLayoutRefresh(tail.text, mergedText);
+        final bool layoutRefresh = isWhitespaceOnlyLayoutRefresh(
+          tail.text,
+          mergedText,
+        );
         if (!layoutRefresh && !isProgressiveTextUpdate(tail.text, mergedText)) {
           break;
         }
@@ -908,8 +918,7 @@ class TexthookerService extends ChangeNotifier {
       for (int i = 0; i < absorbed.length - 1; i++) {
         _lastFoldedLineIds.add(absorbed[i].id);
       }
-      // 语音：回吞掉的几条里只要有一条已经配上了资源，就把它带到合并结果上，
-      // 否则「先配上音、再被后续重绘吞掉」等于把那段语音丢了。
+      // 未标记资源保留既有渐进折叠合同；带事件身份的音频必须仍属于新 seq。
       TexthookerLineEntry audioDonor = base;
       for (final TexthookerLineEntry candidate in absorbed) {
         if (candidate.audioStatus == TexthookerLineAudioStatus.matched) {
@@ -920,14 +929,21 @@ class TexthookerService extends ChangeNotifier {
       // 制卡 / 收藏位取并集：被吞的那几条里只要有一条已制卡（或已收藏），合并
       // 结果就该带着那个徽章 —— 只从 base 继承的话，用户刚给第 ② 拍制的卡会在
       // 第 ③ 拍折叠后从工作台上「消失」。
-      final bool anyMined =
-          absorbed.any((TexthookerLineEntry e) => e.mined);
-      final bool anyFavorited =
-          absorbed.any((TexthookerLineEntry e) => e.favorited);
+      final bool anyMined = absorbed.any((TexthookerLineEntry e) => e.mined);
+      final bool anyFavorited = absorbed.any(
+        (TexthookerLineEntry e) => e.favorited,
+      );
       final int? mergedNoteId = absorbed
-          .firstWhere((TexthookerLineEntry e) => e.minedNoteId != null,
-              orElse: () => base)
+          .firstWhere(
+            (TexthookerLineEntry e) => e.minedNoteId != null,
+            orElse: () => base,
+          )
           .minedNoteId;
+      final bool inheritsAudio = _canInheritAudio(
+        audioDonor,
+        sourceSequence,
+        eventOwnedVoice,
+      );
       final TexthookerLineEntry merged = base.copyWith(
         text: mergedText,
         rubySpans: mergedSpans,
@@ -938,10 +954,13 @@ class TexthookerService extends ChangeNotifier {
         // 合并后这一条仍要认领得到本次重绘带出来的那段语音。
         sourceSequence: sourceSequence,
         hookTimestampMs: hookTimestampMs,
-        audioStatus: audioDonor.audioStatus,
+        eventOwnedVoice: eventOwnedVoice,
+        audioStatus: inheritsAudio ? audioDonor.audioStatus : audioStatus,
         audioBackend: audioDonor.audioBackend,
         audioResourceId: audioDonor.audioResourceId,
         audioDurationMs: audioDonor.audioDurationMs,
+        clearAudioResourceId: !inheritsAudio,
+        clearAudioDuration: !inheritsAudio,
       );
       // 字数只计真正新增的那段。不变式：buffer 里每条都已经按它**当前**的文本计过
       // 一次，所以这次新增 = 合并结果里**没被任何一条盖住**的部分。被吞掉的每条都
@@ -981,6 +1000,7 @@ class TexthookerService extends ChangeNotifier {
       sourceLabel: sourceLabel,
       sourceSequence: sourceSequence,
       hookTimestampMs: hookTimestampMs,
+      eventOwnedVoice: eventOwnedVoice,
       textThreadKey: textThreadKey,
       textThreadLabel: textThreadLabel,
       textHookCode: textHookCode,
@@ -994,6 +1014,20 @@ class TexthookerService extends ChangeNotifier {
     }
     notifyListeners();
     return entry;
+  }
+
+  // Folding preserves a display row, not ownership of another native event's
+  // resource. Legacy unmarked progressive audio retains its existing policy.
+  static bool _canInheritAudio(
+    TexthookerLineEntry donor,
+    int? seq,
+    bool eventOnly,
+  ) {
+    final int? audioSeq = donor.audioResourceId == null
+        ? null
+        : parseGalVoiceResourceName(donor.audioResourceId!)?.textEventId;
+    if (audioSeq != null) return audioSeq == seq;
+    return !eventOnly || donor.sourceSequence == seq;
   }
 
   bool updateLineAudio(
@@ -1012,6 +1046,10 @@ class TexthookerService extends ChangeNotifier {
       audioBackend: backend,
       audioResourceId: resourceId,
       audioDurationMs: durationMs,
+      clearAudioDuration:
+          durationMs == null &&
+          resourceId != null &&
+          resourceId != _entries[index].audioResourceId,
       fallbackReason: fallbackReason,
       clearAudioResourceId: clearResourceId,
       clearFallbackReason: fallbackReason == null,
@@ -1103,13 +1141,14 @@ class TexthookerService extends ChangeNotifier {
 /// 实时台词筛选的唯一 predicate：枚举驱动、无特殊分支。页面/服务共用，
 /// 保证「有音频 / 已制卡 / 已收藏」的判据单一真相源。
 bool lineMatchesFilter(
-        TexthookerLineEntry entry, TexthookerLineFilter filter) =>
-    switch (filter) {
-      TexthookerLineFilter.all => true,
-      TexthookerLineFilter.withAudio => entry.hasAudio,
-      TexthookerLineFilter.mined => entry.mined,
-      TexthookerLineFilter.favorited => entry.favorited,
-    };
+  TexthookerLineEntry entry,
+  TexthookerLineFilter filter,
+) => switch (filter) {
+  TexthookerLineFilter.all => true,
+  TexthookerLineFilter.withAudio => entry.hasAudio,
+  TexthookerLineFilter.mined => entry.mined,
+  TexthookerLineFilter.favorited => entry.favorited,
+};
 
 /// 「全部文本线程」的展示投影：折叠同一渲染瞬间被不同 Luna 线程各回传一次的同文行。
 ///
@@ -1132,8 +1171,8 @@ List<TexthookerLineEntry> collapseParallelTextThreadDuplicates(
     final int? currentHookAt = entry.hookTimestampMs;
     final String? previousThread = previous.textThreadKey;
     final String? currentThread = entry.textThreadKey;
-    final bool parallelDuplicate = previous.source ==
-            TexthookerLineSource.engineHook &&
+    final bool parallelDuplicate =
+        previous.source == TexthookerLineSource.engineHook &&
         entry.source == TexthookerLineSource.engineHook &&
         previousThread != null &&
         currentThread != null &&

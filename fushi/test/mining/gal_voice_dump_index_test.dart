@@ -20,6 +20,42 @@ void main() {
   int watcherCalls = 0;
   int entryLoadCalls = 0;
 
+  test(
+    'explicit event beats time WAV and typed WAV never enters time fallback',
+    () async {
+      nextEntries = <GalVoiceDumpEntry>[
+        entry('10000_fushi_textseq7_voice.wav'),
+        entry('10000_unmarked.wav'),
+        entry('10000_unmarked.ogg'),
+        entry('10000_fushi_textseq9_voice.ogg'),
+      ];
+      await index.startSession();
+      expect(
+        index.findPairedResourceNames(textTsMs: 10000, textEventId: 9),
+        <String>['10000_fushi_textseq9_voice.ogg'],
+      );
+      expect(
+        index.findEventOwnedResourceNames(textTsMs: 10000, textEventId: 10),
+        isEmpty,
+      );
+      expect(
+        index.findPairedResourceNames(textTsMs: 10000, textEventId: 10),
+        <String>['10000_unmarked.wav'],
+        reason: 'Legacy unmarked policy stays available',
+      );
+      nextEntries = <GalVoiceDumpEntry>[
+        entry('10000_fushi_textseq7_voice.wav'),
+      ];
+      index.invalidate();
+      await index.synchronize();
+      expect(
+        index.findPairedResourceNames(textTsMs: 10000, textEventId: 10),
+        isEmpty,
+      );
+      expect(index.findPairedResourceNames(textTsMs: 10000), isEmpty);
+    },
+  );
+
   setUp(() async {
     scanCalls = 0;
     watcherCalls = 0;
@@ -28,9 +64,9 @@ void main() {
       'fushi-voice-dump-index-test-',
     );
     entry = (String name) => _entry(
-          name,
-          path: '${tempDirectory.path}${Platform.pathSeparator}$name',
-        );
+      name,
+      path: '${tempDirectory.path}${Platform.pathSeparator}$name',
+    );
     changes = StreamController<FileSystemEvent>.broadcast(sync: true);
     nextEntries = <GalVoiceDumpEntry>[];
     incrementalEntries = <String, GalVoiceDumpEntry>{};
@@ -168,10 +204,7 @@ void main() {
         Completer<List<GalVoiceDumpEntry>>();
     final Completer<List<GalVoiceDumpEntry>> newScan =
         Completer<List<GalVoiceDumpEntry>>();
-    blockedScans.addAll(<Completer<List<GalVoiceDumpEntry>>>[
-      oldScan,
-      newScan,
-    ]);
+    blockedScans.addAll(<Completer<List<GalVoiceDumpEntry>>>[oldScan, newScan]);
 
     final Future<void> oldStart = index.startSession();
     await _waitUntil(() => scanCalls == 1);
@@ -243,8 +276,11 @@ void main() {
     changes.add(FileSystemCreateEvent(added.path, false));
     await index.synchronize();
 
-    expect(scanCalls, 1,
-        reason: 'normal file events must not list/stat all N files');
+    expect(
+      scanCalls,
+      1,
+      reason: 'normal file events must not list/stat all N files',
+    );
     expect(entryLoadCalls, 1, reason: 'only the changed path may be statted');
     expect(index.snapshot.entries, hasLength(1001));
     expect(index.snapshot.byName, contains(added.name));
@@ -272,10 +308,10 @@ void main() {
 
     for (final ({int timestampMs, int? eventId}) query
         in <({int timestampMs, int? eventId})>[
-      (timestampMs: 10000, eventId: 7),
-      (timestampMs: 10000, eventId: null),
-      (timestampMs: 12000, eventId: null),
-    ]) {
+          (timestampMs: 10000, eventId: 7),
+          (timestampMs: 10000, eventId: null),
+          (timestampMs: 12000, eventId: null),
+        ]) {
       expect(
         index.findPairedResourceNames(
           textTsMs: query.timestampMs,
@@ -296,9 +332,9 @@ void main() {
     await index.synchronize();
     for (final ({int timestampMs, int? eventId}) query
         in <({int timestampMs, int? eventId})>[
-      (timestampMs: 10000, eventId: 16),
-      (timestampMs: 10000, eventId: null),
-    ]) {
+          (timestampMs: 10000, eventId: 16),
+          (timestampMs: 10000, eventId: null),
+        ]) {
       expect(
         index.findPairedResourceNames(
           textTsMs: query.timestampMs,

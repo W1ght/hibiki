@@ -90,6 +90,7 @@ public:
     uint64_t generation = 0;
     uint64_t text_generation = 0;
     bool available = false;
+    bool snapshot_conflicted = false;
   };
 
   struct Snapshot {
@@ -120,7 +121,10 @@ public:
     uint32_t char_index = 0;
     uint32_t source_length = 0;
     RECT screen_rect_px{};
-    int dpi = 96;
+    // 刻意**不带** dpi：物理→逻辑的除数必须与 Dart 侧乘回去的
+    // `MediaQuery.devicePixelRatio` 同源（宿主窗口），由消费方
+    // flutter_window.cpp 的 SetLookupCallback 现取，不能由本事件携带目标
+    // 窗口的 DPI —— DPI-unaware 的游戏恒报 96，会让锚点净多乘一个 dpr。
     // True when emitted by the Shift+hover timer instead of a completed
     // shielded click transaction. Hover never consumes any input.
     bool hover = false;
@@ -199,6 +203,8 @@ public:
                               const std::wstring &launch_exe_path,
                               std::string *error);
 
+  // risk_accepted in StartCalibration/Configure is retained for channel
+  // compatibility. BUG-2154 makes consent a product policy, not session state.
   RequestResult StartCalibration(const Epoch &epoch, uint32_t target_pid,
                                  HWND target_hwnd,
                                  const NormalizedRect *initial_rect,
@@ -383,7 +389,6 @@ private:
   ReferenceClient configured_reference_client_;
   ReferenceClient live_reference_client_;
   Layout layout_;
-  bool risk_accepted_ = false;
   std::string input_mode_;
   std::string surface_mode_ = "attachedOnly";
 

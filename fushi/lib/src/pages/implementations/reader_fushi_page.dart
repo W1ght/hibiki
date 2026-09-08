@@ -77,6 +77,7 @@ import 'package:fushi/src/reader/reader_chrome_floating.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi/src/reader/reader_chrome_controller.dart';
 import 'package:fushi/src/reader/reader_desktop_chrome.dart';
+import 'package:fushi/src/reader/reader_progress_line.dart';
 import 'package:fushi/src/reader/reader_gallery_page.dart';
 import 'package:fushi/src/reader/reader_open_trace.dart';
 import 'package:fushi/src/reader/reader_progress_state.dart';
@@ -412,7 +413,8 @@ ReaderThemeColors applyReaderThemeOverrides(
   final bool dark = overrides.bg == null
       ? base.dark
       : ThemeData.estimateBrightnessForColor(bg) == Brightness.dark;
-  final Color fg = overrides.fg ??
+  final Color fg =
+      overrides.fg ??
       (overrides.bg == null
           ? base.fg
           : (dark ? const Color(0xDEFFFFFF) : const Color(0xDE000000)));
@@ -1979,12 +1981,12 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   /// 悬浮态恒 0，挤压且占位时占 [_readerChromeHeight]。占位判据与
   /// [_buildBottomChrome] 的可见条件（_hasEverLoaded && _showChrome）一致。
   double get _bottomChromeReserve => bottomChromeReserve(
-        barOccupiesLayout: _hasEverLoaded && _showChrome,
-        floating: _bottomBarFloating,
-        chromeHeight: _desktopChromeEnabled && _audiobookController == null
-            ? 0
-            : _readerChromeHeight,
-      );
+    barOccupiesLayout: _hasEverLoaded && _showChrome,
+    floating: _bottomBarFloating,
+    chromeHeight: _desktopChromeEnabled && _audiobookController == null
+        ? 0
+        : _readerChromeHeight,
+  );
 
   /// 宽屏把阅读状态并入播放条；窄屏保留独立状态行，避免文本挤占触控按钮。
   double get _readerControlsWidth =>
@@ -3183,6 +3185,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
                       // [FushiDesktopTitleBar] 的 DragToMoveArea 提供、交通灯也已
                       // 隐藏，阅读器再挂一条只会在顶栏下面多压一条不透明带。
                       _buildTopProgressBar(),
+                      // 桌面端顶部细进度线（ッツ 形态）：纯装饰、穿透指针，排在热区 /
+                      // 工具栏之前，工具栏唤出时盖在它上面。
+                      _buildProgressLine(),
                       // 桌面端顶边悬停热区（收起时才存在）+ 顶部工具栏（ッツ 形态）：与底栏
                       // 同一显隐状态机，排在词典弹层之前。
                       _buildHoverRevealLayer(),
@@ -3676,8 +3681,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   Future<bool> onPreviewSentenceAudio() async {
     final AudiobookPlayerController? controller = _audiobookController;
     if (controller == null) return false;
-    final AudioPlaybackRange? clip =
-        _miningDraft.composeAudioRange(_currentSentenceAudioRange());
+    final AudioPlaybackRange? clip = _miningDraft.composeAudioRange(
+      _currentSentenceAudioRange(),
+    );
     if (clip == null || clip.endMs <= clip.startMs) return false;
     await controller.playRange(clip);
     return true;

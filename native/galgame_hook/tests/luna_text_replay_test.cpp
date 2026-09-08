@@ -70,6 +70,58 @@ int main(int argc, char** argv) {
     return 5;
   }
 
+  // BUG-2081：EmbedKrkrZ 把姓名层与正文层合在同一次输出时形状是 `N N T T`
+  // （N=说话人、T=台词）；LunaNormalizedTextLength 取首块会返回姓名，整句台词丢失，
+  // 姓名短于 kLunaMinFoldedLineChars（如「？？？」）时更是一块都配不上。台词 lane
+  // 必须走 LunaLastPairedBlock 取**末块**，四种已观测形状都落到正文。
+  {
+    const std::wstring speaker = L"？？？";  // 「？？？」短于最小块
+    const std::wstring dialogue = single_line;           // 完整台词
+    // N N T T：姓名双写 + 台词双写。
+    const std::wstring name_and_dialogue =
+        speaker + speaker + dialogue + dialogue;
+    const fushi_voice_hook::LunaFoldedView folded =
+        fushi_voice_hook::LunaFoldedViewForHook(
+            "EmbedKrkrZ", name_and_dialogue.c_str(),
+            static_cast<int>(name_and_dialogue.size()));
+    if (std::wstring(name_and_dialogue.c_str() + folded.offset,
+                     name_and_dialogue.c_str() + folded.offset +
+                         folded.length) != dialogue) {
+      return 60;
+    }
+    // 纯台词双写 `T T` 取末块仍是整句台词。
+    const fushi_voice_hook::LunaFoldedView doubled_only =
+        fushi_voice_hook::LunaFoldedViewForHook(
+            "EmbedKrkrZ", duplicated_line.c_str(),
+            static_cast<int>(duplicated_line.size()));
+    if (std::wstring(duplicated_line.c_str() + doubled_only.offset,
+                     duplicated_line.c_str() + doubled_only.offset +
+                         doubled_only.length) != single_line) {
+      return 61;
+    }
+    // 合法叠句带不成对尾巴（`わかったわかった、もう行くよ`）：整串拆不成成对块，
+    // 原样放行，不得腰斩用户的字。
+    const std::wstring legit_repeat =
+        L"わかったわかった、もう行くよ";
+    const fushi_voice_hook::LunaFoldedView legit =
+        fushi_voice_hook::LunaFoldedViewForHook(
+            "EmbedKrkrZ", legit_repeat.c_str(),
+            static_cast<int>(legit_repeat.size()));
+    if (legit.offset != 0 ||
+        legit.length != static_cast<int>(legit_repeat.size())) {
+      return 62;
+    }
+    // 折叠是 hook-scoped：其它 hook 面对 N N T T 保持原样（首块语义），offset 恒 0。
+    const fushi_voice_hook::LunaFoldedView other =
+        fushi_voice_hook::LunaFoldedViewForHook(
+            "OtherEngine", name_and_dialogue.c_str(),
+            static_cast<int>(name_and_dialogue.size()));
+    if (other.offset != 0 ||
+        other.length != static_cast<int>(name_and_dialogue.size())) {
+      return 63;
+    }
+  }
+
   // TYPEMOON/HUNEX's top toolbar can concatenate multiple independently
   // doubled descriptions into one output event.  The same structural fold as
   // EmbedKrkrZ must be applied before both preview and lane publication; no

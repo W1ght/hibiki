@@ -47,6 +47,12 @@ void main() {
   final String siglusLookupSource = File(
     '../native/galgame_hook/hook/adapters/siglus_lookup.inc',
   ).readAsStringSync();
+  final String siglusInputSource = File(
+    '../native/galgame_hook/hook/adapters/siglus_lookup_input.inc',
+  ).readAsStringSync();
+  final String siglusClickPolicySource = File(
+    '../native/galgame_hook/hook/adapters/siglus_lookup_click_policy.inc',
+  ).readAsStringSync();
   final String leafAquaplusSource = File(
     '../native/galgame_hook/hook/adapters/leaf_aquaplus_adapter.inc',
   ).readAsStringSync();
@@ -110,8 +116,7 @@ void main() {
     final String armAndWait = compactCode(
       // 序列搬进了 ArmLowLevelMouseHookWithSampledShield；ArmLowLevelMouseHookAndWait
       // 现在只剩一行转发，在它身上找发布/屏障/暴露顺序只会全部落空。
-      methodBody(
-          hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
+      methodBody(hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
     );
     final String threadMain = compactCode(
       methodBody(hookSource, 'void HookThreadMain()'),
@@ -232,8 +237,7 @@ void main() {
     final String directArm = compactCode(
       // 序列搬进了 ArmLowLevelMouseHookWithSampledShield；ArmLowLevelMouseHookAndWait
       // 现在只剩一行转发，在它身上找发布/屏障/暴露顺序只会全部落空。
-      methodBody(
-          hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
+      methodBody(hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
     );
     final String desktopArm = compactCode(
       methodBody(hookSource, 'void ArmLowLevelMouseHook('),
@@ -371,27 +375,41 @@ void main() {
     //   ④ 命中附着字形矩形、BeginAttachedGlyphTransaction 成功之后吞掉 down。
     // 不变式与 ①② 一样：吞 down 的 return 1 之前必须先置同键事务位，否则配对的 up
     // 漏给游戏，引擎收到一个永远不抬起的按键。
-    final int repeatedDownSwallow =
-        hookProc.indexOf('HasActiveAttachedGlyphTransactionFast()');
+    final int repeatedDownSwallow = hookProc.indexOf(
+      'HasActiveAttachedGlyphTransactionFast()',
+    );
     final int repeatedDownMark = hookProc.indexOf(
       'g_swallowed_buttons.fetch_or(kSwallowedLeftButton',
       repeatedDownSwallow,
     );
-    expect(repeatedDownSwallow, greaterThanOrEqualTo(0),
-        reason: '③ 重复/注入 down 的吞噬路径必须还在');
-    expect(repeatedDownMark, greaterThan(repeatedDownSwallow),
-        reason: '③ 吞 down 前必须先置同键事务位');
+    expect(
+      repeatedDownSwallow,
+      greaterThanOrEqualTo(0),
+      reason: '③ 重复/注入 down 的吞噬路径必须还在',
+    );
+    expect(
+      repeatedDownMark,
+      greaterThan(repeatedDownSwallow),
+      reason: '③ 吞 down 前必须先置同键事务位',
+    );
 
-    final int attachedBegin =
-        hookProc.indexOf('BeginAttachedGlyphTransaction(');
+    final int attachedBegin = hookProc.indexOf(
+      'BeginAttachedGlyphTransaction(',
+    );
     final int attachedMark = hookProc.indexOf(
       'g_swallowed_buttons.fetch_or(kSwallowedLeftButton',
       attachedBegin,
     );
-    expect(attachedBegin, greaterThanOrEqualTo(0),
-        reason: '④ 附着字形命中后开事务的路径必须还在');
-    expect(attachedMark, greaterThan(attachedBegin),
-        reason: '④ 只有事务真的开起来了才吞 down，且吞之前先置位');
+    expect(
+      attachedBegin,
+      greaterThanOrEqualTo(0),
+      reason: '④ 附着字形命中后开事务的路径必须还在',
+    );
+    expect(
+      attachedMark,
+      greaterThan(attachedBegin),
+      reason: '④ 只有事务真的开起来了才吞 down，且吞之前先置位',
+    );
 
     expect(
       'g_swallowed_buttons.fetch_or('.allMatches(hookProc).length,
@@ -662,14 +680,47 @@ void main() {
       );
       final String detour = compactCode(
         methodBody(
-          siglusLookupSource,
-          'SHORT WINAPI Detour_SiglusGetKeyState(',
+          siglusClickPolicySource,
+          'SHORT FilterSiglusLookupLeftButtonSample(',
         ),
       );
       final String messageDetour = compactCode(
         methodBody(
-          siglusLookupSource,
+          siglusClickPolicySource,
+          'bool ConsumeSiglusLookupInputMessage(',
+        ),
+      );
+      // ABI transport and ownership policy now live in separate includes.
+      // Pin both the real include path and delegation so detached helpers cannot
+      // keep this guard green after a transport regression.
+      expect(
+        siglusLookupSource,
+        contains('#include "siglus_lookup_input.inc"'),
+      );
+      expect(
+        siglusLookupSource,
+        contains('#include "siglus_lookup_click_policy.inc"'),
+      );
+      final String keyTransport = compactCode(
+        methodBody(siglusInputSource, 'SHORT WINAPI Detour_SiglusGetKeyState('),
+      );
+      expect(keyTransport, contains('constSHORTraw=original(virtual_key);'));
+      expect(
+        keyTransport,
+        contains(
+          'virtual_key==VK_LBUTTON?FilterSiglusLookupLeftButtonSample(raw,caller,false):raw',
+        ),
+      );
+      final String messageTransport = compactCode(
+        methodBody(
+          siglusInputSource,
           'void __stdcall Detour_SiglusInputMessage(',
+        ),
+      );
+      expect(
+        messageTransport,
+        contains(
+          'if(original!=nullptr&&!ConsumeSiglusLookupInputMessage(message,lparam,reinterpret_cast<uintptr_t>(_ReturnAddress())))original(message,wparam,lparam);',
         ),
       );
       final String readyPublish = compactCode(
@@ -735,10 +786,27 @@ void main() {
               'constboolpopup_shield=direct_shield||bitmap_popup_visible;',
             ) &&
             detour.contains(
-              'AdvanceSiglusLookupClickSample(button_down,popup_shield,',
+              'AdvanceSiglusLookupClickSample('
+              'native_input_allowed,button_down,popup_shield,',
             ),
         isTrue,
         reason: 'direct WebView 与 bitmap fallback 都必须进入既有完整 click owner 状态机',
+      );
+      const String siglusAdmission =
+          'g_geometry_provider_registry.NativeInputAllowed('
+          'g_header,fushi_voice_hook::kLookupGeometryProviderEngineExactLayout,'
+          'fushi_voice_hook::kLookupGeometryProviderIdSiglus)';
+      expect(detour, contains(siglusAdmission));
+      expect(messageDetour, contains(siglusAdmission));
+      expect(
+        detour.indexOf(siglusAdmission),
+        lessThan(detour.indexOf('BuildSiglusLookupPayloadAtPress(')),
+        reason: '正文新点击必须在命中测试前取得当前 Siglus owner 与已应用宿主准入',
+      );
+      expect(
+        messageDetour,
+        contains('DecideSiglusLookupMouseMessage(native_input_allowed,'),
+        reason: 'WM 边沿路径必须使用同一准入门；已有 down 的 up 仍由 latch 收尾',
       );
       final int popupShield = detour.indexOf(
         'constboolpopup_shield=direct_shield||bitmap_popup_visible;',
@@ -769,7 +837,11 @@ void main() {
         install.contains('profile->input_message_rva') &&
             install.contains('MatchesSiglusInputMessageEntry(target)') &&
             install.contains('Detour_SiglusInputMessage') &&
-            install.contains('g_orig_SiglusInputMessage==nullptr'),
+            install.contains('if(!message_installed)') &&
+            install.contains('g_orig_SiglusInputMessage!=nullptr') &&
+            install.contains(
+              '!HookFn(target,callback,original)||*original==nullptr',
+            ),
         isTrue,
         reason: 'Ready 前必须安装 Siglus 自己的 WM_LBUTTON 剧情边沿写入点',
       );
@@ -786,7 +858,7 @@ void main() {
               'if(decision.consume){'
               'g_siglus_lookup_left_button_filter_latched.store(true',
             ) &&
-            messageDetour.contains('return;}original(message,wparam,lparam);'),
+            messageDetour.contains('returntrue;}returnfalse;'),
         isTrue,
         reason:
             '只允许主 HWND 的 exact caller 吞正文/弹窗事务；'
@@ -806,13 +878,14 @@ void main() {
   test('Fushi 只在 helper ready 后发布 popup HWND，Hide/down-up 生命周期不 ABA', () {
     final String directPublish = compactCode(
       methodBody(
-          hookSource, 'SampledShieldPublishResult PublishDirectInputShieldIfReady('),
+        hookSource,
+        'SampledShieldPublishResult PublishDirectInputShieldIfReady(',
+      ),
     );
     final String directArm = compactCode(
       // 序列搬进了 ArmLowLevelMouseHookWithSampledShield；ArmLowLevelMouseHookAndWait
       // 现在只剩一行转发，在它身上找发布/屏障/暴露顺序只会全部落空。
-      methodBody(
-          hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
+      methodBody(hookSource, 'bool ArmLowLevelMouseHookWithSampledShield('),
     );
     final String desktopArm = compactCode(
       methodBody(hookSource, 'void ArmLowLevelMouseHook('),

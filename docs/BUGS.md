@@ -29,10 +29,35 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2129 条。点号进各自文件。
+> 共 2156 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2324](bugs/BUG-2324-siglus-lookup-consumed-click-without-hit.md) | 🚧 | ✅ | Siglus已入队查词点击偶发未发布命中且终结原因缺失 |
+| [BUG-2323](bugs/BUG-2323-siglus-launcher-wait-handshake.md) | ✅ | ✅ | 启动菜单等待耗尽游戏注入握手期限 |
+| [BUG-2322](bugs/BUG-2322-siglus-legacy-owner-publication-churn.md) | ✅ | ✅ | 旧版Siglus重复发布正文对象导致查词弹窗闪退 |
+| [BUG-2321](bugs/BUG-2321-siglus-legacy-keyboard-hook-owner.md) | ✅ | ✅ | 旧版Siglus键盘状态接口被通用输入盾抢占 |
+| [BUG-2320](bugs/BUG-2320-launcher-exit-locale-relaunch.md) | ✅ | ✅ | 启动器正常退出被误判转区崩溃并重复启动 |
+| [BUG-2319](bugs/BUG-2319-launcher-lineage.md) | ✅ | ✅ | 启动器退出后丢失已确认的游戏进程谱系 |
+| [BUG-2318](bugs/BUG-2318-locale-timezone-display-name.md) | ✅ | ✅ | 日语转区将时区ID误作本地化时区名称 |
+| [BUG-2317](bugs/BUG-2317-siglus-system-version-locale.md) | ✅ | ✅ | Siglus旧版读取系统版本资源时日语转区仍被判定失败 |
+| [BUG-2316](bugs/BUG-2316-gal-voice-companion-session-boundary.md) | ✅ | ✅ | 制卡伴音按重复事件编号混入旧会话语音 |
+| [BUG-2315](bugs/BUG-2315-siglus-lookup-capture-frontier.md) | ✅ | ✅ | Siglus同句重绘前沿未消费时永久丢弃已入队查词点击 |
+| [BUG-2314](bugs/BUG-2314-galgame-folded-typed-audio-ownership.md) | ✅ | ✅ | 折叠正文事件继承旧语音与带事件资源退回时间匹配 |
+| [BUG-2313](bugs/BUG-2313-siglus-native-rollback-reenables-retained-hook.md) | ✅ | ✅ | Siglus NativeEcx 安装回滚后回退重启残留 Hook |
+| [BUG-2312](bugs/BUG-2312-siglus-lookup-oversized-text-retains-old-target.md) | ✅ | ✅ | Siglus超容量新正文未撤销旧查词事件与点击目标 |
+| [BUG-2311](bugs/BUG-2311-selected-thread-history-resource-pairing.md) | ✅ | ✅ | Windows线程历史回捞跳过已导出的精确事件语音配对 |
+| [BUG-2310](bugs/BUG-2310-flutter-child-at-index-null.md) | 🚧 | 🚧 | Windows Flutter ChildAtIndex 枚举空子节点时访问冲突 |
+| [BUG-2309](bugs/BUG-2309-siglus-ovk-member-identity.md) | ✅ | ✅ | Siglus OVK将采样数误当成员ID导致资源命名不唯一 |
+| [BUG-2308](bugs/BUG-2308-siglus-voice-resource-without-dialogue-event.md) | 🚧 | ✅ | Siglus 语音资源缺少正文事件身份，配对依赖时间窗 |
+| [BUG-2307](bugs/BUG-2307-siglus-lookup-layout-generation-as-text-event.md) | ✅ | ✅ | Siglus查词用几何代数冒充字幕事件ID导致制卡行与音频身份错误 |
+| [BUG-2306](bugs/BUG-2306-siglus-ovk-export-failure-reported-captured.md) | ✅ | ✅ | Siglus OVK 导出失败仍报告已捕获 |
+| [BUG-2305](bugs/BUG-2305-siglus-partial-redraw-retires-popup.md) | ✅ | ✅ | Siglus同句分批重绘错误撤销已打开词典 |
+| [BUG-2304](bugs/BUG-2304-siglus-text-hook-ownership-race.md) | ✅ | ✅ | Siglus原生文本适配与Luna自动扫描争抢入口 |
+| [BUG-2303](bugs/BUG-2303-locale-emulator-loader-list-sentinel.md) | ✅ | ✅ | Locale Emulator在早期模块初始化链表头上解引用导致Rewrite启动崩溃 |
+| [BUG-2302](bugs/BUG-2302-windows-uia-flutter-host-crash.md) | 🚧 | 🚧 | Windows宿主在UIAutomation回调进入Flutter时访问冲突退出 |
+| [BUG-2301](bugs/BUG-2301-geometry-snapshot-conflict-as-none.md) | ✅ | ✅ | Windows宿主将快照读取冲突误报为没有原生查词provider |
+| [BUG-2300](bugs/BUG-2300-dictionary-expanded-column-version-collision.md) | ✅ | ✅ | 同版本数据库缺词典显式展开列导致启动空值崩溃 |
 | [BUG-2284](bugs/BUG-2284-lookup-popup-instant-scroll.md) | ✅ | ✅ | 查词弹窗「瞬时滚动」开关对滚轮完全无效 |
 | [BUG-2283](bugs/BUG-2283-eink-swipe-dismiss-animation.md) | ✅ | ✅ | 墨水屏模式：查词弹窗滑动关闭仍有滑出/弹回补间动画 |
 | [BUG-2278](bugs/BUG-2278-ankidroid-live-target.md) | ✅ | ✅ | AnkiDroid识别与API实例缓存导致安装或启用后仍无法连接 |
@@ -42,9 +67,11 @@
 | [BUG-2273](bugs/BUG-2273-mihon-timeout-kills-other-requests.md) | ✅ | ✅ | 单个漫画源超时重启共享桥接并中断其它请求 |
 | [BUG-2272](bugs/BUG-2272-outbound-proxy-native-images.md) | ✅ | ✅ | 公网图片及原生网络链路未继承应用代理 |
 | [BUG-2269](bugs/BUG-2269-ankiconnect-multi-subaction-key.md) | ✅ | ✅ | AnkiConnect multi 子 action 缺 key：配置 apiKey 时所有批量写被整批拒绝 |
+| [BUG-2265](bugs/BUG-2265-siglus-eightarg-lookup-no-hit.md) | ✅ | ✅ | 八参数Siglus捕获台词后点击正文直接推进且无查词命中 |
 | [BUG-2264](bugs/BUG-2264-reopen-book-credits-landing-page.md) | ✅ | ✅ | 重复开关书落地页整页入账且写出零时长段 |
 | [BUG-2263](bugs/BUG-2263-macos-mihon-chapters-not-loading.md) | 🚧 | 🚧 | macOS Mihon 章节列表加载不出来（未复现） |
 | [BUG-2262](bugs/BUG-2262-macos-aidoku-partial-result-chapters-dropped.md) | ✅ | ✅ | macOS Aidoku 章节列表恒为空：桌面 runtime 丢弃 send_partial_result 回传的章节 |
+| [BUG-2261](bugs/BUG-2261-siglus-child-delayed-attach.md) | ✅ | ✅ | Siglus启动器子进程绕过延迟附着并抢先LE初始化 |
 | [BUG-2260](bugs/BUG-2260-netflix-advisory-overlay-selector-drift.md) | ✅ | ✅ | Netflix 分级提示 overlay 改用 .watch-video--advisories-container，三处隐藏选择器全部静默失效；内置播放器换集重载后 chrome 隐藏丢失 |
 | [BUG-2259](bugs/BUG-2259-macos-quit-no-exit-flush.md) | ✅ | ✅ | macOS Cmd+Q 退出不跑退出 flush（阅读位置/有声书进度/阅读统计丢最后一段） |
 | [BUG-2258](bugs/BUG-2258-macos-video-retina-blur.md) | ✅ | ✅ | mac 视频在 Retina 上发虚：media_kit 按视频原生分辨率建纹理，放大交给 Flutter 双线性 |

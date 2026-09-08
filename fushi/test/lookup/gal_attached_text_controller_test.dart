@@ -53,6 +53,7 @@ class _FakeSurfacePort implements GalAttachedTextSurfacePort {
     exeSha256: _sha,
     referenceClient: _client,
   );
+  Completer<GalAttachedCallResult>? inspectionCompleter;
   GalAttachedCallResult configureResult = const GalAttachedCallResult(
     status: 'ready',
     providerKind: 4,
@@ -76,6 +77,7 @@ class _FakeSurfacePort implements GalAttachedTextSurfacePort {
   GalAttachedCallResult detachResult = const GalAttachedCallResult(
     status: 'detached',
   );
+  Completer<GalAttachedCallResult>? detachCompleter;
 
   @override
   Future<GalAttachedCallResult> inspectTarget(
@@ -84,6 +86,8 @@ class _FakeSurfacePort implements GalAttachedTextSurfacePort {
   }) async {
     lastInspectLaunchExePath = launchExePath;
     calls.add('inspect');
+    final Completer<GalAttachedCallResult>? completer = inspectionCompleter;
+    if (completer != null) return completer.future;
     return inspection;
   }
 
@@ -201,6 +205,8 @@ class _FakeSurfacePort implements GalAttachedTextSurfacePort {
   @override
   Future<GalAttachedCallResult> detach(GalAttachedSurfaceTarget target) async {
     calls.add('detach');
+    final Completer<GalAttachedCallResult>? completer = detachCompleter;
+    if (completer != null) return completer.future;
     return detachResult;
   }
 }
@@ -317,171 +323,161 @@ void main() {
     },
   );
 
-  test(
-    'BUG-2137 一字未推时的 noGlyphClusters 回到等正文而不是终态 fallback',
-    () async {
-      preferences[key()] = jsonEncode(
-        _profile(mode: GalLookupSurfaceMode.auto).toJson(),
-      );
-      // 子面还没拿到任何正文就回 noGlyphClusters：这是必然，不是失败。
-      await sync(text: '');
-      controller.handleSurfaceStateChanged(
-        GalAttachedSurfaceStateEvent(
-          target: controller.target!,
-          state: 'ready',
-          status: 'noGlyphClusters',
-        ),
-      );
-      await pumpEventQueue();
+  test('BUG-2137 一字未推时的 noGlyphClusters 回到等正文而不是终态 fallback', () async {
+    preferences[key()] = jsonEncode(
+      _profile(mode: GalLookupSurfaceMode.auto).toJson(),
+    );
+    // 子面还没拿到任何正文就回 noGlyphClusters：这是必然，不是失败。
+    await sync(text: '');
+    controller.handleSurfaceStateChanged(
+      GalAttachedSurfaceStateEvent(
+        target: controller.target!,
+        state: 'ready',
+        status: 'noGlyphClusters',
+      ),
+    );
+    await pumpEventQueue();
 
-      expect(
-        controller.status,
-        GalAttachedTextStatus.waitingForBodyThread,
-        reason: '降级成 fallback 就再也回不来：syncSession 只在 waitingForBodyThread 上'
-            '因新正文重新评估，后面每一行都会停在 fallback/noGlyphClusters',
-      );
-      expect(
-        controller.statusReason,
-        'state_event_no_glyph_clusters_before_text',
-      );
-      expect(controller.surfaceVisible, isFalse);
+    expect(
+      controller.status,
+      GalAttachedTextStatus.waitingForBodyThread,
+      reason:
+          '降级成 fallback 就再也回不来：syncSession 只在 waitingForBodyThread 上'
+          '因新正文重新评估，后面每一行都会停在 fallback/noGlyphClusters',
+    );
+    expect(
+      controller.statusReason,
+      'state_event_no_glyph_clusters_before_text',
+    );
+    expect(controller.surfaceVisible, isFalse);
 
-      // 正文到了就能正常继续，不需要重启会话。
-      await sync();
-      expect(controller.status, GalAttachedTextStatus.activeAttached);
-    },
-  );
+    // 正文到了就能正常继续，不需要重启会话。
+    await sync();
+    expect(controller.status, GalAttachedTextStatus.activeAttached);
+  });
 
-  test(
-    'BUG-2139 已在等正文且正文一直都在时，同一句也要能把状态救回来',
-    () async {
-      preferences[key()] = jsonEncode(_profile().toJson());
-      await sync();
-      expect(controller.status, GalAttachedTextStatus.activeAttached);
+  test('BUG-2139 已在等正文且正文一直都在时，同一句也要能把状态救回来', () async {
+    preferences[key()] = jsonEncode(_profile().toJson());
+    await sync();
+    expect(controller.status, GalAttachedTextStatus.activeAttached);
 
-      // 子面回 emptyText，把状态推回「等正文」——此时 `_latestSourceText` 早已非空。
-      controller.handleSurfaceStateChanged(
-        GalAttachedSurfaceStateEvent(
-          target: controller.target!,
-          state: 'ready',
-          status: 'emptyText',
-        ),
-      );
-      await pumpEventQueue();
-      expect(controller.status, GalAttachedTextStatus.waitingForBodyThread);
+    // 子面回 emptyText，把状态推回「等正文」——此时 `_latestSourceText` 早已非空。
+    controller.handleSurfaceStateChanged(
+      GalAttachedSurfaceStateEvent(
+        target: controller.target!,
+        state: 'ready',
+        status: 'emptyText',
+      ),
+    );
+    await pumpEventQueue();
+    expect(controller.status, GalAttachedTextStatus.waitingForBodyThread);
 
-      // 同一句再同步一轮：「正文从无到有」的边沿不会再出现，旧判据在这里永远不
-      // 重新评估，状态就永久停在等正文（真机 WoH 上正是如此）。
-      await sync();
-      expect(
-        controller.status,
-        GalAttachedTextStatus.activeAttached,
-        reason: 'BUG-2139：恢复不能只挂在 bodyArrived 这个一次性边沿上',
-      );
-    },
-  );
+    // 同一句再同步一轮：「正文从无到有」的边沿不会再出现，旧判据在这里永远不
+    // 重新评估，状态就永久停在等正文（真机 WoH 上正是如此）。
+    await sync();
+    expect(
+      controller.status,
+      GalAttachedTextStatus.activeAttached,
+      reason: 'BUG-2139：恢复不能只挂在 bodyArrived 这个一次性边沿上',
+    );
+  });
 
-  test(
-    'BUG-2137 registry 交接期间的 noGlyphClusters 不降级成 fallback',
-    () async {
-      preferences[key()] = jsonEncode(_profile().toJson());
-      port.configureResult = const GalAttachedCallResult(
-        status: 'geometryProviderPending',
-        providerKind: 2,
-        providerId: 3,
-        providerStatus: 2,
-      );
-      await sync();
-      expect(controller.status, GalAttachedTextStatus.suspended);
-      expect(controller.statusReason, 'geometryProviderPending');
-      expect(controller.attachedProviderClaimed, isTrue);
+  test('BUG-2137 registry 交接期间的 noGlyphClusters 不降级成 fallback', () async {
+    preferences[key()] = jsonEncode(_profile().toJson());
+    port.configureResult = const GalAttachedCallResult(
+      status: 'geometryProviderPending',
+      providerKind: 2,
+      providerId: 3,
+      providerStatus: 2,
+    );
+    await sync();
+    expect(controller.status, GalAttachedTextStatus.suspended);
+    expect(controller.statusReason, 'geometryProviderPending');
+    expect(controller.attachedProviderClaimed, isTrue);
 
-      // 交接未完成时正文只是被 staged，子面还没渲染，这条是预期而非失败。
-      controller.handleSurfaceStateChanged(
-        GalAttachedSurfaceStateEvent(
-          target: controller.target!,
-          state: 'ready',
-          status: 'noGlyphClusters',
-        ),
-      );
-      await pumpEventQueue();
+    // 交接未完成时正文只是被 staged，子面还没渲染，这条是预期而非失败。
+    controller.handleSurfaceStateChanged(
+      GalAttachedSurfaceStateEvent(
+        target: controller.target!,
+        state: 'ready',
+        status: 'noGlyphClusters',
+      ),
+    );
+    await pumpEventQueue();
 
-      expect(
-        controller.status,
-        GalAttachedTextStatus.suspended,
-        reason: '降级成 fallback 会把子面藏掉，registry 交接从此完不成',
-      );
-      expect(controller.statusReason, 'geometryProviderPending');
-      expect(controller.attachedProviderClaimed, isTrue);
+    expect(
+      controller.status,
+      GalAttachedTextStatus.suspended,
+      reason: '降级成 fallback 会把子面藏掉，registry 交接从此完不成',
+    );
+    expect(controller.statusReason, 'geometryProviderPending');
+    expect(controller.attachedProviderClaimed, isTrue);
 
-      // 交接完成后照常收敛。
-      controller.handleSurfaceStateChanged(
-        GalAttachedSurfaceStateEvent(
-          target: controller.target!,
-          state: 'visible',
-          status: 'visible',
-          surfaceVisible: true,
-          providerKind: 4,
-          providerId: 11,
-          providerStatus: 1,
-        ),
-      );
-      await pumpEventQueue();
-      expect(controller.status, GalAttachedTextStatus.activeAttached);
-    },
-  );
+    // 交接完成后照常收敛。
+    controller.handleSurfaceStateChanged(
+      GalAttachedSurfaceStateEvent(
+        target: controller.target!,
+        state: 'visible',
+        status: 'visible',
+        surfaceVisible: true,
+        providerKind: 4,
+        providerId: 11,
+        providerStatus: 1,
+      ),
+    );
+    await pumpEventQueue();
+    expect(controller.status, GalAttachedTextStatus.activeAttached);
+  });
 
-  test(
-    'BUG-2137 正文推送前的 noGlyphClusters 不得撤回共享认领',
-    () async {
-      preferences[key()] = jsonEncode(_profile().toJson());
-      port.configureResult = const GalAttachedCallResult(
-        status: 'geometryProviderPending',
-        providerKind: 2,
-        providerId: 3,
-        providerStatus: 2,
-      );
+  test('BUG-2137 正文推送前的 noGlyphClusters 不得撤回共享认领', () async {
+    preferences[key()] = jsonEncode(_profile().toJson());
+    port.configureResult = const GalAttachedCallResult(
+      status: 'geometryProviderPending',
+      providerKind: 2,
+      providerId: 3,
+      providerStatus: 2,
+    );
 
-      await sync();
-      expect(controller.attachedProviderClaimed, isTrue);
-      expect(port.texts, isNotEmpty);
+    await sync();
+    expect(controller.attachedProviderClaimed, isTrue);
+    expect(port.texts, isNotEmpty);
 
-      // 子面回一条 noGlyphClusters：本轮渲染不出内容，但 attached 通路没坏。
-      controller.handleSurfaceStateChanged(
-        GalAttachedSurfaceStateEvent(
-          target: controller.target!,
-          state: 'ready',
-          status: 'noGlyphClusters',
-        ),
-      );
-      await pumpEventQueue();
+    // 子面回一条 noGlyphClusters：本轮渲染不出内容，但 attached 通路没坏。
+    controller.handleSurfaceStateChanged(
+      GalAttachedSurfaceStateEvent(
+        target: controller.target!,
+        state: 'ready',
+        status: 'noGlyphClusters',
+      ),
+    );
+    await pumpEventQueue();
 
-      expect(
-        controller.attachedProviderClaimed,
-        isTrue,
-        reason: 'BUG-2137：撤回共享认领会让注入侧 registry 永远不给 kind=4/id=11，'
-            '与 BUG-2142 是同一个活锁',
-      );
-      // fail-closed 的部分保持不变：面藏起来、状态降级。
-      expect(controller.surfaceVisible, isFalse);
-      expect(controller.status, GalAttachedTextStatus.suspended);
+    expect(
+      controller.attachedProviderClaimed,
+      isTrue,
+      reason:
+          'BUG-2137：撤回共享认领会让注入侧 registry 永远不给 kind=4/id=11，'
+          '与 BUG-2142 是同一个活锁',
+    );
+    // fail-closed 的部分保持不变：面藏起来、状态降级。
+    expect(controller.surfaceVisible, isFalse);
+    expect(controller.status, GalAttachedTextStatus.suspended);
 
-      // 认领还在，注入侧一旦把 attached 判成 ready 就能正常收敛。
-      controller.handleSurfaceStateChanged(
-        GalAttachedSurfaceStateEvent(
-          target: controller.target!,
-          state: 'visible',
-          status: 'visible',
-          surfaceVisible: true,
-          providerKind: 4,
-          providerId: 11,
-          providerStatus: 1,
-        ),
-      );
-      await pumpEventQueue();
-      expect(controller.status, GalAttachedTextStatus.activeAttached);
-    },
-  );
+    // 认领还在，注入侧一旦把 attached 判成 ready 就能正常收敛。
+    controller.handleSurfaceStateChanged(
+      GalAttachedSurfaceStateEvent(
+        target: controller.target!,
+        state: 'visible',
+        status: 'visible',
+        surfaceVisible: true,
+        providerKind: 4,
+        providerId: 11,
+        providerStatus: 1,
+      ),
+    );
+    await pumpEventQueue();
+    expect(controller.status, GalAttachedTextStatus.activeAttached);
+  });
 
   test(
     'registry handoff pending stores text but cannot activate before kind 4/id 11',
@@ -519,7 +515,6 @@ void main() {
       expect(port.texts, hasLength(1));
     },
   );
-
 
   test(
     'successful configure cannot activate without attached registry ownership',
@@ -658,7 +653,6 @@ void main() {
     );
   });
 
-
   test('one-percent miss needs a new calibration variant', () async {
     preferences[key()] = jsonEncode(_profile().toJson());
     port.inspection = const GalAttachedCallResult(
@@ -729,6 +723,168 @@ void main() {
     },
   );
 
+  for (final String pendingStatus in <String>[
+    'shieldHandshakePending',
+    'nativeProviderPendingNeutral',
+    'detached',
+  ]) {
+    test('BUG-2154 native discovery waits for $pendingStatus', () async {
+      port.inspection = GalAttachedCallResult(
+        status: pendingStatus,
+        exePath: _exePath,
+        exeSha256: _sha,
+        referenceClient: _client,
+        providerKind: 2,
+        providerId: 3,
+        providerStatus: 1,
+        shield: const GalAttachedShieldStatus(
+          available: true,
+          statusFlags: 0x02,
+        ),
+      );
+      await sync();
+      expect(controller.status, GalAttachedTextStatus.suspended);
+      expect(controller.statusReason, pendingStatus);
+      expect(controller.needsUnsafeRiskAcceptance, isFalse);
+      expect(controller.profile, isNull);
+      expect(port.calls, <String>['inspect']);
+      expect(port.texts, isEmpty);
+    });
+  }
+
+  test(
+    'BUG-2154 Partial native activates without profile and suspends on rehandshake',
+    () async {
+      port.inspection = const GalAttachedCallResult(
+        status: 'ready',
+        exePath: _exePath,
+        exeSha256: _sha,
+        referenceClient: _client,
+        providerKind: 2,
+        providerId: 3,
+        providerStatus: 1,
+        shield: GalAttachedShieldStatus(available: true, statusFlags: 0x02),
+      );
+      await sync();
+      expect(controller.status, GalAttachedTextStatus.activeNative);
+      expect(controller.profile, isNull);
+      expect(controller.needsUnsafeRiskAcceptance, isFalse);
+      expect(port.calls, <String>['inspect']);
+
+      for (final String status in <String>['shieldHandshakePending', 'ready']) {
+        controller.handleSurfaceStateChanged(
+          GalAttachedSurfaceStateEvent(
+            target: controller.target!,
+            state: status == 'ready' ? 'targetReady' : 'suspended',
+            status: status,
+            providerKind: 2,
+            providerId: 3,
+            providerStatus: 1,
+            shield: const GalAttachedShieldStatus(
+              available: true,
+              statusFlags: 0x02,
+            ),
+          ),
+        );
+        expect(
+          controller.status,
+          status == 'ready'
+              ? GalAttachedTextStatus.activeNative
+              : GalAttachedTextStatus.suspended,
+        );
+      }
+      expect(port.texts, isEmpty);
+    },
+  );
+
+  test(
+    'BUG-2154 configure cannot activate a ready native provider before handshake',
+    () async {
+      preferences[key()] = jsonEncode(
+        _profile(mode: GalLookupSurfaceMode.auto).toJson(),
+      );
+      port.configureResult = const GalAttachedCallResult(
+        status: 'shieldHandshakePending',
+        providerKind: 2,
+        providerId: 3,
+        providerStatus: 1,
+        shield: GalAttachedShieldStatus(available: true, statusFlags: 0x02),
+      );
+      await sync();
+      expect(controller.status, GalAttachedTextStatus.suspended);
+      expect(controller.statusReason, 'shieldHandshakePending');
+      expect(port.texts, isEmpty);
+    },
+  );
+
+  test(
+    'BUG-2154 nativeOnly re-inspects after detach without attached configure',
+    () async {
+      port.inspection = const GalAttachedCallResult(
+        status: 'ready',
+        exePath: _exePath,
+        exeSha256: _sha,
+        referenceClient: _client,
+        providerKind: 2,
+        providerId: 3,
+        providerStatus: 1,
+        shield: GalAttachedShieldStatus(available: true, statusFlags: 0x02),
+      );
+      await sync();
+      expect(controller.status, GalAttachedTextStatus.activeNative);
+      port.calls.clear();
+      port.inspectionCompleter = Completer<GalAttachedCallResult>();
+      final Future<void> changing = controller.setMode(
+        GalLookupSurfaceMode.nativeOnly,
+      );
+      expect(controller.status, GalAttachedTextStatus.suspended);
+      await pumpEventQueue();
+      expect(port.calls, <String>['detach', 'inspect']);
+      expect(controller.status, GalAttachedTextStatus.suspended);
+      port.inspectionCompleter!.complete(port.inspection);
+      await changing;
+      expect(controller.status, GalAttachedTextStatus.activeNative);
+      expect(port.texts, isEmpty);
+    },
+  );
+
+  for (final GalLookupSurfaceMode firstMode in <GalLookupSurfaceMode>[
+    GalLookupSurfaceMode.nativeOnly,
+    GalLookupSurfaceMode.off,
+  ]) {
+    test(
+      'BUG-2154 auto joins pending ${firstMode.name} detach before inspect',
+      () async {
+        port.inspection = const GalAttachedCallResult(
+          status: 'ready',
+          exePath: _exePath,
+          exeSha256: _sha,
+          referenceClient: _client,
+          providerKind: 2,
+          providerId: 3,
+          providerStatus: 1,
+          shield: GalAttachedShieldStatus(available: true, statusFlags: 0x02),
+        );
+        await sync();
+        port.calls.clear();
+        port.detachCompleter = Completer<GalAttachedCallResult>();
+        final Future<void> first = controller.setMode(firstMode);
+        final Future<void> latest = controller.setMode(
+          GalLookupSurfaceMode.auto,
+        );
+        await pumpEventQueue();
+        expect(controller.status, GalAttachedTextStatus.suspended);
+        expect(port.calls, <String>['detach']);
+        port.detachCompleter!.complete(port.detachResult);
+        await Future.wait<void>(<Future<void>>[first, latest]);
+        expect(port.calls, <String>['detach', 'inspect']);
+        expect(controller.profile?.mode, GalLookupSurfaceMode.auto);
+        expect(controller.status, GalAttachedTextStatus.activeNative);
+        expect(port.texts, isEmpty);
+      },
+    );
+  }
+
   test('mismatched native provider kind/id pair cannot win auto', () async {
     port.inspection = const GalAttachedCallResult(
       status: 'activeNative',
@@ -748,11 +904,6 @@ void main() {
     expect(port.calls, <String>['inspect']);
     expect(port.texts, isEmpty);
   });
-
-
-
-
-
 
   test('clear cancels an older attached activation before configure', () async {
     preferences[key()] = jsonEncode(_profile().toJson());
@@ -778,10 +929,6 @@ void main() {
       reason: 'clear 必须在旧 provider claim 返回前取消旧 activation op',
     );
   });
-
-
-
-
 
   test('faulted shield cannot be bypassed by persisted risk', () async {
     preferences[key()] = jsonEncode(
