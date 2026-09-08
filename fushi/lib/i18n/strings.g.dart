@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 75446 (4438 per locale)
+/// Strings: 75990 (4470 per locale)
 ///
-/// Built on 2026-09-07 at 14:27 UTC
+/// Built on 2026-09-08 at 06:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6145,6 +6145,59 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AniList is rate-limiting this app right now. Wait a moment and retry.';
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  String get anki_reposition_source => 'Frequency source';
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  String get anki_reposition_source_field => 'Note field';
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  String get anki_reposition_rare_first => 'Rare words first';
+  String get anki_reposition_preview => 'Preview';
+  String get anki_reposition_apply => 'Apply';
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  String get anki_reposition_progress_write => 'Writing positions…';
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  String get anki_reposition_undo => 'Undo last reorder';
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  String get anki_reposition_no_frequency => 'no frequency';
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -16556,6 +16609,91 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -27194,6 +27332,91 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -37885,6 +38108,91 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -48610,6 +48918,91 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -59138,6 +59531,91 @@ class _StringsId extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -69757,6 +70235,91 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -79756,6 +80319,91 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -89765,6 +90413,91 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -100342,6 +101075,91 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -110971,6 +111789,91 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -121578,6 +122481,91 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -131983,6 +132971,91 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -142506,6 +143579,91 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -153000,6 +154158,91 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 // Path: <root>
@@ -162635,6 +163878,85 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
+  @override
+  String get anki_reposition_title => '按词频重排新卡';
+  @override
+  String get anki_reposition_hint => '把卡组里新卡的学习顺序改成常见词在前，绝不碰复习卡。';
+  @override
+  String get anki_reposition_unsupported => '仅 AnkiConnect 后端可用。';
+  @override
+  String get anki_reposition_include_subdecks_hint => '含子卡组；筛选牌组里的卡片会跳过。';
+  @override
+  String get anki_reposition_source => '词频来源';
+  @override
+  String get anki_reposition_source_dictionaries => '词频词典';
+  @override
+  String get anki_reposition_source_field => '笔记字段';
+  @override
+  String get anki_reposition_source_field_hint =>
+      '直接读映射为 {frequency-harmonic-rank} 的字段（Lapis 的 FreqSort），不查词典。';
+  @override
+  String get anki_reposition_dicts_hint =>
+      '隐藏的词频词典不会装载，先在词典管理里取消隐藏。一本都不勾 = 使用全部已装载词典。';
+  @override
+  String get anki_reposition_dicts_none => '没有已装载的词频词典。';
+  @override
+  String get anki_reposition_aggregate => '多本词典复合方式';
+  @override
+  String get anki_reposition_aggregate_harmonic => '调和平均';
+  @override
+  String get anki_reposition_aggregate_min => '取最小';
+  @override
+  String get anki_reposition_rare_first => '罕见词优先';
+  @override
+  String get anki_reposition_preview => '预览';
+  @override
+  String get anki_reposition_apply => '执行';
+  @override
+  String get anki_reposition_progress_title => '正在重排新卡…';
+  @override
+  String get anki_reposition_progress_fetch => '正在从 Anki 读取卡片…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      '正在查词频（${done}/${total}）';
+  @override
+  String get anki_reposition_progress_write => '正在写回位置…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '新卡 ${total} 张：${ranked} 张有词频，${unranked} 张无词频（保持在末尾）。将改变 ${changed} 张的位置。';
+  @override
+  String get anki_reposition_empty => '该卡组没有新卡。';
+  @override
+  String get anki_reposition_unchanged => '卡片已经是这个顺序。';
+  @override
+  String anki_reposition_done({required Object count}) => '已重排 ${count} 张新卡。';
+  @override
+  String anki_reposition_failed({required Object error}) => '重排失败：${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} 张卡片写入失败：${error}';
+  @override
+  String get anki_reposition_undo => '撤销上次重排';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      '恢复上次重排（${time}）前保存的位置，此后已学过的卡片不动。';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      '已恢复 ${count} 张卡片的原位置（跳过 ${skipped} 张）。';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      '若牌组选项里新卡顺序为随机，位置不会生效；请把新卡收集/排序顺序改成按顺序。';
+  @override
+  String get anki_reposition_no_frequency => '无词频';
+  @override
+  String get anki_reposition_cancelled => '已取消，未写入任何改动。';
 }
 
 // Path: <root>
@@ -172323,6 +173645,91 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_anilist_error_unreachable =>
       '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
+  @override
+  String get anki_reposition_title => 'Reorder new cards by frequency';
+  @override
+  String get anki_reposition_hint =>
+      'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+  @override
+  String get anki_reposition_unsupported => 'Only available with AnkiConnect.';
+  @override
+  String get anki_reposition_include_subdecks_hint =>
+      'Includes subdecks; cards in filtered decks are skipped.';
+  @override
+  String get anki_reposition_source => 'Frequency source';
+  @override
+  String get anki_reposition_source_dictionaries => 'Frequency dictionaries';
+  @override
+  String get anki_reposition_source_field => 'Note field';
+  @override
+  String get anki_reposition_source_field_hint =>
+      'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+  @override
+  String get anki_reposition_dicts_hint =>
+      'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+  @override
+  String get anki_reposition_dicts_none =>
+      'No frequency dictionaries are loaded.';
+  @override
+  String get anki_reposition_aggregate => 'Combine multiple dictionaries';
+  @override
+  String get anki_reposition_aggregate_harmonic => 'Harmonic mean';
+  @override
+  String get anki_reposition_aggregate_min => 'Lowest rank';
+  @override
+  String get anki_reposition_rare_first => 'Rare words first';
+  @override
+  String get anki_reposition_preview => 'Preview';
+  @override
+  String get anki_reposition_apply => 'Apply';
+  @override
+  String get anki_reposition_progress_title => 'Reordering new cards…';
+  @override
+  String get anki_reposition_progress_fetch => 'Reading cards from Anki…';
+  @override
+  String anki_reposition_progress_rank(
+          {required Object done, required Object total}) =>
+      'Looking up frequencies (${done}/${total})';
+  @override
+  String get anki_reposition_progress_write => 'Writing positions…';
+  @override
+  String anki_reposition_summary(
+          {required Object total,
+          required Object ranked,
+          required Object unranked,
+          required Object changed}) =>
+      '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+  @override
+  String get anki_reposition_empty => 'This deck has no new cards.';
+  @override
+  String get anki_reposition_unchanged => 'Cards are already in this order.';
+  @override
+  String anki_reposition_done({required Object count}) =>
+      'Repositioned ${count} new cards.';
+  @override
+  String anki_reposition_failed({required Object error}) =>
+      'Reorder failed: ${error}';
+  @override
+  String anki_reposition_partial(
+          {required Object failed, required Object error}) =>
+      '${failed} cards could not be written: ${error}';
+  @override
+  String get anki_reposition_undo => 'Undo last reorder';
+  @override
+  String anki_reposition_undo_hint({required Object time}) =>
+      'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+  @override
+  String anki_reposition_undo_done(
+          {required Object count, required Object skipped}) =>
+      'Restored ${count} cards to their previous positions (${skipped} skipped).';
+  @override
+  String get anki_reposition_gather_order_hint =>
+      'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+  @override
+  String get anki_reposition_no_frequency => 'no frequency';
+  @override
+  String get anki_reposition_cancelled =>
+      'Reorder cancelled; nothing was written.';
 }
 
 /// Flat map(s) containing all translations.
@@ -181442,6 +182849,79 @@ extension on _StringsEn {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -190556,6 +192036,79 @@ extension on _StringsAr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -199715,6 +201268,79 @@ extension on _StringsDe {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -208865,6 +210491,79 @@ extension on _StringsEs {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -218024,6 +219723,79 @@ extension on _StringsFr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -227154,6 +228926,79 @@ extension on _StringsId {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -236306,6 +238151,79 @@ extension on _StringsIt {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -245385,6 +247303,79 @@ extension on _StringsJa {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -254468,6 +256459,79 @@ extension on _StringsKo {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -263613,6 +265677,79 @@ extension on _StringsNl {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -272753,6 +274890,79 @@ extension on _StringsPtBr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -281900,6 +284110,79 @@ extension on _StringsRu {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -291019,6 +293302,79 @@ extension on _StringsTh {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -300153,6 +302509,79 @@ extension on _StringsTr {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -309281,6 +311710,79 @@ extension on _StringsVi {
         return 'AniList is rate-limiting this app right now. Wait a moment and retry.';
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
@@ -318330,6 +320832,78 @@ extension on _StringsZhCn {
         return 'AniList 正在对本应用限流。稍等一会儿再重试。';
       case 'video_anilist_error_unreachable':
         return '连不上 AniList（graphql.anilist.co）。请检查网络连接，或在下载设置中配置代理。';
+      case 'anki_reposition_title':
+        return '按词频重排新卡';
+      case 'anki_reposition_hint':
+        return '把卡组里新卡的学习顺序改成常见词在前，绝不碰复习卡。';
+      case 'anki_reposition_unsupported':
+        return '仅 AnkiConnect 后端可用。';
+      case 'anki_reposition_include_subdecks_hint':
+        return '含子卡组；筛选牌组里的卡片会跳过。';
+      case 'anki_reposition_source':
+        return '词频来源';
+      case 'anki_reposition_source_dictionaries':
+        return '词频词典';
+      case 'anki_reposition_source_field':
+        return '笔记字段';
+      case 'anki_reposition_source_field_hint':
+        return '直接读映射为 {frequency-harmonic-rank} 的字段（Lapis 的 FreqSort），不查词典。';
+      case 'anki_reposition_dicts_hint':
+        return '隐藏的词频词典不会装载，先在词典管理里取消隐藏。一本都不勾 = 使用全部已装载词典。';
+      case 'anki_reposition_dicts_none':
+        return '没有已装载的词频词典。';
+      case 'anki_reposition_aggregate':
+        return '多本词典复合方式';
+      case 'anki_reposition_aggregate_harmonic':
+        return '调和平均';
+      case 'anki_reposition_aggregate_min':
+        return '取最小';
+      case 'anki_reposition_rare_first':
+        return '罕见词优先';
+      case 'anki_reposition_preview':
+        return '预览';
+      case 'anki_reposition_apply':
+        return '执行';
+      case 'anki_reposition_progress_title':
+        return '正在重排新卡…';
+      case 'anki_reposition_progress_fetch':
+        return '正在从 Anki 读取卡片…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            '正在查词频（${done}/${total}）';
+      case 'anki_reposition_progress_write':
+        return '正在写回位置…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '新卡 ${total} 张：${ranked} 张有词频，${unranked} 张无词频（保持在末尾）。将改变 ${changed} 张的位置。';
+      case 'anki_reposition_empty':
+        return '该卡组没有新卡。';
+      case 'anki_reposition_unchanged':
+        return '卡片已经是这个顺序。';
+      case 'anki_reposition_done':
+        return ({required Object count}) => '已重排 ${count} 张新卡。';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => '重排失败：${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} 张卡片写入失败：${error}';
+      case 'anki_reposition_undo':
+        return '撤销上次重排';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) => '恢复上次重排（${time}）前保存的位置，此后已学过的卡片不动。';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            '已恢复 ${count} 张卡片的原位置（跳过 ${skipped} 张）。';
+      case 'anki_reposition_gather_order_hint':
+        return '若牌组选项里新卡顺序为随机，位置不会生效；请把新卡收集/排序顺序改成按顺序。';
+      case 'anki_reposition_no_frequency':
+        return '无词频';
+      case 'anki_reposition_cancelled':
+        return '已取消，未写入任何改动。';
       default:
         return null;
     }
@@ -327387,6 +329961,79 @@ extension on _StringsZhHk {
         return 'AniList 正在對本應用限流。稍等一會兒再重試。';
       case 'video_anilist_error_unreachable':
         return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
+      case 'anki_reposition_title':
+        return 'Reorder new cards by frequency';
+      case 'anki_reposition_hint':
+        return 'Rewrites the learning order of a deck\'s new cards so common words come first. Review cards are never touched.';
+      case 'anki_reposition_unsupported':
+        return 'Only available with AnkiConnect.';
+      case 'anki_reposition_include_subdecks_hint':
+        return 'Includes subdecks; cards in filtered decks are skipped.';
+      case 'anki_reposition_source':
+        return 'Frequency source';
+      case 'anki_reposition_source_dictionaries':
+        return 'Frequency dictionaries';
+      case 'anki_reposition_source_field':
+        return 'Note field';
+      case 'anki_reposition_source_field_hint':
+        return 'Reads the field mapped to {frequency-harmonic-rank} (FreqSort in Lapis); no dictionary lookup.';
+      case 'anki_reposition_dicts_hint':
+        return 'Hidden frequency dictionaries are not loaded; unhide them in dictionary management first. Nothing selected means all loaded dictionaries.';
+      case 'anki_reposition_dicts_none':
+        return 'No frequency dictionaries are loaded.';
+      case 'anki_reposition_aggregate':
+        return 'Combine multiple dictionaries';
+      case 'anki_reposition_aggregate_harmonic':
+        return 'Harmonic mean';
+      case 'anki_reposition_aggregate_min':
+        return 'Lowest rank';
+      case 'anki_reposition_rare_first':
+        return 'Rare words first';
+      case 'anki_reposition_preview':
+        return 'Preview';
+      case 'anki_reposition_apply':
+        return 'Apply';
+      case 'anki_reposition_progress_title':
+        return 'Reordering new cards…';
+      case 'anki_reposition_progress_fetch':
+        return 'Reading cards from Anki…';
+      case 'anki_reposition_progress_rank':
+        return ({required Object done, required Object total}) =>
+            'Looking up frequencies (${done}/${total})';
+      case 'anki_reposition_progress_write':
+        return 'Writing positions…';
+      case 'anki_reposition_summary':
+        return (
+                {required Object total,
+                required Object ranked,
+                required Object unranked,
+                required Object changed}) =>
+            '${total} new cards: ${ranked} with frequency, ${unranked} without (kept at the end). ${changed} positions will change.';
+      case 'anki_reposition_empty':
+        return 'This deck has no new cards.';
+      case 'anki_reposition_unchanged':
+        return 'Cards are already in this order.';
+      case 'anki_reposition_done':
+        return ({required Object count}) => 'Repositioned ${count} new cards.';
+      case 'anki_reposition_failed':
+        return ({required Object error}) => 'Reorder failed: ${error}';
+      case 'anki_reposition_partial':
+        return ({required Object failed, required Object error}) =>
+            '${failed} cards could not be written: ${error}';
+      case 'anki_reposition_undo':
+        return 'Undo last reorder';
+      case 'anki_reposition_undo_hint':
+        return ({required Object time}) =>
+            'Restores the positions saved before the last reorder (${time}). Cards studied since then are left alone.';
+      case 'anki_reposition_undo_done':
+        return ({required Object count, required Object skipped}) =>
+            'Restored ${count} cards to their previous positions (${skipped} skipped).';
+      case 'anki_reposition_gather_order_hint':
+        return 'If the deck\'s options use random new card order, positions are ignored. Set the new card gather/sort order to sequential.';
+      case 'anki_reposition_no_frequency':
+        return 'no frequency';
+      case 'anki_reposition_cancelled':
+        return 'Reorder cancelled; nothing was written.';
       default:
         return null;
     }
