@@ -2298,12 +2298,12 @@ extension _ReaderChrome on _ReaderFushiPageState {
   ///
   /// 入口只有底部状态行左侧的计时器（[ReaderStatusFooter.onTapTracker]）——在正文
   /// 里点，停 / 续当场生效。统计浮层里曾另有一个同功能按钮，但开浮层本身就经
-  /// [_withStudyClockPaused] 停表（BUG-2170），层内那个按钮改不动当下的运行态。
+  /// [_withStudyClockPaused] 停表（BUG-2208），层内那个按钮改不动当下的运行态。
   void _toggleStudyClockManualPause() {
     _ensureStudyClock();
     final bool pause = !_studyClockManualPause;
     _rebuild(() => _studyClockManualPause = pause);
-    // 统一判据（BUG-2171）：切后台期间点「继续」只是清旗、回前台再起表。
+    // 统一判据（BUG-2209）：切后台期间点「继续」只是清旗、回前台再起表。
     _syncStudyClockRunState();
   }
 

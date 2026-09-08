@@ -229,7 +229,7 @@ void main() {
           const ValueKey<String>('fushi_reader_stats_tracking_toggle'),
         ),
         findsNothing,
-        reason: '开浮层经 _withStudyClockPaused 停表（BUG-2170），层内开关改不动运行态',
+        reason: '开浮层经 _withStudyClockPaused 停表（BUG-2208），层内开关改不动运行态',
       );
       expect(find.text(t.pause), findsNothing);
       expect(find.text(t.play), findsNothing);

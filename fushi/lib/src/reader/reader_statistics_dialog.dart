@@ -12,7 +12,7 @@
 /// 再互相挤。
 ///
 /// 浮层里**没有**手动计时开关：打开这层的入口（`_openReadingStatistics`）本身经
-/// `_withStudyClockPaused` 停表（BUG-2170，浮层是弹层 → `modalDepth > 0`），看统计
+/// `_withStudyClockPaused` 停表（BUG-2208，浮层是弹层 → `modalDepth > 0`），看统计
 /// 期间计时恒停，层内再摆一个「暂停 / 继续」既改不动当下的运行态，又与「会话读数
 /// 冻结在打开那一刻」的表象自相矛盾。手动暂停的入口是底部状态行左侧的计时器
 /// （`ReaderStatusFooter.onTapTracker`）——在正文里点，停 / 续立刻生效。
