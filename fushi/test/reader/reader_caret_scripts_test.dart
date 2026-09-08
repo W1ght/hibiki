@@ -65,11 +65,11 @@ void main() {
         );
         expect(
           ReaderCaretScripts.instantScrollInvocation(true),
-          'window.fushiCaret.setInstantScroll(true)',
+          'window.fushiCaret && window.fushiCaret.setInstantScroll(true)',
         );
         expect(
           ReaderCaretScripts.instantScrollInvocation(false),
-          'window.fushiCaret.setInstantScroll(false)',
+          'window.fushiCaret && window.fushiCaret.setInstantScroll(false)',
         );
       },
     );
