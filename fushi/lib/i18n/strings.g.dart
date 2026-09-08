@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 75633 (4449 per locale)
+/// Strings: 75752 (4456 per locale)
 ///
-/// Built on 2026-09-08 at 11:17 UTC
+/// Built on 2026-09-08 at 13:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6166,6 +6166,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String download_remote_jobs_title({required Object device}) =>
       'Tasks on ${device}';
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  String get subscription_run_location => 'Run on';
+  String get subscription_run_local => 'This device';
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -16609,6 +16619,23 @@ class _StringsAr extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -27279,6 +27306,23 @@ class _StringsDe extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -38002,6 +38046,23 @@ class _StringsEs extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -48759,6 +48820,23 @@ class _StringsFr extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -59319,6 +59397,23 @@ class _StringsId extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -69970,6 +70065,23 @@ class _StringsIt extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -80001,6 +80113,23 @@ class _StringsJa extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -90042,6 +90171,23 @@ class _StringsKo extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -100651,6 +100797,23 @@ class _StringsNl extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -111312,6 +111475,23 @@ class _StringsPtBr extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -121951,6 +122131,23 @@ class _StringsRu extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -132388,6 +132585,23 @@ class _StringsTh extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -142943,6 +143157,23 @@ class _StringsTr extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -153469,6 +153700,23 @@ class _StringsVi extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 // Path: <root>
@@ -163135,6 +163383,22 @@ class _StringsZhCn extends _StringsEn {
       '${device} 上的任务';
   @override
   String get download_remote_jobs_empty => '主机上还没有任务';
+  @override
+  String get subscription_run_location => '运行位置';
+  @override
+  String get subscription_run_local => '本机';
+  @override
+  String get subscription_remote_empty => '主机上没有订阅';
+  @override
+  String get subscription_remote_unsupported => '主机未配置下载后端';
+  @override
+  String subscription_run_remote({required Object device}) => '主机 ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      '${device} 上的订阅';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      '主机上没有这个资源的索引器（${provider}）';
 }
 
 // Path: <root>
@@ -172855,6 +173119,23 @@ class _StringsZhHk extends _StringsEn {
       'Tasks on ${device}';
   @override
   String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
 }
 
 /// Flat map(s) containing all translations.
@@ -182002,6 +182283,21 @@ extension on _StringsEn {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -191144,6 +191440,21 @@ extension on _StringsAr {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -200331,6 +200642,21 @@ extension on _StringsDe {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -209509,6 +209835,21 @@ extension on _StringsEs {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -218696,6 +219037,21 @@ extension on _StringsFr {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -227854,6 +228210,21 @@ extension on _StringsId {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -237034,6 +237405,21 @@ extension on _StringsIt {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -246141,6 +246527,21 @@ extension on _StringsJa {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -255252,6 +255653,21 @@ extension on _StringsKo {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -264425,6 +264841,21 @@ extension on _StringsNl {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -273593,6 +274024,21 @@ extension on _StringsPtBr {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -282768,6 +283214,21 @@ extension on _StringsRu {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -291915,6 +292376,21 @@ extension on _StringsTh {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -301077,6 +301553,21 @@ extension on _StringsTr {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -310233,6 +310724,21 @@ extension on _StringsVi {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
@@ -319309,6 +319815,20 @@ extension on _StringsZhCn {
         return ({required Object device}) => '${device} 上的任务';
       case 'download_remote_jobs_empty':
         return '主机上还没有任务';
+      case 'subscription_run_location':
+        return '运行位置';
+      case 'subscription_run_local':
+        return '本机';
+      case 'subscription_remote_empty':
+        return '主机上没有订阅';
+      case 'subscription_remote_unsupported':
+        return '主机未配置下载后端';
+      case 'subscription_run_remote':
+        return ({required Object device}) => '主机 ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => '${device} 上的订阅';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) => '主机上没有这个资源的索引器（${provider}）';
       default:
         return null;
     }
@@ -328394,6 +328914,21 @@ extension on _StringsZhHk {
         return ({required Object device}) => 'Tasks on ${device}';
       case 'download_remote_jobs_empty':
         return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       default:
         return null;
     }
