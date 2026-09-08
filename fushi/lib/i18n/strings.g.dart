@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76143 (4479 per locale)
+/// Strings: 76177 (4481 per locale)
 ///
-/// Built on 2026-09-08 at 13:52 UTC
+/// Built on 2026-09-08 at 15:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6210,6 +6210,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  String get profile_language_bindings => 'Language bindings';
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -16727,6 +16730,11 @@ class _StringsAr extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -27471,6 +27479,11 @@ class _StringsDe extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -38268,6 +38281,11 @@ class _StringsEs extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -49099,6 +49117,11 @@ class _StringsFr extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -59733,6 +59756,11 @@ class _StringsId extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -70458,6 +70486,11 @@ class _StringsIt extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -80563,6 +80596,11 @@ class _StringsJa extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -90678,6 +90716,11 @@ class _StringsKo extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -101361,6 +101404,11 @@ class _StringsNl extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -112096,6 +112144,11 @@ class _StringsPtBr extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -122809,6 +122862,11 @@ class _StringsRu extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -133320,6 +133378,11 @@ class _StringsTh extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -143949,6 +144012,11 @@ class _StringsTr extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -154549,6 +154617,11 @@ class _StringsVi extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -164283,6 +164356,11 @@ class _StringsZhCn extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       '已重排 ${count} 张新卡；${skipped} 张已不再是新卡，未改动。';
+  @override
+  String get profile_language_bindings => '语言绑定';
+  @override
+  String get profile_language_bindings_hint =>
+      '在条目已标注内容语言时生效。EPUB 会自动读取文件里的声明；其它格式需要在条目上手动指定。';
 }
 
 // Path: <root>
@@ -174076,6 +174154,11 @@ class _StringsZhHk extends _StringsEn {
   String anki_reposition_done_skipped(
           {required Object count, required Object skipped}) =>
       'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 /// Flat map(s) containing all translations.
@@ -183287,6 +183370,10 @@ extension on _StringsEn {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -192493,6 +192580,10 @@ extension on _StringsAr {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -201744,6 +201835,10 @@ extension on _StringsDe {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -210986,6 +211081,10 @@ extension on _StringsEs {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -220237,6 +220336,10 @@ extension on _StringsFr {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -229459,6 +229562,10 @@ extension on _StringsId {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -238703,6 +238810,10 @@ extension on _StringsIt {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -247874,6 +247985,10 @@ extension on _StringsJa {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -257049,6 +257164,10 @@ extension on _StringsKo {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -266286,6 +266405,10 @@ extension on _StringsNl {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -275518,6 +275641,10 @@ extension on _StringsPtBr {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -284757,6 +284884,10 @@ extension on _StringsRu {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -293968,6 +294099,10 @@ extension on _StringsTh {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -303194,6 +303329,10 @@ extension on _StringsTr {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -312414,6 +312553,10 @@ extension on _StringsVi {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -321554,6 +321697,10 @@ extension on _StringsZhCn {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             '已重排 ${count} 张新卡；${skipped} 张已不再是新卡，未改动。';
+      case 'profile_language_bindings':
+        return '语言绑定';
+      case 'profile_language_bindings_hint':
+        return '在条目已标注内容语言时生效。EPUB 会自动读取文件里的声明；其它格式需要在条目上手动指定。';
       default:
         return null;
     }
@@ -330703,6 +330850,10 @@ extension on _StringsZhHk {
       case 'anki_reposition_done_skipped':
         return ({required Object count, required Object skipped}) =>
             'Repositioned ${count} new cards; ${skipped} were skipped because they are no longer new.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
