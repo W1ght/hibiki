@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 75514 (4442 per locale)
+/// Strings: 75599 (4447 per locale)
 ///
-/// Built on 2026-09-08 at 04:54 UTC
+/// Built on 2026-09-08 at 19:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6150,6 +6150,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_metadata_provider_tmdb => 'TMDB';
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  String get video_metadata_identifier_words => 'Identifier words';
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -16570,6 +16577,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -27217,6 +27236,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -37917,6 +37948,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -48651,6 +48694,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -59188,6 +59243,18 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -69816,6 +69883,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -79824,6 +79903,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -89842,6 +89933,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -100428,6 +100531,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -111066,6 +111181,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -121682,6 +121809,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -132096,6 +132235,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -142628,6 +142779,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -153131,6 +153294,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 // Path: <root>
@@ -162774,6 +162949,17 @@ class _StringsZhCn extends _StringsEn {
   String get video_metadata_provider_tmdb => 'TMDB';
   @override
   String get video_source_scrape_provider_follow_global => '跟随全局默认';
+  @override
+  String get video_metadata_identifier_words => '识别词';
+  @override
+  String get video_metadata_identifier_words_hint => '识别前先改写、屏蔽标题或偏移集号';
+  @override
+  String get video_metadata_identifier_words_empty => '未配置';
+  @override
+  String get video_metadata_identifier_words_invalid => '无效规则';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      '一行一条规则，# 开头是注释。屏蔽：直接写正则。替换：A => B。集偏移：前 <> 后 >> EP+1。组合：A => B && 前 <> 后 >> EP+1。';
 }
 
 // Path: <root>
@@ -172471,6 +172657,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_provider_follow_global =>
       'Follow global default';
+  @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
 }
 
 /// Flat map(s) containing all translations.
@@ -181598,6 +181796,16 @@ extension on _StringsEn {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -190720,6 +190928,16 @@ extension on _StringsAr {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -199887,6 +200105,16 @@ extension on _StringsDe {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -209045,6 +209273,16 @@ extension on _StringsEs {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -218212,6 +218450,16 @@ extension on _StringsFr {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -227350,6 +227598,16 @@ extension on _StringsId {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -236510,6 +236768,16 @@ extension on _StringsIt {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -245597,6 +245865,16 @@ extension on _StringsJa {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -254688,6 +254966,16 @@ extension on _StringsKo {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -263841,6 +264129,16 @@ extension on _StringsNl {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -272989,6 +273287,16 @@ extension on _StringsPtBr {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -282144,6 +282452,16 @@ extension on _StringsRu {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -291271,6 +291589,16 @@ extension on _StringsTh {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -300413,6 +300741,16 @@ extension on _StringsTr {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -309549,6 +309887,16 @@ extension on _StringsVi {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
@@ -318606,6 +318954,16 @@ extension on _StringsZhCn {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return '跟随全局默认';
+      case 'video_metadata_identifier_words':
+        return '识别词';
+      case 'video_metadata_identifier_words_hint':
+        return '识别前先改写、屏蔽标题或偏移集号';
+      case 'video_metadata_identifier_words_empty':
+        return '未配置';
+      case 'video_metadata_identifier_words_invalid':
+        return '无效规则';
+      case 'video_metadata_identifier_words_syntax':
+        return '一行一条规则，# 开头是注释。屏蔽：直接写正则。替换：A => B。集偏移：前 <> 后 >> EP+1。组合：A => B && 前 <> 后 >> EP+1。';
       default:
         return null;
     }
@@ -327671,6 +328029,16 @@ extension on _StringsZhHk {
         return 'TMDB';
       case 'video_source_scrape_provider_follow_global':
         return 'Follow global default';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
       default:
         return null;
     }
