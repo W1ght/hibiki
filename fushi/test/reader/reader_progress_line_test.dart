@@ -135,10 +135,9 @@ void main() {
     test('贴工具栏下沿（含挤压态预留）、自带 RepaintBoundary', () {
       expect(
         builder,
-        contains(
-          'top: _stableTopInset + _macosWindowTitlebarInset + '
-          '_desktopHeaderReserve',
-        ),
+        // macOS 拖拽带删除后不再有 _macosWindowTitlebarInset 这一项（顶栏由
+        // 应用级 FushiDesktopTitleBar 提供，页内不再让位）。
+        contains('top: _stableTopInset + _desktopHeaderReserve'),
       );
       expect(builder, contains('RepaintBoundary('));
       expect(builder, contains("ValueKey<String>('fushi_progress_line')"));
