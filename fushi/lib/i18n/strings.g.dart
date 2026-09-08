@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 75531 (4443 per locale)
+/// Strings: 75565 (4445 per locale)
 ///
-/// Built on 2026-09-08 at 05:27 UTC
+/// Built on 2026-09-08 at 06:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6151,6 +6151,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_session_delete => 'Delete session';
   String get stat_session_delete_message =>
       'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+  String get stat_analysis => 'Analysis';
+  String stat_sessions_count({required Object n}) => '${n} sessions';
 }
 
 // Path: <root>
@@ -16563,16 +16565,20 @@ class _StringsAr extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'الجلسات الأخيرة';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'كل الجلسات';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'لا توجد جلسات بعد';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'حذف الجلسة';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'حذف وقت هذه الجلسة وعدد الأحرف والصفحات؟ لن تتأثر الكلمات والجمل المحفوظة.';
+  @override
+  String get stat_analysis => 'تحليل';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} جلسة';
 }
 
 // Path: <root>
@@ -27212,16 +27218,20 @@ class _StringsDe extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Letzte Sitzungen';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Alle Sitzungen';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Noch keine Sitzungen';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Sitzung löschen';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Zeit, Zeichen- und Seitenzahl dieser Sitzung löschen? Gespeicherte Wörter und Sätze sind nicht betroffen.';
+  @override
+  String get stat_analysis => 'Analyse';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} Sitzungen';
 }
 
 // Path: <root>
@@ -37914,16 +37924,20 @@ class _StringsEs extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Sesiones recientes';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Todas las sesiones';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Aún no hay sesiones';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Eliminar sesión';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      '¿Eliminar el tiempo, los caracteres y las páginas de esta sesión? Tus palabras y frases guardadas no se verán afectadas.';
+  @override
+  String get stat_analysis => 'Análisis';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} sesiones';
 }
 
 // Path: <root>
@@ -48650,16 +48664,20 @@ class _StringsFr extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Sessions récentes';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Toutes les sessions';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Aucune session pour l’instant';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Supprimer la session';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Supprimer le temps, le nombre de caractères et de pages de cette session ? Vos mots et phrases enregistrés ne sont pas affectés.';
+  @override
+  String get stat_analysis => 'Analyse';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} sessions';
 }
 
 // Path: <root>
@@ -59189,16 +59207,20 @@ class _StringsId extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Sesi terbaru';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Semua sesi';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Belum ada sesi';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Hapus sesi';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Hapus waktu, jumlah karakter, dan halaman sesi ini? Kata dan kalimat yang tersimpan tidak terpengaruh.';
+  @override
+  String get stat_analysis => 'Analisis';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} sesi';
 }
 
 // Path: <root>
@@ -69819,16 +69841,20 @@ class _StringsIt extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Sessioni recenti';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Tutte le sessioni';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Ancora nessuna sessione';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Elimina sessione';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Eliminare tempo, caratteri e pagine di questa sessione? Le parole e le frasi salvate non saranno toccate.';
+  @override
+  String get stat_analysis => 'Analisi';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} sessioni';
 }
 
 // Path: <root>
@@ -79829,16 +79855,20 @@ class _StringsJa extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => '最近のセッション';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'すべてのセッション';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'セッションはまだありません';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'セッションを削除';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'このセッションの時間・文字数・ページ数を削除しますか？保存済みの単語と文には影響しません。';
+  @override
+  String get stat_analysis => '分析';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} セッション';
 }
 
 // Path: <root>
@@ -89849,16 +89879,20 @@ class _StringsKo extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => '최근 세션';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => '모든 세션';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => '아직 세션이 없습니다';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => '세션 삭제';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      '이 세션의 시간, 글자 수, 페이지 수를 삭제할까요? 저장된 단어와 문장에는 영향을 주지 않습니다.';
+  @override
+  String get stat_analysis => '분석';
+  @override
+  String stat_sessions_count({required Object n}) => '세션 ${n}회';
 }
 
 // Path: <root>
@@ -100437,16 +100471,20 @@ class _StringsNl extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Recente sessies';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Alle sessies';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Nog geen sessies';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Sessie verwijderen';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Tijd, tekens en pagina’s van deze sessie verwijderen? Opgeslagen woorden en zinnen blijven behouden.';
+  @override
+  String get stat_analysis => 'Analyse';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} sessies';
 }
 
 // Path: <root>
@@ -111077,16 +111115,20 @@ class _StringsPtBr extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Sessões recentes';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Todas as sessões';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Ainda não há sessões';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Excluir sessão';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Excluir o tempo, os caracteres e as páginas desta sessão? Suas palavras e frases salvas não serão afetadas.';
+  @override
+  String get stat_analysis => 'Análise';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} sessões';
 }
 
 // Path: <root>
@@ -121695,16 +121737,20 @@ class _StringsRu extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Недавние сессии';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Все сессии';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Сессий пока нет';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Удалить сессию';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Удалить время, число символов и страниц этой сессии? Сохранённые слова и предложения не затрагиваются.';
+  @override
+  String get stat_analysis => 'Анализ';
+  @override
+  String stat_sessions_count({required Object n}) => 'Сессий: ${n}';
 }
 
 // Path: <root>
@@ -132111,16 +132157,20 @@ class _StringsTh extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'เซสชันล่าสุด';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'เซสชันทั้งหมด';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'ยังไม่มีเซสชัน';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'ลบเซสชัน';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'ลบเวลา จำนวนตัวอักษร และหน้าของเซสชันนี้หรือไม่ คำและประโยคที่บันทึกไว้จะไม่ได้รับผลกระทบ';
+  @override
+  String get stat_analysis => 'การวิเคราะห์';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} เซสชัน';
 }
 
 // Path: <root>
@@ -142645,16 +142695,20 @@ class _StringsTr extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Son oturumlar';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Tüm oturumlar';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Henüz oturum yok';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Oturumu sil';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Bu oturumun süresi, karakter ve sayfa sayısı silinsin mi? Kaydettiğiniz kelimeler ve cümleler etkilenmez.';
+  @override
+  String get stat_analysis => 'Analiz';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} oturum';
 }
 
 // Path: <root>
@@ -153150,16 +153204,20 @@ class _StringsVi extends _StringsEn {
   String get video_anilist_error_unreachable =>
       'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => 'Phiên gần đây';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => 'Tất cả phiên';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => 'Chưa có phiên nào';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => 'Xóa phiên';
   @override
   String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      'Xóa thời gian, số ký tự và số trang của phiên này? Từ và câu đã lưu không bị ảnh hưởng.';
+  @override
+  String get stat_analysis => 'Phân tích';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} phiên';
 }
 
 // Path: <root>
@@ -162805,6 +162863,10 @@ class _StringsZhCn extends _StringsEn {
   String get stat_session_delete => '删除会话';
   @override
   String get stat_session_delete_message => '删除这次会话的时长、字数和页数？收藏的词句不受影响。';
+  @override
+  String get stat_analysis => '分析';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} 次会话';
 }
 
 // Path: <root>
@@ -172494,16 +172556,19 @@ class _StringsZhHk extends _StringsEn {
   String get video_anilist_error_unreachable =>
       '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
   @override
-  String get stat_sessions_recent => 'Recent sessions';
+  String get stat_sessions_recent => '最近會話';
   @override
-  String get stat_sessions_show_all => 'All sessions';
+  String get stat_sessions_show_all => '全部會話';
   @override
-  String get stat_sessions_empty => 'No sessions yet';
+  String get stat_sessions_empty => '還沒有會話記錄';
   @override
-  String get stat_session_delete => 'Delete session';
+  String get stat_session_delete => '刪除會話';
   @override
-  String get stat_session_delete_message =>
-      'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+  String get stat_session_delete_message => '刪除這次會話的時長、字數和頁數？收藏的詞句不受影響。';
+  @override
+  String get stat_analysis => '分析';
+  @override
+  String stat_sessions_count({required Object n}) => '${n} 次會話';
 }
 
 /// Flat map(s) containing all translations.
@@ -181633,6 +181698,10 @@ extension on _StringsEn {
         return 'Delete session';
       case 'stat_session_delete_message':
         return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+      case 'stat_analysis':
+        return 'Analysis';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} sessions';
       default:
         return null;
     }
@@ -190748,15 +190817,19 @@ extension on _StringsAr {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'الجلسات الأخيرة';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'كل الجلسات';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'لا توجد جلسات بعد';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'حذف الجلسة';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'حذف وقت هذه الجلسة وعدد الأحرف والصفحات؟ لن تتأثر الكلمات والجمل المحفوظة.';
+      case 'stat_analysis':
+        return 'تحليل';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} جلسة';
       default:
         return null;
     }
@@ -199917,15 +199990,19 @@ extension on _StringsDe {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Letzte Sitzungen';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Alle Sitzungen';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Noch keine Sitzungen';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Sitzung löschen';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Zeit, Zeichen- und Seitenzahl dieser Sitzung löschen? Gespeicherte Wörter und Sätze sind nicht betroffen.';
+      case 'stat_analysis':
+        return 'Analyse';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} Sitzungen';
       default:
         return null;
     }
@@ -209077,15 +209154,19 @@ extension on _StringsEs {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Sesiones recientes';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Todas las sesiones';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Aún no hay sesiones';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Eliminar sesión';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return '¿Eliminar el tiempo, los caracteres y las páginas de esta sesión? Tus palabras y frases guardadas no se verán afectadas.';
+      case 'stat_analysis':
+        return 'Análisis';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} sesiones';
       default:
         return null;
     }
@@ -218246,15 +218327,19 @@ extension on _StringsFr {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Sessions récentes';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Toutes les sessions';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Aucune session pour l’instant';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Supprimer la session';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Supprimer le temps, le nombre de caractères et de pages de cette session ? Vos mots et phrases enregistrés ne sont pas affectés.';
+      case 'stat_analysis':
+        return 'Analyse';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} sessions';
       default:
         return null;
     }
@@ -227386,15 +227471,19 @@ extension on _StringsId {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Sesi terbaru';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Semua sesi';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Belum ada sesi';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Hapus sesi';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Hapus waktu, jumlah karakter, dan halaman sesi ini? Kata dan kalimat yang tersimpan tidak terpengaruh.';
+      case 'stat_analysis':
+        return 'Analisis';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} sesi';
       default:
         return null;
     }
@@ -236548,15 +236637,19 @@ extension on _StringsIt {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Sessioni recenti';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Tutte le sessioni';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Ancora nessuna sessione';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Elimina sessione';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Eliminare tempo, caratteri e pagine di questa sessione? Le parole e le frasi salvate non saranno toccate.';
+      case 'stat_analysis':
+        return 'Analisi';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} sessioni';
       default:
         return null;
     }
@@ -245637,15 +245730,19 @@ extension on _StringsJa {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return '最近のセッション';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'すべてのセッション';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'セッションはまだありません';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'セッションを削除';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'このセッションの時間・文字数・ページ数を削除しますか？保存済みの単語と文には影響しません。';
+      case 'stat_analysis':
+        return '分析';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} セッション';
       default:
         return null;
     }
@@ -254730,15 +254827,19 @@ extension on _StringsKo {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return '최근 세션';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return '모든 세션';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return '아직 세션이 없습니다';
       case 'stat_session_delete':
-        return 'Delete session';
+        return '세션 삭제';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return '이 세션의 시간, 글자 수, 페이지 수를 삭제할까요? 저장된 단어와 문장에는 영향을 주지 않습니다.';
+      case 'stat_analysis':
+        return '분석';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '세션 ${n}회';
       default:
         return null;
     }
@@ -263885,15 +263986,19 @@ extension on _StringsNl {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Recente sessies';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Alle sessies';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Nog geen sessies';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Sessie verwijderen';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Tijd, tekens en pagina’s van deze sessie verwijderen? Opgeslagen woorden en zinnen blijven behouden.';
+      case 'stat_analysis':
+        return 'Analyse';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} sessies';
       default:
         return null;
     }
@@ -273035,15 +273140,19 @@ extension on _StringsPtBr {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Sessões recentes';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Todas as sessões';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Ainda não há sessões';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Excluir sessão';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Excluir o tempo, os caracteres e as páginas desta sessão? Suas palavras e frases salvas não serão afetadas.';
+      case 'stat_analysis':
+        return 'Análise';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} sessões';
       default:
         return null;
     }
@@ -282192,15 +282301,19 @@ extension on _StringsRu {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Недавние сессии';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Все сессии';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Сессий пока нет';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Удалить сессию';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Удалить время, число символов и страниц этой сессии? Сохранённые слова и предложения не затрагиваются.';
+      case 'stat_analysis':
+        return 'Анализ';
+      case 'stat_sessions_count':
+        return ({required Object n}) => 'Сессий: ${n}';
       default:
         return null;
     }
@@ -291321,15 +291434,19 @@ extension on _StringsTh {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'เซสชันล่าสุด';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'เซสชันทั้งหมด';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'ยังไม่มีเซสชัน';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'ลบเซสชัน';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'ลบเวลา จำนวนตัวอักษร และหน้าของเซสชันนี้หรือไม่ คำและประโยคที่บันทึกไว้จะไม่ได้รับผลกระทบ';
+      case 'stat_analysis':
+        return 'การวิเคราะห์';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} เซสชัน';
       default:
         return null;
     }
@@ -300465,15 +300582,19 @@ extension on _StringsTr {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Son oturumlar';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Tüm oturumlar';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Henüz oturum yok';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Oturumu sil';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Bu oturumun süresi, karakter ve sayfa sayısı silinsin mi? Kaydettiğiniz kelimeler ve cümleler etkilenmez.';
+      case 'stat_analysis':
+        return 'Analiz';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} oturum';
       default:
         return null;
     }
@@ -309603,15 +309724,19 @@ extension on _StringsVi {
       case 'video_anilist_error_unreachable':
         return 'Cannot reach AniList (graphql.anilist.co). Check your network connection, or configure a proxy in download settings.';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return 'Phiên gần đây';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return 'Tất cả phiên';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return 'Chưa có phiên nào';
       case 'stat_session_delete':
-        return 'Delete session';
+        return 'Xóa phiên';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return 'Xóa thời gian, số ký tự và số trang của phiên này? Từ và câu đã lưu không bị ảnh hưởng.';
+      case 'stat_analysis':
+        return 'Phân tích';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} phiên';
       default:
         return null;
     }
@@ -318671,6 +318796,10 @@ extension on _StringsZhCn {
         return '删除会话';
       case 'stat_session_delete_message':
         return '删除这次会话的时长、字数和页数？收藏的词句不受影响。';
+      case 'stat_analysis':
+        return '分析';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} 次会话';
       default:
         return null;
     }
@@ -327729,15 +327858,19 @@ extension on _StringsZhHk {
       case 'video_anilist_error_unreachable':
         return '連不上 AniList（graphql.anilist.co）。請檢查網絡連接，或在下載設定中配置代理。';
       case 'stat_sessions_recent':
-        return 'Recent sessions';
+        return '最近會話';
       case 'stat_sessions_show_all':
-        return 'All sessions';
+        return '全部會話';
       case 'stat_sessions_empty':
-        return 'No sessions yet';
+        return '還沒有會話記錄';
       case 'stat_session_delete':
-        return 'Delete session';
+        return '刪除會話';
       case 'stat_session_delete_message':
-        return 'Delete this session\'s time, character and page counts? Your saved words and sentences are not affected.';
+        return '刪除這次會話的時長、字數和頁數？收藏的詞句不受影響。';
+      case 'stat_analysis':
+        return '分析';
+      case 'stat_sessions_count':
+        return ({required Object n}) => '${n} 次會話';
       default:
         return null;
     }
