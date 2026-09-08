@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76551 (4503 per locale)
+/// Strings: 76755 (4515 per locale)
 ///
-/// Built on 2026-09-08 at 19:42 UTC
+/// Built on 2026-09-08 at 19:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6241,6 +6241,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_metadata_identifier_words_invalid => 'Invalid rules';
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  String get video_work_locked_fields => 'Locked fields';
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  String get video_work_field_title => 'Title';
+  String get video_work_field_original_title => 'Original title';
+  String get video_work_field_overview => 'Overview';
+  String get video_work_field_tagline => 'Tagline';
+  String get video_work_field_rating => 'Rating';
+  String get video_work_field_cover => 'Cover';
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -16813,6 +16827,32 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -27612,6 +27652,32 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -38464,6 +38530,32 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -49350,6 +49442,32 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -60039,6 +60157,32 @@ class _StringsId extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -70819,6 +70963,32 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -80979,6 +81149,32 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -91149,6 +91345,32 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -101887,6 +102109,32 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -112677,6 +112925,32 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -123445,6 +123719,32 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -134011,6 +134311,32 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -144695,6 +145021,32 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -155350,6 +155702,32 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 // Path: <root>
@@ -165137,6 +165515,31 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       '一行一条规则，# 开头是注释。屏蔽：直接写正则。替换：A => B。集偏移：前 <> 后 >> EP+1。组合：A => B && 前 <> 后 >> EP+1。';
+  @override
+  String get video_source_scrape_metadata_locale => '资料语言';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 语言标签，如 ja 或 zh-CN。留空 = 跟随全局资料语言。';
+  @override
+  String get video_work_locked_fields => '锁定字段';
+  @override
+  String get video_work_locked_fields_hint => '锁定的字段在下次刮削该作品时保留当前值。';
+  @override
+  String get video_work_locked_fields_saved => '字段锁已保存';
+  @override
+  String get video_work_field_title => '标题';
+  @override
+  String get video_work_field_original_title => '原名';
+  @override
+  String get video_work_field_overview => '简介';
+  @override
+  String get video_work_field_tagline => '标语';
+  @override
+  String get video_work_field_rating => '评分';
+  @override
+  String get video_work_field_cover => '封面';
+  @override
+  String get video_work_field_backdrop => '背景图';
 }
 
 // Path: <root>
@@ -174985,6 +175388,32 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_metadata_identifier_words_syntax =>
       'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_backdrop => 'Backdrop';
 }
 
 /// Flat map(s) containing all translations.
@@ -184244,6 +184673,30 @@ extension on _StringsEn {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -193498,6 +193951,30 @@ extension on _StringsAr {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -202797,6 +203274,30 @@ extension on _StringsDe {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -212087,6 +212588,30 @@ extension on _StringsEs {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -221386,6 +221911,30 @@ extension on _StringsFr {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -230656,6 +231205,30 @@ extension on _StringsId {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -239948,6 +240521,30 @@ extension on _StringsIt {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -249167,6 +249764,30 @@ extension on _StringsJa {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -258390,6 +259011,30 @@ extension on _StringsKo {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -267675,6 +268320,30 @@ extension on _StringsNl {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -276955,6 +277624,30 @@ extension on _StringsPtBr {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -286242,6 +286935,30 @@ extension on _StringsRu {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -295501,6 +296218,30 @@ extension on _StringsTh {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -304775,6 +305516,30 @@ extension on _StringsTr {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -314043,6 +314808,30 @@ extension on _StringsVi {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
@@ -323231,6 +324020,30 @@ extension on _StringsZhCn {
         return '无效规则';
       case 'video_metadata_identifier_words_syntax':
         return '一行一条规则，# 开头是注释。屏蔽：直接写正则。替换：A => B。集偏移：前 <> 后 >> EP+1。组合：A => B && 前 <> 后 >> EP+1。';
+      case 'video_source_scrape_metadata_locale':
+        return '资料语言';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 语言标签，如 ja 或 zh-CN。留空 = 跟随全局资料语言。';
+      case 'video_work_locked_fields':
+        return '锁定字段';
+      case 'video_work_locked_fields_hint':
+        return '锁定的字段在下次刮削该作品时保留当前值。';
+      case 'video_work_locked_fields_saved':
+        return '字段锁已保存';
+      case 'video_work_field_title':
+        return '标题';
+      case 'video_work_field_original_title':
+        return '原名';
+      case 'video_work_field_overview':
+        return '简介';
+      case 'video_work_field_tagline':
+        return '标语';
+      case 'video_work_field_rating':
+        return '评分';
+      case 'video_work_field_cover':
+        return '封面';
+      case 'video_work_field_backdrop':
+        return '背景图';
       default:
         return null;
     }
@@ -332428,6 +333241,30 @@ extension on _StringsZhHk {
         return 'Invalid rules';
       case 'video_metadata_identifier_words_syntax':
         return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
+      case 'video_work_field_title':
+        return 'Title';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
       default:
         return null;
     }
