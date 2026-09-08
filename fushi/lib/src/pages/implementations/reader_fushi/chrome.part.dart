@@ -2417,8 +2417,9 @@ extension _ReaderChrome on _ReaderFushiPageState {
 
   // ── Desktop status footer ─────────────────────────────────────────
 
-  /// 桌面端底部状态行（ッツ Reader 风格）。左：计时器图标 + `<字/时> / h <本次时长>`；
-  /// 右：`<已读> / <总字数>  <百分比>%`。常驻、挤压式（预留高见 [_statusFooterReserve]）。
+  /// 桌面端底部状态行（ッツ Reader 风格）。计时器图标 + `<字/时> / h <本次时长>` 与
+  /// `<已读> / <总字数>  <百分比>%` **并排贴右下角**（与播放条唤出时的 inline 形态同序，
+  /// 底部读数只有一处落点）。常驻、挤压式（预留高见 [_statusFooterReserve]）。
   ///
   /// 绘制门控与底栏同源用 set-once `_hasEverLoaded`（不用每切章翻转的
   /// `_readerContentReady`，否则切章闪烁）；预留高**不**随它翻转，见 getter 注释。
@@ -2452,7 +2453,7 @@ extension _ReaderChrome on _ReaderFushiPageState {
           onTap: _anyChromeFloating
               ? () => _handleFloatingChromeReveal()
               : _toggleChrome,
-          // 左侧计时器 = 手动暂停 / 继续；右侧进度数字 = 打开统计浮层。
+          // 右下角两段各自的语义：计时块 = 手动暂停 / 继续；进度数字 = 打开统计浮层。
           onTapTracker: _toggleStudyClockManualPause,
           onTapProgress: _openReadingStatistics,
         ),

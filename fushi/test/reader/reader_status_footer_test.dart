@@ -94,6 +94,7 @@ void main() {
       int? total = 123962,
       bool showProgress = true,
       VoidCallback? onTap,
+      VoidCallback? onTapTracker,
     }) {
       return MaterialApp(
         home: Scaffold(
@@ -108,6 +109,7 @@ void main() {
               backgroundColor: Colors.black,
               tick: const Duration(milliseconds: 100),
               onTap: onTap,
+              onTapTracker: onTapTracker,
             ),
           ),
         ),
@@ -197,6 +199,68 @@ void main() {
         kReaderStatusFooterHeight,
         reason: '视觉高度 == 预留高度（同一常量）',
       );
+    });
+
+    // 追踪块此前钉在左下角、进度在右下角，底部信息被劈成两个角；播放条一唤出
+    // （ReaderStatusInline）同一串数字又整体飞到右边。两段现在并排贴右，与 inline
+    // 同序：计时块在左、进度在右，中间 16px。
+    testWidgets('tracker and progress sit together at the right end', (
+      WidgetTester tester,
+    ) async {
+      await tester.pumpWidget(
+        host(totals: () => (durationMs: 0, chars: 0, active: true)),
+      );
+      final Rect strip = tester.getRect(find.byType(ReaderStatusFooter));
+      final Rect tracker = tester.getRect(
+        find.byKey(const ValueKey<String>('fushi_status_tracker')),
+      );
+      final Rect progress = tester.getRect(
+        find.byKey(const ValueKey<String>('fushi_status_progress')),
+      );
+
+      expect(
+        tracker.right,
+        lessThanOrEqualTo(progress.left),
+        reason: '与 inline 形态同序：计时块在进度左边',
+      );
+      // 关键判据不是「在右半边」（两段文字合起来本就可能超过半屏），而是**两段挨在
+      // 一起**：中间只剩间距，而不是被 Spacer 撑到一左一右两个角。
+      expect(
+        progress.left - tracker.right,
+        lessThanOrEqualTo(32),
+        reason: '计时块与进度之间只隔一个间距，不再被 Spacer 撑成左右两角',
+      );
+      expect(
+        tracker.left - strip.left,
+        greaterThan(32),
+        reason: '左端留白（点它唤出 / 收起 chrome），计时块不再钉在左下角',
+      );
+      expect(
+        strip.right - progress.right,
+        closeTo(16, 0.5),
+        reason: '右端内边距仍是 16，进度贴着右缘',
+      );
+    });
+
+    testWidgets('tracker hit box spans the full strip height', (
+      WidgetTester tester,
+    ) async {
+      int trackerTaps = 0;
+      await tester.pumpWidget(
+        host(
+          totals: () => (durationMs: 0, chars: 0, active: true),
+          onTapTracker: () => trackerTaps++,
+        ),
+      );
+      final Rect strip = tester.getRect(find.byType(ReaderStatusFooter));
+      final Rect tracker = tester.getRect(
+        find.byKey(const ValueKey<String>('fushi_status_tracker')),
+      );
+
+      // 裸文字行盒只有十几 px 高；命中区撑满整条 28px 后，贴着行顶 / 行底也点得中。
+      await tester.tapAt(Offset(tracker.center.dx, strip.top + 2));
+      await tester.tapAt(Offset(tracker.center.dx, strip.bottom - 2));
+      expect(trackerTaps, 2, reason: '计时块命中区要撑满整条行高，不是只有那一行文字');
     });
   });
 

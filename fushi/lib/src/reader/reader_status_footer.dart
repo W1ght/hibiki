@@ -8,9 +8,14 @@ import 'package:fushi/src/reader/reader_chrome_floating.dart'
 
 /// 桌面端阅读器底部状态行（ッツ Reader 风格）。
 ///
-/// 一条极简、常驻、**挤压式**（占预留高、正文永不压到它下面）的状态行：
-///  * 左：阅读追踪——计时器图标 + `<字/时> / h <本次时长>`（如 `0 / h 0:00`）；
-///  * 右：字数进度——`<已读> / <总字数>  <百分比>%`。
+/// 一条极简、常驻、**挤压式**（占预留高、正文永不压到它下面）的状态行。两段信息都
+/// 靠**右下角**，顺序与播放条唤出时的 [ReaderStatusInline] 完全一致：
+///  * 阅读追踪——计时器图标 + `<字/时> / h <本次时长>`（如 `0 / h 0:00`）；
+///  * 字数进度——`<已读> / <总字数>  <百分比>%`。
+///
+/// 追踪块此前独自钉在**左**下角：底部信息被劈成左右两个角，视线要在两角之间跳，而
+/// 播放条一唤出（[ReaderStatusInline]）同一串数字又整体飞到右边。两段并排贴右后，
+/// 底部读数只有一处落点，两条底部形态互换时数字也不再横跨整屏跳位。
 ///
 /// 桌面端它**取代**顶部进度 pill：进度数字挪到右下角，顶部不再有任何 chrome，
 /// 正文从窗口顶边起铺满。移动端不启用（[readerStatusFooterEnabled]），原顶部进度
@@ -60,7 +65,7 @@ String formatReadingSessionClock(int durationMs) {
   return '$minutes:$ss';
 }
 
-/// 左侧阅读追踪文案：`<字/时> / h <本次时长>`。
+/// 阅读追踪文案：`<字/时> / h <本次时长>`。
 String readerTrackerLabel(StudySessionTotals totals) {
   final int cph = readingCharsPerHour(
     chars: totals.chars,
@@ -69,9 +74,9 @@ String readerTrackerLabel(StudySessionTotals totals) {
   return '$cph / h  ${formatReadingSessionClock(totals.durationMs)}';
 }
 
-/// 右侧进度文案：`<已读> / <总字数>  <百分比>%`，与顶部进度 pill 同一格式；
+/// 进度文案：`<已读> / <总字数>  <百分比>%`，与顶部进度 pill 同一格式；
 /// 本章字数已知时再接一段括号 `(<本章已读> / <本章总字数> <本章百分比>%)`。
-/// 总字数未知 / 为 0 时返回 null（右侧不画）。
+/// 总字数未知 / 为 0 时返回 null（不画这一段）。
 String? readerProgressLabel({
   required int? current,
   required int? total,
@@ -114,11 +119,11 @@ class ReaderStatusFooter extends StatefulWidget {
   final int? currentChars;
   final int? totalChars;
 
-  /// 本章已读 / 本章总字数（右侧括号段；任一未知则不画括号）。
+  /// 本章已读 / 本章总字数（进度后的括号段；任一未知则不画括号）。
   final int? chapterCurrentChars;
   final int? chapterTotalChars;
 
-  /// 右侧进度是否显示（桌面端「阅读进度指示」开关落到这里）。
+  /// 进度段是否显示（桌面端「阅读进度指示」开关落到这里）。
   final bool showProgress;
 
   final Color textColor;
@@ -131,10 +136,10 @@ class ReaderStatusFooter extends StatefulWidget {
   /// 点状态行空白处：与顶部进度 pill 同语义——唤出 / 收起控制栏。
   final VoidCallback? onTap;
 
-  /// 点左侧「计时器 + 字/时 + 时长」：切换手动暂停计时（少进一次菜单）。
+  /// 点计时块「计时器 + 字/时 + 时长」：切换手动暂停计时（少进一次菜单）。
   final VoidCallback? onTapTracker;
 
-  /// 点右侧进度数字：直接打开阅读统计浮层。
+  /// 点进度数字：直接打开阅读统计浮层。
   final VoidCallback? onTapProgress;
 
   @override
@@ -163,6 +168,23 @@ class _ReaderStatusFooterState extends State<ReaderStatusFooter> {
     super.dispose();
   }
 
+  /// 状态行里可点的一段（计时块 / 进度数字）。命中区**撑满整条行高**：裸文字 + 14px
+  /// 图标的行盒只有十几 px 高，指针要精确戳中那一行才有反应；撑满后整条 28px 高的那
+  /// 一段都可点。只扩竖向、**不加横向内边距**——右端 16 的边距是与顶部 pill / inline
+  /// 形态共用的视觉基线，补一层横向 padding 会把进度数字从右缘往里推。这是状态行能
+  /// 给到的上限（视觉高度 == 预留高度是 chrome 的铁律，不能为了命中区把行加高去挤
+  /// 正文）；48dp 级别的计时开关在统计浮层底部那颗整宽按钮上。
+  Widget _hitTarget({required Widget child, VoidCallback? onTap}) {
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: onTap,
+      child: SizedBox(
+        height: widget.height,
+        child: Center(widthFactor: 1, child: child),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final StudySessionTotals totals = widget.sessionTotals();
@@ -189,10 +211,14 @@ class _ReaderStatusFooterState extends State<ReaderStatusFooter> {
           height: widget.height,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
+            // 阅读追踪与进度**同在右端**，形态与播放条唤出时的 [ReaderStatusInline]
+            // 一致（同一读口、同一顺序、同一 16px 间距）：底部信息只在右下角一处，
+            // 视线不用在左下 / 右下两个角之间来回跳，两条底部形态互相切换时数字也不
+            // 会横跨整屏跳位。左端留白仍是「点空白唤出 / 收起 chrome」的命中面。
             child: Row(
               children: <Widget>[
-                GestureDetector(
-                  behavior: HitTestBehavior.opaque,
+                const Spacer(),
+                _hitTarget(
                   onTap: widget.onTapTracker,
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
@@ -215,10 +241,9 @@ class _ReaderStatusFooterState extends State<ReaderStatusFooter> {
                     ],
                   ),
                 ),
-                const Spacer(),
-                if (progress != null)
-                  GestureDetector(
-                    behavior: HitTestBehavior.opaque,
+                if (progress != null) ...<Widget>[
+                  const SizedBox(width: 16),
+                  _hitTarget(
                     onTap: widget.onTapProgress,
                     child: Text(
                       progress,
@@ -227,6 +252,7 @@ class _ReaderStatusFooterState extends State<ReaderStatusFooter> {
                       maxLines: 1,
                     ),
                   ),
+                ],
               ],
             ),
           ),
