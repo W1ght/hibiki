@@ -3374,7 +3374,7 @@
   "onboarding_step_fonts_title": "Polices",
   "onboarding_step_fonts_body": "Utilisez vos propres polices pour l'interface, le texte des livres et le dictionnaire.",
   "settings_section_modules": "Modules de fonctionnalités",
-  "module_toggle_hint": "Afficher cet onglet de bibliothèque dans la barre de navigation ; désactivez pour le masquer",
+  "module_toggle_hint": "Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps",
   "video_setting_youtube_quality": "Qualité YouTube",
   "video_setting_youtube_quality_hint": "Démarrer les flux au niveau le plus élevé jusqu'à cette cible ; Auto préfère une lecture fluide (codec compatible matériel, jusqu'à 1080p)",
   "library_view_discover": "Découvrir",
@@ -3724,7 +3724,6 @@
   "manga_rescan_hint": "Tracez un cadre sur le texte à réanalyser. Le résultat remplace la couche de texte existante à l'intérieur du cadre.",
   "manga_rescan_undone": "Couche de texte d'avant la nouvelle reconnaissance restaurée",
   "manga_rescan_undo_failed": "Impossible de restaurer la couche de texte précédente",
-  "module_tool_toggle_hint": "Afficher cet onglet dans la barre de navigation ; désactiver pour le masquer",
   "module_downloads_hidden_hint": "L'onglet Téléchargements est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.",
   "book_file_location_open": "Ouvrir l'emplacement du fichier",
   "book_file_location_failed": "Impossible d'ouvrir l'emplacement du fichier de ce livre.",
@@ -4317,5 +4316,6 @@
   "onboarding_pack_status_paused": "Recommended pack download paused",
   "onboarding_pack_download_resume": "Resume download",
   "onboarding_pack_paused_desc": "Progress is kept on disk — resuming picks up where it stopped.",
-  "onboarding_pack_mini_bar_hide": "Hide"
+  "onboarding_pack_mini_bar_hide": "Hide",
+  "module_disabled_hint": "This feature module is turned off in Settings > Appearance > Feature modules."
 }

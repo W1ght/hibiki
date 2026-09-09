@@ -3374,7 +3374,7 @@
   "onboarding_step_fonts_title": "글꼴",
   "onboarding_step_fonts_body": "인터페이스, 책 본문, 사전에 원하는 글꼴을 사용하세요.",
   "settings_section_modules": "기능 모듈",
-  "module_toggle_hint": "내비게이션 바에 이 라이브러리 탭 표시; 끄면 숨김",
+  "module_toggle_hint": "Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps",
   "video_setting_youtube_quality": "YouTube 화질",
   "video_setting_youtube_quality_hint": "이 목표까지의 최고 등급으로 스트림을 시작합니다. 자동은 원활한 재생을 선호합니다 (하드웨어 친화적 코덱, 최대 1080p)",
   "library_view_discover": "발견",
@@ -3724,7 +3724,6 @@
   "manga_rescan_hint": "다시 인식할 텍스트를 드래그해 상자로 감싸세요. 결과는 상자 안의 기존 텍스트 레이어를 대체해요.",
   "manga_rescan_undone": "다시 인식하기 전의 텍스트 레이어로 되돌렸어요",
   "manga_rescan_undo_failed": "이전 텍스트 레이어로 되돌리지 못했어요",
-  "module_tool_toggle_hint": "이 탭을 내비게이션 바에 표시해요. 끄면 숨겨져요",
   "module_downloads_hidden_hint": "‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.",
   "book_file_location_open": "파일 위치 열기",
   "book_file_location_failed": "이 책의 파일 위치를 열 수 없어요.",
@@ -4317,5 +4316,6 @@
   "onboarding_pack_status_paused": "Recommended pack download paused",
   "onboarding_pack_download_resume": "Resume download",
   "onboarding_pack_paused_desc": "Progress is kept on disk — resuming picks up where it stopped.",
-  "onboarding_pack_mini_bar_hide": "Hide"
+  "onboarding_pack_mini_bar_hide": "Hide",
+  "module_disabled_hint": "This feature module is turned off in Settings > Appearance > Feature modules."
 }

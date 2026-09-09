@@ -3374,7 +3374,7 @@
   "onboarding_step_fonts_title": "Schriften",
   "onboarding_step_fonts_body": "Eigene Schriften für Oberfläche, Buchtext und Wörterbuch verwenden.",
   "settings_section_modules": "Funktionsmodule",
-  "module_toggle_hint": "Diesen Bibliotheks-Tab in der Navigationsleiste anzeigen; ausschalten zum Ausblenden",
+  "module_toggle_hint": "Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps",
   "video_setting_youtube_quality": "YouTube-Qualität",
   "video_setting_youtube_quality_hint": "Streams mit der höchsten Stufe bis zu diesem Ziel starten; Auto bevorzugt flüssige Wiedergabe (hardwarefreundlicher Codec, bis 1080p)",
   "library_view_discover": "Entdecken",
@@ -3724,7 +3724,6 @@
   "manga_rescan_hint": "Ziehe einen Rahmen über den Text, der neu erkannt werden soll. Das Ergebnis ersetzt die vorhandene Textebene innerhalb des Rahmens.",
   "manga_rescan_undone": "Textebene von vor der Neuerkennung wiederhergestellt",
   "manga_rescan_undo_failed": "Die vorherige Textebene konnte nicht wiederhergestellt werden",
-  "module_tool_toggle_hint": "Diesen Tab in der Navigationsleiste anzeigen; ausschalten, um ihn auszublenden",
   "module_downloads_hidden_hint": "Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.",
   "book_file_location_open": "Speicherort öffnen",
   "book_file_location_failed": "Der Speicherort dieses Buchs konnte nicht geöffnet werden.",
@@ -4317,5 +4316,6 @@
   "onboarding_pack_status_paused": "Recommended pack download paused",
   "onboarding_pack_download_resume": "Resume download",
   "onboarding_pack_paused_desc": "Progress is kept on disk — resuming picks up where it stopped.",
-  "onboarding_pack_mini_bar_hide": "Hide"
+  "onboarding_pack_mini_bar_hide": "Hide",
+  "module_disabled_hint": "This feature module is turned off in Settings > Appearance > Feature modules."
 }

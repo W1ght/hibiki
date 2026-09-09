@@ -3374,7 +3374,7 @@
   "onboarding_step_fonts_title": "フォント",
   "onboarding_step_fonts_body": "UI・本文・辞書に好きなフォントを使えます。",
   "settings_section_modules": "機能モジュール",
-  "module_toggle_hint": "このライブラリタブをナビゲーションバーに表示します。オフにすると非表示になります",
+  "module_toggle_hint": "Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps",
   "video_setting_youtube_quality": "YouTube画質",
   "video_setting_youtube_quality_hint": "この目標までの最高画質でストリームを開始します。自動はスムーズな再生を優先します（ハードウェア対応コーデック、最大1080p）",
   "library_view_discover": "見つける",
@@ -3724,7 +3724,6 @@
   "manga_rescan_hint": "再認識したいテキストを枠で囲んでドラッグします。結果は枠内の既存のテキストレイヤーを置き換えます。",
   "manga_rescan_undone": "再認識する前のテキストレイヤーに戻しました",
   "manga_rescan_undo_failed": "前のテキストレイヤーに戻せませんでした",
-  "module_tool_toggle_hint": "このタブをナビゲーションバーに表示します。オフにすると非表示になります",
   "module_downloads_hidden_hint": "「ダウンロード」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。",
   "book_file_location_open": "ファイルの場所を開く",
   "book_file_location_failed": "この本のファイルの場所を開けませんでした。",
@@ -4317,5 +4316,6 @@
   "onboarding_pack_status_paused": "Recommended pack download paused",
   "onboarding_pack_download_resume": "Resume download",
   "onboarding_pack_paused_desc": "Progress is kept on disk — resuming picks up where it stopped.",
-  "onboarding_pack_mini_bar_hide": "Hide"
+  "onboarding_pack_mini_bar_hide": "Hide",
+  "module_disabled_hint": "This feature module is turned off in Settings > Appearance > Feature modules."
 }

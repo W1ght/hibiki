@@ -3374,7 +3374,7 @@
   "onboarding_step_fonts_title": "Fuentes",
   "onboarding_step_fonts_body": "Use sus propias fuentes para la interfaz, el texto del libro y el diccionario.",
   "settings_section_modules": "Módulos de funciones",
-  "module_toggle_hint": "Mostrar esta pestaña de biblioteca en la barra de navegación; desactive para ocultarla",
+  "module_toggle_hint": "Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps",
   "video_setting_youtube_quality": "Calidad de YouTube",
   "video_setting_youtube_quality_hint": "Inicia streams en el nivel más alto hasta este objetivo; Auto prefiere reproducción fluida (códec amigable con hardware, hasta 1080p)",
   "library_view_discover": "Descubrir",
@@ -3724,7 +3724,6 @@
   "manga_rescan_hint": "Arrastra un recuadro sobre el texto que quieras volver a reconocer. El resultado reemplaza la capa de texto existente dentro del recuadro.",
   "manga_rescan_undone": "Se restauró la capa de texto anterior al nuevo reconocimiento",
   "manga_rescan_undo_failed": "No se pudo restaurar la capa de texto anterior",
-  "module_tool_toggle_hint": "Mostrar esta pestaña en la barra de navegación; desactívalo para ocultarla",
   "module_downloads_hidden_hint": "La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.",
   "book_file_location_open": "Abrir ubicación del archivo",
   "book_file_location_failed": "No se pudo abrir la ubicación del archivo de este libro.",
@@ -4317,5 +4316,6 @@
   "onboarding_pack_status_paused": "Recommended pack download paused",
   "onboarding_pack_download_resume": "Resume download",
   "onboarding_pack_paused_desc": "Progress is kept on disk — resuming picks up where it stopped.",
-  "onboarding_pack_mini_bar_hide": "Hide"
+  "onboarding_pack_mini_bar_hide": "Hide",
+  "module_disabled_hint": "This feature module is turned off in Settings > Appearance > Feature modules."
 }

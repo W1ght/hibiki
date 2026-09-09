@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 73423 (4319 per locale)
 ///
-/// Built on 2026-09-06 at 13:44 UTC
+/// Built on 2026-09-09 at 03:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4644,7 +4644,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Use your own fonts for the interface, book text and dictionary.';
   String get settings_section_modules => 'Feature modules';
   String get module_toggle_hint =>
-      'Show this library tab in the navigation bar; turn off to hide it';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   String get video_setting_youtube_quality => 'YouTube quality';
   String get video_setting_youtube_quality_hint =>
       'Start streams at the highest tier up to this target; Auto prefers smooth playback (hardware-friendly codec, up to 1080p)';
@@ -5131,8 +5131,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Restored the text layer from before the re-scan';
   String get manga_rescan_undo_failed =>
       'Could not restore the previous text layer';
-  String get module_tool_toggle_hint =>
-      'Show this tab in the navigation bar; turn off to hide it';
   String get module_downloads_hidden_hint =>
       'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
   String get book_file_location_open => 'Open file location';
@@ -6023,6 +6021,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get onboarding_pack_paused_desc =>
       'Progress is kept on disk — resuming picks up where it stopped.';
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -13874,7 +13874,7 @@ class _StringsAr extends _StringsEn {
   String get settings_section_modules => 'وحدات الميزات';
   @override
   String get module_toggle_hint =>
-      'إظهار تبويب المكتبة هذا في شريط التنقل؛ أوقفه لإخفائه';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'جودة YouTube';
   @override
@@ -14706,9 +14706,6 @@ class _StringsAr extends _StringsEn {
       'تمت استعادة طبقة النص التي كانت قبل إعادة المسح';
   @override
   String get manga_rescan_undo_failed => 'تعذّرت استعادة طبقة النص السابقة';
-  @override
-  String get module_tool_toggle_hint =>
-      'إظهار هذا التبويب في شريط التنقل؛ أوقفه لإخفائه';
   @override
   String get module_downloads_hidden_hint =>
       'تبويب التحميلات مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
@@ -16186,6 +16183,9 @@ class _StringsAr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -24223,7 +24223,7 @@ class _StringsDe extends _StringsEn {
   String get settings_section_modules => 'Funktionsmodule';
   @override
   String get module_toggle_hint =>
-      'Diesen Bibliotheks-Tab in der Navigationsleiste anzeigen; ausschalten zum Ausblenden';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'YouTube-Qualität';
   @override
@@ -25073,9 +25073,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Die vorherige Textebene konnte nicht wiederhergestellt werden';
-  @override
-  String get module_tool_toggle_hint =>
-      'Diesen Tab in der Navigationsleiste anzeigen; ausschalten, um ihn auszublenden';
   @override
   String get module_downloads_hidden_hint =>
       'Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
@@ -26582,6 +26579,9 @@ class _StringsDe extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -34650,7 +34650,7 @@ class _StringsEs extends _StringsEn {
   String get settings_section_modules => 'Módulos de funciones';
   @override
   String get module_toggle_hint =>
-      'Mostrar esta pestaña de biblioteca en la barra de navegación; desactive para ocultarla';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'Calidad de YouTube';
   @override
@@ -35512,9 +35512,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'No se pudo restaurar la capa de texto anterior';
-  @override
-  String get module_tool_toggle_hint =>
-      'Mostrar esta pestaña en la barra de navegación; desactívalo para ocultarla';
   @override
   String get module_downloads_hidden_hint =>
       'La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
@@ -37028,6 +37025,9 @@ class _StringsEs extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -45124,7 +45124,7 @@ class _StringsFr extends _StringsEn {
   String get settings_section_modules => 'Modules de fonctionnalités';
   @override
   String get module_toggle_hint =>
-      'Afficher cet onglet de bibliothèque dans la barre de navigation ; désactivez pour le masquer';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'Qualité YouTube';
   @override
@@ -45985,9 +45985,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Impossible de restaurer la couche de texte précédente';
-  @override
-  String get module_tool_toggle_hint =>
-      'Afficher cet onglet dans la barre de navigation ; désactiver pour le masquer';
   @override
   String get module_downloads_hidden_hint =>
       'L\'onglet Téléchargements est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
@@ -47506,6 +47503,9 @@ class _StringsFr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -55458,7 +55458,7 @@ class _StringsId extends _StringsEn {
   String get settings_section_modules => 'Modul fitur';
   @override
   String get module_toggle_hint =>
-      'Tampilkan tab perpustakaan ini di bilah navigasi; matikan untuk menyembunyikannya';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'Kualitas YouTube';
   @override
@@ -56299,9 +56299,6 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Tidak dapat memulihkan lapisan teks sebelumnya';
-  @override
-  String get module_tool_toggle_hint =>
-      'Tampilkan tab ini di bilah navigasi; matikan untuk menyembunyikannya';
   @override
   String get module_downloads_hidden_hint =>
       'Tab Unduhan disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
@@ -57789,6 +57786,9 @@ class _StringsId extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -65808,7 +65808,7 @@ class _StringsIt extends _StringsEn {
   String get settings_section_modules => 'Moduli funzionalità';
   @override
   String get module_toggle_hint =>
-      'Mostra questa scheda libreria nella barra di navigazione; disattiva per nasconderla';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'Qualità YouTube';
   @override
@@ -66658,9 +66658,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Impossibile ripristinare il livello di testo precedente';
-  @override
-  String get module_tool_toggle_hint =>
-      'Mostra questa scheda nella barra di navigazione; disattiva per nasconderla';
   @override
   String get module_downloads_hidden_hint =>
       'La scheda Download è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
@@ -68165,6 +68162,9 @@ class _StringsIt extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -75688,7 +75688,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get settings_section_modules => '機能モジュール';
   @override
-  String get module_toggle_hint => 'このライブラリタブをナビゲーションバーに表示します。オフにすると非表示になります';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'YouTube画質';
   @override
@@ -76479,8 +76480,6 @@ class _StringsJa extends _StringsEn {
   String get manga_rescan_undone => '再認識する前のテキストレイヤーに戻しました';
   @override
   String get manga_rescan_undo_failed => '前のテキストレイヤーに戻せませんでした';
-  @override
-  String get module_tool_toggle_hint => 'このタブをナビゲーションバーに表示します。オフにすると非表示になります';
   @override
   String get module_downloads_hidden_hint =>
       '「ダウンロード」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
@@ -77920,6 +77919,9 @@ class _StringsJa extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -85454,7 +85456,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get settings_section_modules => '기능 모듈';
   @override
-  String get module_toggle_hint => '내비게이션 바에 이 라이브러리 탭 표시; 끄면 숨김';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'YouTube 화질';
   @override
@@ -86249,8 +86252,6 @@ class _StringsKo extends _StringsEn {
   String get manga_rescan_undone => '다시 인식하기 전의 텍스트 레이어로 되돌렸어요';
   @override
   String get manga_rescan_undo_failed => '이전 텍스트 레이어로 되돌리지 못했어요';
-  @override
-  String get module_tool_toggle_hint => '이 탭을 내비게이션 바에 표시해요. 끄면 숨겨져요';
   @override
   String get module_downloads_hidden_hint =>
       '‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
@@ -87685,6 +87686,9 @@ class _StringsKo extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -95664,7 +95668,7 @@ class _StringsNl extends _StringsEn {
   String get settings_section_modules => 'Functiemodules';
   @override
   String get module_toggle_hint =>
-      'Toon dit bibliotheektabblad in de navigatiebalk; schakel uit om het te verbergen';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'YouTube-kwaliteit';
   @override
@@ -96509,9 +96513,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Kan de vorige tekstlaag niet herstellen';
-  @override
-  String get module_tool_toggle_hint =>
-      'Dit tabblad in de navigatiebalk tonen; uitschakelen om het te verbergen';
   @override
   String get module_downloads_hidden_hint =>
       'Het tabblad Downloads is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
@@ -98015,6 +98016,9 @@ class _StringsNl extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -106038,7 +106042,7 @@ class _StringsPtBr extends _StringsEn {
   String get settings_section_modules => 'Módulos de funcionalidades';
   @override
   String get module_toggle_hint =>
-      'Mostrar esta aba de biblioteca na barra de navegação; desative para ocultá-la';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'Qualidade do YouTube';
   @override
@@ -106896,9 +106900,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Não foi possível restaurar a camada de texto anterior';
-  @override
-  String get module_tool_toggle_hint =>
-      'Mostrar esta aba na barra de navegação; desative para ocultá-la';
   @override
   String get module_downloads_hidden_hint =>
       'A aba Downloads está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
@@ -108399,6 +108400,9 @@ class _StringsPtBr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -116402,7 +116406,7 @@ class _StringsRu extends _StringsEn {
   String get settings_section_modules => 'Функциональные модули';
   @override
   String get module_toggle_hint =>
-      'Показывать вкладку этой библиотеки в панели навигации; отключите, чтобы скрыть';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'Качество YouTube';
   @override
@@ -117253,9 +117257,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Не удалось восстановить предыдущий текстовый слой';
-  @override
-  String get module_tool_toggle_hint =>
-      'Показывать эту вкладку в панели навигации; выключите, чтобы скрыть';
   @override
   String get module_downloads_hidden_hint =>
       'Вкладка «Загрузки» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
@@ -118761,6 +118762,9 @@ class _StringsRu extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -126600,7 +126604,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get settings_section_modules => 'โมดูลฟีเจอร์';
   @override
-  String get module_toggle_hint => 'แสดงแท็บไลบรารีนี้ในแถบนำทาง ปิดเพื่อซ่อน';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'คุณภาพ YouTube';
   @override
@@ -127438,8 +127443,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'คืนค่าชั้นข้อความเวอร์ชันก่อนหน้าไม่สำเร็จ';
-  @override
-  String get module_tool_toggle_hint => 'แสดงแท็บนี้ในแถบนำทาง ปิดเพื่อซ่อน';
   @override
   String get module_downloads_hidden_hint =>
       'แท็บดาวน์โหลดถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
@@ -128921,6 +128924,9 @@ class _StringsTh extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -136858,7 +136864,7 @@ class _StringsTr extends _StringsEn {
   String get settings_section_modules => 'Özellik modülleri';
   @override
   String get module_toggle_hint =>
-      'Bu kütüphane sekmesini gezinme çubuğunda göster; gizlemek için kapatın';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'YouTube kalitesi';
   @override
@@ -137702,9 +137708,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Önceki metin katmanı geri yüklenemedi';
-  @override
-  String get module_tool_toggle_hint =>
-      'Bu sekmeyi gezinme çubuğunda göster; gizlemek için kapatın';
   @override
   String get module_downloads_hidden_hint =>
       'İndirmeler sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
@@ -139199,6 +139202,9 @@ class _StringsTr extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -147111,7 +147117,7 @@ class _StringsVi extends _StringsEn {
   String get settings_section_modules => 'Mô-đun tính năng';
   @override
   String get module_toggle_hint =>
-      'Hiển thị tab thư viện này trong thanh điều hướng; tắt để ẩn';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'Chất lượng YouTube';
   @override
@@ -147956,9 +147962,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_rescan_undo_failed =>
       'Không khôi phục được lớp văn bản trước đó';
-  @override
-  String get module_tool_toggle_hint =>
-      'Hiện tab này trên thanh điều hướng; tắt để ẩn';
   @override
   String get module_downloads_hidden_hint =>
       'Tab Tải xuống đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
@@ -149447,6 +149450,9 @@ class _StringsVi extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 // Path: <root>
@@ -156740,7 +156746,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get settings_section_modules => '功能模块';
   @override
-  String get module_toggle_hint => '在底栏/侧栏显示该库页；关闭即隐藏';
+  String get module_toggle_hint => '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
   @override
   String get video_setting_youtube_quality => 'YouTube 画质';
   @override
@@ -157497,8 +157503,6 @@ class _StringsZhCn extends _StringsEn {
   String get manga_rescan_undone => '已还原重新识别前的文字层';
   @override
   String get manga_rescan_undo_failed => '还原上一版文字层失败';
-  @override
-  String get module_tool_toggle_hint => '在底栏/侧栏显示该页；关闭即隐藏';
   @override
   String get module_downloads_hidden_hint =>
       '「下载」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
@@ -158855,6 +158859,8 @@ class _StringsZhCn extends _StringsEn {
   String get onboarding_pack_paused_desc => '进度留在磁盘上，继续下载会从中断处接着下。';
   @override
   String get onboarding_pack_mini_bar_hide => '收起';
+  @override
+  String get module_disabled_hint => '该功能模块已在「设置 → 外观 → 功能模块」中关闭。';
 }
 
 // Path: <root>
@@ -166154,7 +166160,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get settings_section_modules => '功能模塊';
   @override
-  String get module_toggle_hint => '在底欄/側欄顯示該庫頁；關閉即隱藏';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get video_setting_youtube_quality => 'YouTube 畫質';
   @override
@@ -166911,8 +166918,6 @@ class _StringsZhHk extends _StringsEn {
   String get manga_rescan_undone => '已還原重新識別前的文字層';
   @override
   String get manga_rescan_undo_failed => '還原上一版文字層失敗';
-  @override
-  String get module_tool_toggle_hint => '在導覽列顯示此頁；關閉即隱藏';
   @override
   String get module_downloads_hidden_hint =>
       '「下載」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
@@ -168300,6 +168305,9 @@ class _StringsZhHk extends _StringsEn {
       'Progress is kept on disk — resuming picks up where it stopped.';
   @override
   String get onboarding_pack_mini_bar_hide => 'Hide';
+  @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
 }
 
 /// Flat map(s) containing all translations.
@@ -175243,7 +175251,7 @@ extension on _StringsEn {
       case 'settings_section_modules':
         return 'Feature modules';
       case 'module_toggle_hint':
-        return 'Show this library tab in the navigation bar; turn off to hide it';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'YouTube quality';
       case 'video_setting_youtube_quality_hint':
@@ -175949,8 +175957,6 @@ extension on _StringsEn {
         return 'Restored the text layer from before the re-scan';
       case 'manga_rescan_undo_failed':
         return 'Could not restore the previous text layer';
-      case 'module_tool_toggle_hint':
-        return 'Show this tab in the navigation bar; turn off to hide it';
       case 'module_downloads_hidden_hint':
         return 'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
       case 'book_file_location_open':
@@ -177179,6 +177185,8 @@ extension on _StringsEn {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -184118,7 +184126,7 @@ extension on _StringsAr {
       case 'settings_section_modules':
         return 'وحدات الميزات';
       case 'module_toggle_hint':
-        return 'إظهار تبويب المكتبة هذا في شريط التنقل؛ أوقفه لإخفائه';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'جودة YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -184825,8 +184833,6 @@ extension on _StringsAr {
         return 'تمت استعادة طبقة النص التي كانت قبل إعادة المسح';
       case 'manga_rescan_undo_failed':
         return 'تعذّرت استعادة طبقة النص السابقة';
-      case 'module_tool_toggle_hint':
-        return 'إظهار هذا التبويب في شريط التنقل؛ أوقفه لإخفائه';
       case 'module_downloads_hidden_hint':
         return 'تبويب التحميلات مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
       case 'book_file_location_open':
@@ -186053,6 +186059,8 @@ extension on _StringsAr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -193032,7 +193040,7 @@ extension on _StringsDe {
       case 'settings_section_modules':
         return 'Funktionsmodule';
       case 'module_toggle_hint':
-        return 'Diesen Bibliotheks-Tab in der Navigationsleiste anzeigen; ausschalten zum Ausblenden';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'YouTube-Qualität';
       case 'video_setting_youtube_quality_hint':
@@ -193744,8 +193752,6 @@ extension on _StringsDe {
         return 'Textebene von vor der Neuerkennung wiederhergestellt';
       case 'manga_rescan_undo_failed':
         return 'Die vorherige Textebene konnte nicht wiederhergestellt werden';
-      case 'module_tool_toggle_hint':
-        return 'Diesen Tab in der Navigationsleiste anzeigen; ausschalten, um ihn auszublenden';
       case 'module_downloads_hidden_hint':
         return 'Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
       case 'book_file_location_open':
@@ -194976,6 +194982,8 @@ extension on _StringsDe {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -201947,7 +201955,7 @@ extension on _StringsEs {
       case 'settings_section_modules':
         return 'Módulos de funciones';
       case 'module_toggle_hint':
-        return 'Mostrar esta pestaña de biblioteca en la barra de navegación; desactive para ocultarla';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'Calidad de YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -202658,8 +202666,6 @@ extension on _StringsEs {
         return 'Se restauró la capa de texto anterior al nuevo reconocimiento';
       case 'manga_rescan_undo_failed':
         return 'No se pudo restaurar la capa de texto anterior';
-      case 'module_tool_toggle_hint':
-        return 'Mostrar esta pestaña en la barra de navegación; desactívalo para ocultarla';
       case 'module_downloads_hidden_hint':
         return 'La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
       case 'book_file_location_open':
@@ -203889,6 +203895,8 @@ extension on _StringsEs {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -210868,7 +210876,7 @@ extension on _StringsFr {
       case 'settings_section_modules':
         return 'Modules de fonctionnalités';
       case 'module_toggle_hint':
-        return 'Afficher cet onglet de bibliothèque dans la barre de navigation ; désactivez pour le masquer';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'Qualité YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -211578,8 +211586,6 @@ extension on _StringsFr {
         return 'Couche de texte d\'avant la nouvelle reconnaissance restaurée';
       case 'manga_rescan_undo_failed':
         return 'Impossible de restaurer la couche de texte précédente';
-      case 'module_tool_toggle_hint':
-        return 'Afficher cet onglet dans la barre de navigation ; désactiver pour le masquer';
       case 'module_downloads_hidden_hint':
         return 'L\'onglet Téléchargements est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
       case 'book_file_location_open':
@@ -212810,6 +212816,8 @@ extension on _StringsFr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -219764,7 +219772,7 @@ extension on _StringsId {
       case 'settings_section_modules':
         return 'Modul fitur';
       case 'module_toggle_hint':
-        return 'Tampilkan tab perpustakaan ini di bilah navigasi; matikan untuk menyembunyikannya';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'Kualitas YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -220471,8 +220479,6 @@ extension on _StringsId {
         return 'Lapisan teks sebelum pemindaian ulang telah dipulihkan';
       case 'manga_rescan_undo_failed':
         return 'Tidak dapat memulihkan lapisan teks sebelumnya';
-      case 'module_tool_toggle_hint':
-        return 'Tampilkan tab ini di bilah navigasi; matikan untuk menyembunyikannya';
       case 'module_downloads_hidden_hint':
         return 'Tab Unduhan disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
       case 'book_file_location_open':
@@ -221701,6 +221707,8 @@ extension on _StringsId {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -228674,7 +228682,7 @@ extension on _StringsIt {
       case 'settings_section_modules':
         return 'Moduli funzionalità';
       case 'module_toggle_hint':
-        return 'Mostra questa scheda libreria nella barra di navigazione; disattiva per nasconderla';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'Qualità YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -229383,8 +229391,6 @@ extension on _StringsIt {
         return 'Ripristinato il livello di testo precedente al nuovo riconoscimento';
       case 'manga_rescan_undo_failed':
         return 'Impossibile ripristinare il livello di testo precedente';
-      case 'module_tool_toggle_hint':
-        return 'Mostra questa scheda nella barra di navigazione; disattiva per nasconderla';
       case 'module_downloads_hidden_hint':
         return 'La scheda Download è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
       case 'book_file_location_open':
@@ -230615,6 +230621,8 @@ extension on _StringsIt {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -237524,7 +237532,7 @@ extension on _StringsJa {
       case 'settings_section_modules':
         return '機能モジュール';
       case 'module_toggle_hint':
-        return 'このライブラリタブをナビゲーションバーに表示します。オフにすると非表示になります';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'YouTube画質';
       case 'video_setting_youtube_quality_hint':
@@ -238230,8 +238238,6 @@ extension on _StringsJa {
         return '再認識する前のテキストレイヤーに戻しました';
       case 'manga_rescan_undo_failed':
         return '前のテキストレイヤーに戻せませんでした';
-      case 'module_tool_toggle_hint':
-        return 'このタブをナビゲーションバーに表示します。オフにすると非表示になります';
       case 'module_downloads_hidden_hint':
         return '「ダウンロード」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
       case 'book_file_location_open':
@@ -239453,6 +239459,8 @@ extension on _StringsJa {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -246365,7 +246373,7 @@ extension on _StringsKo {
       case 'settings_section_modules':
         return '기능 모듈';
       case 'module_toggle_hint':
-        return '내비게이션 바에 이 라이브러리 탭 표시; 끄면 숨김';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'YouTube 화질';
       case 'video_setting_youtube_quality_hint':
@@ -247071,8 +247079,6 @@ extension on _StringsKo {
         return '다시 인식하기 전의 텍스트 레이어로 되돌렸어요';
       case 'manga_rescan_undo_failed':
         return '이전 텍스트 레이어로 되돌리지 못했어요';
-      case 'module_tool_toggle_hint':
-        return '이 탭을 내비게이션 바에 표시해요. 끄면 숨겨져요';
       case 'module_downloads_hidden_hint':
         return '‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
       case 'book_file_location_open':
@@ -248296,6 +248302,8 @@ extension on _StringsKo {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -255264,7 +255272,7 @@ extension on _StringsNl {
       case 'settings_section_modules':
         return 'Functiemodules';
       case 'module_toggle_hint':
-        return 'Toon dit bibliotheektabblad in de navigatiebalk; schakel uit om het te verbergen';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'YouTube-kwaliteit';
       case 'video_setting_youtube_quality_hint':
@@ -255974,8 +255982,6 @@ extension on _StringsNl {
         return 'Tekstlaag van vóór de herscan hersteld';
       case 'manga_rescan_undo_failed':
         return 'Kan de vorige tekstlaag niet herstellen';
-      case 'module_tool_toggle_hint':
-        return 'Dit tabblad in de navigatiebalk tonen; uitschakelen om het te verbergen';
       case 'module_downloads_hidden_hint':
         return 'Het tabblad Downloads is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
       case 'book_file_location_open':
@@ -257205,6 +257211,8 @@ extension on _StringsNl {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -264169,7 +264177,7 @@ extension on _StringsPtBr {
       case 'settings_section_modules':
         return 'Módulos de funcionalidades';
       case 'module_toggle_hint':
-        return 'Mostrar esta aba de biblioteca na barra de navegação; desative para ocultá-la';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'Qualidade do YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -264878,8 +264886,6 @@ extension on _StringsPtBr {
         return 'Camada de texto anterior ao novo reconhecimento restaurada';
       case 'manga_rescan_undo_failed':
         return 'Não foi possível restaurar a camada de texto anterior';
-      case 'module_tool_toggle_hint':
-        return 'Mostrar esta aba na barra de navegação; desative para ocultá-la';
       case 'module_downloads_hidden_hint':
         return 'A aba Downloads está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
       case 'book_file_location_open':
@@ -266109,6 +266115,8 @@ extension on _StringsPtBr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -273079,7 +273087,7 @@ extension on _StringsRu {
       case 'settings_section_modules':
         return 'Функциональные модули';
       case 'module_toggle_hint':
-        return 'Показывать вкладку этой библиотеки в панели навигации; отключите, чтобы скрыть';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'Качество YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -273788,8 +273796,6 @@ extension on _StringsRu {
         return 'Текстовый слой до повторного распознавания восстановлен';
       case 'manga_rescan_undo_failed':
         return 'Не удалось восстановить предыдущий текстовый слой';
-      case 'module_tool_toggle_hint':
-        return 'Показывать эту вкладку в панели навигации; выключите, чтобы скрыть';
       case 'module_downloads_hidden_hint':
         return 'Вкладка «Загрузки» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
       case 'book_file_location_open':
@@ -275019,6 +275025,8 @@ extension on _StringsRu {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -281963,7 +281971,7 @@ extension on _StringsTh {
       case 'settings_section_modules':
         return 'โมดูลฟีเจอร์';
       case 'module_toggle_hint':
-        return 'แสดงแท็บไลบรารีนี้ในแถบนำทาง ปิดเพื่อซ่อน';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'คุณภาพ YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -282669,8 +282677,6 @@ extension on _StringsTh {
         return 'คืนค่าชั้นข้อความก่อนการรู้จำใหม่แล้ว';
       case 'manga_rescan_undo_failed':
         return 'คืนค่าชั้นข้อความเวอร์ชันก่อนหน้าไม่สำเร็จ';
-      case 'module_tool_toggle_hint':
-        return 'แสดงแท็บนี้ในแถบนำทาง ปิดเพื่อซ่อน';
       case 'module_downloads_hidden_hint':
         return 'แท็บดาวน์โหลดถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
       case 'book_file_location_open':
@@ -283898,6 +283904,8 @@ extension on _StringsTh {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -290857,7 +290865,7 @@ extension on _StringsTr {
       case 'settings_section_modules':
         return 'Özellik modülleri';
       case 'module_toggle_hint':
-        return 'Bu kütüphane sekmesini gezinme çubuğunda göster; gizlemek için kapatın';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'YouTube kalitesi';
       case 'video_setting_youtube_quality_hint':
@@ -291564,8 +291572,6 @@ extension on _StringsTr {
         return 'Yeniden taramadan önceki metin katmanı geri yüklendi';
       case 'manga_rescan_undo_failed':
         return 'Önceki metin katmanı geri yüklenemedi';
-      case 'module_tool_toggle_hint':
-        return 'Bu sekmeyi gezinme çubuğunda göster; gizlemek için kapatın';
       case 'module_downloads_hidden_hint':
         return 'İndirmeler sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
       case 'book_file_location_open':
@@ -292793,6 +292799,8 @@ extension on _StringsTr {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -299746,7 +299754,7 @@ extension on _StringsVi {
       case 'settings_section_modules':
         return 'Mô-đun tính năng';
       case 'module_toggle_hint':
-        return 'Hiển thị tab thư viện này trong thanh điều hướng; tắt để ẩn';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'Chất lượng YouTube';
       case 'video_setting_youtube_quality_hint':
@@ -300453,8 +300461,6 @@ extension on _StringsVi {
         return 'Đã khôi phục lớp văn bản trước khi quét lại';
       case 'manga_rescan_undo_failed':
         return 'Không khôi phục được lớp văn bản trước đó';
-      case 'module_tool_toggle_hint':
-        return 'Hiện tab này trên thanh điều hướng; tắt để ẩn';
       case 'module_downloads_hidden_hint':
         return 'Tab Tải xuống đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
       case 'book_file_location_open':
@@ -301682,6 +301688,8 @@ extension on _StringsVi {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }
@@ -308572,7 +308580,7 @@ extension on _StringsZhCn {
       case 'settings_section_modules':
         return '功能模块';
       case 'module_toggle_hint':
-        return '在底栏/侧栏显示该库页；关闭即隐藏';
+        return '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
       case 'video_setting_youtube_quality':
         return 'YouTube 画质';
       case 'video_setting_youtube_quality_hint':
@@ -309278,8 +309286,6 @@ extension on _StringsZhCn {
         return '已还原重新识别前的文字层';
       case 'manga_rescan_undo_failed':
         return '还原上一版文字层失败';
-      case 'module_tool_toggle_hint':
-        return '在底栏/侧栏显示该页；关闭即隐藏';
       case 'module_downloads_hidden_hint':
         return '「下载」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
       case 'book_file_location_open':
@@ -310492,6 +310498,8 @@ extension on _StringsZhCn {
         return '进度留在磁盘上，继续下载会从中断处接着下。';
       case 'onboarding_pack_mini_bar_hide':
         return '收起';
+      case 'module_disabled_hint':
+        return '该功能模块已在「设置 → 外观 → 功能模块」中关闭。';
       default:
         return null;
     }
@@ -317383,7 +317391,7 @@ extension on _StringsZhHk {
       case 'settings_section_modules':
         return '功能模塊';
       case 'module_toggle_hint':
-        return '在底欄/側欄顯示該庫頁；關閉即隱藏';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'video_setting_youtube_quality':
         return 'YouTube 畫質';
       case 'video_setting_youtube_quality_hint':
@@ -318089,8 +318097,6 @@ extension on _StringsZhHk {
         return '已還原重新識別前的文字層';
       case 'manga_rescan_undo_failed':
         return '還原上一版文字層失敗';
-      case 'module_tool_toggle_hint':
-        return '在導覽列顯示此頁；關閉即隱藏';
       case 'module_downloads_hidden_hint':
         return '「下載」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
       case 'book_file_location_open':
@@ -319308,6 +319314,8 @@ extension on _StringsZhHk {
         return 'Progress is kept on disk — resuming picks up where it stopped.';
       case 'onboarding_pack_mini_bar_hide':
         return 'Hide';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       default:
         return null;
     }

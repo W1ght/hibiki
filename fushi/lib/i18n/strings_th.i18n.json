@@ -3374,7 +3374,7 @@
   "onboarding_step_fonts_title": "ฟอนต์",
   "onboarding_step_fonts_body": "ใช้ฟอนต์ของคุณเองกับหน้าจอ ข้อความหนังสือ และพจนานุกรม",
   "settings_section_modules": "โมดูลฟีเจอร์",
-  "module_toggle_hint": "แสดงแท็บไลบรารีนี้ในแถบนำทาง ปิดเพื่อซ่อน",
+  "module_toggle_hint": "Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps",
   "video_setting_youtube_quality": "คุณภาพ YouTube",
   "video_setting_youtube_quality_hint": "เริ่มสตรีมที่ระดับสูงสุดไม่เกินเป้าหมายนี้ อัตโนมัติจะเน้นการเล่นที่ราบรื่น (codec ที่เป็นมิตรกับฮาร์ดแวร์ สูงสุด 1080p)",
   "library_view_discover": "ค้นพบ",
@@ -3724,7 +3724,6 @@
   "manga_rescan_hint": "ลากกรอบครอบข้อความที่ต้องการรู้จำใหม่ ผลลัพธ์จะแทนที่ชั้นข้อความเดิมภายในกรอบนั้น",
   "manga_rescan_undone": "คืนค่าชั้นข้อความก่อนการรู้จำใหม่แล้ว",
   "manga_rescan_undo_failed": "คืนค่าชั้นข้อความเวอร์ชันก่อนหน้าไม่สำเร็จ",
-  "module_tool_toggle_hint": "แสดงแท็บนี้ในแถบนำทาง ปิดเพื่อซ่อน",
   "module_downloads_hidden_hint": "แท็บดาวน์โหลดถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้",
   "book_file_location_open": "เปิดตำแหน่งไฟล์",
   "book_file_location_failed": "ไม่สามารถเปิดตำแหน่งไฟล์ของหนังสือเล่มนี้ได้",
@@ -4317,5 +4316,6 @@
   "onboarding_pack_status_paused": "Recommended pack download paused",
   "onboarding_pack_download_resume": "Resume download",
   "onboarding_pack_paused_desc": "Progress is kept on disk — resuming picks up where it stopped.",
-  "onboarding_pack_mini_bar_hide": "Hide"
+  "onboarding_pack_mini_bar_hide": "Hide",
+  "module_disabled_hint": "This feature module is turned off in Settings > Appearance > Feature modules."
 }

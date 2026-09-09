@@ -3374,7 +3374,7 @@
   "onboarding_step_fonts_title": "Шрифты",
   "onboarding_step_fonts_body": "Используйте собственные шрифты для интерфейса, текста книг и словаря.",
   "settings_section_modules": "Функциональные модули",
-  "module_toggle_hint": "Показывать вкладку этой библиотеки в панели навигации; отключите, чтобы скрыть",
+  "module_toggle_hint": "Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps",
   "video_setting_youtube_quality": "Качество YouTube",
   "video_setting_youtube_quality_hint": "Начинать потоки с наивысшего уровня до выбранного предела; «Авто» предпочитает плавное воспроизведение (совместимый с оборудованием кодек, до 1080p)",
   "library_view_discover": "Обзор",
@@ -3724,7 +3724,6 @@
   "manga_rescan_hint": "Обведите рамкой текст, который нужно распознать заново. Результат заменит существующий текстовый слой внутри рамки.",
   "manga_rescan_undone": "Текстовый слой до повторного распознавания восстановлен",
   "manga_rescan_undo_failed": "Не удалось восстановить предыдущий текстовый слой",
-  "module_tool_toggle_hint": "Показывать эту вкладку в панели навигации; выключите, чтобы скрыть",
   "module_downloads_hidden_hint": "Вкладка «Загрузки» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.",
   "book_file_location_open": "Открыть расположение файла",
   "book_file_location_failed": "Не удалось открыть расположение файла этой книги.",
@@ -4317,5 +4316,6 @@
   "onboarding_pack_status_paused": "Recommended pack download paused",
   "onboarding_pack_download_resume": "Resume download",
   "onboarding_pack_paused_desc": "Progress is kept on disk — resuming picks up where it stopped.",
-  "onboarding_pack_mini_bar_hide": "Hide"
+  "onboarding_pack_mini_bar_hide": "Hide",
+  "module_disabled_hint": "This feature module is turned off in Settings > Appearance > Feature modules."
 }
