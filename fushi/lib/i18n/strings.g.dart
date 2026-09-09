@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77044 (4532 per locale)
+/// Strings: 77078 (4534 per locale)
 ///
-/// Built on 2026-09-09 at 06:08 UTC
+/// Built on 2026-09-09 at 06:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6281,6 +6281,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The source returned invalid torrent data. Retry later or choose another source.';
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  String get profile_language_bindings => 'Language bindings';
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
   String get video_shader_tier_medium_hint_mobile =>
@@ -16926,6 +16929,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
@@ -27802,6 +27810,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
@@ -38732,6 +38745,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
@@ -49697,6 +49715,11 @@ class _StringsFr extends _StringsEn {
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
   @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
+  @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
   @override
@@ -60462,6 +60485,11 @@ class _StringsId extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
@@ -71321,6 +71349,11 @@ class _StringsIt extends _StringsEn {
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
   @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
+  @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
   @override
@@ -81559,6 +81592,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
@@ -91808,6 +91846,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
@@ -102623,6 +102666,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
@@ -113492,6 +113540,11 @@ class _StringsPtBr extends _StringsEn {
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
   @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
+  @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
   @override
@@ -124337,6 +124390,11 @@ class _StringsRu extends _StringsEn {
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
   @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
+  @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
   @override
@@ -134981,6 +135039,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
@@ -145743,6 +145806,11 @@ class _StringsTr extends _StringsEn {
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
   @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
+  @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
   @override
@@ -156475,6 +156543,11 @@ class _StringsVi extends _StringsEn {
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
   @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
+  @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
   @override
@@ -166330,6 +166403,11 @@ class _StringsZhCn extends _StringsEn {
   String get download_torrent_invalid => '来源返回的种子数据无效。请稍后重试或更换来源。';
   @override
   String get download_torrent_selection_failed => '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
+  @override
+  String get profile_language_bindings => '语言绑定';
+  @override
+  String get profile_language_bindings_hint =>
+      '在条目已标注内容语言时生效。EPUB 会自动读取文件里的声明；其它格式需要在条目上手动指定。';
   @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv 内置锐化（手机上为 spline36）。无需下载，不增加任何 GPU pass。上面几档掉帧时退回这一档最稳。';
@@ -176256,6 +176334,11 @@ class _StringsZhHk extends _StringsEn {
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
   @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
+  @override
   String get video_shader_tier_low_hint_mobile =>
       'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
   @override
@@ -185583,6 +185666,10 @@ extension on _StringsEn {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -194902,6 +194989,10 @@ extension on _StringsAr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -204266,6 +204357,10 @@ extension on _StringsDe {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -213621,6 +213716,10 @@ extension on _StringsEs {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -222985,6 +223084,10 @@ extension on _StringsFr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -232320,6 +232423,10 @@ extension on _StringsId {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -241677,6 +241784,10 @@ extension on _StringsIt {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -250961,6 +251072,10 @@ extension on _StringsJa {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -260249,6 +260364,10 @@ extension on _StringsKo {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -269599,6 +269718,10 @@ extension on _StringsNl {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -278944,6 +279067,10 @@ extension on _StringsPtBr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -288296,6 +288423,10 @@ extension on _StringsRu {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -297620,6 +297751,10 @@ extension on _StringsTh {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -306959,6 +307094,10 @@ extension on _StringsTr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -316292,6 +316431,10 @@ extension on _StringsVi {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
@@ -325544,6 +325687,10 @@ extension on _StringsZhCn {
         return '来源返回的种子数据无效。请稍后重试或更换来源。';
       case 'download_torrent_selection_failed':
         return '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
+      case 'profile_language_bindings':
+        return '语言绑定';
+      case 'profile_language_bindings_hint':
+        return '在条目已标注内容语言时生效。EPUB 会自动读取文件里的声明；其它格式需要在条目上手动指定。';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv 内置锐化（手机上为 spline36）。无需下载，不增加任何 GPU pass。上面几档掉帧时退回这一档最稳。';
       case 'video_shader_tier_medium_hint_mobile':
@@ -334806,6 +334953,10 @@ extension on _StringsZhHk {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       case 'video_shader_tier_low_hint_mobile':
         return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
       case 'video_shader_tier_medium_hint_mobile':
