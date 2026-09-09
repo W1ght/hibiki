@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77622 (4566 per locale)
+/// Strings: 77945 (4585 per locale)
 ///
-/// Built on 2026-09-09 at 19:53 UTC
+/// Built on 2026-09-09 at 20:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6336,6 +6336,28 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  String get settings_group_interface => 'Interface';
+  String get settings_group_content => 'Content';
+  String get settings_group_learning => 'Learning';
+  String get settings_group_connections => 'Connections';
+  String get settings_group_data => 'Data and devices';
+  String get settings_group_app => 'App';
+  String get settings_destination_appearance_interaction =>
+      'Appearance and interaction';
+  String get settings_destination_profile_presets => 'Configuration presets';
+  String get settings_destination_system_about => 'System and about';
+  String get settings_service_configured => 'Configured';
+  String get settings_service_not_configured => 'Not configured';
+  String get settings_service_builtin => 'Built-in configuration';
+  String get settings_anki_media => 'Card media';
+  String get settings_downloads_advanced_title => 'Engine and seeding';
+  String get settings_downloads_advanced_hint =>
+      'Connections, memory, peer discovery and protection';
+  String get settings_downloads_routing_title => 'Completed downloads';
+  String get settings_downloads_routing_hint =>
+      'Path mapping and target video source';
+  String get settings_downloads_encryption_title => 'Peer encryption';
+  String get settings_service_disabled => 'Disabled';
 }
 
 // Path: <root>
@@ -17066,6 +17088,46 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'الواجهة';
+  @override
+  String get settings_group_content => 'المحتوى';
+  @override
+  String get settings_group_learning => 'التعلّم';
+  @override
+  String get settings_group_connections => 'الاتصالات';
+  @override
+  String get settings_group_data => 'البيانات والأجهزة';
+  @override
+  String get settings_group_app => 'التطبيق';
+  @override
+  String get settings_destination_appearance_interaction => 'المظهر والتفاعل';
+  @override
+  String get settings_destination_profile_presets => 'إعدادات مسبقة';
+  @override
+  String get settings_destination_system_about => 'النظام وحول التطبيق';
+  @override
+  String get settings_service_configured => 'تم الإعداد';
+  @override
+  String get settings_service_not_configured => 'لم يتم الإعداد';
+  @override
+  String get settings_service_builtin => 'إعدادات مدمجة';
+  @override
+  String get settings_anki_media => 'وسائط البطاقات';
+  @override
+  String get settings_downloads_advanced_title => 'المحرك ومشاركة الملفات';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'الاتصالات والذاكرة واكتشاف الأقران والحماية';
+  @override
+  String get settings_downloads_routing_title => 'التنزيلات المكتملة';
+  @override
+  String get settings_downloads_routing_hint =>
+      'تعيين المسارات ومصدر الفيديو المستهدف';
+  @override
+  String get settings_downloads_encryption_title => 'تشفير الاتصال بالأقران';
+  @override
+  String get settings_service_disabled => 'معطّل';
 }
 
 // Path: <root>
@@ -28023,6 +28085,47 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Oberfläche';
+  @override
+  String get settings_group_content => 'Inhalte';
+  @override
+  String get settings_group_learning => 'Lernen';
+  @override
+  String get settings_group_connections => 'Verbindungen';
+  @override
+  String get settings_group_data => 'Daten und Geräte';
+  @override
+  String get settings_group_app => 'App';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Darstellung und Bedienung';
+  @override
+  String get settings_destination_profile_presets => 'Konfigurationsvorlagen';
+  @override
+  String get settings_destination_system_about => 'System und Info';
+  @override
+  String get settings_service_configured => 'Konfiguriert';
+  @override
+  String get settings_service_not_configured => 'Nicht konfiguriert';
+  @override
+  String get settings_service_builtin => 'Integrierte Konfiguration';
+  @override
+  String get settings_anki_media => 'Kartenmedien';
+  @override
+  String get settings_downloads_advanced_title => 'Engine und Seeding';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Verbindungen, Speicher, Peer-Suche und Schutz';
+  @override
+  String get settings_downloads_routing_title => 'Abgeschlossene Downloads';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Pfadzuordnung und Ziel-Videoquelle';
+  @override
+  String get settings_downloads_encryption_title => 'Peer-Verschlüsselung';
+  @override
+  String get settings_service_disabled => 'Deaktiviert';
 }
 
 // Path: <root>
@@ -39034,6 +39137,47 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interfaz';
+  @override
+  String get settings_group_content => 'Contenido';
+  @override
+  String get settings_group_learning => 'Aprendizaje';
+  @override
+  String get settings_group_connections => 'Conexiones';
+  @override
+  String get settings_group_data => 'Datos y dispositivos';
+  @override
+  String get settings_group_app => 'Aplicación';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Apariencia e interacción';
+  @override
+  String get settings_destination_profile_presets => 'Ajustes predefinidos';
+  @override
+  String get settings_destination_system_about => 'Sistema e información';
+  @override
+  String get settings_service_configured => 'Configurado';
+  @override
+  String get settings_service_not_configured => 'Sin configurar';
+  @override
+  String get settings_service_builtin => 'Configuración integrada';
+  @override
+  String get settings_anki_media => 'Multimedia de las tarjetas';
+  @override
+  String get settings_downloads_advanced_title => 'Motor y distribución';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Conexiones, memoria, descubrimiento de pares y protección';
+  @override
+  String get settings_downloads_routing_title => 'Descargas completadas';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Asignación de rutas y fuente de vídeo de destino';
+  @override
+  String get settings_downloads_encryption_title => 'Cifrado entre pares';
+  @override
+  String get settings_service_disabled => 'Desactivado';
 }
 
 // Path: <root>
@@ -50079,6 +50223,47 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interface';
+  @override
+  String get settings_group_content => 'Contenu';
+  @override
+  String get settings_group_learning => 'Apprentissage';
+  @override
+  String get settings_group_connections => 'Connexions';
+  @override
+  String get settings_group_data => 'Données et appareils';
+  @override
+  String get settings_group_app => 'Application';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Apparence et interactions';
+  @override
+  String get settings_destination_profile_presets => 'Préréglages';
+  @override
+  String get settings_destination_system_about => 'Système et à propos';
+  @override
+  String get settings_service_configured => 'Configuré';
+  @override
+  String get settings_service_not_configured => 'Non configuré';
+  @override
+  String get settings_service_builtin => 'Configuration intégrée';
+  @override
+  String get settings_anki_media => 'Médias des cartes';
+  @override
+  String get settings_downloads_advanced_title => 'Moteur et partage';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Connexions, mémoire, découverte des pairs et protection';
+  @override
+  String get settings_downloads_routing_title => 'Téléchargements terminés';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Correspondance des chemins et source vidéo cible';
+  @override
+  String get settings_downloads_encryption_title => 'Chiffrement entre pairs';
+  @override
+  String get settings_service_disabled => 'Désactivé';
 }
 
 // Path: <root>
@@ -60926,6 +61111,47 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Antarmuka';
+  @override
+  String get settings_group_content => 'Konten';
+  @override
+  String get settings_group_learning => 'Pembelajaran';
+  @override
+  String get settings_group_connections => 'Koneksi';
+  @override
+  String get settings_group_data => 'Data dan perangkat';
+  @override
+  String get settings_group_app => 'Aplikasi';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Tampilan dan interaksi';
+  @override
+  String get settings_destination_profile_presets => 'Preset konfigurasi';
+  @override
+  String get settings_destination_system_about => 'Sistem dan tentang';
+  @override
+  String get settings_service_configured => 'Dikonfigurasi';
+  @override
+  String get settings_service_not_configured => 'Belum dikonfigurasi';
+  @override
+  String get settings_service_builtin => 'Konfigurasi bawaan';
+  @override
+  String get settings_anki_media => 'Media kartu';
+  @override
+  String get settings_downloads_advanced_title => 'Mesin dan seeding';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Koneksi, memori, penemuan peer, dan perlindungan';
+  @override
+  String get settings_downloads_routing_title => 'Unduhan selesai';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Pemetaan jalur dan sumber video tujuan';
+  @override
+  String get settings_downloads_encryption_title => 'Enkripsi peer';
+  @override
+  String get settings_service_disabled => 'Dinonaktifkan';
 }
 
 // Path: <root>
@@ -71865,6 +72091,48 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interfaccia';
+  @override
+  String get settings_group_content => 'Contenuti';
+  @override
+  String get settings_group_learning => 'Apprendimento';
+  @override
+  String get settings_group_connections => 'Connessioni';
+  @override
+  String get settings_group_data => 'Dati e dispositivi';
+  @override
+  String get settings_group_app => 'App';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Aspetto e interazione';
+  @override
+  String get settings_destination_profile_presets =>
+      'Configurazioni predefinite';
+  @override
+  String get settings_destination_system_about => 'Sistema e informazioni';
+  @override
+  String get settings_service_configured => 'Configurato';
+  @override
+  String get settings_service_not_configured => 'Non configurato';
+  @override
+  String get settings_service_builtin => 'Configurazione integrata';
+  @override
+  String get settings_anki_media => 'Media delle schede';
+  @override
+  String get settings_downloads_advanced_title => 'Motore e seeding';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Connessioni, memoria, rilevamento dei peer e protezione';
+  @override
+  String get settings_downloads_routing_title => 'Download completati';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Mappatura dei percorsi e sorgente video di destinazione';
+  @override
+  String get settings_downloads_encryption_title => 'Crittografia dei peer';
+  @override
+  String get settings_service_disabled => 'Disattivato';
 }
 
 // Path: <root>
@@ -82184,6 +82452,44 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'インターフェース';
+  @override
+  String get settings_group_content => 'コンテンツ';
+  @override
+  String get settings_group_learning => '学習';
+  @override
+  String get settings_group_connections => '接続';
+  @override
+  String get settings_group_data => 'データとデバイス';
+  @override
+  String get settings_group_app => 'アプリ';
+  @override
+  String get settings_destination_appearance_interaction => '外観と操作';
+  @override
+  String get settings_destination_profile_presets => '設定プリセット';
+  @override
+  String get settings_destination_system_about => 'システムとアプリ情報';
+  @override
+  String get settings_service_configured => '設定済み';
+  @override
+  String get settings_service_not_configured => '未設定';
+  @override
+  String get settings_service_builtin => '組み込み設定';
+  @override
+  String get settings_anki_media => 'カードのメディア';
+  @override
+  String get settings_downloads_advanced_title => 'エンジンとシード';
+  @override
+  String get settings_downloads_advanced_hint => '接続、メモリ、ピア検出と保護';
+  @override
+  String get settings_downloads_routing_title => '完了したダウンロード';
+  @override
+  String get settings_downloads_routing_hint => 'パスの対応付けと保存先の動画ソース';
+  @override
+  String get settings_downloads_encryption_title => 'ピア通信の暗号化';
+  @override
+  String get settings_service_disabled => '無効';
 }
 
 // Path: <root>
@@ -92514,6 +92820,44 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => '인터페이스';
+  @override
+  String get settings_group_content => '콘텐츠';
+  @override
+  String get settings_group_learning => '학습';
+  @override
+  String get settings_group_connections => '연결';
+  @override
+  String get settings_group_data => '데이터 및 기기';
+  @override
+  String get settings_group_app => '앱';
+  @override
+  String get settings_destination_appearance_interaction => '모양 및 상호작용';
+  @override
+  String get settings_destination_profile_presets => '설정 프리셋';
+  @override
+  String get settings_destination_system_about => '시스템 및 앱 정보';
+  @override
+  String get settings_service_configured => '설정됨';
+  @override
+  String get settings_service_not_configured => '설정되지 않음';
+  @override
+  String get settings_service_builtin => '내장 설정';
+  @override
+  String get settings_anki_media => '카드 미디어';
+  @override
+  String get settings_downloads_advanced_title => '엔진 및 시드 배포';
+  @override
+  String get settings_downloads_advanced_hint => '연결, 메모리, 피어 검색 및 보호';
+  @override
+  String get settings_downloads_routing_title => '완료된 다운로드';
+  @override
+  String get settings_downloads_routing_hint => '경로 매핑 및 대상 동영상 소스';
+  @override
+  String get settings_downloads_encryption_title => '피어 암호화';
+  @override
+  String get settings_service_disabled => '사용 안 함';
 }
 
 // Path: <root>
@@ -103410,6 +103754,47 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interface';
+  @override
+  String get settings_group_content => 'Inhoud';
+  @override
+  String get settings_group_learning => 'Leren';
+  @override
+  String get settings_group_connections => 'Verbindingen';
+  @override
+  String get settings_group_data => 'Gegevens en apparaten';
+  @override
+  String get settings_group_app => 'App';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Uiterlijk en bediening';
+  @override
+  String get settings_destination_profile_presets =>
+      'Configuratievoorinstellingen';
+  @override
+  String get settings_destination_system_about => 'Systeem en info';
+  @override
+  String get settings_service_configured => 'Geconfigureerd';
+  @override
+  String get settings_service_not_configured => 'Niet geconfigureerd';
+  @override
+  String get settings_service_builtin => 'Ingebouwde configuratie';
+  @override
+  String get settings_anki_media => 'Kaartmedia';
+  @override
+  String get settings_downloads_advanced_title => 'Engine en seeden';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Verbindingen, geheugen, peer-detectie en bescherming';
+  @override
+  String get settings_downloads_routing_title => 'Voltooide downloads';
+  @override
+  String get settings_downloads_routing_hint => 'Padkoppeling en doelvideobron';
+  @override
+  String get settings_downloads_encryption_title => 'Peer-versleuteling';
+  @override
+  String get settings_service_disabled => 'Uitgeschakeld';
 }
 
 // Path: <root>
@@ -114359,6 +114744,48 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interface';
+  @override
+  String get settings_group_content => 'Conteúdo';
+  @override
+  String get settings_group_learning => 'Aprendizado';
+  @override
+  String get settings_group_connections => 'Conexões';
+  @override
+  String get settings_group_data => 'Dados e dispositivos';
+  @override
+  String get settings_group_app => 'Aplicativo';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Aparência e interação';
+  @override
+  String get settings_destination_profile_presets =>
+      'Predefinições de configuração';
+  @override
+  String get settings_destination_system_about => 'Sistema e sobre';
+  @override
+  String get settings_service_configured => 'Configurado';
+  @override
+  String get settings_service_not_configured => 'Não configurado';
+  @override
+  String get settings_service_builtin => 'Configuração integrada';
+  @override
+  String get settings_anki_media => 'Mídia dos cartões';
+  @override
+  String get settings_downloads_advanced_title => 'Mecanismo e semeadura';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Conexões, memória, descoberta de pares e proteção';
+  @override
+  String get settings_downloads_routing_title => 'Downloads concluídos';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Mapeamento de caminhos e fonte de vídeo de destino';
+  @override
+  String get settings_downloads_encryption_title => 'Criptografia entre pares';
+  @override
+  String get settings_service_disabled => 'Desativado';
 }
 
 // Path: <root>
@@ -125285,6 +125712,48 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Интерфейс';
+  @override
+  String get settings_group_content => 'Контент';
+  @override
+  String get settings_group_learning => 'Обучение';
+  @override
+  String get settings_group_connections => 'Подключения';
+  @override
+  String get settings_group_data => 'Данные и устройства';
+  @override
+  String get settings_group_app => 'Приложение';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Оформление и управление';
+  @override
+  String get settings_destination_profile_presets => 'Наборы настроек';
+  @override
+  String get settings_destination_system_about => 'Система и о приложении';
+  @override
+  String get settings_service_configured => 'Настроено';
+  @override
+  String get settings_service_not_configured => 'Не настроено';
+  @override
+  String get settings_service_builtin => 'Встроенная конфигурация';
+  @override
+  String get settings_anki_media => 'Медиа карточек';
+  @override
+  String get settings_downloads_advanced_title => 'Движок и раздача';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Соединения, память, поиск пиров и защита';
+  @override
+  String get settings_downloads_routing_title => 'Завершённые загрузки';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Сопоставление путей и целевой источник видео';
+  @override
+  String get settings_downloads_encryption_title =>
+      'Шифрование соединений с пирами';
+  @override
+  String get settings_service_disabled => 'Отключено';
 }
 
 // Path: <root>
@@ -136011,6 +136480,47 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'อินเทอร์เฟซ';
+  @override
+  String get settings_group_content => 'เนื้อหา';
+  @override
+  String get settings_group_learning => 'การเรียนรู้';
+  @override
+  String get settings_group_connections => 'การเชื่อมต่อ';
+  @override
+  String get settings_group_data => 'ข้อมูลและอุปกรณ์';
+  @override
+  String get settings_group_app => 'แอป';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'รูปลักษณ์และการโต้ตอบ';
+  @override
+  String get settings_destination_profile_presets => 'ชุดการตั้งค่า';
+  @override
+  String get settings_destination_system_about => 'ระบบและเกี่ยวกับ';
+  @override
+  String get settings_service_configured => 'ตั้งค่าแล้ว';
+  @override
+  String get settings_service_not_configured => 'ยังไม่ได้ตั้งค่า';
+  @override
+  String get settings_service_builtin => 'การตั้งค่าในตัว';
+  @override
+  String get settings_anki_media => 'สื่อของบัตรคำ';
+  @override
+  String get settings_downloads_advanced_title => 'เอนจินและการปล่อยไฟล์';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'การเชื่อมต่อ หน่วยความจำ การค้นหาเพียร์ และการป้องกัน';
+  @override
+  String get settings_downloads_routing_title => 'การดาวน์โหลดที่เสร็จสิ้น';
+  @override
+  String get settings_downloads_routing_hint =>
+      'การแมปเส้นทางและแหล่งวิดีโอปลายทาง';
+  @override
+  String get settings_downloads_encryption_title => 'การเข้ารหัสระหว่างเพียร์';
+  @override
+  String get settings_service_disabled => 'ปิดใช้งาน';
 }
 
 // Path: <root>
@@ -146853,6 +147363,47 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Arayüz';
+  @override
+  String get settings_group_content => 'İçerik';
+  @override
+  String get settings_group_learning => 'Öğrenme';
+  @override
+  String get settings_group_connections => 'Bağlantılar';
+  @override
+  String get settings_group_data => 'Veriler ve cihazlar';
+  @override
+  String get settings_group_app => 'Uygulama';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Görünüm ve etkileşim';
+  @override
+  String get settings_destination_profile_presets => 'Yapılandırma ön ayarları';
+  @override
+  String get settings_destination_system_about => 'Sistem ve hakkında';
+  @override
+  String get settings_service_configured => 'Yapılandırıldı';
+  @override
+  String get settings_service_not_configured => 'Yapılandırılmadı';
+  @override
+  String get settings_service_builtin => 'Yerleşik yapılandırma';
+  @override
+  String get settings_anki_media => 'Kart medyası';
+  @override
+  String get settings_downloads_advanced_title => 'Motor ve paylaşım';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Bağlantılar, bellek, eş keşfi ve koruma';
+  @override
+  String get settings_downloads_routing_title => 'Tamamlanan indirmeler';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Yol eşleme ve hedef video kaynağı';
+  @override
+  String get settings_downloads_encryption_title => 'Eş şifrelemesi';
+  @override
+  String get settings_service_disabled => 'Devre dışı';
 }
 
 // Path: <root>
@@ -157666,6 +158217,47 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Giao diện';
+  @override
+  String get settings_group_content => 'Nội dung';
+  @override
+  String get settings_group_learning => 'Học tập';
+  @override
+  String get settings_group_connections => 'Kết nối';
+  @override
+  String get settings_group_data => 'Dữ liệu và thiết bị';
+  @override
+  String get settings_group_app => 'Ứng dụng';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Giao diện và tương tác';
+  @override
+  String get settings_destination_profile_presets => 'Bộ cấu hình';
+  @override
+  String get settings_destination_system_about => 'Hệ thống và giới thiệu';
+  @override
+  String get settings_service_configured => 'Đã cấu hình';
+  @override
+  String get settings_service_not_configured => 'Chưa cấu hình';
+  @override
+  String get settings_service_builtin => 'Cấu hình tích hợp';
+  @override
+  String get settings_anki_media => 'Nội dung đa phương tiện của thẻ';
+  @override
+  String get settings_downloads_advanced_title => 'Bộ máy và chia sẻ torrent';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Kết nối, bộ nhớ, tìm kiếm peer và bảo vệ';
+  @override
+  String get settings_downloads_routing_title => 'Tải xuống đã hoàn tất';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Ánh xạ đường dẫn và nguồn video đích';
+  @override
+  String get settings_downloads_encryption_title => 'Mã hóa kết nối peer';
+  @override
+  String get settings_service_disabled => 'Đã tắt';
 }
 
 // Path: <root>
@@ -167597,6 +168189,44 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
+  @override
+  String get settings_group_interface => '界面';
+  @override
+  String get settings_group_content => '内容';
+  @override
+  String get settings_group_learning => '学习';
+  @override
+  String get settings_group_connections => '连接';
+  @override
+  String get settings_group_data => '数据与设备';
+  @override
+  String get settings_group_app => '应用';
+  @override
+  String get settings_destination_appearance_interaction => '外观与交互';
+  @override
+  String get settings_destination_profile_presets => '配置方案';
+  @override
+  String get settings_destination_system_about => '系统与关于';
+  @override
+  String get settings_service_configured => '已配置';
+  @override
+  String get settings_service_not_configured => '未配置';
+  @override
+  String get settings_service_builtin => '使用内置配置';
+  @override
+  String get settings_anki_media => '制卡媒体';
+  @override
+  String get settings_downloads_advanced_title => '引擎与做种';
+  @override
+  String get settings_downloads_advanced_hint => '连接数、内存、节点发现与防护';
+  @override
+  String get settings_downloads_routing_title => '下载完成后';
+  @override
+  String get settings_downloads_routing_hint => '路径映射与目标视频来源';
+  @override
+  String get settings_downloads_encryption_title => '节点加密';
+  @override
+  String get settings_service_disabled => '已停用';
 }
 
 // Path: <root>
@@ -177600,6 +178230,44 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_alignment_hint =>
       'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => '介面';
+  @override
+  String get settings_group_content => '內容';
+  @override
+  String get settings_group_learning => '學習';
+  @override
+  String get settings_group_connections => '連線';
+  @override
+  String get settings_group_data => '資料與裝置';
+  @override
+  String get settings_group_app => '應用程式';
+  @override
+  String get settings_destination_appearance_interaction => '外觀與互動';
+  @override
+  String get settings_destination_profile_presets => '設定方案';
+  @override
+  String get settings_destination_system_about => '系統與關於';
+  @override
+  String get settings_service_configured => '已設定';
+  @override
+  String get settings_service_not_configured => '尚未設定';
+  @override
+  String get settings_service_builtin => '內建設定';
+  @override
+  String get settings_anki_media => '卡片媒體';
+  @override
+  String get settings_downloads_advanced_title => '引擎與做種';
+  @override
+  String get settings_downloads_advanced_hint => '連線、記憶體、節點探索與防護';
+  @override
+  String get settings_downloads_routing_title => '已完成的下載';
+  @override
+  String get settings_downloads_routing_hint => '路徑對應與目標影片來源';
+  @override
+  String get settings_downloads_encryption_title => '節點通訊加密';
+  @override
+  String get settings_service_disabled => '已停用';
 }
 
 /// Flat map(s) containing all translations.
@@ -186993,6 +187661,44 @@ extension on _StringsEn {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interface';
+      case 'settings_group_content':
+        return 'Content';
+      case 'settings_group_learning':
+        return 'Learning';
+      case 'settings_group_connections':
+        return 'Connections';
+      case 'settings_group_data':
+        return 'Data and devices';
+      case 'settings_group_app':
+        return 'App';
+      case 'settings_destination_appearance_interaction':
+        return 'Appearance and interaction';
+      case 'settings_destination_profile_presets':
+        return 'Configuration presets';
+      case 'settings_destination_system_about':
+        return 'System and about';
+      case 'settings_service_configured':
+        return 'Configured';
+      case 'settings_service_not_configured':
+        return 'Not configured';
+      case 'settings_service_builtin':
+        return 'Built-in configuration';
+      case 'settings_anki_media':
+        return 'Card media';
+      case 'settings_downloads_advanced_title':
+        return 'Engine and seeding';
+      case 'settings_downloads_advanced_hint':
+        return 'Connections, memory, peer discovery and protection';
+      case 'settings_downloads_routing_title':
+        return 'Completed downloads';
+      case 'settings_downloads_routing_hint':
+        return 'Path mapping and target video source';
+      case 'settings_downloads_encryption_title':
+        return 'Peer encryption';
+      case 'settings_service_disabled':
+        return 'Disabled';
       default:
         return null;
     }
@@ -196381,6 +197087,44 @@ extension on _StringsAr {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'الواجهة';
+      case 'settings_group_content':
+        return 'المحتوى';
+      case 'settings_group_learning':
+        return 'التعلّم';
+      case 'settings_group_connections':
+        return 'الاتصالات';
+      case 'settings_group_data':
+        return 'البيانات والأجهزة';
+      case 'settings_group_app':
+        return 'التطبيق';
+      case 'settings_destination_appearance_interaction':
+        return 'المظهر والتفاعل';
+      case 'settings_destination_profile_presets':
+        return 'إعدادات مسبقة';
+      case 'settings_destination_system_about':
+        return 'النظام وحول التطبيق';
+      case 'settings_service_configured':
+        return 'تم الإعداد';
+      case 'settings_service_not_configured':
+        return 'لم يتم الإعداد';
+      case 'settings_service_builtin':
+        return 'إعدادات مدمجة';
+      case 'settings_anki_media':
+        return 'وسائط البطاقات';
+      case 'settings_downloads_advanced_title':
+        return 'المحرك ومشاركة الملفات';
+      case 'settings_downloads_advanced_hint':
+        return 'الاتصالات والذاكرة واكتشاف الأقران والحماية';
+      case 'settings_downloads_routing_title':
+        return 'التنزيلات المكتملة';
+      case 'settings_downloads_routing_hint':
+        return 'تعيين المسارات ومصدر الفيديو المستهدف';
+      case 'settings_downloads_encryption_title':
+        return 'تشفير الاتصال بالأقران';
+      case 'settings_service_disabled':
+        return 'معطّل';
       default:
         return null;
     }
@@ -205814,6 +206558,44 @@ extension on _StringsDe {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Oberfläche';
+      case 'settings_group_content':
+        return 'Inhalte';
+      case 'settings_group_learning':
+        return 'Lernen';
+      case 'settings_group_connections':
+        return 'Verbindungen';
+      case 'settings_group_data':
+        return 'Daten und Geräte';
+      case 'settings_group_app':
+        return 'App';
+      case 'settings_destination_appearance_interaction':
+        return 'Darstellung und Bedienung';
+      case 'settings_destination_profile_presets':
+        return 'Konfigurationsvorlagen';
+      case 'settings_destination_system_about':
+        return 'System und Info';
+      case 'settings_service_configured':
+        return 'Konfiguriert';
+      case 'settings_service_not_configured':
+        return 'Nicht konfiguriert';
+      case 'settings_service_builtin':
+        return 'Integrierte Konfiguration';
+      case 'settings_anki_media':
+        return 'Kartenmedien';
+      case 'settings_downloads_advanced_title':
+        return 'Engine und Seeding';
+      case 'settings_downloads_advanced_hint':
+        return 'Verbindungen, Speicher, Peer-Suche und Schutz';
+      case 'settings_downloads_routing_title':
+        return 'Abgeschlossene Downloads';
+      case 'settings_downloads_routing_hint':
+        return 'Pfadzuordnung und Ziel-Videoquelle';
+      case 'settings_downloads_encryption_title':
+        return 'Peer-Verschlüsselung';
+      case 'settings_service_disabled':
+        return 'Deaktiviert';
       default:
         return null;
     }
@@ -215238,6 +216020,44 @@ extension on _StringsEs {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interfaz';
+      case 'settings_group_content':
+        return 'Contenido';
+      case 'settings_group_learning':
+        return 'Aprendizaje';
+      case 'settings_group_connections':
+        return 'Conexiones';
+      case 'settings_group_data':
+        return 'Datos y dispositivos';
+      case 'settings_group_app':
+        return 'Aplicación';
+      case 'settings_destination_appearance_interaction':
+        return 'Apariencia e interacción';
+      case 'settings_destination_profile_presets':
+        return 'Ajustes predefinidos';
+      case 'settings_destination_system_about':
+        return 'Sistema e información';
+      case 'settings_service_configured':
+        return 'Configurado';
+      case 'settings_service_not_configured':
+        return 'Sin configurar';
+      case 'settings_service_builtin':
+        return 'Configuración integrada';
+      case 'settings_anki_media':
+        return 'Multimedia de las tarjetas';
+      case 'settings_downloads_advanced_title':
+        return 'Motor y distribución';
+      case 'settings_downloads_advanced_hint':
+        return 'Conexiones, memoria, descubrimiento de pares y protección';
+      case 'settings_downloads_routing_title':
+        return 'Descargas completadas';
+      case 'settings_downloads_routing_hint':
+        return 'Asignación de rutas y fuente de vídeo de destino';
+      case 'settings_downloads_encryption_title':
+        return 'Cifrado entre pares';
+      case 'settings_service_disabled':
+        return 'Desactivado';
       default:
         return null;
     }
@@ -224671,6 +225491,44 @@ extension on _StringsFr {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interface';
+      case 'settings_group_content':
+        return 'Contenu';
+      case 'settings_group_learning':
+        return 'Apprentissage';
+      case 'settings_group_connections':
+        return 'Connexions';
+      case 'settings_group_data':
+        return 'Données et appareils';
+      case 'settings_group_app':
+        return 'Application';
+      case 'settings_destination_appearance_interaction':
+        return 'Apparence et interactions';
+      case 'settings_destination_profile_presets':
+        return 'Préréglages';
+      case 'settings_destination_system_about':
+        return 'Système et à propos';
+      case 'settings_service_configured':
+        return 'Configuré';
+      case 'settings_service_not_configured':
+        return 'Non configuré';
+      case 'settings_service_builtin':
+        return 'Configuration intégrée';
+      case 'settings_anki_media':
+        return 'Médias des cartes';
+      case 'settings_downloads_advanced_title':
+        return 'Moteur et partage';
+      case 'settings_downloads_advanced_hint':
+        return 'Connexions, mémoire, découverte des pairs et protection';
+      case 'settings_downloads_routing_title':
+        return 'Téléchargements terminés';
+      case 'settings_downloads_routing_hint':
+        return 'Correspondance des chemins et source vidéo cible';
+      case 'settings_downloads_encryption_title':
+        return 'Chiffrement entre pairs';
+      case 'settings_service_disabled':
+        return 'Désactivé';
       default:
         return null;
     }
@@ -234075,6 +234933,44 @@ extension on _StringsId {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Antarmuka';
+      case 'settings_group_content':
+        return 'Konten';
+      case 'settings_group_learning':
+        return 'Pembelajaran';
+      case 'settings_group_connections':
+        return 'Koneksi';
+      case 'settings_group_data':
+        return 'Data dan perangkat';
+      case 'settings_group_app':
+        return 'Aplikasi';
+      case 'settings_destination_appearance_interaction':
+        return 'Tampilan dan interaksi';
+      case 'settings_destination_profile_presets':
+        return 'Preset konfigurasi';
+      case 'settings_destination_system_about':
+        return 'Sistem dan tentang';
+      case 'settings_service_configured':
+        return 'Dikonfigurasi';
+      case 'settings_service_not_configured':
+        return 'Belum dikonfigurasi';
+      case 'settings_service_builtin':
+        return 'Konfigurasi bawaan';
+      case 'settings_anki_media':
+        return 'Media kartu';
+      case 'settings_downloads_advanced_title':
+        return 'Mesin dan seeding';
+      case 'settings_downloads_advanced_hint':
+        return 'Koneksi, memori, penemuan peer, dan perlindungan';
+      case 'settings_downloads_routing_title':
+        return 'Unduhan selesai';
+      case 'settings_downloads_routing_hint':
+        return 'Pemetaan jalur dan sumber video tujuan';
+      case 'settings_downloads_encryption_title':
+        return 'Enkripsi peer';
+      case 'settings_service_disabled':
+        return 'Dinonaktifkan';
       default:
         return null;
     }
@@ -243501,6 +244397,44 @@ extension on _StringsIt {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interfaccia';
+      case 'settings_group_content':
+        return 'Contenuti';
+      case 'settings_group_learning':
+        return 'Apprendimento';
+      case 'settings_group_connections':
+        return 'Connessioni';
+      case 'settings_group_data':
+        return 'Dati e dispositivi';
+      case 'settings_group_app':
+        return 'App';
+      case 'settings_destination_appearance_interaction':
+        return 'Aspetto e interazione';
+      case 'settings_destination_profile_presets':
+        return 'Configurazioni predefinite';
+      case 'settings_destination_system_about':
+        return 'Sistema e informazioni';
+      case 'settings_service_configured':
+        return 'Configurato';
+      case 'settings_service_not_configured':
+        return 'Non configurato';
+      case 'settings_service_builtin':
+        return 'Configurazione integrata';
+      case 'settings_anki_media':
+        return 'Media delle schede';
+      case 'settings_downloads_advanced_title':
+        return 'Motore e seeding';
+      case 'settings_downloads_advanced_hint':
+        return 'Connessioni, memoria, rilevamento dei peer e protezione';
+      case 'settings_downloads_routing_title':
+        return 'Download completati';
+      case 'settings_downloads_routing_hint':
+        return 'Mappatura dei percorsi e sorgente video di destinazione';
+      case 'settings_downloads_encryption_title':
+        return 'Crittografia dei peer';
+      case 'settings_service_disabled':
+        return 'Disattivato';
       default:
         return null;
     }
@@ -252854,6 +253788,44 @@ extension on _StringsJa {
         return 'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'インターフェース';
+      case 'settings_group_content':
+        return 'コンテンツ';
+      case 'settings_group_learning':
+        return '学習';
+      case 'settings_group_connections':
+        return '接続';
+      case 'settings_group_data':
+        return 'データとデバイス';
+      case 'settings_group_app':
+        return 'アプリ';
+      case 'settings_destination_appearance_interaction':
+        return '外観と操作';
+      case 'settings_destination_profile_presets':
+        return '設定プリセット';
+      case 'settings_destination_system_about':
+        return 'システムとアプリ情報';
+      case 'settings_service_configured':
+        return '設定済み';
+      case 'settings_service_not_configured':
+        return '未設定';
+      case 'settings_service_builtin':
+        return '組み込み設定';
+      case 'settings_anki_media':
+        return 'カードのメディア';
+      case 'settings_downloads_advanced_title':
+        return 'エンジンとシード';
+      case 'settings_downloads_advanced_hint':
+        return '接続、メモリ、ピア検出と保護';
+      case 'settings_downloads_routing_title':
+        return '完了したダウンロード';
+      case 'settings_downloads_routing_hint':
+        return 'パスの対応付けと保存先の動画ソース';
+      case 'settings_downloads_encryption_title':
+        return 'ピア通信の暗号化';
+      case 'settings_service_disabled':
+        return '無効';
       default:
         return null;
     }
@@ -262211,6 +263183,44 @@ extension on _StringsKo {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return '인터페이스';
+      case 'settings_group_content':
+        return '콘텐츠';
+      case 'settings_group_learning':
+        return '학습';
+      case 'settings_group_connections':
+        return '연결';
+      case 'settings_group_data':
+        return '데이터 및 기기';
+      case 'settings_group_app':
+        return '앱';
+      case 'settings_destination_appearance_interaction':
+        return '모양 및 상호작용';
+      case 'settings_destination_profile_presets':
+        return '설정 프리셋';
+      case 'settings_destination_system_about':
+        return '시스템 및 앱 정보';
+      case 'settings_service_configured':
+        return '설정됨';
+      case 'settings_service_not_configured':
+        return '설정되지 않음';
+      case 'settings_service_builtin':
+        return '내장 설정';
+      case 'settings_anki_media':
+        return '카드 미디어';
+      case 'settings_downloads_advanced_title':
+        return '엔진 및 시드 배포';
+      case 'settings_downloads_advanced_hint':
+        return '연결, 메모리, 피어 검색 및 보호';
+      case 'settings_downloads_routing_title':
+        return '완료된 다운로드';
+      case 'settings_downloads_routing_hint':
+        return '경로 매핑 및 대상 동영상 소스';
+      case 'settings_downloads_encryption_title':
+        return '피어 암호화';
+      case 'settings_service_disabled':
+        return '사용 안 함';
       default:
         return null;
     }
@@ -271630,6 +272640,44 @@ extension on _StringsNl {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interface';
+      case 'settings_group_content':
+        return 'Inhoud';
+      case 'settings_group_learning':
+        return 'Leren';
+      case 'settings_group_connections':
+        return 'Verbindingen';
+      case 'settings_group_data':
+        return 'Gegevens en apparaten';
+      case 'settings_group_app':
+        return 'App';
+      case 'settings_destination_appearance_interaction':
+        return 'Uiterlijk en bediening';
+      case 'settings_destination_profile_presets':
+        return 'Configuratievoorinstellingen';
+      case 'settings_destination_system_about':
+        return 'Systeem en info';
+      case 'settings_service_configured':
+        return 'Geconfigureerd';
+      case 'settings_service_not_configured':
+        return 'Niet geconfigureerd';
+      case 'settings_service_builtin':
+        return 'Ingebouwde configuratie';
+      case 'settings_anki_media':
+        return 'Kaartmedia';
+      case 'settings_downloads_advanced_title':
+        return 'Engine en seeden';
+      case 'settings_downloads_advanced_hint':
+        return 'Verbindingen, geheugen, peer-detectie en bescherming';
+      case 'settings_downloads_routing_title':
+        return 'Voltooide downloads';
+      case 'settings_downloads_routing_hint':
+        return 'Padkoppeling en doelvideobron';
+      case 'settings_downloads_encryption_title':
+        return 'Peer-versleuteling';
+      case 'settings_service_disabled':
+        return 'Uitgeschakeld';
       default:
         return null;
     }
@@ -281044,6 +282092,44 @@ extension on _StringsPtBr {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interface';
+      case 'settings_group_content':
+        return 'Conteúdo';
+      case 'settings_group_learning':
+        return 'Aprendizado';
+      case 'settings_group_connections':
+        return 'Conexões';
+      case 'settings_group_data':
+        return 'Dados e dispositivos';
+      case 'settings_group_app':
+        return 'Aplicativo';
+      case 'settings_destination_appearance_interaction':
+        return 'Aparência e interação';
+      case 'settings_destination_profile_presets':
+        return 'Predefinições de configuração';
+      case 'settings_destination_system_about':
+        return 'Sistema e sobre';
+      case 'settings_service_configured':
+        return 'Configurado';
+      case 'settings_service_not_configured':
+        return 'Não configurado';
+      case 'settings_service_builtin':
+        return 'Configuração integrada';
+      case 'settings_anki_media':
+        return 'Mídia dos cartões';
+      case 'settings_downloads_advanced_title':
+        return 'Mecanismo e semeadura';
+      case 'settings_downloads_advanced_hint':
+        return 'Conexões, memória, descoberta de pares e proteção';
+      case 'settings_downloads_routing_title':
+        return 'Downloads concluídos';
+      case 'settings_downloads_routing_hint':
+        return 'Mapeamento de caminhos e fonte de vídeo de destino';
+      case 'settings_downloads_encryption_title':
+        return 'Criptografia entre pares';
+      case 'settings_service_disabled':
+        return 'Desativado';
       default:
         return null;
     }
@@ -290465,6 +291551,44 @@ extension on _StringsRu {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Интерфейс';
+      case 'settings_group_content':
+        return 'Контент';
+      case 'settings_group_learning':
+        return 'Обучение';
+      case 'settings_group_connections':
+        return 'Подключения';
+      case 'settings_group_data':
+        return 'Данные и устройства';
+      case 'settings_group_app':
+        return 'Приложение';
+      case 'settings_destination_appearance_interaction':
+        return 'Оформление и управление';
+      case 'settings_destination_profile_presets':
+        return 'Наборы настроек';
+      case 'settings_destination_system_about':
+        return 'Система и о приложении';
+      case 'settings_service_configured':
+        return 'Настроено';
+      case 'settings_service_not_configured':
+        return 'Не настроено';
+      case 'settings_service_builtin':
+        return 'Встроенная конфигурация';
+      case 'settings_anki_media':
+        return 'Медиа карточек';
+      case 'settings_downloads_advanced_title':
+        return 'Движок и раздача';
+      case 'settings_downloads_advanced_hint':
+        return 'Соединения, память, поиск пиров и защита';
+      case 'settings_downloads_routing_title':
+        return 'Завершённые загрузки';
+      case 'settings_downloads_routing_hint':
+        return 'Сопоставление путей и целевой источник видео';
+      case 'settings_downloads_encryption_title':
+        return 'Шифрование соединений с пирами';
+      case 'settings_service_disabled':
+        return 'Отключено';
       default:
         return null;
     }
@@ -299858,6 +300982,44 @@ extension on _StringsTh {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'อินเทอร์เฟซ';
+      case 'settings_group_content':
+        return 'เนื้อหา';
+      case 'settings_group_learning':
+        return 'การเรียนรู้';
+      case 'settings_group_connections':
+        return 'การเชื่อมต่อ';
+      case 'settings_group_data':
+        return 'ข้อมูลและอุปกรณ์';
+      case 'settings_group_app':
+        return 'แอป';
+      case 'settings_destination_appearance_interaction':
+        return 'รูปลักษณ์และการโต้ตอบ';
+      case 'settings_destination_profile_presets':
+        return 'ชุดการตั้งค่า';
+      case 'settings_destination_system_about':
+        return 'ระบบและเกี่ยวกับ';
+      case 'settings_service_configured':
+        return 'ตั้งค่าแล้ว';
+      case 'settings_service_not_configured':
+        return 'ยังไม่ได้ตั้งค่า';
+      case 'settings_service_builtin':
+        return 'การตั้งค่าในตัว';
+      case 'settings_anki_media':
+        return 'สื่อของบัตรคำ';
+      case 'settings_downloads_advanced_title':
+        return 'เอนจินและการปล่อยไฟล์';
+      case 'settings_downloads_advanced_hint':
+        return 'การเชื่อมต่อ หน่วยความจำ การค้นหาเพียร์ และการป้องกัน';
+      case 'settings_downloads_routing_title':
+        return 'การดาวน์โหลดที่เสร็จสิ้น';
+      case 'settings_downloads_routing_hint':
+        return 'การแมปเส้นทางและแหล่งวิดีโอปลายทาง';
+      case 'settings_downloads_encryption_title':
+        return 'การเข้ารหัสระหว่างเพียร์';
+      case 'settings_service_disabled':
+        return 'ปิดใช้งาน';
       default:
         return null;
     }
@@ -309266,6 +310428,44 @@ extension on _StringsTr {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Arayüz';
+      case 'settings_group_content':
+        return 'İçerik';
+      case 'settings_group_learning':
+        return 'Öğrenme';
+      case 'settings_group_connections':
+        return 'Bağlantılar';
+      case 'settings_group_data':
+        return 'Veriler ve cihazlar';
+      case 'settings_group_app':
+        return 'Uygulama';
+      case 'settings_destination_appearance_interaction':
+        return 'Görünüm ve etkileşim';
+      case 'settings_destination_profile_presets':
+        return 'Yapılandırma ön ayarları';
+      case 'settings_destination_system_about':
+        return 'Sistem ve hakkında';
+      case 'settings_service_configured':
+        return 'Yapılandırıldı';
+      case 'settings_service_not_configured':
+        return 'Yapılandırılmadı';
+      case 'settings_service_builtin':
+        return 'Yerleşik yapılandırma';
+      case 'settings_anki_media':
+        return 'Kart medyası';
+      case 'settings_downloads_advanced_title':
+        return 'Motor ve paylaşım';
+      case 'settings_downloads_advanced_hint':
+        return 'Bağlantılar, bellek, eş keşfi ve koruma';
+      case 'settings_downloads_routing_title':
+        return 'Tamamlanan indirmeler';
+      case 'settings_downloads_routing_hint':
+        return 'Yol eşleme ve hedef video kaynağı';
+      case 'settings_downloads_encryption_title':
+        return 'Eş şifrelemesi';
+      case 'settings_service_disabled':
+        return 'Devre dışı';
       default:
         return null;
     }
@@ -318668,6 +319868,44 @@ extension on _StringsVi {
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Giao diện';
+      case 'settings_group_content':
+        return 'Nội dung';
+      case 'settings_group_learning':
+        return 'Học tập';
+      case 'settings_group_connections':
+        return 'Kết nối';
+      case 'settings_group_data':
+        return 'Dữ liệu và thiết bị';
+      case 'settings_group_app':
+        return 'Ứng dụng';
+      case 'settings_destination_appearance_interaction':
+        return 'Giao diện và tương tác';
+      case 'settings_destination_profile_presets':
+        return 'Bộ cấu hình';
+      case 'settings_destination_system_about':
+        return 'Hệ thống và giới thiệu';
+      case 'settings_service_configured':
+        return 'Đã cấu hình';
+      case 'settings_service_not_configured':
+        return 'Chưa cấu hình';
+      case 'settings_service_builtin':
+        return 'Cấu hình tích hợp';
+      case 'settings_anki_media':
+        return 'Nội dung đa phương tiện của thẻ';
+      case 'settings_downloads_advanced_title':
+        return 'Bộ máy và chia sẻ torrent';
+      case 'settings_downloads_advanced_hint':
+        return 'Kết nối, bộ nhớ, tìm kiếm peer và bảo vệ';
+      case 'settings_downloads_routing_title':
+        return 'Tải xuống đã hoàn tất';
+      case 'settings_downloads_routing_hint':
+        return 'Ánh xạ đường dẫn và nguồn video đích';
+      case 'settings_downloads_encryption_title':
+        return 'Mã hóa kết nối peer';
+      case 'settings_service_disabled':
+        return 'Đã tắt';
       default:
         return null;
     }
@@ -327988,6 +329226,44 @@ extension on _StringsZhCn {
         return '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
       case 'audiobook_transcribe_alignment_hint':
         return '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
+      case 'settings_group_interface':
+        return '界面';
+      case 'settings_group_content':
+        return '内容';
+      case 'settings_group_learning':
+        return '学习';
+      case 'settings_group_connections':
+        return '连接';
+      case 'settings_group_data':
+        return '数据与设备';
+      case 'settings_group_app':
+        return '应用';
+      case 'settings_destination_appearance_interaction':
+        return '外观与交互';
+      case 'settings_destination_profile_presets':
+        return '配置方案';
+      case 'settings_destination_system_about':
+        return '系统与关于';
+      case 'settings_service_configured':
+        return '已配置';
+      case 'settings_service_not_configured':
+        return '未配置';
+      case 'settings_service_builtin':
+        return '使用内置配置';
+      case 'settings_anki_media':
+        return '制卡媒体';
+      case 'settings_downloads_advanced_title':
+        return '引擎与做种';
+      case 'settings_downloads_advanced_hint':
+        return '连接数、内存、节点发现与防护';
+      case 'settings_downloads_routing_title':
+        return '下载完成后';
+      case 'settings_downloads_routing_hint':
+        return '路径映射与目标视频来源';
+      case 'settings_downloads_encryption_title':
+        return '节点加密';
+      case 'settings_service_disabled':
+        return '已停用';
       default:
         return null;
     }
@@ -337319,6 +338595,44 @@ extension on _StringsZhHk {
         return '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
       case 'audiobook_transcribe_alignment_hint':
         return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return '介面';
+      case 'settings_group_content':
+        return '內容';
+      case 'settings_group_learning':
+        return '學習';
+      case 'settings_group_connections':
+        return '連線';
+      case 'settings_group_data':
+        return '資料與裝置';
+      case 'settings_group_app':
+        return '應用程式';
+      case 'settings_destination_appearance_interaction':
+        return '外觀與互動';
+      case 'settings_destination_profile_presets':
+        return '設定方案';
+      case 'settings_destination_system_about':
+        return '系統與關於';
+      case 'settings_service_configured':
+        return '已設定';
+      case 'settings_service_not_configured':
+        return '尚未設定';
+      case 'settings_service_builtin':
+        return '內建設定';
+      case 'settings_anki_media':
+        return '卡片媒體';
+      case 'settings_downloads_advanced_title':
+        return '引擎與做種';
+      case 'settings_downloads_advanced_hint':
+        return '連線、記憶體、節點探索與防護';
+      case 'settings_downloads_routing_title':
+        return '已完成的下載';
+      case 'settings_downloads_routing_hint':
+        return '路徑對應與目標影片來源';
+      case 'settings_downloads_encryption_title':
+        return '節點通訊加密';
+      case 'settings_service_disabled':
+        return '已停用';
       default:
         return null;
     }
