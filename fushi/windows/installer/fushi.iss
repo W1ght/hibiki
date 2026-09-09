@@ -634,6 +634,16 @@ const
     矩形，只能从可见区域里排除掉。 }
   Md3ButtonInset = 2;
   Md3EditInset = 2;
+  { 圆角半径，单位是 dp（用处按 ScaleY 换算到物理像素）。
+    为什么不是 MD3 那种 full-round 胶囊：SetWindowRgn 是 GDI 的二值裁切，**没有
+    抗锯齿**，半径越大露出的像素阶梯越长。实测胶囊形（半径=高度一半）在 150% DPI 下
+    边缘是一排肉眼可见的台阶，观感比方角还差；输入框上还会把方形的选中高亮块切掉
+    一角。取小半径后锯齿只落在几像素的弧上，基本看不出来，同时按钮和输入框用同一个
+    值，不会出现「一个胶囊一个方框」的不齐。
+    这是 Inno 的能力边界，不是没调好：真正平滑的圆角要么靠自制 VCL 样式（需要
+    Delphi），要么靠自绘控件（Inno 的 TPanel 不响应事件、TBitmapImage 要把文字烧进
+    位图，见 Md3StyleButton 的长注释）。 }
+  Md3CornerRadius = 4;
 
 function CreateRoundRectRgn(X1, Y1, X2, Y2, W, H: Integer): THandle;
   external 'CreateRoundRectRgn@gdi32.dll stdcall';
@@ -764,8 +774,7 @@ begin
   Btn.StyleElements := Btn.StyleElements - [seFont, seBorder];
   Btn.Font.Color := TextColor;
   Btn.Font.Name := Md3UiFontName(Btn.Font.Name);
-  { MD3 的 button 是 full-round：半径取（内缩后）高度的一半。 }
-  Md3RoundControl(Btn, (Btn.Height - 2 * Md3ButtonInset) div 2, Md3ButtonInset);
+  Md3RoundControl(Btn, ScaleY(Md3CornerRadius), Md3ButtonInset);
 end;
 
 { MD3 filled text field。
@@ -794,7 +803,7 @@ begin
   Margin := ScaleX(14);
   SendMessageW(Edit.Handle, $00D3, 3, Margin or (Margin * 65536));
 
-  Md3RoundControl(Edit, ScaleY(8), Md3EditInset);
+  Md3RoundControl(Edit, ScaleY(Md3CornerRadius), Md3EditInset);
 end;
 
 { 把「选择安装位置」页的经典黄纸夹换成 MD3 folder。
@@ -825,6 +834,22 @@ begin
   Img.Bitmap.LoadFromFile(ExpandConstant('{tmp}\') + AssetName);
 end;
 #endif
+
+{ 「准备安装」页的摘要框，和输入框同一套 filled 处理。
+  **时机是关键**：必须在 InitializeWizard 阶段做，那时摘要内容还是空的。
+  改 StyleElements 会让 VCL 重建控件窗口句柄；等到 CurPageChanged 再做，内容已经填好，
+  重建就把它截断（实测浅色下末行只剩「文件关联」四个字，条目整条不见），
+  再补一次 Memo.Refresh 只会更糟。空内容时重建则无损。 }
+procedure Md3StyleMemo(Memo: TNewMemo);
+begin
+  Memo.StyleElements := Memo.StyleElements - [seClient, seBorder, seFont];
+  Memo.Color := Md3SurfaceContainerHighest;
+  Memo.Font.Color := Md3OnSurface;
+  Memo.Font.Name := Md3UiFontName(Memo.Font.Name);
+  { 去掉那圈亮边框。这句同样只有在「内容还空着」时才敢写：它触发的正是上面说的
+    句柄重建。MD3 的 filled 容器靠底色分层，不靠边框。 }
+  Memo.BorderStyle := bsNone;
+end;
 
 procedure ApplyMd3Chrome();
 begin
@@ -857,6 +882,8 @@ begin
   Md3StyleButton(WizardForm.DirBrowseButton, Md3Primary);
 
   Md3StyleEdit(WizardForm.DirEdit);
+
+  Md3StyleMemo(WizardForm.ReadyMemo);
 
   Md3ApplyFolderIcon(WizardForm.SelectDirBitmapImage);
 
