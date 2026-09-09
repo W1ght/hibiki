@@ -35,6 +35,7 @@ type
     Surface: Boolean;
     Radius: Integer;
     Hover: Boolean;
+    Tasks: TNewCheckListBox;
   end;
 
 const
@@ -76,6 +77,9 @@ function Md3GetWindowText(Wnd: THandle; Text: String; MaxCount: Integer): Intege
   external 'GetWindowTextW@user32.dll stdcall';
 function Md3SendMessage(Wnd: THandle; Msg: Cardinal;
   WParam: TMd3NativeUInt; LParam: TMd3NativeInt): TMd3NativeInt;
+  external 'SendMessageW@user32.dll stdcall';
+function Md3GetListItemRect(Wnd: THandle; Msg: Cardinal;
+  Item: Integer; var Bounds: TRect): Integer;
   external 'SendMessageW@user32.dll stdcall';
 function Md3TrackMouseEvent(var Tracking: TMd3MouseTracking): Integer;
   external 'TrackMouseEvent@user32.dll stdcall';
@@ -119,6 +123,8 @@ function Md3AddPathArc(Path: TMd3NativeUInt; X, Y, Width, Height: Integer;
   external 'GdipAddPathArcI@gdiplus.dll stdcall';
 function Md3ClosePath(Path: TMd3NativeUInt): Integer;
   external 'GdipClosePathFigure@gdiplus.dll stdcall';
+function Md3AddPathLine(Path: TMd3NativeUInt; X1, Y1, X2, Y2: Integer): Integer;
+  external 'GdipAddPathLineI@gdiplus.dll stdcall';
 function Md3DeletePath(Path: TMd3NativeUInt): Integer;
   external 'GdipDeletePath@gdiplus.dll stdcall';
 function Md3CreateGdiBrush(Color: Cardinal; var Brush: TMd3NativeUInt): Integer;
@@ -257,6 +263,165 @@ begin
   end;
 end;
 
+procedure Md3DrawCheck(Graphics: TMd3NativeUInt; Bounds: TRect;
+  State: TCheckBoxState; Enabled: Boolean);
+var
+  Path, Fill, Pen, Mark: TMd3NativeUInt;
+  Color, MarkColor: TColor;
+  W, H: Integer;
+begin
+  Color := Md3Primary;
+  MarkColor := Md3OnPrimary;
+  if not Enabled then
+  begin
+    Color := Md3Blend(Md3Surface, Md3OnSurface, 38);
+    MarkColor := Md3Surface;
+  end;
+  Path := Md3RoundRectPath(Bounds, ScaleY(2));
+  if Path = 0 then Exit;
+  try
+    if State <> cbUnchecked then
+    begin
+      Fill := 0;
+      if Md3CreateGdiBrush(Md3Argb(Color), Fill) = 0 then
+      begin
+        Md3FillPath(Graphics, Fill, Path);
+        Md3DeleteGdiBrush(Fill);
+      end;
+      Mark := 0;
+      if Md3CreatePath(0, Mark) = 0 then
+      begin
+        W := Bounds.Right - Bounds.Left;
+        H := Bounds.Bottom - Bounds.Top;
+        if State = cbGrayed then
+          Md3AddPathLine(Mark, Bounds.Left + W div 4, Bounds.Top + H div 2,
+            Bounds.Right - W div 4, Bounds.Top + H div 2)
+        else
+        begin
+          Md3AddPathLine(Mark, Bounds.Left + W div 5, Bounds.Top + H div 2,
+            Bounds.Left + W * 2 div 5, Bounds.Top + H * 7 div 10);
+          Md3AddPathLine(Mark, Bounds.Left + W * 2 div 5, Bounds.Top + H * 7 div 10,
+            Bounds.Left + W * 4 div 5, Bounds.Top + H * 3 div 10);
+        end;
+        Pen := 0;
+        if Md3CreatePen(Md3Argb(MarkColor), ScaleY(2), 2, Pen) = 0 then
+        begin
+          Md3DrawPath(Graphics, Pen, Mark);
+          Md3DeletePen(Pen);
+        end;
+        Md3DeletePath(Mark);
+      end;
+    end
+    else
+    begin
+      if Enabled then Color := Md3Blend(Md3Surface, Md3OnSurface, 70);
+      Pen := 0;
+      if Md3CreatePen(Md3Argb(Color), ScaleY(2), 2, Pen) = 0 then
+      begin
+        Md3DrawPath(Graphics, Pen, Path);
+        Md3DeletePen(Pen);
+      end;
+    end;
+  finally
+    Md3DeletePath(Path);
+  end;
+end;
+
+procedure Md3PaintTasks(Index: Integer; DC: THandle);
+var
+  List: TNewCheckListBox;
+  Bounds, Row, Check, TextBounds, MeasureBounds: TRect;
+  Brush: THandle;
+  Graphics, Path, Fill: TMd3NativeUInt;
+  SavedDC, Item, BoxSize, Padding, Flags, TextHeight: Integer;
+  IsGroup, Enabled, Focused: Boolean;
+  Caption: String;
+  TextColor: TColor;
+  RowFont: TFont;
+begin
+  List := Md3Controls[Index].Tasks;
+  Md3GetClientRect(Md3Controls[Index].Wnd, Bounds);
+  SavedDC := Md3SaveDC(DC);
+  RowFont := TFont.Create;
+  try
+    Brush := Md3CreateSolidBrush(Md3Surface);
+    Md3FillRect(DC, Bounds, Brush);
+    Md3DeleteObject(Brush);
+    Graphics := 0;
+    try
+      Padding := ScaleX(12);
+      BoxSize := ScaleY(18);
+      for Item := 0 to List.Items.Count - 1 do
+      begin
+        // Use the real variable-height native row; no parallel hit-test grid.
+        if Md3GetListItemRect(List.Handle, $0198, Item, Row) = -1 then Continue;
+        if (Row.Bottom <= Bounds.Top) or (Row.Top >= Bounds.Bottom) then Continue;
+        if Md3CreateGraphics(DC, Graphics) <> 0 then Exit;
+        Md3SetSmoothingMode(Graphics, 4);
+        // TWizardForm populates group rows with nil, and task rows with the
+        // task entry object. The native list retains all toggle/group behavior.
+        IsGroup := List.ItemObject[Item] = nil;
+        Enabled := List.Enabled and List.ItemEnabled[Item];
+        Focused := (Md3GetFocus() = List.Handle) and (List.ItemIndex = Item) and
+          (not IsGroup) and Enabled;
+        if Focused then
+        begin
+          Path := Md3RoundRectPath(Row, ScaleY(8));
+          if Path <> 0 then
+          begin
+            Fill := 0;
+            if Md3CreateGdiBrush(Md3Argb(Md3Blend(Md3Surface, Md3Primary, 10)), Fill) = 0 then
+            begin
+              Md3FillPath(Graphics, Fill, Path);
+              Md3DeleteGdiBrush(Fill);
+            end;
+            Md3DeletePath(Path);
+          end;
+        end;
+        TextBounds := Row;
+        TextBounds.Left := Row.Left + Padding + List.ItemLevel[Item] * (BoxSize + Padding);
+        TextBounds.Right := Row.Right - Padding;
+        if not IsGroup then
+        begin
+          Check.Left := TextBounds.Left;
+          Check.Top := Row.Top + (Row.Bottom - Row.Top - BoxSize) div 2;
+          Check.Right := Check.Left + BoxSize;
+          Check.Bottom := Check.Top + BoxSize;
+          Md3DrawCheck(Graphics, Check, List.State[Item], Enabled);
+          TextBounds.Left := Check.Right + Padding;
+        end;
+        // Release Graphics before drawing GDI text on the same device context.
+        Md3DeleteGraphics(Graphics);
+        Graphics := 0;
+        Md3SelectObject(DC, Md3SendMessage(List.Handle, $0031, 0, 0));
+        RowFont.Assign(List.Font);
+        RowFont.Style := List.ItemFontStyle[Item];
+        Md3SelectObject(DC, RowFont.Handle);
+        TextColor := Md3OnSurface;
+        if IsGroup then TextColor := Md3Blend(Md3Surface, Md3OnSurface, 76)
+        else if not Enabled then TextColor := Md3Blend(Md3Surface, Md3OnSurface, 38);
+        Md3SetTextColor(DC, TextColor);
+        Md3SetBkMode(DC, 1);
+        Caption := List.ItemCaption[Item];
+        Flags := $0010; // DT_WORDBREAK, matching native variable-height items.
+        if IsGroup or not List.WantTabs then Flags := Flags or $0800 // NOPREFIX
+        else if (Md3SendMessage(List.Handle, $0129, 0, 0) and $0002) <> 0 then
+          Flags := Flags or $00100000;
+        MeasureBounds := TextBounds;
+        TextHeight := Md3DrawText(DC, Caption, Length(Caption), MeasureBounds, Flags or $0400);
+        if TextHeight < Row.Bottom - Row.Top then
+          TextBounds.Top := Row.Top + (Row.Bottom - Row.Top - TextHeight) div 2;
+        Md3DrawText(DC, Caption, Length(Caption), TextBounds, Flags);
+      end;
+    finally
+      if Graphics <> 0 then Md3DeleteGraphics(Graphics);
+    end;
+  finally
+    Md3RestoreDC(DC, SavedDC);
+    RowFont.Free;
+  end;
+end;
+
 function Md3CaptionWithoutHiddenAccelerator(const Caption: String): String;
 var
   I: Integer;
@@ -316,6 +481,8 @@ begin
   end
   else if Pressed then
     FillColor := Md3Blend(FillColor, TextColor, 12)
+  else if Focused then
+    FillColor := Md3Blend(FillColor, TextColor, 8)
   else if Md3Controls[Index].Hover then
     FillColor := Md3Blend(FillColor, TextColor, 8);
 
@@ -342,11 +509,11 @@ begin
         end;
         if Focused then
         begin
-          FocusPath := Md3PillPath(Bounds, ScaleY(5));
+          FocusPath := Md3PillPath(Bounds, ScaleY(1));
           if FocusPath <> 0 then
           begin
             Pen := 0;
-            if Md3CreatePen(Md3Argb(TextColor), ScaleY(2), 2, Pen) = 0 then
+            if Md3CreatePen(Md3Argb(Md3Primary), ScaleY(1), 2, Pen) = 0 then
             begin
               Md3DrawPath(Graphics, Pen, FocusPath);
               Md3DeletePen(Pen);
@@ -413,6 +580,8 @@ begin
       begin
         if Md3Controls[Index].Surface then
           Md3PaintSurface(Index, DC)
+        else if Md3Controls[Index].Tasks <> nil then
+          Md3PaintTasks(Index, DC)
         else
           Md3PaintButton(Index, DC);
       end;
@@ -428,6 +597,8 @@ begin
     begin
       if Md3Controls[Index].Surface then
         Md3PaintSurface(Index, WParam)
+      else if Md3Controls[Index].Tasks <> nil then
+        Md3PaintTasks(Index, WParam)
       else
         Md3PaintButton(Index, WParam);
     end;
@@ -469,7 +640,8 @@ begin
   if (Msg = $0007) or (Msg = $0008) or (Msg = $000A) or
     (Msg = $000C) or (Msg = $0030) or (Msg = $00F3) or (Msg = $00F4) or
     (Msg = $0100) or (Msg = $0101) or (Msg = $0128) or
-    (Msg = $0201) or (Msg = $0202) or (Msg = $0215) then
+    (Msg = $0201) or (Msg = $0202) or (Msg = $0215) or
+    (Msg = $0115) or (Msg = $020A) then
     Md3InvalidateRect(Wnd, 0, 0);
 end;
 
@@ -572,6 +744,43 @@ begin
     Log('MD3: surface subclass failed; keeping the native panel.');
   end;
   Md3InvalidateRect(Panel.Handle, 0, 0);
+end;
+
+procedure Md3PrepareTasks(List: TNewCheckListBox);
+begin
+  Md3InitializeControls();
+  if Md3GdiplusToken = 0 then Exit;
+  List.StyleElements := [];
+  List.Font.Name := Md3UiFontName(List.Font.Name);
+  List.Font.Size := 10;
+  List.Color := Md3Surface;
+end;
+
+procedure Md3StyleTasks(List: TNewCheckListBox);
+var
+  Index: Integer;
+begin
+  Md3InitializeControls();
+  if Md3GdiplusToken = 0 then Exit;
+  // PrepareTasks runs while constructing the wizard, before this page shows.
+  // This method only attaches paint to the current native HWND.
+  for Index := 0 to GetArrayLength(Md3Controls) - 1 do
+    if Md3Controls[Index].Wnd = List.Handle then
+    begin
+      Md3InvalidateRect(List.Handle, 0, 0);
+      Exit;
+    end;
+  Index := GetArrayLength(Md3Controls);
+  SetArrayLength(Md3Controls, Index + 1);
+  Md3Controls[Index].Wnd := List.Handle;
+  Md3Controls[Index].Tasks := List;
+  if Md3SetWindowSubclass(List.Handle, Md3ButtonCallback,
+    Md3ButtonSubclassId, Index + 1) = 0 then
+  begin
+    Md3Controls[Index].Wnd := 0;
+    Log('MD3: tasks subclass failed; keeping the native task list.');
+  end;
+  Md3InvalidateRect(List.Handle, 0, 0);
 end;
 
 procedure Md3FinalizeControls();

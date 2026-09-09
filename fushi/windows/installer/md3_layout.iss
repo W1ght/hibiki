@@ -154,8 +154,7 @@ begin
 
   Md3Text(WizardForm.SelectTasksLabel, 10, True);
   WizardForm.SelectTasksLabel.SetBounds(0, 0, BodyWidth, ScaleY(28));
-  WizardForm.TasksList.Font.Name := Md3UiFontName(WizardForm.TasksList.Font.Name);
-  WizardForm.TasksList.Font.Size := 10;
+  Md3PrepareTasks(WizardForm.TasksList);
   WizardForm.TasksList.MinItemHeight := ScaleY(30);
 
   Md3Text(WizardForm.ReadyLabel, 10, True);
@@ -195,6 +194,7 @@ begin
     Md3StepLabel.Caption := 'FUSHI  /  使用偏好';
     WizardForm.TasksList.SetBounds(0, ScaleY(44), WizardForm.SelectTasksPage.ClientWidth,
       WizardForm.SelectTasksPage.ClientHeight - ScaleY(44));
+    Md3StyleTasks(WizardForm.TasksList);
   end
   else if CurPageID = wpReady then
   begin
@@ -206,17 +206,16 @@ begin
     if Md3SummaryCard = nil then
     begin
       Md3SummaryCard := TPanel.Create(WizardForm);
-      Md3SummaryCard.Parent := WizardForm.ReadyPage;
       Md3SummaryCard.StyleElements := [];
       Md3SummaryCard.ParentBackground := False;
       Md3SummaryCard.BevelOuter := bvNone;
       Md3SummaryCard.Color := Md3SurfaceContainer;
       Md3SummaryCard.TabStop := False;
+      Md3SummaryCard.Parent := WizardForm.ReadyPage;
       WizardForm.ReadyMemo.Parent := Md3SummaryCard;
     end;
     Md3SummaryCard.SetBounds(0, ScaleY(40), WizardForm.ReadyPage.ClientWidth,
       WizardForm.ReadyPage.ClientHeight - ScaleY(40));
-    Md3StyleSurface(Md3SummaryCard, 12);
     WizardForm.ReadyMemo.StyleElements := [];
     WizardForm.ReadyMemo.BorderStyle := bsNone;
     WizardForm.ReadyMemo.Color := Md3SurfaceContainer;
@@ -227,6 +226,7 @@ begin
     WizardForm.ReadyMemo.SetBounds(ScaleX(16), ScaleY(14),
       Md3SummaryCard.Width - ScaleX(32), Md3SummaryCard.Height - ScaleY(28));
     WizardForm.ReadyMemo.Lines.Text := Summary;
+    Md3StyleSurface(Md3SummaryCard, 12);
   end
   else if CurPageID = wpInstalling then
     Md3StepLabel.Caption := 'FUSHI  /  正在安装'
