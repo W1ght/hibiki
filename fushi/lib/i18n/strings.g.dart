@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77095 (4535 per locale)
+/// Strings: 77112 (4536 per locale)
 ///
-/// Built on 2026-09-09 at 07:12 UTC
+/// Built on 2026-09-09 at 18:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6293,6 +6293,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   String get dialog_background_close => 'Close (task keeps running)';
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -16949,6 +16951,9 @@ class _StringsAr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -27832,6 +27837,9 @@ class _StringsDe extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -38769,6 +38777,9 @@ class _StringsEs extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -49740,6 +49751,9 @@ class _StringsFr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -60513,6 +60527,9 @@ class _StringsId extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -71378,6 +71395,9 @@ class _StringsIt extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -81624,6 +81644,9 @@ class _StringsJa extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -91880,6 +91903,9 @@ class _StringsKo extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -102702,6 +102728,9 @@ class _StringsNl extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -113577,6 +113606,9 @@ class _StringsPtBr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -124429,6 +124461,9 @@ class _StringsRu extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -135081,6 +135116,9 @@ class _StringsTh extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -145849,6 +145887,9 @@ class _StringsTr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -156588,6 +156629,9 @@ class _StringsVi extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -166451,6 +166495,9 @@ class _StringsZhCn extends _StringsEn {
       'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
   @override
   String get dialog_background_close => '关闭（任务继续在后台运行）';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
 }
 
 // Path: <root>
@@ -176383,6 +176430,9 @@ class _StringsZhHk extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 /// Flat map(s) containing all translations.
@@ -185713,6 +185763,8 @@ extension on _StringsEn {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -195038,6 +195090,8 @@ extension on _StringsAr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -204408,6 +204462,8 @@ extension on _StringsDe {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -213769,6 +213825,8 @@ extension on _StringsEs {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -223139,6 +223197,8 @@ extension on _StringsFr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -232480,6 +232540,8 @@ extension on _StringsId {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -241843,6 +241905,8 @@ extension on _StringsIt {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -251133,6 +251197,8 @@ extension on _StringsJa {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -260427,6 +260493,8 @@ extension on _StringsKo {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -269783,6 +269851,8 @@ extension on _StringsNl {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -279134,6 +279204,8 @@ extension on _StringsPtBr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -288492,6 +288564,8 @@ extension on _StringsRu {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -297822,6 +297896,8 @@ extension on _StringsTh {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -307167,6 +307243,8 @@ extension on _StringsTr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -316506,6 +316584,8 @@ extension on _StringsVi {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -325764,6 +325844,8 @@ extension on _StringsZhCn {
         return 'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
       case 'dialog_background_close':
         return '关闭（任务继续在后台运行）';
+      case 'audiobook_transcribe_alignment_hint':
+        return '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
       default:
         return null;
     }
@@ -335032,6 +335114,8 @@ extension on _StringsZhHk {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
