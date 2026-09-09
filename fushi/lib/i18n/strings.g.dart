@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77095 (4535 per locale)
+/// Strings: 77112 (4536 per locale)
 ///
-/// Built on 2026-09-09 at 07:12 UTC
+/// Built on 2026-09-09 at 08:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6293,6 +6293,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   String get dialog_background_close => 'Close (task keeps running)';
+  String get reader_timer_show => 'Show reading timer';
 }
 
 // Path: <root>
@@ -16949,6 +16950,8 @@ class _StringsAr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'إظهار مؤقت القراءة';
 }
 
 // Path: <root>
@@ -27832,6 +27835,8 @@ class _StringsDe extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Lesetimer anzeigen';
 }
 
 // Path: <root>
@@ -38769,6 +38774,8 @@ class _StringsEs extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Mostrar temporizador de lectura';
 }
 
 // Path: <root>
@@ -49740,6 +49747,8 @@ class _StringsFr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Afficher le minuteur de lecture';
 }
 
 // Path: <root>
@@ -60513,6 +60522,8 @@ class _StringsId extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Tampilkan pengatur waktu baca';
 }
 
 // Path: <root>
@@ -71378,6 +71389,8 @@ class _StringsIt extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Mostra timer di lettura';
 }
 
 // Path: <root>
@@ -81624,6 +81637,8 @@ class _StringsJa extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => '読書タイマーを表示';
 }
 
 // Path: <root>
@@ -91880,6 +91895,8 @@ class _StringsKo extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => '독서 타이머 표시';
 }
 
 // Path: <root>
@@ -102702,6 +102719,8 @@ class _StringsNl extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Leestimer tonen';
 }
 
 // Path: <root>
@@ -113577,6 +113596,8 @@ class _StringsPtBr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Mostrar cronômetro de leitura';
 }
 
 // Path: <root>
@@ -124429,6 +124450,8 @@ class _StringsRu extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Показывать таймер чтения';
 }
 
 // Path: <root>
@@ -135081,6 +135104,8 @@ class _StringsTh extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'แสดงตัวจับเวลาการอ่าน';
 }
 
 // Path: <root>
@@ -145849,6 +145874,8 @@ class _StringsTr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Okuma zamanlayıcısını göster';
 }
 
 // Path: <root>
@@ -156588,6 +156615,8 @@ class _StringsVi extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Hiển thị bộ đếm thời gian đọc';
 }
 
 // Path: <root>
@@ -166451,6 +166480,8 @@ class _StringsZhCn extends _StringsEn {
       'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
   @override
   String get dialog_background_close => '关闭（任务继续在后台运行）';
+  @override
+  String get reader_timer_show => '显示阅读计时器';
 }
 
 // Path: <root>
@@ -176383,6 +176414,8 @@ class _StringsZhHk extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => '顯示閱讀計時器';
 }
 
 /// Flat map(s) containing all translations.
@@ -185713,6 +185746,8 @@ extension on _StringsEn {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Show reading timer';
       default:
         return null;
     }
@@ -195038,6 +195073,8 @@ extension on _StringsAr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'إظهار مؤقت القراءة';
       default:
         return null;
     }
@@ -204408,6 +204445,8 @@ extension on _StringsDe {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Lesetimer anzeigen';
       default:
         return null;
     }
@@ -213769,6 +213808,8 @@ extension on _StringsEs {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Mostrar temporizador de lectura';
       default:
         return null;
     }
@@ -223139,6 +223180,8 @@ extension on _StringsFr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Afficher le minuteur de lecture';
       default:
         return null;
     }
@@ -232480,6 +232523,8 @@ extension on _StringsId {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Tampilkan pengatur waktu baca';
       default:
         return null;
     }
@@ -241843,6 +241888,8 @@ extension on _StringsIt {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Mostra timer di lettura';
       default:
         return null;
     }
@@ -251133,6 +251180,8 @@ extension on _StringsJa {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return '読書タイマーを表示';
       default:
         return null;
     }
@@ -260427,6 +260476,8 @@ extension on _StringsKo {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return '독서 타이머 표시';
       default:
         return null;
     }
@@ -269783,6 +269834,8 @@ extension on _StringsNl {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Leestimer tonen';
       default:
         return null;
     }
@@ -279134,6 +279187,8 @@ extension on _StringsPtBr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Mostrar cronômetro de leitura';
       default:
         return null;
     }
@@ -288492,6 +288547,8 @@ extension on _StringsRu {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Показывать таймер чтения';
       default:
         return null;
     }
@@ -297822,6 +297879,8 @@ extension on _StringsTh {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'แสดงตัวจับเวลาการอ่าน';
       default:
         return null;
     }
@@ -307167,6 +307226,8 @@ extension on _StringsTr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Okuma zamanlayıcısını göster';
       default:
         return null;
     }
@@ -316506,6 +316567,8 @@ extension on _StringsVi {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Hiển thị bộ đếm thời gian đọc';
       default:
         return null;
     }
@@ -325764,6 +325827,8 @@ extension on _StringsZhCn {
         return 'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
       case 'dialog_background_close':
         return '关闭（任务继续在后台运行）';
+      case 'reader_timer_show':
+        return '显示阅读计时器';
       default:
         return null;
     }
@@ -335032,6 +335097,8 @@ extension on _StringsZhHk {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return '顯示閱讀計時器';
       default:
         return null;
     }
