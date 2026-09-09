@@ -42,7 +42,8 @@
 - galgame 制卡：Flutter 侧 `fushi/lib/src/lookup/`（overlay 浮窗）+ `fushi/lib/src/mining/galgame_*`；C++ hook（injector + hook DLL + vendored LunaHook）在本仓 `native/galgame_hook/`。`tools/build_distribution.ps1` 单独构建两架构 helper zip，再由 `tools/install_into_bundle.ps1` 在**构建期**解压进 `fushi.exe` 同级 `voice_hook/<arch>/`（BUG-1449），与本体同一次构建产出、同一个安装包落地，运行期不下载任何组件。helper **不链接进 `fushi.exe`**，运行时仍是隔离子进程/DLL。
 - 浏览器扩展：`tools/browser-extension/`（注意是根级 `tools/`，与 `tool/` 不同目录）。
 - 动画刮削上游参考：`references/ShokoServer/`（官方 ShokoServer git submodule，只作只读架构参考，不参与本仓构建/运行）。
-- 工具脚本归属：根 `tool/` = `setup_worktree.ps1` / `bootstrap.ps1` / `bug.dart` / `check_release_policy.ps1` / `run_mac_itest.ps1`；`fushi/tool/` = `i18n_sync.dart` / `run_windows_itest.ps1` / `comprehensive_test_runner.dart`。
+- 工具脚本归属：根 `tool/` = `setup_worktree.ps1` / `bootstrap.ps1` / `bug.dart` / `check_release_policy.ps1` / `run_mac_itest.ps1`；`fushi/tool/` = `i18n_sync.dart` / `run_windows_itest.ps1` / `comprehensive_test_runner.dart` / `preview_installer.ps1`。
+- 改 Windows 安装器外观（`fushi/windows/installer/fushi.iss`）必须看像素，别靠读代码判断：`pwsh -File fushi/tool/preview_installer.ps1 -Pages 4 -ForceFreshInstall` 编译 + 逐页抓真实像素，一轮几秒，**全程离屏**（窗口挪出屏幕、BM_CLICK 翻页、PrintWindow 抓图，不抢前台不动鼠标）。验标题栏配色要加 `-RealScreen`（DWM 画的非客户区 PrintWindow 抓不准）。需要本机 Inno Setup 6.6+，缺了脚本会直接报出 CI 同版本的下载地址与 SHA-256。判「改好了」一律以截图为准——`.iss` 的样式改动大量是运行期行为，编译通过完全不代表画得出来。
 - 审查报告：`docs/reviews/YYYY-MM-DD-project-review.md`；已复现回归：`docs/REGRESSION_BUGS.md`（本地，不入库）；测试证据：`.codex-test/`（不入库）。
 
 ## 当前技术事实
