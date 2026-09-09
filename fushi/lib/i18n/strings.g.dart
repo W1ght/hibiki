@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77418 (4554 per locale)
+/// Strings: 77588 (4564 per locale)
 ///
-/// Built on 2026-09-09 at 11:01 UTC
+/// Built on 2026-09-09 at 11:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -368,13 +368,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_connect_use_on_mobile => 'Use AnkiConnect instead';
   String get anki_connect_use_on_mobile_hint =>
       'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
-  String get anki_create_lapis => 'Create Lapis deck';
+  String get anki_create_lapis => 'Create and use Lapis';
   String get anki_create_lapis_exists =>
       'Lapis note type and deck already exist — selected them.';
   String anki_create_lapis_failed({required Object error}) =>
       'Could not create Lapis deck: ${error}';
   String get anki_create_lapis_hint =>
-      'Adds the Lapis note type and a Lapis deck to Anki, then selects them.';
+      'Adds the Lapis note type and a Lapis deck to Anki, then selects them as the mining target.';
   String get anki_create_lapis_success => 'Lapis note type and deck created.';
   String get anki_deck => 'Deck';
   String get anki_dedup_auto => 'Automatic processing';
@@ -6305,6 +6305,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This collection isn\'t in any local video source\'s scrape plan';
   String get collection_rescrape_started => 'Rescrape queued';
   String get collection_rescrape_failed => 'Rescrape failed';
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  String download_batch_failed({required Object n}) => '${n} failed';
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  String get sync_err_pairing_rejected =>
+      'The paired device rejected this device\'s credentials — pair again to resume syncing.';
+  String get sync_err_not_paired =>
+      'No paired device yet — set up pairing in Fushi Interconnect first.';
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   String get reader_vn_settings => 'Visual novel settings';
   String get reader_vn_reveal_speed => 'Text reveal speed';
   String get reader_vn_reveal_instant => 'Instant';
@@ -16993,6 +17009,32 @@ class _StringsAr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'رفض الجهاز المقترن بيانات اعتماد هذا الجهاز — أعد الإقتران لاستئناف المزامنة.';
+  @override
+  String get sync_err_not_paired =>
+      'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
@@ -27918,6 +27960,32 @@ class _StringsDe extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Das gekoppelte Gerät hat die Anmeldedaten dieses Geräts abgelehnt — koppeln Sie erneut, um die Synchronisierung fortzusetzen.';
+  @override
+  String get sync_err_not_paired =>
+      'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
@@ -38897,6 +38965,32 @@ class _StringsEs extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'El dispositivo emparejado rechazó las credenciales de este dispositivo: vuelve a emparejarlo para reanudar la sincronización.';
+  @override
+  String get sync_err_not_paired =>
+      'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
@@ -49911,6 +50005,32 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'L\'appareil associé a refusé les identifiants de cet appareil — associez-le à nouveau pour reprendre la synchronisation.';
+  @override
+  String get sync_err_not_paired =>
+      'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
   String get reader_vn_reveal_speed => 'Text reveal speed';
@@ -60725,6 +60845,32 @@ class _StringsId extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Perangkat yang dipasangkan menolak kredensial perangkat ini — pasangkan ulang untuk melanjutkan sinkronisasi.';
+  @override
+  String get sync_err_not_paired =>
+      'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
@@ -71633,6 +71779,32 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Il dispositivo associato ha rifiutato le credenziali di questo dispositivo: esegui di nuovo l\'associazione per riprendere la sincronizzazione.';
+  @override
+  String get sync_err_not_paired =>
+      'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
   String get reader_vn_reveal_speed => 'Text reveal speed';
@@ -81920,6 +82092,32 @@ class _StringsJa extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'ペアリング済みの端末がこの端末の認証情報を拒否しました。同期を再開するには再度ペアリングしてください。';
+  @override
+  String get sync_err_not_paired =>
+      'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
@@ -92218,6 +92416,32 @@ class _StringsKo extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      '페어링된 기기가 이 기기의 자격 증명을 거부했습니다. 동기화를 재개하려면 다시 페어링하세요.';
+  @override
+  String get sync_err_not_paired =>
+      '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
@@ -103082,6 +103306,32 @@ class _StringsNl extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Het gekoppelde apparaat heeft de inloggegevens van dit apparaat geweigerd — koppel opnieuw om te blijven synchroniseren.';
+  @override
+  String get sync_err_not_paired =>
+      'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
@@ -114000,6 +114250,32 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'O dispositivo pareado rejeitou as credenciais deste dispositivo — pareie novamente para retomar a sincronização.';
+  @override
+  String get sync_err_not_paired =>
+      'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
   String get reader_vn_reveal_speed => 'Text reveal speed';
@@ -124894,6 +125170,32 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Сопряжённое устройство отклонило учётные данные этого устройства — выполните сопряжение заново, чтобы продолжить синхронизацию.';
+  @override
+  String get sync_err_not_paired =>
+      'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
   String get reader_vn_reveal_speed => 'Text reveal speed';
@@ -135587,6 +135889,32 @@ class _StringsTh extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'อุปกรณ์ที่จับคู่ไว้ปฏิเสธข้อมูลรับรองของเครื่องนี้ — โปรดจับคู่ใหม่เพื่อซิงค์ต่อ';
+  @override
+  String get sync_err_not_paired =>
+      'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
   @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
@@ -146398,6 +146726,32 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Eşleştirilmiş cihaz bu cihazın kimlik bilgilerini reddetti — eşitlemeye devam etmek için yeniden eşleştirin.';
+  @override
+  String get sync_err_not_paired =>
+      'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
   String get reader_vn_reveal_speed => 'Text reveal speed';
@@ -157179,6 +157533,32 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Thiết bị đã ghép nối từ chối thông tin xác thực của máy này — hãy ghép nối lại để tiếp tục đồng bộ.';
+  @override
+  String get sync_err_not_paired =>
+      'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
   String get reader_vn_reveal_speed => 'Text reveal speed';
@@ -157508,14 +157888,15 @@ class _StringsZhCn extends _StringsEn {
   String get anki_connect_use_on_mobile_hint =>
       '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
   @override
-  String get anki_create_lapis => '创建 Lapis 卡组';
+  String get anki_create_lapis => '创建并选用 Lapis';
   @override
   String get anki_create_lapis_exists => 'Lapis 笔记类型和卡组已存在，已选中。';
   @override
   String anki_create_lapis_failed({required Object error}) =>
       '无法创建 Lapis 卡组：${error}';
   @override
-  String get anki_create_lapis_hint => '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组并自动选中。';
+  String get anki_create_lapis_hint =>
+      '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组，并选为制卡目标。';
   @override
   String get anki_create_lapis_success => '已创建 Lapis 笔记类型和卡组。';
   @override
@@ -167082,6 +167463,28 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_rescrape_failed => '重新刮削失败';
   @override
+  String download_batch_done({required Object n}) => '已处理 ${n} 项';
+  @override
+  String download_batch_unsupported({required Object n}) => '${n} 项不支持此操作';
+  @override
+  String download_batch_failed({required Object n}) => '${n} 项失败';
+  @override
+  String download_batch_delete_confirm({required Object n}) => '删除 ${n} 个下载任务？';
+  @override
+  String get sync_err_pairing_rejected => '对方设备已拒绝本机的配对凭据，请重新配对后再同步。';
+  @override
+  String get sync_err_not_paired => '尚未配对任何设备，请先在「Fushi 互联」里完成配对。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki 报告 Lapis 牌组和笔记类型已创建，但回读时仍然找不到它们。请打开 Anki 确认它没有卡住，然后重试。';
+  @override
+  String get anki_lapis_suggest_title => '现在还制不出卡';
+  @override
+  String get anki_lapis_suggest_body =>
+      '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+  @override
+  String get anki_lapis_suggest_dismiss => '保持当前设置';
+  @override
   String get reader_vn_settings => '视觉小说设置';
   @override
   String get reader_vn_reveal_speed => '文字渐显速度';
@@ -167411,14 +167814,15 @@ class _StringsZhHk extends _StringsEn {
   String get anki_connect_use_on_mobile_hint =>
       '僅在可信網路中使用。AnkiConnect 使用明文 HTTP；請配置匹配的 API key，切換後再重新整理牌組與筆記類型。';
   @override
-  String get anki_create_lapis => '建立 Lapis 卡組';
+  String get anki_create_lapis => '建立並選用 Lapis';
   @override
   String get anki_create_lapis_exists => 'Lapis 筆記類型與卡組已存在，已為你選取。';
   @override
   String anki_create_lapis_failed({required Object error}) =>
       '無法建立 Lapis 卡組：${error}';
   @override
-  String get anki_create_lapis_hint => '向 Anki 加入 Lapis 筆記類型與 Lapis 卡組並自動選取。';
+  String get anki_create_lapis_hint =>
+      '向 Anki 加入 Lapis 筆記類型和 Lapis 卡組，並選為製卡目標。';
   @override
   String get anki_create_lapis_success => '已建立 Lapis 筆記類型與卡組。';
   @override
@@ -177054,6 +177458,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_rescrape_failed => '重新刮削失敗';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected => '對方裝置已拒絕本機的配對憑證，請重新配對後再同步。';
+  @override
+  String get sync_err_not_paired => '尚未配對任何裝置，請先在「Fushi 互聯」裡完成配對。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
   String get reader_vn_settings => 'Visual novel settings';
   @override
   String get reader_vn_reveal_speed => 'Text reveal speed';
@@ -177339,14 +177767,14 @@ extension on _StringsEn {
       case 'anki_connect_use_on_mobile_hint':
         return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
       case 'anki_create_lapis':
-        return 'Create Lapis deck';
+        return 'Create and use Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis note type and deck already exist — selected them.';
       case 'anki_create_lapis_failed':
         return ({required Object error}) =>
             'Could not create Lapis deck: ${error}';
       case 'anki_create_lapis_hint':
-        return 'Adds the Lapis note type and a Lapis deck to Anki, then selects them.';
+        return 'Adds the Lapis note type and a Lapis deck to Anki, then selects them as the mining target.';
       case 'anki_create_lapis_success':
         return 'Lapis note type and deck created.';
       case 'anki_deck':
@@ -186423,6 +186851,26 @@ extension on _StringsEn {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'The paired device rejected this device\'s credentials — pair again to resume syncing.';
+      case 'sync_err_not_paired':
+        return 'No paired device yet — set up pairing in Fushi Interconnect first.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -195787,6 +196235,26 @@ extension on _StringsAr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'رفض الجهاز المقترن بيانات اعتماد هذا الجهاز — أعد الإقتران لاستئناف المزامنة.';
+      case 'sync_err_not_paired':
+        return 'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -205196,6 +205664,26 @@ extension on _StringsDe {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Das gekoppelte Gerät hat die Anmeldedaten dieses Geräts abgelehnt — koppeln Sie erneut, um die Synchronisierung fortzusetzen.';
+      case 'sync_err_not_paired':
+        return 'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -214596,6 +215084,26 @@ extension on _StringsEs {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'El dispositivo emparejado rechazó las credenciales de este dispositivo: vuelve a emparejarlo para reanudar la sincronización.';
+      case 'sync_err_not_paired':
+        return 'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -224005,6 +224513,26 @@ extension on _StringsFr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'L\'appareil associé a refusé les identifiants de cet appareil — associez-le à nouveau pour reprendre la synchronisation.';
+      case 'sync_err_not_paired':
+        return 'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -233385,6 +233913,26 @@ extension on _StringsId {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Perangkat yang dipasangkan menolak kredensial perangkat ini — pasangkan ulang untuk melanjutkan sinkronisasi.';
+      case 'sync_err_not_paired':
+        return 'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -242787,6 +243335,26 @@ extension on _StringsIt {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Il dispositivo associato ha rifiutato le credenziali di questo dispositivo: esegui di nuovo l\'associazione per riprendere la sincronizzazione.';
+      case 'sync_err_not_paired':
+        return 'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -252116,6 +252684,26 @@ extension on _StringsJa {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'ペアリング済みの端末がこの端末の認証情報を拒否しました。同期を再開するには再度ペアリングしてください。';
+      case 'sync_err_not_paired':
+        return 'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -261449,6 +262037,26 @@ extension on _StringsKo {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return '페어링된 기기가 이 기기의 자격 증명을 거부했습니다. 동기화를 재개하려면 다시 페어링하세요.';
+      case 'sync_err_not_paired':
+        return '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -270844,6 +271452,26 @@ extension on _StringsNl {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Het gekoppelde apparaat heeft de inloggegevens van dit apparaat geweigerd — koppel opnieuw om te blijven synchroniseren.';
+      case 'sync_err_not_paired':
+        return 'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -280234,6 +280862,26 @@ extension on _StringsPtBr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'O dispositivo pareado rejeitou as credenciais deste dispositivo — pareie novamente para retomar a sincronização.';
+      case 'sync_err_not_paired':
+        return 'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -289631,6 +290279,26 @@ extension on _StringsRu {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Сопряжённое устройство отклонило учётные данные этого устройства — выполните сопряжение заново, чтобы продолжить синхронизацию.';
+      case 'sync_err_not_paired':
+        return 'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -299000,6 +299668,26 @@ extension on _StringsTh {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'อุปกรณ์ที่จับคู่ไว้ปฏิเสธข้อมูลรับรองของเครื่องนี้ — โปรดจับคู่ใหม่เพื่อซิงค์ต่อ';
+      case 'sync_err_not_paired':
+        return 'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -308384,6 +309072,26 @@ extension on _StringsTr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Eşleştirilmiş cihaz bu cihazın kimlik bilgilerini reddetti — eşitlemeye devam etmek için yeniden eşleştirin.';
+      case 'sync_err_not_paired':
+        return 'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -317762,6 +318470,26 @@ extension on _StringsVi {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Thiết bị đã ghép nối từ chối thông tin xác thực của máy này — hãy ghép nối lại để tiếp tục đồng bộ.';
+      case 'sync_err_not_paired':
+        return 'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
@@ -318043,13 +318771,13 @@ extension on _StringsZhCn {
       case 'anki_connect_use_on_mobile_hint':
         return '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
       case 'anki_create_lapis':
-        return '创建 Lapis 卡组';
+        return '创建并选用 Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis 笔记类型和卡组已存在，已选中。';
       case 'anki_create_lapis_failed':
         return ({required Object error}) => '无法创建 Lapis 卡组：${error}';
       case 'anki_create_lapis_hint':
-        return '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组并自动选中。';
+        return '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组，并选为制卡目标。';
       case 'anki_create_lapis_success':
         return '已创建 Lapis 笔记类型和卡组。';
       case 'anki_deck':
@@ -327058,6 +327786,26 @@ extension on _StringsZhCn {
         return '已开始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失败';
+      case 'download_batch_done':
+        return ({required Object n}) => '已处理 ${n} 项';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} 项不支持此操作';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} 项失败';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => '删除 ${n} 个下载任务？';
+      case 'sync_err_pairing_rejected':
+        return '对方设备已拒绝本机的配对凭据，请重新配对后再同步。';
+      case 'sync_err_not_paired':
+        return '尚未配对任何设备，请先在「Fushi 互联」里完成配对。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki 报告 Lapis 牌组和笔记类型已创建，但回读时仍然找不到它们。请打开 Anki 确认它没有卡住，然后重试。';
+      case 'anki_lapis_suggest_title':
+        return '现在还制不出卡';
+      case 'anki_lapis_suggest_body':
+        return '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+      case 'anki_lapis_suggest_dismiss':
+        return '保持当前设置';
       case 'reader_vn_settings':
         return '视觉小说设置';
       case 'reader_vn_reveal_speed':
@@ -327339,13 +328087,13 @@ extension on _StringsZhHk {
       case 'anki_connect_use_on_mobile_hint':
         return '僅在可信網路中使用。AnkiConnect 使用明文 HTTP；請配置匹配的 API key，切換後再重新整理牌組與筆記類型。';
       case 'anki_create_lapis':
-        return '建立 Lapis 卡組';
+        return '建立並選用 Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis 筆記類型與卡組已存在，已為你選取。';
       case 'anki_create_lapis_failed':
         return ({required Object error}) => '無法建立 Lapis 卡組：${error}';
       case 'anki_create_lapis_hint':
-        return '向 Anki 加入 Lapis 筆記類型與 Lapis 卡組並自動選取。';
+        return '向 Anki 加入 Lapis 筆記類型和 Lapis 卡組，並選為製卡目標。';
       case 'anki_create_lapis_success':
         return '已建立 Lapis 筆記類型與卡組。';
       case 'anki_deck':
@@ -336365,6 +337113,26 @@ extension on _StringsZhHk {
         return '已開始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失敗';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return '對方裝置已拒絕本機的配對憑證，請重新配對後再同步。';
+      case 'sync_err_not_paired':
+        return '尚未配對任何裝置，請先在「Fushi 互聯」裡完成配對。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       case 'reader_vn_settings':
         return 'Visual novel settings';
       case 'reader_vn_reveal_speed':
