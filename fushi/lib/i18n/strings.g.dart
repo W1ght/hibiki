@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76976 (4528 per locale)
+/// Strings: 77010 (4530 per locale)
 ///
-/// Built on 2026-09-09 at 05:27 UTC
+/// Built on 2026-09-09 at 05:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6281,6 +6281,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The source returned invalid torrent data. Retry later or choose another source.';
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  String get profile_language_bindings => 'Language bindings';
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -16918,6 +16921,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -27782,6 +27790,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -38700,6 +38713,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -49652,6 +49670,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -60406,6 +60429,11 @@ class _StringsId extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -71252,6 +71280,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -81479,6 +81512,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -91716,6 +91754,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -102519,6 +102562,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -113375,6 +113423,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -124208,6 +124261,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -134841,6 +134899,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -145590,6 +145653,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -156310,6 +156378,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 // Path: <root>
@@ -166154,6 +166227,11 @@ class _StringsZhCn extends _StringsEn {
   String get download_torrent_invalid => '来源返回的种子数据无效。请稍后重试或更换来源。';
   @override
   String get download_torrent_selection_failed => '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
+  @override
+  String get profile_language_bindings => '语言绑定';
+  @override
+  String get profile_language_bindings_hint =>
+      '在条目已标注内容语言时生效。EPUB 会自动读取文件里的声明；其它格式需要在条目上手动指定。';
 }
 
 // Path: <root>
@@ -176067,6 +176145,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get profile_language_bindings => 'Language bindings';
+  @override
+  String get profile_language_bindings_hint =>
+      'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
 }
 
 /// Flat map(s) containing all translations.
@@ -185383,6 +185466,10 @@ extension on _StringsEn {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -194694,6 +194781,10 @@ extension on _StringsAr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -204050,6 +204141,10 @@ extension on _StringsDe {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -213397,6 +213492,10 @@ extension on _StringsEs {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -222753,6 +222852,10 @@ extension on _StringsFr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -232080,6 +232183,10 @@ extension on _StringsId {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -241429,6 +241536,10 @@ extension on _StringsIt {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -250705,6 +250816,10 @@ extension on _StringsJa {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -259985,6 +260100,10 @@ extension on _StringsKo {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -269327,6 +269446,10 @@ extension on _StringsNl {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -278664,6 +278787,10 @@ extension on _StringsPtBr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -288008,6 +288135,10 @@ extension on _StringsRu {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -297324,6 +297455,10 @@ extension on _StringsTh {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -306655,6 +306790,10 @@ extension on _StringsTr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -315980,6 +316119,10 @@ extension on _StringsVi {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
@@ -325224,6 +325367,10 @@ extension on _StringsZhCn {
         return '来源返回的种子数据无效。请稍后重试或更换来源。';
       case 'download_torrent_selection_failed':
         return '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
+      case 'profile_language_bindings':
+        return '语言绑定';
+      case 'profile_language_bindings_hint':
+        return '在条目已标注内容语言时生效。EPUB 会自动读取文件里的声明；其它格式需要在条目上手动指定。';
       default:
         return null;
     }
@@ -334478,6 +334625,10 @@ extension on _StringsZhHk {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'profile_language_bindings':
+        return 'Language bindings';
+      case 'profile_language_bindings_hint':
+        return 'Applies when an item has its content language set. EPUB books read it from the file; for other formats set it on the item itself.';
       default:
         return null;
     }
