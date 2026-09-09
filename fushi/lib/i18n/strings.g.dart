@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77095 (4535 per locale)
+/// Strings: 77078 (4534 per locale)
 ///
-/// Built on 2026-09-09 at 07:12 UTC
+/// Built on 2026-09-09 at 08:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4444,7 +4444,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_favorited => 'Favorited';
   String get stat_favorited_sentence => 'Favorited sentences';
   String stat_format_chars({required Object n}) => '${n} characters';
-  String stat_format_chars_wan({required Object n}) => '${n}万 characters';
   String stat_format_days({required Object n}) => '${n} days';
   String stat_format_hours_minutes({required Object h, required Object m}) =>
       '${h} hr ${m} min';
@@ -13728,8 +13727,6 @@ class _StringsAr extends _StringsEn {
   String get stat_favorited_sentence => 'الجمل المفضلة';
   @override
   String stat_format_chars({required Object n}) => '${n} حرف';
-  @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 حرف';
   @override
   String stat_format_days({required Object n}) => '${n} أيام';
   @override
@@ -24543,8 +24540,6 @@ class _StringsDe extends _StringsEn {
   String get stat_favorited_sentence => 'Favorisierte Sätze';
   @override
   String stat_format_chars({required Object n}) => '${n} Zeichen';
-  @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 Zeichen';
   @override
   String stat_format_days({required Object n}) => '${n} Tage';
   @override
@@ -35457,8 +35452,6 @@ class _StringsEs extends _StringsEn {
   String get stat_favorited_sentence => 'Frases favoritas';
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
-  @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
   @override
   String stat_format_days({required Object n}) => '${n} días';
   @override
@@ -46416,8 +46409,6 @@ class _StringsFr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caractères';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 caractères';
-  @override
   String stat_format_days({required Object n}) => '${n} jours';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -57256,8 +57247,6 @@ class _StringsId extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
-  @override
   String stat_format_days({required Object n}) => '${n} hari';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -68094,8 +68083,6 @@ class _StringsIt extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caratteri';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 caratteri';
-  @override
   String stat_format_days({required Object n}) => '${n} giorni';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -78537,8 +78524,6 @@ class _StringsJa extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} 文字';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} 万字';
-  @override
   String stat_format_days({required Object n}) => '${n}日';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -88785,8 +88770,6 @@ class _StringsKo extends _StringsEn {
   String get stat_favorited_sentence => '즐겨찾기한 문장';
   @override
   String stat_format_chars({required Object n}) => '${n}자';
-  @override
-  String stat_format_chars_wan({required Object n}) => '${n}만자';
   @override
   String stat_format_days({required Object n}) => '${n}일';
   @override
@@ -99427,8 +99410,6 @@ class _StringsNl extends _StringsEn {
   String get stat_favorited_sentence => 'Favoriete zinnen';
   @override
   String stat_format_chars({required Object n}) => '${n} tekens';
-  @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 tekens';
   @override
   String stat_format_days({required Object n}) => '${n} dagen';
   @override
@@ -110282,8 +110263,6 @@ class _StringsPtBr extends _StringsEn {
   String get stat_favorited_sentence => 'Frases favoritadas';
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
-  @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
   @override
   String stat_format_days({required Object n}) => '${n} dias';
   @override
@@ -121141,8 +121120,6 @@ class _StringsRu extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} символов';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 символов';
-  @override
   String stat_format_days({required Object n}) => '${n} дн.';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -131857,8 +131834,6 @@ class _StringsTh extends _StringsEn {
   String get stat_favorited_sentence => 'ประโยคที่ชื่นชอบ';
   @override
   String stat_format_chars({required Object n}) => '${n} ตัวอักษร';
-  @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 ตัวอักษร';
   @override
   String stat_format_days({required Object n}) => '${n} วัน';
   @override
@@ -142593,8 +142568,6 @@ class _StringsTr extends _StringsEn {
   String get stat_favorited_sentence => 'Sık kullanılan cümleler';
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
-  @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
   @override
   String stat_format_days({required Object n}) => '${n} gün';
   @override
@@ -153349,8 +153322,6 @@ class _StringsVi extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ký tự';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 ký tự';
-  @override
   String stat_format_days({required Object n}) => '${n} ngày';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -163480,8 +163451,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} 字';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} 万字';
-  @override
   String stat_format_days({required Object n}) => '${n} 天';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -173389,8 +173358,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} 字';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} 萬字';
-  @override
   String stat_format_days({required Object n}) => '${n} 天';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -182899,8 +182866,6 @@ extension on _StringsEn {
         return 'Favorited sentences';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} characters';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 characters';
       case 'stat_format_days':
         return ({required Object n}) => '${n} days';
       case 'stat_format_hours_minutes':
@@ -192225,8 +192190,6 @@ extension on _StringsAr {
         return 'الجمل المفضلة';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} حرف';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 حرف';
       case 'stat_format_days':
         return ({required Object n}) => '${n} أيام';
       case 'stat_format_hours_minutes':
@@ -201583,8 +201546,6 @@ extension on _StringsDe {
         return 'Favorisierte Sätze';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} Zeichen';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 Zeichen';
       case 'stat_format_days':
         return ({required Object n}) => '${n} Tage';
       case 'stat_format_hours_minutes':
@@ -210946,8 +210907,6 @@ extension on _StringsEs {
         return 'Frases favoritas';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 caracteres';
       case 'stat_format_days':
         return ({required Object n}) => '${n} días';
       case 'stat_format_hours_minutes':
@@ -220312,8 +220271,6 @@ extension on _StringsFr {
         return 'Phrases favorites';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caractères';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 caractères';
       case 'stat_format_days':
         return ({required Object n}) => '${n} jours';
       case 'stat_format_hours_minutes':
@@ -229663,8 +229620,6 @@ extension on _StringsId {
         return 'Kalimat difavoritkan';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 karakter';
       case 'stat_format_days':
         return ({required Object n}) => '${n} hari';
       case 'stat_format_hours_minutes':
@@ -239015,8 +238970,6 @@ extension on _StringsIt {
         return 'Frasi preferite';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caratteri';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 caratteri';
       case 'stat_format_days':
         return ({required Object n}) => '${n} giorni';
       case 'stat_format_hours_minutes':
@@ -248338,8 +248291,6 @@ extension on _StringsJa {
         return 'お気に入りの文';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} 文字';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} 万字';
       case 'stat_format_days':
         return ({required Object n}) => '${n}日';
       case 'stat_format_hours_minutes':
@@ -257630,8 +257581,6 @@ extension on _StringsKo {
         return '즐겨찾기한 문장';
       case 'stat_format_chars':
         return ({required Object n}) => '${n}자';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}만자';
       case 'stat_format_days':
         return ({required Object n}) => '${n}일';
       case 'stat_format_hours_minutes':
@@ -266961,8 +266910,6 @@ extension on _StringsNl {
         return 'Favoriete zinnen';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} tekens';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 tekens';
       case 'stat_format_days':
         return ({required Object n}) => '${n} dagen';
       case 'stat_format_hours_minutes':
@@ -276314,8 +276261,6 @@ extension on _StringsPtBr {
         return 'Frases favoritadas';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 caracteres';
       case 'stat_format_days':
         return ({required Object n}) => '${n} dias';
       case 'stat_format_hours_minutes':
@@ -285672,8 +285617,6 @@ extension on _StringsRu {
         return 'Избранные предложения';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} символов';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 символов';
       case 'stat_format_days':
         return ({required Object n}) => '${n} дн.';
       case 'stat_format_hours_minutes':
@@ -295008,8 +294951,6 @@ extension on _StringsTh {
         return 'ประโยคที่ชื่นชอบ';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ตัวอักษร';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 ตัวอักษร';
       case 'stat_format_days':
         return ({required Object n}) => '${n} วัน';
       case 'stat_format_hours_minutes':
@@ -304347,8 +304288,6 @@ extension on _StringsTr {
         return 'Sık kullanılan cümleler';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 karakter';
       case 'stat_format_days':
         return ({required Object n}) => '${n} gün';
       case 'stat_format_hours_minutes':
@@ -313692,8 +313631,6 @@ extension on _StringsVi {
         return 'Câu đã yêu thích';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ký tự';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 ký tự';
       case 'stat_format_days':
         return ({required Object n}) => '${n} ngày';
       case 'stat_format_hours_minutes':
@@ -322982,8 +322919,6 @@ extension on _StringsZhCn {
         return '收藏语句';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} 字';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} 万字';
       case 'stat_format_days':
         return ({required Object n}) => '${n} 天';
       case 'stat_format_hours_minutes':
@@ -332247,8 +332182,6 @@ extension on _StringsZhHk {
         return '收藏的句子';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} 字';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} 萬字';
       case 'stat_format_days':
         return ({required Object n}) => '${n} 天';
       case 'stat_format_hours_minutes':
