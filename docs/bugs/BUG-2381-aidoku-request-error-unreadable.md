@@ -1,4 +1,4 @@
-## BUG-2332 · Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断
+## BUG-2381 · Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断
 - **报告**：2026-09-09（用户：iPhone 上打开 Aidoku 的 MangaDex 源，`AidokuRuntimeException(RUNTIME_FAILED): Aidoku source returned error code -3: Error: RequestError(RequestError)` / `network: GET https://api.mangadex.org/manga -> error sending request`）
 - **真实性**：✅ 真 bug（诊断链路缺陷 + 中继单例不可自愈）。报错本身**无法**定位到具体失败原因，因为原因在两层被分别丢弃：
   - `native/aidoku_runtime/src/embedded.rs:807`（旧）只插值 `error.without_url()`。`reqwest::Error` 的 `Display` 只打错误**类别**：`Kind::Request` 一个词 "error sending request" 同时覆盖 DNS 失败、TCP 拒绝、本地中继隧道被拒、TLS 握手失败和 30s 默认超时，真正原因全在 `source()` 链里，被丢掉了。

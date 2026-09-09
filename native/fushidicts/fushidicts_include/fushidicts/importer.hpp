@@ -19,6 +19,9 @@ struct ImportResult {
 struct SimpleEntry {
   std::string headword;
   std::string definition;
+  // Only a source-format redirect (MDX @@@LINK= / StarDict .syn) supplies this.
+  // Equal definition text alone never establishes an alias relationship.
+  std::string redirect_target;
 };
 
 namespace dictionary_importer {

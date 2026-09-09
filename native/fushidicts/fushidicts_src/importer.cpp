@@ -20,6 +20,7 @@
 #include <map>
 #include <memory>
 #include <optional>
+#include <random>
 #include <sstream>
 #include <stdexcept>
 #include <string>
@@ -35,6 +36,7 @@
 #include "stardict/stardict_reader.hpp"
 #include "util/fs_utf8.hpp"
 #include "util/import_breadcrumb.hpp"
+#include "util/redirect_metadata.hpp"
 #include "zip/zip.hpp"
 
 #include "fushidicts/platform.hpp"
@@ -1091,6 +1093,8 @@ struct SimpleDictSink {
   std::string title;  // sanitized
   std::string path;
   std::ofstream blobs;
+  std::ofstream redirects;
+  fushi::redirect_metadata::ImportId import_id;
 };
 
 // Incremental builder for the simple-dictionary (MDX / StarDict / DSL) record
@@ -1110,7 +1114,8 @@ class SimpleEntryAccumulator {
   // makes peak memory scale with the entry COUNT rather than with the
   // dictionary's total text -- the 389 MB sample expands to 8.6 GB of HTML,
   // whose compressed form alone is 1.24 GB.
-  explicit SimpleEntryAccumulator(std::ostream& blobs) : blobs_(blobs), cctx_(ZSTD_createCCtx()) {}
+  SimpleEntryAccumulator(std::ostream& blobs, std::ostream& redirects)
+      : blobs_(blobs), redirects_(redirects), cctx_(ZSTD_createCCtx()) {}
   ~SimpleEntryAccumulator() {
     if (cctx_) ZSTD_freeCCtx(cctx_);
   }
@@ -1130,7 +1135,7 @@ class SimpleEntryAccumulator {
   // Returns false once a whole-dictionary cap is hit; the caller should stop
   // feeding, and anything fed afterwards is ignored. An entry rejected on its
   // own merits (oversized glossary or headword) is skipped but returns true.
-  bool add(std::string_view headword, std::string_view glossary) {
+  bool add(std::string_view headword, std::string_view glossary, std::string_view redirect_target = {}) {
     if (!cctx_ || stopped_) return false;
 
     if (records_.data.size() > kMaxDataBufferBytes) {
@@ -1162,9 +1167,8 @@ class SimpleEntryAccumulator {
       return true;
     }
 
-    // Identical glossaries share one blob, which is what collapses @@@LINK=
-    // aliases onto their lemma (BUG-1665). The dedup table now holds a
-    // (offset, size) pair instead of the compressed bytes.
+    // Identical glossaries share storage, regardless of whether either record
+    // is a redirect. Alias provenance is stored separately per term record.
     uint64_t glossary_hash = XXH3_64bits(glossary.data(), glossary.size());
     auto it = blob_of_.find(glossary_hash);
     if (it == blob_of_.end()) {
@@ -1203,6 +1207,16 @@ class SimpleEntryAccumulator {
     write_val<uint8_t>(records_.data, static_cast<uint8_t>('*'));
     write_val<uint8_t>(records_.data, 0);  // term_tags_len = 0
 
+    // Stream provenance too: redirect-heavy MDX files must not retain another
+    // whole dictionary of target strings in memory. Offsets are relative to the
+    // record region, whose final base is filled into the sidecar header later.
+    if (!redirect_target.empty() && redirect_target.size() <= std::numeric_limits<uint16_t>::max()) {
+      const auto target_size = static_cast<uint16_t>(redirect_target.size());
+      redirects_.write(reinterpret_cast<const char*>(&offset), sizeof(offset));
+      redirects_.write(reinterpret_cast<const char*>(&target_size), sizeof(target_size));
+      redirects_.write(redirect_target.data(), static_cast<std::streamsize>(redirect_target.size()));
+    }
+
     records_.offsets.emplace_back(XXH3_64bits(headword.data(), headword.size()), offset);
     records_.count++;
     return true;
@@ -1221,6 +1235,7 @@ class SimpleEntryAccumulator {
   };
 
   std::ostream& blobs_;
+  std::ostream& redirects_;
   ankerl::unordered_dense::map<uint64_t, BlobRef> blob_of_;
   SimpleDictRecords records_;
   ZSTD_CCtx* cctx_ = nullptr;
@@ -1458,9 +1473,9 @@ ImportResult import_mdx(const std::string& mdx_path, const std::string& output_d
     std::optional<SimpleEntryAccumulator> accumulator;
     bool capped = false;
 
-    mdx_reader::parse_streaming(
+    mdx_reader::parse_streaming_with_redirects(
         mapped.data, mapped.size,
-        [&](std::string&& key, std::string&& definition) {
+        [&](std::string&& key, std::string&& definition, std::string_view redirect_target) {
           // A whole-dictionary cap latches here the same way the vector entry
           // point breaks out of its loop, so both stop admitting entries at the
           // same point instead of one silently carrying on.
@@ -1471,7 +1486,7 @@ ImportResult import_mdx(const std::string& mdx_path, const std::string& output_d
           if (css_scan_sample.size() < kCssScanEntryLimit) {
             css_scan_sample.push_back({key, definition});
           }
-          if (!accumulator->add(key, definition)) capped = true;
+          if (!accumulator->add(key, definition, redirect_target)) capped = true;
         },
         [&](const MdxMeta& meta) {
           std::string title =
@@ -1482,7 +1497,7 @@ ImportResult import_mdx(const std::string& mdx_path, const std::string& output_d
           sanitized = sanitize_title(title);
           result.title = sanitized;
           sink.emplace(open_simple_dict(title, output_dir));
-          accumulator.emplace(sink->blobs);
+          accumulator.emplace(sink->blobs, sink->redirects);
           accumulator->reserve(meta.entry_count);
         });
 
@@ -1661,7 +1676,7 @@ ImportResult import_stardict(const std::string& ifo_path, const std::string& out
   std::vector<SimpleEntry> entries;
   entries.reserve(sd.entries.size());
   for (auto& e : sd.entries) {
-    entries.push_back({std::move(e.word), std::move(e.definition)});
+    entries.push_back({std::move(e.word), std::move(e.definition), std::move(e.redirect_target)});
   }
 
   return dictionary_importer::write_simple_dict(sd.bookname, entries, output_dir);
@@ -1990,9 +2005,9 @@ ImportResult dictionary_importer::write_simple_dict(const std::string& title, co
     result.title = sanitized;
     SimpleDictSink sink = open_simple_dict(title, output_dir);
 
-    SimpleEntryAccumulator accumulator(sink.blobs);
+    SimpleEntryAccumulator accumulator(sink.blobs, sink.redirects);
     for (const auto& entry : entries) {
-      if (!accumulator.add(entry.headword, entry.definition)) break;
+      if (!accumulator.add(entry.headword, entry.definition, entry.redirect_target)) break;
     }
     finish_simple_dict(sink, accumulator.finish(), styles_css, result);
     result.success = true;
@@ -2017,6 +2032,8 @@ namespace {
 SimpleDictSink open_simple_dict(const std::string& title, const std::string& output_dir) {
   SimpleDictSink sink;
   sink.title = sanitize_title(title);
+  std::random_device random;
+  for (auto& part : sink.import_id) part = random();
 
   std::filesystem::path dict_path = fushi::fs_path(output_dir) / fushi::fs_path(sink.title);
   {
@@ -2047,6 +2064,13 @@ SimpleDictSink open_simple_dict(const std::string& title, const std::string& out
 
   sink.blobs.open(fushi::fs_path(sink.path + "/blobs.bin"), std::ios::binary);
   setup_stream_exceptions(sink.blobs);
+  sink.redirects.open(fushi::fs_path(sink.path) / fushi::redirect_metadata::kFilename, std::ios::binary);
+  setup_stream_exceptions(sink.redirects);
+  sink.redirects.write(fushi::redirect_metadata::kMagic.data(), fushi::redirect_metadata::kMagic.size());
+  sink.redirects.write(reinterpret_cast<const char*>(sink.import_id.data()), sizeof(sink.import_id));
+  const uint64_t placeholder = 0;
+  sink.redirects.write(reinterpret_cast<const char*>(&placeholder), sizeof(placeholder));
+  sink.redirects.write(reinterpret_cast<const char*>(&placeholder), sizeof(placeholder));
   return sink;
 }
 
@@ -2098,7 +2122,21 @@ void finish_simple_dict(SimpleDictSink& sink, SimpleDictRecords&& records_in, co
   sink.blobs.write(offset_buf.data(), static_cast<std::streamsize>(offset_buf.size()));
   hash_thread.get();
 
+  const uint64_t blobs_size = write_offset;
+  sink.redirects.seekp(fushi::redirect_metadata::kMagic.size() + fushi::redirect_metadata::kImportIdSize);
+  sink.redirects.write(reinterpret_cast<const char*>(&records.blob_region_size), sizeof(records.blob_region_size));
+  sink.redirects.write(reinterpret_cast<const char*>(&blobs_size), sizeof(blobs_size));
+  sink.redirects.close();
+
   std::ofstream sui(fushi::fs_path(path + "/.fushidicts_1"), std::ios::binary);
+  setup_stream_exceptions(sui);
+  sui.write(fushi::redirect_metadata::kMagic.data(), fushi::redirect_metadata::kMagic.size());
+  sui.write(reinterpret_cast<const char*>(sink.import_id.data()), sizeof(sink.import_id));
+  sui.close();
+  // A legacy package restored over this directory carries its own old marker.
+  // Remove it only after this new import has completed; readers treat both
+  // markers together as lacking trustworthy redirect provenance.
+  std::filesystem::remove(fushi::fs_path(path + "/.hoshidicts_1"));
 }
 
 }  // namespace

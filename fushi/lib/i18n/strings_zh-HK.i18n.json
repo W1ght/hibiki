@@ -4520,5 +4520,6 @@
   "yomitan_port_kill_confirm_title": "結束佔用端口 $port 的進程？",
   "yomitan_port_kill_failed": "無法結束 $process，請手動結束該進程後重試。",
   "yomitan_port_kill_protected": "$process 是關鍵系統進程，Fushi 不會結束它；請改用其他端口。",
-  "yomitan_port_kill_self_instance": "該進程是本應用的另一個正在運行的實例。"
+  "yomitan_port_kill_self_instance": "該進程是本應用的另一個正在運行的實例。",
+  "dictionary_files_missing": "Dictionary files are missing. Please import the dictionary again."
 }

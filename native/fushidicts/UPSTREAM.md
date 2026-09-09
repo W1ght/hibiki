@@ -70,6 +70,13 @@
 - FFI：`FfiKanjiResult` 追加 `stat_keys/stat_values/stat_count`（native+Dart 同 commit 镜像，照 918744d transcriptions 先例双层 malloc/free）；其余 ABI 零变化。
 - 守卫：`tests/format_v2_upstream_sync_test.cpp`（v2 marker/stats 读回/marker 拒载/bloom 截断降级/zstd 往返/pitch pattern 容忍）+ `tests/text_processor_test.cpp` 新增 processor 用例。
 
+**真实重定向来源（BUG-2386，2026-09-09，本地实现）：**
+- MDX `@@@LINK=` 与 StarDict `.syn` 导入时，将每条记录的最终目标词头写入可选 `redirects.bin`；普通同释义词条不产生重定向记录。不改变 v1/v2 的 `blobs.bin` 布局、marker 文件名或 FFI。
+- sidecar 与 `.fushidicts_1` 的内容携带同一随机导入 ID。旧引擎只查 marker 存在性，仍可读取新盘；新引擎要求 ID 匹配且没有旧 `.hoshidicts_1` marker，防止覆盖解压旧同步包后误用残留 sidecar。
+- sidecar 的规格由 `fushidicts_src/util/redirect_metadata.hpp` 定义；读取只应用于 simple-dictionary v1。缺失、截断或校验失败时不折叠别名，不影响词典查询。
+- 查词折叠要求明确目标与当前 lemma 一致，且来自同一词典、共享目标释义。旧词典未记录来源时保留直接命中；希望恢复英文真别名折叠的用户需重导 MDX/StarDict。不能再仅凭 blob 相同推测关系。
+- 两个 fork 的版本号不构成二进制兼容承诺：Niratan 当前上游 `.hoshidicts_2` 的 term 扩展与本 fork `.fushidicts_2` 不同，不可改 marker 或直接互拷 v2 数据。
+
 **批4 明确跳过 / 剩余项（批4 二轮已把「没坏处」的暂缓项全部补齐；下表为终态）：**
 
 | 上游 commit | 标题 | 处置 | 理由/重估条件 |

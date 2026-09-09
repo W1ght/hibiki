@@ -28,7 +28,7 @@ String redactAppNativeProxySecrets(String value) {
 /// 于是「域名解析不了 / TCP 被拒 / 上游代理拒绝 CONNECT / 20 秒连接超时」四种
 /// 完全不同的故障，在 Rust 侧长得一模一样。中继这边是唯一知道真实原因的地方，
 /// 以前 `_serve` 的 catch-all 把它连同异常一起丢掉，两层各抹一半，最终用户只
-/// 看到 `error sending request`（BUG-2332）。
+/// 看到 `error sending request`（BUG-2381）。
 void Function(String message) appNativeProxyLogSink = debugPrint;
 
 /// Native HTTP engines cannot call Dart's per-URL proxy resolver. A loopback
@@ -59,7 +59,7 @@ Future<Uri> ensureAppChallengeProxyEndpoint() async =>
 /// 「一次坏、永久坏，只能重启 app」——① 监听 socket 被系统回收（iOS 把 app
 /// 挂起后就可能收走监听 socket，恢复后端口还在缓存里，native 客户端每次都撞
 /// connection refused）；② 首次 `bind` 失败，那个**已失败**的 Future 被永久
-/// 缓存，后面每次调用都重抛同一个旧异常，连重试的机会都没有（BUG-2332）。
+/// 缓存，后面每次调用都重抛同一个旧异常，连重试的机会都没有（BUG-2381）。
 ///
 /// 新 Future 在 await 之前就写回缓存，并发调用因此仍然只启一个中继。
 Future<AppNativeProxy> _liveProxy(

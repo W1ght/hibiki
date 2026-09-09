@@ -7,6 +7,7 @@
 struct StardictEntry {
   std::string word;
   std::string definition;
+  std::string redirect_target;
 };
 
 struct StardictResult {

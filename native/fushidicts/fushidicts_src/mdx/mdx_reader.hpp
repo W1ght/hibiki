@@ -3,11 +3,13 @@
 #include <cstdint>
 #include <functional>
 #include <string>
+#include <string_view>
 #include <vector>
 
 struct MdxEntry {
   std::string key;
   std::string definition;
+  std::string redirect_target;
 };
 
 struct MdxResult {
@@ -40,6 +42,10 @@ struct MddEntry {
 namespace mdx_reader {
 // Invoked once per entry, in key order, with ownership of both strings.
 using EntrySink = std::function<void(std::string&& key, std::string&& definition)>;
+// Resolved @@@LINK= entries carry the final non-redirect target's headword;
+// ordinary or unresolved entries carry an empty target.
+using RedirectEntrySink =
+    std::function<void(std::string&& key, std::string&& definition, std::string_view redirect_target)>;
 
 // Invoked once, after the header and key table are decoded but BEFORE any entry
 // is emitted. Callers that must create the output dictionary up front -- so
@@ -56,6 +62,8 @@ using MetaSink = std::function<void(const MdxMeta&)>;
 // their targets and arrive afterwards. Order is not otherwise meaningful -- the
 // importer indexes entries by headword hash.
 MdxMeta parse_streaming(const uint8_t* data, size_t size, const EntrySink& sink, const MetaSink& on_meta = {});
+MdxMeta parse_streaming_with_redirects(const uint8_t* data, size_t size, const RedirectEntrySink& sink,
+                                     const MetaSink& on_meta = {});
 
 // Whole-dictionary convenience wrapper over parse_streaming. Holds every entry
 // in memory; prefer parse_streaming for anything user-supplied.

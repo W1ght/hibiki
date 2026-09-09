@@ -113,7 +113,12 @@ add_fushi_test(korean_hangul_lookup_test korean_hangul_lookup_test.cpp
 # BUG-1665: an MDX @@@LINK= redirect entry (definition bytes copied from its
 # lemma at import) must collapse into the lemma at lookup time, so the popup
 # header / mined Anki term is the dictionary form, not the inflected surface.
-add_fushi_test(mdx_redirect_lemma_lookup_test mdx_redirect_lemma_lookup_test.cpp)
+# BUG-2386: only proven aliases may collapse; equal definitions are independent
+# entries unless the importer recorded the redirect's actual target.
+add_fushi_test(mdx_redirect_lemma_lookup_test mdx_redirect_lemma_lookup_test.cpp
+    "${FUSHI_ROOT}/fushidicts_external/libdeflate")
+target_compile_definitions(mdx_redirect_lemma_lookup_test PRIVATE
+    "FUSHI_JA_TRANSFORMS=\"${FUSHI_ROOT}/../../fushi/assets/transforms/ja.json\"")
 
 # BUG-2056: 英文缩合形/所有格的**闭环** e2e。扫描层把 don’t 整词送进来只是半条链；
 # en.json 的撇号规则与词典条目键都是 ASCII，U+2019 又没有 NFKC 兼容分解，所以还得

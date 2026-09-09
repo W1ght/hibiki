@@ -7,6 +7,7 @@
 #include "fushidicts/platform.hpp"
 
 #include <algorithm>
+#include <array>
 #include <cstddef>
 #include <cstdint>
 #include <cstring>
@@ -22,6 +23,7 @@
 #include "json/yomitan_parser.hpp"
 #include "memory/memory.hpp"
 #include "util/fs_utf8.hpp"
+#include "util/redirect_metadata.hpp"
 
 namespace {
 
@@ -73,6 +75,8 @@ struct DictionaryQuery::DictionaryData {
   memory::mapped_file bloom_filter;
   memory::mapped_file media;
   memory::mapped_file media_index;
+  memory::mapped_file redirects;
+  ankerl::unordered_dense::map<uint64_t, std::string_view> redirect_targets;
   int version = 1;                   // 磁盘格式版本（marker 文件名解析，见 dict_format_version）
   ZSTD_DDict* zstd_dict = nullptr;   // v2 + dict.zstd 存在时非空
 
@@ -82,6 +86,7 @@ struct DictionaryQuery::DictionaryData {
     memory::unmap(bloom_filter);
     memory::unmap(media);
     memory::unmap(media_index);
+    memory::unmap(redirects);
     ZSTD_freeDDict(zstd_dict);
   }
 };
@@ -124,6 +129,41 @@ int dict_format_version(const std::string& path) {
     return 1;
   }
   return 0;
+}
+
+ankerl::unordered_dense::map<uint64_t, std::string_view> read_redirect_targets(
+    const memory::mapped_file& redirects, size_t blobs_size, const std::string& path) {
+  ankerl::unordered_dense::map<uint64_t, std::string_view> targets;
+  if (!redirects || redirects.size < fushi::redirect_metadata::kHeaderSize) return targets;
+  BlobReader reader(redirects.data, redirects.size);
+  if (reader.read_str(fushi::redirect_metadata::kMagic.size()) != fushi::redirect_metadata::kMagic) return targets;
+  const auto import_id = reader.read_str(fushi::redirect_metadata::kImportIdSize);
+  // Overlay extraction does not delete files absent from the source package.
+  // Require the mandatory version marker to identify this exact import, so a
+  // legacy/other package cannot accidentally reuse a leftover sidecar, even
+  // when its blobs.bin has identical bytes and therefore the same size/hash.
+  if (std::filesystem::exists(fushi::fs_path(path + "/.hoshidicts_1"))) return targets;
+  std::ifstream marker(fushi::fs_path(path + "/.fushidicts_1"), std::ios::binary);
+  std::array<char, 8 + fushi::redirect_metadata::kImportIdSize> marker_bytes{};
+  if (!marker.read(marker_bytes.data(), marker_bytes.size()) || marker.peek() != std::char_traits<char>::eof()) {
+    return targets;
+  }
+  const std::string_view marker_view(marker_bytes.data(), marker_bytes.size());
+  if (!marker_view.starts_with(fushi::redirect_metadata::kMagic) ||
+      marker_view.substr(fushi::redirect_metadata::kMagic.size()) != import_id) return targets;
+  const auto record_base = reader.read<uint64_t>();
+  if (reader.read<uint64_t>() != blobs_size || record_base >= blobs_size) return targets;
+
+  while (reader.ptr != reader.end) {
+    if (static_cast<size_t>(reader.end - reader.ptr) < sizeof(uint64_t) + sizeof(uint16_t)) return {};
+    const auto relative_offset = reader.read<uint64_t>();
+    const auto target_size = reader.read<uint16_t>();
+    if (relative_offset >= blobs_size - record_base || target_size == 0 ||
+        target_size > static_cast<size_t>(reader.end - reader.ptr)) return {};
+    const auto target = reader.read_str(target_size);
+    if (!targets.emplace(record_base + relative_offset, target).second) return {};
+  }
+  return targets;
 }
 
 }  // namespace
@@ -183,6 +223,13 @@ void DictionaryQuery::add_dict(const std::string& path, DictionaryType type) {
   dict.data->blobs = memory::map_rd(path + "/blobs.bin");
   if (!dict.data->blobs) {
     return;
+  }
+
+  // Optional provenance belongs to the simple-dictionary importer (v1). Old
+  // disks or invalid sidecars remain readable and retain every ordinary hit.
+  if (type == TERM && version == 1) {
+    dict.data->redirects = memory::map_rd(path + "/" + std::string(fushi::redirect_metadata::kFilename));
+    dict.data->redirect_targets = read_redirect_targets(dict.data->redirects, dict.data->blobs.size, path);
   }
 
   dict.data->media = memory::map_rd(path + "/media.bin");
@@ -306,6 +353,9 @@ std::vector<TermResult> DictionaryQuery::query_raw(const std::string& expression
       entry.compressed_data = data->blobs.data + glossary_offset;
       entry.compressed_size = glossary_size;
       entry.zstd_dict = data->zstd_dict;
+      if (const auto target = data->redirect_targets.find(offset); target != data->redirect_targets.end()) {
+        entry.redirect_target = target->second;
+      }
 
       auto [it, inserted] = term_map.try_emplace({expr, reading});
       if (inserted) {

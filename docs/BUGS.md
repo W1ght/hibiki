@@ -29,11 +29,13 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2164 条。点号进各自文件。
+> 共 2166 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
-| [BUG-2332](bugs/BUG-2332-aidoku-request-error-unreadable.md) | ✅ | ✅ | Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断 |
+| [BUG-2386](bugs/BUG-2386-dictionary-redirect-provenance.md) | ✅ | ✅ | 词典查词把同释义真实词条误判为重定向别名删除 |
+| [BUG-2385](bugs/BUG-2385-dictionary-data-missing-lookup.md) | ✅ | ✅ | 词典登记仍在但资源目录缺失导致完整词查不到 |
+| [BUG-2381](bugs/BUG-2381-aidoku-request-error-unreadable.md) | ✅ | ✅ | Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断 |
 | [BUG-2326](bugs/BUG-2326-lyrics-mode-top-chrome.md) | ✅ | ✅ | 歌词模式没有顶栏，也没有回到阅读模式的入口 |
 | [BUG-2325](bugs/BUG-2325-audiobook-follow-flips-back-one-page.md) | ✅ | ✅ | 有声书跟随播放时视口自己退回前一页，下一句又翻回来 |
 | [BUG-2324](bugs/BUG-2324-siglus-lookup-consumed-click-without-hit.md) | 🚧 | ✅ | Siglus已入队查词点击偶发未发布命中且终结原因缺失 |

@@ -121,22 +121,12 @@ std::vector<LookupResult> Lookup::lookup(const std::string& lookup_string, int m
 
   auto results = result_map | std::views::values | std::views::as_rvalue | std::ranges::to<std::vector>();
 
-  // BUG-1665: MDX/StarDict importers resolve redirects (@@@LINK= / .syn) by
-  // copying the target's definition under the inflected key, so "belongs"
-  // carries belong's bytes as its own entry. A lookup of "belongs" then
-  // surfaces BOTH that alias exact hit and the deinflected lemma hit, and the
-  // alias (0 transforms) sorts first — the popup header and the mined Anki
-  // term become the inflected surface form instead of the lemma (Yomitan
-  // mines the lemma). The importer dedupes identical definitions by hash into
-  // ONE compressed blob, so within a dict an alias glossary and its lemma
-  // glossary share the same blob pointer — a byte-exact redirect detector
-  // that needs no re-import of already-imported dictionaries. For each
-  // surface form, drop from the untransformed exact hit every glossary whose
-  // blob also backs a lemma hit (a real transform whose result is the entry's
-  // own expression) of the same surface; drop the result once empty. Spelling
-  // variants (colour → color) have no deinflection rule and are untouched; a
-  // dictionary with a genuinely distinct inflected entry keeps it (different
-  // blob).
+  // BUG-1665 folds a true inflected redirect (belongs -> belong) when its
+  // canonical lemma also matches. Shared glossary storage does not prove a
+  // redirect: independent nouns and verbs may intentionally share a definition.
+  // Require source-format provenance for this exact record and its canonical
+  // target, then verify that the same dictionary supplies the target glossary.
+  // Legacy dictionaries without provenance retain their direct hits.
   auto same_blob = [](const GlossaryEntry& x, const GlossaryEntry& y) {
     return x.compressed_data == y.compressed_data && x.compressed_size == y.compressed_size &&
            x.dict_name == y.dict_name;
@@ -150,6 +140,7 @@ std::vector<LookupResult> Lookup::lookup(const std::string& lookup_string, int m
       if (&lemma == &r || lemma.matched != r.matched) continue;
       if (lemma.trace.empty() || lemma.term.expression != lemma.deinflected) continue;
       std::erase_if(r.term.glossaries, [&](const GlossaryEntry& g) {
+        if (g.redirect_target.empty() || g.redirect_target != lemma.term.expression) return false;
         return std::ranges::any_of(lemma.term.glossaries,
                                    [&](const GlossaryEntry& lg) { return same_blob(g, lg); });
       });

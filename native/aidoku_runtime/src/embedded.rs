@@ -179,7 +179,7 @@ fn loggable_url(url: &str) -> String {
 /// （"error sending request"）同时覆盖 DNS 失败、TCP 拒绝、本地中继隧道被拒、
 /// TLS 握手失败和超时，真正的原因全在 `source()` 链里。以前这里只插值最外层，
 /// 用户拿到的就是一句 "error sending request"，从这行字**结构上无法**区分
-/// 「MangaDex 连不上」「中继把隧道拒了」「证书不认」——排查只能靠猜（BUG-2332）。
+/// 「MangaDex 连不上」「中继把隧道拒了」「证书不认」——排查只能靠猜（BUG-2381）。
 ///
 /// 逐层拼 `source()`；不带 URL（外层已经 `without_url()`，链里也只有传输层
 /// 文本），所以不会把签名地址或中继凭据带进日志。
@@ -2551,7 +2551,7 @@ mod tests {
         assert!(session.cookies.is_empty());
     }
 
-    /// BUG-2332：`error sending request` 之所以不可诊断，是因为只打了最外层。
+    /// BUG-2381：`error sending request` 之所以不可诊断，是因为只打了最外层。
     /// 这条钉住「source 链必须逐层拼进来」和「重复层不重复打印」两件事。
     #[test]
     fn error_chain_keeps_every_cause_and_drops_repeats() {
