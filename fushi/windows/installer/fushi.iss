@@ -826,23 +826,6 @@ begin
 end;
 #endif
 
-{ 「准备安装」页的摘要框。和输入框同一套 filled 处理。 }
-procedure Md3StyleMemo(Memo: TNewMemo);
-begin
-  Memo.StyleElements := Memo.StyleElements - [seClient, seBorder, seFont];
-  Memo.Color := Md3SurfaceContainerHighest;
-  Memo.Font.Color := Md3OnSurface;
-  Memo.Font.Name := Md3UiFontName(Memo.Font.Name);
-  { 这里**只能**改不触发窗口句柄重建的属性（颜色、字体、region）。
-    试过 Memo.BorderStyle := bsNone 去掉那圈边框，代价是 VCL 重建句柄，而本过程是在
-    CurPageChanged 里跑的、那时摘要内容已经填好 —— 重建把内容拦腰截断（末行只剩一个
-    「将」字），连 Next 按钮的 Caption 都没能更新成「安装」。同一个机制在数据根页也
-    咬过一次（见 InitializeWizard 里 Md3StyleEdit 的位置说明）。
-    改到 InitializeWizard 里去设也不行：那会提前创建 ReadyMemo 的句柄，正是把「选择
-    附加任务」页第一项文字遮掉的那类问题。所以边框留着，只统一颜色。 }
-  Md3RoundControl(Memo, ScaleY(8), Md3EditInset);
-end;
-
 procedure ApplyMd3Chrome();
 begin
   WizardForm.PageNameLabel.Font.Name :=
@@ -914,21 +897,6 @@ begin
   Md3StyleButton(DataRootPage.Buttons[0], Md3Primary);
 #endif
   DataRootPage.Values[0] := ExpandConstant('{userdocs}\Fushi');
-end;
-
-procedure CurPageChanged(CurPageID: Integer);
-begin
-#ifdef Md3Chrome
-  { 只在页面**真正显示时**才碰它自己的控件。
-    这条是踩出来的：ApplyMd3Chrome 里每个样式过程都要读 .Handle（设 region、发
-    EM_SETMARGINS），一读就强行创建窗口句柄。对本来永远不显示的控件（程序组页那
-    三个，DisableProgramGroupPage=yes）这样做，会让它们凭空实体化并盖住别的页
-    —— 实测把「选择附加任务」页第一项的文字整个遮没了。ReadyMemo 属于会显示的页，
-    但同样按「等它显示了再说」处理，免得重蹈覆辙。
-    重复进同一页会重复设置，这些操作都是幂等的。 }
-  if CurPageID = wpReady then
-    Md3StyleMemo(WizardForm.ReadyMemo);
-#endif
 end;
 
 function ShouldSkipPage(PageID: Integer): Boolean;

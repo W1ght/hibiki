@@ -69,6 +69,11 @@ CI 钉的是 6.7.3，本地装同一版即可：
 }
 
 New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
+# 必须绝对化：ISCC 把 /DSourceDir 里的相对路径按 **iss 文件所在目录**解析，而 iss 被
+# stage 到了 $OutDir 下面，于是相对的 -OutDir 会被拼成
+# <stage>\installer\<相对OutDir>\payload 这种不存在的路径，报 "No files found matching"。
+$OutDir = (Resolve-Path -LiteralPath $OutDir).Path
+$Iss = (Resolve-Path -LiteralPath $Iss).Path
 
 # ── 1. 占位 payload ────────────────────────────────────────────────────────────
 # 外观验证不需要真的 500MB 产物，给 [Files] 几个占位文件就够。
