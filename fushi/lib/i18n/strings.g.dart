@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77129 (4537 per locale)
+/// Strings: 77163 (4539 per locale)
 ///
-/// Built on 2026-09-09 at 09:32 UTC
+/// Built on 2026-09-09 at 09:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6297,6 +6297,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Already a source — rescanning: ${path}';
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  String get sync_err_pairing_rejected =>
+      'The paired device rejected this device\'s credentials — pair again to resume syncing.';
+  String get sync_err_not_paired =>
+      'No paired device yet — set up pairing in Fushi Interconnect first.';
 }
 
 // Path: <root>
@@ -16959,6 +16963,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'رفض الجهاز المقترن بيانات اعتماد هذا الجهاز — أعد الإقتران لاستئناف المزامنة.';
+  @override
+  String get sync_err_not_paired =>
+      'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
 }
 
 // Path: <root>
@@ -27848,6 +27858,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Das gekoppelte Gerät hat die Anmeldedaten dieses Geräts abgelehnt — koppeln Sie erneut, um die Synchronisierung fortzusetzen.';
+  @override
+  String get sync_err_not_paired =>
+      'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
 }
 
 // Path: <root>
@@ -38791,6 +38807,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'El dispositivo emparejado rechazó las credenciales de este dispositivo: vuelve a emparejarlo para reanudar la sincronización.';
+  @override
+  String get sync_err_not_paired =>
+      'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
 }
 
 // Path: <root>
@@ -49768,6 +49790,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'L\'appareil associé a refusé les identifiants de cet appareil — associez-le à nouveau pour reprendre la synchronisation.';
+  @override
+  String get sync_err_not_paired =>
+      'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
 }
 
 // Path: <root>
@@ -60547,6 +60575,12 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Perangkat yang dipasangkan menolak kredensial perangkat ini — pasangkan ulang untuk melanjutkan sinkronisasi.';
+  @override
+  String get sync_err_not_paired =>
+      'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
 }
 
 // Path: <root>
@@ -71418,6 +71452,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Il dispositivo associato ha rifiutato le credenziali di questo dispositivo: esegui di nuovo l\'associazione per riprendere la sincronizzazione.';
+  @override
+  String get sync_err_not_paired =>
+      'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
 }
 
 // Path: <root>
@@ -81670,6 +81710,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'ペアリング済みの端末がこの端末の認証情報を拒否しました。同期を再開するには再度ペアリングしてください。';
+  @override
+  String get sync_err_not_paired =>
+      'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
 }
 
 // Path: <root>
@@ -91932,6 +91978,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      '페어링된 기기가 이 기기의 자격 증명을 거부했습니다. 동기화를 재개하려면 다시 페어링하세요.';
+  @override
+  String get sync_err_not_paired =>
+      '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
 }
 
 // Path: <root>
@@ -102760,6 +102812,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Het gekoppelde apparaat heeft de inloggegevens van dit apparaat geweigerd — koppel opnieuw om te blijven synchroniseren.';
+  @override
+  String get sync_err_not_paired =>
+      'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
 }
 
 // Path: <root>
@@ -113641,6 +113699,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'O dispositivo pareado rejeitou as credenciais deste dispositivo — pareie novamente para retomar a sincronização.';
+  @override
+  String get sync_err_not_paired =>
+      'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
 }
 
 // Path: <root>
@@ -124499,6 +124563,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Сопряжённое устройство отклонило учётные данные этого устройства — выполните сопряжение заново, чтобы продолжить синхронизацию.';
+  @override
+  String get sync_err_not_paired =>
+      'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
 }
 
 // Path: <root>
@@ -135157,6 +135227,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'อุปกรณ์ที่จับคู่ไว้ปฏิเสธข้อมูลรับรองของเครื่องนี้ — โปรดจับคู่ใหม่เพื่อซิงค์ต่อ';
+  @override
+  String get sync_err_not_paired =>
+      'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
 }
 
 // Path: <root>
@@ -145931,6 +146007,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Eşleştirilmiş cihaz bu cihazın kimlik bilgilerini reddetti — eşitlemeye devam etmek için yeniden eşleştirin.';
+  @override
+  String get sync_err_not_paired =>
+      'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
 }
 
 // Path: <root>
@@ -156676,6 +156758,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Thiết bị đã ghép nối từ chối thông tin xác thực của máy này — hãy ghép nối lại để tiếp tục đồng bộ.';
+  @override
+  String get sync_err_not_paired =>
+      'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
 }
 
 // Path: <root>
@@ -166544,6 +166632,10 @@ class _StringsZhCn extends _StringsEn {
       '该位置已是来源，正在重新扫描：${path}';
   @override
   String get audiobook_transcribe_model_discarded => '模型文件读不出来，已自动清除，请重新下载。';
+  @override
+  String get sync_err_pairing_rejected => '对方设备已拒绝本机的配对凭据，请重新配对后再同步。';
+  @override
+  String get sync_err_not_paired => '尚未配对任何设备，请先在「Fushi 互联」里完成配对。';
 }
 
 // Path: <root>
@@ -176482,6 +176574,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get sync_err_pairing_rejected => '對方裝置已拒絕本機的配對憑證，請重新配對後再同步。';
+  @override
+  String get sync_err_not_paired => '尚未配對任何裝置，請先在「Fushi 互聯」裡完成配對。';
 }
 
 /// Flat map(s) containing all translations.
@@ -185817,6 +185913,10 @@ extension on _StringsEn {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'The paired device rejected this device\'s credentials — pair again to resume syncing.';
+      case 'sync_err_not_paired':
+        return 'No paired device yet — set up pairing in Fushi Interconnect first.';
       default:
         return null;
     }
@@ -195147,6 +195247,10 @@ extension on _StringsAr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'رفض الجهاز المقترن بيانات اعتماد هذا الجهاز — أعد الإقتران لاستئناف المزامنة.';
+      case 'sync_err_not_paired':
+        return 'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
       default:
         return null;
     }
@@ -204522,6 +204626,10 @@ extension on _StringsDe {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'Das gekoppelte Gerät hat die Anmeldedaten dieses Geräts abgelehnt — koppeln Sie erneut, um die Synchronisierung fortzusetzen.';
+      case 'sync_err_not_paired':
+        return 'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
       default:
         return null;
     }
@@ -213888,6 +213996,10 @@ extension on _StringsEs {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'El dispositivo emparejado rechazó las credenciales de este dispositivo: vuelve a emparejarlo para reanudar la sincronización.';
+      case 'sync_err_not_paired':
+        return 'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
       default:
         return null;
     }
@@ -223263,6 +223375,10 @@ extension on _StringsFr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'L\'appareil associé a refusé les identifiants de cet appareil — associez-le à nouveau pour reprendre la synchronisation.';
+      case 'sync_err_not_paired':
+        return 'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
       default:
         return null;
     }
@@ -232609,6 +232725,10 @@ extension on _StringsId {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'Perangkat yang dipasangkan menolak kredensial perangkat ini — pasangkan ulang untuk melanjutkan sinkronisasi.';
+      case 'sync_err_not_paired':
+        return 'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
       default:
         return null;
     }
@@ -241977,6 +242097,10 @@ extension on _StringsIt {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'Il dispositivo associato ha rifiutato le credenziali di questo dispositivo: esegui di nuovo l\'associazione per riprendere la sincronizzazione.';
+      case 'sync_err_not_paired':
+        return 'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
       default:
         return null;
     }
@@ -251272,6 +251396,10 @@ extension on _StringsJa {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'ペアリング済みの端末がこの端末の認証情報を拒否しました。同期を再開するには再度ペアリングしてください。';
+      case 'sync_err_not_paired':
+        return 'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
       default:
         return null;
     }
@@ -260571,6 +260699,10 @@ extension on _StringsKo {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return '페어링된 기기가 이 기기의 자격 증명을 거부했습니다. 동기화를 재개하려면 다시 페어링하세요.';
+      case 'sync_err_not_paired':
+        return '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
       default:
         return null;
     }
@@ -269932,6 +270064,10 @@ extension on _StringsNl {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'Het gekoppelde apparaat heeft de inloggegevens van dit apparaat geweigerd — koppel opnieuw om te blijven synchroniseren.';
+      case 'sync_err_not_paired':
+        return 'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
       default:
         return null;
     }
@@ -279288,6 +279424,10 @@ extension on _StringsPtBr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'O dispositivo pareado rejeitou as credenciais deste dispositivo — pareie novamente para retomar a sincronização.';
+      case 'sync_err_not_paired':
+        return 'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
       default:
         return null;
     }
@@ -288651,6 +288791,10 @@ extension on _StringsRu {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'Сопряжённое устройство отклонило учётные данные этого устройства — выполните сопряжение заново, чтобы продолжить синхронизацию.';
+      case 'sync_err_not_paired':
+        return 'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
       default:
         return null;
     }
@@ -297986,6 +298130,10 @@ extension on _StringsTh {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'อุปกรณ์ที่จับคู่ไว้ปฏิเสธข้อมูลรับรองของเครื่องนี้ — โปรดจับคู่ใหม่เพื่อซิงค์ต่อ';
+      case 'sync_err_not_paired':
+        return 'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
       default:
         return null;
     }
@@ -307336,6 +307484,10 @@ extension on _StringsTr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'Eşleştirilmiş cihaz bu cihazın kimlik bilgilerini reddetti — eşitlemeye devam etmek için yeniden eşleştirin.';
+      case 'sync_err_not_paired':
+        return 'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
       default:
         return null;
     }
@@ -316680,6 +316832,10 @@ extension on _StringsVi {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return 'Thiết bị đã ghép nối từ chối thông tin xác thực của máy này — hãy ghép nối lại để tiếp tục đồng bộ.';
+      case 'sync_err_not_paired':
+        return 'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
       default:
         return null;
     }
@@ -325942,6 +326098,10 @@ extension on _StringsZhCn {
         return ({required Object path}) => '该位置已是来源，正在重新扫描：${path}';
       case 'audiobook_transcribe_model_discarded':
         return '模型文件读不出来，已自动清除，请重新下载。';
+      case 'sync_err_pairing_rejected':
+        return '对方设备已拒绝本机的配对凭据，请重新配对后再同步。';
+      case 'sync_err_not_paired':
+        return '尚未配对任何设备，请先在「Fushi 互联」里完成配对。';
       default:
         return null;
     }
@@ -335215,6 +335375,10 @@ extension on _StringsZhHk {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'sync_err_pairing_rejected':
+        return '對方裝置已拒絕本機的配對憑證，請重新配對後再同步。';
+      case 'sync_err_not_paired':
+        return '尚未配對任何裝置，請先在「Fushi 互聯」裡完成配對。';
       default:
         return null;
     }
