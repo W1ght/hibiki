@@ -4521,5 +4521,7 @@
   "yomitan_port_kill_failed": "Kon $process niet beëindigen. Beëindig het handmatig en probeer opnieuw.",
   "yomitan_port_kill_protected": "$process is een kritiek systeemproces — Fushi beëindigt het niet. Wijzig de poort.",
   "yomitan_port_kill_self_instance": "Dit proces is een andere draaiende instantie van deze app.",
-  "dictionary_files_missing": "Dictionary files are missing. Please import the dictionary again."
+  "dictionary_files_missing": "Dictionary files are missing. Please import the dictionary again.",
+  "auto_add_char_position_to_tags": "Auto-add mining position to tags",
+  "auto_add_char_position_to_tags_hint": "Tags each card with chars_12345 — how many characters into the book it was mined."
 }

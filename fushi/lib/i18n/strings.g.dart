@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76891 (4523 per locale)
+/// Strings: 76925 (4525 per locale)
 ///
-/// Built on 2026-09-09 at 13:19 UTC
+/// Built on 2026-09-09 at 14:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6350,6 +6350,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This process is another running instance of this app.';
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -17046,6 +17050,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -27978,6 +27988,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -38960,6 +38976,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -49975,6 +49997,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -60790,6 +60818,12 @@ class _StringsId extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -71701,6 +71735,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -81981,6 +82021,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags => 'タグにカード作成位置を自動追加';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
 }
 
 // Path: <root>
@@ -92271,6 +92316,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -103136,6 +103187,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -114054,6 +114111,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -124950,6 +125013,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -135643,6 +135712,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -146454,6 +146529,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -157234,6 +157315,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -167129,6 +167216,11 @@ class _StringsZhCn extends _StringsEn {
   String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
   @override
   String get dictionary_files_missing => '词典文件缺失，请重新导入';
+  @override
+  String get auto_add_char_position_to_tags => '自动添加制卡位置到标签';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
 }
 
 // Path: <root>
@@ -177094,6 +177186,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get dictionary_files_missing =>
       'Dictionary files are missing. Please import the dictionary again.';
+  @override
+  String get auto_add_char_position_to_tags => '自動將製卡位置加入標籤';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
 }
 
 /// Flat map(s) containing all translations.
@@ -186406,6 +186503,10 @@ extension on _StringsEn {
         return 'This process is another running instance of this app.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -195713,6 +195814,10 @@ extension on _StringsAr {
         return 'هذه العملية هي نسخة أخرى قيد التشغيل من هذا التطبيق.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -205069,6 +205174,10 @@ extension on _StringsDe {
         return 'Dieser Prozess ist eine weitere laufende Instanz dieser App.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -214415,6 +214524,10 @@ extension on _StringsEs {
         return 'Este proceso es otra instancia en ejecución de esta app.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -223769,6 +223882,10 @@ extension on _StringsFr {
         return 'Ce processus est une autre instance en cours d\'exécution de cette application.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -233093,6 +233210,10 @@ extension on _StringsId {
         return 'Proses ini adalah instance lain dari aplikasi ini yang sedang berjalan.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -242440,6 +242561,10 @@ extension on _StringsIt {
         return 'Questo processo è un\'altra istanza in esecuzione di questa app.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -251711,6 +251836,10 @@ extension on _StringsJa {
         return 'このプロセスは、このアプリの別のインスタンスです。';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'タグにカード作成位置を自動追加';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
       default:
         return null;
     }
@@ -260987,6 +261116,10 @@ extension on _StringsKo {
         return '이 프로세스는 이 앱의 다른 실행 중인 인스턴스입니다.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -270329,6 +270462,10 @@ extension on _StringsNl {
         return 'Dit proces is een andere draaiende instantie van deze app.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -279666,6 +279803,10 @@ extension on _StringsPtBr {
         return 'Este processo é outra instância deste app em execução.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -289009,6 +289150,10 @@ extension on _StringsRu {
         return 'Этот процесс — другой запущенный экземпляр данного приложения.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -298321,6 +298466,10 @@ extension on _StringsTh {
         return 'โปรเซสนี้เป็นอินสแตนซ์อื่นของแอปนี้ที่กำลังทำงานอยู่';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -307649,6 +307798,10 @@ extension on _StringsTr {
         return 'Bu işlem, uygulamanın çalışan başka bir örneğidir.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -316971,6 +317124,10 @@ extension on _StringsVi {
         return 'Tiến trình này là một phiên bản đang chạy khác của ứng dụng.';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -326209,6 +326366,10 @@ extension on _StringsZhCn {
         return '该进程是本应用的另一个正在运行的实例。';
       case 'dictionary_files_missing':
         return '词典文件缺失，请重新导入';
+      case 'auto_add_char_position_to_tags':
+        return '自动添加制卡位置到标签';
+      case 'auto_add_char_position_to_tags_hint':
+        return '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
       default:
         return null;
     }
@@ -335458,6 +335619,10 @@ extension on _StringsZhHk {
         return '該進程是本應用的另一個正在運行的實例。';
       case 'dictionary_files_missing':
         return 'Dictionary files are missing. Please import the dictionary again.';
+      case 'auto_add_char_position_to_tags':
+        return '自動將製卡位置加入標籤';
+      case 'auto_add_char_position_to_tags_hint':
+        return '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
       default:
         return null;
     }

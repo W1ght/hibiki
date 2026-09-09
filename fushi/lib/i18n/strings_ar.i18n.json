@@ -4521,5 +4521,7 @@
   "yomitan_port_kill_failed": "تعذر إنهاء $process. يرجى إنهاؤها يدوياً ثم إعادة المحاولة.",
   "yomitan_port_kill_protected": "$process هي عملية نظام حرجة — لن يقوم Fushi بإنهائها. غيّر المنفذ بدلاً من ذلك.",
   "yomitan_port_kill_self_instance": "هذه العملية هي نسخة أخرى قيد التشغيل من هذا التطبيق.",
-  "dictionary_files_missing": "Dictionary files are missing. Please import the dictionary again."
+  "dictionary_files_missing": "Dictionary files are missing. Please import the dictionary again.",
+  "auto_add_char_position_to_tags": "Auto-add mining position to tags",
+  "auto_add_char_position_to_tags_hint": "Tags each card with chars_12345 — how many characters into the book it was mined."
 }
