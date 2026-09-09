@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77418 (4554 per locale)
+/// Strings: 77588 (4564 per locale)
 ///
-/// Built on 2026-09-09 at 10:50 UTC
+/// Built on 2026-09-09 at 11:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6321,6 +6321,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_lapis_suggest_body =>
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  String get reader_vn_settings => 'Visual novel settings';
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  String get reader_vn_reveal_instant => 'Instant';
+  String get reader_vn_screen_mode => 'Screen content';
+  String get reader_vn_screen_block => 'One block';
+  String get reader_vn_screen_sentences => 'Sentences';
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  String get reader_vn_click_advance => 'Blank tap advances';
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -17024,6 +17035,27 @@ class _StringsAr extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -27954,6 +27986,27 @@ class _StringsDe extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -38938,6 +38991,27 @@ class _StringsEs extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -49956,6 +50030,27 @@ class _StringsFr extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -60776,6 +60871,27 @@ class _StringsId extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -71688,6 +71804,27 @@ class _StringsIt extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -81981,6 +82118,27 @@ class _StringsJa extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -92284,6 +92442,27 @@ class _StringsKo extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -103153,6 +103332,27 @@ class _StringsNl extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -114075,6 +114275,27 @@ class _StringsPtBr extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -124974,6 +125195,27 @@ class _StringsRu extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -135673,6 +135915,27 @@ class _StringsTh extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -146488,6 +146751,27 @@ class _StringsTr extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -157274,6 +157558,27 @@ class _StringsVi extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -167179,6 +167484,26 @@ class _StringsZhCn extends _StringsEn {
       '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
   @override
   String get anki_lapis_suggest_dismiss => '保持当前设置';
+  @override
+  String get reader_vn_settings => '视觉小说设置';
+  @override
+  String get reader_vn_reveal_speed => '文字渐显速度';
+  @override
+  String get reader_vn_reveal_instant => '立即显示';
+  @override
+  String get reader_vn_screen_mode => '每屏内容';
+  @override
+  String get reader_vn_screen_block => '一个段落';
+  @override
+  String get reader_vn_screen_sentences => '按句子';
+  @override
+  String get reader_vn_sentences_per_screen => '每屏句数';
+  @override
+  String get reader_vn_preserve_dialogue => '保持对话完整';
+  @override
+  String get reader_vn_click_advance => '点击空白处推进';
+  @override
+  String get reader_vn_merge_spoken_sentence => '有声句保持在同一屏';
 }
 
 // Path: <root>
@@ -177156,6 +177481,27 @@ class _StringsZhHk extends _StringsEn {
       'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
   @override
   String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 /// Flat map(s) containing all translations.
@@ -186525,6 +186871,26 @@ extension on _StringsEn {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -195889,6 +196255,26 @@ extension on _StringsAr {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -205298,6 +205684,26 @@ extension on _StringsDe {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -214698,6 +215104,26 @@ extension on _StringsEs {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -224107,6 +224533,26 @@ extension on _StringsFr {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -233487,6 +233933,26 @@ extension on _StringsId {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -242889,6 +243355,26 @@ extension on _StringsIt {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -252218,6 +252704,26 @@ extension on _StringsJa {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -261551,6 +262057,26 @@ extension on _StringsKo {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -270946,6 +271472,26 @@ extension on _StringsNl {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -280336,6 +280882,26 @@ extension on _StringsPtBr {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -289733,6 +290299,26 @@ extension on _StringsRu {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -299102,6 +299688,26 @@ extension on _StringsTh {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -308486,6 +309092,26 @@ extension on _StringsTr {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -317864,6 +318490,26 @@ extension on _StringsVi {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -327160,6 +327806,26 @@ extension on _StringsZhCn {
         return '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
       case 'anki_lapis_suggest_dismiss':
         return '保持当前设置';
+      case 'reader_vn_settings':
+        return '视觉小说设置';
+      case 'reader_vn_reveal_speed':
+        return '文字渐显速度';
+      case 'reader_vn_reveal_instant':
+        return '立即显示';
+      case 'reader_vn_screen_mode':
+        return '每屏内容';
+      case 'reader_vn_screen_block':
+        return '一个段落';
+      case 'reader_vn_screen_sentences':
+        return '按句子';
+      case 'reader_vn_sentences_per_screen':
+        return '每屏句数';
+      case 'reader_vn_preserve_dialogue':
+        return '保持对话完整';
+      case 'reader_vn_click_advance':
+        return '点击空白处推进';
+      case 'reader_vn_merge_spoken_sentence':
+        return '有声句保持在同一屏';
       default:
         return null;
     }
@@ -336467,6 +337133,26 @@ extension on _StringsZhHk {
         return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
       case 'anki_lapis_suggest_dismiss':
         return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
