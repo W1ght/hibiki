@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76976 (4528 per locale)
+/// Strings: 77044 (4532 per locale)
 ///
-/// Built on 2026-09-09 at 05:27 UTC
+/// Built on 2026-09-09 at 06:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5829,7 +5829,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_shader_import_from_mpv_hint =>
       'Search local mpv automatically, or choose an mpv folder when none is found.';
   String get video_shader_mobile_perf_hint =>
-      'On phones, shaders apply only on the standard GPU render path and effectiveness varies by device GPU; higher tiers may drop frames or heat up. Try Low/Medium first and check the result on your device.';
+      'On phones, Medium/High/Ultra use deblur-only Anime4K chains: the upscaling passes are left out, because your screen is no larger than the source, so they would cost a lot of GPU for little gain and slow the whole app down. Results still vary by device GPU, and shaders only apply on the standard GPU render path — drop a tier if you see dropped frames or heat.';
   String video_shader_mpv_dir_current({required Object path}) =>
       'mpv folder: ${path}';
   String get video_shader_mpv_dir_empty => 'No shaders found in that folder';
@@ -6281,6 +6281,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The source returned invalid torrent data. Retry later or choose another source.';
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -16154,7 +16162,7 @@ class _StringsAr extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'على الهواتف، تُطبَّق المظلِّلات فقط على مسار العرض الرسومي القياسي وتختلف الفعالية بحسب معالج الجهاز الرسومي؛ قد تسبب المستويات الأعلى تساقط الإطارات أو ارتفاع الحرارة. جرّب منخفض/متوسط أولًا وتحقق من النتيجة على جهازك.';
+      'على الهواتف، تستخدم المستويات المتوسط/العالي/الفائق سلاسل Anime4K لإزالة الضبابية فقط: تُحذف مراحل التكبير لأن الشاشة ليست أكبر من المصدر — فهي تستهلك المعالج الرسومي وتُبطئ التطبيق كله. والتأثير يختلف حسب معالج الجهاز؛ انزل مستوى عند تقطع الإطارات أو الحرارة.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'مجلد mpv: ${path}';
@@ -16918,6 +16926,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -26998,7 +27018,7 @@ class _StringsDe extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'Auf Handys werden Shader nur über den Standard-GPU-Renderpfad angewendet und die Wirkung variiert je nach Geräte-GPU; höhere Stufen können Frames verwerfen oder das Gerät erhitzen. Probiere zuerst Niedrig/Mittel und prüfe das Ergebnis auf deinem Gerät.';
+      'Auf Telefonen nutzen Mittel/Hoch/Ultra reine Deblur-Ketten von Anime4K: Die Upscaling-Durchgänge entfallen, denn der Bildschirm ist nicht größer als die Quelle — sie würden viel GPU kosten und die ganze App verlangsamen. Die Wirkung hängt weiterhin von der GPU des Geräts ab; bei Rucklern oder Hitze eine Stufe zurückgehen.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'mpv-Ordner: ${path}';
@@ -27782,6 +27802,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -37906,7 +37938,7 @@ class _StringsEs extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'En teléfonos, los shaders solo se aplican en la ruta de renderizado de GPU estándar y su eficacia varía según la GPU del dispositivo; los niveles más altos pueden provocar caídas de fotogramas o calentamiento. Prueba primero Baja/Media y comprueba el resultado en tu dispositivo.';
+      'En teléfonos, Medio/Alto/Ultra usan cadenas de Anime4K solo de desenfoque: se omiten los pases de escalado, porque la pantalla no es mayor que la fuente — costarían mucha GPU y ralentizarían toda la app. El efecto sigue dependiendo de la GPU del dispositivo; baja un nivel si hay saltos o calentamiento.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'Carpeta de mpv: ${path}';
@@ -38700,6 +38732,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -48851,7 +48895,7 @@ class _StringsFr extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'Sur téléphone, les shaders ne s\'appliquent que sur le chemin de rendu GPU standard et leur efficacité varie selon le GPU de l\'appareil ; les niveaux élevés peuvent causer des chutes de framerate ou une surchauffe. Essayez d\'abord Faible/Moyen et vérifiez le résultat sur votre appareil.';
+      'Sur téléphone, Moyen/Élevé/Ultra utilisent des chaînes Anime4K uniquement de défloutage : les passes d\'agrandissement sont retirées, car l\'écran n\'est pas plus grand que la source — elles coûteraient beaucoup de GPU et ralentiraient toute l\'application. L\'effet dépend encore du GPU de l\'appareil ; descendez d\'un cran en cas de saccades ou de chauffe.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'Dossier mpv : ${path}';
@@ -49652,6 +49696,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -59628,7 +59684,7 @@ class _StringsId extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'Di ponsel, shader hanya berlaku pada jalur render GPU standar dan efektivitasnya bervariasi per GPU perangkat; tingkat yang lebih tinggi mungkin menyebabkan frame drop atau panas. Coba Rendah/Sedang dulu dan periksa hasilnya di perangkatmu.';
+      'Di ponsel, Sedang/Tinggi/Ultra memakai rantai Anime4K khusus deblur: tahap upscaling dihilangkan, karena layar tidak lebih besar dari sumbernya — tahap itu akan menghabiskan GPU dan memperlambat seluruh aplikasi. Efeknya tetap bergantung pada GPU perangkat; turunkan satu tingkat jika ada frame drop atau panas.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'Folder mpv: ${path}';
@@ -60406,6 +60462,18 @@ class _StringsId extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -70465,7 +70533,7 @@ class _StringsIt extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'Sui telefoni gli shader si applicano solo sul percorso di rendering GPU standard e l\'efficacia varia in base alla GPU del dispositivo; i livelli più alti possono causare scatti o surriscaldamento. Prova prima Basso/Medio e verifica il risultato sul tuo dispositivo.';
+      'Sui telefoni, Medio/Alto/Ultra usano catene Anime4K di solo deblur: i passaggi di upscaling sono esclusi, perché lo schermo non è più grande della sorgente — costerebbero molta GPU e rallenterebbero tutta l\'app. L\'efficacia dipende ancora dalla GPU del dispositivo; scendi di un livello se noti scatti o surriscaldamento.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'Cartella mpv: ${path}';
@@ -71252,6 +71320,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -80741,7 +80821,7 @@ class _StringsJa extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'スマートフォンでは標準の GPU 描画パス上でのみシェーダーが有効になり、効果は機種の GPU によって異なります。高い段階ではコマ落ちや発熱が起こる場合があります。まずは低／中で試し、実機で効果を確認してください。';
+      'スマホでは中／高／最高は「デブラーのみ・拡大なし」の Anime4K チェーンを使います。画面はソースより大きくないため、拡大パスは効果が薄い割に GPU を占有し、アプリ全体が重くなります。効果は機種の GPU によります。コマ落ちや発熱があれば一段階下げてください。';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'mpv フォルダ：${path}';
@@ -81479,6 +81559,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -90974,7 +91066,7 @@ class _StringsKo extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      '휴대폰에서는 셰이더가 표준 GPU 렌더 경로에서만 적용되며 효과는 기기 GPU에 따라 다릅니다. 높은 단계는 프레임 드롭이나 발열을 일으킬 수 있습니다. 먼저 낮음/중간을 써 보고 기기에서 결과를 확인하세요.';
+      '휴대폰에서 중간/높음/최고는 \'디블러만, 업스케일 없음\' Anime4K 체인을 씁니다. 화면이 원본보다 크지 않아 업스케일 패스는 이득에 비해 GPU를 다 쓰고 앱 전체를 느리게 만듭니다. 효과는 기기 GPU에 따라 다릅니다. 프레임 드롭이나 발열이 있으면 한 단계 낮추세요.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'mpv 폴더: ${path}';
@@ -91716,6 +91808,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -101735,7 +101839,7 @@ class _StringsNl extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'Op telefoons werken shaders alleen op het standaard GPU-renderpad en de effectiviteit verschilt per apparaat-GPU; hogere niveaus kunnen frames laten vallen of opwarming veroorzaken. Probeer eerst Laag/Gemiddeld en controleer het resultaat op je apparaat.';
+      'Op telefoons gebruiken Gemiddeld/Hoog/Ultra Anime4K-ketens met alleen deblur: de upscaling-passes vervallen, omdat het scherm niet groter is dan de bron — ze zouden veel GPU kosten en de hele app vertragen. De werking hangt nog steeds af van de GPU van het toestel; ga een stap omlaag bij haperingen of warmte.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'mpv-map: ${path}';
@@ -102519,6 +102623,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -112586,7 +112702,7 @@ class _StringsPtBr extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'Em celulares, os shaders só são aplicados no caminho de renderização padrão da GPU, e a eficácia varia conforme a GPU do aparelho; níveis mais altos podem perder quadros ou esquentar. Comece com Baixo/Médio e confira o resultado no seu dispositivo.';
+      'Em celulares, Médio/Alto/Ultra usam cadeias do Anime4K apenas de desfoque: os passes de upscaling são omitidos, pois a tela não é maior que a fonte — custariam muita GPU e deixariam o app todo lento. O efeito ainda varia conforme a GPU do aparelho; desça um nível se houver quedas de quadros ou aquecimento.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'Pasta do mpv: ${path}';
@@ -113375,6 +113491,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -123416,7 +123544,7 @@ class _StringsRu extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'На телефонах шейдеры применяются только на стандартном пути GPU-рендеринга, и эффективность зависит от GPU устройства; высокие уровни могут вызывать пропуск кадров или нагрев. Сначала попробуйте «Низкое»/«Среднее» и проверьте результат на своём устройстве.';
+      'На телефонах Средний/Высокий/Ультра используют цепочки Anime4K только для убрания размытия: проходы апскейла убраны, ведь экран не больше источника — они съели бы GPU и замедлили всё приложение. Эффект зависит от GPU устройства; при пропусках кадров или нагреве понизьте уровень.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'Папка mpv: ${path}';
@@ -124208,6 +124336,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -134069,7 +134209,7 @@ class _StringsTh extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'บนโทรศัพท์ เชเดอร์จะทำงานเฉพาะบนเส้นทางเรนเดอร์ GPU มาตรฐาน และผลที่ได้แตกต่างกันตาม GPU ของเครื่อง ระดับสูงอาจทำให้เฟรมตกหรือเครื่องร้อน แนะนำให้ลองระดับต่ำ/ปานกลางก่อนแล้วตรวจผลบนเครื่องของคุณ';
+      'บนมือถือ ระดับกลาง/สูง/สูงมาก จะใช้ชุด Anime4K ที่ลดความเบลออย่างเดียว โดยตัดขั้นขยายภาพออก เพราะหน้าจอไม่ใหญ่กว่าต้นทาง — มันจะกิน GPU มากและทำให้ทั้งแอพหนืด ผลลัพธ์ยังขึ้นอยู่กับ GPU ของเครื่อง หากเฟรมตกหรือเครื่องร้อน ให้ลดลงหนึ่งระดับ';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'โฟลเดอร์ mpv: ${path}';
@@ -134841,6 +134981,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -144813,7 +144965,7 @@ class _StringsTr extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'Telefonlarda shader\'lar yalnızca standart GPU işleme yolunda uygulanır ve etkinlik cihaz GPU\'suna göre değişir; yüksek seviyeler kare düşürebilir veya ısınmaya yol açabilir. Önce Düşük/Orta deneyin ve sonucu kendi cihazınızda kontrol edin.';
+      'Telefonlarda Orta/Yüksek/Ultra yalnızca bulanıklık giderme yapan Anime4K zincirlerini kullanır: ölçekleme aşamaları çıkarılmıştır, çünkü ekran kaynaktan büyük değildir — bunlar çok GPU harcar ve tüm uygulamayı yavaşlatır. Etki yine cihazın GPU\'suna göre değişir; kare atlama veya ısınma görürseniz bir kademe düşün.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'mpv klasörü: ${path}';
@@ -145590,6 +145742,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -155536,7 +155700,7 @@ class _StringsVi extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      'Trên điện thoại, shader chỉ áp dụng trên đường render GPU tiêu chuẩn và hiệu quả khác nhau tùy GPU thiết bị; mức cao có thể rớt khung hình hoặc gây nóng máy. Hãy thử mức Thấp/Trung bình trước và kiểm tra kết quả trên máy của bạn.';
+      'Trên điện thoại, mức Trung bình/Cao/Siêu cao dùng chuỗi Anime4K chỉ khử nhòe: các bước phóng to đã bị bỏ, vì màn hình không lớn hơn nguồn — chúng sẽ ngồn GPU và làm chậm toàn bộ ứng dụng. Hiệu quả vẫn tùy GPU thiết bị; hạ một mức nếu bị rớt khung hình hoặc nóng máy.';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'Thư mục mpv: ${path}';
@@ -156310,6 +156474,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 // Path: <root>
@@ -165446,7 +165622,7 @@ class _StringsZhCn extends _StringsEn {
       '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
   @override
   String get video_shader_mobile_perf_hint =>
-      '手机上着色器仅在标准 GPU 渲染路径下生效，实际效果因机型 GPU 而异；高档位可能掉帧或发热。建议先用低/中档，并在本机确认效果。';
+      '手机上的中/高/极高档使用「只去模糊、不放大」的 Anime4K 链：放大 pass 已移除——屏幕不比片源更大，放大收益有限却会占满 GPU，连带整个 app 变卡。实际效果仍因机型 GPU 而异，掉帧或发热就往下退一档。';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'mpv 目录：${path}';
@@ -166154,6 +166330,18 @@ class _StringsZhCn extends _StringsEn {
   String get download_torrent_invalid => '来源返回的种子数据无效。请稍后重试或更换来源。';
   @override
   String get download_torrent_selection_failed => '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv 内置锐化（手机上为 spline36）。无需下载，不增加任何 GPU pass。上面几档掉帧时退回这一档最稳。';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K 去模糊（S），在片源原分辨率上跑。不含放大 pass，开销不随屏幕分辨率增长。手机建议从这一档开始。';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K 去模糊（M），在片源原分辨率上跑。kernel 比「中」更大，同样不含放大 pass。适合较快的手机 GPU。';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
 }
 
 // Path: <root>
@@ -175351,7 +175539,7 @@ class _StringsZhHk extends _StringsEn {
       '自動搜索本機 mpv；未找到時可手動選擇 mpv 目錄。';
   @override
   String get video_shader_mobile_perf_hint =>
-      '在手機上，着色器只在標準 GPU 算繪路徑下生效，實際效果因機型 GPU 而異；高檔位可能掉幀或發熱。建議先試低／中檔，並在本機確認效果。';
+      '手機上的中/高/極高檔使用「只去模糊、不放大」的 Anime4K 鏈：放大 pass 已移除——螢幕不比片源更大，放大收益有限卻會佔滿 GPU，連帶整個 app 變卡。實際效果仍因機型 GPU 而異，掉幀或發熱就往下退一檔。';
   @override
   String video_shader_mpv_dir_current({required Object path}) =>
       'mpv 資料夾：${path}';
@@ -176067,6 +176255,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get video_shader_tier_low_hint_mobile =>
+      'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+  @override
+  String get video_shader_tier_medium_hint_mobile =>
+      'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+  @override
+  String get video_shader_tier_high_hint_mobile =>
+      'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+  @override
+  String get video_shader_tier_ultra_hint_mobile =>
+      'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
 }
 
 /// Flat map(s) containing all translations.
@@ -184721,7 +184921,7 @@ extension on _StringsEn {
       case 'video_shader_import_from_mpv_hint':
         return 'Search local mpv automatically, or choose an mpv folder when none is found.';
       case 'video_shader_mobile_perf_hint':
-        return 'On phones, shaders apply only on the standard GPU render path and effectiveness varies by device GPU; higher tiers may drop frames or heat up. Try Low/Medium first and check the result on your device.';
+        return 'On phones, Medium/High/Ultra use deblur-only Anime4K chains: the upscaling passes are left out, because your screen is no larger than the source, so they would cost a lot of GPU for little gain and slow the whole app down. Results still vary by device GPU, and shaders only apply on the standard GPU render path — drop a tier if you see dropped frames or heat.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'mpv folder: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -185383,6 +185583,14 @@ extension on _StringsEn {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -194031,7 +194239,7 @@ extension on _StringsAr {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'على الهواتف، تُطبَّق المظلِّلات فقط على مسار العرض الرسومي القياسي وتختلف الفعالية بحسب معالج الجهاز الرسومي؛ قد تسبب المستويات الأعلى تساقط الإطارات أو ارتفاع الحرارة. جرّب منخفض/متوسط أولًا وتحقق من النتيجة على جهازك.';
+        return 'على الهواتف، تستخدم المستويات المتوسط/العالي/الفائق سلاسل Anime4K لإزالة الضبابية فقط: تُحذف مراحل التكبير لأن الشاشة ليست أكبر من المصدر — فهي تستهلك المعالج الرسومي وتُبطئ التطبيق كله. والتأثير يختلف حسب معالج الجهاز؛ انزل مستوى عند تقطع الإطارات أو الحرارة.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'مجلد mpv: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -194694,6 +194902,14 @@ extension on _StringsAr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -203385,7 +203601,7 @@ extension on _StringsDe {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'Auf Handys werden Shader nur über den Standard-GPU-Renderpfad angewendet und die Wirkung variiert je nach Geräte-GPU; höhere Stufen können Frames verwerfen oder das Gerät erhitzen. Probiere zuerst Niedrig/Mittel und prüfe das Ergebnis auf deinem Gerät.';
+        return 'Auf Telefonen nutzen Mittel/Hoch/Ultra reine Deblur-Ketten von Anime4K: Die Upscaling-Durchgänge entfallen, denn der Bildschirm ist nicht größer als die Quelle — sie würden viel GPU kosten und die ganze App verlangsamen. Die Wirkung hängt weiterhin von der GPU des Geräts ab; bei Rucklern oder Hitze eine Stufe zurückgehen.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'mpv-Ordner: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -204050,6 +204266,14 @@ extension on _StringsDe {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -212733,7 +212957,7 @@ extension on _StringsEs {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'En teléfonos, los shaders solo se aplican en la ruta de renderizado de GPU estándar y su eficacia varía según la GPU del dispositivo; los niveles más altos pueden provocar caídas de fotogramas o calentamiento. Prueba primero Baja/Media y comprueba el resultado en tu dispositivo.';
+        return 'En teléfonos, Medio/Alto/Ultra usan cadenas de Anime4K solo de desenfoque: se omiten los pases de escalado, porque la pantalla no es mayor que la fuente — costarían mucha GPU y ralentizarían toda la app. El efecto sigue dependiendo de la GPU del dispositivo; baja un nivel si hay saltos o calentamiento.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'Carpeta de mpv: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -213397,6 +213621,14 @@ extension on _StringsEs {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -222089,7 +222321,7 @@ extension on _StringsFr {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'Sur téléphone, les shaders ne s\'appliquent que sur le chemin de rendu GPU standard et leur efficacité varie selon le GPU de l\'appareil ; les niveaux élevés peuvent causer des chutes de framerate ou une surchauffe. Essayez d\'abord Faible/Moyen et vérifiez le résultat sur votre appareil.';
+        return 'Sur téléphone, Moyen/Élevé/Ultra utilisent des chaînes Anime4K uniquement de défloutage : les passes d\'agrandissement sont retirées, car l\'écran n\'est pas plus grand que la source — elles coûteraient beaucoup de GPU et ralentiraient toute l\'application. L\'effet dépend encore du GPU de l\'appareil ; descendez d\'un cran en cas de saccades ou de chauffe.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'Dossier mpv : ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -222753,6 +222985,14 @@ extension on _StringsFr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -231416,7 +231656,7 @@ extension on _StringsId {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'Di ponsel, shader hanya berlaku pada jalur render GPU standar dan efektivitasnya bervariasi per GPU perangkat; tingkat yang lebih tinggi mungkin menyebabkan frame drop atau panas. Coba Rendah/Sedang dulu dan periksa hasilnya di perangkatmu.';
+        return 'Di ponsel, Sedang/Tinggi/Ultra memakai rantai Anime4K khusus deblur: tahap upscaling dihilangkan, karena layar tidak lebih besar dari sumbernya — tahap itu akan menghabiskan GPU dan memperlambat seluruh aplikasi. Efeknya tetap bergantung pada GPU perangkat; turunkan satu tingkat jika ada frame drop atau panas.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'Folder mpv: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -232080,6 +232320,14 @@ extension on _StringsId {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -240764,7 +241012,7 @@ extension on _StringsIt {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'Sui telefoni gli shader si applicano solo sul percorso di rendering GPU standard e l\'efficacia varia in base alla GPU del dispositivo; i livelli più alti possono causare scatti o surriscaldamento. Prova prima Basso/Medio e verifica il risultato sul tuo dispositivo.';
+        return 'Sui telefoni, Medio/Alto/Ultra usano catene Anime4K di solo deblur: i passaggi di upscaling sono esclusi, perché lo schermo non è più grande della sorgente — costerebbero molta GPU e rallenterebbero tutta l\'app. L\'efficacia dipende ancora dalla GPU del dispositivo; scendi di un livello se noti scatti o surriscaldamento.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'Cartella mpv: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -241429,6 +241677,14 @@ extension on _StringsIt {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -250048,7 +250304,7 @@ extension on _StringsJa {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'スマートフォンでは標準の GPU 描画パス上でのみシェーダーが有効になり、効果は機種の GPU によって異なります。高い段階ではコマ落ちや発熱が起こる場合があります。まずは低／中で試し、実機で効果を確認してください。';
+        return 'スマホでは中／高／最高は「デブラーのみ・拡大なし」の Anime4K チェーンを使います。画面はソースより大きくないため、拡大パスは効果が薄い割に GPU を占有し、アプリ全体が重くなります。効果は機種の GPU によります。コマ落ちや発熱があれば一段階下げてください。';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'mpv フォルダ：${path}';
       case 'video_shader_mpv_dir_empty':
@@ -250705,6 +250961,14 @@ extension on _StringsJa {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -259327,7 +259591,7 @@ extension on _StringsKo {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return '휴대폰에서는 셰이더가 표준 GPU 렌더 경로에서만 적용되며 효과는 기기 GPU에 따라 다릅니다. 높은 단계는 프레임 드롭이나 발열을 일으킬 수 있습니다. 먼저 낮음/중간을 써 보고 기기에서 결과를 확인하세요.';
+        return '휴대폰에서 중간/높음/최고는 \'디블러만, 업스케일 없음\' Anime4K 체인을 씁니다. 화면이 원본보다 크지 않아 업스케일 패스는 이득에 비해 GPU를 다 쓰고 앱 전체를 느리게 만듭니다. 효과는 기기 GPU에 따라 다릅니다. 프레임 드롭이나 발열이 있으면 한 단계 낮추세요.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'mpv 폴더: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -259985,6 +260249,14 @@ extension on _StringsKo {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -268662,7 +268934,7 @@ extension on _StringsNl {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'Op telefoons werken shaders alleen op het standaard GPU-renderpad en de effectiviteit verschilt per apparaat-GPU; hogere niveaus kunnen frames laten vallen of opwarming veroorzaken. Probeer eerst Laag/Gemiddeld en controleer het resultaat op je apparaat.';
+        return 'Op telefoons gebruiken Gemiddeld/Hoog/Ultra Anime4K-ketens met alleen deblur: de upscaling-passes vervallen, omdat het scherm niet groter is dan de bron — ze zouden veel GPU kosten en de hele app vertragen. De werking hangt nog steeds af van de GPU van het toestel; ga een stap omlaag bij haperingen of warmte.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'mpv-map: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -269327,6 +269599,14 @@ extension on _StringsNl {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -278000,7 +278280,7 @@ extension on _StringsPtBr {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'Em celulares, os shaders só são aplicados no caminho de renderização padrão da GPU, e a eficácia varia conforme a GPU do aparelho; níveis mais altos podem perder quadros ou esquentar. Comece com Baixo/Médio e confira o resultado no seu dispositivo.';
+        return 'Em celulares, Médio/Alto/Ultra usam cadeias do Anime4K apenas de desfoque: os passes de upscaling são omitidos, pois a tela não é maior que a fonte — custariam muita GPU e deixariam o app todo lento. O efeito ainda varia conforme a GPU do aparelho; desça um nível se houver quedas de quadros ou aquecimento.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'Pasta do mpv: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -278664,6 +278944,14 @@ extension on _StringsPtBr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -287345,7 +287633,7 @@ extension on _StringsRu {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'На телефонах шейдеры применяются только на стандартном пути GPU-рендеринга, и эффективность зависит от GPU устройства; высокие уровни могут вызывать пропуск кадров или нагрев. Сначала попробуйте «Низкое»/«Среднее» и проверьте результат на своём устройстве.';
+        return 'На телефонах Средний/Высокий/Ультра используют цепочки Anime4K только для убрания размытия: проходы апскейла убраны, ведь экран не больше источника — они съели бы GPU и замедлили всё приложение. Эффект зависит от GPU устройства; при пропусках кадров или нагреве понизьте уровень.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'Папка mpv: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -288008,6 +288296,14 @@ extension on _StringsRu {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -296662,7 +296958,7 @@ extension on _StringsTh {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'บนโทรศัพท์ เชเดอร์จะทำงานเฉพาะบนเส้นทางเรนเดอร์ GPU มาตรฐาน และผลที่ได้แตกต่างกันตาม GPU ของเครื่อง ระดับสูงอาจทำให้เฟรมตกหรือเครื่องร้อน แนะนำให้ลองระดับต่ำ/ปานกลางก่อนแล้วตรวจผลบนเครื่องของคุณ';
+        return 'บนมือถือ ระดับกลาง/สูง/สูงมาก จะใช้ชุด Anime4K ที่ลดความเบลออย่างเดียว โดยตัดขั้นขยายภาพออก เพราะหน้าจอไม่ใหญ่กว่าต้นทาง — มันจะกิน GPU มากและทำให้ทั้งแอพหนืด ผลลัพธ์ยังขึ้นอยู่กับ GPU ของเครื่อง หากเฟรมตกหรือเครื่องร้อน ให้ลดลงหนึ่งระดับ';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'โฟลเดอร์ mpv: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -297324,6 +297620,14 @@ extension on _StringsTh {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -305992,7 +306296,7 @@ extension on _StringsTr {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'Telefonlarda shader\'lar yalnızca standart GPU işleme yolunda uygulanır ve etkinlik cihaz GPU\'suna göre değişir; yüksek seviyeler kare düşürebilir veya ısınmaya yol açabilir. Önce Düşük/Orta deneyin ve sonucu kendi cihazınızda kontrol edin.';
+        return 'Telefonlarda Orta/Yüksek/Ultra yalnızca bulanıklık giderme yapan Anime4K zincirlerini kullanır: ölçekleme aşamaları çıkarılmıştır, çünkü ekran kaynaktan büyük değildir — bunlar çok GPU harcar ve tüm uygulamayı yavaşlatır. Etki yine cihazın GPU\'suna göre değişir; kare atlama veya ısınma görürseniz bir kademe düşün.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'mpv klasörü: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -306655,6 +306959,14 @@ extension on _StringsTr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -315319,7 +315631,7 @@ extension on _StringsVi {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return 'Trên điện thoại, shader chỉ áp dụng trên đường render GPU tiêu chuẩn và hiệu quả khác nhau tùy GPU thiết bị; mức cao có thể rớt khung hình hoặc gây nóng máy. Hãy thử mức Thấp/Trung bình trước và kiểm tra kết quả trên máy của bạn.';
+        return 'Trên điện thoại, mức Trung bình/Cao/Siêu cao dùng chuỗi Anime4K chỉ khử nhòe: các bước phóng to đã bị bỏ, vì màn hình không lớn hơn nguồn — chúng sẽ ngồn GPU và làm chậm toàn bộ ứng dụng. Hiệu quả vẫn tùy GPU thiết bị; hạ một mức nếu bị rớt khung hình hoặc nóng máy.';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'Thư mục mpv: ${path}';
       case 'video_shader_mpv_dir_empty':
@@ -315980,6 +316292,14 @@ extension on _StringsVi {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
@@ -324573,7 +324893,7 @@ extension on _StringsZhCn {
       case 'video_shader_import_from_mpv_hint':
         return '自动搜索本机 mpv；未找到时可手动选择 mpv 目录。';
       case 'video_shader_mobile_perf_hint':
-        return '手机上着色器仅在标准 GPU 渲染路径下生效，实际效果因机型 GPU 而异；高档位可能掉帧或发热。建议先用低/中档，并在本机确认效果。';
+        return '手机上的中/高/极高档使用「只去模糊、不放大」的 Anime4K 链：放大 pass 已移除——屏幕不比片源更大，放大收益有限却会占满 GPU，连带整个 app 变卡。实际效果仍因机型 GPU 而异，掉帧或发热就往下退一档。';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'mpv 目录：${path}';
       case 'video_shader_mpv_dir_empty':
@@ -325224,6 +325544,14 @@ extension on _StringsZhCn {
         return '来源返回的种子数据无效。请稍后重试或更换来源。';
       case 'download_torrent_selection_failed':
         return '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv 内置锐化（手机上为 spline36）。无需下载，不增加任何 GPU pass。上面几档掉帧时退回这一档最稳。';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K 去模糊（S），在片源原分辨率上跑。不含放大 pass，开销不随屏幕分辨率增长。手机建议从这一档开始。';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K 去模糊（M），在片源原分辨率上跑。kernel 比「中」更大，同样不含放大 pass。适合较快的手机 GPU。';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
       default:
         return null;
     }
@@ -333826,7 +334154,7 @@ extension on _StringsZhHk {
       case 'video_shader_import_from_mpv_hint':
         return '自動搜索本機 mpv；未找到時可手動選擇 mpv 目錄。';
       case 'video_shader_mobile_perf_hint':
-        return '在手機上，着色器只在標準 GPU 算繪路徑下生效，實際效果因機型 GPU 而異；高檔位可能掉幀或發熱。建議先試低／中檔，並在本機確認效果。';
+        return '手機上的中/高/極高檔使用「只去模糊、不放大」的 Anime4K 鏈：放大 pass 已移除——螢幕不比片源更大，放大收益有限卻會佔滿 GPU，連帶整個 app 變卡。實際效果仍因機型 GPU 而異，掉幀或發熱就往下退一檔。';
       case 'video_shader_mpv_dir_current':
         return ({required Object path}) => 'mpv 資料夾：${path}';
       case 'video_shader_mpv_dir_empty':
@@ -334478,6 +334806,14 @@ extension on _StringsZhHk {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'video_shader_tier_low_hint_mobile':
+        return 'mpv\'s built-in sharpening (spline36 on phones). No download, no extra GPU passes. The safe choice if anything above this drops frames.';
+      case 'video_shader_tier_medium_hint_mobile':
+        return 'Anime4K deblur (S) at the source resolution. No upscaling passes, so the cost does not scale with your screen. Start here on phones.';
+      case 'video_shader_tier_high_hint_mobile':
+        return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
+      case 'video_shader_tier_ultra_hint_mobile':
+        return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       default:
         return null;
     }
