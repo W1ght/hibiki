@@ -35,6 +35,13 @@ OutputBaseFilename=fushi-{#AppVersion}-windows-setup
 Compression=lzma2
 SolidCompression=yes
 
+; 安装器自己的图标 = app 图标（兔子）。不设的话是 Inno 默认的下载箭头，
+; 于是「双击下载来的 setup.exe」和「桌面上的 Fushi」看着毫不相干。
+; 这份 ico 由 a32b885d65 换成兔子，7 档尺寸（16~256）齐全，直接可用。
+SetupIconFile=..\runner\resources\app_icon.ico
+; 控制面板「应用和功能」里的图标同样取 app 自己的，不留 Inno 默认。
+UninstallDisplayIcon={app}\fushi.exe
+
 ; ── Material Design 3 外观 ────────────────────────────────────────────────
 ; app 五端统一 MD3，安装器是用户见到的第一屏，之前却是 Inno 默认外观（白底 +
 ; 分隔线 + 默认纸箱图标 + 无暗色）。Inno 6.7 起原生支持自定义样式、自定义背景色、
@@ -42,8 +49,12 @@ SolidCompression=yes
 ;   - 背景用 MD3 surface（浅 #FEF7FF / 深 #141218），与 app 主题同源；
 ;   - hidebevels 去掉经典分隔线（MD3 靠留白与色阶分区，不靠线）；
 ;   - windows11 是内置扁平样式，配上面两条后按钮/输入框是圆角扁平的现代形态；
-;   - 图像是本目录 assets\ 下由 generate_md3_assets.py 生成的 MD3 标记与竖图，
-;     明暗各一套。别用 app_icon.ico：那份至今还是改名前的 Hibiki 字标。
+;   - 图像是本目录 assets\ 下的 MD3 标记与竖图，明暗各一套。这里之所以不直接用
+;     app_icon.ico，是因为向导要的是**按 DPI 分档的明暗两套 PNG**（带 alpha、
+;     底色还得跟 WizardSmallImageBackColor 对齐），ico 顶不上这个用途；
+;     安装器 exe 自身的图标则已经用上 app_icon.ico（见上面的 SetupIconFile）。
+;     注：旧注释说 app_icon.ico「还是改名前的 Hibiki 字标」，那已经过期——
+;     a32b885d65 把它换成了兔子，与向导右上角的标记同源。
 ; 版本闸门：这批指令 6.7 以下的编译器不认识，会直接编译失败。CI 已钉 6.7+
 ; （release-desktop.yml 的 Compile installer 步骤会校验并按需安装），这里再留一道
 ; ISPP 闸门，让任何老编译器上仍能出包，只是退回旧外观。
