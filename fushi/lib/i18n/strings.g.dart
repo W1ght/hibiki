@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77129 (4537 per locale)
+/// Strings: 77197 (4541 per locale)
 ///
-/// Built on 2026-09-09 at 09:32 UTC
+/// Built on 2026-09-09 at 10:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -368,13 +368,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_connect_use_on_mobile => 'Use AnkiConnect instead';
   String get anki_connect_use_on_mobile_hint =>
       'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
-  String get anki_create_lapis => 'Create Lapis deck';
+  String get anki_create_lapis => 'Create and use Lapis';
   String get anki_create_lapis_exists =>
       'Lapis note type and deck already exist — selected them.';
   String anki_create_lapis_failed({required Object error}) =>
       'Could not create Lapis deck: ${error}';
   String get anki_create_lapis_hint =>
-      'Adds the Lapis note type and a Lapis deck to Anki, then selects them.';
+      'Adds the Lapis note type and a Lapis deck to Anki, then selects them as the mining target.';
   String get anki_create_lapis_success => 'Lapis note type and deck created.';
   String get anki_deck => 'Deck';
   String get anki_dedup_auto => 'Automatic processing';
@@ -6297,6 +6297,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Already a source — rescanning: ${path}';
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -16959,6 +16965,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -27848,6 +27864,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -38791,6 +38817,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -49768,6 +49804,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -60547,6 +60593,16 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -71418,6 +71474,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -81670,6 +81736,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -91932,6 +92008,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -102760,6 +102846,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -113641,6 +113737,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -124499,6 +124605,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -135157,6 +135273,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -145931,6 +146057,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -156676,6 +156812,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 // Path: <root>
@@ -156985,14 +157131,15 @@ class _StringsZhCn extends _StringsEn {
   String get anki_connect_use_on_mobile_hint =>
       '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
   @override
-  String get anki_create_lapis => '创建 Lapis 卡组';
+  String get anki_create_lapis => '创建并选用 Lapis';
   @override
   String get anki_create_lapis_exists => 'Lapis 笔记类型和卡组已存在，已选中。';
   @override
   String anki_create_lapis_failed({required Object error}) =>
       '无法创建 Lapis 卡组：${error}';
   @override
-  String get anki_create_lapis_hint => '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组并自动选中。';
+  String get anki_create_lapis_hint =>
+      '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组，并选为制卡目标。';
   @override
   String get anki_create_lapis_success => '已创建 Lapis 笔记类型和卡组。';
   @override
@@ -166544,6 +166691,16 @@ class _StringsZhCn extends _StringsEn {
       '该位置已是来源，正在重新扫描：${path}';
   @override
   String get audiobook_transcribe_model_discarded => '模型文件读不出来，已自动清除，请重新下载。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki 报告 Lapis 牌组和笔记类型已创建，但回读时仍然找不到它们。请打开 Anki 确认它没有卡住，然后重试。';
+  @override
+  String get anki_lapis_suggest_title => '现在还制不出卡';
+  @override
+  String get anki_lapis_suggest_body =>
+      '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+  @override
+  String get anki_lapis_suggest_dismiss => '保持当前设置';
 }
 
 // Path: <root>
@@ -166854,14 +167011,15 @@ class _StringsZhHk extends _StringsEn {
   String get anki_connect_use_on_mobile_hint =>
       '僅在可信網路中使用。AnkiConnect 使用明文 HTTP；請配置匹配的 API key，切換後再重新整理牌組與筆記類型。';
   @override
-  String get anki_create_lapis => '建立 Lapis 卡組';
+  String get anki_create_lapis => '建立並選用 Lapis';
   @override
   String get anki_create_lapis_exists => 'Lapis 筆記類型與卡組已存在，已為你選取。';
   @override
   String anki_create_lapis_failed({required Object error}) =>
       '無法建立 Lapis 卡組：${error}';
   @override
-  String get anki_create_lapis_hint => '向 Anki 加入 Lapis 筆記類型與 Lapis 卡組並自動選取。';
+  String get anki_create_lapis_hint =>
+      '向 Anki 加入 Lapis 筆記類型和 Lapis 卡組，並選為製卡目標。';
   @override
   String get anki_create_lapis_success => '已建立 Lapis 筆記類型與卡組。';
   @override
@@ -176482,6 +176640,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
 }
 
 /// Flat map(s) containing all translations.
@@ -176747,14 +176915,14 @@ extension on _StringsEn {
       case 'anki_connect_use_on_mobile_hint':
         return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
       case 'anki_create_lapis':
-        return 'Create Lapis deck';
+        return 'Create and use Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis note type and deck already exist — selected them.';
       case 'anki_create_lapis_failed':
         return ({required Object error}) =>
             'Could not create Lapis deck: ${error}';
       case 'anki_create_lapis_hint':
-        return 'Adds the Lapis note type and a Lapis deck to Anki, then selects them.';
+        return 'Adds the Lapis note type and a Lapis deck to Anki, then selects them as the mining target.';
       case 'anki_create_lapis_success':
         return 'Lapis note type and deck created.';
       case 'anki_deck':
@@ -185817,6 +185985,14 @@ extension on _StringsEn {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -195147,6 +195323,14 @@ extension on _StringsAr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -204522,6 +204706,14 @@ extension on _StringsDe {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -213888,6 +214080,14 @@ extension on _StringsEs {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -223263,6 +223463,14 @@ extension on _StringsFr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -232609,6 +232817,14 @@ extension on _StringsId {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -241977,6 +242193,14 @@ extension on _StringsIt {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -251272,6 +251496,14 @@ extension on _StringsJa {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -260571,6 +260803,14 @@ extension on _StringsKo {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -269932,6 +270172,14 @@ extension on _StringsNl {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -279288,6 +279536,14 @@ extension on _StringsPtBr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -288651,6 +288907,14 @@ extension on _StringsRu {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -297986,6 +298250,14 @@ extension on _StringsTh {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -307336,6 +307608,14 @@ extension on _StringsTr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -316680,6 +316960,14 @@ extension on _StringsVi {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
@@ -316941,13 +317229,13 @@ extension on _StringsZhCn {
       case 'anki_connect_use_on_mobile_hint':
         return '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
       case 'anki_create_lapis':
-        return '创建 Lapis 卡组';
+        return '创建并选用 Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis 笔记类型和卡组已存在，已选中。';
       case 'anki_create_lapis_failed':
         return ({required Object error}) => '无法创建 Lapis 卡组：${error}';
       case 'anki_create_lapis_hint':
-        return '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组并自动选中。';
+        return '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组，并选为制卡目标。';
       case 'anki_create_lapis_success':
         return '已创建 Lapis 笔记类型和卡组。';
       case 'anki_deck':
@@ -325942,6 +326230,14 @@ extension on _StringsZhCn {
         return ({required Object path}) => '该位置已是来源，正在重新扫描：${path}';
       case 'audiobook_transcribe_model_discarded':
         return '模型文件读不出来，已自动清除，请重新下载。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki 报告 Lapis 牌组和笔记类型已创建，但回读时仍然找不到它们。请打开 Anki 确认它没有卡住，然后重试。';
+      case 'anki_lapis_suggest_title':
+        return '现在还制不出卡';
+      case 'anki_lapis_suggest_body':
+        return '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+      case 'anki_lapis_suggest_dismiss':
+        return '保持当前设置';
       default:
         return null;
     }
@@ -326203,13 +326499,13 @@ extension on _StringsZhHk {
       case 'anki_connect_use_on_mobile_hint':
         return '僅在可信網路中使用。AnkiConnect 使用明文 HTTP；請配置匹配的 API key，切換後再重新整理牌組與筆記類型。';
       case 'anki_create_lapis':
-        return '建立 Lapis 卡組';
+        return '建立並選用 Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis 筆記類型與卡組已存在，已為你選取。';
       case 'anki_create_lapis_failed':
         return ({required Object error}) => '無法建立 Lapis 卡組：${error}';
       case 'anki_create_lapis_hint':
-        return '向 Anki 加入 Lapis 筆記類型與 Lapis 卡組並自動選取。';
+        return '向 Anki 加入 Lapis 筆記類型和 Lapis 卡組，並選為製卡目標。';
       case 'anki_create_lapis_success':
         return '已建立 Lapis 筆記類型與卡組。';
       case 'anki_deck':
@@ -335215,6 +335511,14 @@ extension on _StringsZhHk {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
       default:
         return null;
     }
