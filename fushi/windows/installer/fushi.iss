@@ -609,6 +609,13 @@ function CreateRoundRectRgn(X1, Y1, X2, Y2, W, H: Integer): THandle;
   external 'CreateRoundRectRgn@gdi32.dll stdcall';
 function SetWindowRgn(hWnd: THandle; hRgn: THandle; bRedraw: Boolean): Integer;
   external 'SetWindowRgn@user32.dll stdcall';
+{ 标题栏染色。Inno 自己的 includetitlebar 修饰符要 7.0，我们钉的是 6.7.3，
+  所以走 DWM：Win11 (build 22000+) 允许直接指定标题栏底色/字色/边框色。
+  在更老的系统上这几个属性未知，DwmSetWindowAttribute 返回 E_INVALIDARG 就完事，
+  不会崩也不会画错——所以不判系统版本，失败即保持原生标题栏。 }
+function DwmSetWindowAttribute(Wnd: THandle; Attr: Integer; var Value: Integer;
+  Size: Integer): Integer;
+  external 'DwmSetWindowAttribute@dwmapi.dll stdcall';
 
 { 把控件裁成圆角矩形。Radius 是角半径，GDI 要的是椭圆的宽高所以传直径。
   +1 是 GDI 的半开区间：CreateRoundRectRgn 的右下边界不含，不补会少一列像素。
@@ -651,6 +658,32 @@ begin
     Result := StrToColor('#2B2930')
   else
     Result := StrToColor('#F3EDF7');
+end;
+
+function Md3Surface(): TColor;
+begin
+  { 与 [Setup] 段的 WizardBackColor / WizardBackColorDynamicDark 同值。 }
+  if IsDarkInstallMode then
+    Result := StrToColor('#141218')
+  else
+    Result := StrToColor('#FEF7FF');
+end;
+
+{ 把标题栏也拉进 MD3：底色接上页面 surface，标题文字用 onSurface，边框用同色
+  以免露出一圈系统默认的亮边。
+  TColor 本身就是 COLORREF（0x00BBGGRR），可以直接喂给 DWM，不用换字节序。
+  三个属性号：34=BORDER_COLOR，35=CAPTION_COLOR，36=TEXT_COLOR，均 Win11 起支持；
+  返回值不检查——老系统上失败就是保持原生标题栏，这正是想要的降级。 }
+procedure Md3StyleTitleBar(Wnd: THandle);
+var
+  Caption, Text, Border: Integer;
+begin
+  Caption := Md3Surface;
+  Text := Md3OnSurface;
+  Border := Md3Surface;
+  DwmSetWindowAttribute(Wnd, 35, Caption, SizeOf(Caption));
+  DwmSetWindowAttribute(Wnd, 36, Text, SizeOf(Text));
+  DwmSetWindowAttribute(Wnd, 34, Border, SizeOf(Border));
 end;
 
 #endif
@@ -760,6 +793,8 @@ begin
 
   Md3ApplyFolderIcon(WizardForm.SelectDirBitmapImage);
   Md3ApplyFolderIcon(WizardForm.SelectGroupBitmapImage);
+
+  Md3StyleTitleBar(WizardForm.Handle);
 #endif
 end;
 
