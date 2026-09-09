@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77248 (4544 per locale)
+/// Strings: 77639 (4567 per locale)
 ///
-/// Built on 2026-09-09 at 09:38 UTC
+/// Built on 2026-09-09 at 11:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6305,6 +6305,36 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This collection isn\'t in any local video source\'s scrape plan';
   String get collection_rescrape_started => 'Rescrape queued';
   String get collection_rescrape_failed => 'Rescrape failed';
+  String get updates_center_title => 'Updates';
+  String get updates_center_empty => 'No updates yet';
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  String get updates_mark_all_seen => 'Mark all as read';
+  String get updates_filter_all => 'All';
+  String get updates_kind_video_episode => 'Anime episodes';
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  String get updates_kind_manga_extension => 'Manga extensions';
+  String get updates_kind_app_release => 'App releases';
+  String get updates_notify_section => 'Update notifications';
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  String get updates_notify_app_release => 'Notify about app releases';
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  String get updates_system_notifications => 'System notifications';
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  String get updates_check_now => 'Check for updates now';
+  String get updates_checking => 'Checking...';
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -16982,6 +17012,59 @@ class _StringsAr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -27886,6 +27969,59 @@ class _StringsDe extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -38844,6 +38980,59 @@ class _StringsEs extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -49836,6 +50025,59 @@ class _StringsFr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -60630,6 +60872,59 @@ class _StringsId extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -71516,6 +71811,59 @@ class _StringsIt extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -81783,6 +82131,59 @@ class _StringsJa extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -92060,6 +92461,59 @@ class _StringsKo extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -102903,6 +103357,59 @@ class _StringsNl extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -113799,6 +114306,59 @@ class _StringsPtBr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -124672,6 +125232,59 @@ class _StringsRu extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -135345,6 +135958,59 @@ class _StringsTh extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -146134,6 +146800,59 @@ class _StringsTr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -156894,6 +157613,59 @@ class _StringsVi extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 // Path: <root>
@@ -166776,6 +167548,52 @@ class _StringsZhCn extends _StringsEn {
   String get collection_rescrape_started => '已开始重新刮削';
   @override
   String get collection_rescrape_failed => '重新刮削失败';
+  @override
+  String get updates_center_title => '更新';
+  @override
+  String get updates_center_empty => '暂无更新';
+  @override
+  String get updates_center_empty_hint => '订阅的番剧新集、漫画新章、扩展与应用新版本都会出现在这里。';
+  @override
+  String get updates_mark_all_seen => '全部标为已读';
+  @override
+  String get updates_filter_all => '全部';
+  @override
+  String get updates_kind_video_episode => '番剧新集';
+  @override
+  String get updates_kind_manga_chapter => '漫画新章';
+  @override
+  String get updates_kind_manga_extension => '漫画扩展';
+  @override
+  String get updates_kind_app_release => '应用新版';
+  @override
+  String get updates_notify_section => '更新提醒';
+  @override
+  String get updates_notify_video_episode => '番剧新集提醒';
+  @override
+  String get updates_notify_video_episode_hint => '订阅的番剧下载好新集时提醒。';
+  @override
+  String get updates_notify_manga_chapter => '漫画新章提醒';
+  @override
+  String get updates_notify_manga_chapter_hint => '后台检查已追的在线漫画有没有新章。';
+  @override
+  String get updates_notify_manga_extension => '漫画扩展更新提醒';
+  @override
+  String get updates_notify_manga_extension_hint => '已装扩展在仓库里有更高版本时提醒。';
+  @override
+  String get updates_notify_app_release => '应用新版提醒';
+  @override
+  String get updates_notify_app_release_hint => '有更新的 Fushi 版本时提醒。';
+  @override
+  String get updates_system_notifications => '系统通知';
+  @override
+  String get updates_system_notifications_hint => '同时发送系统通知。关掉后仍保留应用内红点。';
+  @override
+  String get updates_check_now => '立即检查更新';
+  @override
+  String get updates_checking => '检查中…';
+  @override
+  String get updates_notification_summary => '{first} 等 {count} 项';
 }
 
 // Path: <root>
@@ -176728,6 +177546,59 @@ class _StringsZhHk extends _StringsEn {
   String get collection_rescrape_started => '已開始重新刮削';
   @override
   String get collection_rescrape_failed => '重新刮削失敗';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String get updates_notification_summary => '{first} and {count} more';
 }
 
 /// Flat map(s) containing all translations.
@@ -186077,6 +186948,52 @@ extension on _StringsEn {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -195421,6 +196338,52 @@ extension on _StringsAr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -204810,6 +205773,52 @@ extension on _StringsDe {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -214190,6 +215199,52 @@ extension on _StringsEs {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -223579,6 +224634,52 @@ extension on _StringsFr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -232939,6 +234040,52 @@ extension on _StringsId {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -242321,6 +243468,52 @@ extension on _StringsIt {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -251630,6 +252823,52 @@ extension on _StringsJa {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -260943,6 +262182,52 @@ extension on _StringsKo {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -270318,6 +271603,52 @@ extension on _StringsNl {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -279688,6 +281019,52 @@ extension on _StringsPtBr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -289065,6 +290442,52 @@ extension on _StringsRu {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -298414,6 +299837,52 @@ extension on _StringsTh {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -307778,6 +309247,52 @@ extension on _StringsTr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -317136,6 +318651,52 @@ extension on _StringsVi {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
@@ -326412,6 +327973,52 @@ extension on _StringsZhCn {
         return '已开始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失败';
+      case 'updates_center_title':
+        return '更新';
+      case 'updates_center_empty':
+        return '暂无更新';
+      case 'updates_center_empty_hint':
+        return '订阅的番剧新集、漫画新章、扩展与应用新版本都会出现在这里。';
+      case 'updates_mark_all_seen':
+        return '全部标为已读';
+      case 'updates_filter_all':
+        return '全部';
+      case 'updates_kind_video_episode':
+        return '番剧新集';
+      case 'updates_kind_manga_chapter':
+        return '漫画新章';
+      case 'updates_kind_manga_extension':
+        return '漫画扩展';
+      case 'updates_kind_app_release':
+        return '应用新版';
+      case 'updates_notify_section':
+        return '更新提醒';
+      case 'updates_notify_video_episode':
+        return '番剧新集提醒';
+      case 'updates_notify_video_episode_hint':
+        return '订阅的番剧下载好新集时提醒。';
+      case 'updates_notify_manga_chapter':
+        return '漫画新章提醒';
+      case 'updates_notify_manga_chapter_hint':
+        return '后台检查已追的在线漫画有没有新章。';
+      case 'updates_notify_manga_extension':
+        return '漫画扩展更新提醒';
+      case 'updates_notify_manga_extension_hint':
+        return '已装扩展在仓库里有更高版本时提醒。';
+      case 'updates_notify_app_release':
+        return '应用新版提醒';
+      case 'updates_notify_app_release_hint':
+        return '有更新的 Fushi 版本时提醒。';
+      case 'updates_system_notifications':
+        return '系统通知';
+      case 'updates_system_notifications_hint':
+        return '同时发送系统通知。关掉后仍保留应用内红点。';
+      case 'updates_check_now':
+        return '立即检查更新';
+      case 'updates_checking':
+        return '检查中…';
+      case 'updates_notification_summary':
+        return '{first} 等 {count} 项';
       default:
         return null;
     }
@@ -335699,6 +337306,52 @@ extension on _StringsZhHk {
         return '已開始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失敗';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return '{first} and {count} more';
       default:
         return null;
     }
