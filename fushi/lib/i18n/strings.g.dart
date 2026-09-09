@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77112 (4536 per locale)
+/// Strings: 77129 (4537 per locale)
 ///
-/// Built on 2026-09-09 at 08:11 UTC
+/// Built on 2026-09-09 at 08:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6294,6 +6294,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   String get dialog_background_close => 'Close (task keeps running)';
   String get reader_timer_show => 'Show reading timer';
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -16952,6 +16954,9 @@ class _StringsAr extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'إظهار مؤقت القراءة';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -27837,6 +27842,9 @@ class _StringsDe extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Lesetimer anzeigen';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -38776,6 +38784,9 @@ class _StringsEs extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Mostrar temporizador de lectura';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -49749,6 +49760,9 @@ class _StringsFr extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Afficher le minuteur de lecture';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -60524,6 +60538,9 @@ class _StringsId extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Tampilkan pengatur waktu baca';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -71391,6 +71408,9 @@ class _StringsIt extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Mostra timer di lettura';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -81639,6 +81659,9 @@ class _StringsJa extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => '読書タイマーを表示';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -91897,6 +91920,9 @@ class _StringsKo extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => '독서 타이머 표시';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -102721,6 +102747,9 @@ class _StringsNl extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Leestimer tonen';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -113598,6 +113627,9 @@ class _StringsPtBr extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Mostrar cronômetro de leitura';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -124452,6 +124484,9 @@ class _StringsRu extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Показывать таймер чтения';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -135106,6 +135141,9 @@ class _StringsTh extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'แสดงตัวจับเวลาการอ่าน';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -145876,6 +145914,9 @@ class _StringsTr extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Okuma zamanlayıcısını göster';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -156617,6 +156658,9 @@ class _StringsVi extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Hiển thị bộ đếm thời gian đọc';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -166482,6 +166526,8 @@ class _StringsZhCn extends _StringsEn {
   String get dialog_background_close => '关闭（任务继续在后台运行）';
   @override
   String get reader_timer_show => '显示阅读计时器';
+  @override
+  String get audiobook_transcribe_model_discarded => '模型文件读不出来，已自动清除，请重新下载。';
 }
 
 // Path: <root>
@@ -176416,6 +176462,9 @@ class _StringsZhHk extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => '顯示閱讀計時器';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -185748,6 +185797,8 @@ extension on _StringsEn {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Show reading timer';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -195075,6 +195126,8 @@ extension on _StringsAr {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'إظهار مؤقت القراءة';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -204447,6 +204500,8 @@ extension on _StringsDe {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Lesetimer anzeigen';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -213810,6 +213865,8 @@ extension on _StringsEs {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Mostrar temporizador de lectura';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -223182,6 +223239,8 @@ extension on _StringsFr {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Afficher le minuteur de lecture';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -232525,6 +232584,8 @@ extension on _StringsId {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Tampilkan pengatur waktu baca';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -241890,6 +241951,8 @@ extension on _StringsIt {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Mostra timer di lettura';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -251182,6 +251245,8 @@ extension on _StringsJa {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return '読書タイマーを表示';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -260478,6 +260543,8 @@ extension on _StringsKo {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return '독서 타이머 표시';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -269836,6 +269903,8 @@ extension on _StringsNl {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Leestimer tonen';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -279189,6 +279258,8 @@ extension on _StringsPtBr {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Mostrar cronômetro de leitura';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -288549,6 +288620,8 @@ extension on _StringsRu {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Показывать таймер чтения';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -297881,6 +297954,8 @@ extension on _StringsTh {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'แสดงตัวจับเวลาการอ่าน';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -307228,6 +307303,8 @@ extension on _StringsTr {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Okuma zamanlayıcısını göster';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -316569,6 +316646,8 @@ extension on _StringsVi {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Hiển thị bộ đếm thời gian đọc';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -325829,6 +325908,8 @@ extension on _StringsZhCn {
         return '关闭（任务继续在后台运行）';
       case 'reader_timer_show':
         return '显示阅读计时器';
+      case 'audiobook_transcribe_model_discarded':
+        return '模型文件读不出来，已自动清除，请重新下载。';
       default:
         return null;
     }
@@ -335099,6 +335180,8 @@ extension on _StringsZhHk {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return '顯示閱讀計時器';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
