@@ -86,6 +86,22 @@ RestartApplications=no
 ; 过渡期双 mutex：老 Hibiki 实例还持有旧名互斥量时，升级安装同样要等它退出。
 AppMutex=FushiSingleInstanceMutex,HibikiSingleInstanceMutex
 
+[Languages]
+; 统一成简体中文。改之前这个安装器是**中英混杂**的：向导自身的页标题、说明、按钮
+; 走 Inno 内置的英文 Default.isl（"Select Destination Location" / "Next"），而本文件
+; 里的 [Tasks] 描述、数据根页文案、各种校验提示全是中文，同一屏上两种语言。
+;
+; 为什么把 .isl 入库而不是引用 Inno 安装目录：简体中文属于 Inno 的
+; user-contributed translations，官方安装包**不随附**（本机 6.7.3 的 Languages\ 下
+; 29 个语言文件里没有中文，日语韩语都有）。放进仓库，CI 才不依赖编译机上恰好装过
+; 中文语言包，也不必在构建时联网取。
+; 来源：jrsoftware/issrc 的 Files/Languages/ChineseSimplified.isl
+;       （维护者 Zhenghan Yang，上游 github.com/kira-96/Inno-Setup-Chinese-Simplified-Translation）
+;       SHA-256 E0B0B350E2245F3C5E65586DFE43D574F6E7F06F2261149ABA284954B3FC9A8D
+;
+; 只列一个语言，所以 Inno 不会弹语言选择框（ShowLanguageDialog=auto 在单语言时不显示）。
+Name: "chinesesimplified"; MessagesFile: "ChineseSimplified.isl"
+
 [Tasks]
 ; 桌面快捷方式：默认勾选（保持旧行为——首装桌面即有图标），允许用户取消。
 ; 配合 [Icons] 的 Check: ShouldCreateDesktopIcon，仅在快捷方式尚不存在时创建，
@@ -613,13 +629,18 @@ end;
 
 #ifdef Md3Chrome
 const
-  { 按钮裁切时的内缩像素数，用来吃掉样式画的那圈矩形强调框（见 Md3RoundControl）。 }
+  { 裁切时的内缩像素数，用来吃掉样式画在控件最外圈的矩形边框（见 Md3RoundControl）：
+    按钮上那是默认按钮的强调框，输入框上那是一圈亮白粗边。两者都改不动颜色、又都是
+    矩形，只能从可见区域里排除掉。 }
   Md3ButtonInset = 2;
+  Md3EditInset = 2;
 
 function CreateRoundRectRgn(X1, Y1, X2, Y2, W, H: Integer): THandle;
   external 'CreateRoundRectRgn@gdi32.dll stdcall';
 function SetWindowRgn(hWnd: THandle; hRgn: THandle; bRedraw: Boolean): Integer;
   external 'SetWindowRgn@user32.dll stdcall';
+function SendMessageW(hWnd: THandle; Msg: Cardinal; wParam, lParam: Longint): Longint;
+  external 'SendMessageW@user32.dll stdcall';
 { 标题栏染色。Inno 自己的 includetitlebar 修饰符要 7.0，我们钉的是 6.7.3，
   所以走 DWM：Win11 (build 22000+) 允许直接指定标题栏底色/字色/边框色。
   在更老的系统上这几个属性未知，DwmSetWindowAttribute 返回 E_INVALIDARG 就完事，
@@ -671,6 +692,14 @@ begin
     Result := StrToColor('#F3EDF7');
 end;
 
+function Md3SurfaceContainerHighest(): TColor;
+begin
+  if IsDarkInstallMode then
+    Result := StrToColor('#36343B')
+  else
+    Result := StrToColor('#E6E0E9');
+end;
+
 function Md3Surface(): TColor;
 begin
   { 与 [Setup] 段的 WizardBackColor / WizardBackColorDynamicDark 同值。 }
@@ -712,12 +741,26 @@ begin
 end;
 
 #ifdef Md3Chrome
-{ 按 MD3 把一个按钮做成胶囊形并给字色。填充仍由样式画（见上面的长注释）。 }
+{ 按 MD3 把一个按钮做成胶囊形并给字色。
+
+  填充色改不了，这是试到底之后的结论，别再重走：
+    - TNewButton 在 Pascal Script 里**没有 Color 属性**（写了直接编译失败：
+      Unknown identifier 'COLOR'）；
+    - 从 StyleElements 摘掉 seClient 会让它连样式绘制一起丢掉，退回系统原生按钮
+      （深色模式下是刺眼的白底黑字），比不改更糟；
+    - 拿 TPanel 盖一层「视觉按钮」也走不通：Panel 会吃掉鼠标点击，而它的 OnClick
+      在 Inno 里根本不触发（赋值编译得过、运行期没反应），WS_EX_TRANSPARENT 也不
+      让子窗口的命中测试穿透 —— 净结果是**按钮点不动**，对安装器是致命的；
+    - TBitmapImage 的确能当自绘按钮，但那要求把 Caption（Next / Install / Finish，
+      还随语言变）连同明暗、DPI 档、禁用/焦点态一起烧进位图，组合爆炸且极易与真实
+      Caption 失步 —— 拿观感换一个「按钮文字可能是错的」的风险，不划算。
+  所以按钮填充只能由 WizardStyleFile 指定的自制 VCL 样式决定，而那需要 Delphi 的
+  Bitmap Style Designer，本仓没有这条工具链。字色和形状都已拿到，止步于填充。 }
 procedure Md3StyleButton(Btn: TNewButton; TextColor: TColor);
 begin
   { 连 seBorder 一起摘：默认按钮（Next）的强调边框是**矩形**，被 pill region 裁完
     只剩上下两条横线加左右两小截，比不做圆角还难看（实测放大图上四段断线清晰可见）。
-    seClient 必须留着 —— 摘了按钮就丢掉样式绘制、退回系统原生白底黑字。 }
+    seClient 必须留着 —— 理由见上。 }
   Btn.StyleElements := Btn.StyleElements - [seFont, seBorder];
   Btn.Font.Color := TextColor;
   Btn.Font.Name := Md3UiFontName(Btn.Font.Name);
@@ -725,18 +768,33 @@ begin
   Md3RoundControl(Btn, (Btn.Height - 2 * Md3ButtonInset) div 2, Md3ButtonInset);
 end;
 
-{ MD3 outlined text field：surfaceContainer 底 + onSurface 字 + 4dp 角。 }
-{ 参数类型必须是 TEdit 而不是 TCustomEdit：Color 是 TEdit 才暴露的属性，
-  写成基类会编译失败（Unknown identifier 'COLOR'）。 }
+{ MD3 filled text field。
+  参数类型必须是 TEdit 而不是 TCustomEdit：Color 是 TEdit 才暴露的属性，
+  写成基类会编译失败（Unknown identifier 'COLOR'）。
+
+  为什么是 filled 而不是 outlined：outlined 需要一条自己控制得了的 outline，而这里
+  唯一存在的边框是样式画的那圈亮白粗边 —— 颜色改不动（seBorder 摘了也还在），形状
+  又是矩形，圆角一裁就成四段断线。与其留着这条又丑又不受控的线，不如按 MD3 的
+  filled 变体做：内缩 2px 把它整个吃掉，靠 surfaceContainerHighest 的底色与背景
+  分层。MD3 里 filled text field 本来就是「有底色、无边框」。 }
 procedure Md3StyleEdit(Edit: TEdit);
+var
+  Margin: Integer;
 begin
   Edit.StyleElements := Edit.StyleElements - [seClient, seBorder, seFont];
-  Edit.Color := Md3SurfaceContainer;
+  Edit.Color := Md3SurfaceContainerHighest;
   Edit.Font.Color := Md3OnSurface;
   Edit.Font.Name := Md3UiFontName(Edit.Font.Name);
-  { 输入框不内缩：它的边框是 MD3 outlined text field 想要的那条 outline，
-    要留着（按钮那圈矩形强调框才是要吃掉的东西）。 }
-  Md3RoundControl(Edit, ScaleY(4), 0);
+
+  { 左右内边距。两个理由，缺一不可：
+      - MD3 的 filled text field 本来就有 16dp 的水平内边距，贴边的文字不是 MD3；
+      - 更要紧的是，Edit 的文本和**选中高亮块**都从 x=2 起画，紧贴左边缘，圆角一裁
+        就把高亮块的左端啃掉一个弧形缺口（肉眼很明显，像文字陷在圆里）。
+    EM_SETMARGINS(0xD3) + EC_LEFTMARGIN|EC_RIGHTMARGIN(3)，lParam 低位是左、高位是右。 }
+  Margin := ScaleX(14);
+  SendMessageW(Edit.Handle, $00D3, 3, Margin or (Margin * 65536));
+
+  Md3RoundControl(Edit, ScaleY(8), Md3EditInset);
 end;
 
 { 把「选择安装位置」页的经典黄纸夹换成 MD3 folder。
@@ -768,6 +826,23 @@ begin
 end;
 #endif
 
+{ 「准备安装」页的摘要框。和输入框同一套 filled 处理。 }
+procedure Md3StyleMemo(Memo: TNewMemo);
+begin
+  Memo.StyleElements := Memo.StyleElements - [seClient, seBorder, seFont];
+  Memo.Color := Md3SurfaceContainerHighest;
+  Memo.Font.Color := Md3OnSurface;
+  Memo.Font.Name := Md3UiFontName(Memo.Font.Name);
+  { 这里**只能**改不触发窗口句柄重建的属性（颜色、字体、region）。
+    试过 Memo.BorderStyle := bsNone 去掉那圈边框，代价是 VCL 重建句柄，而本过程是在
+    CurPageChanged 里跑的、那时摘要内容已经填好 —— 重建把内容拦腰截断（末行只剩一个
+    「将」字），连 Next 按钮的 Caption 都没能更新成「安装」。同一个机制在数据根页也
+    咬过一次（见 InitializeWizard 里 Md3StyleEdit 的位置说明）。
+    改到 InitializeWizard 里去设也不行：那会提前创建 ReadyMemo 的句柄，正是把「选择
+    附加任务」页第一项文字遮掉的那类问题。所以边框留着，只统一颜色。 }
+  Md3RoundControl(Memo, ScaleY(8), Md3EditInset);
+end;
+
 procedure ApplyMd3Chrome();
 begin
   WizardForm.PageNameLabel.Font.Name :=
@@ -791,19 +866,23 @@ begin
     WizardForm.PageNameLabel.Top + WizardForm.PageNameLabel.Height + ScaleY(2);
 
 #ifdef Md3Chrome
-  { 常驻按钮。主按钮用 primary 字色，次要的用 onSurface —— 填充都是样式给的同一块
-    深灰（按钮填充是 [Code] 改不动的，见上面的长注释），靠字色分主次。 }
+  { 常驻按钮。填充都是样式给的同一块深灰（改不动，见 Md3StyleButton 的注释），
+    靠字色分主次：主按钮 primary，次要的 onSurface。 }
   Md3StyleButton(WizardForm.NextButton, Md3Primary);
   Md3StyleButton(WizardForm.BackButton, Md3OnSurface);
   Md3StyleButton(WizardForm.CancelButton, Md3OnSurface);
   Md3StyleButton(WizardForm.DirBrowseButton, Md3Primary);
-  Md3StyleButton(WizardForm.GroupBrowseButton, Md3Primary);
 
   Md3StyleEdit(WizardForm.DirEdit);
-  Md3StyleEdit(WizardForm.GroupEdit);
 
   Md3ApplyFolderIcon(WizardForm.SelectDirBitmapImage);
-  Md3ApplyFolderIcon(WizardForm.SelectGroupBitmapImage);
+
+  { **不要**碰程序组页的那三个控件（GroupBrowseButton / GroupEdit /
+    SelectGroupBitmapImage）。本安装器 DisableProgramGroupPage=yes，那一页从不显示，
+    它们的窗口句柄本来也不该被创建 —— 而这里每个样式过程都要读 .Handle（设 region、
+    发 EM_SETMARGINS），一读就把句柄强行创建出来。实测后果：这些凭空实体化的控件
+    盖在「选择附加任务」页上，把任务列表第一项「创建桌面快捷方式」的文字整个遮掉，
+    只剩一个孤零零的勾选框（对照 develop 版逐页截图确认，是本次改动引入的）。 }
 
   Md3StyleTitleBar(WizardForm.Handle);
 #endif
@@ -821,13 +900,34 @@ begin
     '点击「下一步」继续。',
     False, 'Fushi');
   DataRootPage.Add('');
-  DataRootPage.Values[0] := ExpandConstant('{userdocs}\Fushi');
 #ifdef Md3Chrome
   { 这页是 CreateInputDirPage 自建的，控件不在 WizardForm 上，ApplyMd3Chrome 扫不到。
     全新安装必经此页，漏了就会出现「向导其余页是 MD3、唯独这页是 Windows 原样」。
-    必须在 Add 之后：Edits/Buttons 是 Add 时才创建的。 }
+
+    位置很讲究，两边都卡死了：
+      - 必须在 Add 之后 —— Edits/Buttons 是 Add 时才创建的；
+      - 必须在 Values[0] 赋值**之前** —— 改 StyleElements 会让 VCL 重建控件的窗口
+        句柄，把已经写进去的文本一起丢掉。先设样式后赋值就没事；反过来（先赋值再
+        设样式）实测这页的输入框会变**空白**，用户点「下一步」会被 BUG-1483 那道
+        路径预检挡住，直接卡在这页。 }
   Md3StyleEdit(DataRootPage.Edits[0]);
   Md3StyleButton(DataRootPage.Buttons[0], Md3Primary);
+#endif
+  DataRootPage.Values[0] := ExpandConstant('{userdocs}\Fushi');
+end;
+
+procedure CurPageChanged(CurPageID: Integer);
+begin
+#ifdef Md3Chrome
+  { 只在页面**真正显示时**才碰它自己的控件。
+    这条是踩出来的：ApplyMd3Chrome 里每个样式过程都要读 .Handle（设 region、发
+    EM_SETMARGINS），一读就强行创建窗口句柄。对本来永远不显示的控件（程序组页那
+    三个，DisableProgramGroupPage=yes）这样做，会让它们凭空实体化并盖住别的页
+    —— 实测把「选择附加任务」页第一项的文字整个遮没了。ReadyMemo 属于会显示的页，
+    但同样按「等它显示了再说」处理，免得重蹈覆辙。
+    重复进同一页会重复设置，这些操作都是幂等的。 }
+  if CurPageID = wpReady then
+    Md3StyleMemo(WizardForm.ReadyMemo);
 #endif
 end;
 
@@ -960,12 +1060,15 @@ end;
 function InstallDirWritable(const Dir: String): Boolean;
 var
   Probe: String;
+  CreatedByProbe: Boolean;
 begin
   Result := False;
+  CreatedByProbe := False;
   if not DirExists(Dir) then
   begin
     if not ForceDirectories(Dir) then
       Exit;
+    CreatedByProbe := True;
   end;
   Probe := AddBackslash(Dir) + '.fushi-setup-write-test';
   if SaveStringToFile(Probe, 'fushi setup preflight', False) then
@@ -973,6 +1076,15 @@ begin
     DeleteFile(Probe);
     Result := True;
   end;
+  { 预检不该留下痕迹。探针文件一直是删的，**目录**却留着了，两个后果都实测复现过：
+      - 用户在选目录页点了「下一步」之后取消安装，机器上凭空多出一个空目录；
+      - 再次运行安装器时该目录已存在，Inno 于是弹「Folder Exists / 文件夹已存在，
+        仍要安装到该文件夹吗？」——对一个**从没装过**的用户，这个确认框没有任何意义。
+    只删我们自己刚建的这一级：目录本来就存在时（升级、或用户手动建过）一律不碰。
+    ForceDirectories 可能建了多级，但上级几乎总是已存在的系统目录，多留一级空目录
+    远好过误删用户的东西，所以这里只收回最后一级。 }
+  if CreatedByProbe then
+    RemoveDir(Dir);
 end;
 
 function NextButtonClick(CurPageID: Integer): Boolean;
