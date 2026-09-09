@@ -735,6 +735,16 @@ std::string link_target_of(const std::string& definition) {
 
 MdxMeta mdx_reader::parse_streaming(const uint8_t* data, size_t size, const EntrySink& sink,
                                     const MetaSink& on_meta) {
+  return parse_streaming_with_redirects(
+      data, size,
+      [&](std::string&& key, std::string&& definition, std::string_view) {
+        sink(std::move(key), std::move(definition));
+      },
+      on_meta);
+}
+
+MdxMeta mdx_reader::parse_streaming_with_redirects(const uint8_t* data, size_t size, const RedirectEntrySink& sink,
+                                                   const MetaSink& on_meta) {
   ContainerIndex idx = parse_container_index(data, size);
 
   MdxMeta meta;
@@ -771,7 +781,7 @@ MdxMeta mdx_reader::parse_streaming(const uint8_t* data, size_t size, const Entr
       links.push_back({ki, link_target_of(text)});
       return;
     }
-    sink(std::string(idx.keys[ki].headword), std::move(text));
+    sink(std::string(idx.keys[ki].headword), std::move(text), {});
   });
 
   if (links.empty()) return meta;
@@ -833,16 +843,15 @@ MdxMeta mdx_reader::parse_streaming(const uint8_t* data, size_t size, const Entr
   for (const auto& [target, _] : links_by_target) targets.push_back(target);
   std::sort(targets.begin(), targets.end());
 
-  // Aliases carry their target's bytes verbatim: byte-identical definitions are
-  // what let the importer collapse them onto one glossary blob by hash
-  // (BUG-1665), so this must stay a faithful copy, not a reference.
+  // Keep both the target's bytes and its canonical headword. Glossary storage
+  // deduplication is independent of whether an entry really is a redirect.
   std::vector<bool> resolved(links.size(), false);
   extract_records(data, size, idx, targets, [&](size_t ki, const uint8_t* rec, size_t len) {
     auto it = links_by_target.find(ki);
     if (it == links_by_target.end()) return;
     std::string definition = to_text(rec, len);
     for (size_t pos : it->second) {
-      sink(std::string(idx.keys[links[pos].key_index].headword), std::string(definition));
+      sink(std::string(idx.keys[links[pos].key_index].headword), std::string(definition), idx.keys[ki].headword);
       resolved[pos] = true;
     }
   });
@@ -852,7 +861,7 @@ MdxMeta mdx_reader::parse_streaming(const uint8_t* data, size_t size, const Entr
   // as the old whole-table resolution left them.
   for (size_t pos = 0; pos < links.size(); pos++) {
     if (resolved[pos]) continue;
-    sink(std::string(idx.keys[links[pos].key_index].headword), "@@@LINK=" + links[pos].target);
+    sink(std::string(idx.keys[links[pos].key_index].headword), "@@@LINK=" + links[pos].target, {});
   }
 
   return meta;
@@ -860,8 +869,9 @@ MdxMeta mdx_reader::parse_streaming(const uint8_t* data, size_t size, const Entr
 
 MdxResult mdx_reader::parse(const uint8_t* data, size_t size) {
   MdxResult result;
-  MdxMeta meta = parse_streaming(data, size, [&](std::string&& key, std::string&& definition) {
-    result.entries.push_back({std::move(key), std::move(definition)});
+  MdxMeta meta = parse_streaming_with_redirects(data, size, [&](std::string&& key, std::string&& definition,
+                                                             std::string_view redirect_target) {
+    result.entries.push_back({std::move(key), std::move(definition), std::string(redirect_target)});
   });
   result.title = std::move(meta.title);
   result.encoding = std::move(meta.encoding);

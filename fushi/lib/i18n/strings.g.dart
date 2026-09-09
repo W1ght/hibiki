@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76874 (4522 per locale)
+/// Strings: 76891 (4523 per locale)
 ///
-/// Built on 2026-09-09 at 04:09 UTC
+/// Built on 2026-09-09 at 13:19 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6348,6 +6348,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${process} is a critical system process — Fushi will not end it. Change the port instead.';
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -17041,6 +17043,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'هذه العملية هي نسخة أخرى قيد التشغيل من هذا التطبيق.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -27970,6 +27975,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Dieser Prozess ist eine weitere laufende Instanz dieser App.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -38949,6 +38957,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Este proceso es otra instancia en ejecución de esta app.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -49961,6 +49972,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Ce processus est une autre instance en cours d\'exécution de cette application.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -60773,6 +60787,9 @@ class _StringsId extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Proses ini adalah instance lain dari aplikasi ini yang sedang berjalan.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -71681,6 +71698,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Questo processo è un\'altra istanza in esecuzione di questa app.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -81958,6 +81978,9 @@ class _StringsJa extends _StringsEn {
       '${process}は重要なシステムプロセスです — Fushiでは終了しません。代わりにポートを変更してください。';
   @override
   String get yomitan_port_kill_self_instance => 'このプロセスは、このアプリの別のインスタンスです。';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -92245,6 +92268,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       '이 프로세스는 이 앱의 다른 실행 중인 인스턴스입니다.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -103107,6 +103133,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Dit proces is een andere draaiende instantie van deze app.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -114022,6 +114051,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Este processo é outra instância deste app em execução.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -124915,6 +124947,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Этот процесс — другой запущенный экземпляр данного приложения.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -135605,6 +135640,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'โปรเซสนี้เป็นอินสแตนซ์อื่นของแอปนี้ที่กำลังทำงานอยู่';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -146413,6 +146451,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Bu işlem, uygulamanın çalışan başka bir örneğidir.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -157190,6 +157231,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Tiến trình này là một phiên bản đang chạy khác của ứng dụng.';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 // Path: <root>
@@ -167083,6 +167127,8 @@ class _StringsZhCn extends _StringsEn {
       '${process} 是关键系统进程，Fushi 不会结束它；请改用其他端口。';
   @override
   String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
+  @override
+  String get dictionary_files_missing => '词典文件缺失，请重新导入';
 }
 
 // Path: <root>
@@ -177045,6 +177091,9 @@ class _StringsZhHk extends _StringsEn {
       '${process} 是關鍵系統進程，Fushi 不會結束它；請改用其他端口。';
   @override
   String get yomitan_port_kill_self_instance => '該進程是本應用的另一個正在運行的實例。';
+  @override
+  String get dictionary_files_missing =>
+      'Dictionary files are missing. Please import the dictionary again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -186355,6 +186404,8 @@ extension on _StringsEn {
             '${process} is a critical system process — Fushi will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -195660,6 +195711,8 @@ extension on _StringsAr {
             '${process} هي عملية نظام حرجة — لن يقوم Fushi بإنهائها. غيّر المنفذ بدلاً من ذلك.';
       case 'yomitan_port_kill_self_instance':
         return 'هذه العملية هي نسخة أخرى قيد التشغيل من هذا التطبيق.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -205014,6 +205067,8 @@ extension on _StringsDe {
             '${process} ist ein kritischer Systemprozess – Fushi wird ihn nicht beenden. Ändern Sie stattdessen den Port.';
       case 'yomitan_port_kill_self_instance':
         return 'Dieser Prozess ist eine weitere laufende Instanz dieser App.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -214358,6 +214413,8 @@ extension on _StringsEs {
             '${process} es un proceso crítico del sistema — Fushi no lo finalizará. Cambie el puerto en su lugar.';
       case 'yomitan_port_kill_self_instance':
         return 'Este proceso es otra instancia en ejecución de esta app.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -223710,6 +223767,8 @@ extension on _StringsFr {
             '${process} est un processus système critique — Fushi ne l\'arrêtera pas. Changez de port à la place.';
       case 'yomitan_port_kill_self_instance':
         return 'Ce processus est une autre instance en cours d\'exécution de cette application.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -233032,6 +233091,8 @@ extension on _StringsId {
             '${process} adalah proses sistem penting — Fushi tidak akan mengakhirinya. Ganti port saja.';
       case 'yomitan_port_kill_self_instance':
         return 'Proses ini adalah instance lain dari aplikasi ini yang sedang berjalan.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -242377,6 +242438,8 @@ extension on _StringsIt {
             '${process} è un processo di sistema critico — Fushi non lo terminerà. Cambia la porta.';
       case 'yomitan_port_kill_self_instance':
         return 'Questo processo è un\'altra istanza in esecuzione di questa app.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -251646,6 +251709,8 @@ extension on _StringsJa {
             '${process}は重要なシステムプロセスです — Fushiでは終了しません。代わりにポートを変更してください。';
       case 'yomitan_port_kill_self_instance':
         return 'このプロセスは、このアプリの別のインスタンスです。';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -260920,6 +260985,8 @@ extension on _StringsKo {
             '${process}는 중요한 시스템 프로세스입니다. Fushi가 종료하지 않습니다. 대신 포트를 변경하세요.';
       case 'yomitan_port_kill_self_instance':
         return '이 프로세스는 이 앱의 다른 실행 중인 인스턴스입니다.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -270260,6 +270327,8 @@ extension on _StringsNl {
             '${process} is een kritiek systeemproces — Fushi beëindigt het niet. Wijzig de poort.';
       case 'yomitan_port_kill_self_instance':
         return 'Dit proces is een andere draaiende instantie van deze app.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -279595,6 +279664,8 @@ extension on _StringsPtBr {
             '${process} é um processo crítico do sistema — o Fushi não vai encerrá-lo. Mude a porta.';
       case 'yomitan_port_kill_self_instance':
         return 'Este processo é outra instância deste app em execução.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -288936,6 +289007,8 @@ extension on _StringsRu {
             '${process} — критический системный процесс, Fushi не будет его завершать. Измените порт.';
       case 'yomitan_port_kill_self_instance':
         return 'Этот процесс — другой запущенный экземпляр данного приложения.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -298246,6 +298319,8 @@ extension on _StringsTh {
             '${process} เป็นโปรเซสระบบที่สำคัญ — Fushi จะไม่จบโปรเซสนี้ เปลี่ยนพอร์ตแทน';
       case 'yomitan_port_kill_self_instance':
         return 'โปรเซสนี้เป็นอินสแตนซ์อื่นของแอปนี้ที่กำลังทำงานอยู่';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -307572,6 +307647,8 @@ extension on _StringsTr {
             '${process} kritik bir sistem işlemidir — Fushi onu sonlandırmaz. Bunun yerine portu değiştirin.';
       case 'yomitan_port_kill_self_instance':
         return 'Bu işlem, uygulamanın çalışan başka bir örneğidir.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -316892,6 +316969,8 @@ extension on _StringsVi {
             '${process} là tiến trình hệ thống quan trọng — Fushi sẽ không kết thúc nó. Hãy đổi cổng thay vì vậy.';
       case 'yomitan_port_kill_self_instance':
         return 'Tiến trình này là một phiên bản đang chạy khác của ứng dụng.';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }
@@ -326128,6 +326207,8 @@ extension on _StringsZhCn {
             '${process} 是关键系统进程，Fushi 不会结束它；请改用其他端口。';
       case 'yomitan_port_kill_self_instance':
         return '该进程是本应用的另一个正在运行的实例。';
+      case 'dictionary_files_missing':
+        return '词典文件缺失，请重新导入';
       default:
         return null;
     }
@@ -335375,6 +335456,8 @@ extension on _StringsZhHk {
             '${process} 是關鍵系統進程，Fushi 不會結束它；請改用其他端口。';
       case 'yomitan_port_kill_self_instance':
         return '該進程是本應用的另一個正在運行的實例。';
+      case 'dictionary_files_missing':
+        return 'Dictionary files are missing. Please import the dictionary again.';
       default:
         return null;
     }

@@ -116,6 +116,7 @@ StardictResult stardict_reader::parse(const std::string& ifo_path) {
   // Read .syn (synonym) file if present
   auto syn_data = read_file(base + ".syn");
   if (!syn_data.empty()) {
+    const size_t indexed_entry_count = result.entries.size();
     size_t pos = 0;
     while (pos < syn_data.size()) {
       const char* word_start = reinterpret_cast<const char*>(syn_data.data() + pos);
@@ -130,8 +131,10 @@ StardictResult stardict_reader::parse(const std::string& ifo_path) {
                             (uint32_t(syn_data[pos + 2]) << 8) | syn_data[pos + 3];
       pos += 4;
 
-      if (!synonym.empty() && target_idx < result.entries.size()) {
-        result.entries.push_back({std::move(synonym), result.entries[target_idx].definition});
+      // .syn indices refer only to the original .idx table, never appended synonyms.
+      if (!synonym.empty() && target_idx < indexed_entry_count) {
+        const auto& target = result.entries[target_idx];
+        result.entries.push_back({std::move(synonym), target.definition, target.word});
       }
     }
   }
@@ -170,7 +173,12 @@ StardictResult stardict_reader::parse_from_data(
                           (uint32_t(idx_data[pos + 2]) << 8) | idx_data[pos + 3];
     pos += 4;
 
-    if (entry_size > dict_size || offset > dict_size - entry_size) continue;
+    if (entry_size > dict_size || offset > dict_size - entry_size) {
+      // Preserve the .idx ordinal for .syn resolution; parse() removes this
+      // unreadable placeholder only after all synonyms have been resolved.
+      result.entries.push_back({std::move(word), {}});
+      continue;
+    }
 
     std::string definition;
     if (!sametypesequence.empty()) {

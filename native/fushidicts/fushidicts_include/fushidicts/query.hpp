@@ -38,6 +38,9 @@ struct GlossaryEntry {
   // v2 词典的 term glossary 用训练字典压缩（上游 8993838）；v1 恒为 nullptr，
   // usingDDict(nullptr) 等价普通解压。
   const ZSTD_DDict_s* zstd_dict = nullptr;
+  // Canonical headword recorded by the source importer for this exact record.
+  // Empty for ordinary entries and legacy dictionaries without provenance.
+  std::string redirect_target;
 };
 
 struct FrequencyEntry {

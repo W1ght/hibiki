@@ -1473,7 +1473,13 @@ class _DictionaryDialogPageState extends BasePageState {
   }) {
     DictionaryFormat dictionaryFormat =
         appModel.dictionaryFormats[dictionary.formatKey]!;
-    final bool enabled = !dictionary.isHidden(JapaneseLanguage.instance);
+    // Metadata can outlive its resource directory (for example after a
+    // configuration-only restore). Match the engine's directory check without
+    // changing the user's saved visibility preference (BUG-2385).
+    final bool installed =
+        appModel.isDictionaryInstalledOnDisk(dictionary.name);
+    final bool enabled =
+        installed && !dictionary.isHidden(JapaneseLanguage.instance);
     final ColorScheme scheme = theme.colorScheme;
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     final Color titleColor =
@@ -1494,19 +1500,29 @@ class _DictionaryDialogPageState extends BasePageState {
         fontWeight: FontWeight.w600,
       ),
     );
-    final Text subtitleText = Text(
-      _subtitleForDictionary(dictionary, dictionaryFormat),
-      maxLines: 2,
-      overflow: TextOverflow.ellipsis,
-      style: textTheme.bodySmall?.copyWith(
-        color: subtitleColor,
-      ),
+    final Widget subtitleText = Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          _subtitleForDictionary(dictionary, dictionaryFormat),
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+          style: textTheme.bodySmall?.copyWith(color: subtitleColor),
+        ),
+        if (!installed)
+          Text(
+            t.dictionary_files_missing,
+            style: textTheme.bodySmall?.copyWith(color: scheme.error),
+          ),
+      ],
     );
     final Row controls = _buildDictionaryTileControls(
       dictionary: dictionary,
       index: index,
       isLast: isLast,
       enabled: enabled,
+      installed: installed,
       onMoveUp: onMoveUp,
       onMoveDown: onMoveDown,
     );
@@ -1587,6 +1603,7 @@ class _DictionaryDialogPageState extends BasePageState {
     required int index,
     required bool isLast,
     required bool enabled,
+    required bool installed,
     required VoidCallback onMoveUp,
     required VoidCallback onMoveDown,
   }) {
@@ -1611,7 +1628,7 @@ class _DictionaryDialogPageState extends BasePageState {
           enabled: !isLast,
           onTap: onMoveDown,
         ),
-        _buildDictionaryVisibilityButton(dictionary, enabled),
+        _buildDictionaryVisibilityButton(dictionary, enabled, installed),
         // TODO-839：每本词典行尾恒显示一个「更新」按钮（消除「这本能更新那本不能」
         // 的视觉断层）。按 isUpdatable 分流：
         //   - 在线来源（isUpdatable 三条件满足）→ 走 _updateSingleDictionary（拉远端
@@ -1653,18 +1670,23 @@ class _DictionaryDialogPageState extends BasePageState {
   Widget _buildDictionaryVisibilityButton(
     Dictionary dictionary,
     bool enabled,
+    bool installed,
   ) {
     final ColorScheme scheme = theme.colorScheme;
-    final String tooltip = enabled ? t.options_hide : t.options_show;
+    final String tooltip = installed
+        ? (enabled ? t.options_hide : t.options_show)
+        : t.dictionary_files_missing;
     return Tooltip(
       message: tooltip,
       child: Semantics(
         button: true,
         toggled: enabled,
+        enabled: installed,
         label: tooltip,
         child: Switch(
           value: enabled,
-          onChanged: (_) => _toggleDictionaryHidden(dictionary),
+          onChanged:
+              installed ? (_) => _toggleDictionaryHidden(dictionary) : null,
           activeThumbColor: scheme.onPrimaryContainer,
           activeTrackColor: scheme.primaryContainer,
         ),
