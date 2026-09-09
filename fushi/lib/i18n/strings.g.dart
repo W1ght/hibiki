@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77112 (4536 per locale)
+/// Strings: 77180 (4540 per locale)
 ///
-/// Built on 2026-09-09 at 08:11 UTC
+/// Built on 2026-09-09 at 09:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6294,6 +6294,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   String get dialog_background_close => 'Close (task keeps running)';
   String get reader_timer_show => 'Show reading timer';
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  String download_batch_failed({required Object n}) => '${n} failed';
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -16952,6 +16958,16 @@ class _StringsAr extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'إظهار مؤقت القراءة';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -27837,6 +27853,16 @@ class _StringsDe extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Lesetimer anzeigen';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -38776,6 +38802,16 @@ class _StringsEs extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Mostrar temporizador de lectura';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -49749,6 +49785,16 @@ class _StringsFr extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Afficher le minuteur de lecture';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -60524,6 +60570,16 @@ class _StringsId extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Tampilkan pengatur waktu baca';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -71391,6 +71447,16 @@ class _StringsIt extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Mostra timer di lettura';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -81639,6 +81705,16 @@ class _StringsJa extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => '読書タイマーを表示';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -91897,6 +91973,16 @@ class _StringsKo extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => '독서 타이머 표시';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -102721,6 +102807,16 @@ class _StringsNl extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Leestimer tonen';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -113598,6 +113694,16 @@ class _StringsPtBr extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Mostrar cronômetro de leitura';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -124452,6 +124558,16 @@ class _StringsRu extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Показывать таймер чтения';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -135106,6 +135222,16 @@ class _StringsTh extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'แสดงตัวจับเวลาการอ่าน';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -145876,6 +146002,16 @@ class _StringsTr extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Okuma zamanlayıcısını göster';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -156617,6 +156753,16 @@ class _StringsVi extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => 'Hiển thị bộ đếm thời gian đọc';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -166482,6 +166628,14 @@ class _StringsZhCn extends _StringsEn {
   String get dialog_background_close => '关闭（任务继续在后台运行）';
   @override
   String get reader_timer_show => '显示阅读计时器';
+  @override
+  String download_batch_done({required Object n}) => '已处理 ${n} 项';
+  @override
+  String download_batch_unsupported({required Object n}) => '${n} 项不支持此操作';
+  @override
+  String download_batch_failed({required Object n}) => '${n} 项失败';
+  @override
+  String download_batch_delete_confirm({required Object n}) => '删除 ${n} 个下载任务？';
 }
 
 // Path: <root>
@@ -176416,6 +176570,16 @@ class _StringsZhHk extends _StringsEn {
   String get dialog_background_close => 'Close (task keeps running)';
   @override
   String get reader_timer_show => '顯示閱讀計時器';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 /// Flat map(s) containing all translations.
@@ -185748,6 +185912,14 @@ extension on _StringsEn {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Show reading timer';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -195075,6 +195247,14 @@ extension on _StringsAr {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'إظهار مؤقت القراءة';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -204447,6 +204627,14 @@ extension on _StringsDe {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Lesetimer anzeigen';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -213810,6 +213998,14 @@ extension on _StringsEs {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Mostrar temporizador de lectura';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -223182,6 +223378,14 @@ extension on _StringsFr {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Afficher le minuteur de lecture';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -232525,6 +232729,14 @@ extension on _StringsId {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Tampilkan pengatur waktu baca';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -241890,6 +242102,14 @@ extension on _StringsIt {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Mostra timer di lettura';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -251182,6 +251402,14 @@ extension on _StringsJa {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return '読書タイマーを表示';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -260478,6 +260706,14 @@ extension on _StringsKo {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return '독서 타이머 표시';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -269836,6 +270072,14 @@ extension on _StringsNl {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Leestimer tonen';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -279189,6 +279433,14 @@ extension on _StringsPtBr {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Mostrar cronômetro de leitura';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -288549,6 +288801,14 @@ extension on _StringsRu {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Показывать таймер чтения';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -297881,6 +298141,14 @@ extension on _StringsTh {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'แสดงตัวจับเวลาการอ่าน';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -307228,6 +307496,14 @@ extension on _StringsTr {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Okuma zamanlayıcısını göster';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -316569,6 +316845,14 @@ extension on _StringsVi {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return 'Hiển thị bộ đếm thời gian đọc';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -325829,6 +326113,14 @@ extension on _StringsZhCn {
         return '关闭（任务继续在后台运行）';
       case 'reader_timer_show':
         return '显示阅读计时器';
+      case 'download_batch_done':
+        return ({required Object n}) => '已处理 ${n} 项';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} 项不支持此操作';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} 项失败';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => '删除 ${n} 个下载任务？';
       default:
         return null;
     }
@@ -335099,6 +335391,14 @@ extension on _StringsZhHk {
         return 'Close (task keeps running)';
       case 'reader_timer_show':
         return '顯示閱讀計時器';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
