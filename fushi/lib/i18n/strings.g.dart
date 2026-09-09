@@ -3471,13 +3471,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_image_quality_thrift => 'Data saver';
   String get mining_still_format_jpg => 'JPG (smaller)';
   String get mining_still_format_png => 'PNG (lossless)';
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
   String get module_downloads_hidden_hint =>
       'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
   String get module_extension_label => 'Browser extension';
   String get module_toggle_hint =>
-      'Show this library tab in the navigation bar; turn off to hide it';
-  String get module_tool_toggle_hint =>
-      'Show this tab in the navigation bar; turn off to hide it';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   String get move_down => 'Move down';
   String get move_up => 'Move up';
   String get name => 'Name';
@@ -11985,16 +11985,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (بدون فقدان)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'تبويب التحميلات مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
   @override
   String get module_extension_label => 'إضافة المتصفح';
   @override
   String get module_toggle_hint =>
-      'إظهار تبويب المكتبة هذا في شريط التنقل؛ أوقفه لإخفائه';
-  @override
-  String get module_tool_toggle_hint =>
-      'إظهار هذا التبويب في شريط التنقل؛ أوقفه لإخفائه';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'تحريك لأسفل';
   @override
@@ -22726,16 +22726,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (verlustfrei)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
   @override
   String get module_extension_label => 'Browser-Erweiterung';
   @override
   String get module_toggle_hint =>
-      'Diesen Bibliotheks-Tab in der Navigationsleiste anzeigen; ausschalten zum Ausblenden';
-  @override
-  String get module_tool_toggle_hint =>
-      'Diesen Tab in der Navigationsleiste anzeigen; ausschalten, um ihn auszublenden';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Nach unten';
   @override
@@ -33596,16 +33596,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (sin pérdida)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
   @override
   String get module_extension_label => 'Extensión del navegador';
   @override
   String get module_toggle_hint =>
-      'Mostrar esta pestaña de biblioteca en la barra de navegación; desactive para ocultarla';
-  @override
-  String get module_tool_toggle_hint =>
-      'Mostrar esta pestaña en la barra de navegación; desactívalo para ocultarla';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Mover abajo';
   @override
@@ -44510,16 +44510,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (sans perte)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'L\'onglet Téléchargements est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
   @override
   String get module_extension_label => 'Extension navigateur';
   @override
   String get module_toggle_hint =>
-      'Afficher cet onglet de bibliothèque dans la barre de navigation ; désactivez pour le masquer';
-  @override
-  String get module_tool_toggle_hint =>
-      'Afficher cet onglet dans la barre de navigation ; désactiver pour le masquer';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Descendre';
   @override
@@ -55348,16 +55348,16 @@ class _StringsId extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (tanpa kehilangan)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'Tab Unduhan disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
   @override
   String get module_extension_label => 'Ekstensi browser';
   @override
   String get module_toggle_hint =>
-      'Tampilkan tab perpustakaan ini di bilah navigasi; matikan untuk menyembunyikannya';
-  @override
-  String get module_tool_toggle_hint =>
-      'Tampilkan tab ini di bilah navigasi; matikan untuk menyembunyikannya';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Turunkan';
   @override
@@ -66130,16 +66130,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (senza perdita)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'La scheda Download è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
   @override
   String get module_extension_label => 'Estensione browser';
   @override
   String get module_toggle_hint =>
-      'Mostra questa scheda libreria nella barra di navigazione; disattiva per nasconderla';
-  @override
-  String get module_tool_toggle_hint =>
-      'Mostra questa scheda nella barra di navigazione; disattiva per nasconderla';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Sposta giù';
   @override
@@ -76639,14 +76639,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG（ロスレス）';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       '「ダウンロード」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
   @override
   String get module_extension_label => 'ブラウザ拡張機能';
   @override
-  String get module_toggle_hint => 'このライブラリタブをナビゲーションバーに表示します。オフにすると非表示になります';
-  @override
-  String get module_tool_toggle_hint => 'このタブをナビゲーションバーに表示します。オフにすると非表示になります';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => '下に移動';
   @override
@@ -86851,14 +86853,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (무손실)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       '‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
   @override
   String get module_extension_label => '브라우저 확장';
   @override
-  String get module_toggle_hint => '내비게이션 바에 이 라이브러리 탭 표시; 끄면 숨김';
-  @override
-  String get module_tool_toggle_hint => '이 탭을 내비게이션 바에 표시해요. 끄면 숨겨져요';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => '아래로 이동';
   @override
@@ -97358,16 +97362,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (verliesvrij)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'Het tabblad Downloads is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
   @override
   String get module_extension_label => 'Browserextensie';
   @override
   String get module_toggle_hint =>
-      'Toon dit bibliotheektabblad in de navigatiebalk; schakel uit om het te verbergen';
-  @override
-  String get module_tool_toggle_hint =>
-      'Dit tabblad in de navigatiebalk tonen; uitschakelen om het te verbergen';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Omlaag';
   @override
@@ -108176,16 +108180,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (sem perda)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'A aba Downloads está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
   @override
   String get module_extension_label => 'Extensão do navegador';
   @override
   String get module_toggle_hint =>
-      'Mostrar esta aba de biblioteca na barra de navegação; desative para ocultá-la';
-  @override
-  String get module_tool_toggle_hint =>
-      'Mostrar esta aba na barra de navegação; desative para ocultá-la';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Mover para baixo';
   @override
@@ -118987,16 +118991,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (без потерь)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'Вкладка «Загрузки» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
   @override
   String get module_extension_label => 'Расширение для браузера';
   @override
   String get module_toggle_hint =>
-      'Показывать вкладку этой библиотеки в панели навигации; отключите, чтобы скрыть';
-  @override
-  String get module_tool_toggle_hint =>
-      'Показывать эту вкладку в панели навигации; выключите, чтобы скрыть';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Вниз';
   @override
@@ -129709,14 +129713,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (ไม่สูญเสียคุณภาพ)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'แท็บดาวน์โหลดถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
   @override
   String get module_extension_label => 'ส่วนขยายเบราว์เซอร์';
   @override
-  String get module_toggle_hint => 'แสดงแท็บไลบรารีนี้ในแถบนำทาง ปิดเพื่อซ่อน';
-  @override
-  String get module_tool_toggle_hint => 'แสดงแท็บนี้ในแถบนำทาง ปิดเพื่อซ่อน';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'เลื่อนลง';
   @override
@@ -140393,16 +140399,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (kayıpsız)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'İndirmeler sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
   @override
   String get module_extension_label => 'Tarayıcı eklentisi';
   @override
   String get module_toggle_hint =>
-      'Bu kütüphane sekmesini gezinme çubuğunda göster; gizlemek için kapatın';
-  @override
-  String get module_tool_toggle_hint =>
-      'Bu sekmeyi gezinme çubuğunda göster; gizlemek için kapatın';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Aşağı taşı';
   @override
@@ -151116,16 +151122,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG (không mất dữ liệu)';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       'Tab Tải xuống đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
   @override
   String get module_extension_label => 'Tiện ích mở rộng trình duyệt';
   @override
   String get module_toggle_hint =>
-      'Hiển thị tab thư viện này trong thanh điều hướng; tắt để ẩn';
-  @override
-  String get module_tool_toggle_hint =>
-      'Hiện tab này trên thanh điều hướng; tắt để ẩn';
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Di chuyển xuống';
   @override
@@ -161349,14 +161355,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG（无损）';
   @override
+  String get module_disabled_hint => '该功能模块已在「设置 → 外观 → 功能模块」中关闭。';
+  @override
   String get module_downloads_hidden_hint =>
       '「下载」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
   @override
   String get module_extension_label => '浏览器扩展';
   @override
-  String get module_toggle_hint => '在底栏/侧栏显示该库页；关闭即隐藏';
-  @override
-  String get module_tool_toggle_hint => '在底栏/侧栏显示该页；关闭即隐藏';
+  String get module_toggle_hint => '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
   @override
   String get move_down => '下移';
   @override
@@ -171211,14 +171217,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mining_still_format_png => 'PNG（無損）';
   @override
+  String get module_disabled_hint =>
+      'This feature module is turned off in Settings > Appearance > Feature modules.';
+  @override
   String get module_downloads_hidden_hint =>
       '「下載」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
   @override
   String get module_extension_label => '瀏覽器擴展';
   @override
-  String get module_toggle_hint => '在底欄/側欄顯示該庫頁；關閉即隱藏';
-  @override
-  String get module_tool_toggle_hint => '在導覽列顯示此頁；關閉即隱藏';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => '下移';
   @override
@@ -180775,14 +180783,14 @@ extension on _StringsEn {
         return 'JPG (smaller)';
       case 'mining_still_format_png':
         return 'PNG (lossless)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
       case 'module_extension_label':
         return 'Browser extension';
       case 'module_toggle_hint':
-        return 'Show this library tab in the navigation bar; turn off to hide it';
-      case 'module_tool_toggle_hint':
-        return 'Show this tab in the navigation bar; turn off to hide it';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Move down';
       case 'move_up':
@@ -190076,14 +190084,14 @@ extension on _StringsAr {
         return 'JPG (أصغر)';
       case 'mining_still_format_png':
         return 'PNG (بدون فقدان)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'تبويب التحميلات مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
       case 'module_extension_label':
         return 'إضافة المتصفح';
       case 'module_toggle_hint':
-        return 'إظهار تبويب المكتبة هذا في شريط التنقل؛ أوقفه لإخفائه';
-      case 'module_tool_toggle_hint':
-        return 'إظهار هذا التبويب في شريط التنقل؛ أوقفه لإخفائه';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'تحريك لأسفل';
       case 'move_up':
@@ -199402,14 +199410,14 @@ extension on _StringsDe {
         return 'JPG (kleiner)';
       case 'mining_still_format_png':
         return 'PNG (verlustfrei)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
       case 'module_extension_label':
         return 'Browser-Erweiterung';
       case 'module_toggle_hint':
-        return 'Diesen Bibliotheks-Tab in der Navigationsleiste anzeigen; ausschalten zum Ausblenden';
-      case 'module_tool_toggle_hint':
-        return 'Diesen Tab in der Navigationsleiste anzeigen; ausschalten, um ihn auszublenden';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Nach unten';
       case 'move_up':
@@ -208739,14 +208747,14 @@ extension on _StringsEs {
         return 'JPG (más pequeño)';
       case 'mining_still_format_png':
         return 'PNG (sin pérdida)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
       case 'module_extension_label':
         return 'Extensión del navegador';
       case 'module_toggle_hint':
-        return 'Mostrar esta pestaña de biblioteca en la barra de navegación; desactive para ocultarla';
-      case 'module_tool_toggle_hint':
-        return 'Mostrar esta pestaña en la barra de navegación; desactívalo para ocultarla';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Mover abajo';
       case 'move_up':
@@ -218080,14 +218088,14 @@ extension on _StringsFr {
         return 'JPG (plus petit)';
       case 'mining_still_format_png':
         return 'PNG (sans perte)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'L\'onglet Téléchargements est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
       case 'module_extension_label':
         return 'Extension navigateur';
       case 'module_toggle_hint':
-        return 'Afficher cet onglet de bibliothèque dans la barre de navigation ; désactivez pour le masquer';
-      case 'module_tool_toggle_hint':
-        return 'Afficher cet onglet dans la barre de navigation ; désactiver pour le masquer';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Descendre';
       case 'move_up':
@@ -227409,14 +227417,14 @@ extension on _StringsId {
         return 'JPG (lebih kecil)';
       case 'mining_still_format_png':
         return 'PNG (tanpa kehilangan)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'Tab Unduhan disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
       case 'module_extension_label':
         return 'Ekstensi browser';
       case 'module_toggle_hint':
-        return 'Tampilkan tab perpustakaan ini di bilah navigasi; matikan untuk menyembunyikannya';
-      case 'module_tool_toggle_hint':
-        return 'Tampilkan tab ini di bilah navigasi; matikan untuk menyembunyikannya';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Turunkan';
       case 'move_up':
@@ -236732,14 +236740,14 @@ extension on _StringsIt {
         return 'JPG (più piccolo)';
       case 'mining_still_format_png':
         return 'PNG (senza perdita)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'La scheda Download è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
       case 'module_extension_label':
         return 'Estensione browser';
       case 'module_toggle_hint':
-        return 'Mostra questa scheda libreria nella barra di navigazione; disattiva per nasconderla';
-      case 'module_tool_toggle_hint':
-        return 'Mostra questa scheda nella barra di navigazione; disattiva per nasconderla';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Sposta giù';
       case 'move_up':
@@ -246035,14 +246043,14 @@ extension on _StringsJa {
         return 'JPG（小さい）';
       case 'mining_still_format_png':
         return 'PNG（ロスレス）';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return '「ダウンロード」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
       case 'module_extension_label':
         return 'ブラウザ拡張機能';
       case 'module_toggle_hint':
-        return 'このライブラリタブをナビゲーションバーに表示します。オフにすると非表示になります';
-      case 'module_tool_toggle_hint':
-        return 'このタブをナビゲーションバーに表示します。オフにすると非表示になります';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '下に移動';
       case 'move_up':
@@ -255300,14 +255308,14 @@ extension on _StringsKo {
         return 'JPG (작은 용량)';
       case 'mining_still_format_png':
         return 'PNG (무손실)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return '‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
       case 'module_extension_label':
         return '브라우저 확장';
       case 'module_toggle_hint':
-        return '내비게이션 바에 이 라이브러리 탭 표시; 끄면 숨김';
-      case 'module_tool_toggle_hint':
-        return '이 탭을 내비게이션 바에 표시해요. 끄면 숨겨져요';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '아래로 이동';
       case 'move_up':
@@ -264600,14 +264608,14 @@ extension on _StringsNl {
         return 'JPG (kleiner)';
       case 'mining_still_format_png':
         return 'PNG (verliesvrij)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'Het tabblad Downloads is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
       case 'module_extension_label':
         return 'Browserextensie';
       case 'module_toggle_hint':
-        return 'Toon dit bibliotheektabblad in de navigatiebalk; schakel uit om het te verbergen';
-      case 'module_tool_toggle_hint':
-        return 'Dit tabblad in de navigatiebalk tonen; uitschakelen om het te verbergen';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Omlaag';
       case 'move_up':
@@ -273929,14 +273937,14 @@ extension on _StringsPtBr {
         return 'JPG (menor)';
       case 'mining_still_format_png':
         return 'PNG (sem perda)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'A aba Downloads está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
       case 'module_extension_label':
         return 'Extensão do navegador';
       case 'module_toggle_hint':
-        return 'Mostrar esta aba de biblioteca na barra de navegação; desative para ocultá-la';
-      case 'module_tool_toggle_hint':
-        return 'Mostrar esta aba na barra de navegação; desative para ocultá-la';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Mover para baixo';
       case 'move_up':
@@ -283261,14 +283269,14 @@ extension on _StringsRu {
         return 'JPG (компактнее)';
       case 'mining_still_format_png':
         return 'PNG (без потерь)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'Вкладка «Загрузки» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
       case 'module_extension_label':
         return 'Расширение для браузера';
       case 'module_toggle_hint':
-        return 'Показывать вкладку этой библиотеки в панели навигации; отключите, чтобы скрыть';
-      case 'module_tool_toggle_hint':
-        return 'Показывать эту вкладку в панели навигации; выключите, чтобы скрыть';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Вниз';
       case 'move_up':
@@ -292573,14 +292581,14 @@ extension on _StringsTh {
         return 'JPG (เล็กกว่า)';
       case 'mining_still_format_png':
         return 'PNG (ไม่สูญเสียคุณภาพ)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'แท็บดาวน์โหลดถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
       case 'module_extension_label':
         return 'ส่วนขยายเบราว์เซอร์';
       case 'module_toggle_hint':
-        return 'แสดงแท็บไลบรารีนี้ในแถบนำทาง ปิดเพื่อซ่อน';
-      case 'module_tool_toggle_hint':
-        return 'แสดงแท็บนี้ในแถบนำทาง ปิดเพื่อซ่อน';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'เลื่อนลง';
       case 'move_up':
@@ -301887,14 +301895,14 @@ extension on _StringsTr {
         return 'JPG (daha küçük)';
       case 'mining_still_format_png':
         return 'PNG (kayıpsız)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'İndirmeler sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
       case 'module_extension_label':
         return 'Tarayıcı eklentisi';
       case 'module_toggle_hint':
-        return 'Bu kütüphane sekmesini gezinme çubuğunda göster; gizlemek için kapatın';
-      case 'module_tool_toggle_hint':
-        return 'Bu sekmeyi gezinme çubuğunda göster; gizlemek için kapatın';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Aşağı taşı';
       case 'move_up':
@@ -311201,14 +311209,14 @@ extension on _StringsVi {
         return 'JPG (nhỏ hơn)';
       case 'mining_still_format_png':
         return 'PNG (không mất dữ liệu)';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return 'Tab Tải xuống đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
       case 'module_extension_label':
         return 'Tiện ích mở rộng trình duyệt';
       case 'module_toggle_hint':
-        return 'Hiển thị tab thư viện này trong thanh điều hướng; tắt để ẩn';
-      case 'module_tool_toggle_hint':
-        return 'Hiện tab này trên thanh điều hướng; tắt để ẩn';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Di chuyển xuống';
       case 'move_up':
@@ -320473,14 +320481,14 @@ extension on _StringsZhCn {
         return 'JPG（体积更小）';
       case 'mining_still_format_png':
         return 'PNG（无损）';
+      case 'module_disabled_hint':
+        return '该功能模块已在「设置 → 外观 → 功能模块」中关闭。';
       case 'module_downloads_hidden_hint':
         return '「下载」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
       case 'module_extension_label':
         return '浏览器扩展';
       case 'module_toggle_hint':
-        return '在底栏/侧栏显示该库页；关闭即隐藏';
-      case 'module_tool_toggle_hint':
-        return '在底栏/侧栏显示该页；关闭即隐藏';
+        return '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -329711,14 +329719,14 @@ extension on _StringsZhHk {
         return 'JPG（體積更小）';
       case 'mining_still_format_png':
         return 'PNG（無損）';
+      case 'module_disabled_hint':
+        return 'This feature module is turned off in Settings > Appearance > Feature modules.';
       case 'module_downloads_hidden_hint':
         return '「下載」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
       case 'module_extension_label':
         return '瀏覽器擴展';
       case 'module_toggle_hint':
-        return '在底欄/側欄顯示該庫頁；關閉即隱藏';
-      case 'module_tool_toggle_hint':
-        return '在導覽列顯示此頁；關閉即隱藏';
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '下移';
       case 'move_up':
