@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77078 (4534 per locale)
+/// Strings: 77095 (4535 per locale)
 ///
-/// Built on 2026-09-09 at 06:18 UTC
+/// Built on 2026-09-09 at 07:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6292,6 +6292,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -16946,6 +16947,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -27827,6 +27830,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -38762,6 +38767,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -49731,6 +49738,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -60502,6 +60511,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -71365,6 +71376,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -81609,6 +81622,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -91863,6 +91878,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -102683,6 +102700,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -113556,6 +113575,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -124406,6 +124427,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -135056,6 +135079,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -145822,6 +145847,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -156559,6 +156586,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -166420,6 +166449,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
+  @override
+  String get dialog_background_close => '关闭（任务继续在后台运行）';
 }
 
 // Path: <root>
@@ -176350,6 +176381,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 /// Flat map(s) containing all translations.
@@ -185678,6 +185711,8 @@ extension on _StringsEn {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -195001,6 +195036,8 @@ extension on _StringsAr {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -204369,6 +204406,8 @@ extension on _StringsDe {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -213728,6 +213767,8 @@ extension on _StringsEs {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -223096,6 +223137,8 @@ extension on _StringsFr {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -232435,6 +232478,8 @@ extension on _StringsId {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -241796,6 +241841,8 @@ extension on _StringsIt {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -251084,6 +251131,8 @@ extension on _StringsJa {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -260376,6 +260425,8 @@ extension on _StringsKo {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -269730,6 +269781,8 @@ extension on _StringsNl {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -279079,6 +279132,8 @@ extension on _StringsPtBr {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -288435,6 +288490,8 @@ extension on _StringsRu {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -297763,6 +297820,8 @@ extension on _StringsTh {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -307106,6 +307165,8 @@ extension on _StringsTr {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -316443,6 +316504,8 @@ extension on _StringsVi {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -325699,6 +325762,8 @@ extension on _StringsZhCn {
         return 'Anime4K 去模糊（M），在片源原分辨率上跑。kernel 比「中」更大，同样不含放大 pass。适合较快的手机 GPU。';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
+      case 'dialog_background_close':
+        return '关闭（任务继续在后台运行）';
       default:
         return null;
     }
@@ -334965,6 +335030,8 @@ extension on _StringsZhHk {
         return 'Anime4K deblur (M) at the source resolution. Larger kernel than Medium; still no upscaling passes. For faster phone GPUs.';
       case 'video_shader_tier_ultra_hint_mobile':
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
