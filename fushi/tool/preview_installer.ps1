@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     编译 Windows 安装器并逐页抓真实像素，用来验证外观改动。全程离屏后台。
 
@@ -10,11 +10,19 @@
     PrintWindow。不抢前台、不动鼠标、不在屏幕上露面，跑的时候可以照常用电脑。
 
     编译的是仓库里的 fushi.iss 本体，只额外打几个**仅预览用**的补丁（换 AppId、换
-    目标目录等，见下面各开关），每个补丁都当场核对是否命中，不会出现「开关没生效却
-    一路编译成功」的静默失败。
+    目标目录等，见下面各开关）。未指定 -Install 时，staged copy 还会跳过关闭真实
+    Fushi 的初始化流程、清空 AppMutex，并在准备安装页阻止继续，避免占位文件被安装。
+    每个补丁都当场核对是否命中，不会出现「开关没生效却一路编译成功」的静默失败。
 
 .PARAMETER Pages
     抓几页。翻页按「下一步 / Next」；-Install 时才会按「安装 / 完成」真的执行安装。
+
+.PARAMETER CompileOnly
+    仅编译，返回 SetupExe / StageDir / InstallDir，不启动安装器、不自动操作 UI 或截图，
+    也不清理预览安装目录。便于交给独立的可见 UI 验证工具检查。
+
+.PARAMETER Install
+    显式保留安装器原有的应用关闭和安装流程，允许安装占位 payload；不受外观预览保护。
 
 .PARAMETER ForceFreshInstall
     让 IsFreshInstall 恒真，好让「选择数据存储位置」页出现 —— 那页只在全新安装时
@@ -34,6 +42,7 @@
     这个模式会短暂置顶窗口。客户区的验证一律用默认的离屏模式。
 
 .EXAMPLE
+    pwsh -File fushi/tool/preview_installer.ps1 -CompileOnly -Tag 0.0.0 -ForceFreshInstall
     pwsh -File fushi/tool/preview_installer.ps1 -Pages 4 -ForceFreshInstall
     pwsh -File fushi/tool/preview_installer.ps1 -StyleOverride 'modern light windows11 hidebevels'
     pwsh -File fushi/tool/preview_installer.ps1 -RealScreen -Pages 1   # 验标题栏配色
@@ -48,6 +57,7 @@ param(
   [switch]$ForceFreshInstall,
   [switch]$SkipDirPage,
   [switch]$Install,
+  [switch]$CompileOnly,
   [switch]$RealScreen
 )
 $ErrorActionPreference = 'Stop'
@@ -75,6 +85,42 @@ New-Item -ItemType Directory -Force -Path $OutDir | Out-Null
 $OutDir = (Resolve-Path -LiteralPath $OutDir).Path
 $Iss = (Resolve-Path -LiteralPath $Iss).Path
 
+# 删除前既检查绝对路径归属，也拒绝目录联接/符号链接，避免递归清理越出预览目录。
+function Assert-PreviewChildPath([string]$Path, [string]$Root) {
+  $rootPath = [System.IO.Path]::GetFullPath($Root).TrimEnd('\', '/')
+  $childPath = [System.IO.Path]::GetFullPath($Path).TrimEnd('\', '/')
+  if (-not $childPath.StartsWith($rootPath + '\', [StringComparison]::OrdinalIgnoreCase)) {
+    throw "预览清理路径必须位于 $rootPath 内：$childPath"
+  }
+  $currentPath = $childPath
+  while ($true) {
+    if (Test-Path -LiteralPath $currentPath) {
+      $item = Get-Item -LiteralPath $currentPath -Force
+      if (($item.Attributes -band [System.IO.FileAttributes]::ReparsePoint) -ne 0) {
+        throw "预览清理路径不允许目录联接或符号链接：$currentPath"
+      }
+    }
+    if ($currentPath.TrimEnd('\', '/').Equals($rootPath, [StringComparison]::OrdinalIgnoreCase)) { break }
+    $currentPath = Split-Path -Path $currentPath -Parent
+  }
+  return $childPath
+}
+
+# 一个输出目录对应一个稳定的安装身份；深浅色等并行预览不会复用彼此的安装记录。
+$sha256 = [System.Security.Cryptography.SHA256]::Create()
+try {
+  $pathBytes = [System.Text.Encoding]::UTF8.GetBytes($OutDir.ToUpperInvariant())
+  $identityHash = [BitConverter]::ToString($sha256.ComputeHash($pathBytes)).Replace('-', '')
+} finally {
+  $sha256.Dispose()
+}
+$previewKey = $identityHash.Substring(0, 16).ToLowerInvariant()
+$previewAppId = '{0}-{1}-{2}-{3}-{4}' -f $identityHash.Substring(0, 8),
+  $identityHash.Substring(8, 4), $identityHash.Substring(12, 4),
+  $identityHash.Substring(16, 4), $identityHash.Substring(20, 12)
+$previewRoot = Join-Path $env:LOCALAPPDATA 'FushiInstallerPreviews'
+$previewDir = Assert-PreviewChildPath (Join-Path $previewRoot $previewKey) $previewRoot
+
 # ── 1. 占位 payload ────────────────────────────────────────────────────────────
 # 外观验证不需要真的 500MB 产物，给 [Files] 几个占位文件就够。
 $src = Join-Path $OutDir 'payload'
@@ -88,9 +134,9 @@ if (-not (Test-Path "$src\fushi.exe")) {
 # ── 2. stage：照搬仓库的目录层级 ───────────────────────────────────────────────
 # iss 里既引用 assets\...（同级），也引用 ..\runner\resources\app_icon.ico（上跳一级），
 # 把 iss 平铺到临时目录根下会让 SetupIconFile 那条编译失败「系统找不到指定的路径」。
-$stageRoot = Join-Path $OutDir 'stage'
+$stageRoot = Assert-PreviewChildPath (Join-Path $OutDir 'stage') $OutDir
 $stage = Join-Path $stageRoot 'installer'
-Remove-Item -Recurse -Force $stageRoot -ErrorAction SilentlyContinue
+if (Test-Path -LiteralPath $stageRoot) { Remove-Item -LiteralPath $stageRoot -Recurse -Force }
 New-Item -ItemType Directory -Force -Path $stage | Out-Null
 Copy-Item -Recurse -Force (Join-Path (Split-Path $Iss) '*') $stage
 $runnerSrc = Join-Path (Split-Path (Split-Path $Iss)) 'runner\resources'
@@ -106,12 +152,42 @@ $text = Get-Content -LiteralPath $stagedIss -Raw -Encoding UTF8
 # ── 3. 仅预览用的补丁 ──────────────────────────────────────────────────────────
 # AppId：本机装着真 Fushi，同 AppId 下 Inno 认出已有安装、UsePreviousAppDir 生效，
 # 会直接跳过「选择目标位置」页；换个测试 GUID 才能看到全部页，也不碰真实卸载键。
-$text = $text -replace '(?m)^AppId=\{\{[^}]+\}\}', 'AppId={{9E7D4C11-PREV-4A00-B000-0000FEEDFACE}}'
+$appIdSetting = "AppId={{$previewAppId}}"
+$text = $text -replace '(?m)^AppId=\{\{[^}]+\}\}', $appIdSetting
 
 # 目标目录：默认的 {localappdata}\Fushi 在开发机上已经装着真 Fushi，点「下一步」会弹
 # 「文件夹已存在」的模态框把翻页拦住 —— 而 PrintWindow 只画主窗口、看不见那个框，
 # 现象就是「点了但页面不动」，极难判断。
-$text = $text -replace '(?m)^DefaultDirName=.*$', 'DefaultDirName={localappdata}\FushiPreviewOnly'
+$defaultDirSetting = "DefaultDirName={localappdata}\FushiInstallerPreviews\$previewKey"
+$text = $text -replace '(?m)^DefaultDirName=.*$', $defaultDirSetting
+
+if (-not $Install) {
+  # 这些保护只注入 staged copy；production iss 的更新/安装行为保持原样。
+  $mutexPattern = [regex]'(?m)^AppMutex=[^\r\n]*(?=\r?$)'
+  if ($mutexPattern.Matches($text).Count -ne 1) { throw 'AppMutex 预览补丁必须命中一处' }
+  $text = $mutexPattern.Replace($text, 'AppMutex=')
+
+  # 只接受精确的函数签名、可选的本地 var 声明以及该函数自己的 begin。
+  # 保留 var 块，且不使用跨函数的 .*?，避免误把保护插进后续嵌套 begin。
+  $previewGuards = @(
+    @{
+      Signature = 'function InitializeSetup(): Boolean;'
+      Body = "  { Appearance preview: do not close a running Fushi. }`r`n  Result := True;`r`n  Exit;"
+    },
+    @{
+      Signature = 'function NextButtonClick(CurPageID: Integer): Boolean;'
+      Body = "  { Appearance preview: the payload contains placeholders only. }`r`n  if CurPageID = wpReady then`r`n  begin`r`n    Result := False;`r`n    MsgBox('这是外观预览，不包含安装文件。', mbInformation, MB_OK);`r`n    Exit;`r`n  end;"
+    }
+  )
+  foreach ($guard in $previewGuards) {
+    $functionPattern = [regex]('(?m)^(' + [regex]::Escape($guard.Signature) +
+      '\r?\n(?:var\r?\n(?:[ \t]+[A-Za-z_][A-Za-z0-9_, ]*:[^\r\n]+;\r?\n)+)?begin)(?=\r?$)')
+    if ($functionPattern.Matches($text).Count -ne 1) {
+      throw "预览保护必须精确定位一处函数 begin：$($guard.Signature)"
+    }
+    $text = $functionPattern.Replace($text, ('$1' + "`r`n" + $guard.Body), 1)
+  }
+}
 
 if ($SkipDirPage) {
   $text = $text -replace '(?m)^PrivilegesRequired=lowest\r?$', "PrivilegesRequired=lowest`r`nDisableDirPage=yes"
@@ -128,19 +204,31 @@ if ($StyleOverride) {
 Set-Content -LiteralPath $stagedIss -Value $text -Encoding UTF8 -NoNewline
 
 # 每个补丁都当场核对，杜绝「开关没生效但一路编译成功」。
+if ($text -notmatch [regex]::Escape($appIdSetting)) { throw 'AppId 隔离补丁未命中' }
+if ($text -notmatch [regex]::Escape($defaultDirSetting)) { throw 'DefaultDirName 隔离补丁未命中' }
 if ($SkipDirPage -and ($text -notmatch 'DisableDirPage=yes')) { throw 'SkipDirPage 补丁未命中' }
 if ($ForceFreshInstall -and ($text -notmatch 'Result := True;')) { throw 'ForceFreshInstall 补丁未命中' }
 if ($StyleOverride -and ($text -notmatch [regex]::Escape($StyleOverride))) { throw 'StyleOverride 补丁未命中' }
-
-# 预览用的目标目录每次清干净：留着的话下次运行会撞上 Inno 的「文件夹已存在」确认框。
-$previewDir = Join-Path $env:LOCALAPPDATA 'FushiPreviewOnly'
-if (Test-Path $previewDir) { Remove-Item -Recurse -Force $previewDir }
 
 # ── 4. 编译 ───────────────────────────────────────────────────────────────────
 & $iscc "/DAppVersion=$Tag" "/DSourceDir=$src" "/DOutputDir=$OutDir" $stagedIss 2>&1 |
   Where-Object { $_ -match 'Error|Warning|Successful compile' }
 if ($LASTEXITCODE -ne 0) { throw "ISCC 失败，退出码 $LASTEXITCODE" }
 $setupExe = Join-Path $OutDir "fushi-$Tag-windows-setup.exe"
+if (-not (Test-Path -LiteralPath $setupExe)) { throw "编译后未找到预览安装器：$setupExe" }
+if ($CompileOnly) {
+  [pscustomobject]@{
+    SetupExe = $setupExe
+    StageDir = $stage
+    InstallDir = $previewDir
+    AppId = $previewAppId
+  }
+  return
+}
+
+# 只有即将运行预览时才清理目标目录，纯编译不会影响已安装的预览。
+$previewDir = Assert-PreviewChildPath $previewDir $previewRoot
+if (Test-Path -LiteralPath $previewDir) { Remove-Item -LiteralPath $previewDir -Recurse -Force }
 
 # ── 5. 跑起来逐页抓图 ─────────────────────────────────────────────────────────
 Add-Type -AssemblyName System.Drawing
@@ -263,7 +351,8 @@ for ($i = 1; $i -le $Pages; $i++) {
 }
 
 Stop-SetupProc
-if (Test-Path $previewDir) { Remove-Item -Recurse -Force $previewDir -ErrorAction SilentlyContinue }
+$previewDir = Assert-PreviewChildPath $previewDir $previewRoot
+if (Test-Path -LiteralPath $previewDir) { Remove-Item -LiteralPath $previewDir -Recurse -Force }
 
 Write-Host ''
 Write-Host "共 $($shots.Count) 张：$OutDir"
