@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77588 (4564 per locale)
+/// Strings: 77622 (4566 per locale)
 ///
-/// Built on 2026-09-09 at 11:49 UTC
+/// Built on 2026-09-09 at 14:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6332,6 +6332,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_vn_click_advance => 'Blank tap advances';
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -17056,6 +17060,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -28007,6 +28017,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -39012,6 +39028,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -50051,6 +50073,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -60892,6 +60920,12 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -71825,6 +71859,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -82139,6 +82179,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags => 'タグにカード作成位置を自動追加';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
 }
 
 // Path: <root>
@@ -92463,6 +92508,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -103353,6 +103404,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -114296,6 +114353,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -125216,6 +125279,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -135936,6 +136005,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -146772,6 +146847,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -157579,6 +157660,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -167504,6 +167591,11 @@ class _StringsZhCn extends _StringsEn {
   String get reader_vn_click_advance => '点击空白处推进';
   @override
   String get reader_vn_merge_spoken_sentence => '有声句保持在同一屏';
+  @override
+  String get auto_add_char_position_to_tags => '自动添加制卡位置到标签';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
 }
 
 // Path: <root>
@@ -177502,6 +177594,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_vn_merge_spoken_sentence =>
       'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags => '自動將製卡位置加入標籤';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
 }
 
 /// Flat map(s) containing all translations.
@@ -186891,6 +186988,10 @@ extension on _StringsEn {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -196275,6 +196376,10 @@ extension on _StringsAr {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -205704,6 +205809,10 @@ extension on _StringsDe {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -215124,6 +215233,10 @@ extension on _StringsEs {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -224553,6 +224666,10 @@ extension on _StringsFr {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -233953,6 +234070,10 @@ extension on _StringsId {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -243375,6 +243496,10 @@ extension on _StringsIt {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -252724,6 +252849,10 @@ extension on _StringsJa {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'タグにカード作成位置を自動追加';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
       default:
         return null;
     }
@@ -262077,6 +262206,10 @@ extension on _StringsKo {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -271492,6 +271625,10 @@ extension on _StringsNl {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -280902,6 +281039,10 @@ extension on _StringsPtBr {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -290319,6 +290460,10 @@ extension on _StringsRu {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -299708,6 +299853,10 @@ extension on _StringsTh {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -309112,6 +309261,10 @@ extension on _StringsTr {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -318510,6 +318663,10 @@ extension on _StringsVi {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -327826,6 +327983,10 @@ extension on _StringsZhCn {
         return '点击空白处推进';
       case 'reader_vn_merge_spoken_sentence':
         return '有声句保持在同一屏';
+      case 'auto_add_char_position_to_tags':
+        return '自动添加制卡位置到标签';
+      case 'auto_add_char_position_to_tags_hint':
+        return '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
       default:
         return null;
     }
@@ -337153,6 +337314,10 @@ extension on _StringsZhHk {
         return 'Blank tap advances';
       case 'reader_vn_merge_spoken_sentence':
         return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return '自動將製卡位置加入標籤';
+      case 'auto_add_char_position_to_tags_hint':
+        return '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
       default:
         return null;
     }
