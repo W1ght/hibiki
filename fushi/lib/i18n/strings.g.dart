@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77095 (4535 per locale)
+/// Strings: 77605 (4565 per locale)
 ///
-/// Built on 2026-09-09 at 07:12 UTC
+/// Built on 2026-09-09 at 16:07 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -368,13 +368,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_connect_use_on_mobile => 'Use AnkiConnect instead';
   String get anki_connect_use_on_mobile_hint =>
       'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
-  String get anki_create_lapis => 'Create Lapis deck';
+  String get anki_create_lapis => 'Create and use Lapis';
   String get anki_create_lapis_exists =>
       'Lapis note type and deck already exist — selected them.';
   String anki_create_lapis_failed({required Object error}) =>
       'Could not create Lapis deck: ${error}';
   String get anki_create_lapis_hint =>
-      'Adds the Lapis note type and a Lapis deck to Anki, then selects them.';
+      'Adds the Lapis note type and a Lapis deck to Anki, then selects them as the mining target.';
   String get anki_create_lapis_success => 'Lapis note type and deck created.';
   String get anki_deck => 'Deck';
   String get anki_dedup_auto => 'Automatic processing';
@@ -3475,8 +3475,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get module_downloads_hidden_hint =>
       'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
   String get module_extension_label => 'Browser extension';
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   String get move_down => 'Move down';
   String get move_up => 'Move up';
   String get name => 'Name';
@@ -4444,7 +4442,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get stat_favorited => 'Favorited';
   String get stat_favorited_sentence => 'Favorited sentences';
   String stat_format_chars({required Object n}) => '${n} characters';
-  String stat_format_chars_wan({required Object n}) => '${n}万 characters';
   String stat_format_days({required Object n}) => '${n} days';
   String stat_format_hours_minutes({required Object h, required Object m}) =>
       '${h} hr ${m} min';
@@ -5164,7 +5161,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_clip_exporting => 'Exporting clip…';
   String get video_collection_no_local_member =>
       'No local video in this collection';
-  String get video_collection_scrape => 'Scrape info & cover';
   String get video_continue_watching => 'Continue watching';
   String get video_control_audio_track => 'Audio track';
   String video_control_custom_action({required Object index}) =>
@@ -6293,6 +6289,51 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_shader_tier_ultra_hint_mobile =>
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   String get dialog_background_close => 'Close (task keeps running)';
+  String get reader_timer_show => 'Show reading timer';
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  String get collection_cover_set => 'Set cover';
+  String get collection_cover_reset => 'Reset to default cover';
+  String get collection_cover_updated => 'Cover updated';
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  String get collection_rescrape_started => 'Rescrape queued';
+  String get collection_rescrape_failed => 'Rescrape failed';
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  String download_batch_failed({required Object n}) => '${n} failed';
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  String get sync_err_pairing_rejected =>
+      'The paired device rejected this device\'s credentials — pair again to resume syncing.';
+  String get sync_err_not_paired =>
+      'No paired device yet — set up pairing in Fushi Interconnect first.';
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  String get reader_vn_settings => 'Visual novel settings';
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  String get reader_vn_reveal_instant => 'Instant';
+  String get reader_vn_screen_mode => 'Screen content';
+  String get reader_vn_screen_block => 'One block';
+  String get reader_vn_screen_sentences => 'Sentences';
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  String get reader_vn_click_advance => 'Blank tap advances';
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -12014,9 +12055,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get module_extension_label => 'إضافة المتصفح';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'تحريك لأسفل';
   @override
   String get move_up => 'تحريك لأعلى';
@@ -13729,8 +13767,6 @@ class _StringsAr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} حرف';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 حرف';
-  @override
   String stat_format_days({required Object n}) => '${n} أيام';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -15003,8 +15039,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'لا يوجد فيديو محلي في هذه المجموعة';
-  @override
-  String get video_collection_scrape => 'كشط المعلومات والغلاف';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -16949,6 +16983,84 @@ class _StringsAr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'إظهار مؤقت القراءة';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'رفض الجهاز المقترن بيانات اعتماد هذا الجهاز — أعد الإقتران لاستئناف المزامنة.';
+  @override
+  String get sync_err_not_paired =>
+      'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -22791,9 +22903,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get module_extension_label => 'Browser-Erweiterung';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Nach unten';
   @override
   String get move_up => 'Nach oben';
@@ -24544,8 +24653,6 @@ class _StringsDe extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} Zeichen';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 Zeichen';
-  @override
   String stat_format_days({required Object n}) => '${n} Tage';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -25838,8 +25945,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Kein lokales Video in dieser Sammlung';
-  @override
-  String get video_collection_scrape => 'Info & Cover scrapen';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -27832,6 +27937,84 @@ class _StringsDe extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Lesetimer anzeigen';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Das gekoppelte Gerät hat die Anmeldedaten dieses Geräts abgelehnt — koppeln Sie erneut, um die Synchronisierung fortzusetzen.';
+  @override
+  String get sync_err_not_paired =>
+      'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -33697,9 +33880,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get module_extension_label => 'Extensión del navegador';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Mover abajo';
   @override
   String get move_up => 'Mover arriba';
@@ -35458,8 +35638,6 @@ class _StringsEs extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
-  @override
   String stat_format_days({required Object n}) => '${n} días';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -36760,8 +36938,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'No hay vídeo local en esta colección';
-  @override
-  String get video_collection_scrape => 'Obtener info y portada';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -38769,6 +38945,84 @@ class _StringsEs extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Mostrar temporizador de lectura';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'El dispositivo emparejado rechazó las credenciales de este dispositivo: vuelve a emparejarlo para reanudar la sincronización.';
+  @override
+  String get sync_err_not_paired =>
+      'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -44648,9 +44902,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get module_extension_label => 'Extension navigateur';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Descendre';
   @override
   String get move_up => 'Monter';
@@ -46416,8 +46667,6 @@ class _StringsFr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caractères';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 caractères';
-  @override
   String stat_format_days({required Object n}) => '${n} jours';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -47715,8 +47964,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Aucune vidéo locale dans cette collection';
-  @override
-  String get video_collection_scrape => 'Récupérer infos et couverture';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -49740,6 +49987,84 @@ class _StringsFr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Afficher le minuteur de lecture';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'L\'appareil associé a refusé les identifiants de cet appareil — associez-le à nouveau pour reprendre la synchronisation.';
+  @override
+  String get sync_err_not_paired =>
+      'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -55523,9 +55848,6 @@ class _StringsId extends _StringsEn {
   @override
   String get module_extension_label => 'Ekstensi browser';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Turunkan';
   @override
   String get move_up => 'Naikkan';
@@ -57256,8 +57578,6 @@ class _StringsId extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
-  @override
   String stat_format_days({required Object n}) => '${n} hari';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -58539,8 +58859,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Tidak ada video lokal dalam koleksi ini';
-  @override
-  String get video_collection_scrape => 'Scrape info & sampul';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -60513,6 +60831,84 @@ class _StringsId extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Tampilkan pengatur waktu baca';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Perangkat yang dipasangkan menolak kredensial perangkat ini — pasangkan ulang untuk melanjutkan sinkronisasi.';
+  @override
+  String get sync_err_not_paired =>
+      'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -66341,9 +66737,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get module_extension_label => 'Estensione browser';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Sposta giù';
   @override
   String get move_up => 'Sposta su';
@@ -68094,8 +68487,6 @@ class _StringsIt extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caratteri';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 caratteri';
-  @override
   String stat_format_days({required Object n}) => '${n} giorni';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -69384,8 +69775,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Nessun video locale in questa raccolta';
-  @override
-  String get video_collection_scrape => 'Scrape info e copertina';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -71378,6 +71767,84 @@ class _StringsIt extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Mostra timer di lettura';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Il dispositivo associato ha rifiutato le credenziali di questo dispositivo: esegui di nuovo l\'associazione per riprendere la sincronizzazione.';
+  @override
+  String get sync_err_not_paired =>
+      'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -76887,9 +77354,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get module_extension_label => 'ブラウザ拡張機能';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => '下に移動';
   @override
   String get move_up => '上に移動';
@@ -78537,8 +79001,6 @@ class _StringsJa extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} 文字';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} 万字';
-  @override
   String stat_format_days({required Object n}) => '${n}日';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -79757,8 +80219,6 @@ class _StringsJa extends _StringsEn {
   String get video_clip_exporting => 'クリップを書き出し中…';
   @override
   String get video_collection_no_local_member => 'このコレクションにローカル動画がありません';
-  @override
-  String get video_collection_scrape => '情報と封面を取得';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -81624,6 +82084,83 @@ class _StringsJa extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => '読書タイマーを表示';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'ペアリング済みの端末がこの端末の認証情報を拒否しました。同期を再開するには再度ペアリングしてください。';
+  @override
+  String get sync_err_not_paired =>
+      'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags => 'タグにカード作成位置を自動追加';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
 }
 
 // Path: <root>
@@ -87137,9 +87674,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get module_extension_label => '브라우저 확장';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => '아래로 이동';
   @override
   String get move_up => '위로 이동';
@@ -88786,8 +89320,6 @@ class _StringsKo extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n}자';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}만자';
-  @override
   String stat_format_days({required Object n}) => '${n}일';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -90010,8 +90542,6 @@ class _StringsKo extends _StringsEn {
   String get video_clip_exporting => '클립 내보내는 중…';
   @override
   String get video_collection_no_local_member => '이 컬렉션에 로컬 동영상이 없습니다';
-  @override
-  String get video_collection_scrape => '정보 및 표지 스크랩';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -91880,6 +92410,84 @@ class _StringsKo extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => '독서 타이머 표시';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      '페어링된 기기가 이 기기의 자격 증명을 거부했습니다. 동기화를 재개하려면 다시 페어링하세요.';
+  @override
+  String get sync_err_not_paired =>
+      '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -97682,9 +98290,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get module_extension_label => 'Browserextensie';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Omlaag';
   @override
   String get move_up => 'Omhoog';
@@ -99428,8 +100033,6 @@ class _StringsNl extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} tekens';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 tekens';
-  @override
   String stat_format_days({required Object n}) => '${n} dagen';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -100720,8 +101323,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Geen lokale video in deze collectie';
-  @override
-  String get video_collection_scrape => 'Info & omslag scrapen';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -102702,6 +103303,84 @@ class _StringsNl extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Leestimer tonen';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Het gekoppelde apparaat heeft de inloggegevens van dit apparaat geweigerd — koppel opnieuw om te blijven synchroniseren.';
+  @override
+  String get sync_err_not_paired =>
+      'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -108536,9 +109215,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get module_extension_label => 'Extensão do navegador';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Mover para baixo';
   @override
   String get move_up => 'Mover para cima';
@@ -110283,8 +110959,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} caracteres';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 caracteres';
-  @override
   String stat_format_days({required Object n}) => '${n} dias';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -111577,8 +112251,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Nenhum vídeo local nesta coleção';
-  @override
-  String get video_collection_scrape => 'Buscar info e capa';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -113577,6 +114249,84 @@ class _StringsPtBr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Mostrar cronômetro de leitura';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'O dispositivo pareado rejeitou as credenciais deste dispositivo — pareie novamente para retomar a sincronização.';
+  @override
+  String get sync_err_not_paired =>
+      'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -119384,9 +120134,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get module_extension_label => 'Расширение для браузера';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Вниз';
   @override
   String get move_up => 'Вверх';
@@ -121141,8 +121888,6 @@ class _StringsRu extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} символов';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 символов';
-  @override
   String stat_format_days({required Object n}) => '${n} дн.';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -122427,8 +123172,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Нет локальных видео в этой коллекции';
-  @override
-  String get video_collection_scrape => 'Получить информацию и обложку';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -124429,6 +125172,84 @@ class _StringsRu extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Показывать таймер чтения';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Сопряжённое устройство отклонило учётные данные этого устройства — выполните сопряжение заново, чтобы продолжить синхронизацию.';
+  @override
+  String get sync_err_not_paired =>
+      'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -130142,9 +130963,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get module_extension_label => 'ส่วนขยายเบราว์เซอร์';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'เลื่อนลง';
   @override
   String get move_up => 'เลื่อนขึ้น';
@@ -131858,8 +132676,6 @@ class _StringsTh extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ตัวอักษร';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 ตัวอักษร';
-  @override
   String stat_format_days({required Object n}) => '${n} วัน';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -133135,8 +133951,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'ไม่มีวิดีโอในเครื่องในคอลเลกชันนี้';
-  @override
-  String get video_collection_scrape => 'สแกนข้อมูลและปก';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -135081,6 +135895,84 @@ class _StringsTh extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'แสดงตัวจับเวลาการอ่าน';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'อุปกรณ์ที่จับคู่ไว้ปฏิเสธข้อมูลรับรองของเครื่องนี้ — โปรดจับคู่ใหม่เพื่อซิงค์ต่อ';
+  @override
+  String get sync_err_not_paired =>
+      'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -140864,9 +141756,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get module_extension_label => 'Tarayıcı eklentisi';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Aşağı taşı';
   @override
   String get move_up => 'Yukarı taşı';
@@ -142594,8 +143483,6 @@ class _StringsTr extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} karakter';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 karakter';
-  @override
   String stat_format_days({required Object n}) => '${n} gün';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -143875,8 +144762,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Bu koleksiyonda yerel video yok';
-  @override
-  String get video_collection_scrape => 'Bilgi ve kapak tara';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -145849,6 +146734,84 @@ class _StringsTr extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Okuma zamanlayıcısını göster';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Eşleştirilmiş cihaz bu cihazın kimlik bilgilerini reddetti — eşitlemeye devam etmek için yeniden eşleştirin.';
+  @override
+  String get sync_err_not_paired =>
+      'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -151623,9 +152586,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get module_extension_label => 'Tiện ích mở rộng trình duyệt';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Di chuyển xuống';
   @override
   String get move_up => 'Di chuyển lên';
@@ -153349,8 +154309,6 @@ class _StringsVi extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} ký tự';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n}万 ký tự';
-  @override
   String stat_format_days({required Object n}) => '${n} ngày';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -154626,8 +155584,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_collection_no_local_member =>
       'Không có video cục bộ trong bộ sưu tập này';
-  @override
-  String get video_collection_scrape => 'Quét thông tin & bìa';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -156588,6 +157544,84 @@ class _StringsVi extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => 'Hiển thị bộ đếm thời gian đọc';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Thiết bị đã ghép nối từ chối thông tin xác thực của máy này — hãy ghép nối lại để tiếp tục đồng bộ.';
+  @override
+  String get sync_err_not_paired =>
+      'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
 }
 
 // Path: <root>
@@ -156897,14 +157931,15 @@ class _StringsZhCn extends _StringsEn {
   String get anki_connect_use_on_mobile_hint =>
       '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
   @override
-  String get anki_create_lapis => '创建 Lapis 卡组';
+  String get anki_create_lapis => '创建并选用 Lapis';
   @override
   String get anki_create_lapis_exists => 'Lapis 笔记类型和卡组已存在，已选中。';
   @override
   String anki_create_lapis_failed({required Object error}) =>
       '无法创建 Lapis 卡组：${error}';
   @override
-  String get anki_create_lapis_hint => '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组并自动选中。';
+  String get anki_create_lapis_hint =>
+      '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组，并选为制卡目标。';
   @override
   String get anki_create_lapis_success => '已创建 Lapis 笔记类型和卡组。';
   @override
@@ -161890,8 +162925,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get module_extension_label => '浏览器扩展';
   @override
-  String get module_toggle_hint => '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -163480,8 +164513,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} 字';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} 万字';
-  @override
   String stat_format_days({required Object n}) => '${n} 天';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -164653,8 +165684,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_clip_exporting => '正在导出片段…';
   @override
   String get video_collection_no_local_member => '本合集没有本地视频';
-  @override
-  String get video_collection_scrape => '刮削资料与封面';
   @override
   String get video_continue_watching => '继续观看';
   @override
@@ -166451,6 +167480,76 @@ class _StringsZhCn extends _StringsEn {
       'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
   @override
   String get dialog_background_close => '关闭（任务继续在后台运行）';
+  @override
+  String get reader_timer_show => '显示阅读计时器';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      '该位置已是来源，正在重新扫描：${path}';
+  @override
+  String get audiobook_transcribe_model_discarded => '模型文件读不出来，已自动清除，请重新下载。';
+  @override
+  String get collection_cover_set => '设置封面';
+  @override
+  String get collection_cover_reset => '恢复默认封面';
+  @override
+  String get collection_cover_updated => '封面已更新';
+  @override
+  String get collection_cover_failed => '封面设置失败';
+  @override
+  String get collection_rescrape => '重新刮削资料与封面';
+  @override
+  String get collection_rescrape_not_planned => '这个合集不在任何本地视频来源的刮削计划里';
+  @override
+  String get collection_rescrape_started => '已开始重新刮削';
+  @override
+  String get collection_rescrape_failed => '重新刮削失败';
+  @override
+  String download_batch_done({required Object n}) => '已处理 ${n} 项';
+  @override
+  String download_batch_unsupported({required Object n}) => '${n} 项不支持此操作';
+  @override
+  String download_batch_failed({required Object n}) => '${n} 项失败';
+  @override
+  String download_batch_delete_confirm({required Object n}) => '删除 ${n} 个下载任务？';
+  @override
+  String get sync_err_pairing_rejected => '对方设备已拒绝本机的配对凭据，请重新配对后再同步。';
+  @override
+  String get sync_err_not_paired => '尚未配对任何设备，请先在「Fushi 互联」里完成配对。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki 报告 Lapis 牌组和笔记类型已创建，但回读时仍然找不到它们。请打开 Anki 确认它没有卡住，然后重试。';
+  @override
+  String get anki_lapis_suggest_title => '现在还制不出卡';
+  @override
+  String get anki_lapis_suggest_body =>
+      '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+  @override
+  String get anki_lapis_suggest_dismiss => '保持当前设置';
+  @override
+  String get reader_vn_settings => '视觉小说设置';
+  @override
+  String get reader_vn_reveal_speed => '文字渐显速度';
+  @override
+  String get reader_vn_reveal_instant => '立即显示';
+  @override
+  String get reader_vn_screen_mode => '每屏内容';
+  @override
+  String get reader_vn_screen_block => '一个段落';
+  @override
+  String get reader_vn_screen_sentences => '按句子';
+  @override
+  String get reader_vn_sentences_per_screen => '每屏句数';
+  @override
+  String get reader_vn_preserve_dialogue => '保持对话完整';
+  @override
+  String get reader_vn_click_advance => '点击空白处推进';
+  @override
+  String get reader_vn_merge_spoken_sentence => '有声句保持在同一屏';
+  @override
+  String get auto_add_char_position_to_tags => '自动添加制卡位置到标签';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
 }
 
 // Path: <root>
@@ -166761,14 +167860,15 @@ class _StringsZhHk extends _StringsEn {
   String get anki_connect_use_on_mobile_hint =>
       '僅在可信網路中使用。AnkiConnect 使用明文 HTTP；請配置匹配的 API key，切換後再重新整理牌組與筆記類型。';
   @override
-  String get anki_create_lapis => '建立 Lapis 卡組';
+  String get anki_create_lapis => '建立並選用 Lapis';
   @override
   String get anki_create_lapis_exists => 'Lapis 筆記類型與卡組已存在，已為你選取。';
   @override
   String anki_create_lapis_failed({required Object error}) =>
       '無法建立 Lapis 卡組：${error}';
   @override
-  String get anki_create_lapis_hint => '向 Anki 加入 Lapis 筆記類型與 Lapis 卡組並自動選取。';
+  String get anki_create_lapis_hint =>
+      '向 Anki 加入 Lapis 筆記類型和 Lapis 卡組，並選為製卡目標。';
   @override
   String get anki_create_lapis_success => '已建立 Lapis 筆記類型與卡組。';
   @override
@@ -171783,9 +172883,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get module_extension_label => '瀏覽器擴展';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -173389,8 +174486,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String stat_format_chars({required Object n}) => '${n} 字';
   @override
-  String stat_format_chars_wan({required Object n}) => '${n} 萬字';
-  @override
   String stat_format_days({required Object n}) => '${n} 天';
   @override
   String stat_format_hours_minutes({required Object h, required Object m}) =>
@@ -174576,8 +175671,6 @@ class _StringsZhHk extends _StringsEn {
   String get video_clip_exporting => '正在匯出片段…';
   @override
   String get video_collection_no_local_member => '本合集沒有本地影片';
-  @override
-  String get video_collection_scrape => '刮削資料與封面';
   @override
   String get video_continue_watching => 'Continue Watching';
   @override
@@ -176383,6 +177476,80 @@ class _StringsZhHk extends _StringsEn {
       'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
   @override
   String get dialog_background_close => 'Close (task keeps running)';
+  @override
+  String get reader_timer_show => '顯示閱讀計時器';
+  @override
+  String media_source_root_already_added({required Object path}) =>
+      'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => '設定封面';
+  @override
+  String get collection_cover_reset => '回復預設封面';
+  @override
+  String get collection_cover_updated => '封面已更新';
+  @override
+  String get collection_cover_failed => '封面設定失敗';
+  @override
+  String get collection_rescrape => '重新刮削資料與封面';
+  @override
+  String get collection_rescrape_not_planned => '這個合集不在任何本機影片來源的刮削計劃裡';
+  @override
+  String get collection_rescrape_started => '已開始重新刮削';
+  @override
+  String get collection_rescrape_failed => '重新刮削失敗';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected => '對方裝置已拒絕本機的配對憑證，請重新配對後再同步。';
+  @override
+  String get sync_err_not_paired => '尚未配對任何裝置，請先在「Fushi 互聯」裡完成配對。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags => '自動將製卡位置加入標籤';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
 }
 
 /// Flat map(s) containing all translations.
@@ -176648,14 +177815,14 @@ extension on _StringsEn {
       case 'anki_connect_use_on_mobile_hint':
         return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
       case 'anki_create_lapis':
-        return 'Create Lapis deck';
+        return 'Create and use Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis note type and deck already exist — selected them.';
       case 'anki_create_lapis_failed':
         return ({required Object error}) =>
             'Could not create Lapis deck: ${error}';
       case 'anki_create_lapis_hint':
-        return 'Adds the Lapis note type and a Lapis deck to Anki, then selects them.';
+        return 'Adds the Lapis note type and a Lapis deck to Anki, then selects them as the mining target.';
       case 'anki_create_lapis_success':
         return 'Lapis note type and deck created.';
       case 'anki_deck':
@@ -181382,8 +182549,6 @@ extension on _StringsEn {
         return 'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
       case 'module_extension_label':
         return 'Browser extension';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Move down';
       case 'move_up':
@@ -182899,8 +184064,6 @@ extension on _StringsEn {
         return 'Favorited sentences';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} characters';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 characters';
       case 'stat_format_days':
         return ({required Object n}) => '${n} days';
       case 'stat_format_hours_minutes':
@@ -184027,8 +185190,6 @@ extension on _StringsEn {
         return 'Exporting clip…';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
-      case 'video_collection_scrape':
-        return 'Scrape info & cover';
       case 'video_continue_watching':
         return 'Continue watching';
       case 'video_control_audio_track':
@@ -185713,6 +186874,73 @@ extension on _StringsEn {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Show reading timer';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'The paired device rejected this device\'s credentials — pair again to resume syncing.';
+      case 'sync_err_not_paired':
+        return 'No paired device yet — set up pairing in Fushi Interconnect first.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -190709,8 +191937,6 @@ extension on _StringsAr {
         return 'تبويب التحميلات مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
       case 'module_extension_label':
         return 'إضافة المتصفح';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'تحريك لأسفل';
       case 'move_up':
@@ -192225,8 +193451,6 @@ extension on _StringsAr {
         return 'الجمل المفضلة';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} حرف';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 حرف';
       case 'stat_format_days':
         return ({required Object n}) => '${n} أيام';
       case 'stat_format_hours_minutes':
@@ -193351,8 +194575,6 @@ extension on _StringsAr {
         return 'جارٍ تصدير المقطع…';
       case 'video_collection_no_local_member':
         return 'لا يوجد فيديو محلي في هذه المجموعة';
-      case 'video_collection_scrape':
-        return 'كشط المعلومات والغلاف';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -195038,6 +196260,73 @@ extension on _StringsAr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'إظهار مؤقت القراءة';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'رفض الجهاز المقترن بيانات اعتماد هذا الجهاز — أعد الإقتران لاستئناف المزامنة.';
+      case 'sync_err_not_paired':
+        return 'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -200061,8 +201350,6 @@ extension on _StringsDe {
         return 'Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
       case 'module_extension_label':
         return 'Browser-Erweiterung';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Nach unten';
       case 'move_up':
@@ -201583,8 +202870,6 @@ extension on _StringsDe {
         return 'Favorisierte Sätze';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} Zeichen';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 Zeichen';
       case 'stat_format_days':
         return ({required Object n}) => '${n} Tage';
       case 'stat_format_hours_minutes':
@@ -202718,8 +204003,6 @@ extension on _StringsDe {
         return 'Clip wird exportiert…';
       case 'video_collection_no_local_member':
         return 'Kein lokales Video in dieser Sammlung';
-      case 'video_collection_scrape':
-        return 'Info & Cover scrapen';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -204408,6 +205691,73 @@ extension on _StringsDe {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Lesetimer anzeigen';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Das gekoppelte Gerät hat die Anmeldedaten dieses Geräts abgelehnt — koppeln Sie erneut, um die Synchronisierung fortzusetzen.';
+      case 'sync_err_not_paired':
+        return 'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -209424,8 +210774,6 @@ extension on _StringsEs {
         return 'La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
       case 'module_extension_label':
         return 'Extensión del navegador';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Mover abajo';
       case 'move_up':
@@ -210946,8 +212294,6 @@ extension on _StringsEs {
         return 'Frases favoritas';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 caracteres';
       case 'stat_format_days':
         return ({required Object n}) => '${n} días';
       case 'stat_format_hours_minutes':
@@ -212080,8 +213426,6 @@ extension on _StringsEs {
         return 'Exportando fragmento…';
       case 'video_collection_no_local_member':
         return 'No hay vídeo local en esta colección';
-      case 'video_collection_scrape':
-        return 'Obtener info y portada';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -213769,6 +215113,73 @@ extension on _StringsEs {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Mostrar temporizador de lectura';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'El dispositivo emparejado rechazó las credenciales de este dispositivo: vuelve a emparejarlo para reanudar la sincronización.';
+      case 'sync_err_not_paired':
+        return 'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -218791,8 +220202,6 @@ extension on _StringsFr {
         return 'L\'onglet Téléchargements est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
       case 'module_extension_label':
         return 'Extension navigateur';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Descendre';
       case 'move_up':
@@ -220312,8 +221721,6 @@ extension on _StringsFr {
         return 'Phrases favorites';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caractères';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 caractères';
       case 'stat_format_days':
         return ({required Object n}) => '${n} jours';
       case 'stat_format_hours_minutes':
@@ -221449,8 +222856,6 @@ extension on _StringsFr {
         return 'Export de l\'extrait…';
       case 'video_collection_no_local_member':
         return 'Aucune vidéo locale dans cette collection';
-      case 'video_collection_scrape':
-        return 'Récupérer infos et couverture';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -223139,6 +224544,73 @@ extension on _StringsFr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Afficher le minuteur de lecture';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'L\'appareil associé a refusé les identifiants de cet appareil — associez-le à nouveau pour reprendre la synchronisation.';
+      case 'sync_err_not_paired':
+        return 'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -228146,8 +229618,6 @@ extension on _StringsId {
         return 'Tab Unduhan disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
       case 'module_extension_label':
         return 'Ekstensi browser';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Turunkan';
       case 'move_up':
@@ -229663,8 +231133,6 @@ extension on _StringsId {
         return 'Kalimat difavoritkan';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 karakter';
       case 'stat_format_days':
         return ({required Object n}) => '${n} hari';
       case 'stat_format_hours_minutes':
@@ -230792,8 +232260,6 @@ extension on _StringsId {
         return 'Mengekspor klip…';
       case 'video_collection_no_local_member':
         return 'Tidak ada video lokal dalam koleksi ini';
-      case 'video_collection_scrape':
-        return 'Scrape info & sampul';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -232480,6 +233946,73 @@ extension on _StringsId {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Tampilkan pengatur waktu baca';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Perangkat yang dipasangkan menolak kredensial perangkat ini — pasangkan ulang untuk melanjutkan sinkronisasi.';
+      case 'sync_err_not_paired':
+        return 'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -237495,8 +239028,6 @@ extension on _StringsIt {
         return 'La scheda Download è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
       case 'module_extension_label':
         return 'Estensione browser';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Sposta giù';
       case 'move_up':
@@ -239015,8 +240546,6 @@ extension on _StringsIt {
         return 'Frasi preferite';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caratteri';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 caratteri';
       case 'stat_format_days':
         return ({required Object n}) => '${n} giorni';
       case 'stat_format_hours_minutes':
@@ -240153,8 +241682,6 @@ extension on _StringsIt {
         return 'Esportazione del clip…';
       case 'video_collection_no_local_member':
         return 'Nessun video locale in questa raccolta';
-      case 'video_collection_scrape':
-        return 'Scrape info e copertina';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -241843,6 +243370,73 @@ extension on _StringsIt {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Mostra timer di lettura';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Il dispositivo associato ha rifiutato le credenziali di questo dispositivo: esegui di nuovo l\'associazione per riprendere la sincronizzazione.';
+      case 'sync_err_not_paired':
+        return 'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -246824,8 +248418,6 @@ extension on _StringsJa {
         return '「ダウンロード」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
       case 'module_extension_label':
         return 'ブラウザ拡張機能';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '下に移動';
       case 'move_up':
@@ -248338,8 +249930,6 @@ extension on _StringsJa {
         return 'お気に入りの文';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} 文字';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} 万字';
       case 'stat_format_days':
         return ({required Object n}) => '${n}日';
       case 'stat_format_hours_minutes':
@@ -249454,8 +251044,6 @@ extension on _StringsJa {
         return 'クリップを書き出し中…';
       case 'video_collection_no_local_member':
         return 'このコレクションにローカル動画がありません';
-      case 'video_collection_scrape':
-        return '情報と封面を取得';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -251133,6 +252721,73 @@ extension on _StringsJa {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return '読書タイマーを表示';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'ペアリング済みの端末がこの端末の認証情報を拒否しました。同期を再開するには再度ペアリングしてください。';
+      case 'sync_err_not_paired':
+        return 'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'タグにカード作成位置を自動追加';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
       default:
         return null;
     }
@@ -256115,8 +257770,6 @@ extension on _StringsKo {
         return '‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
       case 'module_extension_label':
         return '브라우저 확장';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '아래로 이동';
       case 'move_up':
@@ -257630,8 +259283,6 @@ extension on _StringsKo {
         return '즐겨찾기한 문장';
       case 'stat_format_chars':
         return ({required Object n}) => '${n}자';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}만자';
       case 'stat_format_days':
         return ({required Object n}) => '${n}일';
       case 'stat_format_hours_minutes':
@@ -258747,8 +260398,6 @@ extension on _StringsKo {
         return '클립 내보내는 중…';
       case 'video_collection_no_local_member':
         return '이 컬렉션에 로컬 동영상이 없습니다';
-      case 'video_collection_scrape':
-        return '정보 및 표지 스크랩';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -260427,6 +262076,73 @@ extension on _StringsKo {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return '독서 타이머 표시';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return '페어링된 기기가 이 기기의 자격 증명을 거부했습니다. 동기화를 재개하려면 다시 페어링하세요.';
+      case 'sync_err_not_paired':
+        return '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -265441,8 +267157,6 @@ extension on _StringsNl {
         return 'Het tabblad Downloads is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
       case 'module_extension_label':
         return 'Browserextensie';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Omlaag';
       case 'move_up':
@@ -266961,8 +268675,6 @@ extension on _StringsNl {
         return 'Favoriete zinnen';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} tekens';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 tekens';
       case 'stat_format_days':
         return ({required Object n}) => '${n} dagen';
       case 'stat_format_hours_minutes':
@@ -268092,8 +269804,6 @@ extension on _StringsNl {
         return 'Fragment exporteren…';
       case 'video_collection_no_local_member':
         return 'Geen lokale video in deze collectie';
-      case 'video_collection_scrape':
-        return 'Info & omslag scrapen';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -269783,6 +271493,73 @@ extension on _StringsNl {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Leestimer tonen';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Het gekoppelde apparaat heeft de inloggegevens van dit apparaat geweigerd — koppel opnieuw om te blijven synchroniseren.';
+      case 'sync_err_not_paired':
+        return 'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -274796,8 +276573,6 @@ extension on _StringsPtBr {
         return 'A aba Downloads está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
       case 'module_extension_label':
         return 'Extensão do navegador';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Mover para baixo';
       case 'move_up':
@@ -276314,8 +278089,6 @@ extension on _StringsPtBr {
         return 'Frases favoritadas';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} caracteres';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 caracteres';
       case 'stat_format_days':
         return ({required Object n}) => '${n} dias';
       case 'stat_format_hours_minutes':
@@ -277444,8 +279217,6 @@ extension on _StringsPtBr {
         return 'Exportando trecho…';
       case 'video_collection_no_local_member':
         return 'Nenhum vídeo local nesta coleção';
-      case 'video_collection_scrape':
-        return 'Buscar info e capa';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -279134,6 +280905,73 @@ extension on _StringsPtBr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Mostrar cronômetro de leitura';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'O dispositivo pareado rejeitou as credenciais deste dispositivo — pareie novamente para retomar a sincronização.';
+      case 'sync_err_not_paired':
+        return 'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -284154,8 +285992,6 @@ extension on _StringsRu {
         return 'Вкладка «Загрузки» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
       case 'module_extension_label':
         return 'Расширение для браузера';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Вниз';
       case 'move_up':
@@ -285672,8 +287508,6 @@ extension on _StringsRu {
         return 'Избранные предложения';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} символов';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 символов';
       case 'stat_format_days':
         return ({required Object n}) => '${n} дн.';
       case 'stat_format_hours_minutes':
@@ -286804,8 +288638,6 @@ extension on _StringsRu {
         return 'Экспорт фрагмента…';
       case 'video_collection_no_local_member':
         return 'Нет локальных видео в этой коллекции';
-      case 'video_collection_scrape':
-        return 'Получить информацию и обложку';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -288492,6 +290324,73 @@ extension on _StringsRu {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Показывать таймер чтения';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Сопряжённое устройство отклонило учётные данные этого устройства — выполните сопряжение заново, чтобы продолжить синхронизацию.';
+      case 'sync_err_not_paired':
+        return 'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -293492,8 +295391,6 @@ extension on _StringsTh {
         return 'แท็บดาวน์โหลดถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
       case 'module_extension_label':
         return 'ส่วนขยายเบราว์เซอร์';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'เลื่อนลง';
       case 'move_up':
@@ -295008,8 +296905,6 @@ extension on _StringsTh {
         return 'ประโยคที่ชื่นชอบ';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ตัวอักษร';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 ตัวอักษร';
       case 'stat_format_days':
         return ({required Object n}) => '${n} วัน';
       case 'stat_format_hours_minutes':
@@ -296136,8 +298031,6 @@ extension on _StringsTh {
         return 'กำลังส่งออกคลิป…';
       case 'video_collection_no_local_member':
         return 'ไม่มีวิดีโอในเครื่องในคอลเลกชันนี้';
-      case 'video_collection_scrape':
-        return 'สแกนข้อมูลและปก';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -297822,6 +299715,73 @@ extension on _StringsTh {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'แสดงตัวจับเวลาการอ่าน';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'อุปกรณ์ที่จับคู่ไว้ปฏิเสธข้อมูลรับรองของเครื่องนี้ — โปรดจับคู่ใหม่เพื่อซิงค์ต่อ';
+      case 'sync_err_not_paired':
+        return 'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -302832,8 +304792,6 @@ extension on _StringsTr {
         return 'İndirmeler sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
       case 'module_extension_label':
         return 'Tarayıcı eklentisi';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Aşağı taşı';
       case 'move_up':
@@ -304347,8 +306305,6 @@ extension on _StringsTr {
         return 'Sık kullanılan cümleler';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} karakter';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 karakter';
       case 'stat_format_days':
         return ({required Object n}) => '${n} gün';
       case 'stat_format_hours_minutes':
@@ -305478,8 +307434,6 @@ extension on _StringsTr {
         return 'Kesit dışa aktarılıyor…';
       case 'video_collection_no_local_member':
         return 'Bu koleksiyonda yerel video yok';
-      case 'video_collection_scrape':
-        return 'Bilgi ve kapak tara';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -307167,6 +309121,73 @@ extension on _StringsTr {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Okuma zamanlayıcısını göster';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Eşleştirilmiş cihaz bu cihazın kimlik bilgilerini reddetti — eşitlemeye devam etmek için yeniden eşleştirin.';
+      case 'sync_err_not_paired':
+        return 'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -312172,8 +314193,6 @@ extension on _StringsVi {
         return 'Tab Tải xuống đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
       case 'module_extension_label':
         return 'Tiện ích mở rộng trình duyệt';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Di chuyển xuống';
       case 'move_up':
@@ -313692,8 +315711,6 @@ extension on _StringsVi {
         return 'Câu đã yêu thích';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} ký tự';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n}万 ký tự';
       case 'stat_format_days':
         return ({required Object n}) => '${n} ngày';
       case 'stat_format_hours_minutes':
@@ -314820,8 +316837,6 @@ extension on _StringsVi {
         return 'Đang xuất đoạn…';
       case 'video_collection_no_local_member':
         return 'Không có video cục bộ trong bộ sưu tập này';
-      case 'video_collection_scrape':
-        return 'Quét thông tin & bìa';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -316506,6 +318521,73 @@ extension on _StringsVi {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return 'Hiển thị bộ đếm thời gian đọc';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Thiết bị đã ghép nối từ chối thông tin xác thực của máy này — hãy ghép nối lại để tiếp tục đồng bộ.';
+      case 'sync_err_not_paired':
+        return 'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
       default:
         return null;
     }
@@ -316767,13 +318849,13 @@ extension on _StringsZhCn {
       case 'anki_connect_use_on_mobile_hint':
         return '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
       case 'anki_create_lapis':
-        return '创建 Lapis 卡组';
+        return '创建并选用 Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis 笔记类型和卡组已存在，已选中。';
       case 'anki_create_lapis_failed':
         return ({required Object error}) => '无法创建 Lapis 卡组：${error}';
       case 'anki_create_lapis_hint':
-        return '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组并自动选中。';
+        return '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组，并选为制卡目标。';
       case 'anki_create_lapis_success':
         return '已创建 Lapis 笔记类型和卡组。';
       case 'anki_deck':
@@ -321470,8 +323552,6 @@ extension on _StringsZhCn {
         return '「下载」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
       case 'module_extension_label':
         return '浏览器扩展';
-      case 'module_toggle_hint':
-        return '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -322982,8 +325062,6 @@ extension on _StringsZhCn {
         return '收藏语句';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} 字';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} 万字';
       case 'stat_format_days':
         return ({required Object n}) => '${n} 天';
       case 'stat_format_hours_minutes':
@@ -324093,8 +326171,6 @@ extension on _StringsZhCn {
         return '正在导出片段…';
       case 'video_collection_no_local_member':
         return '本合集没有本地视频';
-      case 'video_collection_scrape':
-        return '刮削资料与封面';
       case 'video_continue_watching':
         return '继续观看';
       case 'video_control_audio_track':
@@ -325764,6 +327840,72 @@ extension on _StringsZhCn {
         return 'Anime4K 去模糊（M）加一道柔化修复，均在片源原分辨率上跑。手机端最强档，仍不含放大 pass。掉帧就往下退一档。';
       case 'dialog_background_close':
         return '关闭（任务继续在后台运行）';
+      case 'reader_timer_show':
+        return '显示阅读计时器';
+      case 'media_source_root_already_added':
+        return ({required Object path}) => '该位置已是来源，正在重新扫描：${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return '模型文件读不出来，已自动清除，请重新下载。';
+      case 'collection_cover_set':
+        return '设置封面';
+      case 'collection_cover_reset':
+        return '恢复默认封面';
+      case 'collection_cover_updated':
+        return '封面已更新';
+      case 'collection_cover_failed':
+        return '封面设置失败';
+      case 'collection_rescrape':
+        return '重新刮削资料与封面';
+      case 'collection_rescrape_not_planned':
+        return '这个合集不在任何本地视频来源的刮削计划里';
+      case 'collection_rescrape_started':
+        return '已开始重新刮削';
+      case 'collection_rescrape_failed':
+        return '重新刮削失败';
+      case 'download_batch_done':
+        return ({required Object n}) => '已处理 ${n} 项';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} 项不支持此操作';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} 项失败';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => '删除 ${n} 个下载任务？';
+      case 'sync_err_pairing_rejected':
+        return '对方设备已拒绝本机的配对凭据，请重新配对后再同步。';
+      case 'sync_err_not_paired':
+        return '尚未配对任何设备，请先在「Fushi 互联」里完成配对。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki 报告 Lapis 牌组和笔记类型已创建，但回读时仍然找不到它们。请打开 Anki 确认它没有卡住，然后重试。';
+      case 'anki_lapis_suggest_title':
+        return '现在还制不出卡';
+      case 'anki_lapis_suggest_body':
+        return '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+      case 'anki_lapis_suggest_dismiss':
+        return '保持当前设置';
+      case 'reader_vn_settings':
+        return '视觉小说设置';
+      case 'reader_vn_reveal_speed':
+        return '文字渐显速度';
+      case 'reader_vn_reveal_instant':
+        return '立即显示';
+      case 'reader_vn_screen_mode':
+        return '每屏内容';
+      case 'reader_vn_screen_block':
+        return '一个段落';
+      case 'reader_vn_screen_sentences':
+        return '按句子';
+      case 'reader_vn_sentences_per_screen':
+        return '每屏句数';
+      case 'reader_vn_preserve_dialogue':
+        return '保持对话完整';
+      case 'reader_vn_click_advance':
+        return '点击空白处推进';
+      case 'reader_vn_merge_spoken_sentence':
+        return '有声句保持在同一屏';
+      case 'auto_add_char_position_to_tags':
+        return '自动添加制卡位置到标签';
+      case 'auto_add_char_position_to_tags_hint':
+        return '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
       default:
         return null;
     }
@@ -326025,13 +328167,13 @@ extension on _StringsZhHk {
       case 'anki_connect_use_on_mobile_hint':
         return '僅在可信網路中使用。AnkiConnect 使用明文 HTTP；請配置匹配的 API key，切換後再重新整理牌組與筆記類型。';
       case 'anki_create_lapis':
-        return '建立 Lapis 卡組';
+        return '建立並選用 Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis 筆記類型與卡組已存在，已為你選取。';
       case 'anki_create_lapis_failed':
         return ({required Object error}) => '無法建立 Lapis 卡組：${error}';
       case 'anki_create_lapis_hint':
-        return '向 Anki 加入 Lapis 筆記類型與 Lapis 卡組並自動選取。';
+        return '向 Anki 加入 Lapis 筆記類型和 Lapis 卡組，並選為製卡目標。';
       case 'anki_create_lapis_success':
         return '已建立 Lapis 筆記類型與卡組。';
       case 'anki_deck':
@@ -330734,8 +332876,6 @@ extension on _StringsZhHk {
         return '「下載」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
       case 'module_extension_label':
         return '瀏覽器擴展';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -332247,8 +334387,6 @@ extension on _StringsZhHk {
         return '收藏的句子';
       case 'stat_format_chars':
         return ({required Object n}) => '${n} 字';
-      case 'stat_format_chars_wan':
-        return ({required Object n}) => '${n} 萬字';
       case 'stat_format_days':
         return ({required Object n}) => '${n} 天';
       case 'stat_format_hours_minutes':
@@ -333359,8 +335497,6 @@ extension on _StringsZhHk {
         return '正在匯出片段…';
       case 'video_collection_no_local_member':
         return '本合集沒有本地影片';
-      case 'video_collection_scrape':
-        return '刮削資料與封面';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -335032,6 +337168,73 @@ extension on _StringsZhHk {
         return 'Anime4K deblur (M) plus an extra soft restore pass, both at the source resolution. Strongest phone tier; still no upscaling. Drop a tier if it drops frames.';
       case 'dialog_background_close':
         return 'Close (task keeps running)';
+      case 'reader_timer_show':
+        return '顯示閱讀計時器';
+      case 'media_source_root_already_added':
+        return ({required Object path}) =>
+            'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return '設定封面';
+      case 'collection_cover_reset':
+        return '回復預設封面';
+      case 'collection_cover_updated':
+        return '封面已更新';
+      case 'collection_cover_failed':
+        return '封面設定失敗';
+      case 'collection_rescrape':
+        return '重新刮削資料與封面';
+      case 'collection_rescrape_not_planned':
+        return '這個合集不在任何本機影片來源的刮削計劃裡';
+      case 'collection_rescrape_started':
+        return '已開始重新刮削';
+      case 'collection_rescrape_failed':
+        return '重新刮削失敗';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return '對方裝置已拒絕本機的配對憑證，請重新配對後再同步。';
+      case 'sync_err_not_paired':
+        return '尚未配對任何裝置，請先在「Fushi 互聯」裡完成配對。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return '自動將製卡位置加入標籤';
+      case 'auto_add_char_position_to_tags_hint':
+        return '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
       default:
         return null;
     }
