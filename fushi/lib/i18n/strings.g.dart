@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77639 (4567 per locale)
+/// Strings: 78336 (4608 per locale)
 ///
-/// Built on 2026-09-09 at 12:20 UTC
+/// Built on 2026-09-09 at 22:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -368,13 +368,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_connect_use_on_mobile => 'Use AnkiConnect instead';
   String get anki_connect_use_on_mobile_hint =>
       'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
-  String get anki_create_lapis => 'Create Lapis deck';
+  String get anki_create_lapis => 'Create and use Lapis';
   String get anki_create_lapis_exists =>
       'Lapis note type and deck already exist — selected them.';
   String anki_create_lapis_failed({required Object error}) =>
       'Could not create Lapis deck: ${error}';
   String get anki_create_lapis_hint =>
-      'Adds the Lapis note type and a Lapis deck to Anki, then selects them.';
+      'Adds the Lapis note type and a Lapis deck to Anki, then selects them as the mining target.';
   String get anki_create_lapis_success => 'Lapis note type and deck created.';
   String get anki_deck => 'Deck';
   String get anki_dedup_auto => 'Automatic processing';
@@ -3475,8 +3475,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get module_downloads_hidden_hint =>
       'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
   String get module_extension_label => 'Browser extension';
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   String get move_down => 'Move down';
   String get move_up => 'Move up';
   String get name => 'Name';
@@ -6305,6 +6303,61 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This collection isn\'t in any local video source\'s scrape plan';
   String get collection_rescrape_started => 'Rescrape queued';
   String get collection_rescrape_failed => 'Rescrape failed';
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  String download_batch_failed({required Object n}) => '${n} failed';
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  String get sync_err_pairing_rejected =>
+      'The paired device rejected this device\'s credentials — pair again to resume syncing.';
+  String get sync_err_not_paired =>
+      'No paired device yet — set up pairing in Fushi Interconnect first.';
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  String get reader_vn_settings => 'Visual novel settings';
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  String get reader_vn_reveal_instant => 'Instant';
+  String get reader_vn_screen_mode => 'Screen content';
+  String get reader_vn_screen_block => 'One block';
+  String get reader_vn_screen_sentences => 'Sentences';
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  String get reader_vn_click_advance => 'Blank tap advances';
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  String get settings_group_interface => 'Interface';
+  String get settings_group_content => 'Content';
+  String get settings_group_learning => 'Learning';
+  String get settings_group_connections => 'Connections';
+  String get settings_group_data => 'Data and devices';
+  String get settings_group_app => 'App';
+  String get settings_destination_appearance_interaction =>
+      'Appearance and interaction';
+  String get settings_destination_profile_presets => 'Configuration presets';
+  String get settings_destination_system_about => 'System and about';
+  String get settings_service_configured => 'Configured';
+  String get settings_service_not_configured => 'Not configured';
+  String get settings_service_builtin => 'Built-in configuration';
+  String get settings_anki_media => 'Card media';
+  String get settings_downloads_advanced_title => 'Engine and seeding';
+  String get settings_downloads_advanced_hint =>
+      'Connections, memory, peer discovery and protection';
+  String get settings_downloads_routing_title => 'Completed downloads';
+  String get settings_downloads_routing_hint =>
+      'Path mapping and target video source';
+  String get settings_downloads_encryption_title => 'Peer encryption';
+  String get settings_service_disabled => 'Disabled';
   String get updates_center_title => 'Updates';
   String get updates_center_empty => 'No updates yet';
   String get updates_center_empty_hint =>
@@ -12058,9 +12111,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get module_extension_label => 'إضافة المتصفح';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'تحريك لأسفل';
   @override
   String get move_up => 'تحريك لأعلى';
@@ -17014,6 +17064,102 @@ class _StringsAr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'رفض الجهاز المقترن بيانات اعتماد هذا الجهاز — أعد الإقتران لاستئناف المزامنة.';
+  @override
+  String get sync_err_not_paired =>
+      'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'الواجهة';
+  @override
+  String get settings_group_content => 'المحتوى';
+  @override
+  String get settings_group_learning => 'التعلّم';
+  @override
+  String get settings_group_connections => 'الاتصالات';
+  @override
+  String get settings_group_data => 'البيانات والأجهزة';
+  @override
+  String get settings_group_app => 'التطبيق';
+  @override
+  String get settings_destination_appearance_interaction => 'المظهر والتفاعل';
+  @override
+  String get settings_destination_profile_presets => 'إعدادات مسبقة';
+  @override
+  String get settings_destination_system_about => 'النظام وحول التطبيق';
+  @override
+  String get settings_service_configured => 'تم الإعداد';
+  @override
+  String get settings_service_not_configured => 'لم يتم الإعداد';
+  @override
+  String get settings_service_builtin => 'إعدادات مدمجة';
+  @override
+  String get settings_anki_media => 'وسائط البطاقات';
+  @override
+  String get settings_downloads_advanced_title => 'المحرك ومشاركة الملفات';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'الاتصالات والذاكرة واكتشاف الأقران والحماية';
+  @override
+  String get settings_downloads_routing_title => 'التنزيلات المكتملة';
+  @override
+  String get settings_downloads_routing_hint =>
+      'تعيين المسارات ومصدر الفيديو المستهدف';
+  @override
+  String get settings_downloads_encryption_title => 'تشفير الاتصال بالأقران';
+  @override
+  String get settings_service_disabled => 'معطّل';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -22911,9 +23057,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get module_extension_label => 'Browser-Erweiterung';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Nach unten';
   @override
   String get move_up => 'Nach oben';
@@ -27973,6 +28116,103 @@ class _StringsDe extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Das gekoppelte Gerät hat die Anmeldedaten dieses Geräts abgelehnt — koppeln Sie erneut, um die Synchronisierung fortzusetzen.';
+  @override
+  String get sync_err_not_paired =>
+      'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Oberfläche';
+  @override
+  String get settings_group_content => 'Inhalte';
+  @override
+  String get settings_group_learning => 'Lernen';
+  @override
+  String get settings_group_connections => 'Verbindungen';
+  @override
+  String get settings_group_data => 'Daten und Geräte';
+  @override
+  String get settings_group_app => 'App';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Darstellung und Bedienung';
+  @override
+  String get settings_destination_profile_presets => 'Konfigurationsvorlagen';
+  @override
+  String get settings_destination_system_about => 'System und Info';
+  @override
+  String get settings_service_configured => 'Konfiguriert';
+  @override
+  String get settings_service_not_configured => 'Nicht konfiguriert';
+  @override
+  String get settings_service_builtin => 'Integrierte Konfiguration';
+  @override
+  String get settings_anki_media => 'Kartenmedien';
+  @override
+  String get settings_downloads_advanced_title => 'Engine und Seeding';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Verbindungen, Speicher, Peer-Suche und Schutz';
+  @override
+  String get settings_downloads_routing_title => 'Abgeschlossene Downloads';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Pfadzuordnung und Ziel-Videoquelle';
+  @override
+  String get settings_downloads_encryption_title => 'Peer-Verschlüsselung';
+  @override
+  String get settings_service_disabled => 'Deaktiviert';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -33893,9 +34133,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get module_extension_label => 'Extensión del navegador';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Mover abajo';
   @override
   String get move_up => 'Mover arriba';
@@ -38986,6 +39223,103 @@ class _StringsEs extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'El dispositivo emparejado rechazó las credenciales de este dispositivo: vuelve a emparejarlo para reanudar la sincronización.';
+  @override
+  String get sync_err_not_paired =>
+      'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interfaz';
+  @override
+  String get settings_group_content => 'Contenido';
+  @override
+  String get settings_group_learning => 'Aprendizaje';
+  @override
+  String get settings_group_connections => 'Conexiones';
+  @override
+  String get settings_group_data => 'Datos y dispositivos';
+  @override
+  String get settings_group_app => 'Aplicación';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Apariencia e interacción';
+  @override
+  String get settings_destination_profile_presets => 'Ajustes predefinidos';
+  @override
+  String get settings_destination_system_about => 'Sistema e información';
+  @override
+  String get settings_service_configured => 'Configurado';
+  @override
+  String get settings_service_not_configured => 'Sin configurar';
+  @override
+  String get settings_service_builtin => 'Configuración integrada';
+  @override
+  String get settings_anki_media => 'Multimedia de las tarjetas';
+  @override
+  String get settings_downloads_advanced_title => 'Motor y distribución';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Conexiones, memoria, descubrimiento de pares y protección';
+  @override
+  String get settings_downloads_routing_title => 'Descargas completadas';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Asignación de rutas y fuente de vídeo de destino';
+  @override
+  String get settings_downloads_encryption_title => 'Cifrado entre pares';
+  @override
+  String get settings_service_disabled => 'Desactivado';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -44920,9 +45254,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get module_extension_label => 'Extension navigateur';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Descendre';
   @override
   String get move_up => 'Monter';
@@ -50033,6 +50364,103 @@ class _StringsFr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'L\'appareil associé a refusé les identifiants de cet appareil — associez-le à nouveau pour reprendre la synchronisation.';
+  @override
+  String get sync_err_not_paired =>
+      'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interface';
+  @override
+  String get settings_group_content => 'Contenu';
+  @override
+  String get settings_group_learning => 'Apprentissage';
+  @override
+  String get settings_group_connections => 'Connexions';
+  @override
+  String get settings_group_data => 'Données et appareils';
+  @override
+  String get settings_group_app => 'Application';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Apparence et interactions';
+  @override
+  String get settings_destination_profile_presets => 'Préréglages';
+  @override
+  String get settings_destination_system_about => 'Système et à propos';
+  @override
+  String get settings_service_configured => 'Configuré';
+  @override
+  String get settings_service_not_configured => 'Non configuré';
+  @override
+  String get settings_service_builtin => 'Configuration intégrée';
+  @override
+  String get settings_anki_media => 'Médias des cartes';
+  @override
+  String get settings_downloads_advanced_title => 'Moteur et partage';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Connexions, mémoire, découverte des pairs et protection';
+  @override
+  String get settings_downloads_routing_title => 'Téléchargements terminés';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Correspondance des chemins et source vidéo cible';
+  @override
+  String get settings_downloads_encryption_title => 'Chiffrement entre pairs';
+  @override
+  String get settings_service_disabled => 'Désactivé';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -55871,9 +56299,6 @@ class _StringsId extends _StringsEn {
   @override
   String get module_extension_label => 'Ekstensi browser';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Turunkan';
   @override
   String get move_up => 'Naikkan';
@@ -60882,6 +61307,103 @@ class _StringsId extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Perangkat yang dipasangkan menolak kredensial perangkat ini — pasangkan ulang untuk melanjutkan sinkronisasi.';
+  @override
+  String get sync_err_not_paired =>
+      'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Antarmuka';
+  @override
+  String get settings_group_content => 'Konten';
+  @override
+  String get settings_group_learning => 'Pembelajaran';
+  @override
+  String get settings_group_connections => 'Koneksi';
+  @override
+  String get settings_group_data => 'Data dan perangkat';
+  @override
+  String get settings_group_app => 'Aplikasi';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Tampilan dan interaksi';
+  @override
+  String get settings_destination_profile_presets => 'Preset konfigurasi';
+  @override
+  String get settings_destination_system_about => 'Sistem dan tentang';
+  @override
+  String get settings_service_configured => 'Dikonfigurasi';
+  @override
+  String get settings_service_not_configured => 'Belum dikonfigurasi';
+  @override
+  String get settings_service_builtin => 'Konfigurasi bawaan';
+  @override
+  String get settings_anki_media => 'Media kartu';
+  @override
+  String get settings_downloads_advanced_title => 'Mesin dan seeding';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Koneksi, memori, penemuan peer, dan perlindungan';
+  @override
+  String get settings_downloads_routing_title => 'Unduhan selesai';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Pemetaan jalur dan sumber video tujuan';
+  @override
+  String get settings_downloads_encryption_title => 'Enkripsi peer';
+  @override
+  String get settings_service_disabled => 'Dinonaktifkan';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -66765,9 +67287,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get module_extension_label => 'Estensione browser';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Sposta giù';
   @override
   String get move_up => 'Sposta su';
@@ -71823,6 +72342,104 @@ class _StringsIt extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Il dispositivo associato ha rifiutato le credenziali di questo dispositivo: esegui di nuovo l\'associazione per riprendere la sincronizzazione.';
+  @override
+  String get sync_err_not_paired =>
+      'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interfaccia';
+  @override
+  String get settings_group_content => 'Contenuti';
+  @override
+  String get settings_group_learning => 'Apprendimento';
+  @override
+  String get settings_group_connections => 'Connessioni';
+  @override
+  String get settings_group_data => 'Dati e dispositivi';
+  @override
+  String get settings_group_app => 'App';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Aspetto e interazione';
+  @override
+  String get settings_destination_profile_presets =>
+      'Configurazioni predefinite';
+  @override
+  String get settings_destination_system_about => 'Sistema e informazioni';
+  @override
+  String get settings_service_configured => 'Configurato';
+  @override
+  String get settings_service_not_configured => 'Non configurato';
+  @override
+  String get settings_service_builtin => 'Configurazione integrata';
+  @override
+  String get settings_anki_media => 'Media delle schede';
+  @override
+  String get settings_downloads_advanced_title => 'Motore e seeding';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Connessioni, memoria, rilevamento dei peer e protezione';
+  @override
+  String get settings_downloads_routing_title => 'Download completati';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Mappatura dei percorsi e sorgente video di destinazione';
+  @override
+  String get settings_downloads_encryption_title => 'Crittografia dei peer';
+  @override
+  String get settings_service_disabled => 'Disattivato';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -77387,9 +78004,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get module_extension_label => 'ブラウザ拡張機能';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => '下に移動';
   @override
   String get move_up => '上に移動';
@@ -82145,6 +82759,99 @@ class _StringsJa extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'ペアリング済みの端末がこの端末の認証情報を拒否しました。同期を再開するには再度ペアリングしてください。';
+  @override
+  String get sync_err_not_paired =>
+      'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags => 'タグにカード作成位置を自動追加';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'インターフェース';
+  @override
+  String get settings_group_content => 'コンテンツ';
+  @override
+  String get settings_group_learning => '学習';
+  @override
+  String get settings_group_connections => '接続';
+  @override
+  String get settings_group_data => 'データとデバイス';
+  @override
+  String get settings_group_app => 'アプリ';
+  @override
+  String get settings_destination_appearance_interaction => '外観と操作';
+  @override
+  String get settings_destination_profile_presets => '設定プリセット';
+  @override
+  String get settings_destination_system_about => 'システムとアプリ情報';
+  @override
+  String get settings_service_configured => '設定済み';
+  @override
+  String get settings_service_not_configured => '未設定';
+  @override
+  String get settings_service_builtin => '組み込み設定';
+  @override
+  String get settings_anki_media => 'カードのメディア';
+  @override
+  String get settings_downloads_advanced_title => 'エンジンとシード';
+  @override
+  String get settings_downloads_advanced_hint => '接続、メモリ、ピア検出と保護';
+  @override
+  String get settings_downloads_routing_title => '完了したダウンロード';
+  @override
+  String get settings_downloads_routing_hint => 'パスの対応付けと保存先の動画ソース';
+  @override
+  String get settings_downloads_encryption_title => 'ピア通信の暗号化';
+  @override
+  String get settings_service_disabled => '無効';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -87713,9 +88420,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get module_extension_label => '브라우저 확장';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => '아래로 이동';
   @override
   String get move_up => '위로 이동';
@@ -92477,6 +93181,100 @@ class _StringsKo extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      '페어링된 기기가 이 기기의 자격 증명을 거부했습니다. 동기화를 재개하려면 다시 페어링하세요.';
+  @override
+  String get sync_err_not_paired =>
+      '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => '인터페이스';
+  @override
+  String get settings_group_content => '콘텐츠';
+  @override
+  String get settings_group_learning => '학습';
+  @override
+  String get settings_group_connections => '연결';
+  @override
+  String get settings_group_data => '데이터 및 기기';
+  @override
+  String get settings_group_app => '앱';
+  @override
+  String get settings_destination_appearance_interaction => '모양 및 상호작용';
+  @override
+  String get settings_destination_profile_presets => '설정 프리셋';
+  @override
+  String get settings_destination_system_about => '시스템 및 앱 정보';
+  @override
+  String get settings_service_configured => '설정됨';
+  @override
+  String get settings_service_not_configured => '설정되지 않음';
+  @override
+  String get settings_service_builtin => '내장 설정';
+  @override
+  String get settings_anki_media => '카드 미디어';
+  @override
+  String get settings_downloads_advanced_title => '엔진 및 시드 배포';
+  @override
+  String get settings_downloads_advanced_hint => '연결, 메모리, 피어 검색 및 보호';
+  @override
+  String get settings_downloads_routing_title => '완료된 다운로드';
+  @override
+  String get settings_downloads_routing_hint => '경로 매핑 및 대상 동영상 소스';
+  @override
+  String get settings_downloads_encryption_title => '피어 암호화';
+  @override
+  String get settings_service_disabled => '사용 안 함';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -98334,9 +99132,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get module_extension_label => 'Browserextensie';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Omlaag';
   @override
   String get move_up => 'Omhoog';
@@ -103375,6 +104170,103 @@ class _StringsNl extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Het gekoppelde apparaat heeft de inloggegevens van dit apparaat geweigerd — koppel opnieuw om te blijven synchroniseren.';
+  @override
+  String get sync_err_not_paired =>
+      'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interface';
+  @override
+  String get settings_group_content => 'Inhoud';
+  @override
+  String get settings_group_learning => 'Leren';
+  @override
+  String get settings_group_connections => 'Verbindingen';
+  @override
+  String get settings_group_data => 'Gegevens en apparaten';
+  @override
+  String get settings_group_app => 'App';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Uiterlijk en bediening';
+  @override
+  String get settings_destination_profile_presets =>
+      'Configuratievoorinstellingen';
+  @override
+  String get settings_destination_system_about => 'Systeem en info';
+  @override
+  String get settings_service_configured => 'Geconfigureerd';
+  @override
+  String get settings_service_not_configured => 'Niet geconfigureerd';
+  @override
+  String get settings_service_builtin => 'Ingebouwde configuratie';
+  @override
+  String get settings_anki_media => 'Kaartmedia';
+  @override
+  String get settings_downloads_advanced_title => 'Engine en seeden';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Verbindingen, geheugen, peer-detectie en bescherming';
+  @override
+  String get settings_downloads_routing_title => 'Voltooide downloads';
+  @override
+  String get settings_downloads_routing_hint => 'Padkoppeling en doelvideobron';
+  @override
+  String get settings_downloads_encryption_title => 'Peer-versleuteling';
+  @override
+  String get settings_service_disabled => 'Uitgeschakeld';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -109264,9 +110156,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get module_extension_label => 'Extensão do navegador';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Mover para baixo';
   @override
   String get move_up => 'Mover para cima';
@@ -114326,6 +115215,104 @@ class _StringsPtBr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'O dispositivo pareado rejeitou as credenciais deste dispositivo — pareie novamente para retomar a sincronização.';
+  @override
+  String get sync_err_not_paired =>
+      'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Interface';
+  @override
+  String get settings_group_content => 'Conteúdo';
+  @override
+  String get settings_group_learning => 'Aprendizado';
+  @override
+  String get settings_group_connections => 'Conexões';
+  @override
+  String get settings_group_data => 'Dados e dispositivos';
+  @override
+  String get settings_group_app => 'Aplicativo';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Aparência e interação';
+  @override
+  String get settings_destination_profile_presets =>
+      'Predefinições de configuração';
+  @override
+  String get settings_destination_system_about => 'Sistema e sobre';
+  @override
+  String get settings_service_configured => 'Configurado';
+  @override
+  String get settings_service_not_configured => 'Não configurado';
+  @override
+  String get settings_service_builtin => 'Configuração integrada';
+  @override
+  String get settings_anki_media => 'Mídia dos cartões';
+  @override
+  String get settings_downloads_advanced_title => 'Mecanismo e semeadura';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Conexões, memória, descoberta de pares e proteção';
+  @override
+  String get settings_downloads_routing_title => 'Downloads concluídos';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Mapeamento de caminhos e fonte de vídeo de destino';
+  @override
+  String get settings_downloads_encryption_title => 'Criptografia entre pares';
+  @override
+  String get settings_service_disabled => 'Desativado';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -120188,9 +121175,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get module_extension_label => 'Расширение для браузера';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Вниз';
   @override
   String get move_up => 'Вверх';
@@ -125254,6 +126238,104 @@ class _StringsRu extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Сопряжённое устройство отклонило учётные данные этого устройства — выполните сопряжение заново, чтобы продолжить синхронизацию.';
+  @override
+  String get sync_err_not_paired =>
+      'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Интерфейс';
+  @override
+  String get settings_group_content => 'Контент';
+  @override
+  String get settings_group_learning => 'Обучение';
+  @override
+  String get settings_group_connections => 'Подключения';
+  @override
+  String get settings_group_data => 'Данные и устройства';
+  @override
+  String get settings_group_app => 'Приложение';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Оформление и управление';
+  @override
+  String get settings_destination_profile_presets => 'Наборы настроек';
+  @override
+  String get settings_destination_system_about => 'Система и о приложении';
+  @override
+  String get settings_service_configured => 'Настроено';
+  @override
+  String get settings_service_not_configured => 'Не настроено';
+  @override
+  String get settings_service_builtin => 'Встроенная конфигурация';
+  @override
+  String get settings_anki_media => 'Медиа карточек';
+  @override
+  String get settings_downloads_advanced_title => 'Движок и раздача';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Соединения, память, поиск пиров и защита';
+  @override
+  String get settings_downloads_routing_title => 'Завершённые загрузки';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Сопоставление путей и целевой источник видео';
+  @override
+  String get settings_downloads_encryption_title =>
+      'Шифрование соединений с пирами';
+  @override
+  String get settings_service_disabled => 'Отключено';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -131022,9 +132104,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get module_extension_label => 'ส่วนขยายเบราว์เซอร์';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'เลื่อนลง';
   @override
   String get move_up => 'เลื่อนขึ้น';
@@ -135982,6 +137061,103 @@ class _StringsTh extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'อุปกรณ์ที่จับคู่ไว้ปฏิเสธข้อมูลรับรองของเครื่องนี้ — โปรดจับคู่ใหม่เพื่อซิงค์ต่อ';
+  @override
+  String get sync_err_not_paired =>
+      'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'อินเทอร์เฟซ';
+  @override
+  String get settings_group_content => 'เนื้อหา';
+  @override
+  String get settings_group_learning => 'การเรียนรู้';
+  @override
+  String get settings_group_connections => 'การเชื่อมต่อ';
+  @override
+  String get settings_group_data => 'ข้อมูลและอุปกรณ์';
+  @override
+  String get settings_group_app => 'แอป';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'รูปลักษณ์และการโต้ตอบ';
+  @override
+  String get settings_destination_profile_presets => 'ชุดการตั้งค่า';
+  @override
+  String get settings_destination_system_about => 'ระบบและเกี่ยวกับ';
+  @override
+  String get settings_service_configured => 'ตั้งค่าแล้ว';
+  @override
+  String get settings_service_not_configured => 'ยังไม่ได้ตั้งค่า';
+  @override
+  String get settings_service_builtin => 'การตั้งค่าในตัว';
+  @override
+  String get settings_anki_media => 'สื่อของบัตรคำ';
+  @override
+  String get settings_downloads_advanced_title => 'เอนจินและการปล่อยไฟล์';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'การเชื่อมต่อ หน่วยความจำ การค้นหาเพียร์ และการป้องกัน';
+  @override
+  String get settings_downloads_routing_title => 'การดาวน์โหลดที่เสร็จสิ้น';
+  @override
+  String get settings_downloads_routing_hint =>
+      'การแมปเส้นทางและแหล่งวิดีโอปลายทาง';
+  @override
+  String get settings_downloads_encryption_title => 'การเข้ารหัสระหว่างเพียร์';
+  @override
+  String get settings_service_disabled => 'ปิดใช้งาน';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -141820,9 +142996,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get module_extension_label => 'Tarayıcı eklentisi';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Aşağı taşı';
   @override
   String get move_up => 'Yukarı taşı';
@@ -146826,6 +147999,103 @@ class _StringsTr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Eşleştirilmiş cihaz bu cihazın kimlik bilgilerini reddetti — eşitlemeye devam etmek için yeniden eşleştirin.';
+  @override
+  String get sync_err_not_paired =>
+      'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Arayüz';
+  @override
+  String get settings_group_content => 'İçerik';
+  @override
+  String get settings_group_learning => 'Öğrenme';
+  @override
+  String get settings_group_connections => 'Bağlantılar';
+  @override
+  String get settings_group_data => 'Veriler ve cihazlar';
+  @override
+  String get settings_group_app => 'Uygulama';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Görünüm ve etkileşim';
+  @override
+  String get settings_destination_profile_presets => 'Yapılandırma ön ayarları';
+  @override
+  String get settings_destination_system_about => 'Sistem ve hakkında';
+  @override
+  String get settings_service_configured => 'Yapılandırıldı';
+  @override
+  String get settings_service_not_configured => 'Yapılandırılmadı';
+  @override
+  String get settings_service_builtin => 'Yerleşik yapılandırma';
+  @override
+  String get settings_anki_media => 'Kart medyası';
+  @override
+  String get settings_downloads_advanced_title => 'Motor ve paylaşım';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Bağlantılar, bellek, eş keşfi ve koruma';
+  @override
+  String get settings_downloads_routing_title => 'Tamamlanan indirmeler';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Yol eşleme ve hedef video kaynağı';
+  @override
+  String get settings_downloads_encryption_title => 'Eş şifrelemesi';
+  @override
+  String get settings_service_disabled => 'Devre dışı';
   @override
   String get updates_center_title => 'Updates';
   @override
@@ -152655,9 +153925,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get module_extension_label => 'Tiện ích mở rộng trình duyệt';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Di chuyển xuống';
   @override
   String get move_up => 'Di chuyển lên';
@@ -157642,6 +158909,103 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected =>
+      'Thiết bị đã ghép nối từ chối thông tin xác thực của máy này — hãy ghép nối lại để tiếp tục đồng bộ.';
+  @override
+  String get sync_err_not_paired =>
+      'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags =>
+      'Auto-add mining position to tags';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => 'Giao diện';
+  @override
+  String get settings_group_content => 'Nội dung';
+  @override
+  String get settings_group_learning => 'Học tập';
+  @override
+  String get settings_group_connections => 'Kết nối';
+  @override
+  String get settings_group_data => 'Dữ liệu và thiết bị';
+  @override
+  String get settings_group_app => 'Ứng dụng';
+  @override
+  String get settings_destination_appearance_interaction =>
+      'Giao diện và tương tác';
+  @override
+  String get settings_destination_profile_presets => 'Bộ cấu hình';
+  @override
+  String get settings_destination_system_about => 'Hệ thống và giới thiệu';
+  @override
+  String get settings_service_configured => 'Đã cấu hình';
+  @override
+  String get settings_service_not_configured => 'Chưa cấu hình';
+  @override
+  String get settings_service_builtin => 'Cấu hình tích hợp';
+  @override
+  String get settings_anki_media => 'Nội dung đa phương tiện của thẻ';
+  @override
+  String get settings_downloads_advanced_title => 'Bộ máy và chia sẻ torrent';
+  @override
+  String get settings_downloads_advanced_hint =>
+      'Kết nối, bộ nhớ, tìm kiếm peer và bảo vệ';
+  @override
+  String get settings_downloads_routing_title => 'Tải xuống đã hoàn tất';
+  @override
+  String get settings_downloads_routing_hint =>
+      'Ánh xạ đường dẫn và nguồn video đích';
+  @override
+  String get settings_downloads_encryption_title => 'Mã hóa kết nối peer';
+  @override
+  String get settings_service_disabled => 'Đã tắt';
+  @override
   String get updates_center_title => 'Updates';
   @override
   String get updates_center_empty => 'No updates yet';
@@ -158005,14 +159369,15 @@ class _StringsZhCn extends _StringsEn {
   String get anki_connect_use_on_mobile_hint =>
       '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
   @override
-  String get anki_create_lapis => '创建 Lapis 卡组';
+  String get anki_create_lapis => '创建并选用 Lapis';
   @override
   String get anki_create_lapis_exists => 'Lapis 笔记类型和卡组已存在，已选中。';
   @override
   String anki_create_lapis_failed({required Object error}) =>
       '无法创建 Lapis 卡组：${error}';
   @override
-  String get anki_create_lapis_hint => '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组并自动选中。';
+  String get anki_create_lapis_hint =>
+      '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组，并选为制卡目标。';
   @override
   String get anki_create_lapis_success => '已创建 Lapis 笔记类型和卡组。';
   @override
@@ -162998,8 +164363,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get module_extension_label => '浏览器扩展';
   @override
-  String get module_toggle_hint => '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -167579,6 +168942,94 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_rescrape_failed => '重新刮削失败';
   @override
+  String download_batch_done({required Object n}) => '已处理 ${n} 项';
+  @override
+  String download_batch_unsupported({required Object n}) => '${n} 项不支持此操作';
+  @override
+  String download_batch_failed({required Object n}) => '${n} 项失败';
+  @override
+  String download_batch_delete_confirm({required Object n}) => '删除 ${n} 个下载任务？';
+  @override
+  String get sync_err_pairing_rejected => '对方设备已拒绝本机的配对凭据，请重新配对后再同步。';
+  @override
+  String get sync_err_not_paired => '尚未配对任何设备，请先在「Fushi 互联」里完成配对。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki 报告 Lapis 牌组和笔记类型已创建，但回读时仍然找不到它们。请打开 Anki 确认它没有卡住，然后重试。';
+  @override
+  String get anki_lapis_suggest_title => '现在还制不出卡';
+  @override
+  String get anki_lapis_suggest_body =>
+      '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+  @override
+  String get anki_lapis_suggest_dismiss => '保持当前设置';
+  @override
+  String get reader_vn_settings => '视觉小说设置';
+  @override
+  String get reader_vn_reveal_speed => '文字渐显速度';
+  @override
+  String get reader_vn_reveal_instant => '立即显示';
+  @override
+  String get reader_vn_screen_mode => '每屏内容';
+  @override
+  String get reader_vn_screen_block => '一个段落';
+  @override
+  String get reader_vn_screen_sentences => '按句子';
+  @override
+  String get reader_vn_sentences_per_screen => '每屏句数';
+  @override
+  String get reader_vn_preserve_dialogue => '保持对话完整';
+  @override
+  String get reader_vn_click_advance => '点击空白处推进';
+  @override
+  String get reader_vn_merge_spoken_sentence => '有声句保持在同一屏';
+  @override
+  String get auto_add_char_position_to_tags => '自动添加制卡位置到标签';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
+  @override
+  String get settings_group_interface => '界面';
+  @override
+  String get settings_group_content => '内容';
+  @override
+  String get settings_group_learning => '学习';
+  @override
+  String get settings_group_connections => '连接';
+  @override
+  String get settings_group_data => '数据与设备';
+  @override
+  String get settings_group_app => '应用';
+  @override
+  String get settings_destination_appearance_interaction => '外观与交互';
+  @override
+  String get settings_destination_profile_presets => '配置方案';
+  @override
+  String get settings_destination_system_about => '系统与关于';
+  @override
+  String get settings_service_configured => '已配置';
+  @override
+  String get settings_service_not_configured => '未配置';
+  @override
+  String get settings_service_builtin => '使用内置配置';
+  @override
+  String get settings_anki_media => '制卡媒体';
+  @override
+  String get settings_downloads_advanced_title => '引擎与做种';
+  @override
+  String get settings_downloads_advanced_hint => '连接数、内存、节点发现与防护';
+  @override
+  String get settings_downloads_routing_title => '下载完成后';
+  @override
+  String get settings_downloads_routing_hint => '路径映射与目标视频来源';
+  @override
+  String get settings_downloads_encryption_title => '节点加密';
+  @override
+  String get settings_service_disabled => '已停用';
+  @override
   String get updates_center_title => '更新';
   @override
   String get updates_center_empty => '暂无更新';
@@ -167936,14 +169387,15 @@ class _StringsZhHk extends _StringsEn {
   String get anki_connect_use_on_mobile_hint =>
       '僅在可信網路中使用。AnkiConnect 使用明文 HTTP；請配置匹配的 API key，切換後再重新整理牌組與筆記類型。';
   @override
-  String get anki_create_lapis => '建立 Lapis 卡組';
+  String get anki_create_lapis => '建立並選用 Lapis';
   @override
   String get anki_create_lapis_exists => 'Lapis 筆記類型與卡組已存在，已為你選取。';
   @override
   String anki_create_lapis_failed({required Object error}) =>
       '無法建立 Lapis 卡組：${error}';
   @override
-  String get anki_create_lapis_hint => '向 Anki 加入 Lapis 筆記類型與 Lapis 卡組並自動選取。';
+  String get anki_create_lapis_hint =>
+      '向 Anki 加入 Lapis 筆記類型和 Lapis 卡組，並選為製卡目標。';
   @override
   String get anki_create_lapis_success => '已建立 Lapis 筆記類型與卡組。';
   @override
@@ -172958,9 +174410,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get module_extension_label => '瀏覽器擴展';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -177579,6 +179028,97 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_rescrape_failed => '重新刮削失敗';
   @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
+  @override
+  String get sync_err_pairing_rejected => '對方裝置已拒絕本機的配對憑證，請重新配對後再同步。';
+  @override
+  String get sync_err_not_paired => '尚未配對任何裝置，請先在「Fushi 互聯」裡完成配對。';
+  @override
+  String get anki_create_lapis_not_found =>
+      'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+  @override
+  String get anki_lapis_suggest_title => 'Anki can\'t make cards yet';
+  @override
+  String get anki_lapis_suggest_body =>
+      'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+  @override
+  String get anki_lapis_suggest_dismiss => 'Keep current setup';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
+  @override
+  String get auto_add_char_position_to_tags => '自動將製卡位置加入標籤';
+  @override
+  String get auto_add_char_position_to_tags_hint =>
+      '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+  @override
+  String get settings_group_interface => '介面';
+  @override
+  String get settings_group_content => '內容';
+  @override
+  String get settings_group_learning => '學習';
+  @override
+  String get settings_group_connections => '連線';
+  @override
+  String get settings_group_data => '資料與裝置';
+  @override
+  String get settings_group_app => '應用程式';
+  @override
+  String get settings_destination_appearance_interaction => '外觀與互動';
+  @override
+  String get settings_destination_profile_presets => '設定方案';
+  @override
+  String get settings_destination_system_about => '系統與關於';
+  @override
+  String get settings_service_configured => '已設定';
+  @override
+  String get settings_service_not_configured => '尚未設定';
+  @override
+  String get settings_service_builtin => '內建設定';
+  @override
+  String get settings_anki_media => '卡片媒體';
+  @override
+  String get settings_downloads_advanced_title => '引擎與做種';
+  @override
+  String get settings_downloads_advanced_hint => '連線、記憶體、節點探索與防護';
+  @override
+  String get settings_downloads_routing_title => '已完成的下載';
+  @override
+  String get settings_downloads_routing_hint => '路徑對應與目標影片來源';
+  @override
+  String get settings_downloads_encryption_title => '節點通訊加密';
+  @override
+  String get settings_service_disabled => '已停用';
+  @override
   String get updates_center_title => 'Updates';
   @override
   String get updates_center_empty => 'No updates yet';
@@ -177898,14 +179438,14 @@ extension on _StringsEn {
       case 'anki_connect_use_on_mobile_hint':
         return 'Use only on a trusted network. AnkiConnect uses cleartext HTTP; configure a matching API key, then refresh decks and note types after switching.';
       case 'anki_create_lapis':
-        return 'Create Lapis deck';
+        return 'Create and use Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis note type and deck already exist — selected them.';
       case 'anki_create_lapis_failed':
         return ({required Object error}) =>
             'Could not create Lapis deck: ${error}';
       case 'anki_create_lapis_hint':
-        return 'Adds the Lapis note type and a Lapis deck to Anki, then selects them.';
+        return 'Adds the Lapis note type and a Lapis deck to Anki, then selects them as the mining target.';
       case 'anki_create_lapis_success':
         return 'Lapis note type and deck created.';
       case 'anki_deck':
@@ -182632,8 +184172,6 @@ extension on _StringsEn {
         return 'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
       case 'module_extension_label':
         return 'Browser extension';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Move down';
       case 'move_up':
@@ -186982,6 +188520,90 @@ extension on _StringsEn {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'The paired device rejected this device\'s credentials — pair again to resume syncing.';
+      case 'sync_err_not_paired':
+        return 'No paired device yet — set up pairing in Fushi Interconnect first.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interface';
+      case 'settings_group_content':
+        return 'Content';
+      case 'settings_group_learning':
+        return 'Learning';
+      case 'settings_group_connections':
+        return 'Connections';
+      case 'settings_group_data':
+        return 'Data and devices';
+      case 'settings_group_app':
+        return 'App';
+      case 'settings_destination_appearance_interaction':
+        return 'Appearance and interaction';
+      case 'settings_destination_profile_presets':
+        return 'Configuration presets';
+      case 'settings_destination_system_about':
+        return 'System and about';
+      case 'settings_service_configured':
+        return 'Configured';
+      case 'settings_service_not_configured':
+        return 'Not configured';
+      case 'settings_service_builtin':
+        return 'Built-in configuration';
+      case 'settings_anki_media':
+        return 'Card media';
+      case 'settings_downloads_advanced_title':
+        return 'Engine and seeding';
+      case 'settings_downloads_advanced_hint':
+        return 'Connections, memory, peer discovery and protection';
+      case 'settings_downloads_routing_title':
+        return 'Completed downloads';
+      case 'settings_downloads_routing_hint':
+        return 'Path mapping and target video source';
+      case 'settings_downloads_encryption_title':
+        return 'Peer encryption';
+      case 'settings_service_disabled':
+        return 'Disabled';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -192025,8 +193647,6 @@ extension on _StringsAr {
         return 'تبويب التحميلات مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
       case 'module_extension_label':
         return 'إضافة المتصفح';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'تحريك لأسفل';
       case 'move_up':
@@ -196373,6 +197993,90 @@ extension on _StringsAr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'رفض الجهاز المقترن بيانات اعتماد هذا الجهاز — أعد الإقتران لاستئناف المزامنة.';
+      case 'sync_err_not_paired':
+        return 'لم يتم إقران أي جهاز بعد — أعدّ الإقتران أولاً من «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'الواجهة';
+      case 'settings_group_content':
+        return 'المحتوى';
+      case 'settings_group_learning':
+        return 'التعلّم';
+      case 'settings_group_connections':
+        return 'الاتصالات';
+      case 'settings_group_data':
+        return 'البيانات والأجهزة';
+      case 'settings_group_app':
+        return 'التطبيق';
+      case 'settings_destination_appearance_interaction':
+        return 'المظهر والتفاعل';
+      case 'settings_destination_profile_presets':
+        return 'إعدادات مسبقة';
+      case 'settings_destination_system_about':
+        return 'النظام وحول التطبيق';
+      case 'settings_service_configured':
+        return 'تم الإعداد';
+      case 'settings_service_not_configured':
+        return 'لم يتم الإعداد';
+      case 'settings_service_builtin':
+        return 'إعدادات مدمجة';
+      case 'settings_anki_media':
+        return 'وسائط البطاقات';
+      case 'settings_downloads_advanced_title':
+        return 'المحرك ومشاركة الملفات';
+      case 'settings_downloads_advanced_hint':
+        return 'الاتصالات والذاكرة واكتشاف الأقران والحماية';
+      case 'settings_downloads_routing_title':
+        return 'التنزيلات المكتملة';
+      case 'settings_downloads_routing_hint':
+        return 'تعيين المسارات ومصدر الفيديو المستهدف';
+      case 'settings_downloads_encryption_title':
+        return 'تشفير الاتصال بالأقران';
+      case 'settings_service_disabled':
+        return 'معطّل';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -201443,8 +203147,6 @@ extension on _StringsDe {
         return 'Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
       case 'module_extension_label':
         return 'Browser-Erweiterung';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Nach unten';
       case 'move_up':
@@ -205809,6 +207511,90 @@ extension on _StringsDe {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Das gekoppelte Gerät hat die Anmeldedaten dieses Geräts abgelehnt — koppeln Sie erneut, um die Synchronisierung fortzusetzen.';
+      case 'sync_err_not_paired':
+        return 'Noch kein Gerät gekoppelt — richten Sie die Kopplung zuerst unter „Fushi Interconnect“ ein.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Oberfläche';
+      case 'settings_group_content':
+        return 'Inhalte';
+      case 'settings_group_learning':
+        return 'Lernen';
+      case 'settings_group_connections':
+        return 'Verbindungen';
+      case 'settings_group_data':
+        return 'Daten und Geräte';
+      case 'settings_group_app':
+        return 'App';
+      case 'settings_destination_appearance_interaction':
+        return 'Darstellung und Bedienung';
+      case 'settings_destination_profile_presets':
+        return 'Konfigurationsvorlagen';
+      case 'settings_destination_system_about':
+        return 'System und Info';
+      case 'settings_service_configured':
+        return 'Konfiguriert';
+      case 'settings_service_not_configured':
+        return 'Nicht konfiguriert';
+      case 'settings_service_builtin':
+        return 'Integrierte Konfiguration';
+      case 'settings_anki_media':
+        return 'Kartenmedien';
+      case 'settings_downloads_advanced_title':
+        return 'Engine und Seeding';
+      case 'settings_downloads_advanced_hint':
+        return 'Verbindungen, Speicher, Peer-Suche und Schutz';
+      case 'settings_downloads_routing_title':
+        return 'Abgeschlossene Downloads';
+      case 'settings_downloads_routing_hint':
+        return 'Pfadzuordnung und Ziel-Videoquelle';
+      case 'settings_downloads_encryption_title':
+        return 'Peer-Verschlüsselung';
+      case 'settings_service_disabled':
+        return 'Deaktiviert';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -210872,8 +212658,6 @@ extension on _StringsEs {
         return 'La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
       case 'module_extension_label':
         return 'Extensión del navegador';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Mover abajo';
       case 'move_up':
@@ -215236,6 +217020,90 @@ extension on _StringsEs {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'El dispositivo emparejado rechazó las credenciales de este dispositivo: vuelve a emparejarlo para reanudar la sincronización.';
+      case 'sync_err_not_paired':
+        return 'Aún no hay ningún dispositivo emparejado: configura el emparejamiento en «Fushi Interconnect» primero.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interfaz';
+      case 'settings_group_content':
+        return 'Contenido';
+      case 'settings_group_learning':
+        return 'Aprendizaje';
+      case 'settings_group_connections':
+        return 'Conexiones';
+      case 'settings_group_data':
+        return 'Datos y dispositivos';
+      case 'settings_group_app':
+        return 'Aplicación';
+      case 'settings_destination_appearance_interaction':
+        return 'Apariencia e interacción';
+      case 'settings_destination_profile_presets':
+        return 'Ajustes predefinidos';
+      case 'settings_destination_system_about':
+        return 'Sistema e información';
+      case 'settings_service_configured':
+        return 'Configurado';
+      case 'settings_service_not_configured':
+        return 'Sin configurar';
+      case 'settings_service_builtin':
+        return 'Configuración integrada';
+      case 'settings_anki_media':
+        return 'Multimedia de las tarjetas';
+      case 'settings_downloads_advanced_title':
+        return 'Motor y distribución';
+      case 'settings_downloads_advanced_hint':
+        return 'Conexiones, memoria, descubrimiento de pares y protección';
+      case 'settings_downloads_routing_title':
+        return 'Descargas completadas';
+      case 'settings_downloads_routing_hint':
+        return 'Asignación de rutas y fuente de vídeo de destino';
+      case 'settings_downloads_encryption_title':
+        return 'Cifrado entre pares';
+      case 'settings_service_disabled':
+        return 'Desactivado';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -220305,8 +222173,6 @@ extension on _StringsFr {
         return 'L\'onglet Téléchargements est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
       case 'module_extension_label':
         return 'Extension navigateur';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Descendre';
       case 'move_up':
@@ -224672,6 +226538,90 @@ extension on _StringsFr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'L\'appareil associé a refusé les identifiants de cet appareil — associez-le à nouveau pour reprendre la synchronisation.';
+      case 'sync_err_not_paired':
+        return 'Aucun appareil associé pour l\'instant — configurez d\'abord l\'association dans « Fushi Interconnect ».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interface';
+      case 'settings_group_content':
+        return 'Contenu';
+      case 'settings_group_learning':
+        return 'Apprentissage';
+      case 'settings_group_connections':
+        return 'Connexions';
+      case 'settings_group_data':
+        return 'Données et appareils';
+      case 'settings_group_app':
+        return 'Application';
+      case 'settings_destination_appearance_interaction':
+        return 'Apparence et interactions';
+      case 'settings_destination_profile_presets':
+        return 'Préréglages';
+      case 'settings_destination_system_about':
+        return 'Système et à propos';
+      case 'settings_service_configured':
+        return 'Configuré';
+      case 'settings_service_not_configured':
+        return 'Non configuré';
+      case 'settings_service_builtin':
+        return 'Configuration intégrée';
+      case 'settings_anki_media':
+        return 'Médias des cartes';
+      case 'settings_downloads_advanced_title':
+        return 'Moteur et partage';
+      case 'settings_downloads_advanced_hint':
+        return 'Connexions, mémoire, découverte des pairs et protection';
+      case 'settings_downloads_routing_title':
+        return 'Téléchargements terminés';
+      case 'settings_downloads_routing_hint':
+        return 'Correspondance des chemins et source vidéo cible';
+      case 'settings_downloads_encryption_title':
+        return 'Chiffrement entre pairs';
+      case 'settings_service_disabled':
+        return 'Désactivé';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -229726,8 +231676,6 @@ extension on _StringsId {
         return 'Tab Unduhan disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
       case 'module_extension_label':
         return 'Ekstensi browser';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Turunkan';
       case 'move_up':
@@ -234079,6 +236027,90 @@ extension on _StringsId {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Perangkat yang dipasangkan menolak kredensial perangkat ini — pasangkan ulang untuk melanjutkan sinkronisasi.';
+      case 'sync_err_not_paired':
+        return 'Belum ada perangkat yang dipasangkan — atur pemasangan di "Fushi Interconnect" terlebih dahulu.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Antarmuka';
+      case 'settings_group_content':
+        return 'Konten';
+      case 'settings_group_learning':
+        return 'Pembelajaran';
+      case 'settings_group_connections':
+        return 'Koneksi';
+      case 'settings_group_data':
+        return 'Data dan perangkat';
+      case 'settings_group_app':
+        return 'Aplikasi';
+      case 'settings_destination_appearance_interaction':
+        return 'Tampilan dan interaksi';
+      case 'settings_destination_profile_presets':
+        return 'Preset konfigurasi';
+      case 'settings_destination_system_about':
+        return 'Sistem dan tentang';
+      case 'settings_service_configured':
+        return 'Dikonfigurasi';
+      case 'settings_service_not_configured':
+        return 'Belum dikonfigurasi';
+      case 'settings_service_builtin':
+        return 'Konfigurasi bawaan';
+      case 'settings_anki_media':
+        return 'Media kartu';
+      case 'settings_downloads_advanced_title':
+        return 'Mesin dan seeding';
+      case 'settings_downloads_advanced_hint':
+        return 'Koneksi, memori, penemuan peer, dan perlindungan';
+      case 'settings_downloads_routing_title':
+        return 'Unduhan selesai';
+      case 'settings_downloads_routing_hint':
+        return 'Pemetaan jalur dan sumber video tujuan';
+      case 'settings_downloads_encryption_title':
+        return 'Enkripsi peer';
+      case 'settings_service_disabled':
+        return 'Dinonaktifkan';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -239141,8 +241173,6 @@ extension on _StringsIt {
         return 'La scheda Download è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
       case 'module_extension_label':
         return 'Estensione browser';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Sposta giù';
       case 'move_up':
@@ -243508,6 +245538,90 @@ extension on _StringsIt {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Il dispositivo associato ha rifiutato le credenziali di questo dispositivo: esegui di nuovo l\'associazione per riprendere la sincronizzazione.';
+      case 'sync_err_not_paired':
+        return 'Nessun dispositivo associato: configura prima l\'associazione in «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interfaccia';
+      case 'settings_group_content':
+        return 'Contenuti';
+      case 'settings_group_learning':
+        return 'Apprendimento';
+      case 'settings_group_connections':
+        return 'Connessioni';
+      case 'settings_group_data':
+        return 'Dati e dispositivi';
+      case 'settings_group_app':
+        return 'App';
+      case 'settings_destination_appearance_interaction':
+        return 'Aspetto e interazione';
+      case 'settings_destination_profile_presets':
+        return 'Configurazioni predefinite';
+      case 'settings_destination_system_about':
+        return 'Sistema e informazioni';
+      case 'settings_service_configured':
+        return 'Configurato';
+      case 'settings_service_not_configured':
+        return 'Non configurato';
+      case 'settings_service_builtin':
+        return 'Configurazione integrata';
+      case 'settings_anki_media':
+        return 'Media delle schede';
+      case 'settings_downloads_advanced_title':
+        return 'Motore e seeding';
+      case 'settings_downloads_advanced_hint':
+        return 'Connessioni, memoria, rilevamento dei peer e protezione';
+      case 'settings_downloads_routing_title':
+        return 'Download completati';
+      case 'settings_downloads_routing_hint':
+        return 'Mappatura dei percorsi e sorgente video di destinazione';
+      case 'settings_downloads_encryption_title':
+        return 'Crittografia dei peer';
+      case 'settings_service_disabled':
+        return 'Disattivato';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -248536,8 +250650,6 @@ extension on _StringsJa {
         return '「ダウンロード」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
       case 'module_extension_label':
         return 'ブラウザ拡張機能';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '下に移動';
       case 'move_up':
@@ -252864,6 +254976,90 @@ extension on _StringsJa {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'ペアリング済みの端末がこの端末の認証情報を拒否しました。同期を再開するには再度ペアリングしてください。';
+      case 'sync_err_not_paired':
+        return 'ペアリング済みの端末がありません。まず「Fushi 互联」でペアリングを行ってください。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'タグにカード作成位置を自動追加';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'インターフェース';
+      case 'settings_group_content':
+        return 'コンテンツ';
+      case 'settings_group_learning':
+        return '学習';
+      case 'settings_group_connections':
+        return '接続';
+      case 'settings_group_data':
+        return 'データとデバイス';
+      case 'settings_group_app':
+        return 'アプリ';
+      case 'settings_destination_appearance_interaction':
+        return '外観と操作';
+      case 'settings_destination_profile_presets':
+        return '設定プリセット';
+      case 'settings_destination_system_about':
+        return 'システムとアプリ情報';
+      case 'settings_service_configured':
+        return '設定済み';
+      case 'settings_service_not_configured':
+        return '未設定';
+      case 'settings_service_builtin':
+        return '組み込み設定';
+      case 'settings_anki_media':
+        return 'カードのメディア';
+      case 'settings_downloads_advanced_title':
+        return 'エンジンとシード';
+      case 'settings_downloads_advanced_hint':
+        return '接続、メモリ、ピア検出と保護';
+      case 'settings_downloads_routing_title':
+        return '完了したダウンロード';
+      case 'settings_downloads_routing_hint':
+        return 'パスの対応付けと保存先の動画ソース';
+      case 'settings_downloads_encryption_title':
+        return 'ピア通信の暗号化';
+      case 'settings_service_disabled':
+        return '無効';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -257893,8 +260089,6 @@ extension on _StringsKo {
         return '‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
       case 'module_extension_label':
         return '브라우저 확장';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '아래로 이동';
       case 'move_up':
@@ -262224,6 +264418,90 @@ extension on _StringsKo {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return '페어링된 기기가 이 기기의 자격 증명을 거부했습니다. 동기화를 재개하려면 다시 페어링하세요.';
+      case 'sync_err_not_paired':
+        return '아직 페어링된 기기가 없습니다. 먼저 \'Fushi 互联\'에서 페어링을 완료하세요.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return '인터페이스';
+      case 'settings_group_content':
+        return '콘텐츠';
+      case 'settings_group_learning':
+        return '학습';
+      case 'settings_group_connections':
+        return '연결';
+      case 'settings_group_data':
+        return '데이터 및 기기';
+      case 'settings_group_app':
+        return '앱';
+      case 'settings_destination_appearance_interaction':
+        return '모양 및 상호작용';
+      case 'settings_destination_profile_presets':
+        return '설정 프리셋';
+      case 'settings_destination_system_about':
+        return '시스템 및 앱 정보';
+      case 'settings_service_configured':
+        return '설정됨';
+      case 'settings_service_not_configured':
+        return '설정되지 않음';
+      case 'settings_service_builtin':
+        return '내장 설정';
+      case 'settings_anki_media':
+        return '카드 미디어';
+      case 'settings_downloads_advanced_title':
+        return '엔진 및 시드 배포';
+      case 'settings_downloads_advanced_hint':
+        return '연결, 메모리, 피어 검색 및 보호';
+      case 'settings_downloads_routing_title':
+        return '완료된 다운로드';
+      case 'settings_downloads_routing_hint':
+        return '경로 매핑 및 대상 동영상 소스';
+      case 'settings_downloads_encryption_title':
+        return '피어 암호화';
+      case 'settings_service_disabled':
+        return '사용 안 함';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -267285,8 +269563,6 @@ extension on _StringsNl {
         return 'Het tabblad Downloads is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
       case 'module_extension_label':
         return 'Browserextensie';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Omlaag';
       case 'move_up':
@@ -271646,6 +273922,90 @@ extension on _StringsNl {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Het gekoppelde apparaat heeft de inloggegevens van dit apparaat geweigerd — koppel opnieuw om te blijven synchroniseren.';
+      case 'sync_err_not_paired':
+        return 'Nog geen gekoppeld apparaat — stel het koppelen eerst in bij \'Fushi Interconnect\'.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interface';
+      case 'settings_group_content':
+        return 'Inhoud';
+      case 'settings_group_learning':
+        return 'Leren';
+      case 'settings_group_connections':
+        return 'Verbindingen';
+      case 'settings_group_data':
+        return 'Gegevens en apparaten';
+      case 'settings_group_app':
+        return 'App';
+      case 'settings_destination_appearance_interaction':
+        return 'Uiterlijk en bediening';
+      case 'settings_destination_profile_presets':
+        return 'Configuratievoorinstellingen';
+      case 'settings_destination_system_about':
+        return 'Systeem en info';
+      case 'settings_service_configured':
+        return 'Geconfigureerd';
+      case 'settings_service_not_configured':
+        return 'Niet geconfigureerd';
+      case 'settings_service_builtin':
+        return 'Ingebouwde configuratie';
+      case 'settings_anki_media':
+        return 'Kaartmedia';
+      case 'settings_downloads_advanced_title':
+        return 'Engine en seeden';
+      case 'settings_downloads_advanced_hint':
+        return 'Verbindingen, geheugen, peer-detectie en bescherming';
+      case 'settings_downloads_routing_title':
+        return 'Voltooide downloads';
+      case 'settings_downloads_routing_hint':
+        return 'Padkoppeling en doelvideobron';
+      case 'settings_downloads_encryption_title':
+        return 'Peer-versleuteling';
+      case 'settings_service_disabled':
+        return 'Uitgeschakeld';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -276706,8 +279066,6 @@ extension on _StringsPtBr {
         return 'A aba Downloads está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
       case 'module_extension_label':
         return 'Extensão do navegador';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Mover para baixo';
       case 'move_up':
@@ -281063,6 +283421,90 @@ extension on _StringsPtBr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'O dispositivo pareado rejeitou as credenciais deste dispositivo — pareie novamente para retomar a sincronização.';
+      case 'sync_err_not_paired':
+        return 'Nenhum dispositivo pareado ainda — configure o pareamento em "Fushi Interconnect" primeiro.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Interface';
+      case 'settings_group_content':
+        return 'Conteúdo';
+      case 'settings_group_learning':
+        return 'Aprendizado';
+      case 'settings_group_connections':
+        return 'Conexões';
+      case 'settings_group_data':
+        return 'Dados e dispositivos';
+      case 'settings_group_app':
+        return 'Aplicativo';
+      case 'settings_destination_appearance_interaction':
+        return 'Aparência e interação';
+      case 'settings_destination_profile_presets':
+        return 'Predefinições de configuração';
+      case 'settings_destination_system_about':
+        return 'Sistema e sobre';
+      case 'settings_service_configured':
+        return 'Configurado';
+      case 'settings_service_not_configured':
+        return 'Não configurado';
+      case 'settings_service_builtin':
+        return 'Configuração integrada';
+      case 'settings_anki_media':
+        return 'Mídia dos cartões';
+      case 'settings_downloads_advanced_title':
+        return 'Mecanismo e semeadura';
+      case 'settings_downloads_advanced_hint':
+        return 'Conexões, memória, descoberta de pares e proteção';
+      case 'settings_downloads_routing_title':
+        return 'Downloads concluídos';
+      case 'settings_downloads_routing_hint':
+        return 'Mapeamento de caminhos e fonte de vídeo de destino';
+      case 'settings_downloads_encryption_title':
+        return 'Criptografia entre pares';
+      case 'settings_service_disabled':
+        return 'Desativado';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -286130,8 +288572,6 @@ extension on _StringsRu {
         return 'Вкладка «Загрузки» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
       case 'module_extension_label':
         return 'Расширение для браузера';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Вниз';
       case 'move_up':
@@ -290487,6 +292927,90 @@ extension on _StringsRu {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Сопряжённое устройство отклонило учётные данные этого устройства — выполните сопряжение заново, чтобы продолжить синхронизацию.';
+      case 'sync_err_not_paired':
+        return 'Пока нет сопряжённых устройств — сначала выполните сопряжение в «Fushi Interconnect».';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Интерфейс';
+      case 'settings_group_content':
+        return 'Контент';
+      case 'settings_group_learning':
+        return 'Обучение';
+      case 'settings_group_connections':
+        return 'Подключения';
+      case 'settings_group_data':
+        return 'Данные и устройства';
+      case 'settings_group_app':
+        return 'Приложение';
+      case 'settings_destination_appearance_interaction':
+        return 'Оформление и управление';
+      case 'settings_destination_profile_presets':
+        return 'Наборы настроек';
+      case 'settings_destination_system_about':
+        return 'Система и о приложении';
+      case 'settings_service_configured':
+        return 'Настроено';
+      case 'settings_service_not_configured':
+        return 'Не настроено';
+      case 'settings_service_builtin':
+        return 'Встроенная конфигурация';
+      case 'settings_anki_media':
+        return 'Медиа карточек';
+      case 'settings_downloads_advanced_title':
+        return 'Движок и раздача';
+      case 'settings_downloads_advanced_hint':
+        return 'Соединения, память, поиск пиров и защита';
+      case 'settings_downloads_routing_title':
+        return 'Завершённые загрузки';
+      case 'settings_downloads_routing_hint':
+        return 'Сопоставление путей и целевой источник видео';
+      case 'settings_downloads_encryption_title':
+        return 'Шифрование соединений с пирами';
+      case 'settings_service_disabled':
+        return 'Отключено';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -295534,8 +298058,6 @@ extension on _StringsTh {
         return 'แท็บดาวน์โหลดถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
       case 'module_extension_label':
         return 'ส่วนขยายเบราว์เซอร์';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'เลื่อนลง';
       case 'move_up':
@@ -299883,6 +302405,90 @@ extension on _StringsTh {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'อุปกรณ์ที่จับคู่ไว้ปฏิเสธข้อมูลรับรองของเครื่องนี้ — โปรดจับคู่ใหม่เพื่อซิงค์ต่อ';
+      case 'sync_err_not_paired':
+        return 'ยังไม่มีอุปกรณ์ที่จับคู่ — โปรดตั้งค่าการจับคู่ใน «Fushi Interconnect» ก่อน';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'อินเทอร์เฟซ';
+      case 'settings_group_content':
+        return 'เนื้อหา';
+      case 'settings_group_learning':
+        return 'การเรียนรู้';
+      case 'settings_group_connections':
+        return 'การเชื่อมต่อ';
+      case 'settings_group_data':
+        return 'ข้อมูลและอุปกรณ์';
+      case 'settings_group_app':
+        return 'แอป';
+      case 'settings_destination_appearance_interaction':
+        return 'รูปลักษณ์และการโต้ตอบ';
+      case 'settings_destination_profile_presets':
+        return 'ชุดการตั้งค่า';
+      case 'settings_destination_system_about':
+        return 'ระบบและเกี่ยวกับ';
+      case 'settings_service_configured':
+        return 'ตั้งค่าแล้ว';
+      case 'settings_service_not_configured':
+        return 'ยังไม่ได้ตั้งค่า';
+      case 'settings_service_builtin':
+        return 'การตั้งค่าในตัว';
+      case 'settings_anki_media':
+        return 'สื่อของบัตรคำ';
+      case 'settings_downloads_advanced_title':
+        return 'เอนจินและการปล่อยไฟล์';
+      case 'settings_downloads_advanced_hint':
+        return 'การเชื่อมต่อ หน่วยความจำ การค้นหาเพียร์ และการป้องกัน';
+      case 'settings_downloads_routing_title':
+        return 'การดาวน์โหลดที่เสร็จสิ้น';
+      case 'settings_downloads_routing_hint':
+        return 'การแมปเส้นทางและแหล่งวิดีโอปลายทาง';
+      case 'settings_downloads_encryption_title':
+        return 'การเข้ารหัสระหว่างเพียร์';
+      case 'settings_service_disabled':
+        return 'ปิดใช้งาน';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -304940,8 +307546,6 @@ extension on _StringsTr {
         return 'İndirmeler sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
       case 'module_extension_label':
         return 'Tarayıcı eklentisi';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Aşağı taşı';
       case 'move_up':
@@ -309294,6 +311898,90 @@ extension on _StringsTr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Eşleştirilmiş cihaz bu cihazın kimlik bilgilerini reddetti — eşitlemeye devam etmek için yeniden eşleştirin.';
+      case 'sync_err_not_paired':
+        return 'Henüz eşleştirilmiş cihaz yok — önce "Fushi Interconnect" bölümünden eşleştirmeyi yapın.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Arayüz';
+      case 'settings_group_content':
+        return 'İçerik';
+      case 'settings_group_learning':
+        return 'Öğrenme';
+      case 'settings_group_connections':
+        return 'Bağlantılar';
+      case 'settings_group_data':
+        return 'Veriler ve cihazlar';
+      case 'settings_group_app':
+        return 'Uygulama';
+      case 'settings_destination_appearance_interaction':
+        return 'Görünüm ve etkileşim';
+      case 'settings_destination_profile_presets':
+        return 'Yapılandırma ön ayarları';
+      case 'settings_destination_system_about':
+        return 'Sistem ve hakkında';
+      case 'settings_service_configured':
+        return 'Yapılandırıldı';
+      case 'settings_service_not_configured':
+        return 'Yapılandırılmadı';
+      case 'settings_service_builtin':
+        return 'Yerleşik yapılandırma';
+      case 'settings_anki_media':
+        return 'Kart medyası';
+      case 'settings_downloads_advanced_title':
+        return 'Motor ve paylaşım';
+      case 'settings_downloads_advanced_hint':
+        return 'Bağlantılar, bellek, eş keşfi ve koruma';
+      case 'settings_downloads_routing_title':
+        return 'Tamamlanan indirmeler';
+      case 'settings_downloads_routing_hint':
+        return 'Yol eşleme ve hedef video kaynağı';
+      case 'settings_downloads_encryption_title':
+        return 'Eş şifrelemesi';
+      case 'settings_service_disabled':
+        return 'Devre dışı';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -314346,8 +317034,6 @@ extension on _StringsVi {
         return 'Tab Tải xuống đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
       case 'module_extension_label':
         return 'Tiện ích mở rộng trình duyệt';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Di chuyển xuống';
       case 'move_up':
@@ -318699,6 +321385,90 @@ extension on _StringsVi {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return 'Thiết bị đã ghép nối từ chối thông tin xác thực của máy này — hãy ghép nối lại để tiếp tục đồng bộ.';
+      case 'sync_err_not_paired':
+        return 'Chưa ghép nối thiết bị nào — hãy thiết lập ghép nối trong «Fushi Interconnect» trước.';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return 'Auto-add mining position to tags';
+      case 'auto_add_char_position_to_tags_hint':
+        return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return 'Giao diện';
+      case 'settings_group_content':
+        return 'Nội dung';
+      case 'settings_group_learning':
+        return 'Học tập';
+      case 'settings_group_connections':
+        return 'Kết nối';
+      case 'settings_group_data':
+        return 'Dữ liệu và thiết bị';
+      case 'settings_group_app':
+        return 'Ứng dụng';
+      case 'settings_destination_appearance_interaction':
+        return 'Giao diện và tương tác';
+      case 'settings_destination_profile_presets':
+        return 'Bộ cấu hình';
+      case 'settings_destination_system_about':
+        return 'Hệ thống và giới thiệu';
+      case 'settings_service_configured':
+        return 'Đã cấu hình';
+      case 'settings_service_not_configured':
+        return 'Chưa cấu hình';
+      case 'settings_service_builtin':
+        return 'Cấu hình tích hợp';
+      case 'settings_anki_media':
+        return 'Nội dung đa phương tiện của thẻ';
+      case 'settings_downloads_advanced_title':
+        return 'Bộ máy và chia sẻ torrent';
+      case 'settings_downloads_advanced_hint':
+        return 'Kết nối, bộ nhớ, tìm kiếm peer và bảo vệ';
+      case 'settings_downloads_routing_title':
+        return 'Tải xuống đã hoàn tất';
+      case 'settings_downloads_routing_hint':
+        return 'Ánh xạ đường dẫn và nguồn video đích';
+      case 'settings_downloads_encryption_title':
+        return 'Mã hóa kết nối peer';
+      case 'settings_service_disabled':
+        return 'Đã tắt';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
@@ -319007,13 +321777,13 @@ extension on _StringsZhCn {
       case 'anki_connect_use_on_mobile_hint':
         return '仅在可信网络中使用。AnkiConnect 使用明文 HTTP；请配置匹配的 API key，切换后再刷新牌组与笔记类型。';
       case 'anki_create_lapis':
-        return '创建 Lapis 卡组';
+        return '创建并选用 Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis 笔记类型和卡组已存在，已选中。';
       case 'anki_create_lapis_failed':
         return ({required Object error}) => '无法创建 Lapis 卡组：${error}';
       case 'anki_create_lapis_hint':
-        return '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组并自动选中。';
+        return '向 Anki 添加 Lapis 笔记类型和 Lapis 卡组，并选为制卡目标。';
       case 'anki_create_lapis_success':
         return '已创建 Lapis 笔记类型和卡组。';
       case 'anki_deck':
@@ -323710,8 +326480,6 @@ extension on _StringsZhCn {
         return '「下载」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
       case 'module_extension_label':
         return '浏览器扩展';
-      case 'module_toggle_hint':
-        return '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -328022,6 +330790,90 @@ extension on _StringsZhCn {
         return '已开始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失败';
+      case 'download_batch_done':
+        return ({required Object n}) => '已处理 ${n} 项';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} 项不支持此操作';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} 项失败';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => '删除 ${n} 个下载任务？';
+      case 'sync_err_pairing_rejected':
+        return '对方设备已拒绝本机的配对凭据，请重新配对后再同步。';
+      case 'sync_err_not_paired':
+        return '尚未配对任何设备，请先在「Fushi 互联」里完成配对。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki 报告 Lapis 牌组和笔记类型已创建，但回读时仍然找不到它们。请打开 Anki 确认它没有卡住，然后重试。';
+      case 'anki_lapis_suggest_title':
+        return '现在还制不出卡';
+      case 'anki_lapis_suggest_body':
+        return '当前选中的牌组和笔记类型做不出 Anki 会接收的卡片。可以让 Hibiki 添加 Lapis 笔记类型和卡组，并直接选用它们。';
+      case 'anki_lapis_suggest_dismiss':
+        return '保持当前设置';
+      case 'reader_vn_settings':
+        return '视觉小说设置';
+      case 'reader_vn_reveal_speed':
+        return '文字渐显速度';
+      case 'reader_vn_reveal_instant':
+        return '立即显示';
+      case 'reader_vn_screen_mode':
+        return '每屏内容';
+      case 'reader_vn_screen_block':
+        return '一个段落';
+      case 'reader_vn_screen_sentences':
+        return '按句子';
+      case 'reader_vn_sentences_per_screen':
+        return '每屏句数';
+      case 'reader_vn_preserve_dialogue':
+        return '保持对话完整';
+      case 'reader_vn_click_advance':
+        return '点击空白处推进';
+      case 'reader_vn_merge_spoken_sentence':
+        return '有声句保持在同一屏';
+      case 'auto_add_char_position_to_tags':
+        return '自动添加制卡位置到标签';
+      case 'auto_add_char_position_to_tags_hint':
+        return '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
+      case 'audiobook_transcribe_alignment_hint':
+        return '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
+      case 'settings_group_interface':
+        return '界面';
+      case 'settings_group_content':
+        return '内容';
+      case 'settings_group_learning':
+        return '学习';
+      case 'settings_group_connections':
+        return '连接';
+      case 'settings_group_data':
+        return '数据与设备';
+      case 'settings_group_app':
+        return '应用';
+      case 'settings_destination_appearance_interaction':
+        return '外观与交互';
+      case 'settings_destination_profile_presets':
+        return '配置方案';
+      case 'settings_destination_system_about':
+        return '系统与关于';
+      case 'settings_service_configured':
+        return '已配置';
+      case 'settings_service_not_configured':
+        return '未配置';
+      case 'settings_service_builtin':
+        return '使用内置配置';
+      case 'settings_anki_media':
+        return '制卡媒体';
+      case 'settings_downloads_advanced_title':
+        return '引擎与做种';
+      case 'settings_downloads_advanced_hint':
+        return '连接数、内存、节点发现与防护';
+      case 'settings_downloads_routing_title':
+        return '下载完成后';
+      case 'settings_downloads_routing_hint':
+        return '路径映射与目标视频来源';
+      case 'settings_downloads_encryption_title':
+        return '节点加密';
+      case 'settings_service_disabled':
+        return '已停用';
       case 'updates_center_title':
         return '更新';
       case 'updates_center_empty':
@@ -328330,13 +331182,13 @@ extension on _StringsZhHk {
       case 'anki_connect_use_on_mobile_hint':
         return '僅在可信網路中使用。AnkiConnect 使用明文 HTTP；請配置匹配的 API key，切換後再重新整理牌組與筆記類型。';
       case 'anki_create_lapis':
-        return '建立 Lapis 卡組';
+        return '建立並選用 Lapis';
       case 'anki_create_lapis_exists':
         return 'Lapis 筆記類型與卡組已存在，已為你選取。';
       case 'anki_create_lapis_failed':
         return ({required Object error}) => '無法建立 Lapis 卡組：${error}';
       case 'anki_create_lapis_hint':
-        return '向 Anki 加入 Lapis 筆記類型與 Lapis 卡組並自動選取。';
+        return '向 Anki 加入 Lapis 筆記類型和 Lapis 卡組，並選為製卡目標。';
       case 'anki_create_lapis_success':
         return '已建立 Lapis 筆記類型與卡組。';
       case 'anki_deck':
@@ -333039,8 +335891,6 @@ extension on _StringsZhHk {
         return '「下載」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
       case 'module_extension_label':
         return '瀏覽器擴展';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -337356,6 +340206,90 @@ extension on _StringsZhHk {
         return '已開始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失敗';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
+      case 'sync_err_pairing_rejected':
+        return '對方裝置已拒絕本機的配對憑證，請重新配對後再同步。';
+      case 'sync_err_not_paired':
+        return '尚未配對任何裝置，請先在「Fushi 互聯」裡完成配對。';
+      case 'anki_create_lapis_not_found':
+        return 'Anki said the Lapis deck and note type were created, but they are still missing when Hibiki reads the collection back. Open Anki, make sure it is not busy, and try again.';
+      case 'anki_lapis_suggest_title':
+        return 'Anki can\'t make cards yet';
+      case 'anki_lapis_suggest_body':
+        return 'The selected deck and note type can\'t produce a card Anki will accept. Hibiki can add its Lapis note type and deck and select them for you.';
+      case 'anki_lapis_suggest_dismiss':
+        return 'Keep current setup';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
+      case 'auto_add_char_position_to_tags':
+        return '自動將製卡位置加入標籤';
+      case 'auto_add_char_position_to_tags_hint':
+        return '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
+      case 'settings_group_interface':
+        return '介面';
+      case 'settings_group_content':
+        return '內容';
+      case 'settings_group_learning':
+        return '學習';
+      case 'settings_group_connections':
+        return '連線';
+      case 'settings_group_data':
+        return '資料與裝置';
+      case 'settings_group_app':
+        return '應用程式';
+      case 'settings_destination_appearance_interaction':
+        return '外觀與互動';
+      case 'settings_destination_profile_presets':
+        return '設定方案';
+      case 'settings_destination_system_about':
+        return '系統與關於';
+      case 'settings_service_configured':
+        return '已設定';
+      case 'settings_service_not_configured':
+        return '尚未設定';
+      case 'settings_service_builtin':
+        return '內建設定';
+      case 'settings_anki_media':
+        return '卡片媒體';
+      case 'settings_downloads_advanced_title':
+        return '引擎與做種';
+      case 'settings_downloads_advanced_hint':
+        return '連線、記憶體、節點探索與防護';
+      case 'settings_downloads_routing_title':
+        return '已完成的下載';
+      case 'settings_downloads_routing_hint':
+        return '路徑對應與目標影片來源';
+      case 'settings_downloads_encryption_title':
+        return '節點通訊加密';
+      case 'settings_service_disabled':
+        return '已停用';
       case 'updates_center_title':
         return 'Updates';
       case 'updates_center_empty':
