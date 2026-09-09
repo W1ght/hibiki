@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76194 (4482 per locale)
+/// Strings: 76874 (4522 per locale)
 ///
-/// Built on 2026-09-08 at 16:51 UTC
+/// Built on 2026-09-09 at 04:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1653,18 +1653,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dictionary_type_term => 'Term';
   String get dictionary_unrecognized_format => 'Unrecognized dictionary format';
   String get discovery_all_sources => 'All sources';
+  String get discovery_badge_remake => 'Remake';
+  String get discovery_badge_trusted => 'Trusted';
+  String get discovery_content_hint_manga => 'Suspected manga';
   String get discovery_download_queued => 'Added to downloads';
   String get discovery_empty => 'No results';
   String get discovery_enter_query_hint => 'Enter a keyword to search';
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   String get discovery_game_type_all => 'All';
   String get discovery_game_type_mobile => 'Mobile';
   String get discovery_game_type_raw => 'Untranslated';
   String get discovery_game_type_translated => 'Translated';
   String get discovery_game_type_unlabelled => 'Unlabelled';
+  String get discovery_hidden_show => 'Show';
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
   String get discovery_kind_audiobook => 'Audiobooks';
   String get discovery_kind_manga => 'Manga';
   String get discovery_kind_novel => 'Novels';
   String get discovery_load_more => 'Load more';
+  String get discovery_nyaa_filter_all => 'All';
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   String get discovery_opds_add => 'Add OPDS server';
   String get discovery_opds_allow_http => 'Allow plain HTTP';
   String get discovery_opds_allow_http_hint =>
@@ -4012,6 +4025,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_copy_image => 'Copy image';
   String get reader_font_size => 'Font size';
   String get reader_font_vpal => 'VPAL (vertical alt)';
+  String get reader_font_weight => 'Font weight';
   String get reader_furigana_hide => 'Hide';
   String get reader_furigana_mode => 'Furigana';
   String get reader_furigana_mode_hint => '';
@@ -5513,6 +5527,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_menu_lock => 'Immersive / lock mode';
   String get video_menu_play_pause => 'Play / pause';
   String get video_menu_subtitle_track => 'Subtitle track';
+  String get video_metadata_identifier_words => 'Identifier words';
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  String get video_metadata_provider_tmdb => 'TMDB';
   String get video_mining_animated_format => 'Video card animation format';
   String get video_mining_animated_format_hint =>
       'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
@@ -6032,6 +6058,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Specify the work manually';
   String get video_source_scrape_manual_tmdb_movie => 'TMDB movie';
   String get video_source_scrape_manual_tmdb_tv => 'TMDB TV';
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
   String get video_source_scrape_nfo_policy => 'NFO write policy';
   String get video_source_scrape_pending_empty =>
       'No works need manual matching.';
@@ -6054,6 +6083,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   String get video_source_scrape_provider_policy =>
       'MAL (via Jikan) is the primary metadata source; TMDB is the fallback.';
   String get video_source_scrape_queue_cancel_all => 'Cancel all tasks';
@@ -6177,6 +6208,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Couldn\'t read this subtitle file (damaged or empty): ${label}';
   String get video_subtitle_remote_host => 'Paired device subtitle';
   String get video_subtitle_replay => 'Replay this line';
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
   String get video_subtitle_scope_collection => 'Whole collection';
   String get video_subtitle_scope_episode => 'This episode';
   String get video_subtitle_search_open => 'Search subtitles online';
@@ -6232,8 +6279,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_work_details => 'Details';
   String get video_work_external_ids => 'External IDs';
   String get video_work_extras => 'Extras';
+  String get video_work_field_backdrop => 'Backdrop';
+  String get video_work_field_cover => 'Cover';
+  String get video_work_field_original_title => 'Original title';
+  String get video_work_field_overview => 'Overview';
+  String get video_work_field_rating => 'Rating';
+  String get video_work_field_tagline => 'Tagline';
+  String get video_work_field_title => 'Title';
   String get video_work_genres => 'Genres';
   String get video_work_keywords => 'Keywords';
+  String get video_work_locked_fields => 'Locked fields';
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  String get video_work_locked_fields_saved => 'Field locks saved';
   String get video_work_metadata_pending =>
       'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
   String get video_work_studios => 'Studios';
@@ -6290,7 +6348,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       '${process} is a critical system process — Fushi will not end it. Change the port instead.';
   String get yomitan_port_kill_self_instance =>
       'This process is another running instance of this app.';
-  String get reader_font_weight => 'Font weight';
 }
 
 // Path: <root>
@@ -8797,11 +8854,21 @@ class _StringsAr extends _StringsEn {
   @override
   String get discovery_all_sources => 'جميع المصادر';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'تمت الإضافة إلى التحميلات';
   @override
   String get discovery_empty => 'لا توجد نتائج';
   @override
   String get discovery_enter_query_hint => 'أدخل كلمة مفتاحية للبحث';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'الكل';
   @override
@@ -8813,6 +8880,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'غير مصنّفة';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'كتب صوتية';
   @override
   String get discovery_kind_manga => 'مانغا';
@@ -8820,6 +8895,12 @@ class _StringsAr extends _StringsEn {
   String get discovery_kind_novel => 'روايات';
   @override
   String get discovery_load_more => 'تحميل المزيد';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'إضافة خادم OPDS';
   @override
@@ -12888,6 +12969,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (بديل عمودي)';
   @override
+  String get reader_font_weight => 'وزن الخط';
+  @override
   String get reader_furigana_hide => 'إخفاء';
   @override
   String get reader_furigana_mode => 'فوريغانا';
@@ -15552,6 +15635,27 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'مسار الترجمة';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format =>
       'صيغة الرسوم المتحركة لبطاقة الفيديو';
   @override
@@ -16443,6 +16547,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'مسلسلات TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'سياسة كتابة NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -16479,6 +16588,9 @@ class _StringsAr extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (عبر Jikan) هو المصدر الرئيسي للبيانات الوصفية؛ وTMDB هو المصدر البديل.';
@@ -16692,6 +16804,29 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_subtitle_replay => 'إعادة تشغيل هذا السطر';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'المجموعة كاملة';
   @override
   String get video_subtitle_scope_episode => 'هذه الحلقة';
@@ -16789,9 +16924,30 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_work_extras => 'إضافات';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'التصنيفات';
   @override
   String get video_work_keywords => 'الكلمات المفتاحية';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'لم يتم جلب البيانات الوصفية المفصلة بعد. أعد جلب هذا المصدر من المصادر، ثم أعد فتح العمل.';
@@ -16885,8 +17041,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'هذه العملية هي نسخة أخرى قيد التشغيل من هذا التطبيق.';
-  @override
-  String get reader_font_weight => 'وزن الخط';
 }
 
 // Path: <root>
@@ -19444,11 +19598,21 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_all_sources => 'Alle Quellen';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Zu Downloads hinzugefügt';
   @override
   String get discovery_empty => 'Keine Ergebnisse';
   @override
   String get discovery_enter_query_hint => 'Stichwort zum Suchen eingeben';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Alle';
   @override
@@ -19460,6 +19624,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Ohne Kennzeichnung';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Hörbücher';
   @override
   String get discovery_kind_manga => 'Manga';
@@ -19467,6 +19639,12 @@ class _StringsDe extends _StringsEn {
   String get discovery_kind_novel => 'Romane';
   @override
   String get discovery_load_more => 'Mehr laden';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'OPDS-Server hinzufügen';
   @override
@@ -23632,6 +23810,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (Vertikale Alt.)';
   @override
+  String get reader_font_weight => 'Schriftstärke';
+  @override
   String get reader_furigana_hide => 'Ausblenden';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -26347,6 +26527,27 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Untertitelspur';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => 'Animationsformat für Videokarten';
   @override
   String get video_mining_animated_format_hint =>
@@ -27259,6 +27460,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB-Serie';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'NFO-Schreibrichtlinie';
   @override
   String get video_source_scrape_pending_empty =>
@@ -27298,6 +27504,9 @@ class _StringsDe extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (über Jikan) ist die primäre Metadatenquelle; TMDB dient als Ersatz.';
@@ -27520,6 +27729,29 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Diese Zeile wiederholen';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Ganze Sammlung';
   @override
   String get video_subtitle_scope_episode => 'Diese Folge';
@@ -27620,9 +27852,30 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_work_extras => 'Extras';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Genres';
   @override
   String get video_work_keywords => 'Schlagwörter';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Detaillierte Metadaten wurden noch nicht abgerufen. Starten Sie den Scrape-Vorgang dieser Quelle unter Quellen neu und öffnen Sie das Werk erneut.';
@@ -27717,8 +27970,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Dieser Prozess ist eine weitere laufende Instanz dieser App.';
-  @override
-  String get reader_font_weight => 'Schriftstärke';
 }
 
 // Path: <root>
@@ -30284,12 +30535,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_all_sources => 'Todas las fuentes';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Añadido a descargas';
   @override
   String get discovery_empty => 'Sin resultados';
   @override
   String get discovery_enter_query_hint =>
       'Introduzca una palabra clave para buscar';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Todos';
   @override
@@ -30301,6 +30562,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Sin etiquetar';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Audiolibros';
   @override
   String get discovery_kind_manga => 'Manga';
@@ -30308,6 +30577,12 @@ class _StringsEs extends _StringsEn {
   String get discovery_kind_novel => 'Novelas';
   @override
   String get discovery_load_more => 'Cargar más';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'Añadir servidor OPDS';
   @override
@@ -34481,6 +34756,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (alt. vertical)';
   @override
+  String get reader_font_weight => 'Grosor de fuente';
+  @override
   String get reader_furigana_hide => 'Ocultar';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -37214,6 +37491,27 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Pista de subtítulos';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format =>
       'Formato de animación de tarjeta de vídeo';
   @override
@@ -38137,6 +38435,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Serie de TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'Política de escritura NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -38175,6 +38478,9 @@ class _StringsEs extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (mediante Jikan) es la fuente principal de metadatos; TMDB es la alternativa.';
@@ -38400,6 +38706,29 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Repetir esta línea';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Toda la colección';
   @override
   String get video_subtitle_scope_episode => 'Este episodio';
@@ -38499,9 +38828,30 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_work_extras => 'Extras';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Géneros';
   @override
   String get video_work_keywords => 'Palabras clave';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Los metadatos detallados aún no se han obtenido. Reintente esta fuente desde Fuentes, luego vuelva a abrir la obra.';
@@ -38599,8 +38949,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Este proceso es otra instancia en ejecución de esta app.';
-  @override
-  String get reader_font_weight => 'Grosor de fuente';
 }
 
 // Path: <root>
@@ -41181,11 +41529,21 @@ class _StringsFr extends _StringsEn {
   @override
   String get discovery_all_sources => 'Toutes les sources';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Ajouté aux téléchargements';
   @override
   String get discovery_empty => 'Aucun résultat';
   @override
   String get discovery_enter_query_hint => 'Entrez un mot-clé pour rechercher';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Tous';
   @override
@@ -41197,6 +41555,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Non étiquetés';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Livres audio';
   @override
   String get discovery_kind_manga => 'Manga';
@@ -41204,6 +41570,12 @@ class _StringsFr extends _StringsEn {
   String get discovery_kind_novel => 'Romans';
   @override
   String get discovery_load_more => 'Charger plus';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'Ajouter un serveur OPDS';
   @override
@@ -45383,6 +45755,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (alt. vertical)';
   @override
+  String get reader_font_weight => 'Graisse de police';
+  @override
   String get reader_furigana_hide => 'Masquer';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -48119,6 +48493,27 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Piste de sous-titres';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format =>
       'Format d\'animation de carte vidéo';
   @override
@@ -49043,6 +49438,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Série TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'Politique d\'écriture NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -49084,6 +49484,9 @@ class _StringsFr extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (via Jikan) est la source principale de métadonnées ; TMDB sert de solution de repli.';
@@ -49311,6 +49714,29 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Rejouer cette ligne';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Toute la collection';
   @override
   String get video_subtitle_scope_episode => 'Cet épisode';
@@ -49413,9 +49839,30 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_work_extras => 'Extras';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Genres';
   @override
   String get video_work_keywords => 'Mots-clés';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Les métadonnées détaillées n\'ont pas encore été récupérées. Relancez cette source depuis les Sources, puis rouvrez l\'œuvre.';
@@ -49514,8 +49961,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Ce processus est une autre instance en cours d\'exécution de cette application.';
-  @override
-  String get reader_font_weight => 'Graisse de police';
 }
 
 // Path: <root>
@@ -52047,11 +52492,21 @@ class _StringsId extends _StringsEn {
   @override
   String get discovery_all_sources => 'Semua sumber';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Ditambahkan ke unduhan';
   @override
   String get discovery_empty => 'Tidak ada hasil';
   @override
   String get discovery_enter_query_hint => 'Masukkan kata kunci untuk mencari';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Semua';
   @override
@@ -52063,6 +52518,14 @@ class _StringsId extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Tanpa label';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Buku audio';
   @override
   String get discovery_kind_manga => 'Manga';
@@ -52070,6 +52533,12 @@ class _StringsId extends _StringsEn {
   String get discovery_kind_novel => 'Novel';
   @override
   String get discovery_load_more => 'Muat lebih banyak';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'Tambah server OPDS';
   @override
@@ -56181,6 +56650,8 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (Alt Vertikal)';
   @override
+  String get reader_font_weight => 'Ketebalan font';
+  @override
   String get reader_furigana_hide => 'Sembunyikan';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -58875,6 +59346,27 @@ class _StringsId extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Trek subtitle';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => 'Format animasi kartu video';
   @override
   String get video_mining_animated_format_hint =>
@@ -59777,6 +60269,11 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Serial TV TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'Kebijakan penulisan NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -59813,6 +60310,9 @@ class _StringsId extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (melalui Jikan) adalah sumber metadata utama; TMDB menjadi cadangan.';
@@ -60033,6 +60533,29 @@ class _StringsId extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Putar ulang baris ini';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Seluruh koleksi';
   @override
   String get video_subtitle_scope_episode => 'Episode ini';
@@ -60133,9 +60656,30 @@ class _StringsId extends _StringsEn {
   @override
   String get video_work_extras => 'Ekstra';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Genre';
   @override
   String get video_work_keywords => 'Kata kunci';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Metadata detail belum di-scrape. Coba ulang sumber ini dari Sumber, lalu buka kembali karyanya.';
@@ -60229,8 +60773,6 @@ class _StringsId extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Proses ini adalah instance lain dari aplikasi ini yang sedang berjalan.';
-  @override
-  String get reader_font_weight => 'Ketebalan font';
 }
 
 // Path: <root>
@@ -62779,12 +63321,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get discovery_all_sources => 'Tutte le fonti';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Aggiunto ai download';
   @override
   String get discovery_empty => 'Nessun risultato';
   @override
   String get discovery_enter_query_hint =>
       'Inserisci una parola chiave per cercare';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Tutti';
   @override
@@ -62796,6 +63348,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Senza etichetta';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Audiolibri';
   @override
   String get discovery_kind_manga => 'Manga';
@@ -62803,6 +63363,12 @@ class _StringsIt extends _StringsEn {
   String get discovery_kind_novel => 'Romanzi';
   @override
   String get discovery_load_more => 'Carica altri';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'Aggiungi server OPDS';
   @override
@@ -66953,6 +67519,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (alt. verticale)';
   @override
+  String get reader_font_weight => 'Spessore carattere';
+  @override
   String get reader_furigana_hide => 'Nascondi';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -69669,6 +70237,27 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Traccia sottotitoli';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => 'Formato animazione carta video';
   @override
   String get video_mining_animated_format_hint =>
@@ -70582,6 +71171,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Serie TV TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'Politica scrittura NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -70618,6 +71212,9 @@ class _StringsIt extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (tramite Jikan) è la fonte principale dei metadati; TMDB è la fonte di riserva.';
@@ -70842,6 +71439,29 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Riproduci questa riga';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Intera raccolta';
   @override
   String get video_subtitle_scope_episode => 'Questo episodio';
@@ -70941,9 +71561,30 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_work_extras => 'Extra';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Generi';
   @override
   String get video_work_keywords => 'Parole chiave';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'I metadati dettagliati non sono ancora stati ottenuti. Riprova lo scrape di questa fonte da Fonti, poi riapri l\'opera.';
@@ -71040,8 +71681,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Questo processo è un\'altra istanza in esecuzione di questa app.';
-  @override
-  String get reader_font_weight => 'Spessore carattere';
 }
 
 // Path: <root>
@@ -73464,11 +74103,21 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_all_sources => 'すべてのソース';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'ダウンロードに追加しました';
   @override
   String get discovery_empty => '結果なし';
   @override
   String get discovery_enter_query_hint => 'キーワードを入力して検索';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'すべて';
   @override
@@ -73480,6 +74129,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => '未分類';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'オーディオブック';
   @override
   String get discovery_kind_manga => 'マンガ';
@@ -73487,6 +74144,12 @@ class _StringsJa extends _StringsEn {
   String get discovery_kind_novel => '小説';
   @override
   String get discovery_load_more => 'もっと読み込む';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'OPDS サーバーを追加';
   @override
@@ -77389,6 +78052,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL（縦書き代替）';
   @override
+  String get reader_font_weight => 'フォントの太さ';
+  @override
   String get reader_furigana_hide => '非表示';
   @override
   String get reader_furigana_mode => 'ふりがな';
@@ -79944,6 +80609,27 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_menu_subtitle_track => '字幕トラック';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => '動画カードのアニメーション形式';
   @override
   String get video_mining_animated_format_hint =>
@@ -80792,6 +81478,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB テレビシリーズ';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'NFO書き出しポリシー';
   @override
   String get video_source_scrape_pending_empty => '手動で照合する必要がある作品はありません。';
@@ -80826,6 +81517,9 @@ class _StringsJa extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL（Jikan 経由）を主なメタデータソースとし、TMDB を予備ソースとして使用します。';
@@ -81033,6 +81727,29 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_subtitle_replay => 'このセリフをリプレイ';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'コレクション全体';
   @override
   String get video_subtitle_scope_episode => 'このエピソード';
@@ -81124,9 +81841,30 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_work_extras => '特典映像';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'ジャンル';
   @override
   String get video_work_keywords => 'キーワード';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       '詳細メタデータはまだ取得されていません。ソースからこのソースを再試行し、作品を開き直してください。';
@@ -81218,8 +81956,6 @@ class _StringsJa extends _StringsEn {
       '${process}は重要なシステムプロセスです — Fushiでは終了しません。代わりにポートを変更してください。';
   @override
   String get yomitan_port_kill_self_instance => 'このプロセスは、このアプリの別のインスタンスです。';
-  @override
-  String get reader_font_weight => 'フォントの太さ';
 }
 
 // Path: <root>
@@ -83640,11 +84376,21 @@ class _StringsKo extends _StringsEn {
   @override
   String get discovery_all_sources => '모든 소스';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => '다운로드에 추가됨';
   @override
   String get discovery_empty => '결과 없음';
   @override
   String get discovery_enter_query_hint => '키워드를 입력하여 검색';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => '전체';
   @override
@@ -83656,6 +84402,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => '미분류';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => '오디오북';
   @override
   String get discovery_kind_manga => '만화';
@@ -83663,6 +84417,12 @@ class _StringsKo extends _StringsEn {
   String get discovery_kind_novel => '소설';
   @override
   String get discovery_load_more => '더 보기';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'OPDS 서버 추가';
   @override
@@ -87572,6 +88332,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (세로 대체)';
   @override
+  String get reader_font_weight => '글꼴 굵기';
+  @override
   String get reader_furigana_hide => '숨기기';
   @override
   String get reader_furigana_mode => '후리가나';
@@ -90129,6 +90891,27 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_menu_subtitle_track => '자막 트랙';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => '동영상 카드 애니메이션 형식';
   @override
   String get video_mining_animated_format_hint =>
@@ -90981,6 +91764,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB TV 시리즈';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'NFO 쓰기 정책';
   @override
   String get video_source_scrape_pending_empty => '수동으로 일치시킬 작품이 없습니다.';
@@ -91015,6 +91803,9 @@ class _StringsKo extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL(Jikan 경유)을 기본 메타데이터 소스로 사용하고, TMDB를 대체 소스로 사용합니다.';
@@ -91221,6 +92012,29 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_subtitle_replay => '이 자막 다시 재생';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => '컬렉션 전체';
   @override
   String get video_subtitle_scope_episode => '이 에피소드';
@@ -91312,9 +92126,30 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_work_extras => '부가 영상';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => '장르';
   @override
   String get video_work_keywords => '키워드';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       '상세 메타데이터가 아직 스크래핑되지 않았습니다. 소스에서 이 소스를 다시 시도한 후 작품을 다시 여세요.';
@@ -91406,8 +92241,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       '이 프로세스는 이 앱의 다른 실행 중인 인스턴스입니다.';
-  @override
-  String get reader_font_weight => '글꼴 굵기';
 }
 
 // Path: <root>
@@ -93950,11 +94783,21 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_all_sources => 'Alle bronnen';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Aan downloads toegevoegd';
   @override
   String get discovery_empty => 'Geen resultaten';
   @override
   String get discovery_enter_query_hint => 'Voer een zoekterm in';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Alle';
   @override
@@ -93966,6 +94809,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Zonder label';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Luisterboeken';
   @override
   String get discovery_kind_manga => 'Manga';
@@ -93973,6 +94824,12 @@ class _StringsNl extends _StringsEn {
   String get discovery_kind_novel => 'Romans';
   @override
   String get discovery_load_more => 'Meer laden';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'OPDS-server toevoegen';
   @override
@@ -98100,6 +98957,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (vert. alt.)';
   @override
+  String get reader_font_weight => 'Letterdikte';
+  @override
   String get reader_furigana_hide => 'Verbergen';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -100808,6 +101667,27 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Ondertitelspoor';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => 'Videokaart-animatieformaat';
   @override
   String get video_mining_animated_format_hint =>
@@ -101713,6 +102593,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB-serie';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'NFO-schrijfbeleid';
   @override
   String get video_source_scrape_pending_empty =>
@@ -101752,6 +102637,9 @@ class _StringsNl extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (via Jikan) is de primaire bron voor metadata; TMDB is de terugvaloptie.';
@@ -101972,6 +102860,29 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Deze regel opnieuw afspelen';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Hele verzameling';
   @override
   String get video_subtitle_scope_episode => 'Deze aflevering';
@@ -102072,9 +102983,30 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_work_extras => 'Extra\'s';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Genres';
   @override
   String get video_work_keywords => 'Trefwoorden';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Gedetailleerde metadata is nog niet gescraped. Probeer deze bron opnieuw vanuit Bronnen en heropen dan het werk.';
@@ -102171,8 +103103,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Dit proces is een andere draaiende instantie van deze app.';
-  @override
-  String get reader_font_weight => 'Letterdikte';
 }
 
 // Path: <root>
@@ -104727,12 +105657,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_all_sources => 'Todas as fontes';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Adicionado aos downloads';
   @override
   String get discovery_empty => 'Sem resultados';
   @override
   String get discovery_enter_query_hint =>
       'Digite uma palavra-chave para buscar';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Todos';
   @override
@@ -104744,6 +105684,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Sem rótulo';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Audiobooks';
   @override
   String get discovery_kind_manga => 'Mangá';
@@ -104751,6 +105699,12 @@ class _StringsPtBr extends _StringsEn {
   String get discovery_kind_novel => 'Romances';
   @override
   String get discovery_load_more => 'Carregar mais';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'Adicionar servidor OPDS';
   @override
@@ -108900,6 +109854,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (alt. vertical)';
   @override
+  String get reader_font_weight => 'Espessura da fonte';
+  @override
   String get reader_furigana_hide => 'Ocultar';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -111615,6 +112571,27 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Faixa de legenda';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format =>
       'Formato de animação do cartão de vídeo';
   @override
@@ -112532,6 +113509,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Série do TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'Política de gravação NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -112569,6 +113551,9 @@ class _StringsPtBr extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (via Jikan) é a fonte principal de metadados; TMDB é a alternativa.';
@@ -112791,6 +113776,29 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Repetir esta linha';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Coleção inteira';
   @override
   String get video_subtitle_scope_episode => 'Este episódio';
@@ -112891,9 +113899,30 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_work_extras => 'Extras';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Gêneros';
   @override
   String get video_work_keywords => 'Palavras-chave';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Metadados detalhados ainda não foram buscados. Tente novamente a busca desta fonte em Fontes e reabra a obra.';
@@ -112989,8 +114018,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Este processo é outra instância deste app em execução.';
-  @override
-  String get reader_font_weight => 'Espessura da fonte';
 }
 
 // Path: <root>
@@ -115528,11 +116555,21 @@ class _StringsRu extends _StringsEn {
   @override
   String get discovery_all_sources => 'Все источники';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Добавлено в загрузки';
   @override
   String get discovery_empty => 'Нет результатов';
   @override
   String get discovery_enter_query_hint => 'Введите ключевое слово для поиска';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Все';
   @override
@@ -115544,6 +116581,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Без метки';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Аудиокниги';
   @override
   String get discovery_kind_manga => 'Манга';
@@ -115551,6 +116596,12 @@ class _StringsRu extends _StringsEn {
   String get discovery_kind_novel => 'Ранобэ';
   @override
   String get discovery_load_more => 'Загрузить ещё';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'Добавить сервер OPDS';
   @override
@@ -119699,6 +120750,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (верт. альт.)';
   @override
+  String get reader_font_weight => 'Насыщенность шрифта';
+  @override
   String get reader_furigana_hide => 'Скрыть';
   @override
   String get reader_furigana_mode => 'Фуригана';
@@ -122408,6 +123461,27 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Дорожка субтитров';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => 'Формат анимации видеокарточек';
   @override
   String get video_mining_animated_format_hint =>
@@ -123323,6 +124397,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Сериал TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'Политика записи NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -123360,6 +124439,9 @@ class _StringsRu extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (через Jikan) — основной источник метаданных; TMDB — резервный.';
@@ -123586,6 +124668,29 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Повторить эту строку';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Вся коллекция';
   @override
   String get video_subtitle_scope_episode => 'Эта серия';
@@ -123688,9 +124793,30 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_work_extras => 'Доп. материалы';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Жанры';
   @override
   String get video_work_keywords => 'Ключевые слова';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Подробные метаданные ещё не получены. Повторите получение для этого источника в разделе «Источники», затем откройте произведение заново.';
@@ -123785,8 +124911,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Этот процесс — другой запущенный экземпляр данного приложения.';
-  @override
-  String get reader_font_weight => 'Насыщенность шрифта';
 }
 
 // Path: <root>
@@ -126288,11 +127412,21 @@ class _StringsTh extends _StringsEn {
   @override
   String get discovery_all_sources => 'แหล่งทั้งหมด';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'เพิ่มในรายการดาวน์โหลดแล้ว';
   @override
   String get discovery_empty => 'ไม่มีผลลัพธ์';
   @override
   String get discovery_enter_query_hint => 'ป้อนคำค้นหา';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'ทั้งหมด';
   @override
@@ -126304,6 +127438,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'ไม่ได้ระบุ';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'หนังสือเสียง';
   @override
   String get discovery_kind_manga => 'มังงะ';
@@ -126311,6 +127453,12 @@ class _StringsTh extends _StringsEn {
   String get discovery_kind_novel => 'นิยาย';
   @override
   String get discovery_load_more => 'โหลดเพิ่มเติม';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'เพิ่มเซิร์ฟเวอร์ OPDS';
   @override
@@ -130374,6 +131522,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (ตัวอักษรทดแทน)';
   @override
+  String get reader_font_weight => 'น้ำหนักฟอนต์';
+  @override
   String get reader_furigana_hide => 'ซ่อน';
   @override
   String get reader_furigana_mode => 'ฟุริงานะ';
@@ -133042,6 +134192,27 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'แทร็กคำบรรยาย';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => 'รูปแบบภาพเคลื่อนไหวการ์ดวิดีโอ';
   @override
   String get video_mining_animated_format_hint =>
@@ -133928,6 +135099,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'ซีรีส์ TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'นโยบายการเขียน NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -133964,6 +135140,9 @@ class _StringsTh extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (ผ่าน Jikan) เป็นแหล่งข้อมูลเมตาหลัก และใช้ TMDB เป็นแหล่งสำรอง';
@@ -134182,6 +135361,29 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_subtitle_replay => 'เล่นบรรทัดนี้ซ้ำ';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'ทั้งคอลเลกชัน';
   @override
   String get video_subtitle_scope_episode => 'ตอนนี้';
@@ -134279,9 +135481,30 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_work_extras => 'เนื้อหาเพิ่มเติม';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'ประเภท';
   @override
   String get video_work_keywords => 'คีย์เวิร์ด';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'ข้อมูลเมตาโดยละเอียดยังไม่ได้ถูกดึง ลองดึงข้อมูลแหล่งนี้อีกครั้งจากแหล่ง แล้วเปิดผลงานใหม่';
@@ -134376,8 +135599,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'โปรเซสนี้เป็นอินสแตนซ์อื่นของแอปนี้ที่กำลังทำงานอยู่';
-  @override
-  String get reader_font_weight => 'น้ำหนักฟอนต์';
 }
 
 // Path: <root>
@@ -136911,12 +138132,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_all_sources => 'Tüm kaynaklar';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'İndirmelere eklendi';
   @override
   String get discovery_empty => 'Sonuç bulunamadı';
   @override
   String get discovery_enter_query_hint =>
       'Aramak için bir anahtar kelime girin';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Tümü';
   @override
@@ -136928,6 +138159,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Etiketsiz';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Sesli kitaplar';
   @override
   String get discovery_kind_manga => 'Manga';
@@ -136935,6 +138174,12 @@ class _StringsTr extends _StringsEn {
   String get discovery_kind_novel => 'Romanlar';
   @override
   String get discovery_load_more => 'Daha fazla yükle';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'OPDS sunucusu ekle';
   @override
@@ -141046,6 +142291,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (dikey alt.)';
   @override
+  String get reader_font_weight => 'Yazı tipi kalınlığı';
+  @override
   String get reader_furigana_hide => 'Gizle';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -143731,6 +144978,27 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Altyazı izi';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => 'Video kartı animasyon formatı';
   @override
   String get video_mining_animated_format_hint =>
@@ -144636,6 +145904,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB dizisi';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'NFO yazma politikası';
   @override
   String get video_source_scrape_pending_empty =>
@@ -144673,6 +145946,9 @@ class _StringsTr extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (Jikan üzerinden) birincil meta veri kaynağıdır; TMDB yedek kaynaktır.';
@@ -144892,6 +146168,29 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Bu satırı tekrar oynat';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Tüm koleksiyon';
   @override
   String get video_subtitle_scope_episode => 'Bu bölüm';
@@ -144990,9 +146289,30 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_work_extras => 'Ekstralar';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Türler';
   @override
   String get video_work_keywords => 'Anahtar kelimeler';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Ayrıntılı meta veri henüz taranmadı. Bu kaynağı Kaynaklar\'dan yeniden tarayın, ardından eseri tekrar açın.';
@@ -145087,8 +146407,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Bu işlem, uygulamanın çalışan başka bir örneğidir.';
-  @override
-  String get reader_font_weight => 'Yazı tipi kalınlığı';
 }
 
 // Path: <root>
@@ -147620,11 +148938,21 @@ class _StringsVi extends _StringsEn {
   @override
   String get discovery_all_sources => 'Tất cả nguồn';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => 'Đã thêm vào danh sách tải xuống';
   @override
   String get discovery_empty => 'Không có kết quả';
   @override
   String get discovery_enter_query_hint => 'Nhập từ khóa để tìm kiếm';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => 'Tất cả';
   @override
@@ -147636,6 +148964,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => 'Chưa gắn nhãn';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => 'Sách nói';
   @override
   String get discovery_kind_manga => 'Truyện tranh';
@@ -147643,6 +148979,12 @@ class _StringsVi extends _StringsEn {
   String get discovery_kind_novel => 'Tiểu thuyết';
   @override
   String get discovery_load_more => 'Tải thêm';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => 'Thêm máy chủ OPDS';
   @override
@@ -151742,6 +153084,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL (thay thế dọc)';
   @override
+  String get reader_font_weight => 'Độ đậm phông chữ';
+  @override
   String get reader_furigana_hide => 'Ẩn';
   @override
   String get reader_furigana_mode => 'Furigana';
@@ -154421,6 +155765,27 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_menu_subtitle_track => 'Bản phụ đề';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => 'Định dạng hoạt ảnh thẻ video';
   @override
   String get video_mining_animated_format_hint =>
@@ -155318,6 +156683,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'Phim truyền hình TMDB';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'Chính sách ghi NFO';
   @override
   String get video_source_scrape_pending_empty =>
@@ -155353,6 +156723,9 @@ class _StringsVi extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL (qua Jikan) là nguồn siêu dữ liệu chính; TMDB là nguồn dự phòng.';
@@ -155573,6 +156946,29 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_subtitle_replay => 'Phát lại dòng này';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => 'Toàn bộ bộ sưu tập';
   @override
   String get video_subtitle_scope_episode => 'Tập này';
@@ -155670,9 +157066,30 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_work_extras => 'Phần thêm';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => 'Thể loại';
   @override
   String get video_work_keywords => 'Từ khóa';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending =>
       'Metadata chi tiết chưa được quét. Thử lại nguồn này từ Nguồn, sau đó mở lại tác phẩm.';
@@ -155767,8 +157184,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get yomitan_port_kill_self_instance =>
       'Tiến trình này là một phiên bản đang chạy khác của ứng dụng.';
-  @override
-  String get reader_font_weight => 'Độ đậm phông chữ';
 }
 
 // Path: <root>
@@ -158105,11 +159520,21 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get discovery_all_sources => '全部源';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => '信任发布者';
+  @override
+  String get discovery_content_hint_manga => '疑似漫画';
+  @override
   String get discovery_download_queued => '已加入下载';
   @override
   String get discovery_empty => '无结果';
   @override
   String get discovery_enter_query_hint => '输入关键词搜索';
+  @override
+  String get discovery_filter_hide_suspected_manga => '隐藏疑似漫画';
+  @override
+  String get discovery_filter_hide_zero_seeders => '隐藏无人做种';
   @override
   String get discovery_game_type_all => '全部';
   @override
@@ -158121,6 +159546,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => '未标注';
   @override
+  String get discovery_hidden_show => '显示';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '已隐藏 ${n} 条疑似漫画';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '已隐藏 ${n} 条无人做种';
+  @override
   String get discovery_kind_audiobook => '有声书';
   @override
   String get discovery_kind_manga => '漫画';
@@ -158128,6 +159561,12 @@ class _StringsZhCn extends _StringsEn {
   String get discovery_kind_novel => '小说';
   @override
   String get discovery_load_more => '加载更多';
+  @override
+  String get discovery_nyaa_filter_all => '全部';
+  @override
+  String get discovery_nyaa_filter_no_remakes => '排除 remake';
+  @override
+  String get discovery_nyaa_filter_trusted_only => '仅信任发布者';
   @override
   String get discovery_opds_add => '添加 OPDS 服务器';
   @override
@@ -161869,6 +163308,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL 纵排替代';
   @override
+  String get reader_font_weight => '字体粗细';
+  @override
   String get reader_furigana_hide => '隐藏';
   @override
   String get reader_furigana_mode => '振假名';
@@ -164333,6 +165774,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_menu_subtitle_track => '字幕轨';
   @override
+  String get video_metadata_identifier_words => '识别词';
+  @override
+  String get video_metadata_identifier_words_empty => '未配置';
+  @override
+  String get video_metadata_identifier_words_hint => '识别前先改写、屏蔽标题或偏移集号';
+  @override
+  String get video_metadata_identifier_words_invalid => '无效规则';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      '一行一条规则，# 开头是注释。屏蔽：直接写正则。替换：A => B。集偏移：前 <> 后 >> EP+1。组合：A => B && 前 <> 后 >> EP+1。';
+  @override
+  String get video_metadata_primary_provider => '主资料源';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      '主源没有唯一精确命中或不可用时，自动用另一个源兜底。';
+  @override
+  String get video_metadata_provider_mal => 'MAL（经 Jikan）';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => '视频制卡动图格式';
   @override
   String get video_mining_animated_format_hint =>
@@ -165153,6 +166614,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB 电视剧';
   @override
+  String get video_source_scrape_metadata_locale => '资料语言';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 语言标签，如 ja 或 zh-CN。留空 = 跟随全局资料语言。';
+  @override
   String get video_source_scrape_nfo_policy => 'NFO 写入策略';
   @override
   String get video_source_scrape_pending_empty => '没有需要手动匹配的作品。';
@@ -165187,6 +166653,8 @@ class _StringsZhCn extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global => '跟随全局默认';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL（经 Jikan）为主要资料源，TMDB 兜底。';
@@ -165389,6 +166857,27 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_subtitle_replay => '重播本句';
   @override
+  String get video_subtitle_retime_action => '用语音模型重定时';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) => '已重定时 ${matched}/${total} 句（${percent}%），中位偏移 ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '已剔除 ${count} 条格式异常的字幕';
+  @override
+  String get video_subtitle_retime_failed => '字幕重定时失败';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      '只有 ${percent}% 的句子对上了。检查语音语言是否选对、这份字幕是不是这一集的。';
+  @override
+  String get video_subtitle_retime_no_track => '先选一条字幕轨';
+  @override
+  String get video_subtitle_retime_running => '正在用语音模型重定时字幕…';
+  @override
   String get video_subtitle_scope_collection => '整个合集';
   @override
   String get video_subtitle_scope_episode => '本集';
@@ -165478,9 +166967,29 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_work_extras => '花絮';
   @override
+  String get video_work_field_backdrop => '背景图';
+  @override
+  String get video_work_field_cover => '封面';
+  @override
+  String get video_work_field_original_title => '原名';
+  @override
+  String get video_work_field_overview => '简介';
+  @override
+  String get video_work_field_rating => '评分';
+  @override
+  String get video_work_field_tagline => '标语';
+  @override
+  String get video_work_field_title => '标题';
+  @override
   String get video_work_genres => '类型';
   @override
   String get video_work_keywords => '标签';
+  @override
+  String get video_work_locked_fields => '锁定字段';
+  @override
+  String get video_work_locked_fields_hint => '锁定的字段在下次刮削该作品时保留当前值。';
+  @override
+  String get video_work_locked_fields_saved => '字段锁已保存';
   @override
   String get video_work_metadata_pending => '尚未刮削详细资料。请在「来源」中重试此来源，然后重新打开作品。';
   @override
@@ -165568,8 +167077,6 @@ class _StringsZhCn extends _StringsEn {
       '${process} 是关键系统进程，Fushi 不会结束它；请改用其他端口。';
   @override
   String get yomitan_port_kill_self_instance => '该进程是本应用的另一个正在运行的实例。';
-  @override
-  String get reader_font_weight => '字体粗细';
 }
 
 // Path: <root>
@@ -167927,11 +169434,21 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_all_sources => '全部源';
   @override
+  String get discovery_badge_remake => 'Remake';
+  @override
+  String get discovery_badge_trusted => 'Trusted';
+  @override
+  String get discovery_content_hint_manga => 'Suspected manga';
+  @override
   String get discovery_download_queued => '已加入下載';
   @override
   String get discovery_empty => '無結果';
   @override
   String get discovery_enter_query_hint => '輸入關鍵詞搜索';
+  @override
+  String get discovery_filter_hide_suspected_manga => 'Hide suspected manga';
+  @override
+  String get discovery_filter_hide_zero_seeders => 'Hide unseeded';
   @override
   String get discovery_game_type_all => '全部';
   @override
@@ -167943,6 +169460,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get discovery_game_type_unlabelled => '未標註';
   @override
+  String get discovery_hidden_show => 'Show';
+  @override
+  String discovery_hidden_suspected_manga_count({required Object n}) =>
+      '${n} suspected manga hidden';
+  @override
+  String discovery_hidden_zero_seeders_count({required Object n}) =>
+      '${n} unseeded hidden';
+  @override
   String get discovery_kind_audiobook => '有聲書';
   @override
   String get discovery_kind_manga => '漫畫';
@@ -167950,6 +169475,12 @@ class _StringsZhHk extends _StringsEn {
   String get discovery_kind_novel => '小說';
   @override
   String get discovery_load_more => '加載更多';
+  @override
+  String get discovery_nyaa_filter_all => 'All';
+  @override
+  String get discovery_nyaa_filter_no_remakes => 'No remakes';
+  @override
+  String get discovery_nyaa_filter_trusted_only => 'Trusted only';
   @override
   String get discovery_opds_add => '新增 OPDS 伺服器';
   @override
@@ -171711,6 +173242,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_font_vpal => 'VPAL 直排替代';
   @override
+  String get reader_font_weight => '字型粗細';
+  @override
   String get reader_furigana_hide => '隱藏';
   @override
   String get reader_furigana_mode => '振假名';
@@ -174195,6 +175728,27 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_menu_subtitle_track => '字幕軌';
   @override
+  String get video_metadata_identifier_words => 'Identifier words';
+  @override
+  String get video_metadata_identifier_words_empty => 'Not configured';
+  @override
+  String get video_metadata_identifier_words_hint =>
+      'Rewrite, block or offset titles before they are matched';
+  @override
+  String get video_metadata_identifier_words_invalid => 'Invalid rules';
+  @override
+  String get video_metadata_identifier_words_syntax =>
+      'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+  @override
+  String get video_metadata_primary_provider => 'Primary metadata source';
+  @override
+  String get video_metadata_primary_provider_hint =>
+      'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+  @override
+  String get video_metadata_provider_mal => 'MAL (via Jikan)';
+  @override
+  String get video_metadata_provider_tmdb => 'TMDB';
+  @override
   String get video_mining_animated_format => '影片製卡動圖格式';
   @override
   String get video_mining_animated_format_hint =>
@@ -175016,6 +176570,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_manual_tmdb_tv => 'TMDB 電視劇';
   @override
+  String get video_source_scrape_metadata_locale => 'Metadata language';
+  @override
+  String get video_source_scrape_metadata_locale_hint =>
+      'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
+  @override
   String get video_source_scrape_nfo_policy => 'NFO 寫入策略';
   @override
   String get video_source_scrape_pending_empty => '沒有需要手動配對的作品。';
@@ -175050,6 +176609,9 @@ class _StringsZhHk extends _StringsEn {
     required Object current,
     required Object total,
   }) => '${phase} · ${current}/${total}';
+  @override
+  String get video_source_scrape_provider_follow_global =>
+      'Follow global default';
   @override
   String get video_source_scrape_provider_policy =>
       'MAL（經 Jikan）為主要資料來源，TMDB 作後備。';
@@ -175252,6 +176814,29 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_subtitle_replay => '重播本句';
   @override
+  String get video_subtitle_retime_action => 'Retime with speech model';
+  @override
+  String video_subtitle_retime_done({
+    required Object matched,
+    required Object total,
+    required Object percent,
+    required Object ms,
+  }) =>
+      'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+  @override
+  String video_subtitle_retime_dropped({required Object count}) =>
+      '${count} malformed lines were left out';
+  @override
+  String get video_subtitle_retime_failed => 'Subtitle retiming failed';
+  @override
+  String video_subtitle_retime_low_match({required Object percent}) =>
+      'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+  @override
+  String get video_subtitle_retime_no_track => 'Load a subtitle track first';
+  @override
+  String get video_subtitle_retime_running =>
+      'Retiming subtitles with the speech model…';
+  @override
   String get video_subtitle_scope_collection => '整個合集';
   @override
   String get video_subtitle_scope_episode => '本集';
@@ -175341,9 +176926,30 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_work_extras => '花絮';
   @override
+  String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get video_work_field_cover => 'Cover';
+  @override
+  String get video_work_field_original_title => 'Original title';
+  @override
+  String get video_work_field_overview => 'Overview';
+  @override
+  String get video_work_field_rating => 'Rating';
+  @override
+  String get video_work_field_tagline => 'Tagline';
+  @override
+  String get video_work_field_title => 'Title';
+  @override
   String get video_work_genres => '類型';
   @override
   String get video_work_keywords => '標簽';
+  @override
+  String get video_work_locked_fields => 'Locked fields';
+  @override
+  String get video_work_locked_fields_hint =>
+      'Locked fields keep their current values the next time this work is scraped.';
+  @override
+  String get video_work_locked_fields_saved => 'Field locks saved';
   @override
   String get video_work_metadata_pending => '尚未刮取詳細資料。請在「來源」中重試此來源，然後重新開啟作品。';
   @override
@@ -175431,8 +177037,6 @@ class _StringsZhHk extends _StringsEn {
       '${process} 是關鍵系統進程，Fushi 不會結束它；請改用其他端口。';
   @override
   String get yomitan_port_kill_self_instance => '該進程是本應用的另一個正在運行的實例。';
-  @override
-  String get reader_font_weight => '字型粗細';
 }
 
 /// Flat map(s) containing all translations.
@@ -177595,12 +179199,22 @@ extension on _StringsEn {
         return 'Unrecognized dictionary format';
       case 'discovery_all_sources':
         return 'All sources';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Added to downloads';
       case 'discovery_empty':
         return 'No results';
       case 'discovery_enter_query_hint':
         return 'Enter a keyword to search';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'All';
       case 'discovery_game_type_mobile':
@@ -177611,6 +179225,12 @@ extension on _StringsEn {
         return 'Translated';
       case 'discovery_game_type_unlabelled':
         return 'Unlabelled';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Audiobooks';
       case 'discovery_kind_manga':
@@ -177619,6 +179239,12 @@ extension on _StringsEn {
         return 'Novels';
       case 'discovery_load_more':
         return 'Load more';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'Add OPDS server';
       case 'discovery_opds_allow_http':
@@ -181129,6 +182755,8 @@ extension on _StringsEn {
         return 'Font size';
       case 'reader_font_vpal':
         return 'VPAL (vertical alt)';
+      case 'reader_font_weight':
+        return 'Font weight';
       case 'reader_furigana_hide':
         return 'Hide';
       case 'reader_furigana_mode':
@@ -183507,6 +185135,24 @@ extension on _StringsEn {
         return 'Play / pause';
       case 'video_menu_subtitle_track':
         return 'Subtitle track';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Video card animation format';
       case 'video_mining_animated_format_hint':
@@ -184260,6 +185906,10 @@ extension on _StringsEn {
         return 'TMDB movie';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB TV';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'NFO write policy';
       case 'video_source_scrape_pending_empty':
@@ -184294,6 +185944,8 @@ extension on _StringsEn {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (via Jikan) is the primary metadata source; TMDB is the fallback.';
       case 'video_source_scrape_queue_cancel_all':
@@ -184483,6 +186135,28 @@ extension on _StringsEn {
         return 'Paired device subtitle';
       case 'video_subtitle_replay':
         return 'Replay this line';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Whole collection';
       case 'video_subtitle_scope_episode':
@@ -184567,10 +186241,30 @@ extension on _StringsEn {
         return 'External IDs';
       case 'video_work_extras':
         return 'Extras';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Genres';
       case 'video_work_keywords':
         return 'Keywords';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Detailed metadata has not been scraped yet. Retry this source from Sources, then reopen the work.';
       case 'video_work_studios':
@@ -184653,8 +186347,6 @@ extension on _StringsEn {
             '${process} is a critical system process — Fushi will not end it. Change the port instead.';
       case 'yomitan_port_kill_self_instance':
         return 'This process is another running instance of this app.';
-      case 'reader_font_weight':
-        return 'Font weight';
       default:
         return null;
     }
@@ -186817,12 +188509,22 @@ extension on _StringsAr {
         return 'صيغة قاموس غير معروفة';
       case 'discovery_all_sources':
         return 'جميع المصادر';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'تمت الإضافة إلى التحميلات';
       case 'discovery_empty':
         return 'لا توجد نتائج';
       case 'discovery_enter_query_hint':
         return 'أدخل كلمة مفتاحية للبحث';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'الكل';
       case 'discovery_game_type_mobile':
@@ -186833,6 +188535,12 @@ extension on _StringsAr {
         return 'مترجمة';
       case 'discovery_game_type_unlabelled':
         return 'غير مصنّفة';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'كتب صوتية';
       case 'discovery_kind_manga':
@@ -186841,6 +188549,12 @@ extension on _StringsAr {
         return 'روايات';
       case 'discovery_load_more':
         return 'تحميل المزيد';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'إضافة خادم OPDS';
       case 'discovery_opds_allow_http':
@@ -190349,6 +192063,8 @@ extension on _StringsAr {
         return 'حجم الخط';
       case 'reader_font_vpal':
         return 'VPAL (بديل عمودي)';
+      case 'reader_font_weight':
+        return 'وزن الخط';
       case 'reader_furigana_hide':
         return 'إخفاء';
       case 'reader_furigana_mode':
@@ -192723,6 +194439,24 @@ extension on _StringsAr {
         return 'تشغيل / إيقاف مؤقت';
       case 'video_menu_subtitle_track':
         return 'مسار الترجمة';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'صيغة الرسوم المتحركة لبطاقة الفيديو';
       case 'video_mining_animated_format_hint':
@@ -193476,6 +195210,10 @@ extension on _StringsAr {
         return 'أفلام TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'مسلسلات TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'سياسة كتابة NFO';
       case 'video_source_scrape_pending_empty':
@@ -193510,6 +195248,8 @@ extension on _StringsAr {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (عبر Jikan) هو المصدر الرئيسي للبيانات الوصفية؛ وTMDB هو المصدر البديل.';
       case 'video_source_scrape_queue_cancel_all':
@@ -193699,6 +195439,28 @@ extension on _StringsAr {
         return 'ترجمة الجهاز المقترن';
       case 'video_subtitle_replay':
         return 'إعادة تشغيل هذا السطر';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'المجموعة كاملة';
       case 'video_subtitle_scope_episode':
@@ -193784,10 +195546,30 @@ extension on _StringsAr {
         return 'معرّفات خارجية';
       case 'video_work_extras':
         return 'إضافات';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'التصنيفات';
       case 'video_work_keywords':
         return 'الكلمات المفتاحية';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'لم يتم جلب البيانات الوصفية المفصلة بعد. أعد جلب هذا المصدر من المصادر، ثم أعد فتح العمل.';
       case 'video_work_studios':
@@ -193870,8 +195652,6 @@ extension on _StringsAr {
             '${process} هي عملية نظام حرجة — لن يقوم Fushi بإنهائها. غيّر المنفذ بدلاً من ذلك.';
       case 'yomitan_port_kill_self_instance':
         return 'هذه العملية هي نسخة أخرى قيد التشغيل من هذا التطبيق.';
-      case 'reader_font_weight':
-        return 'وزن الخط';
       default:
         return null;
     }
@@ -196049,12 +197829,22 @@ extension on _StringsDe {
         return 'Wörterbuchformat nicht erkannt';
       case 'discovery_all_sources':
         return 'Alle Quellen';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Zu Downloads hinzugefügt';
       case 'discovery_empty':
         return 'Keine Ergebnisse';
       case 'discovery_enter_query_hint':
         return 'Stichwort zum Suchen eingeben';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Alle';
       case 'discovery_game_type_mobile':
@@ -196065,6 +197855,12 @@ extension on _StringsDe {
         return 'Übersetzt';
       case 'discovery_game_type_unlabelled':
         return 'Ohne Kennzeichnung';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Hörbücher';
       case 'discovery_kind_manga':
@@ -196073,6 +197869,12 @@ extension on _StringsDe {
         return 'Romane';
       case 'discovery_load_more':
         return 'Mehr laden';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'OPDS-Server hinzufügen';
       case 'discovery_opds_allow_http':
@@ -199598,6 +201400,8 @@ extension on _StringsDe {
         return 'Schriftgröße';
       case 'reader_font_vpal':
         return 'VPAL (Vertikale Alt.)';
+      case 'reader_font_weight':
+        return 'Schriftstärke';
       case 'reader_furigana_hide':
         return 'Ausblenden';
       case 'reader_furigana_mode':
@@ -201986,6 +203790,24 @@ extension on _StringsDe {
         return 'Wiedergabe / Pause';
       case 'video_menu_subtitle_track':
         return 'Untertitelspur';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Animationsformat für Videokarten';
       case 'video_mining_animated_format_hint':
@@ -202740,6 +204562,10 @@ extension on _StringsDe {
         return 'TMDB-Film';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB-Serie';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'NFO-Schreibrichtlinie';
       case 'video_source_scrape_pending_empty':
@@ -202774,6 +204600,8 @@ extension on _StringsDe {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (über Jikan) ist die primäre Metadatenquelle; TMDB dient als Ersatz.';
       case 'video_source_scrape_queue_cancel_all':
@@ -202965,6 +204793,28 @@ extension on _StringsDe {
         return 'Untertitel vom gekoppelten Gerät';
       case 'video_subtitle_replay':
         return 'Diese Zeile wiederholen';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Ganze Sammlung';
       case 'video_subtitle_scope_episode':
@@ -203050,10 +204900,30 @@ extension on _StringsDe {
         return 'Externe IDs';
       case 'video_work_extras':
         return 'Extras';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Genres';
       case 'video_work_keywords':
         return 'Schlagwörter';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Detaillierte Metadaten wurden noch nicht abgerufen. Starten Sie den Scrape-Vorgang dieser Quelle unter Quellen neu und öffnen Sie das Werk erneut.';
       case 'video_work_studios':
@@ -203136,8 +205006,6 @@ extension on _StringsDe {
             '${process} ist ein kritischer Systemprozess – Fushi wird ihn nicht beenden. Ändern Sie stattdessen den Port.';
       case 'yomitan_port_kill_self_instance':
         return 'Dieser Prozess ist eine weitere laufende Instanz dieser App.';
-      case 'reader_font_weight':
-        return 'Schriftstärke';
       default:
         return null;
     }
@@ -205310,12 +207178,22 @@ extension on _StringsEs {
         return 'Formato de diccionario no reconocido';
       case 'discovery_all_sources':
         return 'Todas las fuentes';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Añadido a descargas';
       case 'discovery_empty':
         return 'Sin resultados';
       case 'discovery_enter_query_hint':
         return 'Introduzca una palabra clave para buscar';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Todos';
       case 'discovery_game_type_mobile':
@@ -205326,6 +207204,12 @@ extension on _StringsEs {
         return 'Traducidos';
       case 'discovery_game_type_unlabelled':
         return 'Sin etiquetar';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Audiolibros';
       case 'discovery_kind_manga':
@@ -205334,6 +207218,12 @@ extension on _StringsEs {
         return 'Novelas';
       case 'discovery_load_more':
         return 'Cargar más';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'Añadir servidor OPDS';
       case 'discovery_opds_allow_http':
@@ -208856,6 +210746,8 @@ extension on _StringsEs {
         return 'Tamaño de fuente';
       case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
+      case 'reader_font_weight':
+        return 'Grosor de fuente';
       case 'reader_furigana_hide':
         return 'Ocultar';
       case 'reader_furigana_mode':
@@ -211243,6 +213135,24 @@ extension on _StringsEs {
         return 'Reproducir / Pausar';
       case 'video_menu_subtitle_track':
         return 'Pista de subtítulos';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Formato de animación de tarjeta de vídeo';
       case 'video_mining_animated_format_hint':
@@ -211997,6 +213907,10 @@ extension on _StringsEs {
         return 'Película de TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Serie de TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'Política de escritura NFO';
       case 'video_source_scrape_pending_empty':
@@ -212031,6 +213945,8 @@ extension on _StringsEs {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (mediante Jikan) es la fuente principal de metadatos; TMDB es la alternativa.';
       case 'video_source_scrape_queue_cancel_all':
@@ -212221,6 +214137,28 @@ extension on _StringsEs {
         return 'Subtítulo del dispositivo emparejado';
       case 'video_subtitle_replay':
         return 'Repetir esta línea';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Toda la colección';
       case 'video_subtitle_scope_episode':
@@ -212306,10 +214244,30 @@ extension on _StringsEs {
         return 'IDs externos';
       case 'video_work_extras':
         return 'Extras';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Géneros';
       case 'video_work_keywords':
         return 'Palabras clave';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Los metadatos detallados aún no se han obtenido. Reintente esta fuente desde Fuentes, luego vuelva a abrir la obra.';
       case 'video_work_studios':
@@ -212392,8 +214350,6 @@ extension on _StringsEs {
             '${process} es un proceso crítico del sistema — Fushi no lo finalizará. Cambie el puerto en su lugar.';
       case 'yomitan_port_kill_self_instance':
         return 'Este proceso es otra instancia en ejecución de esta app.';
-      case 'reader_font_weight':
-        return 'Grosor de fuente';
       default:
         return null;
     }
@@ -214570,12 +216526,22 @@ extension on _StringsFr {
         return 'Format de dictionnaire non reconnu';
       case 'discovery_all_sources':
         return 'Toutes les sources';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Ajouté aux téléchargements';
       case 'discovery_empty':
         return 'Aucun résultat';
       case 'discovery_enter_query_hint':
         return 'Entrez un mot-clé pour rechercher';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Tous';
       case 'discovery_game_type_mobile':
@@ -214586,6 +216552,12 @@ extension on _StringsFr {
         return 'Traduits';
       case 'discovery_game_type_unlabelled':
         return 'Non étiquetés';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Livres audio';
       case 'discovery_kind_manga':
@@ -214594,6 +216566,12 @@ extension on _StringsFr {
         return 'Romans';
       case 'discovery_load_more':
         return 'Charger plus';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'Ajouter un serveur OPDS';
       case 'discovery_opds_allow_http':
@@ -218118,6 +220096,8 @@ extension on _StringsFr {
         return 'Taille de police';
       case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
+      case 'reader_font_weight':
+        return 'Graisse de police';
       case 'reader_furigana_hide':
         return 'Masquer';
       case 'reader_furigana_mode':
@@ -220506,6 +222486,24 @@ extension on _StringsFr {
         return 'Lecture / Pause';
       case 'video_menu_subtitle_track':
         return 'Piste de sous-titres';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Format d\'animation de carte vidéo';
       case 'video_mining_animated_format_hint':
@@ -221261,6 +223259,10 @@ extension on _StringsFr {
         return 'Film TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Série TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'Politique d\'écriture NFO';
       case 'video_source_scrape_pending_empty':
@@ -221295,6 +223297,8 @@ extension on _StringsFr {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (via Jikan) est la source principale de métadonnées ; TMDB sert de solution de repli.';
       case 'video_source_scrape_queue_cancel_all':
@@ -221485,6 +223489,28 @@ extension on _StringsFr {
         return 'Sous-titre de l\'appareil appairé';
       case 'video_subtitle_replay':
         return 'Rejouer cette ligne';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Toute la collection';
       case 'video_subtitle_scope_episode':
@@ -221570,10 +223596,30 @@ extension on _StringsFr {
         return 'ID externes';
       case 'video_work_extras':
         return 'Extras';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Genres';
       case 'video_work_keywords':
         return 'Mots-clés';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Les métadonnées détaillées n\'ont pas encore été récupérées. Relancez cette source depuis les Sources, puis rouvrez l\'œuvre.';
       case 'video_work_studios':
@@ -221656,8 +223702,6 @@ extension on _StringsFr {
             '${process} est un processus système critique — Fushi ne l\'arrêtera pas. Changez de port à la place.';
       case 'yomitan_port_kill_self_instance':
         return 'Ce processus est une autre instance en cours d\'exécution de cette application.';
-      case 'reader_font_weight':
-        return 'Graisse de police';
       default:
         return null;
     }
@@ -223827,12 +225871,22 @@ extension on _StringsId {
         return 'Format kamus tidak dikenali';
       case 'discovery_all_sources':
         return 'Semua sumber';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Ditambahkan ke unduhan';
       case 'discovery_empty':
         return 'Tidak ada hasil';
       case 'discovery_enter_query_hint':
         return 'Masukkan kata kunci untuk mencari';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Semua';
       case 'discovery_game_type_mobile':
@@ -223843,6 +225897,12 @@ extension on _StringsId {
         return 'Sudah diterjemahkan';
       case 'discovery_game_type_unlabelled':
         return 'Tanpa label';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Buku audio';
       case 'discovery_kind_manga':
@@ -223851,6 +225911,12 @@ extension on _StringsId {
         return 'Novel';
       case 'discovery_load_more':
         return 'Muat lebih banyak';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'Tambah server OPDS';
       case 'discovery_opds_allow_http':
@@ -227363,6 +229429,8 @@ extension on _StringsId {
         return 'Ukuran Font';
       case 'reader_font_vpal':
         return 'VPAL (Alt Vertikal)';
+      case 'reader_font_weight':
+        return 'Ketebalan font';
       case 'reader_furigana_hide':
         return 'Sembunyikan';
       case 'reader_furigana_mode':
@@ -229742,6 +231810,24 @@ extension on _StringsId {
         return 'Putar / Jeda';
       case 'video_menu_subtitle_track':
         return 'Trek subtitle';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Format animasi kartu video';
       case 'video_mining_animated_format_hint':
@@ -230495,6 +232581,10 @@ extension on _StringsId {
         return 'Film TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Serial TV TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'Kebijakan penulisan NFO';
       case 'video_source_scrape_pending_empty':
@@ -230529,6 +232619,8 @@ extension on _StringsId {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (melalui Jikan) adalah sumber metadata utama; TMDB menjadi cadangan.';
       case 'video_source_scrape_queue_cancel_all':
@@ -230719,6 +232811,28 @@ extension on _StringsId {
         return 'Subtitle perangkat berpasangan';
       case 'video_subtitle_replay':
         return 'Putar ulang baris ini';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Seluruh koleksi';
       case 'video_subtitle_scope_episode':
@@ -230804,10 +232918,30 @@ extension on _StringsId {
         return 'ID eksternal';
       case 'video_work_extras':
         return 'Ekstra';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Genre';
       case 'video_work_keywords':
         return 'Kata kunci';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Metadata detail belum di-scrape. Coba ulang sumber ini dari Sumber, lalu buka kembali karyanya.';
       case 'video_work_studios':
@@ -230890,8 +233024,6 @@ extension on _StringsId {
             '${process} adalah proses sistem penting — Fushi tidak akan mengakhirinya. Ganti port saja.';
       case 'yomitan_port_kill_self_instance':
         return 'Proses ini adalah instance lain dari aplikasi ini yang sedang berjalan.';
-      case 'reader_font_weight':
-        return 'Ketebalan font';
       default:
         return null;
     }
@@ -233064,12 +235196,22 @@ extension on _StringsIt {
         return 'Formato dizionario non riconosciuto';
       case 'discovery_all_sources':
         return 'Tutte le fonti';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Aggiunto ai download';
       case 'discovery_empty':
         return 'Nessun risultato';
       case 'discovery_enter_query_hint':
         return 'Inserisci una parola chiave per cercare';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Tutti';
       case 'discovery_game_type_mobile':
@@ -233080,6 +235222,12 @@ extension on _StringsIt {
         return 'Tradotti';
       case 'discovery_game_type_unlabelled':
         return 'Senza etichetta';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Audiolibri';
       case 'discovery_kind_manga':
@@ -233088,6 +235236,12 @@ extension on _StringsIt {
         return 'Romanzi';
       case 'discovery_load_more':
         return 'Carica altri';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'Aggiungi server OPDS';
       case 'discovery_opds_allow_http':
@@ -236607,6 +238761,8 @@ extension on _StringsIt {
         return 'Dimensione carattere';
       case 'reader_font_vpal':
         return 'VPAL (alt. verticale)';
+      case 'reader_font_weight':
+        return 'Spessore carattere';
       case 'reader_furigana_hide':
         return 'Nascondi';
       case 'reader_furigana_mode':
@@ -238997,6 +241153,24 @@ extension on _StringsIt {
         return 'Riproduci / Pausa';
       case 'video_menu_subtitle_track':
         return 'Traccia sottotitoli';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Formato animazione carta video';
       case 'video_mining_animated_format_hint':
@@ -239751,6 +241925,10 @@ extension on _StringsIt {
         return 'Film TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Serie TV TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'Politica scrittura NFO';
       case 'video_source_scrape_pending_empty':
@@ -239785,6 +241963,8 @@ extension on _StringsIt {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (tramite Jikan) è la fonte principale dei metadati; TMDB è la fonte di riserva.';
       case 'video_source_scrape_queue_cancel_all':
@@ -239976,6 +242156,28 @@ extension on _StringsIt {
         return 'Sottotitoli del dispositivo abbinato';
       case 'video_subtitle_replay':
         return 'Riproduci questa riga';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Intera raccolta';
       case 'video_subtitle_scope_episode':
@@ -240061,10 +242263,30 @@ extension on _StringsIt {
         return 'ID esterni';
       case 'video_work_extras':
         return 'Extra';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Generi';
       case 'video_work_keywords':
         return 'Parole chiave';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'I metadati dettagliati non sono ancora stati ottenuti. Riprova lo scrape di questa fonte da Fonti, poi riapri l\'opera.';
       case 'video_work_studios':
@@ -240147,8 +242369,6 @@ extension on _StringsIt {
             '${process} è un processo di sistema critico — Fushi non lo terminerà. Cambia la porta.';
       case 'yomitan_port_kill_self_instance':
         return 'Questo processo è un\'altra istanza in esecuzione di questa app.';
-      case 'reader_font_weight':
-        return 'Spessore carattere';
       default:
         return null;
     }
@@ -242302,12 +244522,22 @@ extension on _StringsJa {
         return '辞書形式を認識できません';
       case 'discovery_all_sources':
         return 'すべてのソース';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'ダウンロードに追加しました';
       case 'discovery_empty':
         return '結果なし';
       case 'discovery_enter_query_hint':
         return 'キーワードを入力して検索';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'すべて';
       case 'discovery_game_type_mobile':
@@ -242318,6 +244548,12 @@ extension on _StringsJa {
         return '翻訳済み';
       case 'discovery_game_type_unlabelled':
         return '未分類';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'オーディオブック';
       case 'discovery_kind_manga':
@@ -242326,6 +244562,12 @@ extension on _StringsJa {
         return '小説';
       case 'discovery_load_more':
         return 'もっと読み込む';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'OPDS サーバーを追加';
       case 'discovery_opds_allow_http':
@@ -245827,6 +248069,8 @@ extension on _StringsJa {
         return 'フォントサイズ';
       case 'reader_font_vpal':
         return 'VPAL（縦書き代替）';
+      case 'reader_font_weight':
+        return 'フォントの太さ';
       case 'reader_furigana_hide':
         return '非表示';
       case 'reader_furigana_mode':
@@ -248187,6 +250431,24 @@ extension on _StringsJa {
         return '再生／一時停止';
       case 'video_menu_subtitle_track':
         return '字幕トラック';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return '動画カードのアニメーション形式';
       case 'video_mining_animated_format_hint':
@@ -248940,6 +251202,10 @@ extension on _StringsJa {
         return 'TMDB 映画';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB テレビシリーズ';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'NFO書き出しポリシー';
       case 'video_source_scrape_pending_empty':
@@ -248974,6 +251240,8 @@ extension on _StringsJa {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL（Jikan 経由）を主なメタデータソースとし、TMDB を予備ソースとして使用します。';
       case 'video_source_scrape_queue_cancel_all':
@@ -249161,6 +251429,28 @@ extension on _StringsJa {
         return 'ペアリング済みデバイスの字幕';
       case 'video_subtitle_replay':
         return 'このセリフをリプレイ';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'コレクション全体';
       case 'video_subtitle_scope_episode':
@@ -249245,10 +251535,30 @@ extension on _StringsJa {
         return '外部ID';
       case 'video_work_extras':
         return '特典映像';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'ジャンル';
       case 'video_work_keywords':
         return 'キーワード';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return '詳細メタデータはまだ取得されていません。ソースからこのソースを再試行し、作品を開き直してください。';
       case 'video_work_studios':
@@ -249328,8 +251638,6 @@ extension on _StringsJa {
             '${process}は重要なシステムプロセスです — Fushiでは終了しません。代わりにポートを変更してください。';
       case 'yomitan_port_kill_self_instance':
         return 'このプロセスは、このアプリの別のインスタンスです。';
-      case 'reader_font_weight':
-        return 'フォントの太さ';
       default:
         return null;
     }
@@ -251483,12 +253791,22 @@ extension on _StringsKo {
         return '인식할 수 없는 사전 형식';
       case 'discovery_all_sources':
         return '모든 소스';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return '다운로드에 추가됨';
       case 'discovery_empty':
         return '결과 없음';
       case 'discovery_enter_query_hint':
         return '키워드를 입력하여 검색';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return '전체';
       case 'discovery_game_type_mobile':
@@ -251499,6 +253817,12 @@ extension on _StringsKo {
         return '번역됨';
       case 'discovery_game_type_unlabelled':
         return '미분류';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return '오디오북';
       case 'discovery_kind_manga':
@@ -251507,6 +253831,12 @@ extension on _StringsKo {
         return '소설';
       case 'discovery_load_more':
         return '더 보기';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'OPDS 서버 추가';
       case 'discovery_opds_allow_http':
@@ -255009,6 +257339,8 @@ extension on _StringsKo {
         return '글꼴 크기';
       case 'reader_font_vpal':
         return 'VPAL (세로 대체)';
+      case 'reader_font_weight':
+        return '글꼴 굵기';
       case 'reader_furigana_hide':
         return '숨기기';
       case 'reader_furigana_mode':
@@ -257373,6 +259705,24 @@ extension on _StringsKo {
         return '재생 / 일시정지';
       case 'video_menu_subtitle_track':
         return '자막 트랙';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return '동영상 카드 애니메이션 형식';
       case 'video_mining_animated_format_hint':
@@ -258125,6 +260475,10 @@ extension on _StringsKo {
         return 'TMDB 영화';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB TV 시리즈';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'NFO 쓰기 정책';
       case 'video_source_scrape_pending_empty':
@@ -258159,6 +260513,8 @@ extension on _StringsKo {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL(Jikan 경유)을 기본 메타데이터 소스로 사용하고, TMDB를 대체 소스로 사용합니다.';
       case 'video_source_scrape_queue_cancel_all':
@@ -258347,6 +260703,28 @@ extension on _StringsKo {
         return '페어링된 기기의 자막';
       case 'video_subtitle_replay':
         return '이 자막 다시 재생';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return '컬렉션 전체';
       case 'video_subtitle_scope_episode':
@@ -258431,10 +260809,30 @@ extension on _StringsKo {
         return '외부 ID';
       case 'video_work_extras':
         return '부가 영상';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return '장르';
       case 'video_work_keywords':
         return '키워드';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return '상세 메타데이터가 아직 스크래핑되지 않았습니다. 소스에서 이 소스를 다시 시도한 후 작품을 다시 여세요.';
       case 'video_work_studios':
@@ -258514,8 +260912,6 @@ extension on _StringsKo {
             '${process}는 중요한 시스템 프로세스입니다. Fushi가 종료하지 않습니다. 대신 포트를 변경하세요.';
       case 'yomitan_port_kill_self_instance':
         return '이 프로세스는 이 앱의 다른 실행 중인 인스턴스입니다.';
-      case 'reader_font_weight':
-        return '글꼴 굵기';
       default:
         return null;
     }
@@ -260688,12 +263084,22 @@ extension on _StringsNl {
         return 'Woordenboekformaat niet herkend';
       case 'discovery_all_sources':
         return 'Alle bronnen';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Aan downloads toegevoegd';
       case 'discovery_empty':
         return 'Geen resultaten';
       case 'discovery_enter_query_hint':
         return 'Voer een zoekterm in';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Alle';
       case 'discovery_game_type_mobile':
@@ -260704,6 +263110,12 @@ extension on _StringsNl {
         return 'Vertaald';
       case 'discovery_game_type_unlabelled':
         return 'Zonder label';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Luisterboeken';
       case 'discovery_kind_manga':
@@ -260712,6 +263124,12 @@ extension on _StringsNl {
         return 'Romans';
       case 'discovery_load_more':
         return 'Meer laden';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'OPDS-server toevoegen';
       case 'discovery_opds_allow_http':
@@ -264231,6 +266649,8 @@ extension on _StringsNl {
         return 'Lettergrootte';
       case 'reader_font_vpal':
         return 'VPAL (vert. alt.)';
+      case 'reader_font_weight':
+        return 'Letterdikte';
       case 'reader_furigana_hide':
         return 'Verbergen';
       case 'reader_furigana_mode':
@@ -266615,6 +269035,24 @@ extension on _StringsNl {
         return 'Afspelen / Pauzeren';
       case 'video_menu_subtitle_track':
         return 'Ondertitelspoor';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Videokaart-animatieformaat';
       case 'video_mining_animated_format_hint':
@@ -267370,6 +269808,10 @@ extension on _StringsNl {
         return 'TMDB-film';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB-serie';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'NFO-schrijfbeleid';
       case 'video_source_scrape_pending_empty':
@@ -267404,6 +269846,8 @@ extension on _StringsNl {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (via Jikan) is de primaire bron voor metadata; TMDB is de terugvaloptie.';
       case 'video_source_scrape_queue_cancel_all':
@@ -267595,6 +270039,28 @@ extension on _StringsNl {
         return 'Ondertitel van gekoppeld apparaat';
       case 'video_subtitle_replay':
         return 'Deze regel opnieuw afspelen';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Hele verzameling';
       case 'video_subtitle_scope_episode':
@@ -267680,10 +270146,30 @@ extension on _StringsNl {
         return 'Externe ID\'s';
       case 'video_work_extras':
         return 'Extra\'s';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Genres';
       case 'video_work_keywords':
         return 'Trefwoorden';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Gedetailleerde metadata is nog niet gescraped. Probeer deze bron opnieuw vanuit Bronnen en heropen dan het werk.';
       case 'video_work_studios':
@@ -267766,8 +270252,6 @@ extension on _StringsNl {
             '${process} is een kritiek systeemproces — Fushi beëindigt het niet. Wijzig de poort.';
       case 'yomitan_port_kill_self_instance':
         return 'Dit proces is een andere draaiende instantie van deze app.';
-      case 'reader_font_weight':
-        return 'Letterdikte';
       default:
         return null;
     }
@@ -269940,12 +272424,22 @@ extension on _StringsPtBr {
         return 'Formato de dicionário não reconhecido';
       case 'discovery_all_sources':
         return 'Todas as fontes';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Adicionado aos downloads';
       case 'discovery_empty':
         return 'Sem resultados';
       case 'discovery_enter_query_hint':
         return 'Digite uma palavra-chave para buscar';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Todos';
       case 'discovery_game_type_mobile':
@@ -269956,6 +272450,12 @@ extension on _StringsPtBr {
         return 'Traduzidos';
       case 'discovery_game_type_unlabelled':
         return 'Sem rótulo';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Audiobooks';
       case 'discovery_kind_manga':
@@ -269964,6 +272464,12 @@ extension on _StringsPtBr {
         return 'Romances';
       case 'discovery_load_more':
         return 'Carregar mais';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'Adicionar servidor OPDS';
       case 'discovery_opds_allow_http':
@@ -273482,6 +275988,8 @@ extension on _StringsPtBr {
         return 'Tamanho da Fonte';
       case 'reader_font_vpal':
         return 'VPAL (alt. vertical)';
+      case 'reader_font_weight':
+        return 'Espessura da fonte';
       case 'reader_furigana_hide':
         return 'Ocultar';
       case 'reader_furigana_mode':
@@ -275864,6 +278372,24 @@ extension on _StringsPtBr {
         return 'Reproduzir / Pausar';
       case 'video_menu_subtitle_track':
         return 'Faixa de legenda';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Formato de animação do cartão de vídeo';
       case 'video_mining_animated_format_hint':
@@ -276618,6 +279144,10 @@ extension on _StringsPtBr {
         return 'Filme do TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Série do TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'Política de gravação NFO';
       case 'video_source_scrape_pending_empty':
@@ -276652,6 +279182,8 @@ extension on _StringsPtBr {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (via Jikan) é a fonte principal de metadados; TMDB é a alternativa.';
       case 'video_source_scrape_queue_cancel_all':
@@ -276842,6 +279374,28 @@ extension on _StringsPtBr {
         return 'Legenda do dispositivo pareado';
       case 'video_subtitle_replay':
         return 'Repetir esta linha';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Coleção inteira';
       case 'video_subtitle_scope_episode':
@@ -276927,10 +279481,30 @@ extension on _StringsPtBr {
         return 'IDs externos';
       case 'video_work_extras':
         return 'Extras';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Gêneros';
       case 'video_work_keywords':
         return 'Palavras-chave';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Metadados detalhados ainda não foram buscados. Tente novamente a busca desta fonte em Fontes e reabra a obra.';
       case 'video_work_studios':
@@ -277013,8 +279587,6 @@ extension on _StringsPtBr {
             '${process} é um processo crítico do sistema — o Fushi não vai encerrá-lo. Mude a porta.';
       case 'yomitan_port_kill_self_instance':
         return 'Este processo é outra instância deste app em execução.';
-      case 'reader_font_weight':
-        return 'Espessura da fonte';
       default:
         return null;
     }
@@ -279192,12 +281764,22 @@ extension on _StringsRu {
         return 'Формат словаря не распознан';
       case 'discovery_all_sources':
         return 'Все источники';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Добавлено в загрузки';
       case 'discovery_empty':
         return 'Нет результатов';
       case 'discovery_enter_query_hint':
         return 'Введите ключевое слово для поиска';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Все';
       case 'discovery_game_type_mobile':
@@ -279208,6 +281790,12 @@ extension on _StringsRu {
         return 'С переводом';
       case 'discovery_game_type_unlabelled':
         return 'Без метки';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Аудиокниги';
       case 'discovery_kind_manga':
@@ -279216,6 +281804,12 @@ extension on _StringsRu {
         return 'Ранобэ';
       case 'discovery_load_more':
         return 'Загрузить ещё';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'Добавить сервер OPDS';
       case 'discovery_opds_allow_http':
@@ -282736,6 +285330,8 @@ extension on _StringsRu {
         return 'Размер шрифта';
       case 'reader_font_vpal':
         return 'VPAL (верт. альт.)';
+      case 'reader_font_weight':
+        return 'Насыщенность шрифта';
       case 'reader_furigana_hide':
         return 'Скрыть';
       case 'reader_furigana_mode':
@@ -285118,6 +287714,24 @@ extension on _StringsRu {
         return 'Воспроизведение / Пауза';
       case 'video_menu_subtitle_track':
         return 'Дорожка субтитров';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Формат анимации видеокарточек';
       case 'video_mining_animated_format_hint':
@@ -285872,6 +288486,10 @@ extension on _StringsRu {
         return 'Фильм TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Сериал TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'Политика записи NFO';
       case 'video_source_scrape_pending_empty':
@@ -285906,6 +288524,8 @@ extension on _StringsRu {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (через Jikan) — основной источник метаданных; TMDB — резервный.';
       case 'video_source_scrape_queue_cancel_all':
@@ -286095,6 +288715,28 @@ extension on _StringsRu {
         return 'Субтитры сопряжённого устройства';
       case 'video_subtitle_replay':
         return 'Повторить эту строку';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Вся коллекция';
       case 'video_subtitle_scope_episode':
@@ -286180,10 +288822,30 @@ extension on _StringsRu {
         return 'Внешние ID';
       case 'video_work_extras':
         return 'Доп. материалы';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Жанры';
       case 'video_work_keywords':
         return 'Ключевые слова';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Подробные метаданные ещё не получены. Повторите получение для этого источника в разделе «Источники», затем откройте произведение заново.';
       case 'video_work_studios':
@@ -286266,8 +288928,6 @@ extension on _StringsRu {
             '${process} — критический системный процесс, Fushi не будет его завершать. Измените порт.';
       case 'yomitan_port_kill_self_instance':
         return 'Этот процесс — другой запущенный экземпляр данного приложения.';
-      case 'reader_font_weight':
-        return 'Насыщенность шрифта';
       default:
         return null;
     }
@@ -288430,12 +291090,22 @@ extension on _StringsTh {
         return 'ไม่สามารถรู้จำรูปแบบพจนานุกรม';
       case 'discovery_all_sources':
         return 'แหล่งทั้งหมด';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'เพิ่มในรายการดาวน์โหลดแล้ว';
       case 'discovery_empty':
         return 'ไม่มีผลลัพธ์';
       case 'discovery_enter_query_hint':
         return 'ป้อนคำค้นหา';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'ทั้งหมด';
       case 'discovery_game_type_mobile':
@@ -288446,6 +291116,12 @@ extension on _StringsTh {
         return 'แปลแล้ว';
       case 'discovery_game_type_unlabelled':
         return 'ไม่ได้ระบุ';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'หนังสือเสียง';
       case 'discovery_kind_manga':
@@ -288454,6 +291130,12 @@ extension on _StringsTh {
         return 'นิยาย';
       case 'discovery_load_more':
         return 'โหลดเพิ่มเติม';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'เพิ่มเซิร์ฟเวอร์ OPDS';
       case 'discovery_opds_allow_http':
@@ -291965,6 +294647,8 @@ extension on _StringsTh {
         return 'ขนาดฟอนต์';
       case 'reader_font_vpal':
         return 'VPAL (ตัวอักษรทดแทน)';
+      case 'reader_font_weight':
+        return 'น้ำหนักฟอนต์';
       case 'reader_furigana_hide':
         return 'ซ่อน';
       case 'reader_furigana_mode':
@@ -294342,6 +297026,24 @@ extension on _StringsTh {
         return 'เล่น / หยุดชั่วคราว';
       case 'video_menu_subtitle_track':
         return 'แทร็กคำบรรยาย';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'รูปแบบภาพเคลื่อนไหวการ์ดวิดีโอ';
       case 'video_mining_animated_format_hint':
@@ -295095,6 +297797,10 @@ extension on _StringsTh {
         return 'ภาพยนตร์ TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'ซีรีส์ TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'นโยบายการเขียน NFO';
       case 'video_source_scrape_pending_empty':
@@ -295129,6 +297835,8 @@ extension on _StringsTh {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (ผ่าน Jikan) เป็นแหล่งข้อมูลเมตาหลัก และใช้ TMDB เป็นแหล่งสำรอง';
       case 'video_source_scrape_queue_cancel_all':
@@ -295318,6 +298026,28 @@ extension on _StringsTh {
         return 'คำบรรยายจากอุปกรณ์ที่จับคู่';
       case 'video_subtitle_replay':
         return 'เล่นบรรทัดนี้ซ้ำ';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'ทั้งคอลเลกชัน';
       case 'video_subtitle_scope_episode':
@@ -295402,10 +298132,30 @@ extension on _StringsTh {
         return 'ID ภายนอก';
       case 'video_work_extras':
         return 'เนื้อหาเพิ่มเติม';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'ประเภท';
       case 'video_work_keywords':
         return 'คีย์เวิร์ด';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'ข้อมูลเมตาโดยละเอียดยังไม่ได้ถูกดึง ลองดึงข้อมูลแหล่งนี้อีกครั้งจากแหล่ง แล้วเปิดผลงานใหม่';
       case 'video_work_studios':
@@ -295488,8 +298238,6 @@ extension on _StringsTh {
             '${process} เป็นโปรเซสระบบที่สำคัญ — Fushi จะไม่จบโปรเซสนี้ เปลี่ยนพอร์ตแทน';
       case 'yomitan_port_kill_self_instance':
         return 'โปรเซสนี้เป็นอินสแตนซ์อื่นของแอปนี้ที่กำลังทำงานอยู่';
-      case 'reader_font_weight':
-        return 'น้ำหนักฟอนต์';
       default:
         return null;
     }
@@ -297661,12 +300409,22 @@ extension on _StringsTr {
         return 'Sözlük biçimi tanınamadı';
       case 'discovery_all_sources':
         return 'Tüm kaynaklar';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'İndirmelere eklendi';
       case 'discovery_empty':
         return 'Sonuç bulunamadı';
       case 'discovery_enter_query_hint':
         return 'Aramak için bir anahtar kelime girin';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Tümü';
       case 'discovery_game_type_mobile':
@@ -297677,6 +300435,12 @@ extension on _StringsTr {
         return 'Çevrilmiş';
       case 'discovery_game_type_unlabelled':
         return 'Etiketsiz';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Sesli kitaplar';
       case 'discovery_kind_manga':
@@ -297685,6 +300449,12 @@ extension on _StringsTr {
         return 'Romanlar';
       case 'discovery_load_more':
         return 'Daha fazla yükle';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'OPDS sunucusu ekle';
       case 'discovery_opds_allow_http':
@@ -301198,6 +303968,8 @@ extension on _StringsTr {
         return 'Yazı tipi boyutu';
       case 'reader_font_vpal':
         return 'VPAL (dikey alt.)';
+      case 'reader_font_weight':
+        return 'Yazı tipi kalınlığı';
       case 'reader_furigana_hide':
         return 'Gizle';
       case 'reader_furigana_mode':
@@ -303577,6 +306349,24 @@ extension on _StringsTr {
         return 'Oynat / Duraklat';
       case 'video_menu_subtitle_track':
         return 'Altyazı izi';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Video kartı animasyon formatı';
       case 'video_mining_animated_format_hint':
@@ -304332,6 +307122,10 @@ extension on _StringsTr {
         return 'TMDB filmi';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB dizisi';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'NFO yazma politikası';
       case 'video_source_scrape_pending_empty':
@@ -304366,6 +307160,8 @@ extension on _StringsTr {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (Jikan üzerinden) birincil meta veri kaynağıdır; TMDB yedek kaynaktır.';
       case 'video_source_scrape_queue_cancel_all':
@@ -304555,6 +307351,28 @@ extension on _StringsTr {
         return 'Eşleştirilmiş cihaz altyazısı';
       case 'video_subtitle_replay':
         return 'Bu satırı tekrar oynat';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Tüm koleksiyon';
       case 'video_subtitle_scope_episode':
@@ -304640,10 +307458,30 @@ extension on _StringsTr {
         return 'Harici kimlikler';
       case 'video_work_extras':
         return 'Ekstralar';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Türler';
       case 'video_work_keywords':
         return 'Anahtar kelimeler';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Ayrıntılı meta veri henüz taranmadı. Bu kaynağı Kaynaklar\'dan yeniden tarayın, ardından eseri tekrar açın.';
       case 'video_work_studios':
@@ -304726,8 +307564,6 @@ extension on _StringsTr {
             '${process} kritik bir sistem işlemidir — Fushi onu sonlandırmaz. Bunun yerine portu değiştirin.';
       case 'yomitan_port_kill_self_instance':
         return 'Bu işlem, uygulamanın çalışan başka bir örneğidir.';
-      case 'reader_font_weight':
-        return 'Yazı tipi kalınlığı';
       default:
         return null;
     }
@@ -306895,12 +309731,22 @@ extension on _StringsVi {
         return 'Không nhận dạng được định dạng từ điển';
       case 'discovery_all_sources':
         return 'Tất cả nguồn';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return 'Đã thêm vào danh sách tải xuống';
       case 'discovery_empty':
         return 'Không có kết quả';
       case 'discovery_enter_query_hint':
         return 'Nhập từ khóa để tìm kiếm';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return 'Tất cả';
       case 'discovery_game_type_mobile':
@@ -306911,6 +309757,12 @@ extension on _StringsVi {
         return 'Đã dịch';
       case 'discovery_game_type_unlabelled':
         return 'Chưa gắn nhãn';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return 'Sách nói';
       case 'discovery_kind_manga':
@@ -306919,6 +309771,12 @@ extension on _StringsVi {
         return 'Tiểu thuyết';
       case 'discovery_load_more':
         return 'Tải thêm';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return 'Thêm máy chủ OPDS';
       case 'discovery_opds_allow_http':
@@ -310432,6 +313290,8 @@ extension on _StringsVi {
         return 'Cỡ chữ';
       case 'reader_font_vpal':
         return 'VPAL (thay thế dọc)';
+      case 'reader_font_weight':
+        return 'Độ đậm phông chữ';
       case 'reader_furigana_hide':
         return 'Ẩn';
       case 'reader_furigana_mode':
@@ -312812,6 +315672,24 @@ extension on _StringsVi {
         return 'Phát / Tạm dừng';
       case 'video_menu_subtitle_track':
         return 'Bản phụ đề';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return 'Định dạng hoạt ảnh thẻ video';
       case 'video_mining_animated_format_hint':
@@ -313566,6 +316444,10 @@ extension on _StringsVi {
         return 'Phim điện ảnh TMDB';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'Phim truyền hình TMDB';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'Chính sách ghi NFO';
       case 'video_source_scrape_pending_empty':
@@ -313600,6 +316482,8 @@ extension on _StringsVi {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL (qua Jikan) là nguồn siêu dữ liệu chính; TMDB là nguồn dự phòng.';
       case 'video_source_scrape_queue_cancel_all':
@@ -313788,6 +316672,28 @@ extension on _StringsVi {
         return 'Phụ đề từ thiết bị ghép nối';
       case 'video_subtitle_replay':
         return 'Phát lại dòng này';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return 'Toàn bộ bộ sưu tập';
       case 'video_subtitle_scope_episode':
@@ -313872,10 +316778,30 @@ extension on _StringsVi {
         return 'ID bên ngoài';
       case 'video_work_extras':
         return 'Phần thêm';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return 'Thể loại';
       case 'video_work_keywords':
         return 'Từ khóa';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return 'Metadata chi tiết chưa được quét. Thử lại nguồn này từ Nguồn, sau đó mở lại tác phẩm.';
       case 'video_work_studios':
@@ -313958,8 +316884,6 @@ extension on _StringsVi {
             '${process} là tiến trình hệ thống quan trọng — Fushi sẽ không kết thúc nó. Hãy đổi cổng thay vì vậy.';
       case 'yomitan_port_kill_self_instance':
         return 'Tiến trình này là một phiên bản đang chạy khác của ứng dụng.';
-      case 'reader_font_weight':
-        return 'Độ đậm phông chữ';
       default:
         return null;
     }
@@ -316100,12 +319024,22 @@ extension on _StringsZhCn {
         return '无法识别的词典格式';
       case 'discovery_all_sources':
         return '全部源';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return '信任发布者';
+      case 'discovery_content_hint_manga':
+        return '疑似漫画';
       case 'discovery_download_queued':
         return '已加入下载';
       case 'discovery_empty':
         return '无结果';
       case 'discovery_enter_query_hint':
         return '输入关键词搜索';
+      case 'discovery_filter_hide_suspected_manga':
+        return '隐藏疑似漫画';
+      case 'discovery_filter_hide_zero_seeders':
+        return '隐藏无人做种';
       case 'discovery_game_type_all':
         return '全部';
       case 'discovery_game_type_mobile':
@@ -316116,6 +319050,12 @@ extension on _StringsZhCn {
         return '熟肉';
       case 'discovery_game_type_unlabelled':
         return '未标注';
+      case 'discovery_hidden_show':
+        return '显示';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '已隐藏 ${n} 条疑似漫画';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '已隐藏 ${n} 条无人做种';
       case 'discovery_kind_audiobook':
         return '有声书';
       case 'discovery_kind_manga':
@@ -316124,6 +319064,12 @@ extension on _StringsZhCn {
         return '小说';
       case 'discovery_load_more':
         return '加载更多';
+      case 'discovery_nyaa_filter_all':
+        return '全部';
+      case 'discovery_nyaa_filter_no_remakes':
+        return '排除 remake';
+      case 'discovery_nyaa_filter_trusted_only':
+        return '仅信任发布者';
       case 'discovery_opds_add':
         return '添加 OPDS 服务器';
       case 'discovery_opds_allow_http':
@@ -319620,6 +322566,8 @@ extension on _StringsZhCn {
         return '字体大小';
       case 'reader_font_vpal':
         return 'VPAL 纵排替代';
+      case 'reader_font_weight':
+        return '字体粗细';
       case 'reader_furigana_hide':
         return '隐藏';
       case 'reader_furigana_mode':
@@ -321974,6 +324922,24 @@ extension on _StringsZhCn {
         return '播放 / 暂停';
       case 'video_menu_subtitle_track':
         return '字幕轨';
+      case 'video_metadata_identifier_words':
+        return '识别词';
+      case 'video_metadata_identifier_words_empty':
+        return '未配置';
+      case 'video_metadata_identifier_words_hint':
+        return '识别前先改写、屏蔽标题或偏移集号';
+      case 'video_metadata_identifier_words_invalid':
+        return '无效规则';
+      case 'video_metadata_identifier_words_syntax':
+        return '一行一条规则，# 开头是注释。屏蔽：直接写正则。替换：A => B。集偏移：前 <> 后 >> EP+1。组合：A => B && 前 <> 后 >> EP+1。';
+      case 'video_metadata_primary_provider':
+        return '主资料源';
+      case 'video_metadata_primary_provider_hint':
+        return '主源没有唯一精确命中或不可用时，自动用另一个源兜底。';
+      case 'video_metadata_provider_mal':
+        return 'MAL（经 Jikan）';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return '视频制卡动图格式';
       case 'video_mining_animated_format_hint':
@@ -322725,6 +325691,10 @@ extension on _StringsZhCn {
         return 'TMDB 电影';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB 电视剧';
+      case 'video_source_scrape_metadata_locale':
+        return '资料语言';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 语言标签，如 ja 或 zh-CN。留空 = 跟随全局资料语言。';
       case 'video_source_scrape_nfo_policy':
         return 'NFO 写入策略';
       case 'video_source_scrape_pending_empty':
@@ -322759,6 +325729,8 @@ extension on _StringsZhCn {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return '跟随全局默认';
       case 'video_source_scrape_provider_policy':
         return 'MAL（经 Jikan）为主要资料源，TMDB 兜底。';
       case 'video_source_scrape_queue_cancel_all':
@@ -322943,6 +325915,26 @@ extension on _StringsZhCn {
         return '配对设备字幕';
       case 'video_subtitle_replay':
         return '重播本句';
+      case 'video_subtitle_retime_action':
+        return '用语音模型重定时';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) => '已重定时 ${matched}/${total} 句（${percent}%），中位偏移 ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) => '已剔除 ${count} 条格式异常的字幕';
+      case 'video_subtitle_retime_failed':
+        return '字幕重定时失败';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            '只有 ${percent}% 的句子对上了。检查语音语言是否选对、这份字幕是不是这一集的。';
+      case 'video_subtitle_retime_no_track':
+        return '先选一条字幕轨';
+      case 'video_subtitle_retime_running':
+        return '正在用语音模型重定时字幕…';
       case 'video_subtitle_scope_collection':
         return '整个合集';
       case 'video_subtitle_scope_episode':
@@ -323027,10 +326019,30 @@ extension on _StringsZhCn {
         return '外部 ID';
       case 'video_work_extras':
         return '花絮';
+      case 'video_work_field_backdrop':
+        return '背景图';
+      case 'video_work_field_cover':
+        return '封面';
+      case 'video_work_field_original_title':
+        return '原名';
+      case 'video_work_field_overview':
+        return '简介';
+      case 'video_work_field_rating':
+        return '评分';
+      case 'video_work_field_tagline':
+        return '标语';
+      case 'video_work_field_title':
+        return '标题';
       case 'video_work_genres':
         return '类型';
       case 'video_work_keywords':
         return '标签';
+      case 'video_work_locked_fields':
+        return '锁定字段';
+      case 'video_work_locked_fields_hint':
+        return '锁定的字段在下次刮削该作品时保留当前值。';
+      case 'video_work_locked_fields_saved':
+        return '字段锁已保存';
       case 'video_work_metadata_pending':
         return '尚未刮削详细资料。请在「来源」中重试此来源，然后重新打开作品。';
       case 'video_work_studios':
@@ -323108,8 +326120,6 @@ extension on _StringsZhCn {
             '${process} 是关键系统进程，Fushi 不会结束它；请改用其他端口。';
       case 'yomitan_port_kill_self_instance':
         return '该进程是本应用的另一个正在运行的实例。';
-      case 'reader_font_weight':
-        return '字体粗细';
       default:
         return null;
     }
@@ -325255,12 +328265,22 @@ extension on _StringsZhHk {
         return '無法識別的詞典格式';
       case 'discovery_all_sources':
         return '全部源';
+      case 'discovery_badge_remake':
+        return 'Remake';
+      case 'discovery_badge_trusted':
+        return 'Trusted';
+      case 'discovery_content_hint_manga':
+        return 'Suspected manga';
       case 'discovery_download_queued':
         return '已加入下載';
       case 'discovery_empty':
         return '無結果';
       case 'discovery_enter_query_hint':
         return '輸入關鍵詞搜索';
+      case 'discovery_filter_hide_suspected_manga':
+        return 'Hide suspected manga';
+      case 'discovery_filter_hide_zero_seeders':
+        return 'Hide unseeded';
       case 'discovery_game_type_all':
         return '全部';
       case 'discovery_game_type_mobile':
@@ -325271,6 +328291,12 @@ extension on _StringsZhHk {
         return '熟肉';
       case 'discovery_game_type_unlabelled':
         return '未標註';
+      case 'discovery_hidden_show':
+        return 'Show';
+      case 'discovery_hidden_suspected_manga_count':
+        return ({required Object n}) => '${n} suspected manga hidden';
+      case 'discovery_hidden_zero_seeders_count':
+        return ({required Object n}) => '${n} unseeded hidden';
       case 'discovery_kind_audiobook':
         return '有聲書';
       case 'discovery_kind_manga':
@@ -325279,6 +328305,12 @@ extension on _StringsZhHk {
         return '小說';
       case 'discovery_load_more':
         return '加載更多';
+      case 'discovery_nyaa_filter_all':
+        return 'All';
+      case 'discovery_nyaa_filter_no_remakes':
+        return 'No remakes';
+      case 'discovery_nyaa_filter_trusted_only':
+        return 'Trusted only';
       case 'discovery_opds_add':
         return '新增 OPDS 伺服器';
       case 'discovery_opds_allow_http':
@@ -328777,6 +331809,8 @@ extension on _StringsZhHk {
         return '字型大小';
       case 'reader_font_vpal':
         return 'VPAL 直排替代';
+      case 'reader_font_weight':
+        return '字型粗細';
       case 'reader_furigana_hide':
         return '隱藏';
       case 'reader_furigana_mode':
@@ -331133,6 +334167,24 @@ extension on _StringsZhHk {
         return '播放／暫停';
       case 'video_menu_subtitle_track':
         return '字幕軌';
+      case 'video_metadata_identifier_words':
+        return 'Identifier words';
+      case 'video_metadata_identifier_words_empty':
+        return 'Not configured';
+      case 'video_metadata_identifier_words_hint':
+        return 'Rewrite, block or offset titles before they are matched';
+      case 'video_metadata_identifier_words_invalid':
+        return 'Invalid rules';
+      case 'video_metadata_identifier_words_syntax':
+        return 'One rule per line, # starts a comment. Block: a regular expression. Replace: A => B. Episode offset: front <> back >> EP+1. Combined: A => B && front <> back >> EP+1.';
+      case 'video_metadata_primary_provider':
+        return 'Primary metadata source';
+      case 'video_metadata_primary_provider_hint':
+        return 'The other source is used as a fallback when the primary source has no exact match or is unavailable.';
+      case 'video_metadata_provider_mal':
+        return 'MAL (via Jikan)';
+      case 'video_metadata_provider_tmdb':
+        return 'TMDB';
       case 'video_mining_animated_format':
         return '影片製卡動圖格式';
       case 'video_mining_animated_format_hint':
@@ -331884,6 +334936,10 @@ extension on _StringsZhHk {
         return 'TMDB 電影';
       case 'video_source_scrape_manual_tmdb_tv':
         return 'TMDB 電視劇';
+      case 'video_source_scrape_metadata_locale':
+        return 'Metadata language';
+      case 'video_source_scrape_metadata_locale_hint':
+        return 'BCP-47 language tag such as ja or zh-CN. Leave empty to follow the global metadata language.';
       case 'video_source_scrape_nfo_policy':
         return 'NFO 寫入策略';
       case 'video_source_scrape_pending_empty':
@@ -331918,6 +334974,8 @@ extension on _StringsZhHk {
           required Object current,
           required Object total,
         }) => '${phase} · ${current}/${total}';
+      case 'video_source_scrape_provider_follow_global':
+        return 'Follow global default';
       case 'video_source_scrape_provider_policy':
         return 'MAL（經 Jikan）為主要資料來源，TMDB 作後備。';
       case 'video_source_scrape_queue_cancel_all':
@@ -332102,6 +335160,28 @@ extension on _StringsZhHk {
         return '配對裝置字幕';
       case 'video_subtitle_replay':
         return '重播本句';
+      case 'video_subtitle_retime_action':
+        return 'Retime with speech model';
+      case 'video_subtitle_retime_done':
+        return ({
+          required Object matched,
+          required Object total,
+          required Object percent,
+          required Object ms,
+        }) =>
+            'Retimed ${matched}/${total} lines (${percent}%), median shift ${ms} ms';
+      case 'video_subtitle_retime_dropped':
+        return ({required Object count}) =>
+            '${count} malformed lines were left out';
+      case 'video_subtitle_retime_failed':
+        return 'Subtitle retiming failed';
+      case 'video_subtitle_retime_low_match':
+        return ({required Object percent}) =>
+            'Only ${percent}% of lines matched. Check the spoken language and whether this subtitle belongs to this episode.';
+      case 'video_subtitle_retime_no_track':
+        return 'Load a subtitle track first';
+      case 'video_subtitle_retime_running':
+        return 'Retiming subtitles with the speech model…';
       case 'video_subtitle_scope_collection':
         return '整個合集';
       case 'video_subtitle_scope_episode':
@@ -332186,10 +335266,30 @@ extension on _StringsZhHk {
         return '外部 ID';
       case 'video_work_extras':
         return '花絮';
+      case 'video_work_field_backdrop':
+        return 'Backdrop';
+      case 'video_work_field_cover':
+        return 'Cover';
+      case 'video_work_field_original_title':
+        return 'Original title';
+      case 'video_work_field_overview':
+        return 'Overview';
+      case 'video_work_field_rating':
+        return 'Rating';
+      case 'video_work_field_tagline':
+        return 'Tagline';
+      case 'video_work_field_title':
+        return 'Title';
       case 'video_work_genres':
         return '類型';
       case 'video_work_keywords':
         return '標簽';
+      case 'video_work_locked_fields':
+        return 'Locked fields';
+      case 'video_work_locked_fields_hint':
+        return 'Locked fields keep their current values the next time this work is scraped.';
+      case 'video_work_locked_fields_saved':
+        return 'Field locks saved';
       case 'video_work_metadata_pending':
         return '尚未刮取詳細資料。請在「來源」中重試此來源，然後重新開啟作品。';
       case 'video_work_studios':
@@ -332267,8 +335367,6 @@ extension on _StringsZhHk {
             '${process} 是關鍵系統進程，Fushi 不會結束它；請改用其他端口。';
       case 'yomitan_port_kill_self_instance':
         return '該進程是本應用的另一個正在運行的實例。';
-      case 'reader_font_weight':
-        return '字型粗細';
       default:
         return null;
     }

@@ -742,7 +742,7 @@ class FushiDatabase extends _$FushiDatabase
   final bool _isMainProcess;
 
   @override
-  int get schemaVersion => 98;
+  int get schemaVersion => 99;
 
   /// BUG-2300: version 97 also exists in a parallel migration history without
   /// the v96 expansion column. Reuse the additive migration on open so a
@@ -3152,6 +3152,27 @@ class FushiDatabase extends _$FushiDatabase
           await m.addColumn(
             mediaCollections,
             mediaCollections.sourceFolderPath,
+          );
+        }
+      }
+      if (from < 99) {
+        // 刮削 C 二期：来源级资料语言覆盖 + 作品级字段锁。两列都是可空
+        // 文本，NULL = 沿用既有行为（跟随全局 locale / 无锁），存量库无需回填。
+        if (await _tableExists('video_source_scrape_settings') &&
+            !await _columnExists(
+              'video_source_scrape_settings',
+              'metadata_locale',
+            )) {
+          await m.addColumn(
+            videoSourceScrapeSettings,
+            videoSourceScrapeSettings.metadataLocale,
+          );
+        }
+        if (await _tableExists('video_metadata_works') &&
+            !await _columnExists('video_metadata_works', 'locked_fields')) {
+          await m.addColumn(
+            videoMetadataWorks,
+            videoMetadataWorks.lockedFields,
           );
         }
       }

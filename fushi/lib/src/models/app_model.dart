@@ -4442,6 +4442,8 @@ class AppModel with ChangeNotifier {
         prefsRepo,
         resolvedTmdbApiKey: resolveTmdbApiKey(configuredTmdbKey),
       ),
+      // 下载导入后的刮削同样走离线标题索引 + Fribb id 接力（默认关是为了单测不联网）。
+      enableOfflineTitleIndex: true,
       // 刮削完成 → 给仍缺字幕的视频补字幕。刮削是全仓唯一解析出规范身份
       // （AniDB 主身份 + TMDB/AniList crossref + 原名）的地方，而字幕准确率几乎完全取决于身份准不准
       // ——不接这一刀，播放页只能拿文件名里的中文译名去 AniList 现猜。
@@ -4699,6 +4701,11 @@ class AppModel with ChangeNotifier {
           DiscoveryMediaKind.audiobook: '2_0',
         },
         client: NyaaClient(),
+        // 每次请求按当前偏好取：源实例常驻，偏好可随时改。偏好未就绪
+        // （早一帧打开发现页）时用默认「全部」。
+        qualityFilter: () => NyaaQualityFilter.fromIndex(
+          isPreferencesReady ? prefsRepo.discoveryNyaaQualityFilter : 0,
+        ),
       ),
       NyaaDiscoverySource(
         id: 'sukebei',
