@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77248 (4544 per locale)
+/// Strings: 77316 (4548 per locale)
 ///
-/// Built on 2026-09-09 at 09:38 UTC
+/// Built on 2026-09-09 at 10:09 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6305,6 +6305,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This collection isn\'t in any local video source\'s scrape plan';
   String get collection_rescrape_started => 'Rescrape queued';
   String get collection_rescrape_failed => 'Rescrape failed';
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  String download_batch_failed({required Object n}) => '${n} failed';
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -16982,6 +16988,16 @@ class _StringsAr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -27886,6 +27902,16 @@ class _StringsDe extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -38844,6 +38870,16 @@ class _StringsEs extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -49836,6 +49872,16 @@ class _StringsFr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -60630,6 +60676,16 @@ class _StringsId extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -71516,6 +71572,16 @@ class _StringsIt extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -81783,6 +81849,16 @@ class _StringsJa extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -92060,6 +92136,16 @@ class _StringsKo extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -102903,6 +102989,16 @@ class _StringsNl extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -113799,6 +113895,16 @@ class _StringsPtBr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -124672,6 +124778,16 @@ class _StringsRu extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -135345,6 +135461,16 @@ class _StringsTh extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -146134,6 +146260,16 @@ class _StringsTr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -156894,6 +157030,16 @@ class _StringsVi extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 // Path: <root>
@@ -166776,6 +166922,14 @@ class _StringsZhCn extends _StringsEn {
   String get collection_rescrape_started => '已开始重新刮削';
   @override
   String get collection_rescrape_failed => '重新刮削失败';
+  @override
+  String download_batch_done({required Object n}) => '已处理 ${n} 项';
+  @override
+  String download_batch_unsupported({required Object n}) => '${n} 项不支持此操作';
+  @override
+  String download_batch_failed({required Object n}) => '${n} 项失败';
+  @override
+  String download_batch_delete_confirm({required Object n}) => '删除 ${n} 个下载任务？';
 }
 
 // Path: <root>
@@ -176728,6 +176882,16 @@ class _StringsZhHk extends _StringsEn {
   String get collection_rescrape_started => '已開始重新刮削';
   @override
   String get collection_rescrape_failed => '重新刮削失敗';
+  @override
+  String download_batch_done({required Object n}) => '${n} task(s) processed';
+  @override
+  String download_batch_unsupported({required Object n}) =>
+      '${n} skipped (not supported)';
+  @override
+  String download_batch_failed({required Object n}) => '${n} failed';
+  @override
+  String download_batch_delete_confirm({required Object n}) =>
+      'Delete ${n} download task(s)?';
 }
 
 /// Flat map(s) containing all translations.
@@ -186077,6 +186241,14 @@ extension on _StringsEn {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -195421,6 +195593,14 @@ extension on _StringsAr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -204810,6 +204990,14 @@ extension on _StringsDe {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -214190,6 +214378,14 @@ extension on _StringsEs {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -223579,6 +223775,14 @@ extension on _StringsFr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -232939,6 +233143,14 @@ extension on _StringsId {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -242321,6 +242533,14 @@ extension on _StringsIt {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -251630,6 +251850,14 @@ extension on _StringsJa {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -260943,6 +261171,14 @@ extension on _StringsKo {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -270318,6 +270554,14 @@ extension on _StringsNl {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -279688,6 +279932,14 @@ extension on _StringsPtBr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -289065,6 +289317,14 @@ extension on _StringsRu {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -298414,6 +298674,14 @@ extension on _StringsTh {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -307778,6 +308046,14 @@ extension on _StringsTr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -317136,6 +317412,14 @@ extension on _StringsVi {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
@@ -326412,6 +326696,14 @@ extension on _StringsZhCn {
         return '已开始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失败';
+      case 'download_batch_done':
+        return ({required Object n}) => '已处理 ${n} 项';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} 项不支持此操作';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} 项失败';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => '删除 ${n} 个下载任务？';
       default:
         return null;
     }
@@ -335699,6 +335991,14 @@ extension on _StringsZhHk {
         return '已開始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失敗';
+      case 'download_batch_done':
+        return ({required Object n}) => '${n} task(s) processed';
+      case 'download_batch_unsupported':
+        return ({required Object n}) => '${n} skipped (not supported)';
+      case 'download_batch_failed':
+        return ({required Object n}) => '${n} failed';
+      case 'download_batch_delete_confirm':
+        return ({required Object n}) => 'Delete ${n} download task(s)?';
       default:
         return null;
     }
