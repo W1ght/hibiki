@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 76874 (4522 per locale)
 ///
-/// Built on 2026-09-08 at 20:15 UTC
+/// Built on 2026-09-09 at 05:15 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2964,7 +2964,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_discovery_section_latest_finished => 'Recently completed';
   String get manga_discovery_section_popular => 'Popular';
   String get manga_discovery_section_top_rated => 'Top rated';
-  String get manga_discovery_section_trending => 'Trending';
   String manga_discovery_source_popular({required Object source}) =>
       'Popular on ${source}';
   String get manga_discovery_sources_browse => 'Browse a source';
@@ -6270,6 +6269,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_work_field_rating => 'Rating';
   String get video_work_field_cover => 'Cover';
   String get video_work_field_backdrop => 'Backdrop';
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -11112,8 +11112,6 @@ class _StringsAr extends _StringsEn {
   String get manga_discovery_section_popular => 'شائع';
   @override
   String get manga_discovery_section_top_rated => 'الأعلى تقييماً';
-  @override
-  String get manga_discovery_section_trending => 'رائج';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'شائع على ${source}';
@@ -16890,6 +16888,8 @@ class _StringsAr extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -21832,8 +21832,6 @@ class _StringsDe extends _StringsEn {
   String get manga_discovery_section_popular => 'Beliebt';
   @override
   String get manga_discovery_section_top_rated => 'Bestbewertet';
-  @override
-  String get manga_discovery_section_trending => 'Im Trend';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Beliebt auf ${source}';
@@ -27737,6 +27735,8 @@ class _StringsDe extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -32703,8 +32703,6 @@ class _StringsEs extends _StringsEn {
   String get manga_discovery_section_popular => 'Popular';
   @override
   String get manga_discovery_section_top_rated => 'Mejor puntuados';
-  @override
-  String get manga_discovery_section_trending => 'Tendencia';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Popular en ${source}';
@@ -38637,6 +38635,8 @@ class _StringsEs extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -43613,8 +43613,6 @@ class _StringsFr extends _StringsEn {
   String get manga_discovery_section_popular => 'Populaires';
   @override
   String get manga_discovery_section_top_rated => 'Mieux notés';
-  @override
-  String get manga_discovery_section_trending => 'Tendances';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Populaire sur ${source}';
@@ -49571,6 +49569,8 @@ class _StringsFr extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -54462,8 +54462,6 @@ class _StringsId extends _StringsEn {
   String get manga_discovery_section_popular => 'Populer';
   @override
   String get manga_discovery_section_top_rated => 'Rating tertinggi';
-  @override
-  String get manga_discovery_section_trending => 'Trending';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Populer di ${source}';
@@ -60308,6 +60306,8 @@ class _StringsId extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -65236,8 +65236,6 @@ class _StringsIt extends _StringsEn {
   String get manga_discovery_section_popular => 'Popolari';
   @override
   String get manga_discovery_section_top_rated => 'Più votati';
-  @override
-  String get manga_discovery_section_trending => 'Di tendenza';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Popolari su ${source}';
@@ -71136,6 +71134,8 @@ class _StringsIt extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -75802,8 +75802,6 @@ class _StringsJa extends _StringsEn {
   String get manga_discovery_section_popular => '人気';
   @override
   String get manga_discovery_section_top_rated => '高評価';
-  @override
-  String get manga_discovery_section_trending => 'トレンド';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source}で人気';
@@ -81346,6 +81344,8 @@ class _StringsJa extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -86009,8 +86009,6 @@ class _StringsKo extends _StringsEn {
   String get manga_discovery_section_popular => '인기';
   @override
   String get manga_discovery_section_top_rated => '최고 평점';
-  @override
-  String get manga_discovery_section_trending => '트렌딩';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source}에서 인기';
@@ -91566,6 +91564,8 @@ class _StringsKo extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -96474,8 +96474,6 @@ class _StringsNl extends _StringsEn {
   String get manga_discovery_section_popular => 'Populair';
   @override
   String get manga_discovery_section_top_rated => 'Hoogst beoordeeld';
-  @override
-  String get manga_discovery_section_trending => 'Trending';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Populair op ${source}';
@@ -102352,6 +102350,8 @@ class _StringsNl extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -107288,8 +107288,6 @@ class _StringsPtBr extends _StringsEn {
   String get manga_discovery_section_popular => 'Popular';
   @override
   String get manga_discovery_section_top_rated => 'Mais bem avaliados';
-  @override
-  String get manga_discovery_section_trending => 'Em alta';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Popular em ${source}';
@@ -113190,6 +113188,8 @@ class _StringsPtBr extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -118101,8 +118101,6 @@ class _StringsRu extends _StringsEn {
   String get manga_discovery_section_popular => 'Популярное';
   @override
   String get manga_discovery_section_top_rated => 'Лучшие по оценкам';
-  @override
-  String get manga_discovery_section_trending => 'В тренде';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Популярное на ${source}';
@@ -124006,6 +124004,8 @@ class _StringsRu extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -128836,8 +128836,6 @@ class _StringsTh extends _StringsEn {
   String get manga_discovery_section_popular => 'ยอดนิยม';
   @override
   String get manga_discovery_section_top_rated => 'คะแนนสูงสุด';
-  @override
-  String get manga_discovery_section_trending => 'กำลังมาแรง';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'ยอดนิยมบน ${source}';
@@ -134622,6 +134620,8 @@ class _StringsTh extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -139514,8 +139514,6 @@ class _StringsTr extends _StringsEn {
   String get manga_discovery_section_popular => 'Popüler';
   @override
   String get manga_discovery_section_top_rated => 'En yüksek puanlı';
-  @override
-  String get manga_discovery_section_trending => 'Trend';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source} üzerinde popüler';
@@ -145354,6 +145352,8 @@ class _StringsTr extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -150241,8 +150241,6 @@ class _StringsVi extends _StringsEn {
   String get manga_discovery_section_popular => 'Phổ biến';
   @override
   String get manga_discovery_section_top_rated => 'Đánh giá cao nhất';
-  @override
-  String get manga_discovery_section_trending => 'Thịnh hành';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       'Phổ biến trên ${source}';
@@ -156057,6 +156055,8 @@ class _StringsVi extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 // Path: <root>
@@ -160554,8 +160554,6 @@ class _StringsZhCn extends _StringsEn {
   String get manga_discovery_section_popular => '热门';
   @override
   String get manga_discovery_section_top_rated => '高分';
-  @override
-  String get manga_discovery_section_trending => '趋势';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source} · 热门';
@@ -165890,6 +165888,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_work_field_cover => '封面';
   @override
   String get video_work_field_backdrop => '背景图';
+  @override
+  String get manga_discovery_section_publishing => '连载热门';
 }
 
 // Path: <root>
@@ -170415,8 +170415,6 @@ class _StringsZhHk extends _StringsEn {
   String get manga_discovery_section_popular => '熱門';
   @override
   String get manga_discovery_section_top_rated => '高分';
-  @override
-  String get manga_discovery_section_trending => '趨勢';
   @override
   String manga_discovery_source_popular({required Object source}) =>
       '${source} · 熱門';
@@ -175788,6 +175786,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_work_field_cover => 'Cover';
   @override
   String get video_work_field_backdrop => 'Backdrop';
+  @override
+  String get manga_discovery_section_publishing => 'Popular publishing manga';
 }
 
 /// Flat map(s) containing all translations.
@@ -180017,8 +180017,6 @@ extension on _StringsEn {
         return 'Popular';
       case 'manga_discovery_section_top_rated':
         return 'Top rated';
-      case 'manga_discovery_section_trending':
-        return 'Trending';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Popular on ${source}';
       case 'manga_discovery_sources_browse':
@@ -185092,6 +185090,8 @@ extension on _StringsEn {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -189318,8 +189318,6 @@ extension on _StringsAr {
         return 'شائع';
       case 'manga_discovery_section_top_rated':
         return 'الأعلى تقييماً';
-      case 'manga_discovery_section_trending':
-        return 'رائج';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'شائع على ${source}';
       case 'manga_discovery_sources_browse':
@@ -194391,6 +194389,8 @@ extension on _StringsAr {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -198640,8 +198640,6 @@ extension on _StringsDe {
         return 'Beliebt';
       case 'manga_discovery_section_top_rated':
         return 'Bestbewertet';
-      case 'manga_discovery_section_trending':
-        return 'Im Trend';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Beliebt auf ${source}';
       case 'manga_discovery_sources_browse':
@@ -203735,6 +203733,8 @@ extension on _StringsDe {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -207977,8 +207977,6 @@ extension on _StringsEs {
         return 'Popular';
       case 'manga_discovery_section_top_rated':
         return 'Mejor puntuados';
-      case 'manga_discovery_section_trending':
-        return 'Tendencia';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Popular en ${source}';
       case 'manga_discovery_sources_browse':
@@ -213070,6 +213068,8 @@ extension on _StringsEs {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -217319,8 +217319,6 @@ extension on _StringsFr {
         return 'Populaires';
       case 'manga_discovery_section_top_rated':
         return 'Mieux notés';
-      case 'manga_discovery_section_trending':
-        return 'Tendances';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Populaire sur ${source}';
       case 'manga_discovery_sources_browse':
@@ -222414,6 +222412,8 @@ extension on _StringsFr {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -226651,8 +226651,6 @@ extension on _StringsId {
         return 'Populer';
       case 'manga_discovery_section_top_rated':
         return 'Rating tertinggi';
-      case 'manga_discovery_section_trending':
-        return 'Trending';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Populer di ${source}';
       case 'manga_discovery_sources_browse':
@@ -231729,6 +231727,8 @@ extension on _StringsId {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -235971,8 +235971,6 @@ extension on _StringsIt {
         return 'Popolari';
       case 'manga_discovery_section_top_rated':
         return 'Più votati';
-      case 'manga_discovery_section_trending':
-        return 'Di tendenza';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Popolari su ${source}';
       case 'manga_discovery_sources_browse':
@@ -241066,6 +241064,8 @@ extension on _StringsIt {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -245278,8 +245278,6 @@ extension on _StringsJa {
         return '人気';
       case 'manga_discovery_section_top_rated':
         return '高評価';
-      case 'manga_discovery_section_trending':
-        return 'トレンド';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source}で人気';
       case 'manga_discovery_sources_browse':
@@ -250330,6 +250328,8 @@ extension on _StringsJa {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -254543,8 +254543,6 @@ extension on _StringsKo {
         return '인기';
       case 'manga_discovery_section_top_rated':
         return '최고 평점';
-      case 'manga_discovery_section_trending':
-        return '트렌딩';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source}에서 인기';
       case 'manga_discovery_sources_browse':
@@ -259598,6 +259596,8 @@ extension on _StringsKo {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -263838,8 +263838,6 @@ extension on _StringsNl {
         return 'Populair';
       case 'manga_discovery_section_top_rated':
         return 'Hoogst beoordeeld';
-      case 'manga_discovery_section_trending':
-        return 'Trending';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Populair op ${source}';
       case 'manga_discovery_sources_browse':
@@ -268928,6 +268926,8 @@ extension on _StringsNl {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -273168,8 +273168,6 @@ extension on _StringsPtBr {
         return 'Popular';
       case 'manga_discovery_section_top_rated':
         return 'Mais bem avaliados';
-      case 'manga_discovery_section_trending':
-        return 'Em alta';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Popular em ${source}';
       case 'manga_discovery_sources_browse':
@@ -278253,6 +278251,8 @@ extension on _StringsPtBr {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -282500,8 +282500,6 @@ extension on _StringsRu {
         return 'Популярное';
       case 'manga_discovery_section_top_rated':
         return 'Лучшие по оценкам';
-      case 'manga_discovery_section_trending':
-        return 'В тренде';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Популярное на ${source}';
       case 'manga_discovery_sources_browse':
@@ -287585,6 +287583,8 @@ extension on _StringsRu {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -291815,8 +291815,6 @@ extension on _StringsTh {
         return 'ยอดนิยม';
       case 'manga_discovery_section_top_rated':
         return 'คะแนนสูงสุด';
-      case 'manga_discovery_section_trending':
-        return 'กำลังมาแรง';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'ยอดนิยมบน ${source}';
       case 'manga_discovery_sources_browse':
@@ -296889,6 +296887,8 @@ extension on _StringsTh {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -301127,8 +301127,6 @@ extension on _StringsTr {
         return 'Popüler';
       case 'manga_discovery_section_top_rated':
         return 'En yüksek puanlı';
-      case 'manga_discovery_section_trending':
-        return 'Trend';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source} üzerinde popüler';
       case 'manga_discovery_sources_browse':
@@ -306208,6 +306206,8 @@ extension on _StringsTr {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -310443,8 +310443,6 @@ extension on _StringsVi {
         return 'Phổ biến';
       case 'manga_discovery_section_top_rated':
         return 'Đánh giá cao nhất';
-      case 'manga_discovery_section_trending':
-        return 'Thịnh hành';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => 'Phổ biến trên ${source}';
       case 'manga_discovery_sources_browse':
@@ -315521,6 +315519,8 @@ extension on _StringsVi {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
@@ -319717,8 +319717,6 @@ extension on _StringsZhCn {
         return '热门';
       case 'manga_discovery_section_top_rated':
         return '高分';
-      case 'manga_discovery_section_trending':
-        return '趋势';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source} · 热门';
       case 'manga_discovery_sources_browse':
@@ -324753,6 +324751,8 @@ extension on _StringsZhCn {
         return '封面';
       case 'video_work_field_backdrop':
         return '背景图';
+      case 'manga_discovery_section_publishing':
+        return '连载热门';
       default:
         return null;
     }
@@ -328955,8 +328955,6 @@ extension on _StringsZhHk {
         return '熱門';
       case 'manga_discovery_section_top_rated':
         return '高分';
-      case 'manga_discovery_section_trending':
-        return '趨勢';
       case 'manga_discovery_source_popular':
         return ({required Object source}) => '${source} · 熱門';
       case 'manga_discovery_sources_browse':
@@ -333995,6 +333993,8 @@ extension on _StringsZhHk {
         return 'Cover';
       case 'video_work_field_backdrop':
         return 'Backdrop';
+      case 'manga_discovery_section_publishing':
+        return 'Popular publishing manga';
       default:
         return null;
     }
