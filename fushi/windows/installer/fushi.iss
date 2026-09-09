@@ -109,6 +109,13 @@ Type: filesandordirs; Name: "{app}\galgame_helper"
 [Files]
 ; 包含 fushi_update_launcher.exe：应用内更新用它等待当前 fushi.exe 退出后再启动 Inno。
 Source: "{#SourceDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
+; MD3 文件夹图标（替换「选择安装位置」页那个经典 Win95 黄纸夹）。dontcopy = 只随
+; 安装器打包、不落到 {app}；[Code] 里按 DPI 挑一档 ExtractTemporaryFile 出来。
+; 跟着 [Code] 的同一道 6.6 闸门走：老编译器上那段代码整块不编译，没人 extract
+; 这些图，打进去只是白占体积。
+#if VER >= EncodeVer(6,6,0)
+Source: "assets\wizard_folder*.bmp"; Flags: dontcopy
+#endif
 
 [Icons]
 Name: "{group}\Fushi"; Filename: "{app}\fushi.exe"
@@ -559,19 +566,95 @@ begin
   Result := Pos(Lowercase(AddBackslash(A)), Lowercase(AddBackslash(B))) = 1;
 end;
 
-// ── MD3 排版 ──
-// [Setup] 段的 WizardStyle / WizardBackColor / Wizard*ImageFile 已经把整体形态做成
+// ── MD3 排版与控件外观 ──
+// [Setup] 段的 WizardStyle / WizardBackColor / Wizard*ImageFile 把**整体形态**做成
 // MD3（扁平、无分隔线、MD3 surface 背景与主色晕、明暗自适应、MD3 标记与竖图）。
-// 这里只补一件指令做不到的事：页眉标题按 MD3 type scale 排——MD3 的 title-large
-// 是常规字重、比正文大一档，Inno 默认给的是小一号的**粗体**。
+// 本段补的是指令覆盖不到的两件事：MD3 type scale 的页眉排版，以及控件本身的
+// 圆角与配色。
 //
-// 别再往这里加颜色赋值：自定义样式（含内置 dark / windows11）激活时，Inno 把所有
-// 文字标签画成透明并用样式的前景色重绘，TPanel 的 Color 也由样式接管。实测
-// （6.7.3，本机深色模式）MainPanel.Color := $261F21 与
-// PageNameLabel.Font.Color := $FFBCD0 都是空操作：抓图取色，页眉底仍是 #141218、
-// 标题仍是纯白 #FFFFFF。字体名/字号/字重则照常生效，所以只留排版。
-// 真要改控件强调色（内置样式给的是 Windows 蓝），得自制 VCL 样式文件走
-// WizardStyleFile，那需要 Delphi 的 Bitmap Style Designer，本仓没有这条工具链。
+// 【关于「样式接管颜色」的更正】旧注释断言 MainPanel.Color 与
+// PageNameLabel.Font.Color 是空操作、只能靠自制 .vsf 解决。那个结论只在**没有
+// StyleElements** 的前提下成立：Inno 6.6 给 Pascal Scripting 的 TControl 加了
+// StyleElements 属性，从中去掉 seFont / seClient / seBorder，对应的
+// Font.Color / Color / 边框就交还给控件自己。实测（6.7.3 本机深色模式，离屏
+// PrintWindow 抓真实像素）标题、页眉底色、输入框底色与字色**都改得动**。
+//
+// 但按钮是硬例外，两条都撞死：
+//   - TNewButton 在 Pascal Script 里**没有 Color 属性**（写了直接编译失败：
+//     Unknown identifier 'COLOR'），填充色无从赋值；
+//   - 从按钮的 StyleElements 去掉 seClient 会让它连样式绘制一起丢掉，退回系统
+//     原生按钮（深色模式下是刺眼的白底黑字），比不改更糟。
+// 所以**按钮填充色是这套里唯一只能靠自制 VCL 样式文件（WizardStyleFile）的项**，
+// 而那条路要 Delphi 的 Bitmap Style Designer，本仓没有这条工具链。按钮字色
+// （只去 seFont，保住样式填充）照常可改，已经用上。
+//
+// 【圆角不走样式】MD3 的 pill 按钮不需要 .vsf——控件「是什么形状」是 Win32 层的
+// 事：SetWindowRgn 把按钮窗口裁成圆角矩形后，样式照常往裁剩的区域里画，角外露出
+// 父窗口背景（正好是我们的 MD3 渐变图）。这反而比 .vsf 强：VCL 样式的按钮是九宫格
+// 位图，做不出胶囊形。
+// 版本闸门：StyleElements 与 IsDarkInstallMode 是 Inno **6.6** 才加的，6.5 及更老的
+// 编译器见到直接报 Unknown identifier。[Setup] 段那道 6.7 闸门保的是「老编译器仍能
+// 出包、只是退回旧外观」这个不变式，[Code] 这边不跟上就等于单方面废掉它。
+// 圆角本身只用 Win32、不挑版本，但它和配色是同一套观感，一起进闸门更好懂。
+#if VER >= EncodeVer(6,6,0)
+  #define Md3Chrome
+#endif
+
+#ifdef Md3Chrome
+const
+  { 按钮裁切时的内缩像素数，用来吃掉样式画的那圈矩形强调框（见 Md3RoundControl）。 }
+  Md3ButtonInset = 2;
+
+function CreateRoundRectRgn(X1, Y1, X2, Y2, W, H: Integer): THandle;
+  external 'CreateRoundRectRgn@gdi32.dll stdcall';
+function SetWindowRgn(hWnd: THandle; hRgn: THandle; bRedraw: Boolean): Integer;
+  external 'SetWindowRgn@user32.dll stdcall';
+
+{ 把控件裁成圆角矩形。Radius 是角半径，GDI 要的是椭圆的宽高所以传直径。
+  +1 是 GDI 的半开区间：CreateRoundRectRgn 的右下边界不含，不补会少一列像素。
+  region 交给 SetWindowRgn 后由系统持有，**不要 DeleteObject**。
+
+  Inset 让裁切区域四周内缩若干像素。这不是为了留白，是为了**吃掉样式画在控件最外
+  圈的矩形边框**：默认按钮（Next）的强调框是矩形，pill region 一裁就成了上下两条
+  横线加左右两小截四段断线（放大图上很刺眼），而它又摘不掉——seBorder 管不着它，
+  摘 seClient 会让按钮整个丢掉样式绘制。内缩 2px 把那一圈直接排除在可见区域外。 }
+procedure Md3RoundControl(Ctl: TWinControl; Radius, Inset: Integer);
+var
+  Rgn: THandle;
+begin
+  Rgn := CreateRoundRectRgn(Inset, Inset, Ctl.Width + 1 - Inset, Ctl.Height + 1 - Inset,
+    Radius * 2, Radius * 2);
+  SetWindowRgn(Ctl.Handle, Rgn, True);
+end;
+
+{ 按当前明暗取 MD3 色。两套都取自 app 同源的 MD3 baseline 色板，与 [Setup] 段的
+  WizardBackColor（#FEF7FF / #141218）同一族。 }
+function Md3Primary(): TColor;
+begin
+  if IsDarkInstallMode then
+    Result := StrToColor('#D0BCFF')
+  else
+    Result := StrToColor('#6750A4');
+end;
+
+function Md3OnSurface(): TColor;
+begin
+  if IsDarkInstallMode then
+    Result := StrToColor('#E6E0E9')
+  else
+    Result := StrToColor('#1D1B20');
+end;
+
+function Md3SurfaceContainer(): TColor;
+begin
+  if IsDarkInstallMode then
+    Result := StrToColor('#2B2930')
+  else
+    Result := StrToColor('#F3EDF7');
+end;
+
+#endif
+
 function Md3UiFontName(const Fallback: String): String;
 begin
   { MD3 用 Roboto，Windows 上没有；按 Win11 → Win10 → 兜底取系统 UI 字体。
@@ -584,12 +667,76 @@ begin
     Result := Fallback;
 end;
 
+#ifdef Md3Chrome
+{ 按 MD3 把一个按钮做成胶囊形并给字色。填充仍由样式画（见上面的长注释）。 }
+procedure Md3StyleButton(Btn: TNewButton; TextColor: TColor);
+begin
+  { 连 seBorder 一起摘：默认按钮（Next）的强调边框是**矩形**，被 pill region 裁完
+    只剩上下两条横线加左右两小截，比不做圆角还难看（实测放大图上四段断线清晰可见）。
+    seClient 必须留着 —— 摘了按钮就丢掉样式绘制、退回系统原生白底黑字。 }
+  Btn.StyleElements := Btn.StyleElements - [seFont, seBorder];
+  Btn.Font.Color := TextColor;
+  Btn.Font.Name := Md3UiFontName(Btn.Font.Name);
+  { MD3 的 button 是 full-round：半径取（内缩后）高度的一半。 }
+  Md3RoundControl(Btn, (Btn.Height - 2 * Md3ButtonInset) div 2, Md3ButtonInset);
+end;
+
+{ MD3 outlined text field：surfaceContainer 底 + onSurface 字 + 4dp 角。 }
+{ 参数类型必须是 TEdit 而不是 TCustomEdit：Color 是 TEdit 才暴露的属性，
+  写成基类会编译失败（Unknown identifier 'COLOR'）。 }
+procedure Md3StyleEdit(Edit: TEdit);
+begin
+  Edit.StyleElements := Edit.StyleElements - [seClient, seBorder, seFont];
+  Edit.Color := Md3SurfaceContainer;
+  Edit.Font.Color := Md3OnSurface;
+  Edit.Font.Name := Md3UiFontName(Edit.Font.Name);
+  { 输入框不内缩：它的边框是 MD3 outlined text field 想要的那条 outline，
+    要留着（按钮那圈矩形强调框才是要吃掉的东西）。 }
+  Md3RoundControl(Edit, ScaleY(4), 0);
+end;
+
+{ 把「选择安装位置」页的经典黄纸夹换成 MD3 folder。
+  Inno 不会按 DPI 缩放 TBitmapImage 的位图，所以按控件实际宽度挑一档最接近的
+  ——直接拿一张大图 Stretch 会糊。 }
+procedure Md3ApplyFolderIcon(Img: TBitmapImage);
+var
+  Side: Integer;
+  AssetName: String;
+begin
+  { Img.Width 已经是**物理**像素（窗体整体按 DPI 放大过了），所以直接和档位比，
+    别再套 ScaleX —— 那会把 150% 下 55px 宽的控件误判成 32 档，图标肉眼可见地小一圈。 }
+  if Img.Width <= 40 then
+    Side := 32
+  else if Img.Width <= 56 then
+    Side := 48
+  else if Img.Width <= 80 then
+    Side := 64
+  else
+    Side := 96;
+
+  if IsDarkInstallMode then
+    AssetName := 'wizard_folder_dark_' + IntToStr(Side) + '.bmp'
+  else
+    AssetName := 'wizard_folder_' + IntToStr(Side) + '.bmp';
+
+  ExtractTemporaryFile(AssetName);
+  Img.Bitmap.LoadFromFile(ExpandConstant('{tmp}\') + AssetName);
+end;
+#endif
+
 procedure ApplyMd3Chrome();
 begin
   WizardForm.PageNameLabel.Font.Name :=
     Md3UiFontName(WizardForm.PageNameLabel.Font.Name);
   WizardForm.PageNameLabel.Font.Style := [];
   WizardForm.PageNameLabel.Font.Size := WizardForm.PageNameLabel.Font.Size + 3;
+#ifdef Md3Chrome
+  { 页眉标题吃 MD3 primary：这是整屏唯一的强调色落点，也是把「Windows 蓝」换成
+    「MD3 紫」最省的一处。去 seFont 才赋得动色（见上面的更正注释）。 }
+  WizardForm.PageNameLabel.StyleElements :=
+    WizardForm.PageNameLabel.StyleElements - [seFont];
+  WizardForm.PageNameLabel.Font.Color := Md3Primary;
+#endif
   { 放大后高度要重算，再把说明文字顶到新高度下面——两个标签都是固定坐标摆的，
     不重排就会叠在一起。 }
   WizardForm.PageNameLabel.AdjustHeight;
@@ -598,6 +745,22 @@ begin
     Md3UiFontName(WizardForm.PageDescriptionLabel.Font.Name);
   WizardForm.PageDescriptionLabel.Top :=
     WizardForm.PageNameLabel.Top + WizardForm.PageNameLabel.Height + ScaleY(2);
+
+#ifdef Md3Chrome
+  { 常驻按钮。主按钮用 primary 字色，次要的用 onSurface —— 填充都是样式给的同一块
+    深灰（按钮填充是 [Code] 改不动的，见上面的长注释），靠字色分主次。 }
+  Md3StyleButton(WizardForm.NextButton, Md3Primary);
+  Md3StyleButton(WizardForm.BackButton, Md3OnSurface);
+  Md3StyleButton(WizardForm.CancelButton, Md3OnSurface);
+  Md3StyleButton(WizardForm.DirBrowseButton, Md3Primary);
+  Md3StyleButton(WizardForm.GroupBrowseButton, Md3Primary);
+
+  Md3StyleEdit(WizardForm.DirEdit);
+  Md3StyleEdit(WizardForm.GroupEdit);
+
+  Md3ApplyFolderIcon(WizardForm.SelectDirBitmapImage);
+  Md3ApplyFolderIcon(WizardForm.SelectGroupBitmapImage);
+#endif
 end;
 
 procedure InitializeWizard();
@@ -613,6 +776,13 @@ begin
     False, 'Fushi');
   DataRootPage.Add('');
   DataRootPage.Values[0] := ExpandConstant('{userdocs}\Fushi');
+#ifdef Md3Chrome
+  { 这页是 CreateInputDirPage 自建的，控件不在 WizardForm 上，ApplyMd3Chrome 扫不到。
+    全新安装必经此页，漏了就会出现「向导其余页是 MD3、唯独这页是 Windows 原样」。
+    必须在 Add 之后：Edits/Buttons 是 Add 时才创建的。 }
+  Md3StyleEdit(DataRootPage.Edits[0]);
+  Md3StyleButton(DataRootPage.Buttons[0], Md3Primary);
+#endif
 end;
 
 function ShouldSkipPage(PageID: Integer): Boolean;
