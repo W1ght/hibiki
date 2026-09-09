@@ -6,7 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/utils/net/app_native_proxy.dart';
 import 'package:fushi/src/utils/net/app_proxy.dart';
 
-/// BUG-2332：Aidoku 的 wasm host 是 Rust `reqwest`，https 请求经 `hyper-util` 的
+/// BUG-2381：Aidoku 的 wasm host 是 Rust `reqwest`，https 请求经 `hyper-util` 的
 /// CONNECT 隧道打进本地中继。两件事在这条链上必须成立，而既有中继测试都用 Dart
 /// 客户端验证，结构上验不到：
 ///
@@ -140,7 +140,7 @@ void main() {
     expect(
       logged.single,
       contains('SocketException'),
-      reason: 'BUG-2332：中继是唯一知道原因的一层，不能连它也抹掉',
+      reason: 'BUG-2381：中继是唯一知道原因的一层，不能连它也抹掉',
     );
   });
 

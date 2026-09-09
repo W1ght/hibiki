@@ -33,7 +33,7 @@
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
-| [BUG-2332](bugs/BUG-2332-aidoku-request-error-unreadable.md) | ✅ | ✅ | Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断 |
+| [BUG-2381](bugs/BUG-2381-aidoku-request-error-unreadable.md) | ✅ | ✅ | Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断 |
 | [BUG-2326](bugs/BUG-2326-lyrics-mode-top-chrome.md) | ✅ | ✅ | 歌词模式没有顶栏，也没有回到阅读模式的入口 |
 | [BUG-2325](bugs/BUG-2325-audiobook-follow-flips-back-one-page.md) | ✅ | ✅ | 有声书跟随播放时视口自己退回前一页，下一句又翻回来 |
 | [BUG-2324](bugs/BUG-2324-siglus-lookup-consumed-click-without-hit.md) | 🚧 | ✅ | Siglus已入队查词点击偶发未发布命中且终结原因缺失 |
