@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76976 (4528 per locale)
+/// Strings: 76993 (4529 per locale)
 ///
-/// Built on 2026-09-09 at 05:27 UTC
+/// Built on 2026-09-09 at 06:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6281,6 +6281,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The source returned invalid torrent data. Retry later or choose another source.';
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -16918,6 +16919,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -27782,6 +27785,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -38700,6 +38705,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -49652,6 +49659,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -60406,6 +60415,8 @@ class _StringsId extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -71252,6 +71263,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -81479,6 +81492,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -91716,6 +91731,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -102519,6 +102536,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -113375,6 +113394,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -124208,6 +124229,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -134841,6 +134864,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -145590,6 +145615,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -156310,6 +156337,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 // Path: <root>
@@ -166154,6 +166183,8 @@ class _StringsZhCn extends _StringsEn {
   String get download_torrent_invalid => '来源返回的种子数据无效。请稍后重试或更换来源。';
   @override
   String get download_torrent_selection_failed => '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
+  @override
+  String get dialog_background_close => '关闭（任务继续在后台运行）';
 }
 
 // Path: <root>
@@ -176067,6 +176098,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get download_torrent_selection_failed =>
       'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+  @override
+  String get dialog_background_close => 'Close (task keeps running)';
 }
 
 /// Flat map(s) containing all translations.
@@ -185383,6 +185416,8 @@ extension on _StringsEn {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -194694,6 +194729,8 @@ extension on _StringsAr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -204050,6 +204087,8 @@ extension on _StringsDe {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -213397,6 +213436,8 @@ extension on _StringsEs {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -222753,6 +222794,8 @@ extension on _StringsFr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -232080,6 +232123,8 @@ extension on _StringsId {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -241429,6 +241474,8 @@ extension on _StringsIt {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -250705,6 +250752,8 @@ extension on _StringsJa {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -259985,6 +260034,8 @@ extension on _StringsKo {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -269327,6 +269378,8 @@ extension on _StringsNl {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -278664,6 +278717,8 @@ extension on _StringsPtBr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -288008,6 +288063,8 @@ extension on _StringsRu {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -297324,6 +297381,8 @@ extension on _StringsTh {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -306655,6 +306714,8 @@ extension on _StringsTr {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -315980,6 +316041,8 @@ extension on _StringsVi {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
@@ -325224,6 +325287,8 @@ extension on _StringsZhCn {
         return '来源返回的种子数据无效。请稍后重试或更换来源。';
       case 'download_torrent_selection_failed':
         return '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
+      case 'dialog_background_close':
+        return '关闭（任务继续在后台运行）';
       default:
         return null;
     }
@@ -334478,6 +334543,8 @@ extension on _StringsZhHk {
         return 'The source returned invalid torrent data. Retry later or choose another source.';
       case 'download_torrent_selection_failed':
         return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
+      case 'dialog_background_close':
+        return 'Close (task keeps running)';
       default:
         return null;
     }
