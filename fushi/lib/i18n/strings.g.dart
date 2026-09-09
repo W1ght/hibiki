@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77129 (4537 per locale)
+/// Strings: 77146 (4538 per locale)
 ///
-/// Built on 2026-09-09 at 08:34 UTC
+/// Built on 2026-09-09 at 09:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6296,6 +6296,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_timer_show => 'Show reading timer';
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -16957,6 +16959,9 @@ class _StringsAr extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -27845,6 +27850,9 @@ class _StringsDe extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -38787,6 +38795,9 @@ class _StringsEs extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -49763,6 +49774,9 @@ class _StringsFr extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -60541,6 +60555,9 @@ class _StringsId extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -71411,6 +71428,9 @@ class _StringsIt extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -81662,6 +81682,9 @@ class _StringsJa extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -91923,6 +91946,9 @@ class _StringsKo extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -102750,6 +102776,9 @@ class _StringsNl extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -113630,6 +113659,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -124487,6 +124519,9 @@ class _StringsRu extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -135144,6 +135179,9 @@ class _StringsTh extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -145917,6 +145955,9 @@ class _StringsTr extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -156661,6 +156702,9 @@ class _StringsVi extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 // Path: <root>
@@ -166529,6 +166573,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       '该位置已是来源，正在重新扫描：${path}';
+  @override
+  String get audiobook_transcribe_model_discarded => '模型文件读不出来，已自动清除，请重新下载。';
 }
 
 // Path: <root>
@@ -176466,6 +176512,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String media_source_root_already_added({required Object path}) =>
       'Already a source — rescanning: ${path}';
+  @override
+  String get audiobook_transcribe_model_discarded =>
+      'The model file could not be read and was removed. Download it again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -185801,6 +185850,8 @@ extension on _StringsEn {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -195131,6 +195182,8 @@ extension on _StringsAr {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -204506,6 +204559,8 @@ extension on _StringsDe {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -213872,6 +213927,8 @@ extension on _StringsEs {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -223247,6 +223304,8 @@ extension on _StringsFr {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -232593,6 +232652,8 @@ extension on _StringsId {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -241961,6 +242022,8 @@ extension on _StringsIt {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -251256,6 +251319,8 @@ extension on _StringsJa {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -260555,6 +260620,8 @@ extension on _StringsKo {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -269916,6 +269983,8 @@ extension on _StringsNl {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -279272,6 +279341,8 @@ extension on _StringsPtBr {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -288635,6 +288706,8 @@ extension on _StringsRu {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -297970,6 +298043,8 @@ extension on _StringsTh {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -307320,6 +307395,8 @@ extension on _StringsTr {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -316664,6 +316741,8 @@ extension on _StringsVi {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
@@ -325926,6 +326005,8 @@ extension on _StringsZhCn {
         return '显示阅读计时器';
       case 'media_source_root_already_added':
         return ({required Object path}) => '该位置已是来源，正在重新扫描：${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return '模型文件读不出来，已自动清除，请重新下载。';
       default:
         return null;
     }
@@ -335199,6 +335280,8 @@ extension on _StringsZhHk {
       case 'media_source_root_already_added':
         return ({required Object path}) =>
             'Already a source — rescanning: ${path}';
+      case 'audiobook_transcribe_model_discarded':
+        return 'The model file could not be read and was removed. Download it again.';
       default:
         return null;
     }
