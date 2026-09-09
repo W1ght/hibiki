@@ -835,22 +835,6 @@ begin
 end;
 #endif
 
-{ 「准备安装」页的摘要框，和输入框同一套 filled 处理。
-  **时机是关键**：必须在 InitializeWizard 阶段做，那时摘要内容还是空的。
-  改 StyleElements 会让 VCL 重建控件窗口句柄；等到 CurPageChanged 再做，内容已经填好，
-  重建就把它截断（实测浅色下末行只剩「文件关联」四个字，条目整条不见），
-  再补一次 Memo.Refresh 只会更糟。空内容时重建则无损。 }
-procedure Md3StyleMemo(Memo: TNewMemo);
-begin
-  Memo.StyleElements := Memo.StyleElements - [seClient, seBorder, seFont];
-  Memo.Color := Md3SurfaceContainerHighest;
-  Memo.Font.Color := Md3OnSurface;
-  Memo.Font.Name := Md3UiFontName(Memo.Font.Name);
-  { 去掉那圈亮边框。这句同样只有在「内容还空着」时才敢写：它触发的正是上面说的
-    句柄重建。MD3 的 filled 容器靠底色分层，不靠边框。 }
-  Memo.BorderStyle := bsNone;
-end;
-
 procedure ApplyMd3Chrome();
 begin
   WizardForm.PageNameLabel.Font.Name :=
@@ -883,9 +867,17 @@ begin
 
   Md3StyleEdit(WizardForm.DirEdit);
 
-  Md3StyleMemo(WizardForm.ReadyMemo);
-
   Md3ApplyFolderIcon(WizardForm.SelectDirBitmapImage);
+
+  { 「准备安装」页的摘要框（ReadyMemo）**有意不做样式**，三种时机全试过、全有代价：
+      - InitializeWizard 里做（内容还空着、重建无损）：句柄被提前创建，这个凭空实体化
+        的控件盖住别的页 —— 实测把「选择附加任务」页第二项末尾的「 等)」遮掉了；
+      - CurPageChanged 里做：Inno 那时**还没填完**摘要，改 StyleElements/BorderStyle
+        触发的句柄重建把内容截断（末行只剩「文件关联」四个字）；
+      - CurPageChanged 里先存 Lines.Text、样式化后再放回：读到的本来就是半截，赋回去
+        反而覆盖了 Inno 后续的填充，摘要直接断在「附加任务」。
+    换来的只是摘要框底色调一档、少一圈边框，拿这个冒「用户看不到自己装了什么」的险
+    不划算。这框就保持 Inno 原样。 }
 
   { **不要**碰程序组页的那三个控件（GroupBrowseButton / GroupEdit /
     SelectGroupBitmapImage）。本安装器 DisableProgramGroupPage=yes，那一页从不显示，
