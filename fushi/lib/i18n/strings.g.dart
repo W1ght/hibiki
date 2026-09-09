@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76925 (4525 per locale)
+/// Strings: 76908 (4524 per locale)
 ///
-/// Built on 2026-09-09 at 14:35 UTC
+/// Built on 2026-09-09 at 16:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3546,8 +3546,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get module_downloads_hidden_hint =>
       'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
   String get module_extension_label => 'Browser extension';
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   String get move_down => 'Move down';
   String get move_up => 'Move up';
   String get name => 'Name';
@@ -12152,9 +12150,6 @@ class _StringsAr extends _StringsEn {
       'تبويب التحميلات مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
   @override
   String get module_extension_label => 'إضافة المتصفح';
-  @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'تحريك لأسفل';
   @override
@@ -22983,9 +22978,6 @@ class _StringsDe extends _StringsEn {
       'Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
   @override
   String get module_extension_label => 'Browser-Erweiterung';
-  @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Nach unten';
   @override
@@ -33941,9 +33933,6 @@ class _StringsEs extends _StringsEn {
       'La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
   @override
   String get module_extension_label => 'Extensión del navegador';
-  @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Mover abajo';
   @override
@@ -44943,9 +44932,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get module_extension_label => 'Extension navigateur';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Descendre';
   @override
   String get move_up => 'Monter';
@@ -55866,9 +55852,6 @@ class _StringsId extends _StringsEn {
   @override
   String get module_extension_label => 'Ekstensi browser';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Turunkan';
   @override
   String get move_up => 'Naikkan';
@@ -66736,9 +66719,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get module_extension_label => 'Estensione browser';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Sposta giù';
   @override
   String get move_up => 'Sposta su';
@@ -77325,9 +77305,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get module_extension_label => 'ブラウザ拡張機能';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => '下に移動';
   @override
   String get move_up => '上に移動';
@@ -87613,9 +87590,6 @@ class _StringsKo extends _StringsEn {
       '‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
   @override
   String get module_extension_label => '브라우저 확장';
-  @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => '아래로 이동';
   @override
@@ -98203,9 +98177,6 @@ class _StringsNl extends _StringsEn {
       'Het tabblad Downloads is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
   @override
   String get module_extension_label => 'Browserextensie';
-  @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Omlaag';
   @override
@@ -109109,9 +109080,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get module_extension_label => 'Extensão do navegador';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Mover para baixo';
   @override
   String get move_up => 'Mover para cima';
@@ -120006,9 +119974,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get module_extension_label => 'Расширение для браузера';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Вниз';
   @override
   String get move_up => 'Вверх';
@@ -130811,9 +130776,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get module_extension_label => 'ส่วนขยายเบราว์เซอร์';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'เลื่อนลง';
   @override
   String get move_up => 'เลื่อนขึ้น';
@@ -141581,9 +141543,6 @@ class _StringsTr extends _StringsEn {
       'İndirmeler sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
   @override
   String get module_extension_label => 'Tarayıcı eklentisi';
-  @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
   @override
   String get move_down => 'Aşağı taşı';
   @override
@@ -152388,9 +152347,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get module_extension_label => 'Tiện ích mở rộng trình duyệt';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => 'Di chuyển xuống';
   @override
   String get move_up => 'Di chuyển lên';
@@ -162694,8 +162650,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get module_extension_label => '浏览器扩展';
   @override
-  String get module_toggle_hint => '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -172627,9 +172581,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get module_extension_label => '瀏覽器擴展';
   @override
-  String get module_toggle_hint =>
-      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
-  @override
   String get move_down => '下移';
   @override
   String get move_up => '上移';
@@ -182217,8 +182168,6 @@ extension on _StringsEn {
         return 'The Downloads tab is hidden in Settings → Appearance → Feature modules; turn it back on to manage subscriptions.';
       case 'module_extension_label':
         return 'Browser extension';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Move down';
       case 'move_up':
@@ -191530,8 +191479,6 @@ extension on _StringsAr {
         return 'تبويب التحميلات مخفي في الإعدادات → المظهر → وحدات الميزات؛ أعد تشغيله لإدارة الاشتراكات.';
       case 'module_extension_label':
         return 'إضافة المتصفح';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'تحريك لأسفل';
       case 'move_up':
@@ -200871,8 +200818,6 @@ extension on _StringsDe {
         return 'Der Tab „Downloads“ ist unter Einstellungen → Erscheinungsbild → Funktionsmodule ausgeblendet; schalte ihn wieder ein, um Abos zu verwalten.';
       case 'module_extension_label':
         return 'Browser-Erweiterung';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Nach unten';
       case 'move_up':
@@ -210223,8 +210168,6 @@ extension on _StringsEs {
         return 'La pestaña Descargas está oculta en Configuración → Apariencia → Módulos de funciones; vuelve a activarla para gestionar las suscripciones.';
       case 'module_extension_label':
         return 'Extensión del navegador';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Mover abajo';
       case 'move_up':
@@ -219578,8 +219521,6 @@ extension on _StringsFr {
         return 'L\'onglet Téléchargements est masqué dans Paramètres → Apparence → Modules de fonctionnalités ; réactivez-le pour gérer les abonnements.';
       case 'module_extension_label':
         return 'Extension navigateur';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Descendre';
       case 'move_up':
@@ -228921,8 +228862,6 @@ extension on _StringsId {
         return 'Tab Unduhan disembunyikan di Pengaturan → Tampilan → Modul fitur; nyalakan lagi untuk mengelola langganan.';
       case 'module_extension_label':
         return 'Ekstensi browser';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Turunkan';
       case 'move_up':
@@ -238258,8 +238197,6 @@ extension on _StringsIt {
         return 'La scheda Download è nascosta in Impostazioni → Aspetto → Moduli funzionalità; riattivala per gestire le sottoscrizioni.';
       case 'module_extension_label':
         return 'Estensione browser';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Sposta giù';
       case 'move_up':
@@ -247573,8 +247510,6 @@ extension on _StringsJa {
         return '「ダウンロード」タブは 設定 → 外観 → 機能モジュール で非表示になっています。購読を管理するには再度オンにしてください。';
       case 'module_extension_label':
         return 'ブラウザ拡張機能';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '下に移動';
       case 'move_up':
@@ -256849,8 +256784,6 @@ extension on _StringsKo {
         return '‘다운로드’ 탭이 설정 → 외관 → 기능 모듈에서 숨겨져 있어요. 구독을 관리하려면 다시 켜세요.';
       case 'module_extension_label':
         return '브라우저 확장';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '아래로 이동';
       case 'move_up':
@@ -266164,8 +266097,6 @@ extension on _StringsNl {
         return 'Het tabblad Downloads is verborgen via Instellingen → Uiterlijk → Functiemodules; zet het weer aan om abonnementen te beheren.';
       case 'module_extension_label':
         return 'Browserextensie';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Omlaag';
       case 'move_up':
@@ -275509,8 +275440,6 @@ extension on _StringsPtBr {
         return 'A aba Downloads está oculta em Configurações → Aparência → Módulos de funcionalidades; reative-a para gerenciar as assinaturas.';
       case 'module_extension_label':
         return 'Extensão do navegador';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Mover para baixo';
       case 'move_up':
@@ -284857,8 +284786,6 @@ extension on _StringsRu {
         return 'Вкладка «Загрузки» скрыта в разделе Настройки → Внешний вид → Функциональные модули; включите её снова, чтобы управлять подписками.';
       case 'module_extension_label':
         return 'Расширение для браузера';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Вниз';
       case 'move_up':
@@ -294181,8 +294108,6 @@ extension on _StringsTh {
         return 'แท็บดาวน์โหลดถูกซ่อนไว้ใน การตั้งค่า → รูปลักษณ์ → โมดูลฟีเจอร์ ต้องเปิดกลับมาจึงจะจัดการรายการติดตามได้';
       case 'module_extension_label':
         return 'ส่วนขยายเบราว์เซอร์';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'เลื่อนลง';
       case 'move_up':
@@ -303508,8 +303433,6 @@ extension on _StringsTr {
         return 'İndirmeler sekmesi Ayarlar → Görünüm → Özellik modülleri altında gizli; abonelikleri yönetmek için yeniden açın.';
       case 'module_extension_label':
         return 'Tarayıcı eklentisi';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Aşağı taşı';
       case 'move_up':
@@ -312835,8 +312758,6 @@ extension on _StringsVi {
         return 'Tab Tải xuống đang bị ẩn trong Cài đặt → Giao diện → Mô-đun tính năng; bật lại để quản lý đăng ký.';
       case 'module_extension_label':
         return 'Tiện ích mở rộng trình duyệt';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return 'Di chuyển xuống';
       case 'move_up':
@@ -322119,8 +322040,6 @@ extension on _StringsZhCn {
         return '「下载」页已在 设置 → 外观 → 功能模块 中隐藏；重新打开它才能管理订阅。';
       case 'module_extension_label':
         return '浏览器扩展';
-      case 'module_toggle_hint':
-        return '关闭后该模块的全部入口一起消失：导航栏、首页、设置分类与跨页跳转';
       case 'move_down':
         return '下移';
       case 'move_up':
@@ -331367,8 +331286,6 @@ extension on _StringsZhHk {
         return '「下載」頁已在 設定 → 外觀 → 功能模塊 中隱藏；重新開啟才能管理訂閱。';
       case 'module_extension_label':
         return '瀏覽器擴展';
-      case 'module_toggle_hint':
-        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       case 'move_down':
         return '下移';
       case 'move_up':
