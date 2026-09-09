@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77605 (4565 per locale)
+/// Strings: 77622 (4566 per locale)
 ///
-/// Built on 2026-09-09 at 16:07 UTC
+/// Built on 2026-09-09 at 19:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6334,6 +6334,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Auto-add mining position to tags';
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -17061,6 +17063,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -28015,6 +28020,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -39023,6 +39031,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -50065,6 +50076,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -60909,6 +60923,9 @@ class _StringsId extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -71845,6 +71862,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -82161,6 +82181,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -92488,6 +92511,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -103381,6 +103407,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -114327,6 +114356,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -125250,6 +125282,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -135973,6 +136008,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -146812,6 +146850,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -157622,6 +157663,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 // Path: <root>
@@ -167550,6 +167594,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
 }
 
 // Path: <root>
@@ -177550,6 +177597,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
+  @override
+  String get audiobook_transcribe_alignment_hint =>
+      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
 }
 
 /// Flat map(s) containing all translations.
@@ -186941,6 +186991,8 @@ extension on _StringsEn {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -196327,6 +196379,8 @@ extension on _StringsAr {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -205758,6 +205812,8 @@ extension on _StringsDe {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -215180,6 +215236,8 @@ extension on _StringsEs {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -224611,6 +224669,8 @@ extension on _StringsFr {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -234013,6 +234073,8 @@ extension on _StringsId {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -243437,6 +243499,8 @@ extension on _StringsIt {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -252788,6 +252852,8 @@ extension on _StringsJa {
         return 'タグにカード作成位置を自動追加';
       case 'auto_add_char_position_to_tags_hint':
         return 'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -262143,6 +262209,8 @@ extension on _StringsKo {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -271560,6 +271628,8 @@ extension on _StringsNl {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -280972,6 +281042,8 @@ extension on _StringsPtBr {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -290391,6 +290463,8 @@ extension on _StringsRu {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -299782,6 +299856,8 @@ extension on _StringsTh {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -309188,6 +309264,8 @@ extension on _StringsTr {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -318588,6 +318666,8 @@ extension on _StringsVi {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
@@ -327906,6 +327986,8 @@ extension on _StringsZhCn {
         return '自动添加制卡位置到标签';
       case 'auto_add_char_position_to_tags_hint':
         return '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
+      case 'audiobook_transcribe_alignment_hint':
+        return '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
       default:
         return null;
     }
@@ -337235,6 +337317,8 @@ extension on _StringsZhHk {
         return '自動將製卡位置加入標籤';
       case 'auto_add_char_position_to_tags_hint':
         return '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
+      case 'audiobook_transcribe_alignment_hint':
+        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       default:
         return null;
     }
