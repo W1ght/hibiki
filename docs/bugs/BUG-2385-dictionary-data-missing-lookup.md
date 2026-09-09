@@ -1,0 +1,15 @@
+## BUG-2385 · 词典登记仍在但资源目录缺失导致完整词查不到
+- **报告**：2026-09-09（用户：Fushi 和 Niratan 登记同一本三省堂词典，前者查「行き遅れ」只返回「行き」；管理页显示词典已启用。）
+- **真实性**：✅ 本机数据缺失已实证；管理页把缺盘条目显示为启用也是真 bug。并非本例触发 BUG-1665 的释义去重。
+- **根因**：
+  - `fushi/lib/src/models/dictionary_repository.dart:95` 从 `dictionary_metadata` 载入全部记录；管理页 `fushi/lib/src/pages/implementations/dictionary_dialog_page.dart:1476` 原先只用 `!dictionary.isHidden(...)` 决定启用状态，未核对资源目录。
+  - `fushi/lib/src/models/app_model.dart:1711` 的 `_rebuildDictPathsCache()` 另行检查每个资源目录的存在性；缺盘条目不能进入引擎。这造成“列表在、开关开、查词实际不加载”的信息不一致。
+  - 本机 `documents_layout=flat`，词典根为 `C:\文档\dictionaryResources`；数据库有 60 条登记，对应目录只存在 13 个。缺失的 47 个目录包含 `三省堂国語辞典　第八版`，其登记 revision 为 `sankoku8;2023-07-19`。现存 `三省堂国語辞典第八番` 是另一份音调词典，不能代替释义词典。
+- **实测证据**：
+  - 用本机现有 `fushi/build/windows/x64/runner/Release/fushidicts_ffi.dll`、生产 `ja.json` 及数据库对应的现存词典，FFI 查询「行き遅れ」的前两项正是 `行き/いき`、`行き/ゆき`，释义来自 NHK 与新明解，匹配用户截图。
+  - 同一 DLL、同一进程仅额外只读挂载 Niratan 的三省堂目录（已核对 `.hoshidicts_1`），立即得到 `行き遅れ/いきおくれ` 与 `行き遅れ/ゆきおくれ` 两个完整名词命中。没有修改或复制任一 app 的词典数据。
+  - 本地诊断脚本与输出：`.codex-test/lookup_probe.py`、`.codex-test/lookup_evidence.json`（不入库）；所用 DLL SHA-256：`79314efc413337aabcd22ce11c03ee527d8058b711b09c76f94a5903c30d3e80`。
+- **[x] ① 已修复** — `fe0304d46a`：管理页复用引擎对应的目录存在判据，缺盘条目显示“词典文件缺失，请重新导入”，开关关闭且禁用，保留名称、revision、排序和隐藏偏好；目录恢复后沿原偏好恢复状态。实际缺失数据仍需重新导入，UI 修正不等于恢复词典。
+- **[x] ② 已加自动化测试** — `fe0304d46a`，`fushi/test/pages/dictionary_dialog_missing_files_test.dart`：实际管理页面 3 条 widget 测试通过（退出码 0），覆盖 360/1200 宽度、缺盘提示与禁用、目录恢复及已有隐藏偏好不被改写。全量 `flutter analyze --no-pub` 和管理页相邻定向批（173 条）通过。
+- **修复后实盘验证**：清理重编的 FFI DLL 运行同一只读探针，两组输出与原 DLL 相同；只有额外挂载缺失的三省堂 v1 数据后才恢复完整词命中。证据 `.codex-test/lookup_evidence_fixed.json`，新 DLL SHA-256：`876ebe919d9812679488e5e29920e7d4ec99ed919f19ad971190d80744d15712`。新管理 UI 通过 widget 验证，尚未替换用户安装的 app 做实机 UI 验收。
+- **备注**：文件何时、被哪个过程移除尚无证据，不推断为导入器丢 bank、存储迁移或用户删除。不同 fork 的 v2 盘格式不能混拷；本次只读对照的是明确兼容的 v1 数据。未替换用户安装的 app。
