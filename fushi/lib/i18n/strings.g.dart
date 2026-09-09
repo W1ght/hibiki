@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76908 (4524 per locale)
+/// Strings: 76976 (4528 per locale)
 ///
-/// Built on 2026-09-09 at 05:23 UTC
+/// Built on 2026-09-09 at 05:27 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6273,6 +6273,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get local_audio_file_unavailable =>
       'Audio database unavailable. Select the original DB file again.';
   String get local_audio_file_reselect => 'Select audio database again';
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -16898,6 +16906,18 @@ class _StringsAr extends _StringsEn {
       'قاعدة بيانات الصوت غير متاحة. حدد ملف DB الأصلي مرة أخرى.';
   @override
   String get local_audio_file_reselect => 'تحديد قاعدة بيانات الصوت مرة أخرى';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -27750,6 +27770,18 @@ class _StringsDe extends _StringsEn {
       'Audiodatenbank nicht verfügbar. Wähle die ursprüngliche DB-Datei erneut aus.';
   @override
   String get local_audio_file_reselect => 'Audiodatenbank erneut auswählen';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -38656,6 +38688,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get local_audio_file_reselect =>
       'Seleccionar de nuevo la base de datos de audio';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -49596,6 +49640,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get local_audio_file_reselect =>
       'Sélectionner à nouveau la base de données audio';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -60338,6 +60394,18 @@ class _StringsId extends _StringsEn {
       'Basis data audio tidak tersedia. Pilih kembali file DB asli.';
   @override
   String get local_audio_file_reselect => 'Pilih kembali basis data audio';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -71172,6 +71240,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get local_audio_file_reselect =>
       'Seleziona di nuovo il database audio';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -81387,6 +81467,18 @@ class _StringsJa extends _StringsEn {
       '音声データベースを利用できません。元の DB ファイルを選択し直してください。';
   @override
   String get local_audio_file_reselect => '音声データベースを選択し直す';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -91612,6 +91704,18 @@ class _StringsKo extends _StringsEn {
       '음성 데이터베이스를 사용할 수 없습니다. 원본 DB 파일을 다시 선택하세요.';
   @override
   String get local_audio_file_reselect => '음성 데이터베이스 다시 선택';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -102403,6 +102507,18 @@ class _StringsNl extends _StringsEn {
       'Audiodatabase niet beschikbaar. Selecteer het oorspronkelijke DB-bestand opnieuw.';
   @override
   String get local_audio_file_reselect => 'Audiodatabase opnieuw selecteren';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -113247,6 +113363,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get local_audio_file_reselect =>
       'Selecionar o banco de dados de áudio novamente';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -124068,6 +124196,18 @@ class _StringsRu extends _StringsEn {
       'База аудиоданных недоступна. Выберите исходный файл DB ещё раз.';
   @override
   String get local_audio_file_reselect => 'Выбрать базу аудиоданных заново';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -134689,6 +134829,18 @@ class _StringsTh extends _StringsEn {
       'ไม่สามารถใช้ฐานข้อมูลเสียงได้ โปรดเลือกไฟล์ DB ต้นฉบับอีกครั้ง';
   @override
   String get local_audio_file_reselect => 'เลือกฐานข้อมูลเสียงอีกครั้ง';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -145426,6 +145578,18 @@ class _StringsTr extends _StringsEn {
       'Ses veritabanı kullanılamıyor. Orijinal DB dosyasını yeniden seçin.';
   @override
   String get local_audio_file_reselect => 'Ses veritabanını yeniden seç';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -156134,6 +156298,18 @@ class _StringsVi extends _StringsEn {
       'Không thể sử dụng cơ sở dữ liệu âm thanh. Vui lòng chọn lại tệp DB gốc.';
   @override
   String get local_audio_file_reselect => 'Chọn lại cơ sở dữ liệu âm thanh';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 // Path: <root>
@@ -165970,6 +166146,14 @@ class _StringsZhCn extends _StringsEn {
   String get local_audio_file_unavailable => '发音库文件不可用，请重新选择原始 DB 文件。';
   @override
   String get local_audio_file_reselect => '重新选择发音库';
+  @override
+  String get download_request_failed => '无法创建下载。请检查下载设置和任务列表后重试。';
+  @override
+  String get download_resource_resolve_failed => '无法获取下载资源。请检查网络和代理设置后重试。';
+  @override
+  String get download_torrent_invalid => '来源返回的种子数据无效。请稍后重试或更换来源。';
+  @override
+  String get download_torrent_selection_failed => '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
 }
 
 // Path: <root>
@@ -175871,6 +176055,18 @@ class _StringsZhHk extends _StringsEn {
   String get local_audio_file_unavailable => '發音庫檔案無法使用，請重新選擇原始 DB 檔案。';
   @override
   String get local_audio_file_reselect => '重新選擇發音庫';
+  @override
+  String get download_request_failed =>
+      'Could not create the download. Check the download settings and task list, then try again.';
+  @override
+  String get download_resource_resolve_failed =>
+      'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+  @override
+  String get download_torrent_invalid =>
+      'The source returned invalid torrent data. Retry later or choose another source.';
+  @override
+  String get download_torrent_selection_failed =>
+      'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
 }
 
 /// Flat map(s) containing all translations.
@@ -185179,6 +185375,14 @@ extension on _StringsEn {
         return 'Audio database unavailable. Select the original DB file again.';
       case 'local_audio_file_reselect':
         return 'Select audio database again';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -194482,6 +194686,14 @@ extension on _StringsAr {
         return 'قاعدة بيانات الصوت غير متاحة. حدد ملف DB الأصلي مرة أخرى.';
       case 'local_audio_file_reselect':
         return 'تحديد قاعدة بيانات الصوت مرة أخرى';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -203830,6 +204042,14 @@ extension on _StringsDe {
         return 'Audiodatenbank nicht verfügbar. Wähle die ursprüngliche DB-Datei erneut aus.';
       case 'local_audio_file_reselect':
         return 'Audiodatenbank erneut auswählen';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -213169,6 +213389,14 @@ extension on _StringsEs {
         return 'La base de datos de audio no está disponible. Selecciona de nuevo el archivo DB original.';
       case 'local_audio_file_reselect':
         return 'Seleccionar de nuevo la base de datos de audio';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -222517,6 +222745,14 @@ extension on _StringsFr {
         return 'Base de données audio indisponible. Sélectionnez à nouveau le fichier DB d’origine.';
       case 'local_audio_file_reselect':
         return 'Sélectionner à nouveau la base de données audio';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -231836,6 +232072,14 @@ extension on _StringsId {
         return 'Basis data audio tidak tersedia. Pilih kembali file DB asli.';
       case 'local_audio_file_reselect':
         return 'Pilih kembali basis data audio';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -241177,6 +241421,14 @@ extension on _StringsIt {
         return 'Database audio non disponibile. Seleziona di nuovo il file DB originale.';
       case 'local_audio_file_reselect':
         return 'Seleziona di nuovo il database audio';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -250445,6 +250697,14 @@ extension on _StringsJa {
         return '音声データベースを利用できません。元の DB ファイルを選択し直してください。';
       case 'local_audio_file_reselect':
         return '音声データベースを選択し直す';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -259717,6 +259977,14 @@ extension on _StringsKo {
         return '음성 데이터베이스를 사용할 수 없습니다. 원본 DB 파일을 다시 선택하세요.';
       case 'local_audio_file_reselect':
         return '음성 데이터베이스 다시 선택';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -269051,6 +269319,14 @@ extension on _StringsNl {
         return 'Audiodatabase niet beschikbaar. Selecteer het oorspronkelijke DB-bestand opnieuw.';
       case 'local_audio_file_reselect':
         return 'Audiodatabase opnieuw selecteren';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -278380,6 +278656,14 @@ extension on _StringsPtBr {
         return 'Banco de dados de áudio indisponível. Selecione o arquivo DB original novamente.';
       case 'local_audio_file_reselect':
         return 'Selecionar o banco de dados de áudio novamente';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -287716,6 +288000,14 @@ extension on _StringsRu {
         return 'База аудиоданных недоступна. Выберите исходный файл DB ещё раз.';
       case 'local_audio_file_reselect':
         return 'Выбрать базу аудиоданных заново';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -297024,6 +297316,14 @@ extension on _StringsTh {
         return 'ไม่สามารถใช้ฐานข้อมูลเสียงได้ โปรดเลือกไฟล์ DB ต้นฉบับอีกครั้ง';
       case 'local_audio_file_reselect':
         return 'เลือกฐานข้อมูลเสียงอีกครั้ง';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -306347,6 +306647,14 @@ extension on _StringsTr {
         return 'Ses veritabanı kullanılamıyor. Orijinal DB dosyasını yeniden seçin.';
       case 'local_audio_file_reselect':
         return 'Ses veritabanını yeniden seç';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -315664,6 +315972,14 @@ extension on _StringsVi {
         return 'Không thể sử dụng cơ sở dữ liệu âm thanh. Vui lòng chọn lại tệp DB gốc.';
       case 'local_audio_file_reselect':
         return 'Chọn lại cơ sở dữ liệu âm thanh';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
@@ -324900,6 +325216,14 @@ extension on _StringsZhCn {
         return '发音库文件不可用，请重新选择原始 DB 文件。';
       case 'local_audio_file_reselect':
         return '重新选择发音库';
+      case 'download_request_failed':
+        return '无法创建下载。请检查下载设置和任务列表后重试。';
+      case 'download_resource_resolve_failed':
+        return '无法获取下载资源。请检查网络和代理设置后重试。';
+      case 'download_torrent_invalid':
+        return '来源返回的种子数据无效。请稍后重试或更换来源。';
+      case 'download_torrent_selection_failed':
+        return '无法在种子中唯一匹配这本书。请刷新目录或更换来源。';
       default:
         return null;
     }
@@ -334146,6 +334470,14 @@ extension on _StringsZhHk {
         return '發音庫檔案無法使用，請重新選擇原始 DB 檔案。';
       case 'local_audio_file_reselect':
         return '重新選擇發音庫';
+      case 'download_request_failed':
+        return 'Could not create the download. Check the download settings and task list, then try again.';
+      case 'download_resource_resolve_failed':
+        return 'Could not fetch the download resource. Check the network and proxy settings, then try again.';
+      case 'download_torrent_invalid':
+        return 'The source returned invalid torrent data. Retry later or choose another source.';
+      case 'download_torrent_selection_failed':
+        return 'Could not uniquely match this volume in the torrent. Refresh the catalog or choose another source.';
       default:
         return null;
     }
