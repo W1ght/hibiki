@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77979 (4587 per locale)
+/// Strings: 77996 (4588 per locale)
 ///
-/// Built on 2026-09-09 at 22:49 UTC
+/// Built on 2026-09-09 at 23:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6361,6 +6361,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_reposition_auto_title => 'Auto-reposition after mining';
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -17136,6 +17138,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -28139,6 +28144,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -39196,6 +39204,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -50287,6 +50298,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -61180,6 +61194,9 @@ class _StringsId extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -72166,6 +72183,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -82528,6 +82548,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -92901,6 +92924,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -103843,6 +103869,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -114839,6 +114868,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -125812,6 +125844,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -136584,6 +136619,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -147472,6 +147510,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -158331,6 +158372,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 // Path: <root>
@@ -168305,6 +168349,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      '「${deck}」自动重排失败';
 }
 
 // Path: <root>
@@ -178351,6 +178398,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get anki_reposition_auto_hint =>
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+  @override
+  String anki_reposition_auto_failed({required Object deck}) =>
+      'Auto reposition failed for ${deck}';
 }
 
 /// Flat map(s) containing all translations.
@@ -187786,6 +187836,8 @@ extension on _StringsEn {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -197216,6 +197268,8 @@ extension on _StringsAr {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -206691,6 +206745,8 @@ extension on _StringsDe {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -216157,6 +216213,8 @@ extension on _StringsEs {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -225632,6 +225690,8 @@ extension on _StringsFr {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -235078,6 +235138,8 @@ extension on _StringsId {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -244546,6 +244608,8 @@ extension on _StringsIt {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -253941,6 +254005,8 @@ extension on _StringsJa {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -263340,6 +263406,8 @@ extension on _StringsKo {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -272801,6 +272869,8 @@ extension on _StringsNl {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -282257,6 +282327,8 @@ extension on _StringsPtBr {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -291720,6 +291792,8 @@ extension on _StringsRu {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -301155,6 +301229,8 @@ extension on _StringsTh {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -310605,6 +310681,8 @@ extension on _StringsTr {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -320049,6 +320127,8 @@ extension on _StringsVi {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
@@ -329411,6 +329491,8 @@ extension on _StringsZhCn {
         return '制卡后自动重排';
       case 'anki_reposition_auto_hint':
         return '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => '「${deck}」自动重排失败';
       default:
         return null;
     }
@@ -338784,6 +338866,8 @@ extension on _StringsZhHk {
         return 'Auto-reposition after mining';
       case 'anki_reposition_auto_hint':
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
+      case 'anki_reposition_auto_failed':
+        return ({required Object deck}) => 'Auto reposition failed for ${deck}';
       default:
         return null;
     }
