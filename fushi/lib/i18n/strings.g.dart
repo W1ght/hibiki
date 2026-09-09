@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77129 (4537 per locale)
+/// Strings: 77248 (4544 per locale)
 ///
-/// Built on 2026-09-09 at 09:32 UTC
+/// Built on 2026-09-09 at 09:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -5163,7 +5163,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_clip_exporting => 'Exporting clip…';
   String get video_collection_no_local_member =>
       'No local video in this collection';
-  String get video_collection_scrape => 'Scrape info & cover';
   String get video_continue_watching => 'Continue watching';
   String get video_control_audio_track => 'Audio track';
   String video_control_custom_action({required Object index}) =>
@@ -6297,6 +6296,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Already a source — rescanning: ${path}';
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  String get collection_cover_set => 'Set cover';
+  String get collection_cover_reset => 'Reset to default cover';
+  String get collection_cover_updated => 'Cover updated';
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  String get collection_rescrape_started => 'Rescrape queued';
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -15006,8 +15014,6 @@ class _StringsAr extends _StringsEn {
   String get video_collection_no_local_member =>
       'لا يوجد فيديو محلي في هذه المجموعة';
   @override
-  String get video_collection_scrape => 'كشط المعلومات والغلاف';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'المسار الصوتي';
@@ -16959,6 +16965,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -25847,8 +25870,6 @@ class _StringsDe extends _StringsEn {
   String get video_collection_no_local_member =>
       'Kein lokales Video in dieser Sammlung';
   @override
-  String get video_collection_scrape => 'Info & Cover scrapen';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Tonspur';
@@ -27848,6 +27869,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -36775,8 +36813,6 @@ class _StringsEs extends _StringsEn {
   String get video_collection_no_local_member =>
       'No hay vídeo local en esta colección';
   @override
-  String get video_collection_scrape => 'Obtener info y portada';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Pista de audio';
@@ -38791,6 +38827,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -47736,8 +47789,6 @@ class _StringsFr extends _StringsEn {
   String get video_collection_no_local_member =>
       'Aucune vidéo locale dans cette collection';
   @override
-  String get video_collection_scrape => 'Récupérer infos et couverture';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Piste audio';
@@ -49768,6 +49819,23 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -58566,8 +58634,6 @@ class _StringsId extends _StringsEn {
   String get video_collection_no_local_member =>
       'Tidak ada video lokal dalam koleksi ini';
   @override
-  String get video_collection_scrape => 'Scrape info & sampul';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Trek audio';
@@ -60547,6 +60613,23 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -69417,8 +69500,6 @@ class _StringsIt extends _StringsEn {
   String get video_collection_no_local_member =>
       'Nessun video locale in questa raccolta';
   @override
-  String get video_collection_scrape => 'Scrape info e copertina';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Traccia audio';
@@ -71418,6 +71499,23 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -79796,8 +79894,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_collection_no_local_member => 'このコレクションにローカル動画がありません';
   @override
-  String get video_collection_scrape => '情報と封面を取得';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => '音声トラック';
@@ -81670,6 +81766,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -90055,8 +90168,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_collection_no_local_member => '이 컬렉션에 로컬 동영상이 없습니다';
   @override
-  String get video_collection_scrape => '정보 및 표지 스크랩';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => '오디오 트랙';
@@ -91932,6 +92043,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -100771,8 +100899,6 @@ class _StringsNl extends _StringsEn {
   String get video_collection_no_local_member =>
       'Geen lokale video in deze collectie';
   @override
-  String get video_collection_scrape => 'Info & omslag scrapen';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Audiotrack';
@@ -102760,6 +102886,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -111634,8 +111777,6 @@ class _StringsPtBr extends _StringsEn {
   String get video_collection_no_local_member =>
       'Nenhum vídeo local nesta coleção';
   @override
-  String get video_collection_scrape => 'Buscar info e capa';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Faixa de áudio';
@@ -113641,6 +113782,23 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -122490,8 +122648,6 @@ class _StringsRu extends _StringsEn {
   String get video_collection_no_local_member =>
       'Нет локальных видео в этой коллекции';
   @override
-  String get video_collection_scrape => 'Получить информацию и обложку';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Аудиодорожка';
@@ -124499,6 +124655,23 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -133204,8 +133377,6 @@ class _StringsTh extends _StringsEn {
   String get video_collection_no_local_member =>
       'ไม่มีวิดีโอในเครื่องในคอลเลกชันนี้';
   @override
-  String get video_collection_scrape => 'สแกนข้อมูลและปก';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'แทร็กเสียง';
@@ -135157,6 +135328,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -143950,8 +144138,6 @@ class _StringsTr extends _StringsEn {
   String get video_collection_no_local_member =>
       'Bu koleksiyonda yerel video yok';
   @override
-  String get video_collection_scrape => 'Bilgi ve kapak tara';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Ses izi';
@@ -145931,6 +146117,23 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -154707,8 +154910,6 @@ class _StringsVi extends _StringsEn {
   String get video_collection_no_local_member =>
       'Không có video cục bộ trong bộ sưu tập này';
   @override
-  String get video_collection_scrape => 'Quét thông tin & bìa';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => 'Bản âm thanh';
@@ -156676,6 +156877,23 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => 'Set cover';
+  @override
+  String get collection_cover_reset => 'Reset to default cover';
+  @override
+  String get collection_cover_updated => 'Cover updated';
+  @override
+  String get collection_cover_failed => 'Couldn\'t set the cover';
+  @override
+  String get collection_rescrape => 'Rescrape metadata and cover';
+  @override
+  String get collection_rescrape_not_planned =>
+      'This collection isn\'t in any local video source\'s scrape plan';
+  @override
+  String get collection_rescrape_started => 'Rescrape queued';
+  @override
+  String get collection_rescrape_failed => 'Rescrape failed';
 }
 
 // Path: <root>
@@ -164740,8 +164958,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_collection_no_local_member => '本合集没有本地视频';
   @override
-  String get video_collection_scrape => '刮削资料与封面';
-  @override
   String get video_continue_watching => '继续观看';
   @override
   String get video_control_audio_track => '音轨';
@@ -166544,6 +166760,22 @@ class _StringsZhCn extends _StringsEn {
       '该位置已是来源，正在重新扫描：${path}';
   @override
   String get audiobook_transcribe_model_discarded => '模型文件读不出来，已自动清除，请重新下载。';
+  @override
+  String get collection_cover_set => '设置封面';
+  @override
+  String get collection_cover_reset => '恢复默认封面';
+  @override
+  String get collection_cover_updated => '封面已更新';
+  @override
+  String get collection_cover_failed => '封面设置失败';
+  @override
+  String get collection_rescrape => '重新刮削资料与封面';
+  @override
+  String get collection_rescrape_not_planned => '这个合集不在任何本地视频来源的刮削计划里';
+  @override
+  String get collection_rescrape_started => '已开始重新刮削';
+  @override
+  String get collection_rescrape_failed => '重新刮削失败';
 }
 
 // Path: <root>
@@ -174668,8 +174900,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_collection_no_local_member => '本合集沒有本地影片';
   @override
-  String get video_collection_scrape => '刮削資料與封面';
-  @override
   String get video_continue_watching => 'Continue Watching';
   @override
   String get video_control_audio_track => '音軌';
@@ -176482,6 +176712,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_model_discarded =>
       'The model file could not be read and was removed. Download it again.';
+  @override
+  String get collection_cover_set => '設定封面';
+  @override
+  String get collection_cover_reset => '回復預設封面';
+  @override
+  String get collection_cover_updated => '封面已更新';
+  @override
+  String get collection_cover_failed => '封面設定失敗';
+  @override
+  String get collection_rescrape => '重新刮削資料與封面';
+  @override
+  String get collection_rescrape_not_planned => '這個合集不在任何本機影片來源的刮削計劃裡';
+  @override
+  String get collection_rescrape_started => '已開始重新刮削';
+  @override
+  String get collection_rescrape_failed => '重新刮削失敗';
 }
 
 /// Flat map(s) containing all translations.
@@ -184124,8 +184370,6 @@ extension on _StringsEn {
         return 'Exporting clip…';
       case 'video_collection_no_local_member':
         return 'No local video in this collection';
-      case 'video_collection_scrape':
-        return 'Scrape info & cover';
       case 'video_continue_watching':
         return 'Continue watching';
       case 'video_control_audio_track':
@@ -185817,6 +186061,22 @@ extension on _StringsEn {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -193453,8 +193713,6 @@ extension on _StringsAr {
         return 'جارٍ تصدير المقطع…';
       case 'video_collection_no_local_member':
         return 'لا يوجد فيديو محلي في هذه المجموعة';
-      case 'video_collection_scrape':
-        return 'كشط المعلومات والغلاف';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -195147,6 +195405,22 @@ extension on _StringsAr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -202825,8 +203099,6 @@ extension on _StringsDe {
         return 'Clip wird exportiert…';
       case 'video_collection_no_local_member':
         return 'Kein lokales Video in dieser Sammlung';
-      case 'video_collection_scrape':
-        return 'Info & Cover scrapen';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -204522,6 +204794,22 @@ extension on _StringsDe {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -212192,8 +212480,6 @@ extension on _StringsEs {
         return 'Exportando fragmento…';
       case 'video_collection_no_local_member':
         return 'No hay vídeo local en esta colección';
-      case 'video_collection_scrape':
-        return 'Obtener info y portada';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -213888,6 +214174,22 @@ extension on _StringsEs {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -221566,8 +221868,6 @@ extension on _StringsFr {
         return 'Export de l\'extrait…';
       case 'video_collection_no_local_member':
         return 'Aucune vidéo locale dans cette collection';
-      case 'video_collection_scrape':
-        return 'Récupérer infos et couverture';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -223263,6 +223563,22 @@ extension on _StringsFr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -230914,8 +231230,6 @@ extension on _StringsId {
         return 'Mengekspor klip…';
       case 'video_collection_no_local_member':
         return 'Tidak ada video lokal dalam koleksi ini';
-      case 'video_collection_scrape':
-        return 'Scrape info & sampul';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -232609,6 +232923,22 @@ extension on _StringsId {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -240280,8 +240610,6 @@ extension on _StringsIt {
         return 'Esportazione del clip…';
       case 'video_collection_no_local_member':
         return 'Nessun video locale in questa raccolta';
-      case 'video_collection_scrape':
-        return 'Scrape info e copertina';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -241977,6 +242305,22 @@ extension on _StringsIt {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -249586,8 +249930,6 @@ extension on _StringsJa {
         return 'クリップを書き出し中…';
       case 'video_collection_no_local_member':
         return 'このコレクションにローカル動画がありません';
-      case 'video_collection_scrape':
-        return '情報と封面を取得';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -251272,6 +251614,22 @@ extension on _StringsJa {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -258884,8 +259242,6 @@ extension on _StringsKo {
         return '클립 내보내는 중…';
       case 'video_collection_no_local_member':
         return '이 컬렉션에 로컬 동영상이 없습니다';
-      case 'video_collection_scrape':
-        return '정보 및 표지 스크랩';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -260571,6 +260927,22 @@ extension on _StringsKo {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -268234,8 +268606,6 @@ extension on _StringsNl {
         return 'Fragment exporteren…';
       case 'video_collection_no_local_member':
         return 'Geen lokale video in deze collectie';
-      case 'video_collection_scrape':
-        return 'Info & omslag scrapen';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -269932,6 +270302,22 @@ extension on _StringsNl {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -277591,8 +277977,6 @@ extension on _StringsPtBr {
         return 'Exportando trecho…';
       case 'video_collection_no_local_member':
         return 'Nenhum vídeo local nesta coleção';
-      case 'video_collection_scrape':
-        return 'Buscar info e capa';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -279288,6 +279672,22 @@ extension on _StringsPtBr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -286956,8 +287356,6 @@ extension on _StringsRu {
         return 'Экспорт фрагмента…';
       case 'video_collection_no_local_member':
         return 'Нет локальных видео в этой коллекции';
-      case 'video_collection_scrape':
-        return 'Получить информацию и обложку';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -288651,6 +289049,22 @@ extension on _StringsRu {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -296293,8 +296707,6 @@ extension on _StringsTh {
         return 'กำลังส่งออกคลิป…';
       case 'video_collection_no_local_member':
         return 'ไม่มีวิดีโอในเครื่องในคอลเลกชันนี้';
-      case 'video_collection_scrape':
-        return 'สแกนข้อมูลและปก';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -297986,6 +298398,22 @@ extension on _StringsTh {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -305640,8 +306068,6 @@ extension on _StringsTr {
         return 'Kesit dışa aktarılıyor…';
       case 'video_collection_no_local_member':
         return 'Bu koleksiyonda yerel video yok';
-      case 'video_collection_scrape':
-        return 'Bilgi ve kapak tara';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -307336,6 +307762,22 @@ extension on _StringsTr {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -314987,8 +315429,6 @@ extension on _StringsVi {
         return 'Đang xuất đoạn…';
       case 'video_collection_no_local_member':
         return 'Không có video cục bộ trong bộ sưu tập này';
-      case 'video_collection_scrape':
-        return 'Quét thông tin & bìa';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -316680,6 +317120,22 @@ extension on _StringsVi {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return 'Set cover';
+      case 'collection_cover_reset':
+        return 'Reset to default cover';
+      case 'collection_cover_updated':
+        return 'Cover updated';
+      case 'collection_cover_failed':
+        return 'Couldn\'t set the cover';
+      case 'collection_rescrape':
+        return 'Rescrape metadata and cover';
+      case 'collection_rescrape_not_planned':
+        return 'This collection isn\'t in any local video source\'s scrape plan';
+      case 'collection_rescrape_started':
+        return 'Rescrape queued';
+      case 'collection_rescrape_failed':
+        return 'Rescrape failed';
       default:
         return null;
     }
@@ -324265,8 +324721,6 @@ extension on _StringsZhCn {
         return '正在导出片段…';
       case 'video_collection_no_local_member':
         return '本合集没有本地视频';
-      case 'video_collection_scrape':
-        return '刮削资料与封面';
       case 'video_continue_watching':
         return '继续观看';
       case 'video_control_audio_track':
@@ -325942,6 +326396,22 @@ extension on _StringsZhCn {
         return ({required Object path}) => '该位置已是来源，正在重新扫描：${path}';
       case 'audiobook_transcribe_model_discarded':
         return '模型文件读不出来，已自动清除，请重新下载。';
+      case 'collection_cover_set':
+        return '设置封面';
+      case 'collection_cover_reset':
+        return '恢复默认封面';
+      case 'collection_cover_updated':
+        return '封面已更新';
+      case 'collection_cover_failed':
+        return '封面设置失败';
+      case 'collection_rescrape':
+        return '重新刮削资料与封面';
+      case 'collection_rescrape_not_planned':
+        return '这个合集不在任何本地视频来源的刮削计划里';
+      case 'collection_rescrape_started':
+        return '已开始重新刮削';
+      case 'collection_rescrape_failed':
+        return '重新刮削失败';
       default:
         return null;
     }
@@ -333535,8 +334005,6 @@ extension on _StringsZhHk {
         return '正在匯出片段…';
       case 'video_collection_no_local_member':
         return '本合集沒有本地影片';
-      case 'video_collection_scrape':
-        return '刮削資料與封面';
       case 'video_continue_watching':
         return 'Continue Watching';
       case 'video_control_audio_track':
@@ -335215,6 +335683,22 @@ extension on _StringsZhHk {
             'Already a source — rescanning: ${path}';
       case 'audiobook_transcribe_model_discarded':
         return 'The model file could not be read and was removed. Download it again.';
+      case 'collection_cover_set':
+        return '設定封面';
+      case 'collection_cover_reset':
+        return '回復預設封面';
+      case 'collection_cover_updated':
+        return '封面已更新';
+      case 'collection_cover_failed':
+        return '封面設定失敗';
+      case 'collection_rescrape':
+        return '重新刮削資料與封面';
+      case 'collection_rescrape_not_planned':
+        return '這個合集不在任何本機影片來源的刮削計劃裡';
+      case 'collection_rescrape_started':
+        return '已開始重新刮削';
+      case 'collection_rescrape_failed':
+        return '重新刮削失敗';
       default:
         return null;
     }
