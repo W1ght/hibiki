@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 77639 (4567 per locale)
 ///
-/// Built on 2026-09-09 at 11:44 UTC
+/// Built on 2026-09-09 at 12:20 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6334,7 +6334,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Also send a system notification. Turning this off keeps the in-app badge.';
   String get updates_check_now => 'Check for updates now';
   String get updates_checking => 'Checking...';
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -17064,7 +17066,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -28021,7 +28025,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -39032,7 +39038,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -50077,7 +50085,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -60924,7 +60934,9 @@ class _StringsId extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -71863,7 +71875,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -82183,7 +82197,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -92513,7 +92529,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -103409,7 +103427,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -114358,7 +114378,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -125284,7 +125306,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -136010,7 +136034,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -146852,7 +146878,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -157665,7 +157693,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -167593,7 +167623,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get updates_checking => '检查中…';
   @override
-  String get updates_notification_summary => '{first} 等 {count} 项';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} 等 ${count} 项';
 }
 
 // Path: <root>
@@ -177598,7 +177630,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get updates_checking => 'Checking...';
   @override
-  String get updates_notification_summary => '{first} and {count} more';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 /// Flat map(s) containing all translations.
@@ -186993,7 +187027,8 @@ extension on _StringsEn {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -196383,7 +196418,8 @@ extension on _StringsAr {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -205818,7 +205854,8 @@ extension on _StringsDe {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -215244,7 +215281,8 @@ extension on _StringsEs {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -224679,7 +224717,8 @@ extension on _StringsFr {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -234085,7 +234124,8 @@ extension on _StringsId {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -243513,7 +243553,8 @@ extension on _StringsIt {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -252868,7 +252909,8 @@ extension on _StringsJa {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -262227,7 +262269,8 @@ extension on _StringsKo {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -271648,7 +271691,8 @@ extension on _StringsNl {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -281064,7 +281108,8 @@ extension on _StringsPtBr {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -290487,7 +290532,8 @@ extension on _StringsRu {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -299882,7 +299928,8 @@ extension on _StringsTh {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -309292,7 +309339,8 @@ extension on _StringsTr {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -318696,7 +318744,8 @@ extension on _StringsVi {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -328018,7 +328067,8 @@ extension on _StringsZhCn {
       case 'updates_checking':
         return '检查中…';
       case 'updates_notification_summary':
-        return '{first} 等 {count} 项';
+        return ({required Object first, required Object count}) =>
+            '${first} 等 ${count} 项';
       default:
         return null;
     }
@@ -337351,7 +337401,8 @@ extension on _StringsZhHk {
       case 'updates_checking':
         return 'Checking...';
       case 'updates_notification_summary':
-        return '{first} and {count} more';
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
