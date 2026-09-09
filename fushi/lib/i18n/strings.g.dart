@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76874 (4522 per locale)
+/// Strings: 76908 (4524 per locale)
 ///
-/// Built on 2026-09-09 at 05:15 UTC
+/// Built on 2026-09-09 at 05:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2908,7 +2908,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get local_audio_reference_original_desc =>
       'Keep the database where it is and read from its original path; the source breaks if the file is moved or deleted.';
   String get local_audio_reference_unavailable =>
-      'Can\'t reference the original file without all-files access; a copy was imported instead.';
+      'The selected file is a temporary copy. Importing a persistent copy instead.';
   String get local_audio_source_order_title => 'Source priority';
   String get log_copy_all => 'Copy all';
   String get log_export_failed => 'Export failed';
@@ -6270,6 +6270,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_work_field_cover => 'Cover';
   String get video_work_field_backdrop => 'Backdrop';
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  String get local_audio_file_unavailable =>
+      'Audio database unavailable. Select the original DB file again.';
+  String get local_audio_file_reselect => 'Select audio database again';
 }
 
 // Path: <root>
@@ -11010,7 +11013,7 @@ class _StringsAr extends _StringsEn {
       'إبقاء قاعدة البيانات في مكانها والقراءة من مسارها الأصلي؛ سيتعطل المصدر إذا تم نقل الملف أو حذفه.';
   @override
   String get local_audio_reference_unavailable =>
-      'لا يمكن الإشارة إلى الملف الأصلي بدون إذن الوصول لجميع الملفات؛ تم استيراد نسخة بدلاً من ذلك.';
+      'الملف المحدد نسخة مؤقتة. يجري استيراد نسخة دائمة بدلاً منها.';
   @override
   String get local_audio_source_order_title => 'أولوية المصدر';
   @override
@@ -16890,6 +16893,11 @@ class _StringsAr extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'قاعدة بيانات الصوت غير متاحة. حدد ملف DB الأصلي مرة أخرى.';
+  @override
+  String get local_audio_file_reselect => 'تحديد قاعدة بيانات الصوت مرة أخرى';
 }
 
 // Path: <root>
@@ -21728,7 +21736,7 @@ class _StringsDe extends _StringsEn {
       'Die Datenbank am Originalort belassen und von dort lesen; die Quelle bricht ab, wenn die Datei verschoben oder gelöscht wird.';
   @override
   String get local_audio_reference_unavailable =>
-      'Ohne Zugriff auf alle Dateien kann die Originaldatei nicht referenziert werden; stattdessen wurde eine Kopie importiert.';
+      'Die ausgewählte Datei ist eine temporäre Kopie. Stattdessen wird eine dauerhafte Kopie importiert.';
   @override
   String get local_audio_source_order_title => 'Quellenpriorität';
   @override
@@ -27737,6 +27745,11 @@ class _StringsDe extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'Audiodatenbank nicht verfügbar. Wähle die ursprüngliche DB-Datei erneut aus.';
+  @override
+  String get local_audio_file_reselect => 'Audiodatenbank erneut auswählen';
 }
 
 // Path: <root>
@@ -32598,7 +32611,7 @@ class _StringsEs extends _StringsEn {
       'Mantener la base de datos donde está y leer desde su ruta original; la fuente se rompe si el archivo se mueve o elimina.';
   @override
   String get local_audio_reference_unavailable =>
-      'No se puede referenciar el archivo original sin acceso a todos los archivos; se importó una copia en su lugar.';
+      'El archivo seleccionado es una copia temporal. Se importará una copia permanente en su lugar.';
   @override
   String get local_audio_source_order_title => 'Prioridad de las fuentes';
   @override
@@ -38637,6 +38650,12 @@ class _StringsEs extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'La base de datos de audio no está disponible. Selecciona de nuevo el archivo DB original.';
+  @override
+  String get local_audio_file_reselect =>
+      'Seleccionar de nuevo la base de datos de audio';
 }
 
 // Path: <root>
@@ -43510,7 +43529,7 @@ class _StringsFr extends _StringsEn {
       'Garder la base de données à son emplacement actuel et lire depuis son chemin d\'origine ; la source ne fonctionnera plus si le fichier est déplacé ou supprimé.';
   @override
   String get local_audio_reference_unavailable =>
-      'Impossible de référencer le fichier original sans l\'accès complet aux fichiers ; une copie a été importée à la place.';
+      'Le fichier sélectionné est une copie temporaire. Une copie permanente sera importée à la place.';
   @override
   String get local_audio_source_order_title => 'Priorité des sources';
   @override
@@ -49571,6 +49590,12 @@ class _StringsFr extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'Base de données audio indisponible. Sélectionnez à nouveau le fichier DB d’origine.';
+  @override
+  String get local_audio_file_reselect =>
+      'Sélectionner à nouveau la base de données audio';
 }
 
 // Path: <root>
@@ -54360,7 +54385,7 @@ class _StringsId extends _StringsEn {
       'Biarkan database di tempatnya dan baca dari jalur aslinya; sumber rusak jika file dipindah atau dihapus.';
   @override
   String get local_audio_reference_unavailable =>
-      'Tidak bisa mereferensikan file asli tanpa akses semua file; salinan diimpor sebagai gantinya.';
+      'File yang dipilih adalah salinan sementara. Salinan permanen akan diimpor sebagai gantinya.';
   @override
   String get local_audio_source_order_title => 'Prioritas sumber';
   @override
@@ -60308,6 +60333,11 @@ class _StringsId extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'Basis data audio tidak tersedia. Pilih kembali file DB asli.';
+  @override
+  String get local_audio_file_reselect => 'Pilih kembali basis data audio';
 }
 
 // Path: <root>
@@ -65133,7 +65163,7 @@ class _StringsIt extends _StringsEn {
       'Mantieni il database dove si trova e leggi dal percorso originale; la sorgente si rompe se il file viene spostato o eliminato.';
   @override
   String get local_audio_reference_unavailable =>
-      'Impossibile riferirsi al file originale senza accesso a tutti i file; una copia è stata importata invece.';
+      'Il file selezionato è una copia temporanea. Verrà importata una copia permanente al suo posto.';
   @override
   String get local_audio_source_order_title => 'Priorità delle sorgenti';
   @override
@@ -71136,6 +71166,12 @@ class _StringsIt extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'Database audio non disponibile. Seleziona di nuovo il file DB originale.';
+  @override
+  String get local_audio_file_reselect =>
+      'Seleziona di nuovo il database audio';
 }
 
 // Path: <root>
@@ -75708,7 +75744,7 @@ class _StringsJa extends _StringsEn {
       'データベースを現在の場所に保持し、元のパスから読み取ります。ファイルを移動または削除するとソースが壊れます。';
   @override
   String get local_audio_reference_unavailable =>
-      'すべてのファイルへのアクセスがないため元のファイルを参照できません。代わりにコピーがインポートされました。';
+      '選択したファイルは一時コピーです。代わりに永続的なコピーとしてインポートします。';
   @override
   String get local_audio_source_order_title => 'ソースの優先順位';
   @override
@@ -81346,6 +81382,11 @@ class _StringsJa extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      '音声データベースを利用できません。元の DB ファイルを選択し直してください。';
+  @override
+  String get local_audio_file_reselect => '音声データベースを選択し直す';
 }
 
 // Path: <root>
@@ -85913,7 +85954,7 @@ class _StringsKo extends _StringsEn {
       '데이터베이스를 현재 위치에 유지하고 원본 경로에서 읽습니다. 파일이 이동되거나 삭제되면 소스가 끊어집니다.';
   @override
   String get local_audio_reference_unavailable =>
-      '모든 파일 접근 권한 없이는 원본 파일을 참조할 수 없어 사본이 대신 가져와졌습니다.';
+      '선택한 파일은 임시 사본입니다. 대신 영구적으로 저장되는 사본을 가져옵니다.';
   @override
   String get local_audio_source_order_title => '소스 우선순위';
   @override
@@ -91566,6 +91607,11 @@ class _StringsKo extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      '음성 데이터베이스를 사용할 수 없습니다. 원본 DB 파일을 다시 선택하세요.';
+  @override
+  String get local_audio_file_reselect => '음성 데이터베이스 다시 선택';
 }
 
 // Path: <root>
@@ -96371,7 +96417,7 @@ class _StringsNl extends _StringsEn {
       'Bewaar de database op de huidige locatie en lees vanaf het oorspronkelijke pad; de bron werkt niet meer als het bestand wordt verplaatst of verwijderd.';
   @override
   String get local_audio_reference_unavailable =>
-      'Kan het originele bestand niet refereren zonder volledige bestandstoegang; er is in plaats daarvan een kopie geïmporteerd.';
+      'Het geselecteerde bestand is een tijdelijke kopie. Er wordt in plaats daarvan een permanente kopie geïmporteerd.';
   @override
   String get local_audio_source_order_title => 'Bronprioriteit';
   @override
@@ -102352,6 +102398,11 @@ class _StringsNl extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'Audiodatabase niet beschikbaar. Selecteer het oorspronkelijke DB-bestand opnieuw.';
+  @override
+  String get local_audio_file_reselect => 'Audiodatabase opnieuw selecteren';
 }
 
 // Path: <root>
@@ -107184,7 +107235,7 @@ class _StringsPtBr extends _StringsEn {
       'Mantém o banco onde está e lê do caminho original; a fonte quebra se o arquivo for movido ou deletado.';
   @override
   String get local_audio_reference_unavailable =>
-      'Não é possível referenciar o arquivo original sem acesso a todos os arquivos; uma cópia foi importada.';
+      'O arquivo selecionado é uma cópia temporária. Uma cópia permanente será importada em seu lugar.';
   @override
   String get local_audio_source_order_title => 'Prioridade das fontes';
   @override
@@ -113190,6 +113241,12 @@ class _StringsPtBr extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'Banco de dados de áudio indisponível. Selecione o arquivo DB original novamente.';
+  @override
+  String get local_audio_file_reselect =>
+      'Selecionar o banco de dados de áudio novamente';
 }
 
 // Path: <root>
@@ -117998,7 +118055,7 @@ class _StringsRu extends _StringsEn {
       'Оставить базу данных на месте и читать по исходному пути; источник перестанет работать при перемещении или удалении файла.';
   @override
   String get local_audio_reference_unavailable =>
-      'Невозможно сослаться на исходный файл без полного доступа к файлам; вместо этого импортирована копия.';
+      'Выбранный файл — временная копия. Вместо неё будет импортирована постоянная копия.';
   @override
   String get local_audio_source_order_title => 'Приоритет источников';
   @override
@@ -124006,6 +124063,11 @@ class _StringsRu extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'База аудиоданных недоступна. Выберите исходный файл DB ещё раз.';
+  @override
+  String get local_audio_file_reselect => 'Выбрать базу аудиоданных заново';
 }
 
 // Path: <root>
@@ -128735,7 +128797,7 @@ class _StringsTh extends _StringsEn {
       'เก็บฐานข้อมูลไว้ที่เดิมและอ่านจากเส้นทางต้นฉบับ; จะใช้ไม่ได้หากไฟล์ถูกย้ายหรือลบ';
   @override
   String get local_audio_reference_unavailable =>
-      'ไม่สามารถอ้างอิงไฟล์ต้นฉบับได้หากไม่มีสิทธิ์เข้าถึงไฟล์ทั้งหมด จึงนำเข้าเป็นสำเนาแทน';
+      'ไฟล์ที่เลือกเป็นสำเนาชั่วคราว ระบบจะนำเข้าสำเนาที่จัดเก็บถาวรแทน';
   @override
   String get local_audio_source_order_title => 'ลำดับความสำคัญของแหล่ง';
   @override
@@ -134622,6 +134684,11 @@ class _StringsTh extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'ไม่สามารถใช้ฐานข้อมูลเสียงได้ โปรดเลือกไฟล์ DB ต้นฉบับอีกครั้ง';
+  @override
+  String get local_audio_file_reselect => 'เลือกฐานข้อมูลเสียงอีกครั้ง';
 }
 
 // Path: <root>
@@ -139412,7 +139479,7 @@ class _StringsTr extends _StringsEn {
       'Veritabanını olduğu yerde tutun ve orijinal yolundan okuyun; dosya taşınır veya silinirse kaynak bozulur.';
   @override
   String get local_audio_reference_unavailable =>
-      'Tüm dosyalara erişim olmadan orijinal dosyaya başvurulamıyor; bunun yerine bir kopya içe aktarıldı.';
+      'Seçilen dosya geçici bir kopyadır. Bunun yerine kalıcı bir kopya içe aktarılıyor.';
   @override
   String get local_audio_source_order_title => 'Kaynak önceliği';
   @override
@@ -145354,6 +145421,11 @@ class _StringsTr extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'Ses veritabanı kullanılamıyor. Orijinal DB dosyasını yeniden seçin.';
+  @override
+  String get local_audio_file_reselect => 'Ses veritabanını yeniden seç';
 }
 
 // Path: <root>
@@ -150139,7 +150211,7 @@ class _StringsVi extends _StringsEn {
       'Giữ cơ sở dữ liệu tại vị trí hiện tại và đọc từ đường dẫn gốc; sẽ hỏng nếu tệp bị di chuyển hoặc xóa.';
   @override
   String get local_audio_reference_unavailable =>
-      'Không thể tham chiếu tệp gốc mà không có quyền truy cập tất cả tệp; đã nhập một bản sao thay thế.';
+      'Tệp đã chọn là bản sao tạm thời. Hệ thống sẽ nhập một bản sao được lưu trữ lâu dài thay thế.';
   @override
   String get local_audio_source_order_title => 'Ưu tiên nguồn';
   @override
@@ -156057,6 +156129,11 @@ class _StringsVi extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable =>
+      'Không thể sử dụng cơ sở dữ liệu âm thanh. Vui lòng chọn lại tệp DB gốc.';
+  @override
+  String get local_audio_file_reselect => 'Chọn lại cơ sở dữ liệu âm thanh';
 }
 
 // Path: <root>
@@ -160460,8 +160537,7 @@ class _StringsZhCn extends _StringsEn {
   String get local_audio_reference_original_desc =>
       '数据库保留在原位置、按原路径读取；原文件被移动或删除后该来源会失效。';
   @override
-  String get local_audio_reference_unavailable =>
-      '没有「所有文件访问权限」无法引用原文件，已改为导入副本。';
+  String get local_audio_reference_unavailable => '所选文件是临时副本，已改为导入持久副本。';
   @override
   String get local_audio_source_order_title => '来源顺序';
   @override
@@ -165890,6 +165966,10 @@ class _StringsZhCn extends _StringsEn {
   String get video_work_field_backdrop => '背景图';
   @override
   String get manga_discovery_section_publishing => '连载热门';
+  @override
+  String get local_audio_file_unavailable => '发音库文件不可用，请重新选择原始 DB 文件。';
+  @override
+  String get local_audio_file_reselect => '重新选择发音库';
 }
 
 // Path: <root>
@@ -170321,8 +170401,7 @@ class _StringsZhHk extends _StringsEn {
   String get local_audio_reference_original_desc =>
       '資料庫保留在原位置、按原路徑讀取；原檔案被移動或刪除後該來源會失效。';
   @override
-  String get local_audio_reference_unavailable =>
-      '沒有「所有檔案訪問權限」無法引用原檔案，已改為導入副本。';
+  String get local_audio_reference_unavailable => '所選檔案是暫存副本，已改為匯入永久副本。';
   @override
   String get local_audio_source_order_title => '來源優先順序';
   @override
@@ -175788,6 +175867,10 @@ class _StringsZhHk extends _StringsEn {
   String get video_work_field_backdrop => 'Backdrop';
   @override
   String get manga_discovery_section_publishing => 'Popular publishing manga';
+  @override
+  String get local_audio_file_unavailable => '發音庫檔案無法使用，請重新選擇原始 DB 檔案。';
+  @override
+  String get local_audio_file_reselect => '重新選擇發音庫';
 }
 
 /// Flat map(s) containing all translations.
@@ -179926,7 +180009,7 @@ extension on _StringsEn {
       case 'local_audio_reference_original_desc':
         return 'Keep the database where it is and read from its original path; the source breaks if the file is moved or deleted.';
       case 'local_audio_reference_unavailable':
-        return 'Can\'t reference the original file without all-files access; a copy was imported instead.';
+        return 'The selected file is a temporary copy. Importing a persistent copy instead.';
       case 'local_audio_source_order_title':
         return 'Source priority';
       case 'log_copy_all':
@@ -185092,6 +185175,10 @@ extension on _StringsEn {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Audio database unavailable. Select the original DB file again.';
+      case 'local_audio_file_reselect':
+        return 'Select audio database again';
       default:
         return null;
     }
@@ -189227,7 +189314,7 @@ extension on _StringsAr {
       case 'local_audio_reference_original_desc':
         return 'إبقاء قاعدة البيانات في مكانها والقراءة من مسارها الأصلي؛ سيتعطل المصدر إذا تم نقل الملف أو حذفه.';
       case 'local_audio_reference_unavailable':
-        return 'لا يمكن الإشارة إلى الملف الأصلي بدون إذن الوصول لجميع الملفات؛ تم استيراد نسخة بدلاً من ذلك.';
+        return 'الملف المحدد نسخة مؤقتة. يجري استيراد نسخة دائمة بدلاً منها.';
       case 'local_audio_source_order_title':
         return 'أولوية المصدر';
       case 'log_copy_all':
@@ -194391,6 +194478,10 @@ extension on _StringsAr {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'قاعدة بيانات الصوت غير متاحة. حدد ملف DB الأصلي مرة أخرى.';
+      case 'local_audio_file_reselect':
+        return 'تحديد قاعدة بيانات الصوت مرة أخرى';
       default:
         return null;
     }
@@ -198549,7 +198640,7 @@ extension on _StringsDe {
       case 'local_audio_reference_original_desc':
         return 'Die Datenbank am Originalort belassen und von dort lesen; die Quelle bricht ab, wenn die Datei verschoben oder gelöscht wird.';
       case 'local_audio_reference_unavailable':
-        return 'Ohne Zugriff auf alle Dateien kann die Originaldatei nicht referenziert werden; stattdessen wurde eine Kopie importiert.';
+        return 'Die ausgewählte Datei ist eine temporäre Kopie. Stattdessen wird eine dauerhafte Kopie importiert.';
       case 'local_audio_source_order_title':
         return 'Quellenpriorität';
       case 'log_copy_all':
@@ -203735,6 +203826,10 @@ extension on _StringsDe {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Audiodatenbank nicht verfügbar. Wähle die ursprüngliche DB-Datei erneut aus.';
+      case 'local_audio_file_reselect':
+        return 'Audiodatenbank erneut auswählen';
       default:
         return null;
     }
@@ -207886,7 +207981,7 @@ extension on _StringsEs {
       case 'local_audio_reference_original_desc':
         return 'Mantener la base de datos donde está y leer desde su ruta original; la fuente se rompe si el archivo se mueve o elimina.';
       case 'local_audio_reference_unavailable':
-        return 'No se puede referenciar el archivo original sin acceso a todos los archivos; se importó una copia en su lugar.';
+        return 'El archivo seleccionado es una copia temporal. Se importará una copia permanente en su lugar.';
       case 'local_audio_source_order_title':
         return 'Prioridad de las fuentes';
       case 'log_copy_all':
@@ -213070,6 +213165,10 @@ extension on _StringsEs {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'La base de datos de audio no está disponible. Selecciona de nuevo el archivo DB original.';
+      case 'local_audio_file_reselect':
+        return 'Seleccionar de nuevo la base de datos de audio';
       default:
         return null;
     }
@@ -217228,7 +217327,7 @@ extension on _StringsFr {
       case 'local_audio_reference_original_desc':
         return 'Garder la base de données à son emplacement actuel et lire depuis son chemin d\'origine ; la source ne fonctionnera plus si le fichier est déplacé ou supprimé.';
       case 'local_audio_reference_unavailable':
-        return 'Impossible de référencer le fichier original sans l\'accès complet aux fichiers ; une copie a été importée à la place.';
+        return 'Le fichier sélectionné est une copie temporaire. Une copie permanente sera importée à la place.';
       case 'local_audio_source_order_title':
         return 'Priorité des sources';
       case 'log_copy_all':
@@ -222414,6 +222513,10 @@ extension on _StringsFr {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Base de données audio indisponible. Sélectionnez à nouveau le fichier DB d’origine.';
+      case 'local_audio_file_reselect':
+        return 'Sélectionner à nouveau la base de données audio';
       default:
         return null;
     }
@@ -226560,7 +226663,7 @@ extension on _StringsId {
       case 'local_audio_reference_original_desc':
         return 'Biarkan database di tempatnya dan baca dari jalur aslinya; sumber rusak jika file dipindah atau dihapus.';
       case 'local_audio_reference_unavailable':
-        return 'Tidak bisa mereferensikan file asli tanpa akses semua file; salinan diimpor sebagai gantinya.';
+        return 'File yang dipilih adalah salinan sementara. Salinan permanen akan diimpor sebagai gantinya.';
       case 'local_audio_source_order_title':
         return 'Prioritas sumber';
       case 'log_copy_all':
@@ -231729,6 +231832,10 @@ extension on _StringsId {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Basis data audio tidak tersedia. Pilih kembali file DB asli.';
+      case 'local_audio_file_reselect':
+        return 'Pilih kembali basis data audio';
       default:
         return null;
     }
@@ -235880,7 +235987,7 @@ extension on _StringsIt {
       case 'local_audio_reference_original_desc':
         return 'Mantieni il database dove si trova e leggi dal percorso originale; la sorgente si rompe se il file viene spostato o eliminato.';
       case 'local_audio_reference_unavailable':
-        return 'Impossibile riferirsi al file originale senza accesso a tutti i file; una copia è stata importata invece.';
+        return 'Il file selezionato è una copia temporanea. Verrà importata una copia permanente al suo posto.';
       case 'local_audio_source_order_title':
         return 'Priorità delle sorgenti';
       case 'log_copy_all':
@@ -241066,6 +241173,10 @@ extension on _StringsIt {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Database audio non disponibile. Seleziona di nuovo il file DB originale.';
+      case 'local_audio_file_reselect':
+        return 'Seleziona di nuovo il database audio';
       default:
         return null;
     }
@@ -245187,7 +245298,7 @@ extension on _StringsJa {
       case 'local_audio_reference_original_desc':
         return 'データベースを現在の場所に保持し、元のパスから読み取ります。ファイルを移動または削除するとソースが壊れます。';
       case 'local_audio_reference_unavailable':
-        return 'すべてのファイルへのアクセスがないため元のファイルを参照できません。代わりにコピーがインポートされました。';
+        return '選択したファイルは一時コピーです。代わりに永続的なコピーとしてインポートします。';
       case 'local_audio_source_order_title':
         return 'ソースの優先順位';
       case 'log_copy_all':
@@ -250330,6 +250441,10 @@ extension on _StringsJa {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return '音声データベースを利用できません。元の DB ファイルを選択し直してください。';
+      case 'local_audio_file_reselect':
+        return '音声データベースを選択し直す';
       default:
         return null;
     }
@@ -254452,7 +254567,7 @@ extension on _StringsKo {
       case 'local_audio_reference_original_desc':
         return '데이터베이스를 현재 위치에 유지하고 원본 경로에서 읽습니다. 파일이 이동되거나 삭제되면 소스가 끊어집니다.';
       case 'local_audio_reference_unavailable':
-        return '모든 파일 접근 권한 없이는 원본 파일을 참조할 수 없어 사본이 대신 가져와졌습니다.';
+        return '선택한 파일은 임시 사본입니다. 대신 영구적으로 저장되는 사본을 가져옵니다.';
       case 'local_audio_source_order_title':
         return '소스 우선순위';
       case 'log_copy_all':
@@ -259598,6 +259713,10 @@ extension on _StringsKo {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return '음성 데이터베이스를 사용할 수 없습니다. 원본 DB 파일을 다시 선택하세요.';
+      case 'local_audio_file_reselect':
+        return '음성 데이터베이스 다시 선택';
       default:
         return null;
     }
@@ -263747,7 +263866,7 @@ extension on _StringsNl {
       case 'local_audio_reference_original_desc':
         return 'Bewaar de database op de huidige locatie en lees vanaf het oorspronkelijke pad; de bron werkt niet meer als het bestand wordt verplaatst of verwijderd.';
       case 'local_audio_reference_unavailable':
-        return 'Kan het originele bestand niet refereren zonder volledige bestandstoegang; er is in plaats daarvan een kopie geïmporteerd.';
+        return 'Het geselecteerde bestand is een tijdelijke kopie. Er wordt in plaats daarvan een permanente kopie geïmporteerd.';
       case 'local_audio_source_order_title':
         return 'Bronprioriteit';
       case 'log_copy_all':
@@ -268928,6 +269047,10 @@ extension on _StringsNl {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Audiodatabase niet beschikbaar. Selecteer het oorspronkelijke DB-bestand opnieuw.';
+      case 'local_audio_file_reselect':
+        return 'Audiodatabase opnieuw selecteren';
       default:
         return null;
     }
@@ -273077,7 +273200,7 @@ extension on _StringsPtBr {
       case 'local_audio_reference_original_desc':
         return 'Mantém o banco onde está e lê do caminho original; a fonte quebra se o arquivo for movido ou deletado.';
       case 'local_audio_reference_unavailable':
-        return 'Não é possível referenciar o arquivo original sem acesso a todos os arquivos; uma cópia foi importada.';
+        return 'O arquivo selecionado é uma cópia temporária. Uma cópia permanente será importada em seu lugar.';
       case 'local_audio_source_order_title':
         return 'Prioridade das fontes';
       case 'log_copy_all':
@@ -278253,6 +278376,10 @@ extension on _StringsPtBr {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Banco de dados de áudio indisponível. Selecione o arquivo DB original novamente.';
+      case 'local_audio_file_reselect':
+        return 'Selecionar o banco de dados de áudio novamente';
       default:
         return null;
     }
@@ -282409,7 +282536,7 @@ extension on _StringsRu {
       case 'local_audio_reference_original_desc':
         return 'Оставить базу данных на месте и читать по исходному пути; источник перестанет работать при перемещении или удалении файла.';
       case 'local_audio_reference_unavailable':
-        return 'Невозможно сослаться на исходный файл без полного доступа к файлам; вместо этого импортирована копия.';
+        return 'Выбранный файл — временная копия. Вместо неё будет импортирована постоянная копия.';
       case 'local_audio_source_order_title':
         return 'Приоритет источников';
       case 'log_copy_all':
@@ -287585,6 +287712,10 @@ extension on _StringsRu {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'База аудиоданных недоступна. Выберите исходный файл DB ещё раз.';
+      case 'local_audio_file_reselect':
+        return 'Выбрать базу аудиоданных заново';
       default:
         return null;
     }
@@ -291724,7 +291855,7 @@ extension on _StringsTh {
       case 'local_audio_reference_original_desc':
         return 'เก็บฐานข้อมูลไว้ที่เดิมและอ่านจากเส้นทางต้นฉบับ; จะใช้ไม่ได้หากไฟล์ถูกย้ายหรือลบ';
       case 'local_audio_reference_unavailable':
-        return 'ไม่สามารถอ้างอิงไฟล์ต้นฉบับได้หากไม่มีสิทธิ์เข้าถึงไฟล์ทั้งหมด จึงนำเข้าเป็นสำเนาแทน';
+        return 'ไฟล์ที่เลือกเป็นสำเนาชั่วคราว ระบบจะนำเข้าสำเนาที่จัดเก็บถาวรแทน';
       case 'local_audio_source_order_title':
         return 'ลำดับความสำคัญของแหล่ง';
       case 'log_copy_all':
@@ -296889,6 +297020,10 @@ extension on _StringsTh {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'ไม่สามารถใช้ฐานข้อมูลเสียงได้ โปรดเลือกไฟล์ DB ต้นฉบับอีกครั้ง';
+      case 'local_audio_file_reselect':
+        return 'เลือกฐานข้อมูลเสียงอีกครั้ง';
       default:
         return null;
     }
@@ -301036,7 +301171,7 @@ extension on _StringsTr {
       case 'local_audio_reference_original_desc':
         return 'Veritabanını olduğu yerde tutun ve orijinal yolundan okuyun; dosya taşınır veya silinirse kaynak bozulur.';
       case 'local_audio_reference_unavailable':
-        return 'Tüm dosyalara erişim olmadan orijinal dosyaya başvurulamıyor; bunun yerine bir kopya içe aktarıldı.';
+        return 'Seçilen dosya geçici bir kopyadır. Bunun yerine kalıcı bir kopya içe aktarılıyor.';
       case 'local_audio_source_order_title':
         return 'Kaynak önceliği';
       case 'log_copy_all':
@@ -306208,6 +306343,10 @@ extension on _StringsTr {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Ses veritabanı kullanılamıyor. Orijinal DB dosyasını yeniden seçin.';
+      case 'local_audio_file_reselect':
+        return 'Ses veritabanını yeniden seç';
       default:
         return null;
     }
@@ -310352,7 +310491,7 @@ extension on _StringsVi {
       case 'local_audio_reference_original_desc':
         return 'Giữ cơ sở dữ liệu tại vị trí hiện tại và đọc từ đường dẫn gốc; sẽ hỏng nếu tệp bị di chuyển hoặc xóa.';
       case 'local_audio_reference_unavailable':
-        return 'Không thể tham chiếu tệp gốc mà không có quyền truy cập tất cả tệp; đã nhập một bản sao thay thế.';
+        return 'Tệp đã chọn là bản sao tạm thời. Hệ thống sẽ nhập một bản sao được lưu trữ lâu dài thay thế.';
       case 'local_audio_source_order_title':
         return 'Ưu tiên nguồn';
       case 'log_copy_all':
@@ -315521,6 +315660,10 @@ extension on _StringsVi {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return 'Không thể sử dụng cơ sở dữ liệu âm thanh. Vui lòng chọn lại tệp DB gốc.';
+      case 'local_audio_file_reselect':
+        return 'Chọn lại cơ sở dữ liệu âm thanh';
       default:
         return null;
     }
@@ -319626,7 +319769,7 @@ extension on _StringsZhCn {
       case 'local_audio_reference_original_desc':
         return '数据库保留在原位置、按原路径读取；原文件被移动或删除后该来源会失效。';
       case 'local_audio_reference_unavailable':
-        return '没有「所有文件访问权限」无法引用原文件，已改为导入副本。';
+        return '所选文件是临时副本，已改为导入持久副本。';
       case 'local_audio_source_order_title':
         return '来源顺序';
       case 'log_copy_all':
@@ -324753,6 +324896,10 @@ extension on _StringsZhCn {
         return '背景图';
       case 'manga_discovery_section_publishing':
         return '连载热门';
+      case 'local_audio_file_unavailable':
+        return '发音库文件不可用，请重新选择原始 DB 文件。';
+      case 'local_audio_file_reselect':
+        return '重新选择发音库';
       default:
         return null;
     }
@@ -328864,7 +329011,7 @@ extension on _StringsZhHk {
       case 'local_audio_reference_original_desc':
         return '資料庫保留在原位置、按原路徑讀取；原檔案被移動或刪除後該來源會失效。';
       case 'local_audio_reference_unavailable':
-        return '沒有「所有檔案訪問權限」無法引用原檔案，已改為導入副本。';
+        return '所選檔案是暫存副本，已改為匯入永久副本。';
       case 'local_audio_source_order_title':
         return '來源優先順序';
       case 'log_copy_all':
@@ -333995,6 +334142,10 @@ extension on _StringsZhHk {
         return 'Backdrop';
       case 'manga_discovery_section_publishing':
         return 'Popular publishing manga';
+      case 'local_audio_file_unavailable':
+        return '發音庫檔案無法使用，請重新選擇原始 DB 檔案。';
+      case 'local_audio_file_reselect':
+        return '重新選擇發音庫';
       default:
         return null;
     }
