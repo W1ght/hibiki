@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77248 (4544 per locale)
+/// Strings: 77418 (4554 per locale)
 ///
-/// Built on 2026-09-09 at 09:38 UTC
+/// Built on 2026-09-09 at 11:01 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6305,6 +6305,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This collection isn\'t in any local video source\'s scrape plan';
   String get collection_rescrape_started => 'Rescrape queued';
   String get collection_rescrape_failed => 'Rescrape failed';
+  String get reader_vn_settings => 'Visual novel settings';
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  String get reader_vn_reveal_instant => 'Instant';
+  String get reader_vn_screen_mode => 'Screen content';
+  String get reader_vn_screen_block => 'One block';
+  String get reader_vn_screen_sentences => 'Sentences';
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  String get reader_vn_click_advance => 'Blank tap advances';
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -16982,6 +16993,27 @@ class _StringsAr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -27886,6 +27918,27 @@ class _StringsDe extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -38844,6 +38897,27 @@ class _StringsEs extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -49836,6 +49910,27 @@ class _StringsFr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -60630,6 +60725,27 @@ class _StringsId extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -71516,6 +71632,27 @@ class _StringsIt extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -81783,6 +81920,27 @@ class _StringsJa extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -92060,6 +92218,27 @@ class _StringsKo extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -102903,6 +103082,27 @@ class _StringsNl extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -113799,6 +113999,27 @@ class _StringsPtBr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -124672,6 +124893,27 @@ class _StringsRu extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -135345,6 +135587,27 @@ class _StringsTh extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -146134,6 +146397,27 @@ class _StringsTr extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -156894,6 +157178,27 @@ class _StringsVi extends _StringsEn {
   String get collection_rescrape_started => 'Rescrape queued';
   @override
   String get collection_rescrape_failed => 'Rescrape failed';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 // Path: <root>
@@ -166776,6 +167081,26 @@ class _StringsZhCn extends _StringsEn {
   String get collection_rescrape_started => '已开始重新刮削';
   @override
   String get collection_rescrape_failed => '重新刮削失败';
+  @override
+  String get reader_vn_settings => '视觉小说设置';
+  @override
+  String get reader_vn_reveal_speed => '文字渐显速度';
+  @override
+  String get reader_vn_reveal_instant => '立即显示';
+  @override
+  String get reader_vn_screen_mode => '每屏内容';
+  @override
+  String get reader_vn_screen_block => '一个段落';
+  @override
+  String get reader_vn_screen_sentences => '按句子';
+  @override
+  String get reader_vn_sentences_per_screen => '每屏句数';
+  @override
+  String get reader_vn_preserve_dialogue => '保持对话完整';
+  @override
+  String get reader_vn_click_advance => '点击空白处推进';
+  @override
+  String get reader_vn_merge_spoken_sentence => '有声句保持在同一屏';
 }
 
 // Path: <root>
@@ -176728,6 +177053,27 @@ class _StringsZhHk extends _StringsEn {
   String get collection_rescrape_started => '已開始重新刮削';
   @override
   String get collection_rescrape_failed => '重新刮削失敗';
+  @override
+  String get reader_vn_settings => 'Visual novel settings';
+  @override
+  String get reader_vn_reveal_speed => 'Text reveal speed';
+  @override
+  String get reader_vn_reveal_instant => 'Instant';
+  @override
+  String get reader_vn_screen_mode => 'Screen content';
+  @override
+  String get reader_vn_screen_block => 'One block';
+  @override
+  String get reader_vn_screen_sentences => 'Sentences';
+  @override
+  String get reader_vn_sentences_per_screen => 'Sentences per screen';
+  @override
+  String get reader_vn_preserve_dialogue => 'Keep dialogue together';
+  @override
+  String get reader_vn_click_advance => 'Blank tap advances';
+  @override
+  String get reader_vn_merge_spoken_sentence =>
+      'Keep spoken sentence on one screen';
 }
 
 /// Flat map(s) containing all translations.
@@ -186077,6 +186423,26 @@ extension on _StringsEn {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -195421,6 +195787,26 @@ extension on _StringsAr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -204810,6 +205196,26 @@ extension on _StringsDe {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -214190,6 +214596,26 @@ extension on _StringsEs {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -223579,6 +224005,26 @@ extension on _StringsFr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -232939,6 +233385,26 @@ extension on _StringsId {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -242321,6 +242787,26 @@ extension on _StringsIt {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -251630,6 +252116,26 @@ extension on _StringsJa {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -260943,6 +261449,26 @@ extension on _StringsKo {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -270318,6 +270844,26 @@ extension on _StringsNl {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -279688,6 +280234,26 @@ extension on _StringsPtBr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -289065,6 +289631,26 @@ extension on _StringsRu {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -298414,6 +299000,26 @@ extension on _StringsTh {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -307778,6 +308384,26 @@ extension on _StringsTr {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -317136,6 +317762,26 @@ extension on _StringsVi {
         return 'Rescrape queued';
       case 'collection_rescrape_failed':
         return 'Rescrape failed';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
@@ -326412,6 +327058,26 @@ extension on _StringsZhCn {
         return '已开始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失败';
+      case 'reader_vn_settings':
+        return '视觉小说设置';
+      case 'reader_vn_reveal_speed':
+        return '文字渐显速度';
+      case 'reader_vn_reveal_instant':
+        return '立即显示';
+      case 'reader_vn_screen_mode':
+        return '每屏内容';
+      case 'reader_vn_screen_block':
+        return '一个段落';
+      case 'reader_vn_screen_sentences':
+        return '按句子';
+      case 'reader_vn_sentences_per_screen':
+        return '每屏句数';
+      case 'reader_vn_preserve_dialogue':
+        return '保持对话完整';
+      case 'reader_vn_click_advance':
+        return '点击空白处推进';
+      case 'reader_vn_merge_spoken_sentence':
+        return '有声句保持在同一屏';
       default:
         return null;
     }
@@ -335699,6 +336365,26 @@ extension on _StringsZhHk {
         return '已開始重新刮削';
       case 'collection_rescrape_failed':
         return '重新刮削失敗';
+      case 'reader_vn_settings':
+        return 'Visual novel settings';
+      case 'reader_vn_reveal_speed':
+        return 'Text reveal speed';
+      case 'reader_vn_reveal_instant':
+        return 'Instant';
+      case 'reader_vn_screen_mode':
+        return 'Screen content';
+      case 'reader_vn_screen_block':
+        return 'One block';
+      case 'reader_vn_screen_sentences':
+        return 'Sentences';
+      case 'reader_vn_sentences_per_screen':
+        return 'Sentences per screen';
+      case 'reader_vn_preserve_dialogue':
+        return 'Keep dialogue together';
+      case 'reader_vn_click_advance':
+        return 'Blank tap advances';
+      case 'reader_vn_merge_spoken_sentence':
+        return 'Keep spoken sentence on one screen';
       default:
         return null;
     }
