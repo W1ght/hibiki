@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77945 (4585 per locale)
+/// Strings: 77979 (4587 per locale)
 ///
-/// Built on 2026-09-09 at 20:23 UTC
+/// Built on 2026-09-09 at 22:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6358,6 +6358,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Path mapping and target video source';
   String get settings_downloads_encryption_title => 'Peer encryption';
   String get settings_service_disabled => 'Disabled';
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -17128,6 +17131,11 @@ class _StringsAr extends _StringsEn {
   String get settings_downloads_encryption_title => 'تشفير الاتصال بالأقران';
   @override
   String get settings_service_disabled => 'معطّل';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -28126,6 +28134,11 @@ class _StringsDe extends _StringsEn {
   String get settings_downloads_encryption_title => 'Peer-Verschlüsselung';
   @override
   String get settings_service_disabled => 'Deaktiviert';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -39178,6 +39191,11 @@ class _StringsEs extends _StringsEn {
   String get settings_downloads_encryption_title => 'Cifrado entre pares';
   @override
   String get settings_service_disabled => 'Desactivado';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -50264,6 +50282,11 @@ class _StringsFr extends _StringsEn {
   String get settings_downloads_encryption_title => 'Chiffrement entre pairs';
   @override
   String get settings_service_disabled => 'Désactivé';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -61152,6 +61175,11 @@ class _StringsId extends _StringsEn {
   String get settings_downloads_encryption_title => 'Enkripsi peer';
   @override
   String get settings_service_disabled => 'Dinonaktifkan';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -72133,6 +72161,11 @@ class _StringsIt extends _StringsEn {
   String get settings_downloads_encryption_title => 'Crittografia dei peer';
   @override
   String get settings_service_disabled => 'Disattivato';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -82490,6 +82523,11 @@ class _StringsJa extends _StringsEn {
   String get settings_downloads_encryption_title => 'ピア通信の暗号化';
   @override
   String get settings_service_disabled => '無効';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -92858,6 +92896,11 @@ class _StringsKo extends _StringsEn {
   String get settings_downloads_encryption_title => '피어 암호화';
   @override
   String get settings_service_disabled => '사용 안 함';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -103795,6 +103838,11 @@ class _StringsNl extends _StringsEn {
   String get settings_downloads_encryption_title => 'Peer-versleuteling';
   @override
   String get settings_service_disabled => 'Uitgeschakeld';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -114786,6 +114834,11 @@ class _StringsPtBr extends _StringsEn {
   String get settings_downloads_encryption_title => 'Criptografia entre pares';
   @override
   String get settings_service_disabled => 'Desativado';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -125754,6 +125807,11 @@ class _StringsRu extends _StringsEn {
       'Шифрование соединений с пирами';
   @override
   String get settings_service_disabled => 'Отключено';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -136521,6 +136579,11 @@ class _StringsTh extends _StringsEn {
   String get settings_downloads_encryption_title => 'การเข้ารหัสระหว่างเพียร์';
   @override
   String get settings_service_disabled => 'ปิดใช้งาน';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -147404,6 +147467,11 @@ class _StringsTr extends _StringsEn {
   String get settings_downloads_encryption_title => 'Eş şifrelemesi';
   @override
   String get settings_service_disabled => 'Devre dışı';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -158258,6 +158326,11 @@ class _StringsVi extends _StringsEn {
   String get settings_downloads_encryption_title => 'Mã hóa kết nối peer';
   @override
   String get settings_service_disabled => 'Đã tắt';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 // Path: <root>
@@ -168227,6 +168300,11 @@ class _StringsZhCn extends _StringsEn {
   String get settings_downloads_encryption_title => '节点加密';
   @override
   String get settings_service_disabled => '已停用';
+  @override
+  String get anki_reposition_auto_title => '制卡后自动重排';
+  @override
+  String get anki_reposition_auto_hint =>
+      '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
 }
 
 // Path: <root>
@@ -178268,6 +178346,11 @@ class _StringsZhHk extends _StringsEn {
   String get settings_downloads_encryption_title => '節點通訊加密';
   @override
   String get settings_service_disabled => '已停用';
+  @override
+  String get anki_reposition_auto_title => 'Auto-reposition after mining';
+  @override
+  String get anki_reposition_auto_hint =>
+      'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
 }
 
 /// Flat map(s) containing all translations.
@@ -187699,6 +187782,10 @@ extension on _StringsEn {
         return 'Peer encryption';
       case 'settings_service_disabled':
         return 'Disabled';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -197125,6 +197212,10 @@ extension on _StringsAr {
         return 'تشفير الاتصال بالأقران';
       case 'settings_service_disabled':
         return 'معطّل';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -206596,6 +206687,10 @@ extension on _StringsDe {
         return 'Peer-Verschlüsselung';
       case 'settings_service_disabled':
         return 'Deaktiviert';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -216058,6 +216153,10 @@ extension on _StringsEs {
         return 'Cifrado entre pares';
       case 'settings_service_disabled':
         return 'Desactivado';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -225529,6 +225628,10 @@ extension on _StringsFr {
         return 'Chiffrement entre pairs';
       case 'settings_service_disabled':
         return 'Désactivé';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -234971,6 +235074,10 @@ extension on _StringsId {
         return 'Enkripsi peer';
       case 'settings_service_disabled':
         return 'Dinonaktifkan';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -244435,6 +244542,10 @@ extension on _StringsIt {
         return 'Crittografia dei peer';
       case 'settings_service_disabled':
         return 'Disattivato';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -253826,6 +253937,10 @@ extension on _StringsJa {
         return 'ピア通信の暗号化';
       case 'settings_service_disabled':
         return '無効';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -263221,6 +263336,10 @@ extension on _StringsKo {
         return '피어 암호화';
       case 'settings_service_disabled':
         return '사용 안 함';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -272678,6 +272797,10 @@ extension on _StringsNl {
         return 'Peer-versleuteling';
       case 'settings_service_disabled':
         return 'Uitgeschakeld';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -282130,6 +282253,10 @@ extension on _StringsPtBr {
         return 'Criptografia entre pares';
       case 'settings_service_disabled':
         return 'Desativado';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -291589,6 +291716,10 @@ extension on _StringsRu {
         return 'Шифрование соединений с пирами';
       case 'settings_service_disabled':
         return 'Отключено';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -301020,6 +301151,10 @@ extension on _StringsTh {
         return 'การเข้ารหัสระหว่างเพียร์';
       case 'settings_service_disabled':
         return 'ปิดใช้งาน';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -310466,6 +310601,10 @@ extension on _StringsTr {
         return 'Eş şifrelemesi';
       case 'settings_service_disabled':
         return 'Devre dışı';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -319906,6 +320045,10 @@ extension on _StringsVi {
         return 'Mã hóa kết nối peer';
       case 'settings_service_disabled':
         return 'Đã tắt';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
@@ -329264,6 +329407,10 @@ extension on _StringsZhCn {
         return '节点加密';
       case 'settings_service_disabled':
         return '已停用';
+      case 'anki_reposition_auto_title':
+        return '制卡后自动重排';
+      case 'anki_reposition_auto_hint':
+        return '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
       default:
         return null;
     }
@@ -338633,6 +338780,10 @@ extension on _StringsZhHk {
         return '節點通訊加密';
       case 'settings_service_disabled':
         return '已停用';
+      case 'anki_reposition_auto_title':
+        return 'Auto-reposition after mining';
+      case 'anki_reposition_auto_hint':
+        return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       default:
         return null;
     }
