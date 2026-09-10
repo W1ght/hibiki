@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78081 (4593 per locale)
+/// Strings: 78115 (4595 per locale)
 ///
-/// Built on 2026-09-10 at 00:16 UTC
+/// Built on 2026-09-10 at 01:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6377,6 +6377,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Installed ${installed}, skipped ${skipped}, failed ${failed}';
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -17174,6 +17178,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -28199,6 +28209,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -39278,6 +39294,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -50391,6 +50413,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -61306,6 +61334,12 @@ class _StringsId extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -72314,6 +72348,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -82698,6 +82738,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -93093,6 +93139,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -104057,6 +104109,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -115075,6 +115133,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -126070,6 +126134,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -136864,6 +136934,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -147774,6 +147850,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -158655,6 +158737,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -168650,6 +168738,10 @@ class _StringsZhCn extends _StringsEn {
       '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
   @override
   String get mihon_extension_bulk_install_nothing => '当前筛选下的扩展都已经装过了。';
+  @override
+  String get manga_source_interconnect_subtitle => '浏览已配对设备上的漫画库';
+  @override
+  String get manga_source_interconnect_disabled => '在设置里开启 Fushi 互联后即可使用此来源';
 }
 
 // Path: <root>
@@ -178718,6 +178810,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 /// Flat map(s) containing all translations.
@@ -188174,6 +188272,10 @@ extension on _StringsEn {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -197625,6 +197727,10 @@ extension on _StringsAr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -207121,6 +207227,10 @@ extension on _StringsDe {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -216608,6 +216718,10 @@ extension on _StringsEs {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -226104,6 +226218,10 @@ extension on _StringsFr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -235571,6 +235689,10 @@ extension on _StringsId {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -245060,6 +245182,10 @@ extension on _StringsIt {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -254476,6 +254602,10 @@ extension on _StringsJa {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -263896,6 +264026,10 @@ extension on _StringsKo {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -273378,6 +273512,10 @@ extension on _StringsNl {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -282855,6 +282993,10 @@ extension on _StringsPtBr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -292339,6 +292481,10 @@ extension on _StringsRu {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -301795,6 +301941,10 @@ extension on _StringsTh {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -311266,6 +311416,10 @@ extension on _StringsTr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -320731,6 +320885,10 @@ extension on _StringsVi {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -330113,6 +330271,10 @@ extension on _StringsZhCn {
             '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
       case 'mihon_extension_bulk_install_nothing':
         return '当前筛选下的扩展都已经装过了。';
+      case 'manga_source_interconnect_subtitle':
+        return '浏览已配对设备上的漫画库';
+      case 'manga_source_interconnect_disabled':
+        return '在设置里开启 Fushi 互联后即可使用此来源';
       default:
         return null;
     }
@@ -339507,6 +339669,10 @@ extension on _StringsZhHk {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
