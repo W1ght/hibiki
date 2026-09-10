@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78591 (4623 per locale)
+/// Strings: 78676 (4628 per locale)
 ///
-/// Built on 2026-09-10 at 08:25 UTC
+/// Built on 2026-09-10 at 09:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6420,6 +6420,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   String get storage_models_components => 'Models and components';
   String get settings_group_tools => 'Tools';
+  String get mihon_source_login => 'Log in';
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  String get mihon_source_login_done => 'Done';
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -17290,6 +17297,18 @@ class _StringsAr extends _StringsEn {
   String get storage_models_components => 'النماذج والمكوّنات';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -28388,6 +28407,18 @@ class _StringsDe extends _StringsEn {
   String get storage_models_components => 'Modelle und Komponenten';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -39540,6 +39571,18 @@ class _StringsEs extends _StringsEn {
   String get storage_models_components => 'Modelos y componentes';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -50726,6 +50769,18 @@ class _StringsFr extends _StringsEn {
   String get storage_models_components => 'Modèles et composants';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -61714,6 +61769,18 @@ class _StringsId extends _StringsEn {
   String get storage_models_components => 'Model dan komponen';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -72795,6 +72862,18 @@ class _StringsIt extends _StringsEn {
   String get storage_models_components => 'Modelli e componenti';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -83252,6 +83331,18 @@ class _StringsJa extends _StringsEn {
   String get storage_models_components => 'モデルとコンポーネント';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -93719,6 +93810,18 @@ class _StringsKo extends _StringsEn {
   String get storage_models_components => '모델 및 구성 요소';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -104756,6 +104859,18 @@ class _StringsNl extends _StringsEn {
   String get storage_models_components => 'Modellen en componenten';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -115847,6 +115962,18 @@ class _StringsPtBr extends _StringsEn {
   String get storage_models_components => 'Modelos e componentes';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -126915,6 +127042,18 @@ class _StringsRu extends _StringsEn {
   String get storage_models_components => 'Модели и компоненты';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -137782,6 +137921,18 @@ class _StringsTh extends _StringsEn {
   String get storage_models_components => 'โมเดลและส่วนประกอบ';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -148765,6 +148916,18 @@ class _StringsTr extends _StringsEn {
   String get storage_models_components => 'Modeller ve bileşenler';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -159719,6 +159882,18 @@ class _StringsVi extends _StringsEn {
   String get storage_models_components => 'Mô hình và thành phần';
   @override
   String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -169771,6 +169946,16 @@ class _StringsZhCn extends _StringsEn {
   String get storage_models_components => '模型与组件';
   @override
   String get settings_group_tools => '工具';
+  @override
+  String get mihon_source_login => '登录';
+  @override
+  String get mihon_source_login_hint => '在网站上登录后，点「完成」保存会话';
+  @override
+  String get mihon_source_login_done => '完成';
+  @override
+  String get mihon_source_login_empty => '没有捕获到会话 cookie，未保存';
+  @override
+  String get mihon_source_login_saved => '已登录该源';
 }
 
 // Path: <root>
@@ -179911,6 +180096,18 @@ class _StringsZhHk extends _StringsEn {
   String get storage_models_components => '模型與元件';
   @override
   String get settings_group_tools => '工具';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 /// Flat map(s) containing all translations.
@@ -189427,6 +189624,16 @@ extension on _StringsEn {
         return 'Models and components';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -198938,6 +199145,16 @@ extension on _StringsAr {
         return 'النماذج والمكوّنات';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -208494,6 +208711,16 @@ extension on _StringsDe {
         return 'Modelle und Komponenten';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -218041,6 +218268,16 @@ extension on _StringsEs {
         return 'Modelos y componentes';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -227597,6 +227834,16 @@ extension on _StringsFr {
         return 'Modèles et composants';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -237124,6 +237371,16 @@ extension on _StringsId {
         return 'Model dan komponen';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -246673,6 +246930,16 @@ extension on _StringsIt {
         return 'Modelli e componenti';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -256149,6 +256416,16 @@ extension on _StringsJa {
         return 'モデルとコンポーネント';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -265629,6 +265906,16 @@ extension on _StringsKo {
         return '모델 및 구성 요소';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -275171,6 +275458,16 @@ extension on _StringsNl {
         return 'Modellen en componenten';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -284708,6 +285005,16 @@ extension on _StringsPtBr {
         return 'Modelos e componentes';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -294252,6 +294559,16 @@ extension on _StringsRu {
         return 'Модели и компоненты';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -303768,6 +304085,16 @@ extension on _StringsTh {
         return 'โมเดลและส่วนประกอบ';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -313299,6 +313626,16 @@ extension on _StringsTr {
         return 'Modeller ve bileşenler';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -322824,6 +323161,16 @@ extension on _StringsVi {
         return 'Mô hình và thành phần';
       case 'settings_group_tools':
         return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -332266,6 +332613,16 @@ extension on _StringsZhCn {
         return '模型与组件';
       case 'settings_group_tools':
         return '工具';
+      case 'mihon_source_login':
+        return '登录';
+      case 'mihon_source_login_hint':
+        return '在网站上登录后，点「完成」保存会话';
+      case 'mihon_source_login_done':
+        return '完成';
+      case 'mihon_source_login_empty':
+        return '没有捕获到会话 cookie，未保存';
+      case 'mihon_source_login_saved':
+        return '已登录该源';
       default:
         return null;
     }
@@ -341720,6 +342077,16 @@ extension on _StringsZhHk {
         return '模型與元件';
       case 'settings_group_tools':
         return '工具';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
