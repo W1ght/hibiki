@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78132 (4596 per locale)
+/// Strings: 78166 (4598 per locale)
 ///
-/// Built on 2026-09-10 at 00:59 UTC
+/// Built on 2026-09-10 at 02:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6382,6 +6382,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Installed ${installed}, skipped ${skipped}, failed ${failed}';
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  String get popup_dismiss_animation => 'Popup close animation';
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -17187,6 +17190,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -28220,6 +28228,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -39307,6 +39320,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -50428,6 +50446,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -61351,6 +61374,11 @@ class _StringsId extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -72367,6 +72395,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -82759,6 +82792,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -93162,6 +93200,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -104134,6 +104177,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -115160,6 +115208,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -126163,6 +126216,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -136965,6 +137023,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -147883,6 +147946,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -158772,6 +158840,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 // Path: <root>
@@ -168775,6 +168848,11 @@ class _StringsZhCn extends _StringsEn {
       '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
   @override
   String get mihon_extension_bulk_install_nothing => '当前筛选下的扩展都已经装过了。';
+  @override
+  String get popup_dismiss_animation => '弹窗关闭动画';
+  @override
+  String get popup_dismiss_animation_hint =>
+      '滑动关闭查词弹窗时播放滑出动画。关掉则瞬间关闭（墨水屏模式下始终关闭）';
 }
 
 // Path: <root>
@@ -178851,6 +178929,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get popup_dismiss_animation => 'Popup close animation';
+  @override
+  String get popup_dismiss_animation_hint =>
+      'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
 }
 
 /// Flat map(s) containing all translations.
@@ -188313,6 +188396,10 @@ extension on _StringsEn {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -197770,6 +197857,10 @@ extension on _StringsAr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -207272,6 +207363,10 @@ extension on _StringsDe {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -216765,6 +216860,10 @@ extension on _StringsEs {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -226267,6 +226366,10 @@ extension on _StringsFr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -235740,6 +235843,10 @@ extension on _StringsId {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -245235,6 +245342,10 @@ extension on _StringsIt {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -254657,6 +254768,10 @@ extension on _StringsJa {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -264083,6 +264198,10 @@ extension on _StringsKo {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -273571,6 +273690,10 @@ extension on _StringsNl {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -283054,6 +283177,10 @@ extension on _StringsPtBr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -292544,6 +292671,10 @@ extension on _StringsRu {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -302006,6 +302137,10 @@ extension on _StringsTh {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -311483,6 +311618,10 @@ extension on _StringsTr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -320954,6 +321093,10 @@ extension on _StringsVi {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
@@ -330342,6 +330485,10 @@ extension on _StringsZhCn {
             '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
       case 'mihon_extension_bulk_install_nothing':
         return '当前筛选下的扩展都已经装过了。';
+      case 'popup_dismiss_animation':
+        return '弹窗关闭动画';
+      case 'popup_dismiss_animation_hint':
+        return '滑动关闭查词弹窗时播放滑出动画。关掉则瞬间关闭（墨水屏模式下始终关闭）';
       default:
         return null;
     }
@@ -339742,6 +339889,10 @@ extension on _StringsZhHk {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'popup_dismiss_animation':
+        return 'Popup close animation';
+      case 'popup_dismiss_animation_hint':
+        return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
       default:
         return null;
     }
