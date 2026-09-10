@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79764 (4692 per locale)
+/// Strings: 79781 (4693 per locale)
 ///
-/// Built on 2026-09-10 at 13:41 UTC
+/// Built on 2026-09-10 at 14:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6521,6 +6521,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Subscriptions on ${device}';
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -17561,6 +17563,9 @@ class _StringsAr extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -28829,6 +28834,9 @@ class _StringsDe extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -40151,6 +40159,9 @@ class _StringsEs extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -51507,6 +51518,9 @@ class _StringsFr extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -62665,6 +62679,9 @@ class _StringsId extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -73916,6 +73933,9 @@ class _StringsIt extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -84544,6 +84564,9 @@ class _StringsJa extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -95182,6 +95205,9 @@ class _StringsKo extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -106389,6 +106415,9 @@ class _StringsNl extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -117650,6 +117679,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -128888,6 +128920,9 @@ class _StringsRu extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -139925,6 +139960,9 @@ class _StringsTh extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -151078,6 +151116,9 @@ class _StringsTr extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -162202,6 +162243,9 @@ class _StringsVi extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -172409,6 +172453,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       '主机上没有这个资源的索引器（${provider}）';
+  @override
+  String get video_load_failed_not_opened =>
+      '播放器打不开该视频。文件可能被占用，或播放引擎需要重启应用后才能恢复。';
 }
 
 // Path: <root>
@@ -182719,6 +182766,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String subscription_remote_provider_unavailable({required Object provider}) =>
       'The host has no indexer for this resource (${provider})';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 /// Flat map(s) containing all translations.
@@ -192383,6 +192433,8 @@ extension on _StringsEn {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -202042,6 +202094,8 @@ extension on _StringsAr {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -211746,6 +211800,8 @@ extension on _StringsDe {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -221441,6 +221497,8 @@ extension on _StringsEs {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -231145,6 +231203,8 @@ extension on _StringsFr {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -240820,6 +240880,8 @@ extension on _StringsId {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -250517,6 +250579,8 @@ extension on _StringsIt {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -260141,6 +260205,8 @@ extension on _StringsJa {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -269769,6 +269835,8 @@ extension on _StringsKo {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -279459,6 +279527,8 @@ extension on _StringsNl {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -289144,6 +289214,8 @@ extension on _StringsPtBr {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -298836,6 +298908,8 @@ extension on _StringsRu {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -308500,6 +308574,8 @@ extension on _StringsTh {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -318179,6 +318255,8 @@ extension on _StringsTr {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -327852,6 +327930,8 @@ extension on _StringsVi {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -337439,6 +337519,8 @@ extension on _StringsZhCn {
         return ({required Object device}) => '${device} 上的订阅';
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) => '主机上没有这个资源的索引器（${provider}）';
+      case 'video_load_failed_not_opened':
+        return '播放器打不开该视频。文件可能被占用，或播放引擎需要重启应用后才能恢复。';
       default:
         return null;
     }
@@ -347041,6 +347123,8 @@ extension on _StringsZhHk {
       case 'subscription_remote_provider_unavailable':
         return ({required Object provider}) =>
             'The host has no indexer for this resource (${provider})';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
