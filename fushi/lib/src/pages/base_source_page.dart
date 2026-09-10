@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:fushi/src/anki/source_review_navigation.dart';
+import 'package:fushi/src/anki/source_review_session.dart';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -61,10 +63,7 @@ int lookupHighlightCharCount({
 /// conveniently share base functionality.f
 abstract class BaseSourcePage extends BasePage {
   /// Create an instance of this tab page.
-  const BaseSourcePage({
-    required this.item,
-    super.key,
-  });
+  const BaseSourcePage({required this.item, super.key});
 
   /// The media item pertaining to this usage instance of the source.
   final MediaItem? item;
@@ -81,6 +80,13 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   @override
   void initState() {
     super.initState();
+
+    ExternalMediaNavigation.instance.register(
+      this,
+      _closeForSourceReturn,
+      returnToReading: SourceReviewScope.read(context)?.onReturnToReading,
+      isSourceReview: () => SourceReviewScope.read(context)?.isReview ?? false,
+    );
 
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _seedWarmPopup();
@@ -106,6 +112,7 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
 
   @override
   void dispose() {
+    ExternalMediaNavigation.instance.unregister(this);
     _visibleRenderFailsafeTimer?.cancel();
     // TODO-058：controller 现持有挂起层兜底 Timer，作为其所有者必须 dispose 取消，防泄漏。
     _popup.dispose();
@@ -248,20 +255,18 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// Handles leaving a source page. All sources should
   /// use this and wrap their [build] function with a [PopScope].
   Future<bool> onWillPop() async {
+    final bool isSourceReview =
+        SourceReviewScope.read(context)?.isReview ?? false;
     final mediaSource = appModel.currentMediaSource;
     final item = widget.item;
     final messenger = ScaffoldMessenger.maybeOf(context);
     await onSourcePagePop();
 
     if (mediaSource != null) {
-      await appModel.closeMedia(
-        ref: ref,
-        mediaSource: mediaSource,
-        item: item,
-      );
+      await appModel.closeMedia(ref: ref, mediaSource: mediaSource, item: item);
     }
 
-    if (item != null && messenger != null) {
+    if (!isSourceReview && item != null && messenger != null) {
       triggerAutoSyncAfterClose(
         db: appModel.database,
         mediaIdentifier: item.mediaIdentifier,
@@ -269,6 +274,17 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
         onReport: appModel.presentSyncPrompts,
       );
     }
+    return true;
+  }
+
+  Future<bool> _closeForSourceReturn() async {
+    if (!mounted) return true;
+    final ModalRoute<dynamic>? route = ModalRoute.of(context);
+    if (route == null || !route.isCurrent) return false;
+    final NavigatorState navigator = Navigator.of(context);
+    if (!await onWillPop()) return false;
+    if (mounted && route.isCurrent) navigator.pop();
+    await route.completed;
     return true;
   }
 
@@ -409,11 +425,7 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
       );
       // 续查期间该层可能被裁掉/换词（嵌套查词、关栈）；用身份核对确保只更新原层。
       if (!mounted || !_popup.entries.contains(entry)) return;
-      _popup.fillResult(
-        entry,
-        result: result,
-        allLoaded: !result.truncated,
-      );
+      _popup.fillResult(entry, result: result, allLoaded: !result.truncated);
     } finally {
       // fillResult 成功路径已把 isSearching 清 false；失败/提前 return 在此兜底复位。
       if (_popup.entries.contains(entry) && entry.isSearching) {
@@ -468,10 +480,7 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
     return result.entries.isNotEmpty || result.kanjiResults.isNotEmpty;
   }
 
-  void _showPopupWaitingForRender(
-    DictionaryPopupEntry item,
-    int generation,
-  ) {
+  void _showPopupWaitingForRender(DictionaryPopupEntry item, int generation) {
     _visibleRenderFailsafeTimer?.cancel();
     _visibleRenderPendingItem = item;
     _visibleRenderPendingGeneration = generation;
@@ -563,8 +572,10 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// 竖排表面（reader vertical-rl）查词时让弹窗放当前列左/右侧而非上/下。
   /// 默认 false（视频/有声书横排字幕、首页等非竖排表面不变）。
   bool get popupVerticalWriting => false;
-  late final Listenable _popupListenable =
-      Listenable.merge([_popup, _isSearchingNotifier]);
+  late final Listenable _popupListenable = Listenable.merge([
+    _popup,
+    _isSearchingNotifier,
+  ]);
 
   /// Phase B 尺寸拖拽的预览态（基准逻辑像素，未缩放）。非空 = 正在拖把手，[popupMaxWidth]
   /// / [popupMaxHeight] 用它临时覆盖偏好实时预览；null = 未拖，用已落库真值。松手清空。
@@ -583,8 +594,10 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// 拖把手起手：把当前偏好基准尺寸存入预览态（后续增量累积其上），并冻结顶层卡当前左上角。
   void _onPopupResizeStart() {
     setState(() {
-      _popupResizePreview =
-          LookupSize(appModel.popupMaxWidth, appModel.popupMaxHeight);
+      _popupResizePreview = LookupSize(
+        appModel.popupMaxWidth,
+        appModel.popupMaxHeight,
+      );
       _popupResizeAnchorTopLeft = _topPopupAnchoredRect?.topLeft;
       _popupResizeAnchorSelection = _topPopupSelectionRect;
     });
@@ -979,8 +992,11 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
       return await body();
     } finally {
       if (mounted) {
-        setState(() => _popupHidingDialogDepth =
-            _popupHidingDialogDepth > 0 ? _popupHidingDialogDepth - 1 : 0);
+        setState(
+          () => _popupHidingDialogDepth = _popupHidingDialogDepth > 0
+              ? _popupHidingDialogDepth - 1
+              : 0,
+        );
       }
     }
   }
@@ -1203,24 +1219,28 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// the unit-test harness.
   @visibleForTesting
   List<
-      ({
-        bool isWarmSlot,
-        bool visible,
-        bool revealOnRender,
-        // TODO-962：暴露 allLoaded + entryCount，让 widget 测试断言「弹窗结果被截断时
-        // 不再硬编码 allLoaded:true、load-more 后词头数增加」。按名访问，不破坏既有解构。
-        bool allLoaded,
-        int entryCount,
-        GlobalKey<DictionaryPopupWebViewState> webViewKey
-      })> get debugPopupStack => _popup.entries
-      .map((e) => (
-            isWarmSlot: e.isWarmSlot,
-            visible: e.visible,
-            revealOnRender: e.revealOnRender,
-            allLoaded: e.allLoaded,
-            entryCount: e.result?.entries.length ?? 0,
-            webViewKey: e.webViewKey,
-          ))
+    ({
+      bool isWarmSlot,
+      bool visible,
+      bool revealOnRender,
+      // TODO-962：暴露 allLoaded + entryCount，让 widget 测试断言「弹窗结果被截断时
+      // 不再硬编码 allLoaded:true、load-more 后词头数增加」。按名访问，不破坏既有解构。
+      bool allLoaded,
+      int entryCount,
+      GlobalKey<DictionaryPopupWebViewState> webViewKey,
+    })
+  >
+  get debugPopupStack => _popup.entries
+      .map(
+        (e) => (
+          isWarmSlot: e.isWarmSlot,
+          visible: e.visible,
+          revealOnRender: e.revealOnRender,
+          allLoaded: e.allLoaded,
+          entryCount: e.result?.entries.length ?? 0,
+          webViewKey: e.webViewKey,
+        ),
+      )
       .toList();
 
   /// TODO-058 test hook: simulate the WebView at [index] firing `popupRendered`
@@ -1269,7 +1289,7 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
                     color: theme.colorScheme.primary,
                     minHeight: 2.75,
                   ),
-                  Expanded(child: Container())
+                  Expanded(child: Container()),
                 ],
               ),
             ),
@@ -1312,7 +1332,11 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// 新增重复卡 / 查看·在 Anki 中打开），复用可被 reader 覆写的 [onMineFromPopup] /
   /// [onUpdateFromPopup] 执行。
   Future<MinePopupResult> onMinedCardActionFromPopup(
-      Map<String, String> fields) async {
+    Map<String, String> fields,
+  ) async {
+    if (SourceReviewScope.read(context) != null) {
+      return onMineFromPopup(fields);
+    }
     final repo = ref.read(ankiRepositoryProvider);
     final expression = fields['expression'] ?? '';
     final reading = fields['reading'] ?? '';
@@ -1361,21 +1385,24 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
   /// （顶层 / 嵌套 / 重复查各一次）累加 [FushiDatabase.addLookupCount]。best-effort，
   /// 失败吞掉并记日志（与 [addMiningCount] 记账同容错口径）。
   void _recordLookupCounter() {
+    if (SourceReviewScope.read(context)?.isReview ?? false) return;
     // best-effort：连同同步阶段（[AppModel.database] late 字段 getter 在 DB 未初始化
     // 时会抛 LateInitializationError）一起吞掉——查词计数是旁路埋点，任何异常都不得
     // 打断弹窗查词流程（否则 [DictionaryPopupController.beginTop] 会随查词一起崩）。
     try {
       final ({String? bookKey, String? title})? identity = lookupBookIdentity;
-      unawaited(appModel.database
-          .addLookupCount(
-        bookKey: identity?.bookKey,
-        title: identity?.title ?? '',
-        sourceType: dictionarySourceType,
-        dateKey: statTodayKey(),
-      )
-          .catchError((Object e, StackTrace st) {
-        debugPrint('[fushi-stats] addLookupCount failed: $e\n$st');
-      }));
+      unawaited(
+        appModel.database
+            .addLookupCount(
+              bookKey: identity?.bookKey,
+              title: identity?.title ?? '',
+              sourceType: dictionarySourceType,
+              dateKey: statTodayKey(),
+            )
+            .catchError((Object e, StackTrace st) {
+              debugPrint('[fushi-stats] addLookupCount failed: $e\n$st');
+            }),
+      );
     } catch (e, st) {
       debugPrint('[fushi-stats] addLookupCount failed (sync): $e\n$st');
     }
@@ -1433,7 +1460,9 @@ abstract class BaseSourcePageState<T extends BaseSourcePage>
 
   /// TODO-948②：查询某词条当前是否已收藏（供弹窗按钮初始 ☆/★ 状态）。
   Future<bool> onFavoriteCheckFromPopup(
-      String expression, String reading) async {
+    String expression,
+    String reading,
+  ) async {
     if (expression.isEmpty) return false;
     return appModel.database.isFavoriteWord(
       expression: expression,

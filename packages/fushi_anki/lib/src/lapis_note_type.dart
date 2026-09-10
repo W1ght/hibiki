@@ -79,7 +79,7 @@ class LapisNoteType {
     // （`{clip-timestamp}` 在无时间轴来源上渲染成空串，书 / galgame 的卡片不会多出
     // 尾巴）。渲染器是整模板正则替换，一个字段里放多个占位符 + 字面文本是原生支持的。
     // 存量用户由 `BaseAnkiRepository.readSettingsJson` 的载入期迁移补齐。
-    'MiscInfo': '{document-title} {clip-timestamp}',
+    'MiscInfo': '{document-title} {clip-timestamp} {source-link}',
     'IsWordAndSentenceCard': 'x',
   };
 

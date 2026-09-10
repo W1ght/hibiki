@@ -154,7 +154,7 @@ void main() {
     test('整体渲染出「媒体名 时间窗」，一个字段里两个占位符照常展开', () {
       final String mapping = LapisNoteType.defaultFieldMappings['MiscInfo']!;
       expect(
-        render(mapping, contextWithClip(754000, 758000)),
+        render(mapping, contextWithClip(754000, 758000)).trim(),
         'Initial.D.Third.Stage 00:12:34 - 00:12:38',
       );
     });

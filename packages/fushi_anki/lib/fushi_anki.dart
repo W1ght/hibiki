@@ -5,6 +5,7 @@ export 'src/anki_remote_media_http.dart';
 export 'src/anki_models.dart';
 export 'src/anki_note_type_definition.dart';
 export 'src/base_anki_repository.dart';
+export 'src/card_source_link.dart';
 export 'src/lapis_preset.dart';
 export 'src/anki_template_render.dart';
 export 'src/lapis_blocks.dart';

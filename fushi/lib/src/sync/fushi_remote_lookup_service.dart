@@ -87,6 +87,19 @@ class RemoteDictionaryPopupLookup {
 }
 
 /// 浏览器扩展挖词的窄接口（与查词分离，避免 server 直接依赖 AnkiRepository）。
+abstract class FushiRemoteSourceNoteService {
+  Future<AnkiSourceNote?> readSourceNote(String sourceId);
+
+  Future<Map<String, String>> prepareForwardedSourceNote(
+    ForwardedMinePayload payload,
+  );
+
+  Future<void> patchSourceNote({
+    required AnkiSourceNote original,
+    required Map<String, String> fields,
+  });
+}
+
 abstract class FushiRemoteMiningService {
   /// 返回 [RemoteMineResult]（结果名 + 失败/部分成功诊断）。
   Future<RemoteMineResult> mineEntry({
@@ -163,10 +176,7 @@ abstract class FushiRemoteHistoryService {
 
 /// 对端 host 返回的单词音频查询结果（原始字节 + Content-Type，wire DTO）。
 class RemoteAudioLookup {
-  const RemoteAudioLookup({
-    required this.bytes,
-    required this.contentType,
-  });
+  const RemoteAudioLookup({required this.bytes, required this.contentType});
 
   final Uint8List bytes;
   final String contentType;
