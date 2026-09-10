@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78829 (4637 per locale)
+/// Strings: 78846 (4638 per locale)
 ///
-/// Built on 2026-09-10 at 10:51 UTC
+/// Built on 2026-09-10 at 10:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6439,6 +6439,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Some sources are rate limited; showing the rest';
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -17342,6 +17343,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -28473,6 +28476,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -39658,6 +39663,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -50877,6 +50884,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -61898,6 +61907,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -73012,6 +73023,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -83502,6 +83515,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -94002,6 +94017,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -105072,6 +105089,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -116196,6 +116215,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -127297,6 +127318,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -138197,6 +138220,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -149213,6 +149238,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -160200,6 +160227,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -170280,6 +170309,8 @@ class _StringsZhCn extends _StringsEn {
   String get video_discovery_provider_rate_limited => '部分来源请求过于频繁，已显示其余结果';
   @override
   String get video_discovery_provider_failed => '部分来源暂时请求失败，已显示其余结果';
+  @override
+  String get collection_rescrape_pick_work => '选择要重新刮削的作品';
 }
 
 // Path: <root>
@@ -180452,6 +180483,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_discovery_provider_failed =>
       'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 /// Flat map(s) containing all translations.
@@ -189996,6 +190029,8 @@ extension on _StringsEn {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -199535,6 +199570,8 @@ extension on _StringsAr {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -209119,6 +209156,8 @@ extension on _StringsDe {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -218694,6 +218733,8 @@ extension on _StringsEs {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -228278,6 +228319,8 @@ extension on _StringsFr {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -237833,6 +237876,8 @@ extension on _StringsId {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -247410,6 +247455,8 @@ extension on _StringsIt {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -256914,6 +256961,8 @@ extension on _StringsJa {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -266422,6 +266471,8 @@ extension on _StringsKo {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -275992,6 +276043,8 @@ extension on _StringsNl {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -285557,6 +285610,8 @@ extension on _StringsPtBr {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -295129,6 +295184,8 @@ extension on _StringsRu {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -304673,6 +304730,8 @@ extension on _StringsTh {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -314232,6 +314291,8 @@ extension on _StringsTr {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -323785,6 +323846,8 @@ extension on _StringsVi {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -333255,6 +333318,8 @@ extension on _StringsZhCn {
         return '部分来源请求过于频繁，已显示其余结果';
       case 'video_discovery_provider_failed':
         return '部分来源暂时请求失败，已显示其余结果';
+      case 'collection_rescrape_pick_work':
+        return '选择要重新刮削的作品';
       default:
         return null;
     }
@@ -342737,6 +342802,8 @@ extension on _StringsZhHk {
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
         return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
