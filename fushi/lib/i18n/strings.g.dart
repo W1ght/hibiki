@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78132 (4596 per locale)
+/// Strings: 78149 (4597 per locale)
 ///
-/// Built on 2026-09-10 at 00:59 UTC
+/// Built on 2026-09-10 at 02:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4386,20 +4386,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get srt_epub_not_ready => 'Book not ready — please re-import';
   String get srt_import => 'Import book';
   String get srt_import_audio_needs_subtitle =>
-      'Audio must be paired with subtitles. To attach audio to an existing EPUB, long-press the book on the shelf.';
+      'Audio must be paired with subtitles. To attach audio to an existing book, long-press the book on the shelf.';
   String get srt_import_author_hint => 'Author (optional)';
   String get srt_import_error => 'Import failed';
   String srt_import_files_selected({required Object n}) =>
       '${n} files selected';
   String get srt_import_hint_epub_or_srt =>
-      'Pick an EPUB or subtitle file to import.';
+      'Pick a book or subtitle file to import.';
   String get srt_import_missing_input =>
-      'Please pick at least an EPUB or subtitle file';
+      'Please pick at least a book or subtitle file';
   String get srt_import_missing_title => 'Please enter a book title';
   String get srt_import_pick_audio_dir => 'Pick audio directory';
   String get srt_import_pick_audio_files => 'Pick audio files';
   String get srt_import_pick_cover => 'Pick cover image';
-  String get srt_import_pick_epub => 'Pick EPUB';
+  String get srt_import_pick_epub => 'Pick book file';
   String get srt_import_pick_subtitle_files => 'Pick subtitle files';
   String get srt_import_success => 'Book imported';
   String get srt_import_title_hint => 'Book title';
@@ -6382,6 +6382,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Installed ${installed}, skipped ${skipped}, failed ${failed}';
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -17187,6 +17188,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -28220,6 +28223,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -39307,6 +39312,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -50428,6 +50435,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -61351,6 +61360,8 @@ class _StringsId extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -72367,6 +72378,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -82759,6 +82772,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -93162,6 +93177,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -104134,6 +104151,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -115160,6 +115179,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -126163,6 +126184,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -136965,6 +136988,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -147883,6 +147908,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -158772,6 +158799,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 // Path: <root>
@@ -165571,8 +165600,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srt_import => '导入书';
   @override
-  String get srt_import_audio_needs_subtitle =>
-      '音频需要配合字幕使用（给现有 EPUB 挂音频请在书架长按该书）';
+  String get srt_import_audio_needs_subtitle => '音频需要配合字幕使用（给现有书籍挂音频请在书架长按该书）';
   @override
   String get srt_import_author_hint => '作者（可选）';
   @override
@@ -165580,9 +165608,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String srt_import_files_selected({required Object n}) => '已选择 ${n} 个文件';
   @override
-  String get srt_import_hint_epub_or_srt => '选择 EPUB 或字幕文件进行导入。';
+  String get srt_import_hint_epub_or_srt => '选择书籍或字幕文件进行导入。';
   @override
-  String get srt_import_missing_input => '请至少选择 EPUB 或字幕文件';
+  String get srt_import_missing_input => '请至少选择书籍或字幕文件';
   @override
   String get srt_import_missing_title => '请输入书名';
   @override
@@ -165592,7 +165620,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get srt_import_pick_cover => '选择封面图片';
   @override
-  String get srt_import_pick_epub => '选择 EPUB';
+  String get srt_import_pick_epub => '选择书籍文件';
   @override
   String get srt_import_pick_subtitle_files => '选择字幕文件';
   @override
@@ -168775,6 +168803,8 @@ class _StringsZhCn extends _StringsEn {
       '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
   @override
   String get mihon_extension_bulk_install_nothing => '当前筛选下的扩展都已经装过了。';
+  @override
+  String get import_step_importing_book => '导入书籍…';
 }
 
 // Path: <root>
@@ -178851,6 +178881,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get import_step_importing_book => 'Importing book…';
 }
 
 /// Flat map(s) containing all translations.
@@ -185276,7 +185308,7 @@ extension on _StringsEn {
       case 'srt_import':
         return 'Import book';
       case 'srt_import_audio_needs_subtitle':
-        return 'Audio must be paired with subtitles. To attach audio to an existing EPUB, long-press the book on the shelf.';
+        return 'Audio must be paired with subtitles. To attach audio to an existing book, long-press the book on the shelf.';
       case 'srt_import_author_hint':
         return 'Author (optional)';
       case 'srt_import_error':
@@ -185284,9 +185316,9 @@ extension on _StringsEn {
       case 'srt_import_files_selected':
         return ({required Object n}) => '${n} files selected';
       case 'srt_import_hint_epub_or_srt':
-        return 'Pick an EPUB or subtitle file to import.';
+        return 'Pick a book or subtitle file to import.';
       case 'srt_import_missing_input':
-        return 'Please pick at least an EPUB or subtitle file';
+        return 'Please pick at least a book or subtitle file';
       case 'srt_import_missing_title':
         return 'Please enter a book title';
       case 'srt_import_pick_audio_dir':
@@ -185296,7 +185328,7 @@ extension on _StringsEn {
       case 'srt_import_pick_cover':
         return 'Pick cover image';
       case 'srt_import_pick_epub':
-        return 'Pick EPUB';
+        return 'Pick book file';
       case 'srt_import_pick_subtitle_files':
         return 'Pick subtitle files';
       case 'srt_import_success':
@@ -188313,6 +188345,8 @@ extension on _StringsEn {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -197770,6 +197804,8 @@ extension on _StringsAr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -207272,6 +207308,8 @@ extension on _StringsDe {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -216765,6 +216803,8 @@ extension on _StringsEs {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -226267,6 +226307,8 @@ extension on _StringsFr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -235740,6 +235782,8 @@ extension on _StringsId {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -245235,6 +245279,8 @@ extension on _StringsIt {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -254657,6 +254703,8 @@ extension on _StringsJa {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -264083,6 +264131,8 @@ extension on _StringsKo {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -273571,6 +273621,8 @@ extension on _StringsNl {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -283054,6 +283106,8 @@ extension on _StringsPtBr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -292544,6 +292598,8 @@ extension on _StringsRu {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -302006,6 +302062,8 @@ extension on _StringsTh {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -311483,6 +311541,8 @@ extension on _StringsTr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -320954,6 +321014,8 @@ extension on _StringsVi {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
@@ -327341,7 +327403,7 @@ extension on _StringsZhCn {
       case 'srt_import':
         return '导入书';
       case 'srt_import_audio_needs_subtitle':
-        return '音频需要配合字幕使用（给现有 EPUB 挂音频请在书架长按该书）';
+        return '音频需要配合字幕使用（给现有书籍挂音频请在书架长按该书）';
       case 'srt_import_author_hint':
         return '作者（可选）';
       case 'srt_import_error':
@@ -327349,9 +327411,9 @@ extension on _StringsZhCn {
       case 'srt_import_files_selected':
         return ({required Object n}) => '已选择 ${n} 个文件';
       case 'srt_import_hint_epub_or_srt':
-        return '选择 EPUB 或字幕文件进行导入。';
+        return '选择书籍或字幕文件进行导入。';
       case 'srt_import_missing_input':
-        return '请至少选择 EPUB 或字幕文件';
+        return '请至少选择书籍或字幕文件';
       case 'srt_import_missing_title':
         return '请输入书名';
       case 'srt_import_pick_audio_dir':
@@ -327361,7 +327423,7 @@ extension on _StringsZhCn {
       case 'srt_import_pick_cover':
         return '选择封面图片';
       case 'srt_import_pick_epub':
-        return '选择 EPUB';
+        return '选择书籍文件';
       case 'srt_import_pick_subtitle_files':
         return '选择字幕文件';
       case 'srt_import_success':
@@ -330342,6 +330404,8 @@ extension on _StringsZhCn {
             '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
       case 'mihon_extension_bulk_install_nothing':
         return '当前筛选下的扩展都已经装过了。';
+      case 'import_step_importing_book':
+        return '导入书籍…';
       default:
         return null;
     }
@@ -339742,6 +339806,8 @@ extension on _StringsZhHk {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'import_step_importing_book':
+        return 'Importing book…';
       default:
         return null;
     }
