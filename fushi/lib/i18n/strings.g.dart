@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 79764 (4692 per locale)
 ///
-/// Built on 2026-09-10 at 12:24 UTC
+/// Built on 2026-09-10 at 13:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -165620,7 +165620,7 @@ class _StringsZhCn extends _StringsEn {
       '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      '捕获组件与本体版本不一致。请尝试关闭游戏，然后重新运行一次 Fushi。若无法解决请联系开发者。';
+      '捕获组件与本体版本不一致。组件内置在 Fushi 里，不用单独安装。先完全关掉游戏再重开一次：游戏进程里可能还挂着上次注入的旧组件。若仍不匹配，说明磁盘上的组件比本体旧（上次更新时游戏正开着，换不掉被占用的文件）——关掉所有游戏，再重跑一次 Fushi 安装程序。';
   @override
   String get game_hook_reason_ready_timeout => '钩子库未能在超时内加载完成，杀毒软件扫描可能是原因。';
   @override
@@ -331037,7 +331037,7 @@ extension on _StringsZhCn {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
       case 'game_hook_reason_protocol_mismatch':
-        return '捕获组件与本体版本不一致。请尝试关闭游戏，然后重新运行一次 Fushi。若无法解决请联系开发者。';
+        return '捕获组件与本体版本不一致。组件内置在 Fushi 里，不用单独安装。先完全关掉游戏再重开一次：游戏进程里可能还挂着上次注入的旧组件。若仍不匹配，说明磁盘上的组件比本体旧（上次更新时游戏正开着，换不掉被占用的文件）——关掉所有游戏，再重跑一次 Fushi 安装程序。';
       case 'game_hook_reason_ready_timeout':
         return '钩子库未能在超时内加载完成，杀毒软件扫描可能是原因。';
       case 'game_hook_reason_resident_hook_mismatch':
