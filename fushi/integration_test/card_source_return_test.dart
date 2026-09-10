@@ -150,7 +150,10 @@ void main() {
         tester,
         openCardSource(
           ref: ref,
-          link: CardSourceLink.parse(link.toUri().toString()),
+          // BUG-2416: Windows normalizes fushi://source?... to source/?...
+          link: CardSourceLink.parse(
+            link.toUri().replace(path: '/').toString(),
+          ),
         ),
       );
       await _until(

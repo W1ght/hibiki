@@ -29,10 +29,12 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2168 条。点号进各自文件。
+> 共 2170 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2417](bugs/BUG-2417-windows-itest-kills-preexisting-app.md) | ✅ | ✅ | Windows集成测试按build目录误杀用户已运行的应用 |
+| [BUG-2416](bugs/BUG-2416-card-source-root-url.md) | ✅ | ✅ | Windows 来源链接规范化后被错误判无效 |
 | [BUG-2407](bugs/BUG-2407-integration-drive-uninstalls-app.md) | ✅ | ✅ | 集成测试成功后 flutter drive 清理卸载应用并删除私有数据 |
 | [BUG-2404](bugs/BUG-2404-anki-note-dialog-stacking.md) | ✅ | ✅ | 已制卡候选与卡片查看器重复堆叠弹窗 |
 | [BUG-2386](bugs/BUG-2386-dictionary-redirect-provenance.md) | ✅ | ✅ | 词典查词把同释义真实词条误判为重定向别名删除 |

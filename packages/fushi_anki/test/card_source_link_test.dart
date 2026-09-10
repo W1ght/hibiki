@@ -99,6 +99,23 @@ void main() {
     expect(CardSourceLink.parse(book().toUri().toString()).charOffset, 1234);
   });
 
+  test('Windows shell root-path normalization preserves the complete locator',
+      () {
+    final CardSourceLink source = book();
+    final String shellUrl = source.toUri().replace(path: '/').toString();
+    expect(CardSourceLink.parse(shellUrl).toUri(), source.toUri());
+    final String html =
+        '<a href="${const HtmlEscape(HtmlEscapeMode.attribute).convert(shellUrl)}">Fushi</a>';
+    expect(CardSourceLink.fromHtml(html).single.toUri(), source.toUri());
+    for (final String path in <String>['//', '/path', '/source']) {
+      expect(
+        () =>
+            CardSourceLink.parse(source.toUri().replace(path: path).toString()),
+        throwsFormatException,
+      );
+    }
+  });
+
   test(
       'video requires a valid file fingerprint and preserves it across note updates',
       () {
@@ -338,11 +355,13 @@ void main() {
     },
   );
 
-  test('ordinary overwrite without a locator preserves the entire old source link', () async {
+  test(
+      'ordinary overwrite without a locator preserves the entire old source link',
+      () async {
     final _SourceRepository repo = _SourceRepository();
     repo.saved['MiscInfo'] = 'Original title ${book().toHtml()}';
     final AnkiMiningContext adjusted = await repo.existingContext(
-      const AnkiMiningContext(sentence: 'dictionary update'));
+        const AnkiMiningContext(sentence: 'dictionary update'));
     expect(adjusted.sourceLink!.toUri(), book().toUri());
     expect(adjusted.sentence, 'dictionary update');
   });

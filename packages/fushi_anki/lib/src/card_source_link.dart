@@ -103,7 +103,7 @@ class CardSourceLink {
   /// parser still validates every parameter after HTML attribute unescaping.
   static Iterable<CardSourceLink> fromHtml(String html) sync* {
     final RegExp href = RegExp(
-      r'''href\s*=\s*["'](fushi://source\?[^"'<>]+)["']''',
+      r'''href\s*=\s*["'](fushi://source/?\?[^"'<>]+)["']''',
       caseSensitive: false,
     );
     for (final RegExpMatch match in href.allMatches(html)) {
@@ -236,7 +236,9 @@ class CardSourceLink {
         uri.host != 'source' ||
         uri.hasPort ||
         uri.userInfo.isNotEmpty ||
-        uri.path.isNotEmpty ||
+        // Windows ShellExecute canonicalizes an empty authority path to '/'.
+        // Both denote this endpoint; reject all other paths as before.
+        (uri.path.isNotEmpty && uri.path != '/') ||
         uri.hasFragment) {
       throw const FormatException('Invalid source URL');
     }
