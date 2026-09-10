@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78540 (4620 per locale)
+/// Strings: 78574 (4622 per locale)
 ///
-/// Built on 2026-09-10 at 02:37 UTC
+/// Built on 2026-09-10 at 02:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6418,6 +6418,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only removes it from the model list. Your files are not deleted.';
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -17283,6 +17287,12 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -28376,6 +28386,12 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -39523,6 +39539,12 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -50704,6 +50726,12 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -61687,6 +61715,12 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -72763,6 +72797,12 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -83215,6 +83255,12 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -93678,6 +93724,12 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -104710,6 +104762,12 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -115796,6 +115854,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -126859,6 +126923,12 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -137721,6 +137791,12 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -148699,6 +148775,12 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -159648,6 +159730,12 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 // Path: <root>
@@ -169707,6 +169795,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       '已接入 ${name}';
+  @override
+  String get manga_source_interconnect_subtitle => '浏览已配对设备上的漫画库';
+  @override
+  String get manga_source_interconnect_disabled => '在设置里开启 Fushi 互联后即可使用此来源';
 }
 
 // Path: <root>
@@ -179843,6 +179935,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get manga_source_interconnect_subtitle =>
+      'Browse the manga library on your paired device';
+  @override
+  String get manga_source_interconnect_disabled =>
+      'Turn on Fushi Interconnect in settings to use this source';
 }
 
 /// Flat map(s) containing all translations.
@@ -189353,6 +189451,10 @@ extension on _StringsEn {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -198858,6 +198960,10 @@ extension on _StringsAr {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -208408,6 +208514,10 @@ extension on _StringsDe {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -217949,6 +218059,10 @@ extension on _StringsEs {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -227499,6 +227613,10 @@ extension on _StringsFr {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -237020,6 +237138,10 @@ extension on _StringsId {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -246563,6 +246685,10 @@ extension on _StringsIt {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -256033,6 +256159,10 @@ extension on _StringsJa {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -265507,6 +265637,10 @@ extension on _StringsKo {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -275043,6 +275177,10 @@ extension on _StringsNl {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -284574,6 +284712,10 @@ extension on _StringsPtBr {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -294112,6 +294254,10 @@ extension on _StringsRu {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -303622,6 +303768,10 @@ extension on _StringsTh {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -313147,6 +313297,10 @@ extension on _StringsTr {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -322666,6 +322820,10 @@ extension on _StringsVi {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
@@ -332102,6 +332260,10 @@ extension on _StringsZhCn {
         return '只是从模型列表里移除，你的文件不会被删除。';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => '已接入 ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return '浏览已配对设备上的漫画库';
+      case 'manga_source_interconnect_disabled':
+        return '在设置里开启 Fushi 互联后即可使用此来源';
       default:
         return null;
     }
@@ -341550,6 +341712,10 @@ extension on _StringsZhHk {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'manga_source_interconnect_subtitle':
+        return 'Browse the manga library on your paired device';
+      case 'manga_source_interconnect_disabled':
+        return 'Turn on Fushi Interconnect in settings to use this source';
       default:
         return null;
     }
