@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79016 (4648 per locale)
+/// Strings: 79067 (4651 per locale)
 ///
-/// Built on 2026-09-10 at 11:41 UTC
+/// Built on 2026-09-10 at 11:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6453,6 +6453,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'I understand this deletes all ${n} session records.';
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -17381,6 +17386,14 @@ class _StringsAr extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -28537,6 +28550,14 @@ class _StringsDe extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -39747,6 +39768,14 @@ class _StringsEs extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -50991,6 +51020,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -62037,6 +62074,14 @@ class _StringsId extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -73176,6 +73221,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -83692,6 +83745,14 @@ class _StringsJa extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -94218,6 +94279,14 @@ class _StringsKo extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -105313,6 +105382,14 @@ class _StringsNl extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -116462,6 +116539,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -127588,6 +127673,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -138513,6 +138606,14 @@ class _StringsTh extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -149554,6 +149655,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -160566,6 +160675,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 // Path: <root>
@@ -170672,6 +170789,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       '确定把阅读、观看、游戏三个域的统计一起清空吗？三个域的时长、字数以及查词 / 制卡计数都会被删除；收藏的词、句子、制卡卡片、游戏库与活动时间线不受影响。此操作不可撤销。';
+  @override
+  String get video_discovery_provider_rate_limited => '部分来源请求过于频繁，已显示其余结果';
+  @override
+  String get video_discovery_provider_failed => '部分来源暂时请求失败，已显示其余结果';
+  @override
+  String get collection_rescrape_pick_work => '选择要重新刮削的作品';
 }
 
 // Path: <root>
@@ -180870,6 +180993,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get stat_clear_all_overview_message =>
       'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
 }
 
 /// Flat map(s) containing all translations.
@@ -190438,6 +190569,12 @@ extension on _StringsEn {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -200001,6 +200138,12 @@ extension on _StringsAr {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -209609,6 +209752,12 @@ extension on _StringsDe {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -219208,6 +219357,12 @@ extension on _StringsEs {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -228816,6 +228971,12 @@ extension on _StringsFr {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -238395,6 +238556,12 @@ extension on _StringsId {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -247996,6 +248163,12 @@ extension on _StringsIt {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -257524,6 +257697,12 @@ extension on _StringsJa {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -267056,6 +267235,12 @@ extension on _StringsKo {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -276650,6 +276835,12 @@ extension on _StringsNl {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -286239,6 +286430,12 @@ extension on _StringsPtBr {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -295835,6 +296032,12 @@ extension on _StringsRu {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -305403,6 +305606,12 @@ extension on _StringsTh {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -314986,6 +315195,12 @@ extension on _StringsTr {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -324563,6 +324778,12 @@ extension on _StringsVi {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
@@ -334056,6 +334277,12 @@ extension on _StringsZhCn {
         return ({required Object n}) => '我确认要删除这 ${n} 条会话记录。';
       case 'stat_clear_all_overview_message':
         return '确定把阅读、观看、游戏三个域的统计一起清空吗？三个域的时长、字数以及查词 / 制卡计数都会被删除；收藏的词、句子、制卡卡片、游戏库与活动时间线不受影响。此操作不可撤销。';
+      case 'video_discovery_provider_rate_limited':
+        return '部分来源请求过于频繁，已显示其余结果';
+      case 'video_discovery_provider_failed':
+        return '部分来源暂时请求失败，已显示其余结果';
+      case 'collection_rescrape_pick_work':
+        return '选择要重新刮削的作品';
       default:
         return null;
     }
@@ -343562,6 +343789,12 @@ extension on _StringsZhHk {
             'I understand this deletes all ${n} session records.';
       case 'stat_clear_all_overview_message':
         return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
       default:
         return null;
     }
