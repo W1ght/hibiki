@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78676 (4628 per locale)
+/// Strings: 78778 (4634 per locale)
 ///
-/// Built on 2026-09-10 at 09:21 UTC
+/// Built on 2026-09-10 at 09:54 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6427,6 +6427,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_login_empty =>
       'No session cookies were captured; nothing was saved';
   String get mihon_source_login_saved => 'Signed in to this source';
+  String get media_source_rename => 'Rename';
+  String get media_source_rename_label => 'Source name';
+  String get book_rename => 'Rename';
+  String get book_rename_label => 'Title';
+  String get dict_rename => 'Rename';
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -17309,6 +17315,18 @@ class _StringsAr extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -28419,6 +28437,18 @@ class _StringsDe extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -39583,6 +39613,18 @@ class _StringsEs extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -50781,6 +50823,18 @@ class _StringsFr extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -61781,6 +61835,18 @@ class _StringsId extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -72874,6 +72940,18 @@ class _StringsIt extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -83343,6 +83421,18 @@ class _StringsJa extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -93822,6 +93912,18 @@ class _StringsKo extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -104871,6 +104973,18 @@ class _StringsNl extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -115974,6 +116088,18 @@ class _StringsPtBr extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -127054,6 +127180,18 @@ class _StringsRu extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -137933,6 +138071,18 @@ class _StringsTh extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -148928,6 +149078,18 @@ class _StringsTr extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -159894,6 +160056,18 @@ class _StringsVi extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
 }
 
 // Path: <root>
@@ -169956,6 +170130,18 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_source_login_empty => '没有捕获到会话 cookie，未保存';
   @override
   String get mihon_source_login_saved => '已登录该源';
+  @override
+  String get media_source_rename => '重命名';
+  @override
+  String get media_source_rename_label => '来源名称';
+  @override
+  String get book_rename => '重命名';
+  @override
+  String get book_rename_label => '标题';
+  @override
+  String get dict_rename => '重命名';
+  @override
+  String get dict_rename_label => '词典名称';
 }
 
 // Path: <root>
@@ -180108,6 +180294,18 @@ class _StringsZhHk extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => '重命名';
+  @override
+  String get media_source_rename_label => '來源名稱';
+  @override
+  String get book_rename => '重命名';
+  @override
+  String get book_rename_label => '標題';
+  @override
+  String get dict_rename => '重命名';
+  @override
+  String get dict_rename_label => '詞典名稱';
 }
 
 /// Flat map(s) containing all translations.
@@ -189634,6 +189832,18 @@ extension on _StringsEn {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -199155,6 +199365,18 @@ extension on _StringsAr {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -208721,6 +208943,18 @@ extension on _StringsDe {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -218278,6 +218512,18 @@ extension on _StringsEs {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -227844,6 +228090,18 @@ extension on _StringsFr {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -237381,6 +237639,18 @@ extension on _StringsId {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -246940,6 +247210,18 @@ extension on _StringsIt {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -256426,6 +256708,18 @@ extension on _StringsJa {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -265916,6 +266210,18 @@ extension on _StringsKo {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -275468,6 +275774,18 @@ extension on _StringsNl {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -285015,6 +285333,18 @@ extension on _StringsPtBr {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -294569,6 +294899,18 @@ extension on _StringsRu {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -304095,6 +304437,18 @@ extension on _StringsTh {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -313636,6 +313990,18 @@ extension on _StringsTr {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -323171,6 +323537,18 @@ extension on _StringsVi {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
       default:
         return null;
     }
@@ -332623,6 +333001,18 @@ extension on _StringsZhCn {
         return '没有捕获到会话 cookie，未保存';
       case 'mihon_source_login_saved':
         return '已登录该源';
+      case 'media_source_rename':
+        return '重命名';
+      case 'media_source_rename_label':
+        return '来源名称';
+      case 'book_rename':
+        return '重命名';
+      case 'book_rename_label':
+        return '标题';
+      case 'dict_rename':
+        return '重命名';
+      case 'dict_rename_label':
+        return '词典名称';
       default:
         return null;
     }
@@ -342087,6 +342477,18 @@ extension on _StringsZhHk {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'media_source_rename':
+        return '重命名';
+      case 'media_source_rename_label':
+        return '來源名稱';
+      case 'book_rename':
+        return '重命名';
+      case 'book_rename_label':
+        return '標題';
+      case 'dict_rename':
+        return '重命名';
+      case 'dict_rename_label':
+        return '詞典名稱';
       default:
         return null;
     }
