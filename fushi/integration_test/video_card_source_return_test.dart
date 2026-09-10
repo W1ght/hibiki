@@ -173,7 +173,12 @@ void main() {
       expect(firstSession.isReview, isTrue);
       expect(firstHooks.debugIsPlaying, isFalse);
       expect(find.text(t.card_source_review_video_continue), findsOneWidget);
-      expect(find.text(t.card_source_review_video_clip), findsOneWidget);
+      // Returning to the clip is the Anki source link itself; the page keeps
+      // no in-page clip button, so nothing survives continuing to watch.
+      expect(
+        find.byKey(const ValueKey<String>('source-review-return-to-source')),
+        findsNothing,
+      );
       final ObserveShot reviewShot = await captureFlutterFrame(
         tester,
         'source-review-video-review',
@@ -217,6 +222,9 @@ void main() {
             (firstHooks.debugPositionMs ?? 0) >= pausedAt + 2000,
         reason: '继续观看按钮应立即恢复播放并真实推进，不可只改变横幅',
       );
+      // Normal watching must look exactly like ordinary playback: the review
+      // banner is a second top bar and has to be gone, not merely relabelled.
+      expect(find.byType(SourceReviewBanner), findsNothing);
       final ObserveShot continuedShot = await captureFlutterFrame(
         tester,
         'source-review-video-watching',
@@ -233,11 +241,8 @@ void main() {
       );
       await firstHooks.debugPause();
       final int normalPosition = firstHooks.debugPositionMs!;
-      await _activateButton(
-        tester,
-        focus,
-        find.byKey(const ValueKey<String>('source-review-return-to-source')),
-      );
+      // Re-opening the same card link is the supported way back to the clip.
+      await _finish(tester, openCardSource(ref: ref, link: link));
       await _until(tester, () {
         final VideoFushiTestHooks? hooks = _hooks(tester);
         if (hooks == null || identical(hooks, firstHooks)) return false;

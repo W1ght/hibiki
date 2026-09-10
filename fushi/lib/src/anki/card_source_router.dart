@@ -110,9 +110,6 @@ Future<void> _openCardSource({
     draftStore: SourceReviewDraftStore(
       Directory('${app.appDirectory.path}/card_source_drafts'),
     ),
-    // Reopen through the normal source resolver: finish any normal playback
-    // writes before seeking, then install a fresh isolated review session.
-    onReturnToSource: () => openCardSource(ref: ref, link: link),
     onReturnToReading:
         previousReturn ??
         () => ExternalMediaNavigation.instance.navigate(() async {

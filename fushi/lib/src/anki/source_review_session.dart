@@ -16,14 +16,12 @@ class SourceReviewSession extends ChangeNotifier {
     required this.repository,
     required this.draftStore,
     this.onReturnToReading,
-    this.onReturnToSource,
   });
 
   final CardSourceLink link;
   final BaseAnkiRepository repository;
   final SourceReviewDraftStore draftStore;
   final Future<void> Function()? onReturnToReading;
-  final Future<void> Function()? onReturnToSource;
   bool _isReview = true;
   bool _busy = false;
   bool _disposed = false;
@@ -72,23 +70,6 @@ class SourceReviewSession extends ChangeNotifier {
   void attachContext(BuildContext context) {
     _context = context;
     _draftLoad ??= _refreshDraft();
-  }
-
-  Future<void> returnToSource() async {
-    final Future<void> Function()? restore = onReturnToSource;
-    if (_busy || restore == null) return;
-    _busy = true;
-    _notify();
-    try {
-      // The router saves normal playback and creates a fresh review session.
-      // This session must not switch modes before that navigation succeeds.
-      await restore();
-    } catch (_) {
-      _message(t.card_source_review_video_clip_failed);
-    } finally {
-      _busy = false;
-      _notify();
-    }
   }
 
   Future<void> _refreshDraft() async {
@@ -416,16 +397,6 @@ class SourceReviewBanner extends StatelessWidget {
                                   ? t.card_source_review_video_continue
                                   : t.card_source_review_continue,
                             ),
-                          ),
-                        if (isVideo && session.onReturnToSource != null)
-                          TextButton(
-                            key: const ValueKey<String>(
-                              'source-review-return-to-source',
-                            ),
-                            onPressed: session.busy
-                                ? null
-                                : session.returnToSource,
-                            child: Text(t.card_source_review_video_clip),
                           ),
                       ],
                     ),

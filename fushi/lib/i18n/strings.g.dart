@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77367 (4551 per locale)
+/// Strings: 77333 (4549 per locale)
 ///
-/// Built on 2026-09-10 at 02:35 UTC
+/// Built on 2026-09-10 at 03:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6390,9 +6390,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_source_review_video_return =>
       'Return to original watch position';
   String get card_source_review_video_continue => 'Continue watching here';
-  String get card_source_review_video_clip => 'Return to card clip';
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -17155,11 +17152,6 @@ class _StringsAr extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -28158,11 +28150,6 @@ class _StringsDe extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -39211,11 +39198,6 @@ class _StringsEs extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -50297,11 +50279,6 @@ class _StringsFr extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -61183,11 +61160,6 @@ class _StringsId extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -72165,11 +72137,6 @@ class _StringsIt extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -82515,11 +82482,6 @@ class _StringsJa extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -92876,11 +92838,6 @@ class _StringsKo extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -103812,11 +103769,6 @@ class _StringsNl extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -114801,11 +114753,6 @@ class _StringsPtBr extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -125768,11 +125715,6 @@ class _StringsRu extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -136532,11 +136474,6 @@ class _StringsTh extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -147414,11 +147351,6 @@ class _StringsTr extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -158265,11 +158197,6 @@ class _StringsVi extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 // Path: <root>
@@ -168220,10 +168147,6 @@ class _StringsZhCn extends _StringsEn {
   String get card_source_review_video_return => '返回原观看位置';
   @override
   String get card_source_review_video_continue => '从这里继续观看';
-  @override
-  String get card_source_review_video_clip => '回到卡片片段';
-  @override
-  String get card_source_review_video_clip_failed => '无法返回卡片片段，请检查来源是否仍然可用。';
 }
 
 // Path: <root>
@@ -178254,11 +178177,6 @@ class _StringsZhHk extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
-  @override
-  String get card_source_review_video_clip => 'Return to card clip';
-  @override
-  String get card_source_review_video_clip_failed =>
-      'Unable to return to the card clip. Check that its source is still available.';
 }
 
 /// Flat map(s) containing all translations.
@@ -187623,10 +187541,6 @@ extension on _StringsEn {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -196986,10 +196900,6 @@ extension on _StringsAr {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -206398,10 +206308,6 @@ extension on _StringsDe {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -215800,10 +215706,6 @@ extension on _StringsEs {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -225210,10 +225112,6 @@ extension on _StringsFr {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -234590,10 +234488,6 @@ extension on _StringsId {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -243993,10 +243887,6 @@ extension on _StringsIt {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -253320,10 +253210,6 @@ extension on _StringsJa {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -262652,10 +262538,6 @@ extension on _StringsKo {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -272050,10 +271932,6 @@ extension on _StringsNl {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -281443,10 +281321,6 @@ extension on _StringsPtBr {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -290842,10 +290716,6 @@ extension on _StringsRu {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -300210,10 +300080,6 @@ extension on _StringsTh {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -309594,10 +309460,6 @@ extension on _StringsTr {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -318972,10 +318834,6 @@ extension on _StringsVi {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }
@@ -328266,10 +328124,6 @@ extension on _StringsZhCn {
         return '返回原观看位置';
       case 'card_source_review_video_continue':
         return '从这里继续观看';
-      case 'card_source_review_video_clip':
-        return '回到卡片片段';
-      case 'card_source_review_video_clip_failed':
-        return '无法返回卡片片段，请检查来源是否仍然可用。';
       default:
         return null;
     }
@@ -337571,10 +337425,6 @@ extension on _StringsZhHk {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
-      case 'card_source_review_video_clip':
-        return 'Return to card clip';
-      case 'card_source_review_video_clip_failed':
-        return 'Unable to return to the card clip. Check that its source is still available.';
       default:
         return null;
     }

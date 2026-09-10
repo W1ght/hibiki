@@ -160,4 +160,25 @@ void main() {
       expect(manga, contains('_readLedger.reset();'));
     },
   );
+
+  test(
+    'continuing to watch drops the review banner instead of relabelling it',
+    () {
+      // A second permanent top bar squeezes the video and contradicts the
+      // single-top-bar layout (BUG-102). Continuing means ordinary watching, so
+      // the banner must unmount rather than switch to a "watching" label.
+      expect(video, contains('when session.isReview)'));
+      expect(
+        video,
+        contains(
+          'if (_sourceReviewSession case final SourceReviewSession session',
+        ),
+      );
+      // The banner was the only attach point; without the page taking over, the
+      // session could no longer surface its failures after it unmounts.
+      expect(video, contains('_sourceReviewSession?.attachContext(context);'));
+      // No in-page way back to the clip survives: the Anki source link is it.
+      expect(video, isNot(contains('returnToSource')));
+    },
+  );
 }

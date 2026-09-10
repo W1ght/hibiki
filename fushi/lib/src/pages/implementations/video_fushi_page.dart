@@ -7880,13 +7880,21 @@ class _VideoFushiPageState extends ConsumerState<VideoFushiPage>
     // [_mobileControlsTheme]），与播放控制一起随鼠标/触摸显隐，单一顶栏。
     // HDR 直通（video_hdr_output.dart）：libmpv 宿主窗钉在主窗正后方，视频洞必须
     // 一路透到底，页面底色随之透明；失败 / 加载 / 缺资源态与非 HDR 播放不受影响。
+    // 横幅卸载后会话仍在：继续观看期间的制卡/覆写照样走 [SourceReviewSession]，
+    // 它的失败提示只认最后一次 attach 的 context。横幅是唯一 attach 点时，继续观看
+    // 那一帧起 context 就是已卸载的，提示会被静默吞掉——由页面自己接管。
+    _sourceReviewSession?.attachContext(context);
     return ValueListenableBuilder<bool>(
       valueListenable: controller?.hdrHostActive ?? _kHdrHostInactive,
       builder: (BuildContext _, bool hdrHost, Widget? body) => Scaffold(
         backgroundColor: hdrHost ? Colors.transparent : cs.surface,
         body: Column(
           children: <Widget>[
-            if (_sourceReviewSession case final SourceReviewSession session)
+            // 继续观看后这条栏必须整条消失：此刻已是普通观看，页面要和平时看视频
+            // 完全一样，不能再留第二条常驻顶栏把画面挤下去（BUG-102 的单一顶栏原
+            // 则）。要回卡片片段就重新点一次 Anki 里的来源链接，走完整回看链路。
+            if (_sourceReviewSession case final SourceReviewSession session
+                when session.isReview)
               SafeArea(
                 bottom: false,
                 child: SourceReviewBanner(
