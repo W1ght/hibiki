@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77945 (4585 per locale)
+/// Strings: 78081 (4593 per locale)
 ///
-/// Built on 2026-09-09 at 20:23 UTC
+/// Built on 2026-09-10 at 00:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6358,6 +6358,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Path mapping and target video source';
   String get settings_downloads_encryption_title => 'Peer encryption';
   String get settings_service_disabled => 'Disabled';
+  String get mihon_extension_download_count_unknown => 'No download data';
+  String get mihon_extension_bulk_install => 'Bulk install';
+  String get mihon_extension_min_downloads => 'Min downloads';
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -17128,6 +17147,33 @@ class _StringsAr extends _StringsEn {
   String get settings_downloads_encryption_title => 'تشفير الاتصال بالأقران';
   @override
   String get settings_service_disabled => 'معطّل';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -28126,6 +28172,33 @@ class _StringsDe extends _StringsEn {
   String get settings_downloads_encryption_title => 'Peer-Verschlüsselung';
   @override
   String get settings_service_disabled => 'Deaktiviert';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -39178,6 +39251,33 @@ class _StringsEs extends _StringsEn {
   String get settings_downloads_encryption_title => 'Cifrado entre pares';
   @override
   String get settings_service_disabled => 'Desactivado';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -50264,6 +50364,33 @@ class _StringsFr extends _StringsEn {
   String get settings_downloads_encryption_title => 'Chiffrement entre pairs';
   @override
   String get settings_service_disabled => 'Désactivé';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -61152,6 +61279,33 @@ class _StringsId extends _StringsEn {
   String get settings_downloads_encryption_title => 'Enkripsi peer';
   @override
   String get settings_service_disabled => 'Dinonaktifkan';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -72133,6 +72287,33 @@ class _StringsIt extends _StringsEn {
   String get settings_downloads_encryption_title => 'Crittografia dei peer';
   @override
   String get settings_service_disabled => 'Disattivato';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -82490,6 +82671,33 @@ class _StringsJa extends _StringsEn {
   String get settings_downloads_encryption_title => 'ピア通信の暗号化';
   @override
   String get settings_service_disabled => '無効';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -92858,6 +93066,33 @@ class _StringsKo extends _StringsEn {
   String get settings_downloads_encryption_title => '피어 암호화';
   @override
   String get settings_service_disabled => '사용 안 함';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -103795,6 +104030,33 @@ class _StringsNl extends _StringsEn {
   String get settings_downloads_encryption_title => 'Peer-versleuteling';
   @override
   String get settings_service_disabled => 'Uitgeschakeld';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -114786,6 +115048,33 @@ class _StringsPtBr extends _StringsEn {
   String get settings_downloads_encryption_title => 'Criptografia entre pares';
   @override
   String get settings_service_disabled => 'Desativado';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -125754,6 +126043,33 @@ class _StringsRu extends _StringsEn {
       'Шифрование соединений с пирами';
   @override
   String get settings_service_disabled => 'Отключено';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -136521,6 +136837,33 @@ class _StringsTh extends _StringsEn {
   String get settings_downloads_encryption_title => 'การเข้ารหัสระหว่างเพียร์';
   @override
   String get settings_service_disabled => 'ปิดใช้งาน';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -147404,6 +147747,33 @@ class _StringsTr extends _StringsEn {
   String get settings_downloads_encryption_title => 'Eş şifrelemesi';
   @override
   String get settings_service_disabled => 'Devre dışı';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -158258,6 +158628,33 @@ class _StringsVi extends _StringsEn {
   String get settings_downloads_encryption_title => 'Mã hóa kết nối peer';
   @override
   String get settings_service_disabled => 'Đã tắt';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -168227,6 +168624,32 @@ class _StringsZhCn extends _StringsEn {
   String get settings_downloads_encryption_title => '节点加密';
   @override
   String get settings_service_disabled => '已停用';
+  @override
+  String get mihon_extension_download_count_unknown => '无下载数据';
+  @override
+  String get mihon_extension_bulk_install => '批量安装';
+  @override
+  String get mihon_extension_min_downloads => '最低下载量';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} 次下载';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      '从该仓库安装 ${count} 个扩展？扩展会运行来自源站的代码。';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      '正在安装 ${current}/${total}：${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
+  @override
+  String get mihon_extension_bulk_install_nothing => '当前筛选下的扩展都已经装过了。';
 }
 
 // Path: <root>
@@ -178268,6 +178691,33 @@ class _StringsZhHk extends _StringsEn {
   String get settings_downloads_encryption_title => '節點通訊加密';
   @override
   String get settings_service_disabled => '已停用';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 /// Flat map(s) containing all translations.
@@ -187699,6 +188149,31 @@ extension on _StringsEn {
         return 'Peer encryption';
       case 'settings_service_disabled':
         return 'Disabled';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -197125,6 +197600,31 @@ extension on _StringsAr {
         return 'تشفير الاتصال بالأقران';
       case 'settings_service_disabled':
         return 'معطّل';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -206596,6 +207096,31 @@ extension on _StringsDe {
         return 'Peer-Verschlüsselung';
       case 'settings_service_disabled':
         return 'Deaktiviert';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -216058,6 +216583,31 @@ extension on _StringsEs {
         return 'Cifrado entre pares';
       case 'settings_service_disabled':
         return 'Desactivado';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -225529,6 +226079,31 @@ extension on _StringsFr {
         return 'Chiffrement entre pairs';
       case 'settings_service_disabled':
         return 'Désactivé';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -234971,6 +235546,31 @@ extension on _StringsId {
         return 'Enkripsi peer';
       case 'settings_service_disabled':
         return 'Dinonaktifkan';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -244435,6 +245035,31 @@ extension on _StringsIt {
         return 'Crittografia dei peer';
       case 'settings_service_disabled':
         return 'Disattivato';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -253826,6 +254451,31 @@ extension on _StringsJa {
         return 'ピア通信の暗号化';
       case 'settings_service_disabled':
         return '無効';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -263221,6 +263871,31 @@ extension on _StringsKo {
         return '피어 암호화';
       case 'settings_service_disabled':
         return '사용 안 함';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -272678,6 +273353,31 @@ extension on _StringsNl {
         return 'Peer-versleuteling';
       case 'settings_service_disabled':
         return 'Uitgeschakeld';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -282130,6 +282830,31 @@ extension on _StringsPtBr {
         return 'Criptografia entre pares';
       case 'settings_service_disabled':
         return 'Desativado';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -291589,6 +292314,31 @@ extension on _StringsRu {
         return 'Шифрование соединений с пирами';
       case 'settings_service_disabled':
         return 'Отключено';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -301020,6 +301770,31 @@ extension on _StringsTh {
         return 'การเข้ารหัสระหว่างเพียร์';
       case 'settings_service_disabled':
         return 'ปิดใช้งาน';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -310466,6 +311241,31 @@ extension on _StringsTr {
         return 'Eş şifrelemesi';
       case 'settings_service_disabled':
         return 'Devre dışı';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -319906,6 +320706,31 @@ extension on _StringsVi {
         return 'Mã hóa kết nối peer';
       case 'settings_service_disabled':
         return 'Đã tắt';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -329264,6 +330089,30 @@ extension on _StringsZhCn {
         return '节点加密';
       case 'settings_service_disabled':
         return '已停用';
+      case 'mihon_extension_download_count_unknown':
+        return '无下载数据';
+      case 'mihon_extension_bulk_install':
+        return '批量安装';
+      case 'mihon_extension_min_downloads':
+        return '最低下载量';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} 次下载';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) => '从该仓库安装 ${count} 个扩展？扩展会运行来自源站的代码。';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            '正在安装 ${current}/${total}：${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
+      case 'mihon_extension_bulk_install_nothing':
+        return '当前筛选下的扩展都已经装过了。';
       default:
         return null;
     }
@@ -338633,6 +339482,31 @@ extension on _StringsZhHk {
         return '節點通訊加密';
       case 'settings_service_disabled':
         return '已停用';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
