@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78710 (4630 per locale)
+/// Strings: 78727 (4631 per locale)
 ///
-/// Built on 2026-09-10 at 10:22 UTC
+/// Built on 2026-09-10 at 10:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6427,6 +6427,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_login_empty =>
       'No session cookies were captured; nothing was saved';
   String get mihon_source_login_saved => 'Signed in to this source';
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
   String get video_discovery_provider_failed =>
@@ -17313,6 +17315,9 @@ class _StringsAr extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
   @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
@@ -28429,6 +28434,9 @@ class _StringsDe extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
   @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
@@ -39599,6 +39607,9 @@ class _StringsEs extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
   @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
@@ -50804,6 +50815,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
   @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
   @override
@@ -61809,6 +61823,9 @@ class _StringsId extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
   @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
@@ -72909,6 +72926,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
   @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
   @override
@@ -83383,6 +83403,9 @@ class _StringsJa extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      '前面に出して辞書検索ページを開く';
   @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
@@ -93868,6 +93891,9 @@ class _StringsKo extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
   @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
@@ -104923,6 +104949,9 @@ class _StringsNl extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
   @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
@@ -116033,6 +116062,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
   @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
   @override
@@ -127119,6 +127151,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
   @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
   @override
@@ -138003,6 +138038,9 @@ class _StringsTh extends _StringsEn {
       'No session cookies were captured; nothing was saved';
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
   @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
@@ -149005,6 +149043,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
   @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
   @override
@@ -159977,6 +160018,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
   @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
   @override
@@ -170044,6 +170088,8 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_source_login_empty => '没有捕获到会话 cookie，未保存';
   @override
   String get mihon_source_login_saved => '已登录该源';
+  @override
+  String get shortcut_action_global_external_open_lookup_page => '唤起主窗并打开查词页';
   @override
   String get video_discovery_provider_rate_limited => '部分来源请求过于频繁，已显示其余结果';
   @override
@@ -180201,6 +180247,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_source_login_saved => 'Signed in to this source';
   @override
+  String get shortcut_action_global_external_open_lookup_page => '喚起主視窗並開啟查詞頁';
+  @override
   String get video_discovery_provider_rate_limited =>
       'Some sources are rate limited; showing the rest';
   @override
@@ -189732,6 +189780,8 @@ extension on _StringsEn {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -199257,6 +199307,8 @@ extension on _StringsAr {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -208827,6 +208879,8 @@ extension on _StringsDe {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -218388,6 +218442,8 @@ extension on _StringsEs {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -227958,6 +228014,8 @@ extension on _StringsFr {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -237499,6 +237557,8 @@ extension on _StringsId {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -247062,6 +247122,8 @@ extension on _StringsIt {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -256552,6 +256614,8 @@ extension on _StringsJa {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '前面に出して辞書検索ページを開く';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -266046,6 +266110,8 @@ extension on _StringsKo {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -275602,6 +275668,8 @@ extension on _StringsNl {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -285153,6 +285221,8 @@ extension on _StringsPtBr {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -294711,6 +294781,8 @@ extension on _StringsRu {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -304241,6 +304313,8 @@ extension on _StringsTh {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -313786,6 +313860,8 @@ extension on _StringsTr {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -323325,6 +323401,8 @@ extension on _StringsVi {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
@@ -332781,6 +332859,8 @@ extension on _StringsZhCn {
         return '没有捕获到会话 cookie，未保存';
       case 'mihon_source_login_saved':
         return '已登录该源';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '唤起主窗并打开查词页';
       case 'video_discovery_provider_rate_limited':
         return '部分来源请求过于频繁，已显示其余结果';
       case 'video_discovery_provider_failed':
@@ -342249,6 +342329,8 @@ extension on _StringsZhHk {
         return 'No session cookies were captured; nothing was saved';
       case 'mihon_source_login_saved':
         return 'Signed in to this source';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '喚起主視窗並開啟查詞頁';
       case 'video_discovery_provider_rate_limited':
         return 'Some sources are rate limited; showing the rest';
       case 'video_discovery_provider_failed':
