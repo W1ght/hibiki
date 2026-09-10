@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78557 (4621 per locale)
+/// Strings: 78574 (4622 per locale)
 ///
-/// Built on 2026-09-10 at 08:08 UTC
+/// Built on 2026-09-10 at 09:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6418,6 +6418,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Asking the system to install the language…';
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -17284,6 +17286,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -28378,6 +28383,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -39526,6 +39534,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -50708,6 +50719,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -61692,6 +61706,9 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -72769,6 +72786,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -83222,6 +83242,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      '前面に出して辞書検索ページを開く';
 }
 
 // Path: <root>
@@ -93686,6 +93709,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -104719,6 +104745,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -115806,6 +115835,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -126870,6 +126902,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -137733,6 +137768,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -148712,6 +148750,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -159662,6 +159703,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -169710,6 +169754,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
+  @override
+  String get shortcut_action_global_external_open_lookup_page => '唤起主窗并打开查词页';
 }
 
 // Path: <root>
@@ -179847,6 +179893,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get shortcut_action_global_external_open_lookup_page => '喚起主視窗並開啟查詞頁';
 }
 
 /// Flat map(s) containing all translations.
@@ -189359,6 +189407,8 @@ extension on _StringsEn {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -198866,6 +198916,8 @@ extension on _StringsAr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -208418,6 +208470,8 @@ extension on _StringsDe {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -217961,6 +218015,8 @@ extension on _StringsEs {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -227513,6 +227569,8 @@ extension on _StringsFr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -237036,6 +237094,8 @@ extension on _StringsId {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -246581,6 +246641,8 @@ extension on _StringsIt {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -256053,6 +256115,8 @@ extension on _StringsJa {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '前面に出して辞書検索ページを開く';
       default:
         return null;
     }
@@ -265529,6 +265593,8 @@ extension on _StringsKo {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -275067,6 +275133,8 @@ extension on _StringsNl {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -284600,6 +284668,8 @@ extension on _StringsPtBr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -294140,6 +294210,8 @@ extension on _StringsRu {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -303652,6 +303724,8 @@ extension on _StringsTh {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -313179,6 +313253,8 @@ extension on _StringsTr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -322700,6 +322776,8 @@ extension on _StringsVi {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -332138,6 +332216,8 @@ extension on _StringsZhCn {
         return '正在让系统安装该语言…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '唤起主窗并打开查词页';
       default:
         return null;
     }
@@ -341588,6 +341668,8 @@ extension on _StringsZhHk {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '喚起主視窗並開啟查詞頁';
       default:
         return null;
     }
