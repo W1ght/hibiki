@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 78693 (4629 per locale)
 ///
-/// Built on 2026-09-10 at 10:05 UTC
+/// Built on 2026-09-10 at 10:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1381,8 +1381,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get delete_choices_remember => 'Remember these choices';
   String get delete_collection => 'Delete collection';
   String get delete_collection_also_books => 'Also delete the books in it';
-  String get delete_collection_also_videos =>
-      'Also delete the videos (keeps your original video files)';
+  String get delete_collection_also_videos => 'Also delete the videos';
   String get delete_collection_confirm =>
       'Only the grouping is removed. The items in it are kept.';
   String get delete_custom_theme => 'Delete theme';
@@ -8497,8 +8496,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_collection_also_books => 'حذف الكتب الموجودة فيها أيضاً';
   @override
-  String get delete_collection_also_videos =>
-      'حذف الفيديوهات أيضاً (يحتفظ بملفات الفيديو الأصلية)';
+  String get delete_collection_also_videos => 'حذف الفيديوهات أيضاً';
   @override
   String get delete_collection_confirm =>
       'سيتم إزالة التجميع فقط. العناصر الموجودة فيه ستبقى.';
@@ -19420,8 +19418,7 @@ class _StringsDe extends _StringsEn {
   String get delete_collection_also_books =>
       'Auch die enthaltenen Bücher löschen';
   @override
-  String get delete_collection_also_videos =>
-      'Auch die Videos löschen (deine originalen Videodateien bleiben erhalten)';
+  String get delete_collection_also_videos => 'Auch die Videos löschen';
   @override
   String get delete_collection_confirm =>
       'Nur die Gruppierung wird entfernt. Die enthaltenen Einträge bleiben erhalten.';
@@ -30539,8 +30536,7 @@ class _StringsEs extends _StringsEn {
   String get delete_collection_also_books =>
       'También eliminar los libros que contiene';
   @override
-  String get delete_collection_also_videos =>
-      'También eliminar los vídeos (conserva sus archivos de vídeo originales)';
+  String get delete_collection_also_videos => 'También eliminar los vídeos';
   @override
   String get delete_collection_confirm =>
       'Solo se elimina la agrupación. Los elementos que contiene se conservan.';
@@ -41717,8 +41713,7 @@ class _StringsFr extends _StringsEn {
   String get delete_collection_also_books =>
       'Supprimer aussi les livres qu\'elle contient';
   @override
-  String get delete_collection_also_videos =>
-      'Supprimer aussi les vidéos (conserve vos fichiers vidéo originaux)';
+  String get delete_collection_also_videos => 'Supprimer aussi les vidéos';
   @override
   String get delete_collection_confirm =>
       'Seul le regroupement est supprimé. Les éléments qu\'elle contient sont conservés.';
@@ -52882,8 +52877,7 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Hapus juga buku di dalamnya';
   @override
-  String get delete_collection_also_videos =>
-      'Hapus juga video (file video asli Anda tetap ada)';
+  String get delete_collection_also_videos => 'Hapus juga video';
   @override
   String get delete_collection_confirm =>
       'Hanya pengelompokan yang dihapus. Item di dalamnya dipertahankan.';
@@ -63898,8 +63892,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Elimina anche i libri contenuti';
   @override
-  String get delete_collection_also_videos =>
-      'Elimina anche i video (mantiene i file video originali)';
+  String get delete_collection_also_videos => 'Elimina anche i video';
   @override
   String get delete_collection_confirm =>
       'Solo il raggruppamento viene rimosso. Gli elementi vengono mantenuti.';
@@ -74897,7 +74890,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_collection_also_books => '中の書籍も削除';
   @override
-  String get delete_collection_also_videos => '動画も削除（元の動画ファイルは保持されます）';
+  String get delete_collection_also_videos => '動画も削除';
   @override
   String get delete_collection_confirm => 'グループのみ削除されます。中のアイテムは保持されます。';
   @override
@@ -85367,7 +85360,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_collection_also_books => '포함된 도서도 삭제';
   @override
-  String get delete_collection_also_videos => '동영상도 삭제 (원본 동영상 파일은 유지)';
+  String get delete_collection_also_videos => '동영상도 삭제';
   @override
   String get delete_collection_confirm => '그룹만 제거됩니다. 포함된 항목은 유지됩니다.';
   @override
@@ -95941,8 +95934,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Ook de boeken erin verwijderen';
   @override
-  String get delete_collection_also_videos =>
-      'Ook de video\'s verwijderen (behoudt je originele videobestanden)';
+  String get delete_collection_also_videos => 'Ook de video\'s verwijderen';
   @override
   String get delete_collection_confirm =>
       'Alleen de groepering wordt verwijderd. De items erin worden bewaard.';
@@ -107006,8 +106998,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Também excluir os livros nela';
   @override
-  String get delete_collection_also_videos =>
-      'Também excluir os vídeos (mantém seus arquivos de vídeo originais)';
+  String get delete_collection_also_videos => 'Também excluir os vídeos';
   @override
   String get delete_collection_confirm =>
       'Apenas o agrupamento é removido. Os itens nele são mantidos.';
@@ -118099,8 +118090,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Также удалить книги из неё';
   @override
-  String get delete_collection_also_videos =>
-      'Также удалить видео (исходные видеофайлы сохранятся)';
+  String get delete_collection_also_videos => 'Также удалить видео';
   @override
   String get delete_collection_confirm =>
       'Удаляется только группировка. Элементы в ней сохраняются.';
@@ -129149,8 +129139,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_collection_also_books => 'ลบหนังสือในนั้นด้วย';
   @override
-  String get delete_collection_also_videos =>
-      'ลบวิดีโอด้วย (เก็บไฟล์วิดีโอต้นฉบับไว้)';
+  String get delete_collection_also_videos => 'ลบวิดีโอด้วย';
   @override
   String get delete_collection_confirm =>
       'เฉพาะการจัดกลุ่มเท่านั้นที่จะถูกลบ รายการภายในจะยังคงอยู่';
@@ -140059,8 +140048,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_collection_also_books => 'İçindeki kitapları da sil';
   @override
-  String get delete_collection_also_videos =>
-      'Videoları da sil (orijinal video dosyalarınız korunur)';
+  String get delete_collection_also_videos => 'Videoları da sil';
   @override
   String get delete_collection_confirm =>
       'Yalnızca gruplama kaldırılır. İçindeki öğeler korunur.';
@@ -151055,8 +151043,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Đồng thời xóa sách trong đó';
   @override
-  String get delete_collection_also_videos =>
-      'Đồng thời xóa video (giữ lại tệp video gốc)';
+  String get delete_collection_also_videos => 'Đồng thời xóa video';
   @override
   String get delete_collection_confirm =>
       'Chỉ xóa nhóm. Các mục trong đó vẫn được giữ lại.';
@@ -161863,7 +161850,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get delete_collection_also_books => '同时删除其中的书';
   @override
-  String get delete_collection_also_videos => '同时删除其中的视频（保留你的原始视频文件）';
+  String get delete_collection_also_videos => '同时删除其中的视频';
   @override
   String get delete_collection_confirm => '只解除分组，其中的条目会保留。';
   @override
@@ -171949,7 +171936,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_collection_also_books => '同時刪除其中的書';
   @override
-  String get delete_collection_also_videos => '同時刪除其中的影片（保留你的原始影片檔案）';
+  String get delete_collection_also_videos => '同時刪除其中的影片';
   @override
   String get delete_collection_confirm => '只解除分組，其中的條目會保留。';
   @override
@@ -181952,7 +181939,7 @@ extension on _StringsEn {
       case 'delete_collection_also_books':
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
-        return 'Also delete the videos (keeps your original video files)';
+        return 'Also delete the videos';
       case 'delete_collection_confirm':
         return 'Only the grouping is removed. The items in it are kept.';
       case 'delete_custom_theme':
@@ -191480,7 +191467,7 @@ extension on _StringsAr {
       case 'delete_collection_also_books':
         return 'حذف الكتب الموجودة فيها أيضاً';
       case 'delete_collection_also_videos':
-        return 'حذف الفيديوهات أيضاً (يحتفظ بملفات الفيديو الأصلية)';
+        return 'حذف الفيديوهات أيضاً';
       case 'delete_collection_confirm':
         return 'سيتم إزالة التجميع فقط. العناصر الموجودة فيه ستبقى.';
       case 'delete_custom_theme':
@@ -201015,7 +201002,7 @@ extension on _StringsDe {
       case 'delete_collection_also_books':
         return 'Auch die enthaltenen Bücher löschen';
       case 'delete_collection_also_videos':
-        return 'Auch die Videos löschen (deine originalen Videodateien bleiben erhalten)';
+        return 'Auch die Videos löschen';
       case 'delete_collection_confirm':
         return 'Nur die Gruppierung wird entfernt. Die enthaltenen Einträge bleiben erhalten.';
       case 'delete_custom_theme':
@@ -210579,7 +210566,7 @@ extension on _StringsEs {
       case 'delete_collection_also_books':
         return 'También eliminar los libros que contiene';
       case 'delete_collection_also_videos':
-        return 'También eliminar los vídeos (conserva sus archivos de vídeo originales)';
+        return 'También eliminar los vídeos';
       case 'delete_collection_confirm':
         return 'Solo se elimina la agrupación. Los elementos que contiene se conservan.';
       case 'delete_custom_theme':
@@ -220140,7 +220127,7 @@ extension on _StringsFr {
       case 'delete_collection_also_books':
         return 'Supprimer aussi les livres qu\'elle contient';
       case 'delete_collection_also_videos':
-        return 'Supprimer aussi les vidéos (conserve vos fichiers vidéo originaux)';
+        return 'Supprimer aussi les vidéos';
       case 'delete_collection_confirm':
         return 'Seul le regroupement est supprimé. Les éléments qu\'elle contient sont conservés.';
       case 'delete_custom_theme':
@@ -229704,7 +229691,7 @@ extension on _StringsId {
       case 'delete_collection_also_books':
         return 'Hapus juga buku di dalamnya';
       case 'delete_collection_also_videos':
-        return 'Hapus juga video (file video asli Anda tetap ada)';
+        return 'Hapus juga video';
       case 'delete_collection_confirm':
         return 'Hanya pengelompokan yang dihapus. Item di dalamnya dipertahankan.';
       case 'delete_custom_theme':
@@ -239244,7 +239231,7 @@ extension on _StringsIt {
       case 'delete_collection_also_books':
         return 'Elimina anche i libri contenuti';
       case 'delete_collection_also_videos':
-        return 'Elimina anche i video (mantiene i file video originali)';
+        return 'Elimina anche i video';
       case 'delete_collection_confirm':
         return 'Solo il raggruppamento viene rimosso. Gli elementi vengono mantenuti.';
       case 'delete_custom_theme':
@@ -248789,7 +248776,7 @@ extension on _StringsJa {
       case 'delete_collection_also_books':
         return '中の書籍も削除';
       case 'delete_collection_also_videos':
-        return '動画も削除（元の動画ファイルは保持されます）';
+        return '動画も削除';
       case 'delete_collection_confirm':
         return 'グループのみ削除されます。中のアイテムは保持されます。';
       case 'delete_custom_theme':
@@ -258277,7 +258264,7 @@ extension on _StringsKo {
       case 'delete_collection_also_books':
         return '포함된 도서도 삭제';
       case 'delete_collection_also_videos':
-        return '동영상도 삭제 (원본 동영상 파일은 유지)';
+        return '동영상도 삭제';
       case 'delete_collection_confirm':
         return '그룹만 제거됩니다. 포함된 항목은 유지됩니다.';
       case 'delete_custom_theme':
@@ -267785,7 +267772,7 @@ extension on _StringsNl {
       case 'delete_collection_also_books':
         return 'Ook de boeken erin verwijderen';
       case 'delete_collection_also_videos':
-        return 'Ook de video\'s verwijderen (behoudt je originele videobestanden)';
+        return 'Ook de video\'s verwijderen';
       case 'delete_collection_confirm':
         return 'Alleen de groepering wordt verwijderd. De items erin worden bewaard.';
       case 'delete_custom_theme':
@@ -277340,7 +277327,7 @@ extension on _StringsPtBr {
       case 'delete_collection_also_books':
         return 'Também excluir os livros nela';
       case 'delete_collection_also_videos':
-        return 'Também excluir os vídeos (mantém seus arquivos de vídeo originais)';
+        return 'Também excluir os vídeos';
       case 'delete_collection_confirm':
         return 'Apenas o agrupamento é removido. Os itens nele são mantidos.';
       case 'delete_custom_theme':
@@ -286893,7 +286880,7 @@ extension on _StringsRu {
       case 'delete_collection_also_books':
         return 'Также удалить книги из неё';
       case 'delete_collection_also_videos':
-        return 'Также удалить видео (исходные видеофайлы сохранятся)';
+        return 'Также удалить видео';
       case 'delete_collection_confirm':
         return 'Удаляется только группировка. Элементы в ней сохраняются.';
       case 'delete_custom_theme':
@@ -296437,7 +296424,7 @@ extension on _StringsTh {
       case 'delete_collection_also_books':
         return 'ลบหนังสือในนั้นด้วย';
       case 'delete_collection_also_videos':
-        return 'ลบวิดีโอด้วย (เก็บไฟล์วิดีโอต้นฉบับไว้)';
+        return 'ลบวิดีโอด้วย';
       case 'delete_collection_confirm':
         return 'เฉพาะการจัดกลุ่มเท่านั้นที่จะถูกลบ รายการภายในจะยังคงอยู่';
       case 'delete_custom_theme':
@@ -305974,7 +305961,7 @@ extension on _StringsTr {
       case 'delete_collection_also_books':
         return 'İçindeki kitapları da sil';
       case 'delete_collection_also_videos':
-        return 'Videoları da sil (orijinal video dosyalarınız korunur)';
+        return 'Videoları da sil';
       case 'delete_collection_confirm':
         return 'Yalnızca gruplama kaldırılır. İçindeki öğeler korunur.';
       case 'delete_custom_theme':
@@ -315511,7 +315498,7 @@ extension on _StringsVi {
       case 'delete_collection_also_books':
         return 'Đồng thời xóa sách trong đó';
       case 'delete_collection_also_videos':
-        return 'Đồng thời xóa video (giữ lại tệp video gốc)';
+        return 'Đồng thời xóa video';
       case 'delete_collection_confirm':
         return 'Chỉ xóa nhóm. Các mục trong đó vẫn được giữ lại.';
       case 'delete_custom_theme':
@@ -325025,7 +325012,7 @@ extension on _StringsZhCn {
       case 'delete_collection_also_books':
         return '同时删除其中的书';
       case 'delete_collection_also_videos':
-        return '同时删除其中的视频（保留你的原始视频文件）';
+        return '同时删除其中的视频';
       case 'delete_collection_confirm':
         return '只解除分组，其中的条目会保留。';
       case 'delete_custom_theme':
@@ -334483,7 +334470,7 @@ extension on _StringsZhHk {
       case 'delete_collection_also_books':
         return '同時刪除其中的書';
       case 'delete_collection_also_videos':
-        return '同時刪除其中的影片（保留你的原始影片檔案）';
+        return '同時刪除其中的影片';
       case 'delete_collection_confirm':
         return '只解除分組，其中的條目會保留。';
       case 'delete_custom_theme':
