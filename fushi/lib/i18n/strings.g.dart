@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78659 (4627 per locale)
+/// Strings: 78744 (4632 per locale)
 ///
-/// Built on 2026-09-10 at 04:32 UTC
+/// Built on 2026-09-10 at 07:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6430,6 +6430,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Asking the system to install the language…';
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  String get mihon_source_login => 'Log in';
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  String get mihon_source_login_done => 'Done';
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -17314,6 +17321,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -28426,6 +28445,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -39592,6 +39623,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -50792,6 +50835,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -61794,6 +61849,18 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -72889,6 +72956,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -83360,6 +83439,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -93842,6 +93933,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -104893,6 +104996,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -115998,6 +116113,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -127080,6 +127207,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -137961,6 +138100,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -148958,6 +149109,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -159926,6 +160089,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 // Path: <root>
@@ -170000,6 +170175,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
+  @override
+  String get mihon_source_login => '登录';
+  @override
+  String get mihon_source_login_hint => '在网站上登录后，点「完成」保存会话';
+  @override
+  String get mihon_source_login_done => '完成';
+  @override
+  String get mihon_source_login_empty => '没有捕获到会话 cookie，未保存';
+  @override
+  String get mihon_source_login_saved => '已登录该源';
 }
 
 // Path: <root>
@@ -180155,6 +180340,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
 }
 
 /// Flat map(s) containing all translations.
@@ -189679,6 +189876,16 @@ extension on _StringsEn {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -199198,6 +199405,16 @@ extension on _StringsAr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -208762,6 +208979,16 @@ extension on _StringsDe {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -218317,6 +218544,16 @@ extension on _StringsEs {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -227881,6 +228118,16 @@ extension on _StringsFr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -237416,6 +237663,16 @@ extension on _StringsId {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -246973,6 +247230,16 @@ extension on _StringsIt {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -256457,6 +256724,16 @@ extension on _StringsJa {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -265945,6 +266222,16 @@ extension on _StringsKo {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -275495,6 +275782,16 @@ extension on _StringsNl {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -285040,6 +285337,16 @@ extension on _StringsPtBr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -294592,6 +294899,16 @@ extension on _StringsRu {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -304116,6 +304433,16 @@ extension on _StringsTh {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -313655,6 +313982,16 @@ extension on _StringsTr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -323188,6 +323525,16 @@ extension on _StringsVi {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
@@ -332638,6 +332985,16 @@ extension on _StringsZhCn {
         return '正在让系统安装该语言…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
+      case 'mihon_source_login':
+        return '登录';
+      case 'mihon_source_login_hint':
+        return '在网站上登录后，点「完成」保存会话';
+      case 'mihon_source_login_done':
+        return '完成';
+      case 'mihon_source_login_empty':
+        return '没有捕获到会话 cookie，未保存';
+      case 'mihon_source_login_saved':
+        return '已登录该源';
       default:
         return null;
     }
@@ -342100,6 +342457,16 @@ extension on _StringsZhHk {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
       default:
         return null;
     }
