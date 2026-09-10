@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78557 (4621 per locale)
+/// Strings: 78591 (4623 per locale)
 ///
 /// Built on 2026-09-10 at 08:08 UTC
 
@@ -3887,6 +3887,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Auto-fills up to this many dictionary columns per row; narrower screens use fewer';
   String get popup_font_size_decrease => 'Smaller dictionary text';
   String get popup_font_size_increase => 'Larger dictionary text';
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Instant popup scroll';
   String get popup_instant_scroll_hint =>
       'Jump the lookup popup by fixed distances without animated scrolling for e-ink screens.';
@@ -12838,6 +12841,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_font_size_increase => 'تكبير نص القاموس';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'تمرير فوري للنافذة المنبثقة';
   @override
   String get popup_instant_scroll_hint =>
@@ -23844,6 +23850,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Wörterbuchtext vergrößern';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Sofortiges Popup-Scrollen';
   @override
   String get popup_instant_scroll_hint =>
@@ -34957,6 +34966,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Texto de diccionario más grande';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Desplazamiento instantáneo de la ventana';
   @override
   String get popup_instant_scroll_hint =>
@@ -46127,6 +46139,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Agrandir le texte du dictionnaire';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Défilement instantané de la fenêtre';
   @override
   String get popup_instant_scroll_hint =>
@@ -57194,6 +57209,9 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Perbesar teks kamus';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Gulir popup seketika';
   @override
   String get popup_instant_scroll_hint =>
@@ -68231,6 +68249,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Testo dizionario più grande';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Scorrimento istantaneo del popup';
   @override
   String get popup_instant_scroll_hint =>
@@ -78946,6 +78967,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_font_size_increase => '辞書テキストを大きく';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'ポップアップを瞬時にスクロール';
   @override
   String get popup_instant_scroll_hint =>
@@ -89403,6 +89427,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_font_size_increase => '사전 텍스트 확대';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => '팝업 즉시 스크롤';
   @override
   String get popup_instant_scroll_hint =>
@@ -100199,6 +100226,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Grotere woordenboektekst';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Direct scrollen in pop-up';
   @override
   String get popup_instant_scroll_hint =>
@@ -111265,6 +111295,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Texto do dicionário maior';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Rolagem instantânea do pop-up';
   @override
   String get popup_instant_scroll_hint =>
@@ -122333,6 +122366,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Увеличить текст словаря';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Мгновенная прокрутка окна поиска';
   @override
   String get popup_instant_scroll_hint =>
@@ -133281,6 +133317,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_font_size_increase => 'เพิ่มขนาดตัวอักษรพจนานุกรม';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'เลื่อนหน้าต่างค้นคำแบบทันที';
   @override
   String get popup_instant_scroll_hint =>
@@ -144220,6 +144259,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Sözlük metnini büyüt';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Anında açılır pencere kaydırma';
   @override
   String get popup_instant_scroll_hint =>
@@ -155187,6 +155229,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_font_size_increase => 'Phóng to chữ từ điển';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => 'Cuộn tức thì cửa sổ tra';
   @override
   String get popup_instant_scroll_hint =>
@@ -165591,6 +165636,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_font_size_increase => '放大查词字号';
   @override
+  String get popup_full_width => '弹窗全宽';
+  String get popup_full_width_hint => '忽略最大宽度，让弹窗横向铺满可用宽度；位置仍跟随选中的词。';
   String get popup_instant_scroll => '查词弹窗瞬时滚动';
   @override
   String get popup_instant_scroll_hint => '为墨水屏使用：查词弹窗按固定距离瞬时跳动，不播放滚动动画。';
@@ -175686,6 +175733,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_font_size_increase => '放大查詞字號';
   @override
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get popup_instant_scroll => '查詞彈窗即時捲動';
   @override
   String get popup_instant_scroll_hint => '供電子墨水屏使用：查詞彈窗按固定距離即時跳動，不播放捲動動畫。';
@@ -185426,6 +185476,10 @@ extension on _StringsEn {
         return 'Smaller dictionary text';
       case 'popup_font_size_increase':
         return 'Larger dictionary text';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Instant popup scroll';
       case 'popup_instant_scroll_hint':
@@ -194936,6 +194990,10 @@ extension on _StringsAr {
         return 'تصغير نص القاموس';
       case 'popup_font_size_increase':
         return 'تكبير نص القاموس';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'تمرير فوري للنافذة المنبثقة';
       case 'popup_instant_scroll_hint':
@@ -204472,6 +204530,10 @@ extension on _StringsDe {
         return 'Wörterbuchtext verkleinern';
       case 'popup_font_size_increase':
         return 'Wörterbuchtext vergrößern';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Sofortiges Popup-Scrollen';
       case 'popup_instant_scroll_hint':
@@ -214016,6 +214078,10 @@ extension on _StringsEs {
         return 'Texto de diccionario más pequeño';
       case 'popup_font_size_increase':
         return 'Texto de diccionario más grande';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Desplazamiento instantáneo de la ventana';
       case 'popup_instant_scroll_hint':
@@ -223566,6 +223632,10 @@ extension on _StringsFr {
         return 'Réduire le texte du dictionnaire';
       case 'popup_font_size_increase':
         return 'Agrandir le texte du dictionnaire';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Défilement instantané de la fenêtre';
       case 'popup_instant_scroll_hint':
@@ -233100,6 +233170,10 @@ extension on _StringsId {
         return 'Perkecil teks kamus';
       case 'popup_font_size_increase':
         return 'Perbesar teks kamus';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Gulir popup seketika';
       case 'popup_instant_scroll_hint':
@@ -242632,6 +242706,10 @@ extension on _StringsIt {
         return 'Testo dizionario più piccolo';
       case 'popup_font_size_increase':
         return 'Testo dizionario più grande';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Scorrimento istantaneo del popup';
       case 'popup_instant_scroll_hint':
@@ -252142,6 +252220,10 @@ extension on _StringsJa {
         return '辞書テキストを小さく';
       case 'popup_font_size_increase':
         return '辞書テキストを大きく';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'ポップアップを瞬時にスクロール';
       case 'popup_instant_scroll_hint':
@@ -261615,6 +261697,10 @@ extension on _StringsKo {
         return '사전 텍스트 축소';
       case 'popup_font_size_increase':
         return '사전 텍스트 확대';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return '팝업 즉시 스크롤';
       case 'popup_instant_scroll_hint':
@@ -271124,6 +271210,10 @@ extension on _StringsNl {
         return 'Kleinere woordenboektekst';
       case 'popup_font_size_increase':
         return 'Grotere woordenboektekst';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Direct scrollen in pop-up';
       case 'popup_instant_scroll_hint':
@@ -280661,6 +280751,10 @@ extension on _StringsPtBr {
         return 'Texto do dicionário menor';
       case 'popup_font_size_increase':
         return 'Texto do dicionário maior';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Rolagem instantânea do pop-up';
       case 'popup_instant_scroll_hint':
@@ -290201,6 +290295,10 @@ extension on _StringsRu {
         return 'Уменьшить текст словаря';
       case 'popup_font_size_increase':
         return 'Увеличить текст словаря';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Мгновенная прокрутка окна поиска';
       case 'popup_instant_scroll_hint':
@@ -299720,6 +299818,10 @@ extension on _StringsTh {
         return 'ลดขนาดตัวอักษรพจนานุกรม';
       case 'popup_font_size_increase':
         return 'เพิ่มขนาดตัวอักษรพจนานุกรม';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'เลื่อนหน้าต่างค้นคำแบบทันที';
       case 'popup_instant_scroll_hint':
@@ -309242,6 +309344,10 @@ extension on _StringsTr {
         return 'Sözlük metnini küçült';
       case 'popup_font_size_increase':
         return 'Sözlük metnini büyüt';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Anında açılır pencere kaydırma';
       case 'popup_instant_scroll_hint':
@@ -318765,6 +318871,10 @@ extension on _StringsVi {
         return 'Thu nhỏ chữ từ điển';
       case 'popup_font_size_increase':
         return 'Phóng to chữ từ điển';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return 'Cuộn tức thì cửa sổ tra';
       case 'popup_instant_scroll_hint':
@@ -328243,6 +328353,10 @@ extension on _StringsZhCn {
         return '缩小查词字号';
       case 'popup_font_size_increase':
         return '放大查词字号';
+      case 'popup_full_width':
+        return '弹窗全宽';
+      case 'popup_full_width_hint':
+        return '忽略最大宽度，让弹窗横向铺满可用宽度；位置仍跟随选中的词。';
       case 'popup_instant_scroll':
         return '查词弹窗瞬时滚动';
       case 'popup_instant_scroll_hint':
@@ -337688,6 +337802,10 @@ extension on _StringsZhHk {
         return '縮小查詞字號';
       case 'popup_font_size_increase':
         return '放大查詞字號';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'popup_instant_scroll':
         return '查詞彈窗即時捲動';
       case 'popup_instant_scroll_hint':
