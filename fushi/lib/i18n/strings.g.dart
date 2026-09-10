@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78659 (4627 per locale)
+/// Strings: 78846 (4638 per locale)
 ///
-/// Built on 2026-09-10 at 04:32 UTC
+/// Built on 2026-09-10 at 09:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6430,6 +6430,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Asking the system to install the language…';
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  String get stat_session_edit => 'Edit session';
+  String get stat_session_edit_date => 'Date';
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  String get stat_session_edit_chars => 'Characters';
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -17314,6 +17330,33 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -28426,6 +28469,33 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -39592,6 +39662,33 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -50792,6 +50889,33 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -61794,6 +61918,33 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -72889,6 +73040,33 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -83360,6 +83538,33 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -93842,6 +94047,33 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -104893,6 +105125,33 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -115998,6 +116257,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -127080,6 +127366,33 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -137961,6 +138274,33 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -148958,6 +149298,33 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -159926,6 +160293,33 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 // Path: <root>
@@ -170000,6 +170394,32 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
+  @override
+  String get stat_session_edit => '编辑会话';
+  @override
+  String get stat_session_edit_date => '日期';
+  @override
+  String get stat_session_edit_date_invalid => '日期请按 YYYY-MM-DD 填写。';
+  @override
+  String get stat_session_edit_chars => '字数';
+  @override
+  String get stat_session_edit_chars_invalid => '字数必须是 0 或更大的整数。';
+  @override
+  String get stat_session_edit_message =>
+      '改日期会把整次会话一起挪过去，一天里的时刻不变；字数会按比例分摊回这次会话的各个片段。';
+  @override
+  String get stat_sessions_clear_all => '清除全部会话';
+  @override
+  String get stat_sessions_clear_all_title => '清除全部会话记录';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      '确定清除全部 ${n} 条会话记录吗？这些会话的时长、字数、页数都会被清掉；收藏的词句、制卡历史和游戏库不受影响。此操作不可撤销。';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      '我确认要删除这 ${n} 条会话记录。';
+  @override
+  String get stat_clear_all_overview_message =>
+      '确定把阅读、观看、游戏三个域的统计一起清空吗？三个域的时长、字数以及查词 / 制卡计数都会被删除；收藏的词、句子、制卡卡片、游戏库与活动时间线不受影响。此操作不可撤销。';
 }
 
 // Path: <root>
@@ -180155,6 +180575,33 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
 }
 
 /// Flat map(s) containing all translations.
@@ -189679,6 +190126,30 @@ extension on _StringsEn {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -199198,6 +199669,30 @@ extension on _StringsAr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -208762,6 +209257,30 @@ extension on _StringsDe {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -218317,6 +218836,30 @@ extension on _StringsEs {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -227881,6 +228424,30 @@ extension on _StringsFr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -237416,6 +237983,30 @@ extension on _StringsId {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -246973,6 +247564,30 @@ extension on _StringsIt {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -256457,6 +257072,30 @@ extension on _StringsJa {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -265945,6 +266584,30 @@ extension on _StringsKo {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -275495,6 +276158,30 @@ extension on _StringsNl {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -285040,6 +285727,30 @@ extension on _StringsPtBr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -294592,6 +295303,30 @@ extension on _StringsRu {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -304116,6 +304851,30 @@ extension on _StringsTh {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -313655,6 +314414,30 @@ extension on _StringsTr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -323188,6 +323971,30 @@ extension on _StringsVi {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
@@ -332638,6 +333445,29 @@ extension on _StringsZhCn {
         return '正在让系统安装该语言…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
+      case 'stat_session_edit':
+        return '编辑会话';
+      case 'stat_session_edit_date':
+        return '日期';
+      case 'stat_session_edit_date_invalid':
+        return '日期请按 YYYY-MM-DD 填写。';
+      case 'stat_session_edit_chars':
+        return '字数';
+      case 'stat_session_edit_chars_invalid':
+        return '字数必须是 0 或更大的整数。';
+      case 'stat_session_edit_message':
+        return '改日期会把整次会话一起挪过去，一天里的时刻不变；字数会按比例分摊回这次会话的各个片段。';
+      case 'stat_sessions_clear_all':
+        return '清除全部会话';
+      case 'stat_sessions_clear_all_title':
+        return '清除全部会话记录';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            '确定清除全部 ${n} 条会话记录吗？这些会话的时长、字数、页数都会被清掉；收藏的词句、制卡历史和游戏库不受影响。此操作不可撤销。';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) => '我确认要删除这 ${n} 条会话记录。';
+      case 'stat_clear_all_overview_message':
+        return '确定把阅读、观看、游戏三个域的统计一起清空吗？三个域的时长、字数以及查词 / 制卡计数都会被删除；收藏的词、句子、制卡卡片、游戏库与活动时间线不受影响。此操作不可撤销。';
       default:
         return null;
     }
@@ -342100,6 +342930,30 @@ extension on _StringsZhHk {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
       default:
         return null;
     }
