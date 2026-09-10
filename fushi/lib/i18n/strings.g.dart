@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78659 (4627 per locale)
+/// Strings: 78557 (4621 per locale)
 ///
-/// Built on 2026-09-10 at 04:32 UTC
+/// Built on 2026-09-10 at 08:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -1091,8 +1091,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
   String get browser_extension_mobile_unsupported =>
       'Mobile browsers cannot load this extension. Use in-app lookup in the reader or video player instead.';
-  String get browser_extension_page_intro =>
-      'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
   String get browser_extension_prepare_button => 'Prepare extension files';
   String get browser_extension_prepare_hint =>
       'Starts the lookup server and unpacks the extension locally; the folder path is copied to the clipboard.';
@@ -2117,18 +2115,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get gal_hook_toolbar_auto_hide_hint =>
       'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
   String get gal_mining_animated_format => 'Game card animation format';
-  String get gal_mining_animated_format_hint =>
-      'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
   String get gal_mining_image_mode => 'Galgame card image';
-  String get gal_mining_image_mode_hint =>
-      'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
   String get gal_mining_image_mode_screenshot => 'Screenshot';
   String get gal_mining_image_mode_video_clip => 'Video clip';
   String get gal_mining_image_mode_video_clip_hint =>
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   String get gal_mining_still_format => 'Game card screenshot format';
-  String get gal_mining_still_format_hint =>
-      'Same formats as video cards, stored separately. Game window grabs come in as PNG: keeping PNG is lossless but several times larger, while JPG matches how these screenshots were compressed before.';
   String get game_add => 'Add game';
   String get game_already_added => 'This game is already in the library';
   String get game_attach_and_capture => 'Attach and capture';
@@ -5439,13 +5431,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_menu_play_pause => 'Play / pause';
   String get video_menu_subtitle_track => 'Subtitle track';
   String get video_mining_animated_format => 'Video card animation format';
-  String get video_mining_animated_format_hint =>
-      'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
   String get video_mining_image_mode => 'Video card image';
   String get video_mining_image_mode_current_frame => 'Screenshot at mining';
   String get video_mining_image_mode_gif => 'Animated GIF (subtitle clip)';
-  String get video_mining_image_mode_hint =>
-      'Whether the video card cover is an animation of the subtitle clip or a single still frame — and which frame';
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot at subtitle start';
   String get video_mining_still_format => 'Video card screenshot format';
@@ -7978,9 +7966,6 @@ class _StringsAr extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'لا يمكن لمتصفحات الأجهزة المحمولة تحميل هذا الامتداد. استخدم البحث داخل التطبيق في القارئ أو مشغّل الفيديو بدلاً من ذلك.';
   @override
-  String get browser_extension_page_intro =>
-      'على سطح المكتب، ابحث عن الكلمات وحلل الترجمات واستخرج البطاقات مباشرة في Chrome أو Edge. جهّز الإضافة أدناه، ثم حمّلها في متصفحك.';
-  @override
   String get browser_extension_prepare_button => 'تجهيز ملفات الإضافة';
   @override
   String get browser_extension_prepare_hint =>
@@ -9774,13 +9759,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'صيغة الرسوم المتحركة لبطاقة اللعبة';
   @override
-  String get gal_mining_animated_format_hint =>
-      'نفس صيغ بطاقات الفيديو، مخزنة بشكل منفصل: إطار الرواية المرئية بالكاد يتحرك خلال سطر واحد، لذا المفاضلة مختلفة.';
-  @override
   String get gal_mining_image_mode => 'صورة بطاقة اللعبة البصرية';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'مشاهد اللعب البصري بالكاد تتحرك خلال سطر واحد، لذا لقطة الشاشة الثابتة عادةً أصغر حجماً وبنفس الفائدة.';
   @override
   String get gal_mining_image_mode_screenshot => 'لقطة شاشة';
   @override
@@ -9790,9 +9769,6 @@ class _StringsAr extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'صيغة لقطة بطاقة اللعبة';
-  @override
-  String get gal_mining_still_format_hint =>
-      'نفس صيغ بطاقات الفيديو، تُخزّن بشكل منفصل. لقطات نافذة اللعبة تأتي بصيغة PNG: الاحتفاظ بـ PNG بدون فقدان لكنه أكبر بعدة مرات، بينما JPG يطابق طريقة ضغط هذه اللقطات سابقاً.';
   @override
   String get game_add => 'إضافة لعبة';
   @override
@@ -15621,17 +15597,11 @@ class _StringsAr extends _StringsEn {
   String get video_mining_animated_format =>
       'صيغة الرسوم المتحركة لبطاقة الفيديو';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF أصغر بكثير من GIF بنفس الجودة، ومستوى جودته الأعلى يسمح بدقة ومعدل إطارات أعلى من GIF أو WebP. يعود تلقائيًا إلى GIF عندما لا يستطيع المشفّر المرفق إنتاجه.';
-  @override
   String get video_mining_image_mode => 'صورة بطاقة الفيديو';
   @override
   String get video_mining_image_mode_current_frame => 'لقطة شاشة عند التعدين';
   @override
   String get video_mining_image_mode_gif => 'GIF متحرك (مقطع الترجمة)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'هل غلاف بطاقة الفيديو رسوم متحركة لمقطع الترجمة أم إطار ثابت — وأي إطار';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'لقطة شاشة عند بداية الترجمة';
@@ -18891,9 +18861,6 @@ class _StringsDe extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Mobile Browser können diese Erweiterung nicht laden. Nutze stattdessen die App-interne Suche im Reader oder Videoplayer.';
   @override
-  String get browser_extension_page_intro =>
-      'Auf dem Desktop kannst du Wörter nachschlagen, Untertitel analysieren und Karten direkt in Chrome oder Edge erstellen. Bereite die Erweiterung unten vor und lade sie dann in deinem Browser.';
-  @override
   String get browser_extension_prepare_button =>
       'Erweiterungsdateien vorbereiten';
   @override
@@ -20737,13 +20704,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'Animationsformat für Spielkarten';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Gleiche Formate wie Videokarten, separat gespeichert: ein Galgame-Frame bewegt sich innerhalb einer Zeile kaum, daher ist der Kompromiss anders.';
-  @override
   String get gal_mining_image_mode => 'Galgame-Kartenbild';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Galgame-Szenen bewegen sich innerhalb einer Zeile kaum, daher ist ein Standbild meist kleiner und genauso nützlich.';
   @override
   String get gal_mining_image_mode_screenshot => 'Screenshot';
   @override
@@ -20753,9 +20714,6 @@ class _StringsDe extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'Screenshot-Format für Spielkarten';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Gleiche Formate wie Videokarten, separat gespeichert. Spielfenster-Aufnahmen kommen als PNG: PNG beibehalten ist verlustfrei, aber um ein Vielfaches größer, während JPG der bisherigen Komprimierung dieser Screenshots entspricht.';
   @override
   String get game_add => 'Spiel hinzufügen';
   @override
@@ -26694,17 +26652,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_mining_animated_format => 'Animationsformat für Videokarten';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF ist bei gleicher Qualität deutlich kleiner als GIF, und die höchste Qualitätsstufe erlaubt eine höhere Auflösung und Bildrate als GIF oder WebP. Fällt automatisch auf GIF zurück, wenn der mitgelieferte Encoder es nicht erzeugen kann.';
-  @override
   String get video_mining_image_mode => 'Videokartenbild';
   @override
   String get video_mining_image_mode_current_frame => 'Screenshot beim Mining';
   @override
   String get video_mining_image_mode_gif => 'Animiertes GIF (Untertitelclip)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Ob das Videokarten-Cover eine Animation des Untertitelclips oder ein einzelnes Standbild ist – und welches Bild';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot bei Untertitelbeginn';
@@ -30007,9 +29959,6 @@ class _StringsEs extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Los navegadores móviles no pueden cargar esta extensión. Usa la búsqueda dentro de la app en el lector o el reproductor de vídeo.';
   @override
-  String get browser_extension_page_intro =>
-      'En escritorio, busque palabras, analice subtítulos y cree tarjetas directamente en Chrome o Edge. Prepare la extensión abajo, luego cárguela en su navegador.';
-  @override
   String get browser_extension_prepare_button =>
       'Preparar archivos de extensión';
   @override
@@ -31867,13 +31816,7 @@ class _StringsEs extends _StringsEn {
   String get gal_mining_animated_format =>
       'Formato de animación de tarjeta de juego';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Mismos formatos que las tarjetas de vídeo, almacenados por separado: un fotograma de galgame apenas se mueve dentro de una línea, por lo que la compensación difiere.';
-  @override
   String get gal_mining_image_mode => 'Imagen de tarjeta de galgame';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Las escenas de galgame apenas se mueven dentro de una línea, por lo que una captura estática suele ser más pequeña y igual de útil.';
   @override
   String get gal_mining_image_mode_screenshot => 'Captura de pantalla';
   @override
@@ -31884,9 +31827,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get gal_mining_still_format =>
       'Formato de captura de tarjeta de juego';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Mismos formatos que las tarjetas de vídeo, almacenados por separado. Las capturas de ventana de juego llegan como PNG: mantener PNG es sin pérdida pero varias veces más grande, mientras que JPG coincide con cómo se comprimían estas capturas antes.';
   @override
   String get game_add => 'Añadir juego';
   @override
@@ -37845,18 +37785,12 @@ class _StringsEs extends _StringsEn {
   String get video_mining_animated_format =>
       'Formato de animación de tarjeta de vídeo';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF es mucho más pequeño que GIF a la misma calidad, y su nivel de calidad máxima permite mayor resolución y tasa de fotogramas que GIF o WebP. Recurre a GIF automáticamente cuando el codificador incluido no puede producirlo.';
-  @override
   String get video_mining_image_mode => 'Imagen de tarjeta de vídeo';
   @override
   String get video_mining_image_mode_current_frame =>
       'Captura al momento de crear';
   @override
   String get video_mining_image_mode_gif => 'GIF animado (clip de subtítulo)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Si la portada de la tarjeta de vídeo es una animación del clip de subtítulo o un fotograma estático — y cuál fotograma';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Captura al inicio del subtítulo';
@@ -41179,9 +41113,6 @@ class _StringsFr extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Les navigateurs mobiles ne peuvent pas charger cette extension. Utilisez plutôt la recherche intégrée dans le lecteur ou le lecteur vidéo.';
   @override
-  String get browser_extension_page_intro =>
-      'Sur ordinateur, recherchez des mots, analysez des sous-titres et créez des cartes directement dans Chrome ou Edge. Préparez l\'extension ci-dessous, puis chargez-la dans votre navigateur.';
-  @override
   String get browser_extension_prepare_button =>
       'Préparer les fichiers de l\'extension';
   @override
@@ -43041,13 +42972,7 @@ class _StringsFr extends _StringsEn {
   String get gal_mining_animated_format =>
       'Format d\'animation de carte de jeu';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Mêmes formats que les cartes vidéo, stockés séparément : l\'image d\'un galgame bouge à peine au sein d\'une ligne, le compromis est donc différent.';
-  @override
   String get gal_mining_image_mode => 'Image de carte galgame';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Les scènes de galgame bougent à peine au sein d\'une ligne, donc une capture d\'écran fixe est généralement plus petite et tout aussi utile.';
   @override
   String get gal_mining_image_mode_screenshot => 'Capture d\'écran';
   @override
@@ -43058,9 +42983,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get gal_mining_still_format =>
       'Format de capture d\'écran de carte de jeu';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Mêmes formats que les cartes vidéo, stockés séparément. Les captures de fenêtre de jeu arrivent en PNG : garder PNG est sans perte mais plusieurs fois plus gros, tandis que JPG correspond à la compression d\'avant.';
   @override
   String get game_add => 'Ajouter un jeu';
   @override
@@ -49035,18 +48957,12 @@ class _StringsFr extends _StringsEn {
   String get video_mining_animated_format =>
       'Format d\'animation de carte vidéo';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF est bien plus petit que GIF à qualité égale, et son niveau de qualité maximum permet une résolution et une fréquence d\'images supérieures à GIF ou WebP. Repli automatique sur GIF quand l\'encodeur fourni ne peut pas le produire.';
-  @override
   String get video_mining_image_mode => 'Image de carte vidéo';
   @override
   String get video_mining_image_mode_current_frame =>
       'Capture d\'écran au moment de la création';
   @override
   String get video_mining_image_mode_gif => 'GIF animé (clip de sous-titre)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'L\'image de couverture de la carte vidéo est-elle une animation du clip de sous-titre ou une image fixe — et quelle image';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Capture d\'écran au début du sous-titre';
@@ -52356,9 +52272,6 @@ class _StringsId extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Peramban seluler tidak dapat memuat ekstensi ini. Gunakan pencarian dalam aplikasi di pembaca atau pemutar video sebagai gantinya.';
   @override
-  String get browser_extension_page_intro =>
-      'Di desktop, cari kata, parsing subtitle, dan buat kartu langsung di Chrome atau Edge. Siapkan ekstensi di bawah, lalu muat di browser Anda.';
-  @override
   String get browser_extension_prepare_button => 'Siapkan file ekstensi';
   @override
   String get browser_extension_prepare_hint =>
@@ -54172,13 +54085,7 @@ class _StringsId extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'Format animasi kartu game';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Format yang sama seperti kartu video, disimpan terpisah: frame galgame hampir tidak bergerak dalam satu baris, jadi pertimbangannya berbeda.';
-  @override
   String get gal_mining_image_mode => 'Gambar kartu galgame';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Adegan galgame hampir tidak bergerak dalam satu baris, jadi tangkapan layar diam biasanya lebih kecil dan sama bergunanya.';
   @override
   String get gal_mining_image_mode_screenshot => 'Tangkapan layar';
   @override
@@ -54188,9 +54095,6 @@ class _StringsId extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'Format tangkapan layar kartu game';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Format yang sama seperti kartu video, disimpan terpisah. Tangkapan jendela game masuk sebagai PNG: mempertahankan PNG tanpa kehilangan tetapi beberapa kali lebih besar, sementara JPG sesuai dengan cara tangkapan layar ini dikompres sebelumnya.';
   @override
   String get game_add => 'Tambah game';
   @override
@@ -60078,18 +59982,12 @@ class _StringsId extends _StringsEn {
   @override
   String get video_mining_animated_format => 'Format animasi kartu video';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF jauh lebih kecil dari GIF pada kualitas yang sama, dan tier kualitas tertingginya memungkinkan resolusi dan frame rate lebih tinggi dari GIF atau WebP. Beralih ke GIF secara otomatis ketika encoder bawaan tidak bisa membuatnya.';
-  @override
   String get video_mining_image_mode => 'Gambar kartu video';
   @override
   String get video_mining_image_mode_current_frame =>
       'Tangkapan layar saat menambang';
   @override
   String get video_mining_image_mode_gif => 'GIF animasi (klip subtitle)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Apakah sampul kartu video adalah animasi klip subtitle atau satu bingkai diam — dan bingkai mana';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Tangkapan layar saat subtitle dimulai';
@@ -63369,9 +63267,6 @@ class _StringsIt extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'I browser mobili non possono caricare questa estensione. Usa invece la ricerca nell\'app nel lettore o nel player video.';
   @override
-  String get browser_extension_page_intro =>
-      'Su desktop, cerca parole, analizza sottotitoli e crea carte direttamente in Chrome o Edge. Prepara l\'estensione qui sotto, poi caricala nel browser.';
-  @override
   String get browser_extension_prepare_button => 'Prepara file estensione';
   @override
   String get browser_extension_prepare_hint =>
@@ -65204,13 +65099,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'Formato animazione carta gioco';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Stessi formati delle carte video, archiviati separatamente: un fotogramma di galgame si muove appena in una riga, quindi il compromesso è diverso.';
-  @override
   String get gal_mining_image_mode => 'Immagine carta galgame';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Le scene dei galgame si muovono appena in una riga, quindi uno screenshot fisso è di solito più piccolo e altrettanto utile.';
   @override
   String get gal_mining_image_mode_screenshot => 'Screenshot';
   @override
@@ -65220,9 +65109,6 @@ class _StringsIt extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'Formato screenshot carta gioco';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Stessi formati delle carte video, archiviati separatamente. Le catture della finestra del gioco arrivano come PNG: mantenerle in PNG è senza perdita ma diverse volte più grande, mentre JPG corrisponde a come questi screenshot venivano compressi prima.';
   @override
   String get game_add => 'Aggiungi gioco';
   @override
@@ -71154,18 +71040,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_mining_animated_format => 'Formato animazione carta video';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF è molto più piccolo del GIF alla stessa qualità, e il suo livello di qualità superiore permette una risoluzione e frame rate maggiori rispetto a GIF o WebP. Torna automaticamente a GIF quando l\'encoder incluso non può produrlo.';
-  @override
   String get video_mining_image_mode => 'Immagine carta video';
   @override
   String get video_mining_image_mode_current_frame =>
       'Screenshot al momento del mining';
   @override
   String get video_mining_image_mode_gif => 'GIF animata (clip sottotitolo)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Se la copertina della carta video è un\'animazione della clip del sottotitolo o un singolo fotogramma fisso — e quale fotogramma';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Screenshot all\'inizio del sottotitolo';
@@ -74389,9 +74269,6 @@ class _StringsJa extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'モバイルブラウザーではこの拡張機能を読み込めません。代わりにアプリ内のリーダーや動画プレーヤーで辞書引きしてください。';
   @override
-  String get browser_extension_page_intro =>
-      'デスクトップでは Chrome や Edge の中で直接単語を調べ、字幕を解析し、カードを作成できます。下で拡張機能を準備してからブラウザに読み込んでください。';
-  @override
   String get browser_extension_prepare_button => '拡張機能ファイルを準備';
   @override
   String get browser_extension_prepare_hint =>
@@ -76112,13 +75989,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'ゲームカードのアニメーション形式';
   @override
-  String get gal_mining_animated_format_hint =>
-      '動画カードと同じ形式ですが、別々に保存されます。ギャルゲーのフレームは1行内でほとんど動かないため、トレードオフが異なります。';
-  @override
   String get gal_mining_image_mode => 'ゲームカード画像';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'ゲームシーンは1行内でほぼ動かないため、静止スクリーンショットの方がサイズが小さく、通常は十分です。';
   @override
   String get gal_mining_image_mode_screenshot => 'スクリーンショット';
   @override
@@ -76128,9 +75999,6 @@ class _StringsJa extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'ゲームカードスクリーンショット形式';
-  @override
-  String get gal_mining_still_format_hint =>
-      '動画カードと同じ形式で、別々に保存されます。ゲームウィンドウのキャプチャはPNGで取り込まれます。PNGのままならロスレスですが数倍大きくなり、JPGは以前のスクリーンショット圧縮方式と同じです。';
   @override
   String get game_add => 'ゲームを追加';
   @override
@@ -81727,17 +81595,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_mining_animated_format => '動画カードのアニメーション形式';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIFは同品質でGIFよりはるかに小さく、最高品質ではGIFやWebPより高い解像度とフレームレートが可能です。バンドルされたエンコーダーで生成できない場合は自動的にGIFにフォールバックします。';
-  @override
   String get video_mining_image_mode => '動画カード画像';
   @override
   String get video_mining_image_mode_current_frame => '制作時のスクリーンショット';
   @override
   String get video_mining_image_mode_gif => 'アニメーションGIF（字幕クリップ）';
-  @override
-  String get video_mining_image_mode_hint =>
-      '動画カードのカバーを字幕クリップのアニメーションにするか、静止フレームにするか、どのフレームにするかを選択します';
   @override
   String get video_mining_image_mode_subtitle_start => '字幕開始時のスクリーンショット';
   @override
@@ -84857,9 +84719,6 @@ class _StringsKo extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       '모바일 브라우저에서는 이 확장 프로그램을 로드할 수 없습니다. 대신 앱 내 리더나 동영상 플레이어에서 사전 검색을 사용하세요.';
   @override
-  String get browser_extension_page_intro =>
-      '데스크톱에서 Chrome 또는 Edge에서 바로 단어 검색, 자막 파싱, 카드 채굴을 할 수 있습니다. 아래에서 확장 프로그램을 준비한 후 브라우저에 로드하세요.';
-  @override
   String get browser_extension_prepare_button => '확장 프로그램 파일 준비';
   @override
   String get browser_extension_prepare_hint =>
@@ -86581,13 +86440,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get gal_mining_animated_format => '게임 카드 애니메이션 형식';
   @override
-  String get gal_mining_animated_format_hint =>
-      '동영상 카드와 같은 형식이며 별도로 저장됩니다: 비주얼 노벨 프레임은 한 줄 내에서 거의 움직이지 않으므로 장단점이 다릅니다.';
-  @override
   String get gal_mining_image_mode => '갈게 카드 이미지';
-  @override
-  String get gal_mining_image_mode_hint =>
-      '갈게 장면은 한 줄 내에서 거의 변하지 않으므로, 정지 스크린샷이 보통 더 작고 충분히 유용합니다.';
   @override
   String get gal_mining_image_mode_screenshot => '스크린샷';
   @override
@@ -86597,9 +86450,6 @@ class _StringsKo extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => '게임 카드 스크린샷 형식';
-  @override
-  String get gal_mining_still_format_hint =>
-      '동영상 카드와 동일한 형식이며 별도로 저장됩니다. 게임 창 캡처는 PNG로 들어옵니다: PNG를 유지하면 무손실이지만 몇 배 더 크고, JPG는 이전에 스크린샷이 압축되던 방식과 동일합니다.';
   @override
   String get game_add => '게임 추가';
   @override
@@ -92205,17 +92055,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_mining_animated_format => '동영상 카드 애니메이션 형식';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF는 같은 품질에서 GIF보다 훨씬 작으며, 최고 품질 단계에서는 GIF나 WebP보다 높은 해상도와 프레임 속도를 지원합니다. 번들된 인코더가 생성할 수 없는 경우 자동으로 GIF로 대체됩니다.';
-  @override
   String get video_mining_image_mode => '동영상 카드 이미지';
   @override
   String get video_mining_image_mode_current_frame => '채굴 시점 스크린샷';
   @override
   String get video_mining_image_mode_gif => '애니메이션 GIF (자막 클립)';
-  @override
-  String get video_mining_image_mode_hint =>
-      '동영상 카드 커버를 자막 클립 애니메이션으로 할지, 단일 정지 프레임으로 할지 — 그리고 어떤 프레임을 사용할지 설정합니다';
   @override
   String get video_mining_image_mode_subtitle_start => '자막 시작 시점 스크린샷';
   @override
@@ -95409,9 +95253,6 @@ class _StringsNl extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Mobiele browsers kunnen deze extensie niet laden. Gebruik in plaats daarvan het opzoeken in de app in de lezer of videospeler.';
   @override
-  String get browser_extension_page_intro =>
-      'Op desktop kun je woorden opzoeken, ondertitels ontleden en kaarten delven rechtstreeks in Chrome of Edge. Bereid de extensie hieronder voor en laad deze vervolgens in je browser.';
-  @override
   String get browser_extension_prepare_button =>
       'Extensiebestanden voorbereiden';
   @override
@@ -97239,13 +97080,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'Gamekaart-animatieformaat';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Dezelfde formaten als videokaarten, apart opgeslagen: een galgameframe beweegt nauwelijks binnen één regel, dus de afweging is anders.';
-  @override
   String get gal_mining_image_mode => 'Gamekaartafbeelding';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Galgamescènes bewegen nauwelijks binnen één regel, dus een stilstaande schermafbeelding is meestal kleiner en net zo bruikbaar.';
   @override
   String get gal_mining_image_mode_screenshot => 'Schermafbeelding';
   @override
@@ -97255,9 +97090,6 @@ class _StringsNl extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'Gamekaart-schermafbeeldingformaat';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Dezelfde formaten als videokaarten, apart opgeslagen. Spelvensteropnames komen als PNG binnen: PNG behouden is verliesvrij maar meerdere malen groter, terwijl JPG overeenkomt met hoe deze schermafbeeldingen voorheen werden gecomprimeerd.';
   @override
   String get game_add => 'Spel toevoegen';
   @override
@@ -103168,18 +103000,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_mining_animated_format => 'Videokaart-animatieformaat';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF is veel kleiner dan GIF bij dezelfde kwaliteit, en de hoogste kwaliteitstrap staat een hogere resolutie en framerate toe dan GIF of WebP. Valt automatisch terug op GIF wanneer de meegeleverde encoder het niet kan produceren.';
-  @override
   String get video_mining_image_mode => 'Videokaart-afbeelding';
   @override
   String get video_mining_image_mode_current_frame =>
       'Schermafbeelding bij delven';
   @override
   String get video_mining_image_mode_gif => 'Geanimeerde GIF (ondertitelclip)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Of de videokaartomslag een animatie van de ondertitelclip is of een enkel stilstaand beeld — en welk beeld';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Schermafbeelding bij ondertitelstart';
@@ -106472,9 +106298,6 @@ class _StringsPtBr extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Navegadores móveis não conseguem carregar esta extensão. Use a busca no app no leitor ou no player de vídeo.';
   @override
-  String get browser_extension_page_intro =>
-      'No desktop, consulte palavras, analise legendas e crie cartões direto no Chrome ou Edge. Prepare a extensão abaixo e carregue-a no seu navegador.';
-  @override
   String get browser_extension_prepare_button =>
       'Preparar arquivos da extensão';
   @override
@@ -108310,13 +108133,7 @@ class _StringsPtBr extends _StringsEn {
   String get gal_mining_animated_format =>
       'Formato de animação do cartão de jogo';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Mesmos formatos dos cartões de vídeo, armazenados separadamente: um quadro de galgame quase não se move dentro de uma linha, então o trade-off é diferente.';
-  @override
   String get gal_mining_image_mode => 'Imagem do cartão de galgame';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Cenas de galgame quase não se movem dentro de uma linha, então uma captura de tela estática geralmente é menor e igualmente útil.';
   @override
   String get gal_mining_image_mode_screenshot => 'Captura de tela';
   @override
@@ -108327,9 +108144,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get gal_mining_still_format =>
       'Formato de captura de tela do cartão de jogo';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Mesmos formatos dos cartões de vídeo, armazenados separadamente. Capturas de janela de jogo vêm como PNG: manter PNG é sem perda mas várias vezes maior, enquanto JPG corresponde a como essas capturas eram comprimidas antes.';
   @override
   String get game_add => 'Adicionar jogo';
   @override
@@ -114261,18 +114075,12 @@ class _StringsPtBr extends _StringsEn {
   String get video_mining_animated_format =>
       'Formato de animação do cartão de vídeo';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF é muito menor que GIF na mesma qualidade, e seu nível de qualidade máxima permite resolução e taxa de quadros mais altas que GIF ou WebP. Recorre ao GIF automaticamente quando o codificador incluído não consegue produzi-lo.';
-  @override
   String get video_mining_image_mode => 'Imagem do cartão de vídeo';
   @override
   String get video_mining_image_mode_current_frame =>
       'Captura de tela ao minerar';
   @override
   String get video_mining_image_mode_gif => 'GIF animado (clipe de legenda)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Se a capa do cartão de vídeo é uma animação do clipe de legenda ou um quadro estático — e qual quadro';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Captura de tela no início da legenda';
@@ -117564,9 +117372,6 @@ class _StringsRu extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Мобильные браузеры не могут загрузить это расширение. Используйте поиск в приложении — в читалке или видеоплеере.';
   @override
-  String get browser_extension_page_intro =>
-      'На десктопе ищите слова, разбирайте субтитры и создавайте карточки прямо в Chrome или Edge. Подготовьте расширение ниже, затем загрузите его в браузер.';
-  @override
   String get browser_extension_prepare_button => 'Подготовить файлы расширения';
   @override
   String get browser_extension_prepare_hint =>
@@ -119391,13 +119196,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'Формат анимации игровых карточек';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Те же форматы, что и для видеокарточек, хранятся отдельно: кадр гальге почти не меняется в пределах одной строки, поэтому баланс иной.';
-  @override
   String get gal_mining_image_mode => 'Изображение карточки гальгейма';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Сцены гальгейма практически не меняются в пределах одной строки, поэтому статичный скриншот обычно меньше по размеру и столь же полезен.';
   @override
   String get gal_mining_image_mode_screenshot => 'Скриншот';
   @override
@@ -119407,9 +119206,6 @@ class _StringsRu extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'Формат скриншота игровой карточки';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Те же форматы, что и для видеокарточек, хранятся отдельно. Снимки окна игры приходят в PNG: сохранение PNG — без потерь, но в несколько раз больше, а JPG соответствует прежнему способу сжатия этих скриншотов.';
   @override
   String get game_add => 'Добавить игру';
   @override
@@ -125340,18 +125136,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_mining_animated_format => 'Формат анимации видеокарточек';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF значительно меньше GIF при том же качестве, а его максимальный уровень качества позволяет более высокое разрешение и частоту кадров, чем GIF или WebP. Автоматически переключается на GIF, если встроенный кодировщик не может создать AVIF.';
-  @override
   String get video_mining_image_mode => 'Изображение видеокарточки';
   @override
   String get video_mining_image_mode_current_frame =>
       'Скриншот в момент создания';
   @override
   String get video_mining_image_mode_gif => 'Анимированный GIF (клип субтитра)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Обложка видеокарточки — анимация клипа субтитра или один кадр, и какой именно';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Скриншот в начале субтитра';
@@ -128624,9 +128414,6 @@ class _StringsTh extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'เบราว์เซอร์บนมือถือไม่สามารถโหลดส่วนขยายนี้ได้ ให้ใช้การค้นหาคำในแอปที่โปรแกรมอ่านหรือเครื่องเล่นวิดีโอแทน';
   @override
-  String get browser_extension_page_intro =>
-      'บนเดสก์ท็อป ค้นหาคำ แยกวิเคราะห์คำบรรยาย และสร้างบัตรได้โดยตรงใน Chrome หรือ Edge เตรียมส่วนขยายด้านล่าง จากนั้นโหลดในเบราว์เซอร์ของคุณ';
-  @override
   String get browser_extension_prepare_button => 'เตรียมไฟล์ส่วนขยาย';
   @override
   String get browser_extension_prepare_hint =>
@@ -130418,13 +130205,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'รูปแบบภาพเคลื่อนไหวการ์ดเกม';
   @override
-  String get gal_mining_animated_format_hint =>
-      'รูปแบบเดียวกับการ์ดวิดีโอ แต่จัดเก็บแยก: เฟรมเกมแทบไม่ขยับในหนึ่งบรรทัด จึงมีข้อพิจารณาที่ต่างกัน';
-  @override
   String get gal_mining_image_mode => 'ภาพการ์ดเกมกัล';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'ฉากเกมกัลแทบไม่ขยับในหนึ่งบรรทัด ดังนั้นภาพนิ่งมักมีขนาดเล็กกว่าและใช้ได้ดีเท่ากัน';
   @override
   String get gal_mining_image_mode_screenshot => 'ภาพหน้าจอ';
   @override
@@ -130434,9 +130215,6 @@ class _StringsTh extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'รูปแบบภาพหน้าจอการ์ดเกม';
-  @override
-  String get gal_mining_still_format_hint =>
-      'รูปแบบเดียวกับการ์ดวิดีโอ จัดเก็บแยกกัน ภาพจับหน้าต่างเกมเข้ามาเป็น PNG: เก็บ PNG ไม่สูญเสียคุณภาพแต่ใหญ่กว่าหลายเท่า ในขณะที่ JPG ตรงกับการบีบอัดภาพเหล่านี้ก่อนหน้า';
   @override
   String get game_add => 'เพิ่มเกม';
   @override
@@ -136265,17 +136043,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_mining_animated_format => 'รูปแบบภาพเคลื่อนไหวการ์ดวิดีโอ';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF มีขนาดเล็กกว่า GIF มากในคุณภาพเดียวกัน และระดับคุณภาพสูงสุดรองรับความละเอียดและเฟรมเรตที่สูงกว่า GIF หรือ WebP จะใช้ GIF โดยอัตโนมัติเมื่อตัวเข้ารหัสที่แนบมาไม่สามารถสร้างได้';
-  @override
   String get video_mining_image_mode => 'รูปภาพการ์ดวิดีโอ';
   @override
   String get video_mining_image_mode_current_frame => 'ภาพหน้าจอตอนทำการ์ด';
   @override
   String get video_mining_image_mode_gif => 'GIF เคลื่อนไหว (คลิปคำบรรยาย)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'เลือกว่าปกการ์ดวิดีโอจะเป็นแอนิเมชันของคลิปคำบรรยายหรือภาพนิ่ง — และเฟรมไหน';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'ภาพหน้าจอตอนเริ่มคำบรรยาย';
@@ -139523,9 +139295,6 @@ class _StringsTr extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Mobil tarayıcılar bu uzantıyı yükleyemez. Bunun yerine okuyucu veya video oynatıcıdaki uygulama içi aramayı kullanın.';
   @override
-  String get browser_extension_page_intro =>
-      'Masaüstünde Chrome veya Edge içinde kelime arayın, altyazıları ayrıştırın ve kart çıkarın. Uzantıyı aşağıdan hazırlayın, ardından tarayıcınıza yükleyin.';
-  @override
   String get browser_extension_prepare_button => 'Uzantı dosyalarını hazırla';
   @override
   String get browser_extension_prepare_hint =>
@@ -141347,13 +141116,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'Oyun kartı animasyon formatı';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Video kartlarıyla aynı formatlar, ayrı depolanır: bir galgame karesi tek satırda neredeyse hiç hareket etmez, bu nedenle denge farklıdır.';
-  @override
   String get gal_mining_image_mode => 'Galgame kart görseli';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Galgame sahneleri bir satır içinde neredeyse hiç hareket etmez, bu yüzden sabit bir ekran görüntüsü genellikle daha küçüktür ve aynı derecede kullanışlıdır.';
   @override
   String get gal_mining_image_mode_screenshot => 'Ekran görüntüsü';
   @override
@@ -141363,9 +141126,6 @@ class _StringsTr extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'Oyun kartı ekran görüntüsü formatı';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Video kartlarıyla aynı formatlar, ayrı depolanır. Oyun penceresi yakalamaları PNG olarak gelir: PNG\'yi korumak kayıpsızdır ancak birkaç kat daha büyüktür, JPG ise bu ekran görüntülerinin daha önce sıkıştırıldığı şekille eşleşir.';
   @override
   String get game_add => 'Oyun ekle';
   @override
@@ -147240,18 +147000,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_mining_animated_format => 'Video kartı animasyon formatı';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF, aynı kalitede GIF\'ten çok daha küçüktür ve en yüksek kalite katmanı GIF veya WebP\'den daha yüksek çözünürlük ve kare hızına izin verir. Paketlenmiş kodlayıcı üretemediğinde otomatik olarak GIF\'e geri döner.';
-  @override
   String get video_mining_image_mode => 'Video kart görseli';
   @override
   String get video_mining_image_mode_current_frame =>
       'Kart çıkarma anında ekran görüntüsü';
   @override
   String get video_mining_image_mode_gif => 'Animasyonlu GIF (altyazı klibi)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Video kart kapağının altyazı klibinin animasyonu mu yoksa tek bir kare mi olduğunu ve hangi kare olduğunu belirler';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Altyazı başlangıcında ekran görüntüsü';
@@ -150518,9 +150272,6 @@ class _StringsVi extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       'Trình duyệt di động không thể tải tiện ích này. Thay vào đó, hãy dùng tra cứu trong ứng dụng ở trình đọc hoặc trình phát video.';
   @override
-  String get browser_extension_page_intro =>
-      'Trên máy tính, tra từ, phân tích phụ đề và tạo thẻ ngay trong Chrome hoặc Edge. Chuẩn bị tiện ích mở rộng bên dưới, sau đó tải vào trình duyệt.';
-  @override
   String get browser_extension_prepare_button =>
       'Chuẩn bị tệp tiện ích mở rộng';
   @override
@@ -152336,13 +152087,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get gal_mining_animated_format => 'Định dạng hoạt ảnh thẻ trò chơi';
   @override
-  String get gal_mining_animated_format_hint =>
-      'Cùng định dạng với thẻ video, lưu riêng: khung hình galgame hầu như không chuyển động trong một dòng thoại, nên sự đánh đổi khác nhau.';
-  @override
   String get gal_mining_image_mode => 'Ảnh thẻ galgame';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Cảnh galgame hầu như không thay đổi trong một dòng, nên ảnh tĩnh thường nhỏ hơn và đủ dùng.';
   @override
   String get gal_mining_image_mode_screenshot => 'Ảnh chụp màn hình';
   @override
@@ -152352,9 +152097,6 @@ class _StringsVi extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => 'Định dạng ảnh chụp thẻ trò chơi';
-  @override
-  String get gal_mining_still_format_hint =>
-      'Cùng định dạng như thẻ video, lưu riêng. Ảnh chụp cửa sổ trò chơi đến dưới dạng PNG: giữ PNG không mất dữ liệu nhưng lớn gấp nhiều lần, trong khi JPG khớp với cách các ảnh chụp này được nén trước đây.';
   @override
   String get game_add => 'Thêm trò chơi';
   @override
@@ -158218,18 +157960,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_mining_animated_format => 'Định dạng hoạt ảnh thẻ video';
   @override
-  String get video_mining_animated_format_hint =>
-      'AVIF nhỏ hơn GIF rất nhiều ở cùng chất lượng, và chế độ chất lượng cao nhất cho phép độ phân giải và tốc độ khung hình cao hơn GIF hoặc WebP. Tự động chuyển về GIF khi bộ mã hóa đi kèm không tạo được.';
-  @override
   String get video_mining_image_mode => 'Hình ảnh thẻ video';
   @override
   String get video_mining_image_mode_current_frame =>
       'Ảnh chụp tại thời điểm tạo thẻ';
   @override
   String get video_mining_image_mode_gif => 'GIF động (đoạn phụ đề)';
-  @override
-  String get video_mining_image_mode_hint =>
-      'Ảnh bìa thẻ video là ảnh động của đoạn phụ đề hay một khung hình tĩnh — và khung hình nào';
   @override
   String get video_mining_image_mode_subtitle_start =>
       'Chụp màn hình tại đầu phụ đề';
@@ -159966,8 +159702,7 @@ class _StringsZhCn extends _StringsEn {
 
   // Translations
   @override
-  String get about_tmdb_attribution =>
-      'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+  String get about_tmdb_attribution => '本应用使用 TMDB 及 TMDB API，但未获 TMDB 认可或认证。';
   @override
   String get action_exit => '退出';
   @override
@@ -160051,7 +159786,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anime_download_generic_hint => '磁力链接';
   @override
-  String get anime_download_generic_title => '粘贴链接下载（书、视频等）';
+  String get anime_download_generic_title => '粘贴链接下载';
   @override
   String get anime_download_include_subs => '附带字幕';
   @override
@@ -160095,7 +159830,7 @@ class _StringsZhCn extends _StringsEn {
       '失败，磁盘与库都未改动：${reason}';
   @override
   String get anime_download_relocate_hint =>
-      'Fushi 通过下载引擎改名/移动，因此不会掐断做种。在资源管理器里改名则永远无法挽回。';
+      'Fushi 通过下载引擎改名/移动，因此不会掐断做种。外部改名将无法做种。';
   @override
   String anime_download_relocate_library_failed({required Object reason}) =>
       '文件已移动，但库仍指向旧路径：${reason}';
@@ -160123,8 +159858,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anime_download_search_hint => '番剧名';
   @override
-  String get anime_download_search_start_hint =>
-      '在上方搜索作品名，自动匹配种子与字幕。下载不限视频：书籍、漫画、有声书、游戏也会自动入库。';
+  String get anime_download_search_start_hint => '在上方搜索作品名，视频会自动匹配字幕。';
   @override
   String get anime_download_sort_date => '发布时间';
   @override
@@ -160262,8 +159996,7 @@ class _StringsZhCn extends _StringsEn {
   String anki_dedup_auto_found({required Object count, required Object size}) =>
       '发现 ${count} 个重复的 Anki 媒体文件（可释放 ${size}）';
   @override
-  String get anki_dedup_auto_hint =>
-      '默认关闭。打开后 Fushi 会在启动时扫描（最多每周一次）并先把清单给你看，你不确认就不会删任何文件。';
+  String get anki_dedup_auto_hint => '默认关闭。打开后 Fushi 会在启动时扫描（最多每周一次）并展示清单。';
   @override
   String get anki_dedup_auto_review => '查看';
   @override
@@ -160324,7 +160057,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_dedup_run => '立即去重';
   @override
-  String get anki_dedup_run_hint => '先扫描并列出将要删除的文件，你确认之后才会真正删除。';
+  String get anki_dedup_run_hint => '先扫描并列出将要删除的文件。';
   @override
   String get anki_dedup_scan => '扫描重复项（不做改动）';
   @override
@@ -160514,8 +160247,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get anki_lapis_visual_editor => '可视化编辑';
   @override
-  String get anki_lapis_visual_editor_hint =>
-      '预览 Lapis 卡片，选中区域后直接改样式、位置和字段映射，无需手写 CSS。';
+  String get anki_lapis_visual_editor_hint => '预览并修改 Lapis 卡片。';
   @override
   String get anki_lapis_visual_field_definition_box => '释义框';
   @override
@@ -160753,8 +160485,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get app_ui_scale => '界面大小';
   @override
-  String get app_ui_scale_hint =>
-      '整体缩放应用界面（文字、图标、控件一起放大缩小），范围 30% 到 300%。大屏设备上界面偏小可调高。';
+  String get app_ui_scale_hint => '整体缩放应用界面（文字、图标、控件一起放大缩小），范围 30% 到 300%。';
   @override
   String get app_version => '应用版本';
   @override
@@ -161112,8 +160843,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String backup_export_failed({required Object message}) => '备份导出失败：${message}';
   @override
-  String get backup_export_hint =>
-      '选择要包含的内容。阅读数据（进度、统计、设置）始终包含；取消「书籍」可完整排除书籍，取消大文件（本地音频、视频）可缩小备份。';
+  String get backup_export_hint => '选择要包含的内容。';
   @override
   String get backup_export_no_books => '没有可选的书籍';
   @override
@@ -161362,9 +161092,6 @@ class _StringsZhCn extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       '手机浏览器无法加载此扩展，请直接在 app 内阅读器/视频中查词。';
   @override
-  String get browser_extension_page_intro =>
-      '在电脑的 Chrome / Edge 里直接划词查词、解析字幕、一键制卡。先在下面准备扩展文件，再按步骤加载到浏览器。';
-  @override
   String get browser_extension_prepare_button => '准备扩展文件';
   @override
   String get browser_extension_prepare_hint =>
@@ -161382,8 +161109,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get browser_extension_step_dev_mode => '打开右上角的「开发者模式」开关。';
   @override
-  String get browser_extension_step_done_auto =>
-      '完成。扩展已自动配置好，装好后会直接连上本应用查词，你不用手动填写任何设置。';
+  String get browser_extension_step_done_auto => '完成。扩展已自动配置好，装好后会直接连上本应用查词。';
   @override
   String get browser_extension_step_load_unpacked => '点击「加载已解压的扩展程序」。';
   @override
@@ -161782,7 +161508,7 @@ class _StringsZhCn extends _StringsEn {
   String get dark_mode_system => '跟随系统';
   @override
   String data_root_unavailable_message({required Object path}) =>
-      '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。你的数据是安全的、原封不动留在那里——没有丢失。请点「重试」,等盘就绪即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
+      '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。请点「重试」,等盘就绪重启Fushi即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
   @override
   String get data_root_unavailable_title => '数据位置未响应';
   @override
@@ -163036,13 +162762,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get gal_mining_animated_format => '游戏制卡动图格式';
   @override
-  String get gal_mining_animated_format_hint =>
-      '与视频制卡同样的格式，但分开保存：galgame 一句台词内画面基本静止，取舍不同。';
-  @override
   String get gal_mining_image_mode => 'Galgame 制卡配图';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Galgame 一句台词内画面基本不动，静态截图通常更小、信息量一样。';
   @override
   String get gal_mining_image_mode_screenshot => '静态截图';
   @override
@@ -163052,9 +162772,6 @@ class _StringsZhCn extends _StringsEn {
       '从台词出现到制卡这段时间的游戏画面，并混入句子音频。未开始录制或不足 2 帧时降级为动图/截图。';
   @override
   String get gal_mining_still_format => '游戏卡片截图格式';
-  @override
-  String get gal_mining_still_format_hint =>
-      '与视频卡片同样的格式，但分开保存。游戏窗口抓图本身是 PNG：选 PNG 无损但大好几倍，选 JPG 与这些截图过去的压缩方式一致。';
   @override
   String get game_add => '添加游戏';
   @override
@@ -163363,7 +163080,7 @@ class _StringsZhCn extends _StringsEn {
       '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
   @override
   String get game_hook_reason_protocol_mismatch =>
-      '捕获组件与本体版本不一致。组件已内置在 Fushi 里，不需要单独安装：先彻底关掉游戏再重开一次（游戏进程里可能还挂着上一次注入的旧组件）。若重开后仍提示不一致，说明磁盘上的组件比 Fushi 旧——上次更新 Fushi 时游戏正开着，安装器换不掉被占用的组件文件。请关闭所有游戏，然后重新运行一次 Fushi 安装程序。';
+      '捕获组件与本体版本不一致。请尝试关闭游戏，然后重新运行一次 Fushi。若无法解决请联系开发者。';
   @override
   String get game_hook_reason_ready_timeout => '钩子库未能在超时内加载完成，杀毒软件扫描可能是原因。';
   @override
@@ -163829,7 +163546,7 @@ class _StringsZhCn extends _StringsEn {
   String game_text_thread_audio_count({required Object count}) =>
       '${count} 行有音频';
   @override
-  String get game_text_thread_hint => '像 Luna Translator 一样选择干净的台词线程';
+  String get game_text_thread_hint => '选择干净的台词线程';
   @override
   String get game_text_thread_unset => '尚未选择线程 · 选一条后开始捕获';
   @override
@@ -163843,8 +163560,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get game_track_exclude_bgm => '标记为 BGM';
   @override
-  String get game_track_exclusion_hint =>
-      '把 BGM/环境音轨标记为排除，自动选源便不会把它当成语音——没有语音的台词也不会再读到 BGM。';
+  String get game_track_exclusion_hint => '把 BGM/环境音轨标记为排除，自动选源便不会把它当成语音。';
   @override
   String get game_track_exclusion_title => '排除音轨';
   @override
@@ -165189,9 +164905,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mihon_store_zero_extensions => '该仓库返回 0 个扩展，地址可能指向了旧版索引。';
   @override
-  String get mining_animated_format_avif => 'AVIF（体积最小）';
+  String get mining_animated_format_avif => 'AVIF（体积最小，最推荐）';
   @override
-  String get mining_animated_format_gif => 'GIF（兼容性最好）';
+  String get mining_animated_format_gif => 'GIF（兼容性最好，体积最大，无压缩）';
   @override
   String get mining_animated_format_webp => 'WebP（兼容性更广）';
   @override
@@ -165220,7 +164936,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mining_still_format_jpg => 'JPG（体积更小）';
   @override
-  String get mining_still_format_png => 'PNG（无损）';
+  String get mining_still_format_png => 'PNG';
   @override
   String get module_disabled_hint => '该功能模块已在「设置 → 外观 → 功能模块」中关闭。';
   @override
@@ -168430,17 +168146,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_mining_animated_format => '视频制卡动图格式';
   @override
-  String get video_mining_animated_format_hint =>
-      '同画质下 AVIF 体积远小于 GIF，最高清晰度档也允许比 GIF/WebP 更高的分辨率与帧率。捆绑的编码器产不出时会自动回退 GIF。';
-  @override
   String get video_mining_image_mode => '视频卡片图片';
   @override
   String get video_mining_image_mode_current_frame => '制卡时截图';
   @override
   String get video_mining_image_mode_gif => '动图 GIF（字幕片段）';
-  @override
-  String get video_mining_image_mode_hint =>
-      '视频卡片封面用字幕区间动图，还是某一帧静态截图（取哪一帧也在这里选）';
   @override
   String get video_mining_image_mode_subtitle_start => '字幕开头截图';
   @override
@@ -171452,9 +171162,6 @@ class _StringsZhHk extends _StringsEn {
   String get browser_extension_mobile_unsupported =>
       '手機瀏覽器無法載入此擴充功能，請直接在 app 內閱讀器／影片中查詞。';
   @override
-  String get browser_extension_page_intro =>
-      '在電腦的 Chrome / Edge 裡直接劃詞查詞、解析字幕、一鍵製卡。先在下面準備擴展檔案，再按步驟加載到瀏覽器。';
-  @override
   String get browser_extension_prepare_button => '準備擴展檔案';
   @override
   String get browser_extension_prepare_hint =>
@@ -173127,13 +172834,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get gal_mining_animated_format => '遊戲製卡動圖格式';
   @override
-  String get gal_mining_animated_format_hint =>
-      '與影片製卡同樣的格式，但分開保存：galgame 一句台詞內畫面基本靜止，取舍不同。';
-  @override
   String get gal_mining_image_mode => 'Galgame 製卡配圖';
-  @override
-  String get gal_mining_image_mode_hint =>
-      'Galgame 一句台詞內畫面基本不動，靜態截圖通常更小、資訊量一樣。';
   @override
   String get gal_mining_image_mode_screenshot => '靜態截圖';
   @override
@@ -173143,9 +172844,6 @@ class _StringsZhHk extends _StringsEn {
       'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
   @override
   String get gal_mining_still_format => '遊戲卡片截圖格式';
-  @override
-  String get gal_mining_still_format_hint =>
-      '與影片卡片同樣的格式，但分開保存。遊戲視窗抓圖本身是 PNG：選 PNG 無損但大好幾倍，選 JPG 與這些截圖過去的壓縮方式一致。';
   @override
   String get game_add => '添加遊戲';
   @override
@@ -178564,17 +178262,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_mining_animated_format => '影片製卡動圖格式';
   @override
-  String get video_mining_animated_format_hint =>
-      '同畫質下 AVIF 體積遠小於 GIF，最高清晰度檔也允許比 GIF/WebP 更高的分辨率與幀率。捆綁的編碼器產不出時會自動回退 GIF。';
-  @override
   String get video_mining_image_mode => '影片卡片圖片';
   @override
   String get video_mining_image_mode_current_frame => '製卡時截圖';
   @override
   String get video_mining_image_mode_gif => '動圖 GIF（字幕片段）';
-  @override
-  String get video_mining_image_mode_hint =>
-      '影片卡片封面用字幕區間動圖，還是某一幀靜態截圖（取哪一幀也在這裡選）';
   @override
   String get video_mining_image_mode_subtitle_start => '字幕開頭截圖';
   @override
@@ -181477,8 +181169,6 @@ extension on _StringsEn {
         return 'Tip: enable "Yomitan API server" and set an API key above first, so the extension is auto-configured with a working connection.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobile browsers cannot load this extension. Use in-app lookup in the reader or video player instead.';
-      case 'browser_extension_page_intro':
-        return 'On desktop, look up words, parse subtitles and mine cards right inside Chrome or Edge. Prepare the extension below, then load it in your browser.';
       case 'browser_extension_prepare_button':
         return 'Prepare extension files';
       case 'browser_extension_prepare_hint':
@@ -183073,12 +182763,8 @@ extension on _StringsEn {
         return 'Hide the toolbar until the pointer reaches the caption box, LunaHook style. Hidden means really hidden — those pixels go back to the game.';
       case 'gal_mining_animated_format':
         return 'Game card animation format';
-      case 'gal_mining_animated_format_hint':
-        return 'Same formats as video cards, stored separately: a galgame frame barely moves within one line, so the trade-off differs.';
       case 'gal_mining_image_mode':
         return 'Galgame card image';
-      case 'gal_mining_image_mode_hint':
-        return 'Galgame scenes barely move within one line, so a still screenshot is usually smaller and just as useful.';
       case 'gal_mining_image_mode_screenshot':
         return 'Screenshot';
       case 'gal_mining_image_mode_video_clip':
@@ -183087,8 +182773,6 @@ extension on _StringsEn {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Game card screenshot format';
-      case 'gal_mining_still_format_hint':
-        return 'Same formats as video cards, stored separately. Game window grabs come in as PNG: keeping PNG is lossless but several times larger, while JPG matches how these screenshots were compressed before.';
       case 'game_add':
         return 'Add game';
       case 'game_already_added':
@@ -188221,16 +187905,12 @@ extension on _StringsEn {
         return 'Subtitle track';
       case 'video_mining_animated_format':
         return 'Video card animation format';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF is far smaller than GIF at the same quality, and its top quality tier allows a higher resolution and frame rate than GIF or WebP. Falls back to GIF automatically when the bundled encoder cannot produce it.';
       case 'video_mining_image_mode':
         return 'Video card image';
       case 'video_mining_image_mode_current_frame':
         return 'Screenshot at mining';
       case 'video_mining_image_mode_gif':
         return 'Animated GIF (subtitle clip)';
-      case 'video_mining_image_mode_hint':
-        return 'Whether the video card cover is an animation of the subtitle clip or a single still frame — and which frame';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot at subtitle start';
       case 'video_mining_still_format':
@@ -191000,8 +190680,6 @@ extension on _StringsAr {
         return 'نصيحة: فعّل "خادم Yomitan API" وعيّن مفتاح API أعلاه أولاً، حتى يتم تكوين الإضافة تلقائياً باتصال يعمل.';
       case 'browser_extension_mobile_unsupported':
         return 'لا يمكن لمتصفحات الأجهزة المحمولة تحميل هذا الامتداد. استخدم البحث داخل التطبيق في القارئ أو مشغّل الفيديو بدلاً من ذلك.';
-      case 'browser_extension_page_intro':
-        return 'على سطح المكتب، ابحث عن الكلمات وحلل الترجمات واستخرج البطاقات مباشرة في Chrome أو Edge. جهّز الإضافة أدناه، ثم حمّلها في متصفحك.';
       case 'browser_extension_prepare_button':
         return 'تجهيز ملفات الإضافة';
       case 'browser_extension_prepare_hint':
@@ -192596,12 +192274,8 @@ extension on _StringsAr {
         return 'يخفي شريط الأدوات حتى يصل المؤشر إلى صندوق النص، بأسلوب LunaHook. مخفي يعني مخفي فعلًا — تعود تلك البكسلات إلى اللعبة.';
       case 'gal_mining_animated_format':
         return 'صيغة الرسوم المتحركة لبطاقة اللعبة';
-      case 'gal_mining_animated_format_hint':
-        return 'نفس صيغ بطاقات الفيديو، مخزنة بشكل منفصل: إطار الرواية المرئية بالكاد يتحرك خلال سطر واحد، لذا المفاضلة مختلفة.';
       case 'gal_mining_image_mode':
         return 'صورة بطاقة اللعبة البصرية';
-      case 'gal_mining_image_mode_hint':
-        return 'مشاهد اللعب البصري بالكاد تتحرك خلال سطر واحد، لذا لقطة الشاشة الثابتة عادةً أصغر حجماً وبنفس الفائدة.';
       case 'gal_mining_image_mode_screenshot':
         return 'لقطة شاشة';
       case 'gal_mining_image_mode_video_clip':
@@ -192610,8 +192284,6 @@ extension on _StringsAr {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'صيغة لقطة بطاقة اللعبة';
-      case 'gal_mining_still_format_hint':
-        return 'نفس صيغ بطاقات الفيديو، تُخزّن بشكل منفصل. لقطات نافذة اللعبة تأتي بصيغة PNG: الاحتفاظ بـ PNG بدون فقدان لكنه أكبر بعدة مرات، بينما JPG يطابق طريقة ضغط هذه اللقطات سابقاً.';
       case 'game_add':
         return 'إضافة لعبة';
       case 'game_already_added':
@@ -197739,16 +197411,12 @@ extension on _StringsAr {
         return 'مسار الترجمة';
       case 'video_mining_animated_format':
         return 'صيغة الرسوم المتحركة لبطاقة الفيديو';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF أصغر بكثير من GIF بنفس الجودة، ومستوى جودته الأعلى يسمح بدقة ومعدل إطارات أعلى من GIF أو WebP. يعود تلقائيًا إلى GIF عندما لا يستطيع المشفّر المرفق إنتاجه.';
       case 'video_mining_image_mode':
         return 'صورة بطاقة الفيديو';
       case 'video_mining_image_mode_current_frame':
         return 'لقطة شاشة عند التعدين';
       case 'video_mining_image_mode_gif':
         return 'GIF متحرك (مقطع الترجمة)';
-      case 'video_mining_image_mode_hint':
-        return 'هل غلاف بطاقة الفيديو رسوم متحركة لمقطع الترجمة أم إطار ثابت — وأي إطار';
       case 'video_mining_image_mode_subtitle_start':
         return 'لقطة شاشة عند بداية الترجمة';
       case 'video_mining_still_format':
@@ -200530,8 +200198,6 @@ extension on _StringsDe {
         return 'Tipp: Aktiviere zuerst oben den „Yomitan API-Server" und setze einen API-Schlüssel, damit die Erweiterung automatisch mit einer funktionierenden Verbindung konfiguriert wird.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobile Browser können diese Erweiterung nicht laden. Nutze stattdessen die App-interne Suche im Reader oder Videoplayer.';
-      case 'browser_extension_page_intro':
-        return 'Auf dem Desktop kannst du Wörter nachschlagen, Untertitel analysieren und Karten direkt in Chrome oder Edge erstellen. Bereite die Erweiterung unten vor und lade sie dann in deinem Browser.';
       case 'browser_extension_prepare_button':
         return 'Erweiterungsdateien vorbereiten';
       case 'browser_extension_prepare_hint':
@@ -202133,12 +201799,8 @@ extension on _StringsDe {
         return 'Blendet die Leiste aus, bis der Zeiger den Textkasten erreicht – wie bei LunaHook. Ausgeblendet heißt wirklich weg: Diese Pixel gehören wieder dem Spiel.';
       case 'gal_mining_animated_format':
         return 'Animationsformat für Spielkarten';
-      case 'gal_mining_animated_format_hint':
-        return 'Gleiche Formate wie Videokarten, separat gespeichert: ein Galgame-Frame bewegt sich innerhalb einer Zeile kaum, daher ist der Kompromiss anders.';
       case 'gal_mining_image_mode':
         return 'Galgame-Kartenbild';
-      case 'gal_mining_image_mode_hint':
-        return 'Galgame-Szenen bewegen sich innerhalb einer Zeile kaum, daher ist ein Standbild meist kleiner und genauso nützlich.';
       case 'gal_mining_image_mode_screenshot':
         return 'Screenshot';
       case 'gal_mining_image_mode_video_clip':
@@ -202147,8 +201809,6 @@ extension on _StringsDe {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Screenshot-Format für Spielkarten';
-      case 'gal_mining_still_format_hint':
-        return 'Gleiche Formate wie Videokarten, separat gespeichert. Spielfenster-Aufnahmen kommen als PNG: PNG beibehalten ist verlustfrei, aber um ein Vielfaches größer, während JPG der bisherigen Komprimierung dieser Screenshots entspricht.';
       case 'game_add':
         return 'Spiel hinzufügen';
       case 'game_already_added':
@@ -207300,16 +206960,12 @@ extension on _StringsDe {
         return 'Untertitelspur';
       case 'video_mining_animated_format':
         return 'Animationsformat für Videokarten';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF ist bei gleicher Qualität deutlich kleiner als GIF, und die höchste Qualitätsstufe erlaubt eine höhere Auflösung und Bildrate als GIF oder WebP. Fällt automatisch auf GIF zurück, wenn der mitgelieferte Encoder es nicht erzeugen kann.';
       case 'video_mining_image_mode':
         return 'Videokartenbild';
       case 'video_mining_image_mode_current_frame':
         return 'Screenshot beim Mining';
       case 'video_mining_image_mode_gif':
         return 'Animiertes GIF (Untertitelclip)';
-      case 'video_mining_image_mode_hint':
-        return 'Ob das Videokarten-Cover eine Animation des Untertitelclips oder ein einzelnes Standbild ist – und welches Bild';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot bei Untertitelbeginn';
       case 'video_mining_still_format':
@@ -210090,8 +209746,6 @@ extension on _StringsEs {
         return 'Consejo: active primero el "servidor API Yomitan" y establezca una clave API arriba, para que la extensión se configure automáticamente con una conexión funcional.';
       case 'browser_extension_mobile_unsupported':
         return 'Los navegadores móviles no pueden cargar esta extensión. Usa la búsqueda dentro de la app en el lector o el reproductor de vídeo.';
-      case 'browser_extension_page_intro':
-        return 'En escritorio, busque palabras, analice subtítulos y cree tarjetas directamente en Chrome o Edge. Prepare la extensión abajo, luego cárguela en su navegador.';
       case 'browser_extension_prepare_button':
         return 'Preparar archivos de extensión';
       case 'browser_extension_prepare_hint':
@@ -211691,12 +211345,8 @@ extension on _StringsEs {
         return 'Oculta la barra hasta que el puntero llega al cuadro de texto, al estilo de LunaHook. Oculta significa oculta de verdad: esos píxeles vuelven al juego.';
       case 'gal_mining_animated_format':
         return 'Formato de animación de tarjeta de juego';
-      case 'gal_mining_animated_format_hint':
-        return 'Mismos formatos que las tarjetas de vídeo, almacenados por separado: un fotograma de galgame apenas se mueve dentro de una línea, por lo que la compensación difiere.';
       case 'gal_mining_image_mode':
         return 'Imagen de tarjeta de galgame';
-      case 'gal_mining_image_mode_hint':
-        return 'Las escenas de galgame apenas se mueven dentro de una línea, por lo que una captura estática suele ser más pequeña y igual de útil.';
       case 'gal_mining_image_mode_screenshot':
         return 'Captura de pantalla';
       case 'gal_mining_image_mode_video_clip':
@@ -211705,8 +211355,6 @@ extension on _StringsEs {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Formato de captura de tarjeta de juego';
-      case 'gal_mining_still_format_hint':
-        return 'Mismos formatos que las tarjetas de vídeo, almacenados por separado. Las capturas de ventana de juego llegan como PNG: mantener PNG es sin pérdida pero varias veces más grande, mientras que JPG coincide con cómo se comprimían estas capturas antes.';
       case 'game_add':
         return 'Añadir juego';
       case 'game_already_added':
@@ -216856,16 +216504,12 @@ extension on _StringsEs {
         return 'Pista de subtítulos';
       case 'video_mining_animated_format':
         return 'Formato de animación de tarjeta de vídeo';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF es mucho más pequeño que GIF a la misma calidad, y su nivel de calidad máxima permite mayor resolución y tasa de fotogramas que GIF o WebP. Recurre a GIF automáticamente cuando el codificador incluido no puede producirlo.';
       case 'video_mining_image_mode':
         return 'Imagen de tarjeta de vídeo';
       case 'video_mining_image_mode_current_frame':
         return 'Captura al momento de crear';
       case 'video_mining_image_mode_gif':
         return 'GIF animado (clip de subtítulo)';
-      case 'video_mining_image_mode_hint':
-        return 'Si la portada de la tarjeta de vídeo es una animación del clip de subtítulo o un fotograma estático — y cuál fotograma';
       case 'video_mining_image_mode_subtitle_start':
         return 'Captura al inicio del subtítulo';
       case 'video_mining_still_format':
@@ -219647,8 +219291,6 @@ extension on _StringsFr {
         return 'Conseil : activez d\'abord « Serveur API Yomitan » et définissez une clé API ci-dessus, pour que l\'extension soit configurée automatiquement avec une connexion fonctionnelle.';
       case 'browser_extension_mobile_unsupported':
         return 'Les navigateurs mobiles ne peuvent pas charger cette extension. Utilisez plutôt la recherche intégrée dans le lecteur ou le lecteur vidéo.';
-      case 'browser_extension_page_intro':
-        return 'Sur ordinateur, recherchez des mots, analysez des sous-titres et créez des cartes directement dans Chrome ou Edge. Préparez l\'extension ci-dessous, puis chargez-la dans votre navigateur.';
       case 'browser_extension_prepare_button':
         return 'Préparer les fichiers de l\'extension';
       case 'browser_extension_prepare_hint':
@@ -221251,12 +220893,8 @@ extension on _StringsFr {
         return 'Masque la barre jusqu\'à ce que le pointeur atteigne la zone de texte, à la manière de LunaHook. Masqué veut dire vraiment masqué : ces pixels reviennent au jeu.';
       case 'gal_mining_animated_format':
         return 'Format d\'animation de carte de jeu';
-      case 'gal_mining_animated_format_hint':
-        return 'Mêmes formats que les cartes vidéo, stockés séparément : l\'image d\'un galgame bouge à peine au sein d\'une ligne, le compromis est donc différent.';
       case 'gal_mining_image_mode':
         return 'Image de carte galgame';
-      case 'gal_mining_image_mode_hint':
-        return 'Les scènes de galgame bougent à peine au sein d\'une ligne, donc une capture d\'écran fixe est généralement plus petite et tout aussi utile.';
       case 'gal_mining_image_mode_screenshot':
         return 'Capture d\'écran';
       case 'gal_mining_image_mode_video_clip':
@@ -221265,8 +220903,6 @@ extension on _StringsFr {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Format de capture d\'écran de carte de jeu';
-      case 'gal_mining_still_format_hint':
-        return 'Mêmes formats que les cartes vidéo, stockés séparément. Les captures de fenêtre de jeu arrivent en PNG : garder PNG est sans perte mais plusieurs fois plus gros, tandis que JPG correspond à la compression d\'avant.';
       case 'game_add':
         return 'Ajouter un jeu';
       case 'game_already_added':
@@ -226419,16 +226055,12 @@ extension on _StringsFr {
         return 'Piste de sous-titres';
       case 'video_mining_animated_format':
         return 'Format d\'animation de carte vidéo';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF est bien plus petit que GIF à qualité égale, et son niveau de qualité maximum permet une résolution et une fréquence d\'images supérieures à GIF ou WebP. Repli automatique sur GIF quand l\'encodeur fourni ne peut pas le produire.';
       case 'video_mining_image_mode':
         return 'Image de carte vidéo';
       case 'video_mining_image_mode_current_frame':
         return 'Capture d\'écran au moment de la création';
       case 'video_mining_image_mode_gif':
         return 'GIF animé (clip de sous-titre)';
-      case 'video_mining_image_mode_hint':
-        return 'L\'image de couverture de la carte vidéo est-elle une animation du clip de sous-titre ou une image fixe — et quelle image';
       case 'video_mining_image_mode_subtitle_start':
         return 'Capture d\'écran au début du sous-titre';
       case 'video_mining_still_format':
@@ -229207,8 +228839,6 @@ extension on _StringsId {
         return 'Tips: aktifkan "Server API Yomitan" dan atur kunci API di atas terlebih dahulu, agar ekstensi otomatis terkonfigurasi dengan koneksi yang berfungsi.';
       case 'browser_extension_mobile_unsupported':
         return 'Peramban seluler tidak dapat memuat ekstensi ini. Gunakan pencarian dalam aplikasi di pembaca atau pemutar video sebagai gantinya.';
-      case 'browser_extension_page_intro':
-        return 'Di desktop, cari kata, parsing subtitle, dan buat kartu langsung di Chrome atau Edge. Siapkan ekstensi di bawah, lalu muat di browser Anda.';
       case 'browser_extension_prepare_button':
         return 'Siapkan file ekstensi';
       case 'browser_extension_prepare_hint':
@@ -230806,12 +230436,8 @@ extension on _StringsId {
         return 'Sembunyikan bilah sampai penunjuk mencapai kotak teks, ala LunaHook. Tersembunyi artinya benar-benar hilang — piksel itu kembali ke game.';
       case 'gal_mining_animated_format':
         return 'Format animasi kartu game';
-      case 'gal_mining_animated_format_hint':
-        return 'Format yang sama seperti kartu video, disimpan terpisah: frame galgame hampir tidak bergerak dalam satu baris, jadi pertimbangannya berbeda.';
       case 'gal_mining_image_mode':
         return 'Gambar kartu galgame';
-      case 'gal_mining_image_mode_hint':
-        return 'Adegan galgame hampir tidak bergerak dalam satu baris, jadi tangkapan layar diam biasanya lebih kecil dan sama bergunanya.';
       case 'gal_mining_image_mode_screenshot':
         return 'Tangkapan layar';
       case 'gal_mining_image_mode_video_clip':
@@ -230820,8 +230446,6 @@ extension on _StringsId {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Format tangkapan layar kartu game';
-      case 'gal_mining_still_format_hint':
-        return 'Format yang sama seperti kartu video, disimpan terpisah. Tangkapan jendela game masuk sebagai PNG: mempertahankan PNG tanpa kehilangan tetapi beberapa kali lebih besar, sementara JPG sesuai dengan cara tangkapan layar ini dikompres sebelumnya.';
       case 'game_add':
         return 'Tambah game';
       case 'game_already_added':
@@ -235956,16 +235580,12 @@ extension on _StringsId {
         return 'Trek subtitle';
       case 'video_mining_animated_format':
         return 'Format animasi kartu video';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF jauh lebih kecil dari GIF pada kualitas yang sama, dan tier kualitas tertingginya memungkinkan resolusi dan frame rate lebih tinggi dari GIF atau WebP. Beralih ke GIF secara otomatis ketika encoder bawaan tidak bisa membuatnya.';
       case 'video_mining_image_mode':
         return 'Gambar kartu video';
       case 'video_mining_image_mode_current_frame':
         return 'Tangkapan layar saat menambang';
       case 'video_mining_image_mode_gif':
         return 'GIF animasi (klip subtitle)';
-      case 'video_mining_image_mode_hint':
-        return 'Apakah sampul kartu video adalah animasi klip subtitle atau satu bingkai diam — dan bingkai mana';
       case 'video_mining_image_mode_subtitle_start':
         return 'Tangkapan layar saat subtitle dimulai';
       case 'video_mining_still_format':
@@ -238743,8 +238363,6 @@ extension on _StringsIt {
         return 'Suggerimento: abilita prima "Server API Yomitan" e imposta una chiave API sopra, così l\'estensione viene configurata automaticamente con una connessione funzionante.';
       case 'browser_extension_mobile_unsupported':
         return 'I browser mobili non possono caricare questa estensione. Usa invece la ricerca nell\'app nel lettore o nel player video.';
-      case 'browser_extension_page_intro':
-        return 'Su desktop, cerca parole, analizza sottotitoli e crea carte direttamente in Chrome o Edge. Prepara l\'estensione qui sotto, poi caricala nel browser.';
       case 'browser_extension_prepare_button':
         return 'Prepara file estensione';
       case 'browser_extension_prepare_hint':
@@ -240345,12 +239963,8 @@ extension on _StringsIt {
         return 'Nasconde la barra finché il puntatore non raggiunge il riquadro del testo, in stile LunaHook. Nascosto significa davvero nascosto: quei pixel tornano al gioco.';
       case 'gal_mining_animated_format':
         return 'Formato animazione carta gioco';
-      case 'gal_mining_animated_format_hint':
-        return 'Stessi formati delle carte video, archiviati separatamente: un fotogramma di galgame si muove appena in una riga, quindi il compromesso è diverso.';
       case 'gal_mining_image_mode':
         return 'Immagine carta galgame';
-      case 'gal_mining_image_mode_hint':
-        return 'Le scene dei galgame si muovono appena in una riga, quindi uno screenshot fisso è di solito più piccolo e altrettanto utile.';
       case 'gal_mining_image_mode_screenshot':
         return 'Screenshot';
       case 'gal_mining_image_mode_video_clip':
@@ -240359,8 +239973,6 @@ extension on _StringsIt {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Formato screenshot carta gioco';
-      case 'gal_mining_still_format_hint':
-        return 'Stessi formati delle carte video, archiviati separatamente. Le catture della finestra del gioco arrivano come PNG: mantenerle in PNG è senza perdita ma diverse volte più grande, mentre JPG corrisponde a come questi screenshot venivano compressi prima.';
       case 'game_add':
         return 'Aggiungi gioco';
       case 'game_already_added':
@@ -245511,16 +245123,12 @@ extension on _StringsIt {
         return 'Traccia sottotitoli';
       case 'video_mining_animated_format':
         return 'Formato animazione carta video';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF è molto più piccolo del GIF alla stessa qualità, e il suo livello di qualità superiore permette una risoluzione e frame rate maggiori rispetto a GIF o WebP. Torna automaticamente a GIF quando l\'encoder incluso non può produrlo.';
       case 'video_mining_image_mode':
         return 'Immagine carta video';
       case 'video_mining_image_mode_current_frame':
         return 'Screenshot al momento del mining';
       case 'video_mining_image_mode_gif':
         return 'GIF animata (clip sottotitolo)';
-      case 'video_mining_image_mode_hint':
-        return 'Se la copertina della carta video è un\'animazione della clip del sottotitolo o un singolo fotogramma fisso — e quale fotogramma';
       case 'video_mining_image_mode_subtitle_start':
         return 'Screenshot all\'inizio del sottotitolo';
       case 'video_mining_still_format':
@@ -248286,8 +247894,6 @@ extension on _StringsJa {
         return 'ヒント：先に「Yomitan API サーバー」を有効にし、上で API キーを設定すると、拡張機能が自動で接続設定されます。';
       case 'browser_extension_mobile_unsupported':
         return 'モバイルブラウザーではこの拡張機能を読み込めません。代わりにアプリ内のリーダーや動画プレーヤーで辞書引きしてください。';
-      case 'browser_extension_page_intro':
-        return 'デスクトップでは Chrome や Edge の中で直接単語を調べ、字幕を解析し、カードを作成できます。下で拡張機能を準備してからブラウザに読み込んでください。';
       case 'browser_extension_prepare_button':
         return '拡張機能ファイルを準備';
       case 'browser_extension_prepare_hint':
@@ -249878,12 +249484,8 @@ extension on _StringsJa {
         return 'ポインタが字幕枠に来るまでツールバーを隠します（LunaHook 方式）。隠すときは本当に消します——その分のピクセルはゲームに返ります。';
       case 'gal_mining_animated_format':
         return 'ゲームカードのアニメーション形式';
-      case 'gal_mining_animated_format_hint':
-        return '動画カードと同じ形式ですが、別々に保存されます。ギャルゲーのフレームは1行内でほとんど動かないため、トレードオフが異なります。';
       case 'gal_mining_image_mode':
         return 'ゲームカード画像';
-      case 'gal_mining_image_mode_hint':
-        return 'ゲームシーンは1行内でほぼ動かないため、静止スクリーンショットの方がサイズが小さく、通常は十分です。';
       case 'gal_mining_image_mode_screenshot':
         return 'スクリーンショット';
       case 'gal_mining_image_mode_video_clip':
@@ -249892,8 +249494,6 @@ extension on _StringsJa {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'ゲームカードスクリーンショット形式';
-      case 'gal_mining_still_format_hint':
-        return '動画カードと同じ形式で、別々に保存されます。ゲームウィンドウのキャプチャはPNGで取り込まれます。PNGのままならロスレスですが数倍大きくなり、JPGは以前のスクリーンショット圧縮方式と同じです。';
       case 'game_add':
         return 'ゲームを追加';
       case 'game_already_added':
@@ -255004,16 +254604,12 @@ extension on _StringsJa {
         return '字幕トラック';
       case 'video_mining_animated_format':
         return '動画カードのアニメーション形式';
-      case 'video_mining_animated_format_hint':
-        return 'AVIFは同品質でGIFよりはるかに小さく、最高品質ではGIFやWebPより高い解像度とフレームレートが可能です。バンドルされたエンコーダーで生成できない場合は自動的にGIFにフォールバックします。';
       case 'video_mining_image_mode':
         return '動画カード画像';
       case 'video_mining_image_mode_current_frame':
         return '制作時のスクリーンショット';
       case 'video_mining_image_mode_gif':
         return 'アニメーションGIF（字幕クリップ）';
-      case 'video_mining_image_mode_hint':
-        return '動画カードのカバーを字幕クリップのアニメーションにするか、静止フレームにするか、どのフレームにするかを選択します';
       case 'video_mining_image_mode_subtitle_start':
         return '字幕開始時のスクリーンショット';
       case 'video_mining_still_format':
@@ -257770,8 +257366,6 @@ extension on _StringsKo {
         return '팁: 먼저 위에서 "Yomitan API 서버"를 활성화하고 API 키를 설정하면 확장 프로그램이 자동으로 연결 구성됩니다.';
       case 'browser_extension_mobile_unsupported':
         return '모바일 브라우저에서는 이 확장 프로그램을 로드할 수 없습니다. 대신 앱 내 리더나 동영상 플레이어에서 사전 검색을 사용하세요.';
-      case 'browser_extension_page_intro':
-        return '데스크톱에서 Chrome 또는 Edge에서 바로 단어 검색, 자막 파싱, 카드 채굴을 할 수 있습니다. 아래에서 확장 프로그램을 준비한 후 브라우저에 로드하세요.';
       case 'browser_extension_prepare_button':
         return '확장 프로그램 파일 준비';
       case 'browser_extension_prepare_hint':
@@ -259363,12 +258957,8 @@ extension on _StringsKo {
         return '포인터가 자막 상자에 닿을 때까지 도구 모음을 숨깁니다(LunaHook 방식). 숨긴다는 건 정말로 사라진다는 뜻이라, 그 픽셀은 게임으로 돌아갑니다.';
       case 'gal_mining_animated_format':
         return '게임 카드 애니메이션 형식';
-      case 'gal_mining_animated_format_hint':
-        return '동영상 카드와 같은 형식이며 별도로 저장됩니다: 비주얼 노벨 프레임은 한 줄 내에서 거의 움직이지 않으므로 장단점이 다릅니다.';
       case 'gal_mining_image_mode':
         return '갈게 카드 이미지';
-      case 'gal_mining_image_mode_hint':
-        return '갈게 장면은 한 줄 내에서 거의 변하지 않으므로, 정지 스크린샷이 보통 더 작고 충분히 유용합니다.';
       case 'gal_mining_image_mode_screenshot':
         return '스크린샷';
       case 'gal_mining_image_mode_video_clip':
@@ -259377,8 +258967,6 @@ extension on _StringsKo {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return '게임 카드 스크린샷 형식';
-      case 'gal_mining_still_format_hint':
-        return '동영상 카드와 동일한 형식이며 별도로 저장됩니다. 게임 창 캡처는 PNG로 들어옵니다: PNG를 유지하면 무손실이지만 몇 배 더 크고, JPG는 이전에 스크린샷이 압축되던 방식과 동일합니다.';
       case 'game_add':
         return '게임 추가';
       case 'game_already_added':
@@ -264492,16 +264080,12 @@ extension on _StringsKo {
         return '자막 트랙';
       case 'video_mining_animated_format':
         return '동영상 카드 애니메이션 형식';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF는 같은 품질에서 GIF보다 훨씬 작으며, 최고 품질 단계에서는 GIF나 WebP보다 높은 해상도와 프레임 속도를 지원합니다. 번들된 인코더가 생성할 수 없는 경우 자동으로 GIF로 대체됩니다.';
       case 'video_mining_image_mode':
         return '동영상 카드 이미지';
       case 'video_mining_image_mode_current_frame':
         return '채굴 시점 스크린샷';
       case 'video_mining_image_mode_gif':
         return '애니메이션 GIF (자막 클립)';
-      case 'video_mining_image_mode_hint':
-        return '동영상 카드 커버를 자막 클립 애니메이션으로 할지, 단일 정지 프레임으로 할지 — 그리고 어떤 프레임을 사용할지 설정합니다';
       case 'video_mining_image_mode_subtitle_start':
         return '자막 시작 시점 스크린샷';
       case 'video_mining_still_format':
@@ -267271,8 +266855,6 @@ extension on _StringsNl {
         return 'Tip: schakel eerst "Yomitan API-server" in en stel hierboven een API-sleutel in, zodat de extensie automatisch geconfigureerd wordt met een werkende verbinding.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobiele browsers kunnen deze extensie niet laden. Gebruik in plaats daarvan het opzoeken in de app in de lezer of videospeler.';
-      case 'browser_extension_page_intro':
-        return 'Op desktop kun je woorden opzoeken, ondertitels ontleden en kaarten delven rechtstreeks in Chrome of Edge. Bereid de extensie hieronder voor en laad deze vervolgens in je browser.';
       case 'browser_extension_prepare_button':
         return 'Extensiebestanden voorbereiden';
       case 'browser_extension_prepare_hint':
@@ -268872,12 +268454,8 @@ extension on _StringsNl {
         return 'Verbergt de werkbalk tot de aanwijzer het tekstvak bereikt, zoals LunaHook. Verborgen is echt verborgen — die pixels gaan terug naar het spel.';
       case 'gal_mining_animated_format':
         return 'Gamekaart-animatieformaat';
-      case 'gal_mining_animated_format_hint':
-        return 'Dezelfde formaten als videokaarten, apart opgeslagen: een galgameframe beweegt nauwelijks binnen één regel, dus de afweging is anders.';
       case 'gal_mining_image_mode':
         return 'Gamekaartafbeelding';
-      case 'gal_mining_image_mode_hint':
-        return 'Galgamescènes bewegen nauwelijks binnen één regel, dus een stilstaande schermafbeelding is meestal kleiner en net zo bruikbaar.';
       case 'gal_mining_image_mode_screenshot':
         return 'Schermafbeelding';
       case 'gal_mining_image_mode_video_clip':
@@ -268886,8 +268464,6 @@ extension on _StringsNl {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Gamekaart-schermafbeeldingformaat';
-      case 'gal_mining_still_format_hint':
-        return 'Dezelfde formaten als videokaarten, apart opgeslagen. Spelvensteropnames komen als PNG binnen: PNG behouden is verliesvrij maar meerdere malen groter, terwijl JPG overeenkomt met hoe deze schermafbeeldingen voorheen werden gecomprimeerd.';
       case 'game_add':
         return 'Spel toevoegen';
       case 'game_already_added':
@@ -274032,16 +273608,12 @@ extension on _StringsNl {
         return 'Ondertitelspoor';
       case 'video_mining_animated_format':
         return 'Videokaart-animatieformaat';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF is veel kleiner dan GIF bij dezelfde kwaliteit, en de hoogste kwaliteitstrap staat een hogere resolutie en framerate toe dan GIF of WebP. Valt automatisch terug op GIF wanneer de meegeleverde encoder het niet kan produceren.';
       case 'video_mining_image_mode':
         return 'Videokaart-afbeelding';
       case 'video_mining_image_mode_current_frame':
         return 'Schermafbeelding bij delven';
       case 'video_mining_image_mode_gif':
         return 'Geanimeerde GIF (ondertitelclip)';
-      case 'video_mining_image_mode_hint':
-        return 'Of de videokaartomslag een animatie van de ondertitelclip is of een enkel stilstaand beeld — en welk beeld';
       case 'video_mining_image_mode_subtitle_start':
         return 'Schermafbeelding bij ondertitelstart';
       case 'video_mining_still_format':
@@ -276823,8 +276395,6 @@ extension on _StringsPtBr {
         return 'Dica: ative o "Servidor de API Yomitan" e defina uma chave de API acima primeiro, para que a extensão seja configurada automaticamente com uma conexão funcional.';
       case 'browser_extension_mobile_unsupported':
         return 'Navegadores móveis não conseguem carregar esta extensão. Use a busca no app no leitor ou no player de vídeo.';
-      case 'browser_extension_page_intro':
-        return 'No desktop, consulte palavras, analise legendas e crie cartões direto no Chrome ou Edge. Prepare a extensão abaixo e carregue-a no seu navegador.';
       case 'browser_extension_prepare_button':
         return 'Preparar arquivos da extensão';
       case 'browser_extension_prepare_hint':
@@ -278422,12 +277992,8 @@ extension on _StringsPtBr {
         return 'Oculta a barra até o ponteiro chegar à caixa de legenda, no estilo do LunaHook. Oculto significa oculto de verdade — aqueles pixels voltam para o jogo.';
       case 'gal_mining_animated_format':
         return 'Formato de animação do cartão de jogo';
-      case 'gal_mining_animated_format_hint':
-        return 'Mesmos formatos dos cartões de vídeo, armazenados separadamente: um quadro de galgame quase não se move dentro de uma linha, então o trade-off é diferente.';
       case 'gal_mining_image_mode':
         return 'Imagem do cartão de galgame';
-      case 'gal_mining_image_mode_hint':
-        return 'Cenas de galgame quase não se movem dentro de uma linha, então uma captura de tela estática geralmente é menor e igualmente útil.';
       case 'gal_mining_image_mode_screenshot':
         return 'Captura de tela';
       case 'gal_mining_image_mode_video_clip':
@@ -278436,8 +278002,6 @@ extension on _StringsPtBr {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Formato de captura de tela do cartão de jogo';
-      case 'gal_mining_still_format_hint':
-        return 'Mesmos formatos dos cartões de vídeo, armazenados separadamente. Capturas de janela de jogo vêm como PNG: manter PNG é sem perda mas várias vezes maior, enquanto JPG corresponde a como essas capturas eram comprimidas antes.';
       case 'game_add':
         return 'Adicionar jogo';
       case 'game_already_added':
@@ -283579,16 +283143,12 @@ extension on _StringsPtBr {
         return 'Faixa de legenda';
       case 'video_mining_animated_format':
         return 'Formato de animação do cartão de vídeo';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF é muito menor que GIF na mesma qualidade, e seu nível de qualidade máxima permite resolução e taxa de quadros mais altas que GIF ou WebP. Recorre ao GIF automaticamente quando o codificador incluído não consegue produzi-lo.';
       case 'video_mining_image_mode':
         return 'Imagem do cartão de vídeo';
       case 'video_mining_image_mode_current_frame':
         return 'Captura de tela ao minerar';
       case 'video_mining_image_mode_gif':
         return 'GIF animado (clipe de legenda)';
-      case 'video_mining_image_mode_hint':
-        return 'Se a capa do cartão de vídeo é uma animação do clipe de legenda ou um quadro estático — e qual quadro';
       case 'video_mining_image_mode_subtitle_start':
         return 'Captura de tela no início da legenda';
       case 'video_mining_still_format':
@@ -286371,8 +285931,6 @@ extension on _StringsRu {
         return 'Совет: сначала включите «Сервер API Yomitan» и задайте API-ключ выше, чтобы расширение автоматически настроилось с рабочим подключением.';
       case 'browser_extension_mobile_unsupported':
         return 'Мобильные браузеры не могут загрузить это расширение. Используйте поиск в приложении — в читалке или видеоплеере.';
-      case 'browser_extension_page_intro':
-        return 'На десктопе ищите слова, разбирайте субтитры и создавайте карточки прямо в Chrome или Edge. Подготовьте расширение ниже, затем загрузите его в браузер.';
       case 'browser_extension_prepare_button':
         return 'Подготовить файлы расширения';
       case 'browser_extension_prepare_hint':
@@ -287974,12 +287532,8 @@ extension on _StringsRu {
         return 'Скрывает панель, пока указатель не дойдёт до блока субтитров — как в LunaHook. Скрыто значит скрыто по-настоящему: эти пиксели возвращаются игре.';
       case 'gal_mining_animated_format':
         return 'Формат анимации игровых карточек';
-      case 'gal_mining_animated_format_hint':
-        return 'Те же форматы, что и для видеокарточек, хранятся отдельно: кадр гальге почти не меняется в пределах одной строки, поэтому баланс иной.';
       case 'gal_mining_image_mode':
         return 'Изображение карточки гальгейма';
-      case 'gal_mining_image_mode_hint':
-        return 'Сцены гальгейма практически не меняются в пределах одной строки, поэтому статичный скриншот обычно меньше по размеру и столь же полезен.';
       case 'gal_mining_image_mode_screenshot':
         return 'Скриншот';
       case 'gal_mining_image_mode_video_clip':
@@ -287988,8 +287542,6 @@ extension on _StringsRu {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Формат скриншота игровой карточки';
-      case 'gal_mining_still_format_hint':
-        return 'Те же форматы, что и для видеокарточек, хранятся отдельно. Снимки окна игры приходят в PNG: сохранение PNG — без потерь, но в несколько раз больше, а JPG соответствует прежнему способу сжатия этих скриншотов.';
       case 'game_add':
         return 'Добавить игру';
       case 'game_already_added':
@@ -293132,16 +292684,12 @@ extension on _StringsRu {
         return 'Дорожка субтитров';
       case 'video_mining_animated_format':
         return 'Формат анимации видеокарточек';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF значительно меньше GIF при том же качестве, а его максимальный уровень качества позволяет более высокое разрешение и частоту кадров, чем GIF или WebP. Автоматически переключается на GIF, если встроенный кодировщик не может создать AVIF.';
       case 'video_mining_image_mode':
         return 'Изображение видеокарточки';
       case 'video_mining_image_mode_current_frame':
         return 'Скриншот в момент создания';
       case 'video_mining_image_mode_gif':
         return 'Анимированный GIF (клип субтитра)';
-      case 'video_mining_image_mode_hint':
-        return 'Обложка видеокарточки — анимация клипа субтитра или один кадр, и какой именно';
       case 'video_mining_image_mode_subtitle_start':
         return 'Скриншот в начале субтитра';
       case 'video_mining_still_format':
@@ -295914,8 +295462,6 @@ extension on _StringsTh {
         return 'เคล็ดลับ: เปิด "เซิร์ฟเวอร์ Yomitan API" และตั้งคีย์ API ด้านบนก่อน เพื่อให้ส่วนขยายถูกตั้งค่าเชื่อมต่อที่ใช้งานได้โดยอัตโนมัติ';
       case 'browser_extension_mobile_unsupported':
         return 'เบราว์เซอร์บนมือถือไม่สามารถโหลดส่วนขยายนี้ได้ ให้ใช้การค้นหาคำในแอปที่โปรแกรมอ่านหรือเครื่องเล่นวิดีโอแทน';
-      case 'browser_extension_page_intro':
-        return 'บนเดสก์ท็อป ค้นหาคำ แยกวิเคราะห์คำบรรยาย และสร้างบัตรได้โดยตรงใน Chrome หรือ Edge เตรียมส่วนขยายด้านล่าง จากนั้นโหลดในเบราว์เซอร์ของคุณ';
       case 'browser_extension_prepare_button':
         return 'เตรียมไฟล์ส่วนขยาย';
       case 'browser_extension_prepare_hint':
@@ -297511,12 +297057,8 @@ extension on _StringsTh {
         return 'ซ่อนแถบเครื่องมือจนกว่าตัวชี้จะถึงกล่องคำบรรยาย แบบ LunaHook ซ่อนคือซ่อนจริง ๆ พิกเซลเหล่านั้นคืนให้เกม';
       case 'gal_mining_animated_format':
         return 'รูปแบบภาพเคลื่อนไหวการ์ดเกม';
-      case 'gal_mining_animated_format_hint':
-        return 'รูปแบบเดียวกับการ์ดวิดีโอ แต่จัดเก็บแยก: เฟรมเกมแทบไม่ขยับในหนึ่งบรรทัด จึงมีข้อพิจารณาที่ต่างกัน';
       case 'gal_mining_image_mode':
         return 'ภาพการ์ดเกมกัล';
-      case 'gal_mining_image_mode_hint':
-        return 'ฉากเกมกัลแทบไม่ขยับในหนึ่งบรรทัด ดังนั้นภาพนิ่งมักมีขนาดเล็กกว่าและใช้ได้ดีเท่ากัน';
       case 'gal_mining_image_mode_screenshot':
         return 'ภาพหน้าจอ';
       case 'gal_mining_image_mode_video_clip':
@@ -297525,8 +297067,6 @@ extension on _StringsTh {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'รูปแบบภาพหน้าจอการ์ดเกม';
-      case 'gal_mining_still_format_hint':
-        return 'รูปแบบเดียวกับการ์ดวิดีโอ จัดเก็บแยกกัน ภาพจับหน้าต่างเกมเข้ามาเป็น PNG: เก็บ PNG ไม่สูญเสียคุณภาพแต่ใหญ่กว่าหลายเท่า ในขณะที่ JPG ตรงกับการบีบอัดภาพเหล่านี้ก่อนหน้า';
       case 'game_add':
         return 'เพิ่มเกม';
       case 'game_already_added':
@@ -302658,16 +302198,12 @@ extension on _StringsTh {
         return 'แทร็กคำบรรยาย';
       case 'video_mining_animated_format':
         return 'รูปแบบภาพเคลื่อนไหวการ์ดวิดีโอ';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF มีขนาดเล็กกว่า GIF มากในคุณภาพเดียวกัน และระดับคุณภาพสูงสุดรองรับความละเอียดและเฟรมเรตที่สูงกว่า GIF หรือ WebP จะใช้ GIF โดยอัตโนมัติเมื่อตัวเข้ารหัสที่แนบมาไม่สามารถสร้างได้';
       case 'video_mining_image_mode':
         return 'รูปภาพการ์ดวิดีโอ';
       case 'video_mining_image_mode_current_frame':
         return 'ภาพหน้าจอตอนทำการ์ด';
       case 'video_mining_image_mode_gif':
         return 'GIF เคลื่อนไหว (คลิปคำบรรยาย)';
-      case 'video_mining_image_mode_hint':
-        return 'เลือกว่าปกการ์ดวิดีโอจะเป็นแอนิเมชันของคลิปคำบรรยายหรือภาพนิ่ง — และเฟรมไหน';
       case 'video_mining_image_mode_subtitle_start':
         return 'ภาพหน้าจอตอนเริ่มคำบรรยาย';
       case 'video_mining_still_format':
@@ -305443,8 +304979,6 @@ extension on _StringsTr {
         return 'İpucu: önce "Yomitan API sunucusu"nu etkinleştirin ve yukarıda bir API anahtarı ayarlayın, böylece uzantı çalışan bir bağlantıyla otomatik yapılandırılır.';
       case 'browser_extension_mobile_unsupported':
         return 'Mobil tarayıcılar bu uzantıyı yükleyemez. Bunun yerine okuyucu veya video oynatıcıdaki uygulama içi aramayı kullanın.';
-      case 'browser_extension_page_intro':
-        return 'Masaüstünde Chrome veya Edge içinde kelime arayın, altyazıları ayrıştırın ve kart çıkarın. Uzantıyı aşağıdan hazırlayın, ardından tarayıcınıza yükleyin.';
       case 'browser_extension_prepare_button':
         return 'Uzantı dosyalarını hazırla';
       case 'browser_extension_prepare_hint':
@@ -307043,12 +306577,8 @@ extension on _StringsTr {
         return 'İmleç altyazı kutusuna gelene kadar araç çubuğunu gizler, LunaHook tarzı. Gizli gerçekten gizli demek — o pikseller oyuna geri döner.';
       case 'gal_mining_animated_format':
         return 'Oyun kartı animasyon formatı';
-      case 'gal_mining_animated_format_hint':
-        return 'Video kartlarıyla aynı formatlar, ayrı depolanır: bir galgame karesi tek satırda neredeyse hiç hareket etmez, bu nedenle denge farklıdır.';
       case 'gal_mining_image_mode':
         return 'Galgame kart görseli';
-      case 'gal_mining_image_mode_hint':
-        return 'Galgame sahneleri bir satır içinde neredeyse hiç hareket etmez, bu yüzden sabit bir ekran görüntüsü genellikle daha küçüktür ve aynı derecede kullanışlıdır.';
       case 'gal_mining_image_mode_screenshot':
         return 'Ekran görüntüsü';
       case 'gal_mining_image_mode_video_clip':
@@ -307057,8 +306587,6 @@ extension on _StringsTr {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Oyun kartı ekran görüntüsü formatı';
-      case 'gal_mining_still_format_hint':
-        return 'Video kartlarıyla aynı formatlar, ayrı depolanır. Oyun penceresi yakalamaları PNG olarak gelir: PNG\'yi korumak kayıpsızdır ancak birkaç kat daha büyüktür, JPG ise bu ekran görüntülerinin daha önce sıkıştırıldığı şekille eşleşir.';
       case 'game_add':
         return 'Oyun ekle';
       case 'game_already_added':
@@ -312194,16 +311722,12 @@ extension on _StringsTr {
         return 'Altyazı izi';
       case 'video_mining_animated_format':
         return 'Video kartı animasyon formatı';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF, aynı kalitede GIF\'ten çok daha küçüktür ve en yüksek kalite katmanı GIF veya WebP\'den daha yüksek çözünürlük ve kare hızına izin verir. Paketlenmiş kodlayıcı üretemediğinde otomatik olarak GIF\'e geri döner.';
       case 'video_mining_image_mode':
         return 'Video kart görseli';
       case 'video_mining_image_mode_current_frame':
         return 'Kart çıkarma anında ekran görüntüsü';
       case 'video_mining_image_mode_gif':
         return 'Animasyonlu GIF (altyazı klibi)';
-      case 'video_mining_image_mode_hint':
-        return 'Video kart kapağının altyazı klibinin animasyonu mu yoksa tek bir kare mi olduğunu ve hangi kare olduğunu belirler';
       case 'video_mining_image_mode_subtitle_start':
         return 'Altyazı başlangıcında ekran görüntüsü';
       case 'video_mining_still_format':
@@ -314979,8 +314503,6 @@ extension on _StringsVi {
         return 'Mẹo: bật "Máy chủ API Yomitan" và đặt khóa API ở trên trước, để tiện ích mở rộng được tự động cấu hình với kết nối hoạt động.';
       case 'browser_extension_mobile_unsupported':
         return 'Trình duyệt di động không thể tải tiện ích này. Thay vào đó, hãy dùng tra cứu trong ứng dụng ở trình đọc hoặc trình phát video.';
-      case 'browser_extension_page_intro':
-        return 'Trên máy tính, tra từ, phân tích phụ đề và tạo thẻ ngay trong Chrome hoặc Edge. Chuẩn bị tiện ích mở rộng bên dưới, sau đó tải vào trình duyệt.';
       case 'browser_extension_prepare_button':
         return 'Chuẩn bị tệp tiện ích mở rộng';
       case 'browser_extension_prepare_hint':
@@ -316579,12 +316101,8 @@ extension on _StringsVi {
         return 'Ẩn thanh công cụ cho tới khi con trỏ chạm vào khung phụ đề, kiểu LunaHook. Ẩn là ẩn thật — số điểm ảnh đó trả lại cho game.';
       case 'gal_mining_animated_format':
         return 'Định dạng hoạt ảnh thẻ trò chơi';
-      case 'gal_mining_animated_format_hint':
-        return 'Cùng định dạng với thẻ video, lưu riêng: khung hình galgame hầu như không chuyển động trong một dòng thoại, nên sự đánh đổi khác nhau.';
       case 'gal_mining_image_mode':
         return 'Ảnh thẻ galgame';
-      case 'gal_mining_image_mode_hint':
-        return 'Cảnh galgame hầu như không thay đổi trong một dòng, nên ảnh tĩnh thường nhỏ hơn và đủ dùng.';
       case 'gal_mining_image_mode_screenshot':
         return 'Ảnh chụp màn hình';
       case 'gal_mining_image_mode_video_clip':
@@ -316593,8 +316111,6 @@ extension on _StringsVi {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return 'Định dạng ảnh chụp thẻ trò chơi';
-      case 'gal_mining_still_format_hint':
-        return 'Cùng định dạng như thẻ video, lưu riêng. Ảnh chụp cửa sổ trò chơi đến dưới dạng PNG: giữ PNG không mất dữ liệu nhưng lớn gấp nhiều lần, trong khi JPG khớp với cách các ảnh chụp này được nén trước đây.';
       case 'game_add':
         return 'Thêm trò chơi';
       case 'game_already_added':
@@ -321730,16 +321246,12 @@ extension on _StringsVi {
         return 'Bản phụ đề';
       case 'video_mining_animated_format':
         return 'Định dạng hoạt ảnh thẻ video';
-      case 'video_mining_animated_format_hint':
-        return 'AVIF nhỏ hơn GIF rất nhiều ở cùng chất lượng, và chế độ chất lượng cao nhất cho phép độ phân giải và tốc độ khung hình cao hơn GIF hoặc WebP. Tự động chuyển về GIF khi bộ mã hóa đi kèm không tạo được.';
       case 'video_mining_image_mode':
         return 'Hình ảnh thẻ video';
       case 'video_mining_image_mode_current_frame':
         return 'Ảnh chụp tại thời điểm tạo thẻ';
       case 'video_mining_image_mode_gif':
         return 'GIF động (đoạn phụ đề)';
-      case 'video_mining_image_mode_hint':
-        return 'Ảnh bìa thẻ video là ảnh động của đoạn phụ đề hay một khung hình tĩnh — và khung hình nào';
       case 'video_mining_image_mode_subtitle_start':
         return 'Chụp màn hình tại đầu phụ đề';
       case 'video_mining_still_format':
@@ -323198,7 +322710,7 @@ extension on _StringsZhCn {
   dynamic _flatMapFunction(String path) {
     switch (path) {
       case 'about_tmdb_attribution':
-        return 'This application uses TMDB and the TMDB APIs but is not endorsed, certified, or otherwise approved by TMDB.';
+        return '本应用使用 TMDB 及 TMDB API，但未获 TMDB 认可或认证。';
       case 'action_exit':
         return '退出';
       case 'action_favorite':
@@ -323280,7 +322792,7 @@ extension on _StringsZhCn {
       case 'anime_download_generic_hint':
         return '磁力链接';
       case 'anime_download_generic_title':
-        return '粘贴链接下载（书、视频等）';
+        return '粘贴链接下载';
       case 'anime_download_include_subs':
         return '附带字幕';
       case 'anime_download_kind_auto':
@@ -323321,7 +322833,7 @@ extension on _StringsZhCn {
       case 'anime_download_relocate_engine_failed':
         return ({required Object reason}) => '失败，磁盘与库都未改动：${reason}';
       case 'anime_download_relocate_hint':
-        return 'Fushi 通过下载引擎改名/移动，因此不会掐断做种。在资源管理器里改名则永远无法挽回。';
+        return 'Fushi 通过下载引擎改名/移动，因此不会掐断做种。外部改名将无法做种。';
       case 'anime_download_relocate_library_failed':
         return ({required Object reason}) => '文件已移动，但库仍指向旧路径：${reason}';
       case 'anime_download_relocate_move_title':
@@ -323347,7 +322859,7 @@ extension on _StringsZhCn {
       case 'anime_download_search_hint':
         return '番剧名';
       case 'anime_download_search_start_hint':
-        return '在上方搜索作品名，自动匹配种子与字幕。下载不限视频：书籍、漫画、有声书、游戏也会自动入库。';
+        return '在上方搜索作品名，视频会自动匹配字幕。';
       case 'anime_download_sort_date':
         return '发布时间';
       case 'anime_download_sort_seeders':
@@ -323473,7 +322985,7 @@ extension on _StringsZhCn {
         return ({required Object count, required Object size}) =>
             '发现 ${count} 个重复的 Anki 媒体文件（可释放 ${size}）';
       case 'anki_dedup_auto_hint':
-        return '默认关闭。打开后 Fushi 会在启动时扫描（最多每周一次）并先把清单给你看，你不确认就不会删任何文件。';
+        return '默认关闭。打开后 Fushi 会在启动时扫描（最多每周一次）并展示清单。';
       case 'anki_dedup_auto_review':
         return '查看';
       case 'anki_dedup_cancelled':
@@ -323531,7 +323043,7 @@ extension on _StringsZhCn {
       case 'anki_dedup_run':
         return '立即去重';
       case 'anki_dedup_run_hint':
-        return '先扫描并列出将要删除的文件，你确认之后才会真正删除。';
+        return '先扫描并列出将要删除的文件。';
       case 'anki_dedup_scan':
         return '扫描重复项（不做改动）';
       case 'anki_dedup_section':
@@ -323700,7 +323212,7 @@ extension on _StringsZhCn {
       case 'anki_lapis_visual_editor':
         return '可视化编辑';
       case 'anki_lapis_visual_editor_hint':
-        return '预览 Lapis 卡片，选中区域后直接改样式、位置和字段映射，无需手写 CSS。';
+        return '预览并修改 Lapis 卡片。';
       case 'anki_lapis_visual_field_definition_box':
         return '释义框';
       case 'anki_lapis_visual_field_definition_content':
@@ -323923,7 +323435,7 @@ extension on _StringsZhCn {
       case 'app_ui_scale':
         return '界面大小';
       case 'app_ui_scale_hint':
-        return '整体缩放应用界面（文字、图标、控件一起放大缩小），范围 30% 到 300%。大屏设备上界面偏小可调高。';
+        return '整体缩放应用界面（文字、图标、控件一起放大缩小），范围 30% 到 300%。';
       case 'app_version':
         return '应用版本';
       case 'apply_theme':
@@ -324253,7 +323765,7 @@ extension on _StringsZhCn {
       case 'backup_export_failed':
         return ({required Object message}) => '备份导出失败：${message}';
       case 'backup_export_hint':
-        return '选择要包含的内容。阅读数据（进度、统计、设置）始终包含；取消「书籍」可完整排除书籍，取消大文件（本地音频、视频）可缩小备份。';
+        return '选择要包含的内容。';
       case 'backup_export_no_books':
         return '没有可选的书籍';
       case 'backup_export_no_videos':
@@ -324492,8 +324004,6 @@ extension on _StringsZhCn {
         return '提示：请先在上方开启「Yomitan API 服务器」并设置 API 密钥，扩展才能被自动配置为可用连接。';
       case 'browser_extension_mobile_unsupported':
         return '手机浏览器无法加载此扩展，请直接在 app 内阅读器/视频中查词。';
-      case 'browser_extension_page_intro':
-        return '在电脑的 Chrome / Edge 里直接划词查词、解析字幕、一键制卡。先在下面准备扩展文件，再按步骤加载到浏览器。';
       case 'browser_extension_prepare_button':
         return '准备扩展文件';
       case 'browser_extension_prepare_hint':
@@ -324511,7 +324021,7 @@ extension on _StringsZhCn {
       case 'browser_extension_step_dev_mode':
         return '打开右上角的「开发者模式」开关。';
       case 'browser_extension_step_done_auto':
-        return '完成。扩展已自动配置好，装好后会直接连上本应用查词，你不用手动填写任何设置。';
+        return '完成。扩展已自动配置好，装好后会直接连上本应用查词。';
       case 'browser_extension_step_load_unpacked':
         return '点击「加载已解压的扩展程序」。';
       case 'browser_extension_step_open_page':
@@ -324896,7 +324406,7 @@ extension on _StringsZhCn {
         return '跟随系统';
       case 'data_root_unavailable_message':
         return ({required Object path}) =>
-            '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。你的数据是安全的、原封不动留在那里——没有丢失。请点「重试」,等盘就绪即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
+            '你设置的数据位置 ${path} 暂时读不到（盘可能在休眠、被占用或未连接）。请点「重试」,等盘就绪重启Fushi即可用回你的数据；或选择用默认位置临时启动（不会改动你原来的数据）。';
       case 'data_root_unavailable_title':
         return '数据位置未响应';
       case 'data_root_use_default_button':
@@ -326079,12 +325589,8 @@ extension on _StringsZhCn {
         return '平时把功能栏整条隐藏，鼠标移到台词框附近才现身（LunaHook 那样）。隐藏就是真隐藏，那块像素还给游戏。';
       case 'gal_mining_animated_format':
         return '游戏制卡动图格式';
-      case 'gal_mining_animated_format_hint':
-        return '与视频制卡同样的格式，但分开保存：galgame 一句台词内画面基本静止，取舍不同。';
       case 'gal_mining_image_mode':
         return 'Galgame 制卡配图';
-      case 'gal_mining_image_mode_hint':
-        return 'Galgame 一句台词内画面基本不动，静态截图通常更小、信息量一样。';
       case 'gal_mining_image_mode_screenshot':
         return '静态截图';
       case 'gal_mining_image_mode_video_clip':
@@ -326093,8 +325599,6 @@ extension on _StringsZhCn {
         return '从台词出现到制卡这段时间的游戏画面，并混入句子音频。未开始录制或不足 2 帧时降级为动图/截图。';
       case 'gal_mining_still_format':
         return '游戏卡片截图格式';
-      case 'gal_mining_still_format_hint':
-        return '与视频卡片同样的格式，但分开保存。游戏窗口抓图本身是 PNG：选 PNG 无损但大好几倍，选 JPG 与这些截图过去的压缩方式一致。';
       case 'game_add':
         return '添加游戏';
       case 'game_already_added':
@@ -326381,7 +325885,7 @@ extension on _StringsZhCn {
       case 'game_hook_reason_native_loopback_ack_timeout':
         return '音频采集策略未在超时内确认。文本采集不受影响；若缺少游戏内语音可重试一次。';
       case 'game_hook_reason_protocol_mismatch':
-        return '捕获组件与本体版本不一致。组件已内置在 Fushi 里，不需要单独安装：先彻底关掉游戏再重开一次（游戏进程里可能还挂着上一次注入的旧组件）。若重开后仍提示不一致，说明磁盘上的组件比 Fushi 旧——上次更新 Fushi 时游戏正开着，安装器换不掉被占用的组件文件。请关闭所有游戏，然后重新运行一次 Fushi 安装程序。';
+        return '捕获组件与本体版本不一致。请尝试关闭游戏，然后重新运行一次 Fushi。若无法解决请联系开发者。';
       case 'game_hook_reason_ready_timeout':
         return '钩子库未能在超时内加载完成，杀毒软件扫描可能是原因。';
       case 'game_hook_reason_resident_hook_mismatch':
@@ -326828,7 +326332,7 @@ extension on _StringsZhCn {
       case 'game_text_thread_audio_count':
         return ({required Object count}) => '${count} 行有音频';
       case 'game_text_thread_hint':
-        return '像 Luna Translator 一样选择干净的台词线程';
+        return '选择干净的台词线程';
       case 'game_text_thread_unset':
         return '尚未选择线程 · 选一条后开始捕获';
       case 'game_track_auto':
@@ -326842,7 +326346,7 @@ extension on _StringsZhCn {
       case 'game_track_exclude_bgm':
         return '标记为 BGM';
       case 'game_track_exclusion_hint':
-        return '把 BGM/环境音轨标记为排除，自动选源便不会把它当成语音——没有语音的台词也不会再读到 BGM。';
+        return '把 BGM/环境音轨标记为排除，自动选源便不会把它当成语音。';
       case 'game_track_exclusion_title':
         return '排除音轨';
       case 'game_track_preview':
@@ -328115,9 +327619,9 @@ extension on _StringsZhCn {
       case 'mihon_store_zero_extensions':
         return '该仓库返回 0 个扩展，地址可能指向了旧版索引。';
       case 'mining_animated_format_avif':
-        return 'AVIF（体积最小）';
+        return 'AVIF（体积最小，最推荐）';
       case 'mining_animated_format_gif':
-        return 'GIF（兼容性最好）';
+        return 'GIF（兼容性最好，体积最大，无压缩）';
       case 'mining_animated_format_webp':
         return 'WebP（兼容性更广）';
       case 'mining_audio_quality':
@@ -328145,7 +327649,7 @@ extension on _StringsZhCn {
       case 'mining_still_format_jpg':
         return 'JPG（体积更小）';
       case 'mining_still_format_png':
-        return 'PNG（无损）';
+        return 'PNG';
       case 'module_disabled_hint':
         return '该功能模块已在「设置 → 外观 → 功能模块」中关闭。';
       case 'module_downloads_hidden_hint':
@@ -331194,16 +330698,12 @@ extension on _StringsZhCn {
         return '字幕轨';
       case 'video_mining_animated_format':
         return '视频制卡动图格式';
-      case 'video_mining_animated_format_hint':
-        return '同画质下 AVIF 体积远小于 GIF，最高清晰度档也允许比 GIF/WebP 更高的分辨率与帧率。捆绑的编码器产不出时会自动回退 GIF。';
       case 'video_mining_image_mode':
         return '视频卡片图片';
       case 'video_mining_image_mode_current_frame':
         return '制卡时截图';
       case 'video_mining_image_mode_gif':
         return '动图 GIF（字幕片段）';
-      case 'video_mining_image_mode_hint':
-        return '视频卡片封面用字幕区间动图，还是某一帧静态截图（取哪一帧也在这里选）';
       case 'video_mining_image_mode_subtitle_start':
         return '字幕开头截图';
       case 'video_mining_still_format':
@@ -333946,8 +333446,6 @@ extension on _StringsZhHk {
         return '提示：請先在上方開啟「Yomitan API 伺服器」並設定 API 密鑰，擴展才能被自動配置為可用連接。';
       case 'browser_extension_mobile_unsupported':
         return '手機瀏覽器無法載入此擴充功能，請直接在 app 內閱讀器／影片中查詞。';
-      case 'browser_extension_page_intro':
-        return '在電腦的 Chrome / Edge 裡直接劃詞查詞、解析字幕、一鍵製卡。先在下面準備擴展檔案，再按步驟加載到瀏覽器。';
       case 'browser_extension_prepare_button':
         return '準備擴展檔案';
       case 'browser_extension_prepare_hint':
@@ -335534,12 +335032,8 @@ extension on _StringsZhHk {
         return '指標移到字幕框才顯示功能欄（LunaHook 那種）。隱藏就是真的隱藏——那塊像素還給遊戲。';
       case 'gal_mining_animated_format':
         return '遊戲製卡動圖格式';
-      case 'gal_mining_animated_format_hint':
-        return '與影片製卡同樣的格式，但分開保存：galgame 一句台詞內畫面基本靜止，取舍不同。';
       case 'gal_mining_image_mode':
         return 'Galgame 製卡配圖';
-      case 'gal_mining_image_mode_hint':
-        return 'Galgame 一句台詞內畫面基本不動，靜態截圖通常更小、資訊量一樣。';
       case 'gal_mining_image_mode_screenshot':
         return '靜態截圖';
       case 'gal_mining_image_mode_video_clip':
@@ -335548,8 +335042,6 @@ extension on _StringsZhHk {
         return 'Records the game window from the moment the line appears until you mine the card, mixed with the sentence audio. Falls back to an animated image or screenshot when recording has not started or fewer than 2 frames were captured.';
       case 'gal_mining_still_format':
         return '遊戲卡片截圖格式';
-      case 'gal_mining_still_format_hint':
-        return '與影片卡片同樣的格式，但分開保存。遊戲視窗抓圖本身是 PNG：選 PNG 無損但大好幾倍，選 JPG 與這些截圖過去的壓縮方式一致。';
       case 'game_add':
         return '添加遊戲';
       case 'game_already_added':
@@ -340653,16 +340145,12 @@ extension on _StringsZhHk {
         return '字幕軌';
       case 'video_mining_animated_format':
         return '影片製卡動圖格式';
-      case 'video_mining_animated_format_hint':
-        return '同畫質下 AVIF 體積遠小於 GIF，最高清晰度檔也允許比 GIF/WebP 更高的分辨率與幀率。捆綁的編碼器產不出時會自動回退 GIF。';
       case 'video_mining_image_mode':
         return '影片卡片圖片';
       case 'video_mining_image_mode_current_frame':
         return '製卡時截圖';
       case 'video_mining_image_mode_gif':
         return '動圖 GIF（字幕片段）';
-      case 'video_mining_image_mode_hint':
-        return '影片卡片封面用字幕區間動圖，還是某一幀靜態截圖（取哪一幀也在這裡選）';
       case 'video_mining_image_mode_subtitle_start':
         return '字幕開頭截圖';
       case 'video_mining_still_format':
