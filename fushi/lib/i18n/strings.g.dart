@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77996 (4588 per locale)
+/// Strings: 78132 (4596 per locale)
 ///
-/// Built on 2026-09-09 at 23:08 UTC
+/// Built on 2026-09-10 at 00:59 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6363,6 +6363,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  String get mihon_extension_download_count_unknown => 'No download data';
+  String get mihon_extension_bulk_install => 'Bulk install';
+  String get mihon_extension_min_downloads => 'Min downloads';
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -17141,6 +17160,33 @@ class _StringsAr extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -28147,6 +28193,33 @@ class _StringsDe extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -39207,6 +39280,33 @@ class _StringsEs extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -50301,6 +50401,33 @@ class _StringsFr extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -61197,6 +61324,33 @@ class _StringsId extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -72186,6 +72340,33 @@ class _StringsIt extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -82551,6 +82732,33 @@ class _StringsJa extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -92927,6 +93135,33 @@ class _StringsKo extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -103872,6 +104107,33 @@ class _StringsNl extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -114871,6 +115133,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -125847,6 +126136,33 @@ class _StringsRu extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -136622,6 +136938,33 @@ class _StringsTh extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -147513,6 +147856,33 @@ class _StringsTr extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -158375,6 +158745,33 @@ class _StringsVi extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 // Path: <root>
@@ -168352,6 +168749,32 @@ class _StringsZhCn extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       '「${deck}」自动重排失败';
+  @override
+  String get mihon_extension_download_count_unknown => '无下载数据';
+  @override
+  String get mihon_extension_bulk_install => '批量安装';
+  @override
+  String get mihon_extension_min_downloads => '最低下载量';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} 次下载';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      '从该仓库安装 ${count} 个扩展？扩展会运行来自源站的代码。';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      '正在安装 ${current}/${total}：${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
+  @override
+  String get mihon_extension_bulk_install_nothing => '当前筛选下的扩展都已经装过了。';
 }
 
 // Path: <root>
@@ -178401,6 +178824,33 @@ class _StringsZhHk extends _StringsEn {
   @override
   String anki_reposition_auto_failed({required Object deck}) =>
       'Auto reposition failed for ${deck}';
+  @override
+  String get mihon_extension_download_count_unknown => 'No download data';
+  @override
+  String get mihon_extension_bulk_install => 'Bulk install';
+  @override
+  String get mihon_extension_min_downloads => 'Min downloads';
+  @override
+  String mihon_extension_download_count({required Object count}) =>
+      '${count} downloads';
+  @override
+  String mihon_extension_bulk_install_confirm({required Object count}) =>
+      'Install ${count} extensions from this repository? Extensions run code from their sources.';
+  @override
+  String mihon_extension_bulk_install_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Installing ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_bulk_install_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_extension_bulk_install_nothing =>
+      'Every extension matching the current filters is already installed.';
 }
 
 /// Flat map(s) containing all translations.
@@ -187838,6 +188288,31 @@ extension on _StringsEn {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -197270,6 +197745,31 @@ extension on _StringsAr {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -206747,6 +207247,31 @@ extension on _StringsDe {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -216215,6 +216740,31 @@ extension on _StringsEs {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -225692,6 +226242,31 @@ extension on _StringsFr {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -235140,6 +235715,31 @@ extension on _StringsId {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -244610,6 +245210,31 @@ extension on _StringsIt {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -254007,6 +254632,31 @@ extension on _StringsJa {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -263408,6 +264058,31 @@ extension on _StringsKo {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -272871,6 +273546,31 @@ extension on _StringsNl {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -282329,6 +283029,31 @@ extension on _StringsPtBr {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -291794,6 +292519,31 @@ extension on _StringsRu {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -301231,6 +301981,31 @@ extension on _StringsTh {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -310683,6 +311458,31 @@ extension on _StringsTr {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -320129,6 +320929,31 @@ extension on _StringsVi {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
@@ -329493,6 +330318,30 @@ extension on _StringsZhCn {
         return '最后一张卡制好约 30 秒后，自动按词频重排该牌组的新卡。仅 AnkiConnect 可用。';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => '「${deck}」自动重排失败';
+      case 'mihon_extension_download_count_unknown':
+        return '无下载数据';
+      case 'mihon_extension_bulk_install':
+        return '批量安装';
+      case 'mihon_extension_min_downloads':
+        return '最低下载量';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} 次下载';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) => '从该仓库安装 ${count} 个扩展？扩展会运行来自源站的代码。';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            '正在安装 ${current}/${total}：${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
+      case 'mihon_extension_bulk_install_nothing':
+        return '当前筛选下的扩展都已经装过了。';
       default:
         return null;
     }
@@ -338868,6 +339717,31 @@ extension on _StringsZhHk {
         return 'Reposition new cards by frequency about 30 seconds after the last card is mined. AnkiConnect only.';
       case 'anki_reposition_auto_failed':
         return ({required Object deck}) => 'Auto reposition failed for ${deck}';
+      case 'mihon_extension_download_count_unknown':
+        return 'No download data';
+      case 'mihon_extension_bulk_install':
+        return 'Bulk install';
+      case 'mihon_extension_min_downloads':
+        return 'Min downloads';
+      case 'mihon_extension_download_count':
+        return ({required Object count}) => '${count} downloads';
+      case 'mihon_extension_bulk_install_confirm':
+        return ({required Object count}) =>
+            'Install ${count} extensions from this repository? Extensions run code from their sources.';
+      case 'mihon_extension_bulk_install_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Installing ${current}/${total}: ${name}';
+      case 'mihon_extension_bulk_install_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Installed ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_extension_bulk_install_nothing':
+        return 'Every extension matching the current filters is already installed.';
       default:
         return null;
     }
