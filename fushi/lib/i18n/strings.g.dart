@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78574 (4622 per locale)
+/// Strings: 78591 (4623 per locale)
 ///
-/// Built on 2026-09-10 at 08:18 UTC
+/// Built on 2026-09-10 at 08:25 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6328,7 +6328,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_group_content => 'Content';
   String get settings_group_learning => 'Learning';
   String get settings_group_connections => 'Connections';
-  String get settings_group_data => 'Data and devices';
+  String get settings_group_data => 'Data & device';
   String get settings_group_app => 'App';
   String get settings_destination_appearance_interaction =>
       'Appearance and interaction';
@@ -6419,6 +6419,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   String get storage_models_components => 'Models and components';
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -17134,13 +17135,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get settings_group_interface => 'الواجهة';
   @override
-  String get settings_group_content => 'المحتوى';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'التعلّم';
   @override
   String get settings_group_connections => 'الاتصالات';
   @override
-  String get settings_group_data => 'البيانات والأجهزة';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'التطبيق';
   @override
@@ -17287,6 +17288,8 @@ class _StringsAr extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'النماذج والمكوّنات';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -28229,13 +28232,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get settings_group_interface => 'Oberfläche';
   @override
-  String get settings_group_content => 'Inhalte';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Lernen';
   @override
   String get settings_group_connections => 'Verbindungen';
   @override
-  String get settings_group_data => 'Daten und Geräte';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'App';
   @override
@@ -28383,6 +28386,8 @@ class _StringsDe extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Modelle und Komponenten';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -39379,13 +39384,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get settings_group_interface => 'Interfaz';
   @override
-  String get settings_group_content => 'Contenido';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Aprendizaje';
   @override
   String get settings_group_connections => 'Conexiones';
   @override
-  String get settings_group_data => 'Datos y dispositivos';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Aplicación';
   @override
@@ -39533,6 +39538,8 @@ class _StringsEs extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Modelos y componentes';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -50563,13 +50570,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get settings_group_interface => 'Interface';
   @override
-  String get settings_group_content => 'Contenu';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Apprentissage';
   @override
   String get settings_group_connections => 'Connexions';
   @override
-  String get settings_group_data => 'Données et appareils';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Application';
   @override
@@ -50717,6 +50724,8 @@ class _StringsFr extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Modèles et composants';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -61549,13 +61558,13 @@ class _StringsId extends _StringsEn {
   @override
   String get settings_group_interface => 'Antarmuka';
   @override
-  String get settings_group_content => 'Konten';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Pembelajaran';
   @override
   String get settings_group_connections => 'Koneksi';
   @override
-  String get settings_group_data => 'Data dan perangkat';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Aplikasi';
   @override
@@ -61703,6 +61712,8 @@ class _StringsId extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Model dan komponen';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -72627,13 +72638,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get settings_group_interface => 'Interfaccia';
   @override
-  String get settings_group_content => 'Contenuti';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Apprendimento';
   @override
   String get settings_group_connections => 'Connessioni';
   @override
-  String get settings_group_data => 'Dati e dispositivi';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'App';
   @override
@@ -72782,6 +72793,8 @@ class _StringsIt extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Modelli e componenti';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -83086,13 +83099,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get settings_group_interface => 'インターフェース';
   @override
-  String get settings_group_content => 'コンテンツ';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => '学習';
   @override
   String get settings_group_connections => '接続';
   @override
-  String get settings_group_data => 'データとデバイス';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'アプリ';
   @override
@@ -83237,6 +83250,8 @@ class _StringsJa extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'モデルとコンポーネント';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -93551,13 +93566,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get settings_group_interface => '인터페이스';
   @override
-  String get settings_group_content => '콘텐츠';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => '학습';
   @override
   String get settings_group_connections => '연결';
   @override
-  String get settings_group_data => '데이터 및 기기';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => '앱';
   @override
@@ -93702,6 +93717,8 @@ class _StringsKo extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => '모델 및 구성 요소';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -104583,13 +104600,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get settings_group_interface => 'Interface';
   @override
-  String get settings_group_content => 'Inhoud';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Leren';
   @override
   String get settings_group_connections => 'Verbindingen';
   @override
-  String get settings_group_data => 'Gegevens en apparaten';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'App';
   @override
@@ -104737,6 +104754,8 @@ class _StringsNl extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Modellen en componenten';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -115671,13 +115690,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get settings_group_interface => 'Interface';
   @override
-  String get settings_group_content => 'Conteúdo';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Aprendizado';
   @override
   String get settings_group_connections => 'Conexões';
   @override
-  String get settings_group_data => 'Dados e dispositivos';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Aplicativo';
   @override
@@ -115826,6 +115845,8 @@ class _StringsPtBr extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Modelos e componentes';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -126737,13 +126758,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get settings_group_interface => 'Интерфейс';
   @override
-  String get settings_group_content => 'Контент';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Обучение';
   @override
   String get settings_group_connections => 'Подключения';
   @override
-  String get settings_group_data => 'Данные и устройства';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Приложение';
   @override
@@ -126892,6 +126913,8 @@ class _StringsRu extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Модели и компоненты';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -137603,13 +137626,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get settings_group_interface => 'อินเทอร์เฟซ';
   @override
-  String get settings_group_content => 'เนื้อหา';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'การเรียนรู้';
   @override
   String get settings_group_connections => 'การเชื่อมต่อ';
   @override
-  String get settings_group_data => 'ข้อมูลและอุปกรณ์';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'แอป';
   @override
@@ -137757,6 +137780,8 @@ class _StringsTh extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'โมเดลและส่วนประกอบ';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -148584,13 +148609,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get settings_group_interface => 'Arayüz';
   @override
-  String get settings_group_content => 'İçerik';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Öğrenme';
   @override
   String get settings_group_connections => 'Bağlantılar';
   @override
-  String get settings_group_data => 'Veriler ve cihazlar';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Uygulama';
   @override
@@ -148738,6 +148763,8 @@ class _StringsTr extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Modeller ve bileşenler';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -159536,13 +159563,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get settings_group_interface => 'Giao diện';
   @override
-  String get settings_group_content => 'Nội dung';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Học tập';
   @override
   String get settings_group_connections => 'Kết nối';
   @override
-  String get settings_group_data => 'Dữ liệu và thiết bị';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Ứng dụng';
   @override
@@ -159690,6 +159717,8 @@ class _StringsVi extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => 'Mô hình và thành phần';
+  @override
+  String get settings_group_tools => 'Tools';
 }
 
 // Path: <root>
@@ -169740,6 +169769,8 @@ class _StringsZhCn extends _StringsEn {
       '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
   @override
   String get storage_models_components => '模型与组件';
+  @override
+  String get settings_group_tools => '工具';
 }
 
 // Path: <root>
@@ -179878,6 +179909,8 @@ class _StringsZhHk extends _StringsEn {
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get storage_models_components => '模型與元件';
+  @override
+  String get settings_group_tools => '工具';
 }
 
 /// Flat map(s) containing all translations.
@@ -189268,7 +189301,7 @@ extension on _StringsEn {
       case 'settings_group_connections':
         return 'Connections';
       case 'settings_group_data':
-        return 'Data and devices';
+        return 'Data & device';
       case 'settings_group_app':
         return 'App';
       case 'settings_destination_appearance_interaction':
@@ -189392,6 +189425,8 @@ extension on _StringsEn {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Models and components';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -198771,13 +198806,13 @@ extension on _StringsAr {
       case 'settings_group_interface':
         return 'الواجهة';
       case 'settings_group_content':
-        return 'المحتوى';
+        return 'Content';
       case 'settings_group_learning':
         return 'التعلّم';
       case 'settings_group_connections':
         return 'الاتصالات';
       case 'settings_group_data':
-        return 'البيانات والأجهزة';
+        return 'Data & device';
       case 'settings_group_app':
         return 'التطبيق';
       case 'settings_destination_appearance_interaction':
@@ -198901,6 +198936,8 @@ extension on _StringsAr {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'النماذج والمكوّنات';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -208325,13 +208362,13 @@ extension on _StringsDe {
       case 'settings_group_interface':
         return 'Oberfläche';
       case 'settings_group_content':
-        return 'Inhalte';
+        return 'Content';
       case 'settings_group_learning':
         return 'Lernen';
       case 'settings_group_connections':
         return 'Verbindungen';
       case 'settings_group_data':
-        return 'Daten und Geräte';
+        return 'Data & device';
       case 'settings_group_app':
         return 'App';
       case 'settings_destination_appearance_interaction':
@@ -208455,6 +208492,8 @@ extension on _StringsDe {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Modelle und Komponenten';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -217870,13 +217909,13 @@ extension on _StringsEs {
       case 'settings_group_interface':
         return 'Interfaz';
       case 'settings_group_content':
-        return 'Contenido';
+        return 'Content';
       case 'settings_group_learning':
         return 'Aprendizaje';
       case 'settings_group_connections':
         return 'Conexiones';
       case 'settings_group_data':
-        return 'Datos y dispositivos';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Aplicación';
       case 'settings_destination_appearance_interaction':
@@ -218000,6 +218039,8 @@ extension on _StringsEs {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Modelos y componentes';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -227424,13 +227465,13 @@ extension on _StringsFr {
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
-        return 'Contenu';
+        return 'Content';
       case 'settings_group_learning':
         return 'Apprentissage';
       case 'settings_group_connections':
         return 'Connexions';
       case 'settings_group_data':
-        return 'Données et appareils';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Application';
       case 'settings_destination_appearance_interaction':
@@ -227554,6 +227595,8 @@ extension on _StringsFr {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Modèles et composants';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -236949,13 +236992,13 @@ extension on _StringsId {
       case 'settings_group_interface':
         return 'Antarmuka';
       case 'settings_group_content':
-        return 'Konten';
+        return 'Content';
       case 'settings_group_learning':
         return 'Pembelajaran';
       case 'settings_group_connections':
         return 'Koneksi';
       case 'settings_group_data':
-        return 'Data dan perangkat';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Aplikasi';
       case 'settings_destination_appearance_interaction':
@@ -237079,6 +237122,8 @@ extension on _StringsId {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Model dan komponen';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -246496,13 +246541,13 @@ extension on _StringsIt {
       case 'settings_group_interface':
         return 'Interfaccia';
       case 'settings_group_content':
-        return 'Contenuti';
+        return 'Content';
       case 'settings_group_learning':
         return 'Apprendimento';
       case 'settings_group_connections':
         return 'Connessioni';
       case 'settings_group_data':
-        return 'Dati e dispositivi';
+        return 'Data & device';
       case 'settings_group_app':
         return 'App';
       case 'settings_destination_appearance_interaction':
@@ -246626,6 +246671,8 @@ extension on _StringsIt {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Modelli e componenti';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -255970,13 +256017,13 @@ extension on _StringsJa {
       case 'settings_group_interface':
         return 'インターフェース';
       case 'settings_group_content':
-        return 'コンテンツ';
+        return 'Content';
       case 'settings_group_learning':
         return '学習';
       case 'settings_group_connections':
         return '接続';
       case 'settings_group_data':
-        return 'データとデバイス';
+        return 'Data & device';
       case 'settings_group_app':
         return 'アプリ';
       case 'settings_destination_appearance_interaction':
@@ -256100,6 +256147,8 @@ extension on _StringsJa {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'モデルとコンポーネント';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -265448,13 +265497,13 @@ extension on _StringsKo {
       case 'settings_group_interface':
         return '인터페이스';
       case 'settings_group_content':
-        return '콘텐츠';
+        return 'Content';
       case 'settings_group_learning':
         return '학습';
       case 'settings_group_connections':
         return '연결';
       case 'settings_group_data':
-        return '데이터 및 기기';
+        return 'Data & device';
       case 'settings_group_app':
         return '앱';
       case 'settings_destination_appearance_interaction':
@@ -265578,6 +265627,8 @@ extension on _StringsKo {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return '모델 및 구성 요소';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -274988,13 +275039,13 @@ extension on _StringsNl {
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
-        return 'Inhoud';
+        return 'Content';
       case 'settings_group_learning':
         return 'Leren';
       case 'settings_group_connections':
         return 'Verbindingen';
       case 'settings_group_data':
-        return 'Gegevens en apparaten';
+        return 'Data & device';
       case 'settings_group_app':
         return 'App';
       case 'settings_destination_appearance_interaction':
@@ -275118,6 +275169,8 @@ extension on _StringsNl {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Modellen en componenten';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -284523,13 +284576,13 @@ extension on _StringsPtBr {
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
-        return 'Conteúdo';
+        return 'Content';
       case 'settings_group_learning':
         return 'Aprendizado';
       case 'settings_group_connections':
         return 'Conexões';
       case 'settings_group_data':
-        return 'Dados e dispositivos';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Aplicativo';
       case 'settings_destination_appearance_interaction':
@@ -284653,6 +284706,8 @@ extension on _StringsPtBr {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Modelos e componentes';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -294065,13 +294120,13 @@ extension on _StringsRu {
       case 'settings_group_interface':
         return 'Интерфейс';
       case 'settings_group_content':
-        return 'Контент';
+        return 'Content';
       case 'settings_group_learning':
         return 'Обучение';
       case 'settings_group_connections':
         return 'Подключения';
       case 'settings_group_data':
-        return 'Данные и устройства';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Приложение';
       case 'settings_destination_appearance_interaction':
@@ -294195,6 +294250,8 @@ extension on _StringsRu {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Модели и компоненты';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -303579,13 +303636,13 @@ extension on _StringsTh {
       case 'settings_group_interface':
         return 'อินเทอร์เฟซ';
       case 'settings_group_content':
-        return 'เนื้อหา';
+        return 'Content';
       case 'settings_group_learning':
         return 'การเรียนรู้';
       case 'settings_group_connections':
         return 'การเชื่อมต่อ';
       case 'settings_group_data':
-        return 'ข้อมูลและอุปกรณ์';
+        return 'Data & device';
       case 'settings_group_app':
         return 'แอป';
       case 'settings_destination_appearance_interaction':
@@ -303709,6 +303766,8 @@ extension on _StringsTh {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'โมเดลและส่วนประกอบ';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -313108,13 +313167,13 @@ extension on _StringsTr {
       case 'settings_group_interface':
         return 'Arayüz';
       case 'settings_group_content':
-        return 'İçerik';
+        return 'Content';
       case 'settings_group_learning':
         return 'Öğrenme';
       case 'settings_group_connections':
         return 'Bağlantılar';
       case 'settings_group_data':
-        return 'Veriler ve cihazlar';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Uygulama';
       case 'settings_destination_appearance_interaction':
@@ -313238,6 +313297,8 @@ extension on _StringsTr {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Modeller ve bileşenler';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -322631,13 +322692,13 @@ extension on _StringsVi {
       case 'settings_group_interface':
         return 'Giao diện';
       case 'settings_group_content':
-        return 'Nội dung';
+        return 'Content';
       case 'settings_group_learning':
         return 'Học tập';
       case 'settings_group_connections':
         return 'Kết nối';
       case 'settings_group_data':
-        return 'Dữ liệu và thiết bị';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Ứng dụng';
       case 'settings_destination_appearance_interaction':
@@ -322761,6 +322822,8 @@ extension on _StringsVi {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return 'Mô hình và thành phần';
+      case 'settings_group_tools':
+        return 'Tools';
       default:
         return null;
     }
@@ -332201,6 +332264,8 @@ extension on _StringsZhCn {
         return '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
       case 'storage_models_components':
         return '模型与组件';
+      case 'settings_group_tools':
+        return '工具';
       default:
         return null;
     }
@@ -341653,6 +341718,8 @@ extension on _StringsZhHk {
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'storage_models_components':
         return '模型與元件';
+      case 'settings_group_tools':
+        return '工具';
       default:
         return null;
     }
