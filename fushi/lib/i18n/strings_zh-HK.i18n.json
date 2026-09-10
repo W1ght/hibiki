@@ -4522,5 +4522,8 @@
   "yomitan_port_kill_self_instance": "該進程是本應用的另一個正在運行的實例。",
   "dictionary_files_missing": "Dictionary files are missing. Please import the dictionary again.",
   "auto_add_char_position_to_tags": "自動將製卡位置加入標籤",
-  "auto_add_char_position_to_tags_hint": "為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。"
+  "auto_add_char_position_to_tags_hint": "為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。",
+  "popup_ctx_edit_start": "Edit sentence",
+  "popup_ctx_edit_confirm": "Confirm edit",
+  "popup_ctx_edit_cancel": "Discard edit"
 }
