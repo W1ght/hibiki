@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78132 (4596 per locale)
+/// Strings: 78149 (4597 per locale)
 ///
-/// Built on 2026-09-10 at 00:59 UTC
+/// Built on 2026-09-10 at 01:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -716,7 +716,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Download failed: ${error}';
   String get asr_models_section => 'Speech recognition models';
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'On-device speech recognition models. Download only the languages you need.';
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
   String asr_models_status_partial(
@@ -6382,6 +6382,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Installed ${installed}, skipped ${skipped}, failed ${failed}';
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  String get storage_models_components => 'Models and components';
 }
 
 // Path: <root>
@@ -7296,7 +7297,7 @@ class _StringsAr extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'نماذج التعرّف على الكلام على الجهاز. نزّل اللغات التي تحتاجها فقط.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -17187,6 +17188,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'النماذج والمكوّنات';
 }
 
 // Path: <root>
@@ -18119,7 +18122,7 @@ class _StringsDe extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modelle zur Spracherkennung auf dem Gerät. Lade nur die benötigten Sprachen herunter.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -28220,6 +28223,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Modelle und Komponenten';
 }
 
 // Path: <root>
@@ -29155,7 +29160,7 @@ class _StringsEs extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modelos de reconocimiento de voz en el dispositivo. Descarga solo los idiomas que necesites.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -39307,6 +39312,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Modelos y componentes';
 }
 
 // Path: <root>
@@ -40244,7 +40251,7 @@ class _StringsFr extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modèles de reconnaissance vocale sur l’appareil. Téléchargez uniquement les langues dont vous avez besoin.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -50428,6 +50435,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Modèles et composants';
 }
 
 // Path: <root>
@@ -51355,7 +51364,7 @@ class _StringsId extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Model pengenalan ucapan di perangkat. Unduh hanya bahasa yang Anda perlukan.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -61351,6 +61360,8 @@ class _StringsId extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Model dan komponen';
 }
 
 // Path: <root>
@@ -62280,7 +62291,7 @@ class _StringsIt extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modelli di riconoscimento vocale sul dispositivo. Scarica solo le lingue che ti servono.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -72367,6 +72378,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Modelli e componenti';
 }
 
 // Path: <root>
@@ -73255,7 +73268,7 @@ class _StringsJa extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      '端末内で動作する音声認識モデルです。必要な言語だけダウンロードしてください。';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -82759,6 +82772,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'モデルとコンポーネント';
 }
 
 // Path: <root>
@@ -83642,8 +83657,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
-  String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+  String get asr_models_section_summary => '기기 내 음성 인식 모델입니다. 필요한 언어만 다운로드하세요.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -93162,6 +93176,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => '모델 및 구성 요소';
 }
 
 // Path: <root>
@@ -94087,7 +94103,7 @@ class _StringsNl extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Spraakherkenningsmodellen voor gebruik op het apparaat. Download alleen de talen die je nodig hebt.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -104134,6 +104150,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Modellen en componenten';
 }
 
 // Path: <root>
@@ -105070,7 +105088,7 @@ class _StringsPtBr extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modelos de reconhecimento de fala no dispositivo. Baixe apenas os idiomas de que precisa.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -115160,6 +115178,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Modelos e componentes';
 }
 
 // Path: <root>
@@ -116085,7 +116105,7 @@ class _StringsRu extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Модели распознавания речи на устройстве. Скачивайте только нужные языки.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -126163,6 +126183,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Модели и компоненты';
 }
 
 // Path: <root>
@@ -127073,7 +127095,7 @@ class _StringsTh extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'โมเดลรู้จำเสียงพูดบนอุปกรณ์ ดาวน์โหลดเฉพาะภาษาที่คุณต้องการ';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -136965,6 +136987,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'โมเดลและส่วนประกอบ';
 }
 
 // Path: <root>
@@ -137886,7 +137910,7 @@ class _StringsTr extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Cihaz üzerinde çalışan konuşma tanıma modelleri. Yalnızca ihtiyacınız olan dilleri indirin.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -147883,6 +147907,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Modeller ve bileşenler';
 }
 
 // Path: <root>
@@ -148807,7 +148833,7 @@ class _StringsVi extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Mô hình nhận dạng giọng nói trên thiết bị. Chỉ tải xuống những ngôn ngữ bạn cần.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -158772,6 +158798,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => 'Mô hình và thành phần';
 }
 
 // Path: <root>
@@ -159621,7 +159649,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get asr_models_section => '语音识别模型';
   @override
-  String get asr_models_section_summary => '有声书设备端转录用的模型，只下载你需要的语言。';
+  String get asr_models_section_summary => '本机语音识别模型，只下载你需要的语言。';
   @override
   String asr_models_status_missing({required Object size}) =>
       '未下载 · 需要 ${size}';
@@ -168775,6 +168803,8 @@ class _StringsZhCn extends _StringsEn {
       '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
   @override
   String get mihon_extension_bulk_install_nothing => '当前筛选下的扩展都已经装过了。';
+  @override
+  String get storage_models_components => '模型与组件';
 }
 
 // Path: <root>
@@ -169634,8 +169664,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
-  String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+  String get asr_models_section_summary => '本機語音辨識模型，只下載你需要的語言。';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -178851,6 +178880,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_extension_bulk_install_nothing =>
       'Every extension matching the current filters is already installed.';
+  @override
+  String get storage_models_components => '模型與元件';
 }
 
 /// Flat map(s) containing all translations.
@@ -179613,7 +179644,7 @@ extension on _StringsEn {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'On-device speech recognition models. Download only the languages you need.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -188313,6 +188344,8 @@ extension on _StringsEn {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Models and components';
       default:
         return null;
     }
@@ -189075,7 +189108,7 @@ extension on _StringsAr {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'نماذج التعرّف على الكلام على الجهاز. نزّل اللغات التي تحتاجها فقط.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -197770,6 +197803,8 @@ extension on _StringsAr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'النماذج والمكوّنات';
       default:
         return null;
     }
@@ -198538,7 +198573,7 @@ extension on _StringsDe {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modelle zur Spracherkennung auf dem Gerät. Lade nur die benötigten Sprachen herunter.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -207272,6 +207307,8 @@ extension on _StringsDe {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Modelle und Komponenten';
       default:
         return null;
     }
@@ -208035,7 +208072,7 @@ extension on _StringsEs {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modelos de reconocimiento de voz en el dispositivo. Descarga solo los idiomas que necesites.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -216765,6 +216802,8 @@ extension on _StringsEs {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Modelos y componentes';
       default:
         return null;
     }
@@ -217530,7 +217569,7 @@ extension on _StringsFr {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modèles de reconnaissance vocale sur l’appareil. Téléchargez uniquement les langues dont vous avez besoin.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -226267,6 +226306,8 @@ extension on _StringsFr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Modèles et composants';
       default:
         return null;
     }
@@ -227031,7 +227072,7 @@ extension on _StringsId {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Model pengenalan ucapan di perangkat. Unduh hanya bahasa yang Anda perlukan.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -235740,6 +235781,8 @@ extension on _StringsId {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Model dan komponen';
       default:
         return null;
     }
@@ -236504,7 +236547,7 @@ extension on _StringsIt {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modelli di riconoscimento vocale sul dispositivo. Scarica solo le lingue che ti servono.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -245235,6 +245278,8 @@ extension on _StringsIt {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Modelli e componenti';
       default:
         return null;
     }
@@ -245994,7 +246039,7 @@ extension on _StringsJa {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return '端末内で動作する音声認識モデルです。必要な言語だけダウンロードしてください。';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -254657,6 +254702,8 @@ extension on _StringsJa {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'モデルとコンポーネント';
       default:
         return null;
     }
@@ -255415,7 +255462,7 @@ extension on _StringsKo {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return '기기 내 음성 인식 모델입니다. 필요한 언어만 다운로드하세요.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -264083,6 +264130,8 @@ extension on _StringsKo {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return '모델 및 구성 요소';
       default:
         return null;
     }
@@ -264847,7 +264896,7 @@ extension on _StringsNl {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Spraakherkenningsmodellen voor gebruik op het apparaat. Download alleen de talen die je nodig hebt.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -273571,6 +273620,8 @@ extension on _StringsNl {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Modellen en componenten';
       default:
         return null;
     }
@@ -274335,7 +274386,7 @@ extension on _StringsPtBr {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modelos de reconhecimento de fala no dispositivo. Baixe apenas os idiomas de que precisa.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -283054,6 +283105,8 @@ extension on _StringsPtBr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Modelos e componentes';
       default:
         return null;
     }
@@ -283820,7 +283873,7 @@ extension on _StringsRu {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Модели распознавания речи на устройстве. Скачивайте только нужные языки.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -292544,6 +292597,8 @@ extension on _StringsRu {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Модели и компоненты';
       default:
         return null;
     }
@@ -293306,7 +293361,7 @@ extension on _StringsTh {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'โมเดลรู้จำเสียงพูดบนอุปกรณ์ ดาวน์โหลดเฉพาะภาษาที่คุณต้องการ';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -302006,6 +302061,8 @@ extension on _StringsTh {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'โมเดลและส่วนประกอบ';
       default:
         return null;
     }
@@ -302771,7 +302828,7 @@ extension on _StringsTr {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Cihaz üzerinde çalışan konuşma tanıma modelleri. Yalnızca ihtiyacınız olan dilleri indirin.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -311483,6 +311540,8 @@ extension on _StringsTr {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Modeller ve bileşenler';
       default:
         return null;
     }
@@ -312247,7 +312306,7 @@ extension on _StringsVi {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Mô hình nhận dạng giọng nói trên thiết bị. Chỉ tải xuống những ngôn ngữ bạn cần.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -320954,6 +321013,8 @@ extension on _StringsVi {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return 'Mô hình và thành phần';
       default:
         return null;
     }
@@ -321709,7 +321770,7 @@ extension on _StringsZhCn {
       case 'asr_models_section':
         return '语音识别模型';
       case 'asr_models_section_summary':
-        return '有声书设备端转录用的模型，只下载你需要的语言。';
+        return '本机语音识别模型，只下载你需要的语言。';
       case 'asr_models_status_missing':
         return ({required Object size}) => '未下载 · 需要 ${size}';
       case 'asr_models_status_partial':
@@ -330342,6 +330403,8 @@ extension on _StringsZhCn {
             '已安装 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
       case 'mihon_extension_bulk_install_nothing':
         return '当前筛选下的扩展都已经装过了。';
+      case 'storage_models_components':
+        return '模型与组件';
       default:
         return null;
     }
@@ -331098,7 +331161,7 @@ extension on _StringsZhHk {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return '本機語音辨識模型，只下載你需要的語言。';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -339742,6 +339805,8 @@ extension on _StringsZhHk {
             'Installed ${installed}, skipped ${skipped}, failed ${failed}';
       case 'mihon_extension_bulk_install_nothing':
         return 'Every extension matching the current filters is already installed.';
+      case 'storage_models_components':
+        return '模型與元件';
       default:
         return null;
     }
