@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78166 (4598 per locale)
+/// Strings: 78540 (4620 per locale)
 ///
-/// Built on 2026-09-10 at 02:24 UTC
+/// Built on 2026-09-10 at 02:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6385,6 +6385,39 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_dismiss_animation => 'Popup close animation';
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  String get audiobook_transcribe_model_label => 'Model';
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -17195,6 +17228,61 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -28233,6 +28321,61 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -39325,6 +39468,61 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -50451,6 +50649,61 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -61379,6 +61632,61 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -72400,6 +72708,61 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -82797,6 +83160,61 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -93205,6 +93623,61 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -104182,6 +104655,61 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -115213,6 +115741,61 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -126221,6 +126804,61 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -137028,6 +137666,61 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -147951,6 +148644,61 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -158845,6 +159593,61 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 // Path: <root>
@@ -168853,6 +169656,57 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       '滑动关闭查词弹窗时播放滑出动画。关掉则瞬间关闭（墨水屏模式下始终关闭）';
+  @override
+  String get audiobook_transcribe_model_label => '模型';
+  @override
+  String get audiobook_transcribe_model_fit_light => '轻量 · 手机和桌面都合适';
+  @override
+  String get audiobook_transcribe_model_fit_desktop => '大模型 · 建议桌面（有独显更好）';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile => '大模型 · 手机上能跑，但很慢';
+  @override
+  String get audiobook_transcribe_model_default_badge => '默认';
+  @override
+  String get audiobook_transcribe_model_custom_badge => '自带';
+  @override
+  String get audiobook_transcribe_model_custom_add => '手动指定模型…';
+  @override
+  String get audiobook_transcribe_model_custom_title => '手动指定模型';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      '选一个放着 sherpa-onnx 导出模型的文件夹（encoder / decoder / joiner 三件套，或单个 CTC 模型，外加 tokens.txt）。文件留在原处，不会复制也不会下载。';
+  @override
+  String get audiobook_transcribe_model_custom_pick => '选择文件夹';
+  @override
+  String get audiobook_transcribe_model_custom_name => '模型名称';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank 记号';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'tokens.txt 里 blank 的记号名。sherpa-onnx 导出一般是 <blk>，Omnilingual 是 <s>。写错会让整篇转录变成乱码。';
+  @override
+  String get audiobook_transcribe_model_custom_context => 'Decoder 上下文长度';
+  @override
+  String get audiobook_transcribe_model_custom_index => '索引张量整型';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => '高级';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      '这个文件夹里没有 tokens.txt。';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      '这个文件夹里没有 .onnx 模型文件。';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      '找到了 encoder，但旁边没有 decoder / joiner。';
+  @override
+  String get audiobook_transcribe_model_custom_detach => '移除接入';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      '只是从模型列表里移除，你的文件不会被删除。';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      '已接入 ${name}';
 }
 
 // Path: <root>
@@ -178934,6 +179788,61 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_dismiss_animation_hint =>
       'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+  @override
+  String get audiobook_transcribe_model_label => 'Model';
+  @override
+  String get audiobook_transcribe_model_fit_light =>
+      'Light — fine on phones and desktop';
+  @override
+  String get audiobook_transcribe_model_fit_desktop =>
+      'Large — best on a desktop GPU';
+  @override
+  String get audiobook_transcribe_model_fit_heavy_mobile =>
+      'Large — runs on phones, but slowly';
+  @override
+  String get audiobook_transcribe_model_default_badge => 'Default';
+  @override
+  String get audiobook_transcribe_model_custom_badge => 'Added by you';
+  @override
+  String get audiobook_transcribe_model_custom_add => 'Add a local model…';
+  @override
+  String get audiobook_transcribe_model_custom_title => 'Add a local model';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+  @override
+  String get audiobook_transcribe_model_custom_pick => 'Choose folder';
+  @override
+  String get audiobook_transcribe_model_custom_name => 'Model name';
+  @override
+  String get audiobook_transcribe_model_custom_blank => 'Blank token';
+  @override
+  String get audiobook_transcribe_model_custom_blank_hint =>
+      'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+  @override
+  String get audiobook_transcribe_model_custom_context =>
+      'Decoder context size';
+  @override
+  String get audiobook_transcribe_model_custom_index => 'Index tensor type';
+  @override
+  String get audiobook_transcribe_model_custom_advanced => 'Advanced';
+  @override
+  String get audiobook_transcribe_model_custom_error_tokens =>
+      'No tokens.txt in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_model =>
+      'No .onnx model file in that folder.';
+  @override
+  String get audiobook_transcribe_model_custom_error_transducer =>
+      'Found an encoder but no decoder / joiner next to it.';
+  @override
+  String get audiobook_transcribe_model_custom_detach => 'Remove from list';
+  @override
+  String get audiobook_transcribe_model_custom_detach_hint =>
+      'Only removes it from the model list. Your files are not deleted.';
+  @override
+  String audiobook_transcribe_model_custom_added({required Object name}) =>
+      'Added ${name}';
 }
 
 /// Flat map(s) containing all translations.
@@ -188400,6 +189309,50 @@ extension on _StringsEn {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -197861,6 +198814,50 @@ extension on _StringsAr {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -207367,6 +208364,50 @@ extension on _StringsDe {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -216864,6 +217905,50 @@ extension on _StringsEs {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -226370,6 +227455,50 @@ extension on _StringsFr {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -235847,6 +236976,50 @@ extension on _StringsId {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -245346,6 +246519,50 @@ extension on _StringsIt {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -254772,6 +255989,50 @@ extension on _StringsJa {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -264202,6 +265463,50 @@ extension on _StringsKo {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -273694,6 +274999,50 @@ extension on _StringsNl {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -283181,6 +284530,50 @@ extension on _StringsPtBr {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -292675,6 +294068,50 @@ extension on _StringsRu {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -302141,6 +303578,50 @@ extension on _StringsTh {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -311622,6 +313103,50 @@ extension on _StringsTr {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -321097,6 +322622,50 @@ extension on _StringsVi {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
@@ -330489,6 +332058,50 @@ extension on _StringsZhCn {
         return '弹窗关闭动画';
       case 'popup_dismiss_animation_hint':
         return '滑动关闭查词弹窗时播放滑出动画。关掉则瞬间关闭（墨水屏模式下始终关闭）';
+      case 'audiobook_transcribe_model_label':
+        return '模型';
+      case 'audiobook_transcribe_model_fit_light':
+        return '轻量 · 手机和桌面都合适';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return '大模型 · 建议桌面（有独显更好）';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return '大模型 · 手机上能跑，但很慢';
+      case 'audiobook_transcribe_model_default_badge':
+        return '默认';
+      case 'audiobook_transcribe_model_custom_badge':
+        return '自带';
+      case 'audiobook_transcribe_model_custom_add':
+        return '手动指定模型…';
+      case 'audiobook_transcribe_model_custom_title':
+        return '手动指定模型';
+      case 'audiobook_transcribe_model_custom_intro':
+        return '选一个放着 sherpa-onnx 导出模型的文件夹（encoder / decoder / joiner 三件套，或单个 CTC 模型，外加 tokens.txt）。文件留在原处，不会复制也不会下载。';
+      case 'audiobook_transcribe_model_custom_pick':
+        return '选择文件夹';
+      case 'audiobook_transcribe_model_custom_name':
+        return '模型名称';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank 记号';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'tokens.txt 里 blank 的记号名。sherpa-onnx 导出一般是 <blk>，Omnilingual 是 <s>。写错会让整篇转录变成乱码。';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder 上下文长度';
+      case 'audiobook_transcribe_model_custom_index':
+        return '索引张量整型';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return '高级';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return '这个文件夹里没有 tokens.txt。';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return '这个文件夹里没有 .onnx 模型文件。';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return '找到了 encoder，但旁边没有 decoder / joiner。';
+      case 'audiobook_transcribe_model_custom_detach':
+        return '移除接入';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return '只是从模型列表里移除，你的文件不会被删除。';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => '已接入 ${name}';
       default:
         return null;
     }
@@ -339893,6 +341506,50 @@ extension on _StringsZhHk {
         return 'Popup close animation';
       case 'popup_dismiss_animation_hint':
         return 'Play a slide-out animation when a lookup popup is closed by swiping. Turn it off to close instantly (always off in e-ink mode).';
+      case 'audiobook_transcribe_model_label':
+        return 'Model';
+      case 'audiobook_transcribe_model_fit_light':
+        return 'Light — fine on phones and desktop';
+      case 'audiobook_transcribe_model_fit_desktop':
+        return 'Large — best on a desktop GPU';
+      case 'audiobook_transcribe_model_fit_heavy_mobile':
+        return 'Large — runs on phones, but slowly';
+      case 'audiobook_transcribe_model_default_badge':
+        return 'Default';
+      case 'audiobook_transcribe_model_custom_badge':
+        return 'Added by you';
+      case 'audiobook_transcribe_model_custom_add':
+        return 'Add a local model…';
+      case 'audiobook_transcribe_model_custom_title':
+        return 'Add a local model';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
+      case 'audiobook_transcribe_model_custom_pick':
+        return 'Choose folder';
+      case 'audiobook_transcribe_model_custom_name':
+        return 'Model name';
+      case 'audiobook_transcribe_model_custom_blank':
+        return 'Blank token';
+      case 'audiobook_transcribe_model_custom_blank_hint':
+        return 'The blank symbol in tokens.txt. sherpa-onnx exports use <blk>; Omnilingual uses <s>. Getting it wrong garbles the whole transcript.';
+      case 'audiobook_transcribe_model_custom_context':
+        return 'Decoder context size';
+      case 'audiobook_transcribe_model_custom_index':
+        return 'Index tensor type';
+      case 'audiobook_transcribe_model_custom_advanced':
+        return 'Advanced';
+      case 'audiobook_transcribe_model_custom_error_tokens':
+        return 'No tokens.txt in that folder.';
+      case 'audiobook_transcribe_model_custom_error_model':
+        return 'No .onnx model file in that folder.';
+      case 'audiobook_transcribe_model_custom_error_transducer':
+        return 'Found an encoder but no decoder / joiner next to it.';
+      case 'audiobook_transcribe_model_custom_detach':
+        return 'Remove from list';
+      case 'audiobook_transcribe_model_custom_detach_hint':
+        return 'Only removes it from the model list. Your files are not deleted.';
+      case 'audiobook_transcribe_model_custom_added':
+        return ({required Object name}) => 'Added ${name}';
       default:
         return null;
     }
