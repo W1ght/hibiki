@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79475 (4675 per locale)
+/// Strings: 79781 (4693 per locale)
 ///
-/// Built on 2026-09-10 at 13:18 UTC
+/// Built on 2026-09-10 at 13:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6490,6 +6490,37 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  String get audiobook_transcribe_run_location => 'Run on';
+  String get audiobook_transcribe_run_local => 'This device';
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  String get download_target_label => 'Download on';
+  String get download_target_local => 'This device';
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  String get subscription_run_location => 'Run on';
+  String get subscription_run_local => 'This device';
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
@@ -17483,6 +17514,55 @@ class _StringsAr extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
@@ -28705,6 +28785,55 @@ class _StringsDe extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
@@ -39981,6 +40110,55 @@ class _StringsEs extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
@@ -51292,6 +51470,55 @@ class _StringsFr extends _StringsEn {
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
   @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
+  @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
@@ -62403,6 +62630,55 @@ class _StringsId extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
@@ -73609,6 +73885,55 @@ class _StringsIt extends _StringsEn {
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
   @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
+  @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
@@ -84190,6 +84515,55 @@ class _StringsJa extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
@@ -94782,6 +95156,55 @@ class _StringsKo extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
@@ -105943,6 +106366,55 @@ class _StringsNl extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
@@ -117159,6 +117631,55 @@ class _StringsPtBr extends _StringsEn {
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
   @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
+  @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
@@ -128351,6 +128872,55 @@ class _StringsRu extends _StringsEn {
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
   @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
+  @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
@@ -139341,6 +139911,55 @@ class _StringsTh extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
@@ -150449,6 +151068,55 @@ class _StringsTr extends _StringsEn {
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
   @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
+  @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
@@ -161527,6 +162195,55 @@ class _StringsVi extends _StringsEn {
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
   @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
+  @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
@@ -171689,6 +172406,53 @@ class _StringsZhCn extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} 等 ${count} 项';
+  @override
+  String get audiobook_transcribe_run_location => '运行位置';
+  @override
+  String get audiobook_transcribe_run_local => '本机';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device}（互联主机）';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      '正在上传音频到 ${device}…（${done}/${total}）';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      '${device} 转录中… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} 没有该语言的模型';
+  @override
+  String get download_target_label => '下载到';
+  @override
+  String get download_target_local => '本机';
+  @override
+  String download_target_remote({required Object device}) => '${device}（互联主机）';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      '${device} 上的任务';
+  @override
+  String get download_remote_jobs_empty => '主机上还没有任务';
+  @override
+  String get subscription_run_location => '运行位置';
+  @override
+  String get subscription_run_local => '本机';
+  @override
+  String get subscription_remote_empty => '主机上没有订阅';
+  @override
+  String get subscription_remote_unsupported => '主机未配置下载后端';
+  @override
+  String subscription_run_remote({required Object device}) => '主机 ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      '${device} 上的订阅';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      '主机上没有这个资源的索引器（${provider}）';
   @override
   String get video_load_failed_not_opened =>
       '播放器打不开该视频。文件可能被占用，或播放引擎需要重启应用后才能恢复。';
@@ -181954,6 +182718,55 @@ class _StringsZhHk extends _StringsEn {
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
   @override
+  String get audiobook_transcribe_run_location => 'Run on';
+  @override
+  String get audiobook_transcribe_run_local => 'This device';
+  @override
+  String audiobook_transcribe_run_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String audiobook_transcribe_remote_uploading(
+          {required Object device,
+          required Object done,
+          required Object total}) =>
+      'Uploading audio to ${device}… (${done}/${total})';
+  @override
+  String audiobook_transcribe_remote_running(
+          {required Object device, required Object percent}) =>
+      'Transcribing on ${device}… ${percent}%';
+  @override
+  String audiobook_transcribe_remote_model_missing({required Object device}) =>
+      '${device} has no model for this language';
+  @override
+  String get download_target_label => 'Download on';
+  @override
+  String get download_target_local => 'This device';
+  @override
+  String download_target_remote({required Object device}) =>
+      '${device} (interconnect host)';
+  @override
+  String download_remote_jobs_title({required Object device}) =>
+      'Tasks on ${device}';
+  @override
+  String get download_remote_jobs_empty => 'No tasks on the host yet';
+  @override
+  String get subscription_run_location => 'Run on';
+  @override
+  String get subscription_run_local => 'This device';
+  @override
+  String get subscription_remote_empty => 'No subscriptions on the host';
+  @override
+  String get subscription_remote_unsupported =>
+      'The host has no download backend configured';
+  @override
+  String subscription_run_remote({required Object device}) => 'Host ${device}';
+  @override
+  String subscription_remote_section_title({required Object device}) =>
+      'Subscriptions on ${device}';
+  @override
+  String subscription_remote_provider_unavailable({required Object provider}) =>
+      'The host has no indexer for this resource (${provider})';
+  @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
@@ -191577,6 +192390,49 @@ extension on _StringsEn {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -201195,6 +202051,49 @@ extension on _StringsAr {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -210858,6 +211757,49 @@ extension on _StringsDe {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -220512,6 +221454,49 @@ extension on _StringsEs {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -230175,6 +231160,49 @@ extension on _StringsFr {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -239809,6 +240837,49 @@ extension on _StringsId {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -249465,6 +250536,49 @@ extension on _StringsIt {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -259048,6 +260162,49 @@ extension on _StringsJa {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -268635,6 +269792,49 @@ extension on _StringsKo {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -278284,6 +279484,49 @@ extension on _StringsNl {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -287928,6 +289171,49 @@ extension on _StringsPtBr {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -297579,6 +298865,49 @@ extension on _StringsRu {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -307202,6 +308531,49 @@ extension on _StringsTh {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -316840,6 +318212,49 @@ extension on _StringsTr {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -326472,6 +327887,49 @@ extension on _StringsVi {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
@@ -336020,6 +337478,47 @@ extension on _StringsZhCn {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} 等 ${count} 项';
+      case 'audiobook_transcribe_run_location':
+        return '运行位置';
+      case 'audiobook_transcribe_run_local':
+        return '本机';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device}（互联主机）';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            '正在上传音频到 ${device}…（${done}/${total}）';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            '${device} 转录中… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) => '${device} 没有该语言的模型';
+      case 'download_target_label':
+        return '下载到';
+      case 'download_target_local':
+        return '本机';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device}（互联主机）';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => '${device} 上的任务';
+      case 'download_remote_jobs_empty':
+        return '主机上还没有任务';
+      case 'subscription_run_location':
+        return '运行位置';
+      case 'subscription_run_local':
+        return '本机';
+      case 'subscription_remote_empty':
+        return '主机上没有订阅';
+      case 'subscription_remote_unsupported':
+        return '主机未配置下载后端';
+      case 'subscription_run_remote':
+        return ({required Object device}) => '主机 ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => '${device} 上的订阅';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) => '主机上没有这个资源的索引器（${provider}）';
       case 'video_load_failed_not_opened':
         return '播放器打不开该视频。文件可能被占用，或播放引擎需要重启应用后才能恢复。';
       default:
@@ -345581,6 +347080,49 @@ extension on _StringsZhHk {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'audiobook_transcribe_run_location':
+        return 'Run on';
+      case 'audiobook_transcribe_run_local':
+        return 'This device';
+      case 'audiobook_transcribe_run_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'audiobook_transcribe_remote_uploading':
+        return (
+                {required Object device,
+                required Object done,
+                required Object total}) =>
+            'Uploading audio to ${device}… (${done}/${total})';
+      case 'audiobook_transcribe_remote_running':
+        return ({required Object device, required Object percent}) =>
+            'Transcribing on ${device}… ${percent}%';
+      case 'audiobook_transcribe_remote_model_missing':
+        return ({required Object device}) =>
+            '${device} has no model for this language';
+      case 'download_target_label':
+        return 'Download on';
+      case 'download_target_local':
+        return 'This device';
+      case 'download_target_remote':
+        return ({required Object device}) => '${device} (interconnect host)';
+      case 'download_remote_jobs_title':
+        return ({required Object device}) => 'Tasks on ${device}';
+      case 'download_remote_jobs_empty':
+        return 'No tasks on the host yet';
+      case 'subscription_run_location':
+        return 'Run on';
+      case 'subscription_run_local':
+        return 'This device';
+      case 'subscription_remote_empty':
+        return 'No subscriptions on the host';
+      case 'subscription_remote_unsupported':
+        return 'The host has no download backend configured';
+      case 'subscription_run_remote':
+        return ({required Object device}) => 'Host ${device}';
+      case 'subscription_remote_section_title':
+        return ({required Object device}) => 'Subscriptions on ${device}';
+      case 'subscription_remote_provider_unavailable':
+        return ({required Object provider}) =>
+            'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
