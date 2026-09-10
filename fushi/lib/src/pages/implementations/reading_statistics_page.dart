@@ -565,7 +565,7 @@ class _ReadingStatisticsPageState extends BasePageState<ReadingStatisticsPage> {
                     childCount: _bookData.length,
                   ),
                 ),
-                SliverPadding(padding: EdgeInsets.only(bottom: card * 2)),
+                buildStatTailSliver(context),
               ],
             ),
           ),
