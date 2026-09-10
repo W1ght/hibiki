@@ -27,6 +27,12 @@ void main() {
     expect(LapisNoteType.back, contains('<summary>来源</summary>'));
     expect(LapisNoteType.back, contains('{{MiscInfo}}'));
     expect(LapisNoteType.back, isNot(contains('=== Details ===')));
+    // BUG-2419: removing the Details text must also remove its line break.
+    expect(
+      RegExp(r'<div class="misc-info">\s*\{\{MiscInfo\}\}')
+          .hasMatch(LapisNoteType.back),
+      isTrue,
+    );
     expect(
       LapisNoteType.back,
       isNot(contains('<summary>Misc. info</summary>')),

@@ -99,6 +99,47 @@ void main() {
     );
   });
 
+  test('BUG-2418 continue plays once after the controller is ready', () {
+    expect(
+      video,
+      contains('_reviewContinued = session != null && !session.isReview;'),
+    );
+    final int changed = video.indexOf('void _onSourceReviewChanged()');
+    final int resume = video.indexOf('void _playAfterSourceReviewIfReady()');
+    final String notification = video.substring(changed, resume);
+    expect(notification, contains('_reviewContinued) return;'));
+    expect(notification, contains('_sourceReviewPlayPending = true;'));
+    expect(notification, contains('_playAfterSourceReviewIfReady();'));
+
+    final int consumed = video.indexOf(
+      '_sourceReviewPlayPending = false;',
+      resume,
+    );
+    final String readyGuard = video.substring(resume, consumed);
+    expect(readyGuard, contains('_sourceReviewActive ||'));
+    expect(readyGuard, contains('!_sourceReviewPlayPending ||'));
+    expect(readyGuard, contains('controller == null'));
+    final int tracker = video.indexOf(
+      '_ensureWatchTracker(controller,',
+      consumed,
+    );
+    final int play = video.indexOf('unawaited(controller.play());', tracker);
+    final int flush = video.indexOf(
+      'unawaited(controller.flushPosition());',
+      play,
+    );
+    expect(tracker, greaterThan(consumed));
+    expect(play, greaterThan(tracker));
+    expect(flush, greaterThan(play));
+    expect(
+      video,
+      contains(
+        '_ensureWatchTracker(controller, title);\n'
+        '    _playAfterSourceReviewIfReady();',
+      ),
+    );
+  });
+
   test(
     'manga review gates positions, chapter state and the reading ledger',
     () {

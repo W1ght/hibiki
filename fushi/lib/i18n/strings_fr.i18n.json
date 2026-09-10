@@ -4543,5 +4543,11 @@
   "card_source_review_draft_discard": "Discard draft",
   "card_source_review_draft_existing": "A draft already exists. Resume or discard it before making another edit.",
   "card_source_review_fingerprint_mismatch": "This file does not match the card source. Open the matching file to continue.",
-  "card_source_review_source": "Card source"
+  "card_source_review_source": "Card source",
+  "card_source_review_video_title": "Reviewing card clip · Watch progress is preserved",
+  "card_source_review_video_watching": "Watching normally · Watch progress is being saved",
+  "card_source_review_video_return": "Return to original watch position",
+  "card_source_review_video_continue": "Continue watching here",
+  "card_source_review_video_clip": "Return to card clip",
+  "card_source_review_video_clip_failed": "Unable to return to the card clip. Check that its source is still available."
 }

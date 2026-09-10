@@ -335,6 +335,109 @@ void main() {
     },
   );
 
+  testWidgets('video banner explains progress and returns to the card clip', (
+    WidgetTester tester,
+  ) async {
+    final Completer<void> navigation = Completer<void>();
+    int sourceReturns = 0;
+    session.dispose();
+    session = SourceReviewSession(
+      link: CardSourceLink(
+        kind: CardSourceKind.video,
+        uid: 'video-uid',
+        sourceId: _sourceId,
+        episodeIndex: 0,
+        fingerprint: 'a' * 64,
+        startMs: 1200,
+        endMs: 3400,
+      ),
+      repository: repository,
+      draftStore: store,
+      onReturnToSource: () async {
+        sourceReturns++;
+        await navigation.future;
+      },
+    );
+    await mount(tester);
+    final Finder clip = find.byKey(
+      const ValueKey<String>('source-review-return-to-source'),
+    );
+    expect(find.text(t.card_source_review_video_title), findsOneWidget);
+    expect(find.text(t.card_source_review_video_return), findsOneWidget);
+    expect(find.text(t.card_source_review_title), findsNothing);
+    expect(find.text(t.card_source_review_return), findsNothing);
+    expect(clip, findsOneWidget);
+    await tester.tap(
+      find.widgetWithText(TextButton, t.card_source_review_video_continue),
+    );
+    await tester.pump();
+    expect(session.isReview, isFalse);
+    expect(find.text(t.card_source_review_video_watching), findsOneWidget);
+    expect(find.text(t.card_source_review_source), findsNothing);
+    expect(find.text(t.card_source_review_video_continue), findsNothing);
+
+    await tester.tap(clip);
+    // A second already dispatched request must not start a second route.
+    await session.returnToSource();
+    await tester.pump();
+    expect(sourceReturns, 1);
+    expect(session.busy, isTrue);
+    expect(session.isReview, isFalse);
+    for (final TextButton button in tester.widgetList<TextButton>(
+      find.byType(TextButton),
+    )) {
+      expect(button.onPressed, isNull);
+    }
+    navigation.complete();
+    await tester.pump();
+    expect(session.busy, isFalse);
+    // Only the router's fresh session may re-enter review mode.
+    expect(session.isReview, isFalse);
+    expect(repository.reads, 0);
+    expect(repository.patches, 0);
+    await tester.pumpWidget(const SizedBox());
+  });
+
+  testWidgets(
+    'failed card clip return preserves mode and releases busy state',
+    (WidgetTester tester) async {
+      int sourceReturns = 0;
+      session.dispose();
+      session = SourceReviewSession(
+        link: CardSourceLink(
+          kind: CardSourceKind.video,
+          uid: 'video-uid',
+          sourceId: _sourceId,
+          episodeIndex: 0,
+          fingerprint: 'a' * 64,
+          startMs: 1200,
+          endMs: 3400,
+        ),
+        repository: repository,
+        draftStore: store,
+        onReturnToSource: () async {
+          sourceReturns++;
+          throw StateError('Source no longer available');
+        },
+      );
+      await mount(tester);
+      session.continueReading();
+      await tester.pump();
+      final Finder clip = find.byKey(
+        const ValueKey<String>('source-review-return-to-source'),
+      );
+      await tester.tap(clip);
+      await tester.pump();
+      expect(sourceReturns, 1);
+      expect(session.busy, isFalse);
+      expect(session.isReview, isFalse);
+      expect(find.text(t.card_source_review_video_clip_failed), findsOneWidget);
+      expect(tester.widget<TextButton>(clip).onPressed, isNotNull);
+      expect(repository.patches, 0);
+      await tester.pumpWidget(const SizedBox());
+    },
+  );
+
   testWidgets(
     'offline mining retains temporary media without adding or patching',
     (WidgetTester tester) async {

@@ -29,10 +29,12 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2170 条。点号进各自文件。
+> 共 2172 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2419](bugs/BUG-2419-lapis-source-leading-break.md) | ✅ | ✅ | Lapis来源模板更新残留前导空行 |
+| [BUG-2418](bugs/BUG-2418-video-source-review-playback.md) | ✅ | ✅ | 视频来源回看无法继续播放且导航使用阅读文案 |
 | [BUG-2417](bugs/BUG-2417-windows-itest-kills-preexisting-app.md) | ✅ | ✅ | Windows集成测试按build目录误杀用户已运行的应用 |
 | [BUG-2416](bugs/BUG-2416-card-source-root-url.md) | ✅ | ✅ | Windows 来源链接规范化后被错误判无效 |
 | [BUG-2407](bugs/BUG-2407-integration-drive-uninstalls-app.md) | ✅ | ✅ | 集成测试成功后 flutter drive 清理卸载应用并删除私有数据 |

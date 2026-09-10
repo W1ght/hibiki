@@ -728,6 +728,9 @@ abstract class VideoFushiTestHooks {
   /// 当前播放位置（毫秒）；未就绪为 null。
   int? get debugPositionMs;
 
+  /// 直接读取播放器真实播放态，避免测试从控制条图标推断。
+  bool get debugIsPlaying;
+
   /// 当前 controller 读到的内封章节数量。
   int get debugChapterCount;
 
@@ -1034,6 +1037,9 @@ class _VideoFushiPageState extends ConsumerState<VideoFushiPage>
 
   @override
   int? get debugPositionMs => _controller?.positionMs;
+
+  @override
+  bool get debugIsPlaying => _controller?.isPlaying ?? false;
 
   @override
   int get debugChapterCount => _controller?.chapters.length ?? 0;
@@ -1529,6 +1535,7 @@ class _VideoFushiPageState extends ConsumerState<VideoFushiPage>
   VideoWatchTracker? _watchTracker;
   SourceReviewSession? _sourceReviewSession;
   bool _reviewContinued = false;
+  bool _sourceReviewPlayPending = false;
   bool _disposedDuringSourceReview = false;
   bool get _sourceReviewActive =>
       _disposedDuringSourceReview ||
@@ -1550,6 +1557,9 @@ class _VideoFushiPageState extends ConsumerState<VideoFushiPage>
     if (identical(session, _sourceReviewSession)) return;
     _sourceReviewSession?.removeListener(_onSourceReviewChanged);
     _sourceReviewSession = session;
+    // A manually opened next episode can inherit an already-continued session.
+    // Its later draft/busy notifications are not another request to play.
+    _reviewContinued = session != null && !session.isReview;
     session?.addListener(_onSourceReviewChanged);
     _registerExternalNavigation();
   }
@@ -1557,12 +1567,27 @@ class _VideoFushiPageState extends ConsumerState<VideoFushiPage>
   void _onSourceReviewChanged() {
     if (!mounted || _sourceReviewActive || _reviewContinued) return;
     _reviewContinued = true;
-    final VideoPlayerController? controller = _controller;
-    if (controller != null) {
-      _ensureWatchTracker(controller, _title ?? '');
-      unawaited(controller.flushPosition());
-    }
+    _sourceReviewPlayPending = true;
+    _playAfterSourceReviewIfReady();
     setState(() {});
+  }
+
+  /// BUG-2418: continuing a paused source review is an explicit play action.
+  /// Keep it pending while load() is in flight: that load may already have
+  /// captured autoPlay=false, and notification alone cannot change it.
+  void _playAfterSourceReviewIfReady() {
+    final VideoPlayerController? controller = _controller;
+    if (!mounted ||
+        _sourceReviewActive ||
+        !_sourceReviewPlayPending ||
+        controller == null) {
+      return;
+    }
+    _sourceReviewPlayPending = false;
+    _ensureWatchTracker(controller, _title ?? '');
+    unawaited(controller.play());
+    unawaited(controller.flushPosition());
+    _focusOwnership.reclaimAfterFrame(FocusReclaimCause.chromeToggled);
   }
 
   /// 进程退出 flush 回调引用（TODO-086/BUG-191）：initState 登记到
@@ -3772,6 +3797,7 @@ class _VideoFushiPageState extends ConsumerState<VideoFushiPage>
     _prewarmNextEpisodeSubtitleCache();
 
     _ensureWatchTracker(controller, title);
+    _playAfterSourceReviewIfReady();
     unawaited(_restoreAudioTrack(controller));
     unawaited(_restoreSecondarySubtitle(controller));
   }
