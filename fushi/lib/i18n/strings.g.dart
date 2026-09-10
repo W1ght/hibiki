@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78880 (4640 per locale)
+/// Strings: 78965 (4645 per locale)
 ///
-/// Built on 2026-09-10 at 04:50 UTC
+/// Built on 2026-09-10 at 06:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6422,6 +6422,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_source_interconnect_disabled =>
       'Turn on Fushi Interconnect in settings to use this source';
   String get import_step_importing_book => 'Importing book…';
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   String get audiobook_transcribe_run_location => 'Run on';
   String get audiobook_transcribe_run_local => 'This device';
   String audiobook_transcribe_run_remote({required Object device}) =>
@@ -17324,6 +17332,19 @@ class _StringsAr extends _StringsEn {
       'Turn on Fushi Interconnect in settings to use this source';
   @override
   String get import_step_importing_book => 'Importing book…';
+  @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
@@ -28472,6 +28493,19 @@ class _StringsDe extends _StringsEn {
       'Turn on Fushi Interconnect in settings to use this source';
   @override
   String get import_step_importing_book => 'Importing book…';
+  @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
@@ -39674,6 +39708,19 @@ class _StringsEs extends _StringsEn {
       'Turn on Fushi Interconnect in settings to use this source';
   @override
   String get import_step_importing_book => 'Importing book…';
+  @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
@@ -50911,6 +50958,19 @@ class _StringsFr extends _StringsEn {
   @override
   String get import_step_importing_book => 'Importing book…';
   @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
   String get audiobook_transcribe_run_local => 'This device';
@@ -61948,6 +62008,19 @@ class _StringsId extends _StringsEn {
       'Turn on Fushi Interconnect in settings to use this source';
   @override
   String get import_step_importing_book => 'Importing book…';
+  @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
@@ -73080,6 +73153,19 @@ class _StringsIt extends _StringsEn {
   @override
   String get import_step_importing_book => 'Importing book…';
   @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
   String get audiobook_transcribe_run_local => 'This device';
@@ -83586,6 +83672,19 @@ class _StringsJa extends _StringsEn {
       'Turn on Fushi Interconnect in settings to use this source';
   @override
   String get import_step_importing_book => 'Importing book…';
+  @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
@@ -94104,6 +94203,19 @@ class _StringsKo extends _StringsEn {
       'Turn on Fushi Interconnect in settings to use this source';
   @override
   String get import_step_importing_book => 'Importing book…';
+  @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
@@ -105191,6 +105303,19 @@ class _StringsNl extends _StringsEn {
       'Turn on Fushi Interconnect in settings to use this source';
   @override
   String get import_step_importing_book => 'Importing book…';
+  @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
@@ -116333,6 +116458,19 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get import_step_importing_book => 'Importing book…';
   @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
   String get audiobook_transcribe_run_local => 'This device';
@@ -127451,6 +127589,19 @@ class _StringsRu extends _StringsEn {
   @override
   String get import_step_importing_book => 'Importing book…';
   @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
   String get audiobook_transcribe_run_local => 'This device';
@@ -138367,6 +138518,19 @@ class _StringsTh extends _StringsEn {
       'Turn on Fushi Interconnect in settings to use this source';
   @override
   String get import_step_importing_book => 'Importing book…';
+  @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
   @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
@@ -149401,6 +149565,19 @@ class _StringsTr extends _StringsEn {
   @override
   String get import_step_importing_book => 'Importing book…';
   @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
   String get audiobook_transcribe_run_local => 'This device';
@@ -160405,6 +160582,19 @@ class _StringsVi extends _StringsEn {
   @override
   String get import_step_importing_book => 'Importing book…';
   @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
   String get audiobook_transcribe_run_local => 'This device';
@@ -170515,6 +170705,18 @@ class _StringsZhCn extends _StringsEn {
   String get manga_source_interconnect_disabled => '在设置里开启 Fushi 互联后即可使用此来源';
   @override
   String get import_step_importing_book => '导入书籍…';
+  @override
+  String get audiobook_transcribe_engine_system => '系统语音识别（Apple）';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      '用系统自带的语音模型，不下载我们那 1 GB 模型。首次使用时系统仍会下载它自己的语言资产，那份资产由系统保管、多个 app 共用。';
+  @override
+  String get audiobook_transcribe_engine_system_install => '安装语言';
+  @override
+  String get audiobook_transcribe_engine_system_installing => '正在让系统安装该语言…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
   @override
   String get audiobook_transcribe_run_location => '运行位置';
   @override
@@ -180705,6 +180907,19 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get import_step_importing_book => 'Importing book…';
   @override
+  String get audiobook_transcribe_engine_system => 'System speech (Apple)';
+  @override
+  String get audiobook_transcribe_engine_system_hint =>
+      'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+  @override
+  String get audiobook_transcribe_engine_system_install => 'Install language';
+  @override
+  String get audiobook_transcribe_engine_system_installing =>
+      'Asking the system to install the language…';
+  @override
+  String get audiobook_transcribe_engine_system_no_pause =>
+      'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
   String get audiobook_transcribe_run_location => 'Run on';
   @override
   String get audiobook_transcribe_run_local => 'This device';
@@ -190267,6 +190482,16 @@ extension on _StringsEn {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -199819,6 +200044,16 @@ extension on _StringsAr {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -209416,6 +209651,16 @@ extension on _StringsDe {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -219004,6 +219249,16 @@ extension on _StringsEs {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -228601,6 +228856,16 @@ extension on _StringsFr {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -238169,6 +238434,16 @@ extension on _StringsId {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -247759,6 +248034,16 @@ extension on _StringsIt {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -257276,6 +257561,16 @@ extension on _StringsJa {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -266797,6 +267092,16 @@ extension on _StringsKo {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -276380,6 +276685,16 @@ extension on _StringsNl {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -285958,6 +286273,16 @@ extension on _StringsPtBr {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -295543,6 +295868,16 @@ extension on _StringsRu {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -305100,6 +305435,16 @@ extension on _StringsTh {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -314672,6 +315017,16 @@ extension on _StringsTr {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -324238,6 +324593,16 @@ extension on _StringsVi {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
@@ -333721,6 +334086,16 @@ extension on _StringsZhCn {
         return '在设置里开启 Fushi 互联后即可使用此来源';
       case 'import_step_importing_book':
         return '导入书籍…';
+      case 'audiobook_transcribe_engine_system':
+        return '系统语音识别（Apple）';
+      case 'audiobook_transcribe_engine_system_hint':
+        return '用系统自带的语音模型，不下载我们那 1 GB 模型。首次使用时系统仍会下载它自己的语言资产，那份资产由系统保管、多个 app 共用。';
+      case 'audiobook_transcribe_engine_system_install':
+        return '安装语言';
+      case 'audiobook_transcribe_engine_system_installing':
+        return '正在让系统安装该语言…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
       case 'audiobook_transcribe_run_location':
         return '运行位置';
       case 'audiobook_transcribe_run_local':
@@ -343214,6 +343589,16 @@ extension on _StringsZhHk {
         return 'Turn on Fushi Interconnect in settings to use this source';
       case 'import_step_importing_book':
         return 'Importing book…';
+      case 'audiobook_transcribe_engine_system':
+        return 'System speech (Apple)';
+      case 'audiobook_transcribe_engine_system_hint':
+        return 'Uses the built-in speech model — no 1 GB download from us. The system still fetches its own language assets the first time, and keeps them shared across apps.';
+      case 'audiobook_transcribe_engine_system_install':
+        return 'Install language';
+      case 'audiobook_transcribe_engine_system_installing':
+        return 'Asking the system to install the language…';
+      case 'audiobook_transcribe_engine_system_no_pause':
+        return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
       case 'audiobook_transcribe_run_location':
         return 'Run on';
       case 'audiobook_transcribe_run_local':
