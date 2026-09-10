@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79458 (4674 per locale)
+/// Strings: 79475 (4675 per locale)
 ///
-/// Built on 2026-09-10 at 11:57 UTC
+/// Built on 2026-09-10 at 13:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6490,6 +6490,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -17481,6 +17483,9 @@ class _StringsAr extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -28700,6 +28705,9 @@ class _StringsDe extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -39973,6 +39981,9 @@ class _StringsEs extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -51280,6 +51291,9 @@ class _StringsFr extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -62389,6 +62403,9 @@ class _StringsId extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -73591,6 +73608,9 @@ class _StringsIt extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -84170,6 +84190,9 @@ class _StringsJa extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -94759,6 +94782,9 @@ class _StringsKo extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -105917,6 +105943,9 @@ class _StringsNl extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -117129,6 +117158,9 @@ class _StringsPtBr extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -128318,6 +128350,9 @@ class _StringsRu extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -139306,6 +139341,9 @@ class _StringsTh extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -150410,6 +150448,9 @@ class _StringsTr extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -161485,6 +161526,9 @@ class _StringsVi extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 // Path: <root>
@@ -171645,6 +171689,9 @@ class _StringsZhCn extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} 等 ${count} 项';
+  @override
+  String get video_load_failed_not_opened =>
+      '播放器打不开该视频。文件可能被占用，或播放引擎需要重启应用后才能恢复。';
 }
 
 // Path: <root>
@@ -181906,6 +181953,9 @@ class _StringsZhHk extends _StringsEn {
   String updates_notification_summary(
           {required Object first, required Object count}) =>
       '${first} and ${count} more';
+  @override
+  String get video_load_failed_not_opened =>
+      'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
 }
 
 /// Flat map(s) containing all translations.
@@ -191527,6 +191577,8 @@ extension on _StringsEn {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -201143,6 +201195,8 @@ extension on _StringsAr {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -210804,6 +210858,8 @@ extension on _StringsDe {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -220456,6 +220512,8 @@ extension on _StringsEs {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -230117,6 +230175,8 @@ extension on _StringsFr {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -239749,6 +239809,8 @@ extension on _StringsId {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -249403,6 +249465,8 @@ extension on _StringsIt {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -258984,6 +259048,8 @@ extension on _StringsJa {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -268569,6 +268635,8 @@ extension on _StringsKo {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -278216,6 +278284,8 @@ extension on _StringsNl {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -287858,6 +287928,8 @@ extension on _StringsPtBr {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -297507,6 +297579,8 @@ extension on _StringsRu {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -307128,6 +307202,8 @@ extension on _StringsTh {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -316764,6 +316840,8 @@ extension on _StringsTr {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -326394,6 +326472,8 @@ extension on _StringsVi {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
@@ -335940,6 +336020,8 @@ extension on _StringsZhCn {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} 等 ${count} 项';
+      case 'video_load_failed_not_opened':
+        return '播放器打不开该视频。文件可能被占用，或播放引擎需要重启应用后才能恢复。';
       default:
         return null;
     }
@@ -345499,6 +345581,8 @@ extension on _StringsZhHk {
       case 'updates_notification_summary':
         return ({required Object first, required Object count}) =>
             '${first} and ${count} more';
+      case 'video_load_failed_not_opened':
+        return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
       default:
         return null;
     }
