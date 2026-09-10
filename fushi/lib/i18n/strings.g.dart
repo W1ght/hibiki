@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78557 (4621 per locale)
+/// Strings: 79458 (4674 per locale)
 ///
-/// Built on 2026-09-10 at 08:08 UTC
+/// Built on 2026-09-10 at 11:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -716,7 +716,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Download failed: ${error}';
   String get asr_models_section => 'Speech recognition models';
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'On-device speech recognition models. Download only the languages you need.';
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
   String asr_models_status_partial(
@@ -1381,8 +1381,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get delete_choices_remember => 'Remember these choices';
   String get delete_collection => 'Delete collection';
   String get delete_collection_also_books => 'Also delete the books in it';
-  String get delete_collection_also_videos =>
-      'Also delete the videos (keeps your original video files)';
+  String get delete_collection_also_videos => 'Also delete the videos';
   String get delete_collection_confirm =>
       'Only the grouping is removed. The items in it are kept.';
   String get delete_custom_theme => 'Delete theme';
@@ -6328,7 +6327,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_group_content => 'Content';
   String get settings_group_learning => 'Learning';
   String get settings_group_connections => 'Connections';
-  String get settings_group_data => 'Data and devices';
+  String get settings_group_data => 'Data & device';
   String get settings_group_app => 'App';
   String get settings_destination_appearance_interaction =>
       'Appearance and interaction';
@@ -6418,6 +6417,79 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Asking the system to install the language…';
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  String get storage_models_components => 'Models and components';
+  String get settings_group_tools => 'Tools';
+  String get mihon_source_login => 'Log in';
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  String get mihon_source_login_done => 'Done';
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  String get mihon_source_login_saved => 'Signed in to this source';
+  String get media_source_rename => 'Rename';
+  String get media_source_rename_label => 'Source name';
+  String get book_rename => 'Rename';
+  String get book_rename_label => 'Title';
+  String get dict_rename => 'Rename';
+  String get dict_rename_label => 'Dictionary name';
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  String get popup_full_width => 'Full-width popup';
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  String get stat_session_edit => 'Edit session';
+  String get stat_session_edit_date => 'Date';
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  String get stat_session_edit_chars => 'Characters';
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  String get updates_center_title => 'Updates';
+  String get updates_center_empty => 'No updates yet';
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  String get updates_mark_all_seen => 'Mark all as read';
+  String get updates_filter_all => 'All';
+  String get updates_kind_video_episode => 'Anime episodes';
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  String get updates_kind_manga_extension => 'Manga extensions';
+  String get updates_kind_app_release => 'App releases';
+  String get updates_notify_section => 'Update notifications';
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  String get updates_notify_app_release => 'Notify about app releases';
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  String get updates_system_notifications => 'System notifications';
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  String get updates_check_now => 'Check for updates now';
+  String get updates_checking => 'Checking...';
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -7332,7 +7404,7 @@ class _StringsAr extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'نماذج التعرّف على الكلام على الجهاز. نزّل اللغات التي تحتاجها فقط.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -8486,8 +8558,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get delete_collection_also_books => 'حذف الكتب الموجودة فيها أيضاً';
   @override
-  String get delete_collection_also_videos =>
-      'حذف الفيديوهات أيضاً (يحتفظ بملفات الفيديو الأصلية)';
+  String get delete_collection_also_videos => 'حذف الفيديوهات أيضاً';
   @override
   String get delete_collection_confirm =>
       'سيتم إزالة التجميع فقط. العناصر الموجودة فيه ستبقى.';
@@ -17133,13 +17204,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get settings_group_interface => 'الواجهة';
   @override
-  String get settings_group_content => 'المحتوى';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'التعلّم';
   @override
   String get settings_group_connections => 'الاتصالات';
   @override
-  String get settings_group_data => 'البيانات والأجهزة';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'التطبيق';
   @override
@@ -17284,6 +17355,132 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'النماذج والمكوّنات';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -18216,7 +18413,7 @@ class _StringsDe extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modelle zur Spracherkennung auf dem Gerät. Lade nur die benötigten Sprachen herunter.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -19390,8 +19587,7 @@ class _StringsDe extends _StringsEn {
   String get delete_collection_also_books =>
       'Auch die enthaltenen Bücher löschen';
   @override
-  String get delete_collection_also_videos =>
-      'Auch die Videos löschen (deine originalen Videodateien bleiben erhalten)';
+  String get delete_collection_also_videos => 'Auch die Videos löschen';
   @override
   String get delete_collection_confirm =>
       'Nur die Gruppierung wird entfernt. Die enthaltenen Einträge bleiben erhalten.';
@@ -28226,13 +28422,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get settings_group_interface => 'Oberfläche';
   @override
-  String get settings_group_content => 'Inhalte';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Lernen';
   @override
   String get settings_group_connections => 'Verbindungen';
   @override
-  String get settings_group_data => 'Daten und Geräte';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'App';
   @override
@@ -28378,6 +28574,132 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Modelle und Komponenten';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -29313,7 +29635,7 @@ class _StringsEs extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modelos de reconocimiento de voz en el dispositivo. Descarga solo los idiomas que necesites.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -30490,8 +30812,7 @@ class _StringsEs extends _StringsEn {
   String get delete_collection_also_books =>
       'También eliminar los libros que contiene';
   @override
-  String get delete_collection_also_videos =>
-      'También eliminar los vídeos (conserva sus archivos de vídeo originales)';
+  String get delete_collection_also_videos => 'También eliminar los vídeos';
   @override
   String get delete_collection_confirm =>
       'Solo se elimina la agrupación. Los elementos que contiene se conservan.';
@@ -39374,13 +39695,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get settings_group_interface => 'Interfaz';
   @override
-  String get settings_group_content => 'Contenido';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Aprendizaje';
   @override
   String get settings_group_connections => 'Conexiones';
   @override
-  String get settings_group_data => 'Datos y dispositivos';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Aplicación';
   @override
@@ -39526,6 +39847,132 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Modelos y componentes';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -40463,7 +40910,7 @@ class _StringsFr extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modèles de reconnaissance vocale sur l’appareil. Téléchargez uniquement les langues dont vous avez besoin.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -41649,8 +42096,7 @@ class _StringsFr extends _StringsEn {
   String get delete_collection_also_books =>
       'Supprimer aussi les livres qu\'elle contient';
   @override
-  String get delete_collection_also_videos =>
-      'Supprimer aussi les vidéos (conserve vos fichiers vidéo originaux)';
+  String get delete_collection_also_videos => 'Supprimer aussi les vidéos';
   @override
   String get delete_collection_confirm =>
       'Seul le regroupement est supprimé. Les éléments qu\'elle contient sont conservés.';
@@ -50556,13 +51002,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get settings_group_interface => 'Interface';
   @override
-  String get settings_group_content => 'Contenu';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Apprentissage';
   @override
   String get settings_group_connections => 'Connexions';
   @override
-  String get settings_group_data => 'Données et appareils';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Application';
   @override
@@ -50708,6 +51154,132 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Modèles et composants';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -51635,7 +52207,7 @@ class _StringsId extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Model pengenalan ucapan di perangkat. Unduh hanya bahasa yang Anda perlukan.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -52795,8 +53367,7 @@ class _StringsId extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Hapus juga buku di dalamnya';
   @override
-  String get delete_collection_also_videos =>
-      'Hapus juga video (file video asli Anda tetap ada)';
+  String get delete_collection_also_videos => 'Hapus juga video';
   @override
   String get delete_collection_confirm =>
       'Hanya pengelompokan yang dihapus. Item di dalamnya dipertahankan.';
@@ -61540,13 +62111,13 @@ class _StringsId extends _StringsEn {
   @override
   String get settings_group_interface => 'Antarmuka';
   @override
-  String get settings_group_content => 'Konten';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Pembelajaran';
   @override
   String get settings_group_connections => 'Koneksi';
   @override
-  String get settings_group_data => 'Data dan perangkat';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Aplikasi';
   @override
@@ -61692,6 +62263,132 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Model dan komponen';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -62621,7 +63318,7 @@ class _StringsIt extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modelli di riconoscimento vocale sul dispositivo. Scarica solo le lingue che ti servono.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -63792,8 +64489,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Elimina anche i libri contenuti';
   @override
-  String get delete_collection_also_videos =>
-      'Elimina anche i video (mantiene i file video originali)';
+  String get delete_collection_also_videos => 'Elimina anche i video';
   @override
   String get delete_collection_confirm =>
       'Solo il raggruppamento viene rimosso. Gli elementi vengono mantenuti.';
@@ -72616,13 +73312,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get settings_group_interface => 'Interfaccia';
   @override
-  String get settings_group_content => 'Contenuti';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Apprendimento';
   @override
   String get settings_group_connections => 'Connessioni';
   @override
-  String get settings_group_data => 'Dati e dispositivi';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'App';
   @override
@@ -72769,6 +73465,132 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Modelli e componenti';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -73657,7 +74479,7 @@ class _StringsJa extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      '端末内で動作する音声認識モデルです。必要な言語だけダウンロードしてください。';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -74772,7 +75594,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get delete_collection_also_books => '中の書籍も削除';
   @override
-  String get delete_collection_also_videos => '動画も削除（元の動画ファイルは保持されます）';
+  String get delete_collection_also_videos => '動画も削除';
   @override
   String get delete_collection_confirm => 'グループのみ削除されます。中のアイテムは保持されます。';
   @override
@@ -83073,13 +83895,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get settings_group_interface => 'インターフェース';
   @override
-  String get settings_group_content => 'コンテンツ';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => '学習';
   @override
   String get settings_group_connections => '接続';
   @override
-  String get settings_group_data => 'データとデバイス';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'アプリ';
   @override
@@ -83222,6 +84044,132 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'モデルとコンポーネント';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      '前面に出して辞書検索ページを開く';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -84105,8 +85053,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
-  String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+  String get asr_models_section_summary => '기기 내 음성 인식 모델입니다. 필요한 언어만 다운로드하세요.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -85224,7 +86171,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get delete_collection_also_books => '포함된 도서도 삭제';
   @override
-  String get delete_collection_also_videos => '동영상도 삭제 (원본 동영상 파일은 유지)';
+  String get delete_collection_also_videos => '동영상도 삭제';
   @override
   String get delete_collection_confirm => '그룹만 제거됩니다. 포함된 항목은 유지됩니다.';
   @override
@@ -93537,13 +94484,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get settings_group_interface => '인터페이스';
   @override
-  String get settings_group_content => '콘텐츠';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => '학습';
   @override
   String get settings_group_connections => '연결';
   @override
-  String get settings_group_data => '데이터 및 기기';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => '앱';
   @override
@@ -93686,6 +94633,132 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => '모델 및 구성 요소';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -94611,7 +95684,7 @@ class _StringsNl extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Spraakherkenningsmodellen voor gebruik op het apparaat. Download alleen de talen die je nodig hebt.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -95779,8 +96852,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Ook de boeken erin verwijderen';
   @override
-  String get delete_collection_also_videos =>
-      'Ook de video\'s verwijderen (behoudt je originele videobestanden)';
+  String get delete_collection_also_videos => 'Ook de video\'s verwijderen';
   @override
   String get delete_collection_confirm =>
       'Alleen de groepering wordt verwijderd. De items erin worden bewaard.';
@@ -104567,13 +105639,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get settings_group_interface => 'Interface';
   @override
-  String get settings_group_content => 'Inhoud';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Leren';
   @override
   String get settings_group_connections => 'Verbindingen';
   @override
-  String get settings_group_data => 'Gegevens en apparaten';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'App';
   @override
@@ -104719,6 +105791,132 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Modellen en componenten';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -105655,7 +106853,7 @@ class _StringsPtBr extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Modelos de reconhecimento de fala no dispositivo. Baixe apenas os idiomas de que precisa.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -106825,8 +108023,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Também excluir os livros nela';
   @override
-  String get delete_collection_also_videos =>
-      'Também excluir os vídeos (mantém seus arquivos de vídeo originais)';
+  String get delete_collection_also_videos => 'Também excluir os vídeos';
   @override
   String get delete_collection_confirm =>
       'Apenas o agrupamento é removido. Os itens nele são mantidos.';
@@ -115653,13 +116850,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get settings_group_interface => 'Interface';
   @override
-  String get settings_group_content => 'Conteúdo';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Aprendizado';
   @override
   String get settings_group_connections => 'Conexões';
   @override
-  String get settings_group_data => 'Dados e dispositivos';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Aplicativo';
   @override
@@ -115806,6 +117003,132 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Modelos e componentes';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -116731,7 +118054,7 @@ class _StringsRu extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Модели распознавания речи на устройстве. Скачивайте только нужные языки.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -117899,8 +119222,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Также удалить книги из неё';
   @override
-  String get delete_collection_also_videos =>
-      'Также удалить видео (исходные видеофайлы сохранятся)';
+  String get delete_collection_also_videos => 'Также удалить видео';
   @override
   String get delete_collection_confirm =>
       'Удаляется только группировка. Элементы в ней сохраняются.';
@@ -126717,13 +128039,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get settings_group_interface => 'Интерфейс';
   @override
-  String get settings_group_content => 'Контент';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Обучение';
   @override
   String get settings_group_connections => 'Подключения';
   @override
-  String get settings_group_data => 'Данные и устройства';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Приложение';
   @override
@@ -126870,6 +128192,132 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Модели и компоненты';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -127780,7 +129228,7 @@ class _StringsTh extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'โมเดลรู้จำเสียงพูดบนอุปกรณ์ ดาวน์โหลดเฉพาะภาษาที่คุณต้องการ';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -128930,8 +130378,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get delete_collection_also_books => 'ลบหนังสือในนั้นด้วย';
   @override
-  String get delete_collection_also_videos =>
-      'ลบวิดีโอด้วย (เก็บไฟล์วิดีโอต้นฉบับไว้)';
+  String get delete_collection_also_videos => 'ลบวิดีโอด้วย';
   @override
   String get delete_collection_confirm =>
       'เฉพาะการจัดกลุ่มเท่านั้นที่จะถูกลบ รายการภายในจะยังคงอยู่';
@@ -137581,13 +139028,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get settings_group_interface => 'อินเทอร์เฟซ';
   @override
-  String get settings_group_content => 'เนื้อหา';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'การเรียนรู้';
   @override
   String get settings_group_connections => 'การเชื่อมต่อ';
   @override
-  String get settings_group_data => 'ข้อมูลและอุปกรณ์';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'แอป';
   @override
@@ -137733,6 +139180,132 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'โมเดลและส่วนประกอบ';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -138654,7 +140227,7 @@ class _StringsTr extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Cihaz üzerinde çalışan konuşma tanıma modelleri. Yalnızca ihtiyacınız olan dilleri indirin.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -139821,8 +141394,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get delete_collection_also_books => 'İçindeki kitapları da sil';
   @override
-  String get delete_collection_also_videos =>
-      'Videoları da sil (orijinal video dosyalarınız korunur)';
+  String get delete_collection_also_videos => 'Videoları da sil';
   @override
   String get delete_collection_confirm =>
       'Yalnızca gruplama kaldırılır. İçindeki öğeler korunur.';
@@ -148560,13 +150132,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get settings_group_interface => 'Arayüz';
   @override
-  String get settings_group_content => 'İçerik';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Öğrenme';
   @override
   String get settings_group_connections => 'Bağlantılar';
   @override
-  String get settings_group_data => 'Veriler ve cihazlar';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Uygulama';
   @override
@@ -148712,6 +150284,132 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Modeller ve bileşenler';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -149636,7 +151334,7 @@ class _StringsVi extends _StringsEn {
   String get asr_models_section => 'Speech recognition models';
   @override
   String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+      'Mô hình nhận dạng giọng nói trên thiết bị. Chỉ tải xuống những ngôn ngữ bạn cần.';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -150798,8 +152496,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get delete_collection_also_books => 'Đồng thời xóa sách trong đó';
   @override
-  String get delete_collection_also_videos =>
-      'Đồng thời xóa video (giữ lại tệp video gốc)';
+  String get delete_collection_also_videos => 'Đồng thời xóa video';
   @override
   String get delete_collection_confirm =>
       'Chỉ xóa nhóm. Các mục trong đó vẫn được giữ lại.';
@@ -159510,13 +161207,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get settings_group_interface => 'Giao diện';
   @override
-  String get settings_group_content => 'Nội dung';
+  String get settings_group_content => 'Content';
   @override
   String get settings_group_learning => 'Học tập';
   @override
   String get settings_group_connections => 'Kết nối';
   @override
-  String get settings_group_data => 'Dữ liệu và thiết bị';
+  String get settings_group_data => 'Data & device';
   @override
   String get settings_group_app => 'Ứng dụng';
   @override
@@ -159662,6 +161359,132 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => 'Mô hình và thành phần';
+  @override
+  String get settings_group_tools => 'Tools';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => 'Rename';
+  @override
+  String get media_source_rename_label => 'Source name';
+  @override
+  String get book_rename => 'Rename';
+  @override
+  String get book_rename_label => 'Title';
+  @override
+  String get dict_rename => 'Rename';
+  @override
+  String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 // Path: <root>
@@ -160506,7 +162329,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get asr_models_section => '语音识别模型';
   @override
-  String get asr_models_section_summary => '有声书设备端转录用的模型，只下载你需要的语言。';
+  String get asr_models_section_summary => '本机语音识别模型，只下载你需要的语言。';
   @override
   String asr_models_status_missing({required Object size}) =>
       '未下载 · 需要 ${size}';
@@ -161587,7 +163410,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get delete_collection_also_books => '同时删除其中的书';
   @override
-  String get delete_collection_also_videos => '同时删除其中的视频（保留你的原始视频文件）';
+  String get delete_collection_also_videos => '同时删除其中的视频';
   @override
   String get delete_collection_confirm => '只解除分组，其中的条目会保留。';
   @override
@@ -169710,6 +171533,118 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
+  @override
+  String get storage_models_components => '模型与组件';
+  @override
+  String get settings_group_tools => '工具';
+  @override
+  String get mihon_source_login => '登录';
+  @override
+  String get mihon_source_login_hint => '在网站上登录后，点「完成」保存会话';
+  @override
+  String get mihon_source_login_done => '完成';
+  @override
+  String get mihon_source_login_empty => '没有捕获到会话 cookie，未保存';
+  @override
+  String get mihon_source_login_saved => '已登录该源';
+  @override
+  String get media_source_rename => '重命名';
+  @override
+  String get media_source_rename_label => '来源名称';
+  @override
+  String get book_rename => '重命名';
+  @override
+  String get book_rename_label => '标题';
+  @override
+  String get dict_rename => '重命名';
+  @override
+  String get dict_rename_label => '词典名称';
+  @override
+  String get shortcut_action_global_external_open_lookup_page => '唤起主窗并打开查词页';
+  @override
+  String get popup_full_width => '弹窗全宽';
+  @override
+  String get popup_full_width_hint => '忽略最大宽度，让弹窗横向铺满可用宽度；位置仍跟随选中的词。';
+  @override
+  String get stat_session_edit => '编辑会话';
+  @override
+  String get stat_session_edit_date => '日期';
+  @override
+  String get stat_session_edit_date_invalid => '日期请按 YYYY-MM-DD 填写。';
+  @override
+  String get stat_session_edit_chars => '字数';
+  @override
+  String get stat_session_edit_chars_invalid => '字数必须是 0 或更大的整数。';
+  @override
+  String get stat_session_edit_message =>
+      '改日期会把整次会话一起挪过去，一天里的时刻不变；字数会按比例分摊回这次会话的各个片段。';
+  @override
+  String get stat_sessions_clear_all => '清除全部会话';
+  @override
+  String get stat_sessions_clear_all_title => '清除全部会话记录';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      '确定清除全部 ${n} 条会话记录吗？这些会话的时长、字数、页数都会被清掉；收藏的词句、制卡历史和游戏库不受影响。此操作不可撤销。';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      '我确认要删除这 ${n} 条会话记录。';
+  @override
+  String get stat_clear_all_overview_message =>
+      '确定把阅读、观看、游戏三个域的统计一起清空吗？三个域的时长、字数以及查词 / 制卡计数都会被删除；收藏的词、句子、制卡卡片、游戏库与活动时间线不受影响。此操作不可撤销。';
+  @override
+  String get video_discovery_provider_rate_limited => '部分来源请求过于频繁，已显示其余结果';
+  @override
+  String get video_discovery_provider_failed => '部分来源暂时请求失败，已显示其余结果';
+  @override
+  String get collection_rescrape_pick_work => '选择要重新刮削的作品';
+  @override
+  String get updates_center_title => '更新';
+  @override
+  String get updates_center_empty => '暂无更新';
+  @override
+  String get updates_center_empty_hint => '订阅的番剧新集、漫画新章、扩展与应用新版本都会出现在这里。';
+  @override
+  String get updates_mark_all_seen => '全部标为已读';
+  @override
+  String get updates_filter_all => '全部';
+  @override
+  String get updates_kind_video_episode => '番剧新集';
+  @override
+  String get updates_kind_manga_chapter => '漫画新章';
+  @override
+  String get updates_kind_manga_extension => '漫画扩展';
+  @override
+  String get updates_kind_app_release => '应用新版';
+  @override
+  String get updates_notify_section => '更新提醒';
+  @override
+  String get updates_notify_video_episode => '番剧新集提醒';
+  @override
+  String get updates_notify_video_episode_hint => '订阅的番剧下载好新集时提醒。';
+  @override
+  String get updates_notify_manga_chapter => '漫画新章提醒';
+  @override
+  String get updates_notify_manga_chapter_hint => '后台检查已追的在线漫画有没有新章。';
+  @override
+  String get updates_notify_manga_extension => '漫画扩展更新提醒';
+  @override
+  String get updates_notify_manga_extension_hint => '已装扩展在仓库里有更高版本时提醒。';
+  @override
+  String get updates_notify_app_release => '应用新版提醒';
+  @override
+  String get updates_notify_app_release_hint => '有更新的 Fushi 版本时提醒。';
+  @override
+  String get updates_system_notifications => '系统通知';
+  @override
+  String get updates_system_notifications_hint => '同时发送系统通知。关掉后仍保留应用内红点。';
+  @override
+  String get updates_check_now => '立即检查更新';
+  @override
+  String get updates_checking => '检查中…';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} 等 ${count} 项';
 }
 
 // Path: <root>
@@ -170569,8 +172504,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get asr_models_section => 'Speech recognition models';
   @override
-  String get asr_models_section_summary =>
-      'Models for on-device audiobook transcription. Download only the languages you need.';
+  String get asr_models_section_summary => '本機語音辨識模型，只下載你需要的語言。';
   @override
   String asr_models_status_missing({required Object size}) =>
       'Not downloaded · ${size}';
@@ -171658,7 +173592,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get delete_collection_also_books => '同時刪除其中的書';
   @override
-  String get delete_collection_also_videos => '同時刪除其中的影片（保留你的原始影片檔案）';
+  String get delete_collection_also_videos => '同時刪除其中的影片';
   @override
   String get delete_collection_confirm => '只解除分組，其中的條目會保留。';
   @override
@@ -179847,6 +181781,131 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_engine_system_no_pause =>
       'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+  @override
+  String get storage_models_components => '模型與元件';
+  @override
+  String get settings_group_tools => '工具';
+  @override
+  String get mihon_source_login => 'Log in';
+  @override
+  String get mihon_source_login_hint =>
+      'Sign in on the site, then tap Done to save the session';
+  @override
+  String get mihon_source_login_done => 'Done';
+  @override
+  String get mihon_source_login_empty =>
+      'No session cookies were captured; nothing was saved';
+  @override
+  String get mihon_source_login_saved => 'Signed in to this source';
+  @override
+  String get media_source_rename => '重命名';
+  @override
+  String get media_source_rename_label => '來源名稱';
+  @override
+  String get book_rename => '重命名';
+  @override
+  String get book_rename_label => '標題';
+  @override
+  String get dict_rename => '重命名';
+  @override
+  String get dict_rename_label => '詞典名稱';
+  @override
+  String get shortcut_action_global_external_open_lookup_page => '喚起主視窗並開啟查詞頁';
+  @override
+  String get popup_full_width => 'Full-width popup';
+  @override
+  String get popup_full_width_hint =>
+      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+  @override
+  String get stat_session_edit => 'Edit session';
+  @override
+  String get stat_session_edit_date => 'Date';
+  @override
+  String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
+  @override
+  String get stat_session_edit_chars => 'Characters';
+  @override
+  String get stat_session_edit_chars_invalid =>
+      'Characters must be a whole number of 0 or more.';
+  @override
+  String get stat_session_edit_message =>
+      'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+  @override
+  String get stat_sessions_clear_all => 'Clear all sessions';
+  @override
+  String get stat_sessions_clear_all_title => 'Clear all session records';
+  @override
+  String stat_sessions_clear_all_message({required Object n}) =>
+      'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+  @override
+  String stat_sessions_clear_all_ack({required Object n}) =>
+      'I understand this deletes all ${n} session records.';
+  @override
+  String get stat_clear_all_overview_message =>
+      'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+  @override
+  String get video_discovery_provider_rate_limited =>
+      'Some sources are rate limited; showing the rest';
+  @override
+  String get video_discovery_provider_failed =>
+      'Some sources failed temporarily; showing the rest';
+  @override
+  String get collection_rescrape_pick_work => 'Pick a work to rescrape';
+  @override
+  String get updates_center_title => 'Updates';
+  @override
+  String get updates_center_empty => 'No updates yet';
+  @override
+  String get updates_center_empty_hint =>
+      'Subscribed anime, manga chapters, extension and app releases show up here.';
+  @override
+  String get updates_mark_all_seen => 'Mark all as read';
+  @override
+  String get updates_filter_all => 'All';
+  @override
+  String get updates_kind_video_episode => 'Anime episodes';
+  @override
+  String get updates_kind_manga_chapter => 'Manga chapters';
+  @override
+  String get updates_kind_manga_extension => 'Manga extensions';
+  @override
+  String get updates_kind_app_release => 'App releases';
+  @override
+  String get updates_notify_section => 'Update notifications';
+  @override
+  String get updates_notify_video_episode => 'Notify about new anime episodes';
+  @override
+  String get updates_notify_video_episode_hint =>
+      'Alert when a subscribed series finishes downloading a new episode.';
+  @override
+  String get updates_notify_manga_chapter => 'Notify about new manga chapters';
+  @override
+  String get updates_notify_manga_chapter_hint =>
+      'Check followed online manga for new chapters in the background.';
+  @override
+  String get updates_notify_manga_extension =>
+      'Notify about manga extension updates';
+  @override
+  String get updates_notify_manga_extension_hint =>
+      'Alert when an installed extension has a newer version in its repository.';
+  @override
+  String get updates_notify_app_release => 'Notify about app releases';
+  @override
+  String get updates_notify_app_release_hint =>
+      'Alert when a newer Fushi release is available.';
+  @override
+  String get updates_system_notifications => 'System notifications';
+  @override
+  String get updates_system_notifications_hint =>
+      'Also send a system notification. Turning this off keeps the in-app badge.';
+  @override
+  String get updates_check_now => 'Check for updates now';
+  @override
+  String get updates_checking => 'Checking...';
+  @override
+  String updates_notification_summary(
+          {required Object first, required Object count}) =>
+      '${first} and ${count} more';
 }
 
 /// Flat map(s) containing all translations.
@@ -180609,7 +182668,7 @@ extension on _StringsEn {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'On-device speech recognition models. Download only the languages you need.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -181643,7 +183702,7 @@ extension on _StringsEn {
       case 'delete_collection_also_books':
         return 'Also delete the books in it';
       case 'delete_collection_also_videos':
-        return 'Also delete the videos (keeps your original video files)';
+        return 'Also delete the videos';
       case 'delete_collection_confirm':
         return 'Only the grouping is removed. The items in it are kept.';
       case 'delete_custom_theme':
@@ -189237,7 +191296,7 @@ extension on _StringsEn {
       case 'settings_group_connections':
         return 'Connections';
       case 'settings_group_data':
-        return 'Data and devices';
+        return 'Data & device';
       case 'settings_group_app':
         return 'App';
       case 'settings_destination_appearance_interaction':
@@ -189359,6 +191418,115 @@ extension on _StringsEn {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Models and components';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -190121,7 +192289,7 @@ extension on _StringsAr {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'نماذج التعرّف على الكلام على الجهاز. نزّل اللغات التي تحتاجها فقط.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -191155,7 +193323,7 @@ extension on _StringsAr {
       case 'delete_collection_also_books':
         return 'حذف الكتب الموجودة فيها أيضاً';
       case 'delete_collection_also_videos':
-        return 'حذف الفيديوهات أيضاً (يحتفظ بملفات الفيديو الأصلية)';
+        return 'حذف الفيديوهات أيضاً';
       case 'delete_collection_confirm':
         return 'سيتم إزالة التجميع فقط. العناصر الموجودة فيه ستبقى.';
       case 'delete_custom_theme':
@@ -198738,13 +200906,13 @@ extension on _StringsAr {
       case 'settings_group_interface':
         return 'الواجهة';
       case 'settings_group_content':
-        return 'المحتوى';
+        return 'Content';
       case 'settings_group_learning':
         return 'التعلّم';
       case 'settings_group_connections':
         return 'الاتصالات';
       case 'settings_group_data':
-        return 'البيانات والأجهزة';
+        return 'Data & device';
       case 'settings_group_app':
         return 'التطبيق';
       case 'settings_destination_appearance_interaction':
@@ -198866,6 +201034,115 @@ extension on _StringsAr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'النماذج والمكوّنات';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -199634,7 +201911,7 @@ extension on _StringsDe {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modelle zur Spracherkennung auf dem Gerät. Lade nur die benötigten Sprachen herunter.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -200674,7 +202951,7 @@ extension on _StringsDe {
       case 'delete_collection_also_books':
         return 'Auch die enthaltenen Bücher löschen';
       case 'delete_collection_also_videos':
-        return 'Auch die Videos löschen (deine originalen Videodateien bleiben erhalten)';
+        return 'Auch die Videos löschen';
       case 'delete_collection_confirm':
         return 'Nur die Gruppierung wird entfernt. Die enthaltenen Einträge bleiben erhalten.';
       case 'delete_custom_theme':
@@ -208290,13 +210567,13 @@ extension on _StringsDe {
       case 'settings_group_interface':
         return 'Oberfläche';
       case 'settings_group_content':
-        return 'Inhalte';
+        return 'Content';
       case 'settings_group_learning':
         return 'Lernen';
       case 'settings_group_connections':
         return 'Verbindungen';
       case 'settings_group_data':
-        return 'Daten und Geräte';
+        return 'Data & device';
       case 'settings_group_app':
         return 'App';
       case 'settings_destination_appearance_interaction':
@@ -208418,6 +210695,115 @@ extension on _StringsDe {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Modelle und Komponenten';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -209181,7 +211567,7 @@ extension on _StringsEs {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modelos de reconocimiento de voz en el dispositivo. Descarga solo los idiomas que necesites.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -210222,7 +212608,7 @@ extension on _StringsEs {
       case 'delete_collection_also_books':
         return 'También eliminar los libros que contiene';
       case 'delete_collection_also_videos':
-        return 'También eliminar los vídeos (conserva sus archivos de vídeo originales)';
+        return 'También eliminar los vídeos';
       case 'delete_collection_confirm':
         return 'Solo se elimina la agrupación. Los elementos que contiene se conservan.';
       case 'delete_custom_theme':
@@ -217833,13 +220219,13 @@ extension on _StringsEs {
       case 'settings_group_interface':
         return 'Interfaz';
       case 'settings_group_content':
-        return 'Contenido';
+        return 'Content';
       case 'settings_group_learning':
         return 'Aprendizaje';
       case 'settings_group_connections':
         return 'Conexiones';
       case 'settings_group_data':
-        return 'Datos y dispositivos';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Aplicación';
       case 'settings_destination_appearance_interaction':
@@ -217961,6 +220347,115 @@ extension on _StringsEs {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Modelos y componentes';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -218726,7 +221221,7 @@ extension on _StringsFr {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modèles de reconnaissance vocale sur l’appareil. Téléchargez uniquement les langues dont vous avez besoin.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -219767,7 +222262,7 @@ extension on _StringsFr {
       case 'delete_collection_also_books':
         return 'Supprimer aussi les livres qu\'elle contient';
       case 'delete_collection_also_videos':
-        return 'Supprimer aussi les vidéos (conserve vos fichiers vidéo originaux)';
+        return 'Supprimer aussi les vidéos';
       case 'delete_collection_confirm':
         return 'Seul le regroupement est supprimé. Les éléments qu\'elle contient sont conservés.';
       case 'delete_custom_theme':
@@ -227385,13 +229880,13 @@ extension on _StringsFr {
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
-        return 'Contenu';
+        return 'Content';
       case 'settings_group_learning':
         return 'Apprentissage';
       case 'settings_group_connections':
         return 'Connexions';
       case 'settings_group_data':
-        return 'Données et appareils';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Application';
       case 'settings_destination_appearance_interaction':
@@ -227513,6 +230008,115 @@ extension on _StringsFr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Modèles et composants';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -228277,7 +230881,7 @@ extension on _StringsId {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Model pengenalan ucapan di perangkat. Unduh hanya bahasa yang Anda perlukan.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -229315,7 +231919,7 @@ extension on _StringsId {
       case 'delete_collection_also_books':
         return 'Hapus juga buku di dalamnya';
       case 'delete_collection_also_videos':
-        return 'Hapus juga video (file video asli Anda tetap ada)';
+        return 'Hapus juga video';
       case 'delete_collection_confirm':
         return 'Hanya pengelompokan yang dihapus. Item di dalamnya dipertahankan.';
       case 'delete_custom_theme':
@@ -236908,13 +239512,13 @@ extension on _StringsId {
       case 'settings_group_interface':
         return 'Antarmuka';
       case 'settings_group_content':
-        return 'Konten';
+        return 'Content';
       case 'settings_group_learning':
         return 'Pembelajaran';
       case 'settings_group_connections':
         return 'Koneksi';
       case 'settings_group_data':
-        return 'Data dan perangkat';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Aplikasi';
       case 'settings_destination_appearance_interaction':
@@ -237036,6 +239640,115 @@ extension on _StringsId {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Model dan komponen';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -237800,7 +240513,7 @@ extension on _StringsIt {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modelli di riconoscimento vocale sul dispositivo. Scarica solo le lingue che ti servono.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -238839,7 +241552,7 @@ extension on _StringsIt {
       case 'delete_collection_also_books':
         return 'Elimina anche i libri contenuti';
       case 'delete_collection_also_videos':
-        return 'Elimina anche i video (mantiene i file video originali)';
+        return 'Elimina anche i video';
       case 'delete_collection_confirm':
         return 'Solo il raggruppamento viene rimosso. Gli elementi vengono mantenuti.';
       case 'delete_custom_theme':
@@ -246453,13 +249166,13 @@ extension on _StringsIt {
       case 'settings_group_interface':
         return 'Interfaccia';
       case 'settings_group_content':
-        return 'Contenuti';
+        return 'Content';
       case 'settings_group_learning':
         return 'Apprendimento';
       case 'settings_group_connections':
         return 'Connessioni';
       case 'settings_group_data':
-        return 'Dati e dispositivi';
+        return 'Data & device';
       case 'settings_group_app':
         return 'App';
       case 'settings_destination_appearance_interaction':
@@ -246581,6 +249294,115 @@ extension on _StringsIt {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Modelli e componenti';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -247340,7 +250162,7 @@ extension on _StringsJa {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return '端末内で動作する音声認識モデルです。必要な言語だけダウンロードしてください。';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -248368,7 +251190,7 @@ extension on _StringsJa {
       case 'delete_collection_also_books':
         return '中の書籍も削除';
       case 'delete_collection_also_videos':
-        return '動画も削除（元の動画ファイルは保持されます）';
+        return '動画も削除';
       case 'delete_collection_confirm':
         return 'グループのみ削除されます。中のアイテムは保持されます。';
       case 'delete_custom_theme':
@@ -255925,13 +258747,13 @@ extension on _StringsJa {
       case 'settings_group_interface':
         return 'インターフェース';
       case 'settings_group_content':
-        return 'コンテンツ';
+        return 'Content';
       case 'settings_group_learning':
         return '学習';
       case 'settings_group_connections':
         return '接続';
       case 'settings_group_data':
-        return 'データとデバイス';
+        return 'Data & device';
       case 'settings_group_app':
         return 'アプリ';
       case 'settings_destination_appearance_interaction':
@@ -256053,6 +258875,115 @@ extension on _StringsJa {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'モデルとコンポーネント';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '前面に出して辞書検索ページを開く';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -256811,7 +259742,7 @@ extension on _StringsKo {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return '기기 내 음성 인식 모델입니다. 필요한 언어만 다운로드하세요.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -257840,7 +260771,7 @@ extension on _StringsKo {
       case 'delete_collection_also_books':
         return '포함된 도서도 삭제';
       case 'delete_collection_also_videos':
-        return '동영상도 삭제 (원본 동영상 파일은 유지)';
+        return '동영상도 삭제';
       case 'delete_collection_confirm':
         return '그룹만 제거됩니다. 포함된 항목은 유지됩니다.';
       case 'delete_custom_theme':
@@ -265401,13 +268332,13 @@ extension on _StringsKo {
       case 'settings_group_interface':
         return '인터페이스';
       case 'settings_group_content':
-        return '콘텐츠';
+        return 'Content';
       case 'settings_group_learning':
         return '학습';
       case 'settings_group_connections':
         return '연결';
       case 'settings_group_data':
-        return '데이터 및 기기';
+        return 'Data & device';
       case 'settings_group_app':
         return '앱';
       case 'settings_destination_appearance_interaction':
@@ -265529,6 +268460,115 @@ extension on _StringsKo {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return '모델 및 구성 요소';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -266293,7 +269333,7 @@ extension on _StringsNl {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Spraakherkenningsmodellen voor gebruik op het apparaat. Download alleen de talen die je nodig hebt.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -267332,7 +270372,7 @@ extension on _StringsNl {
       case 'delete_collection_also_books':
         return 'Ook de boeken erin verwijderen';
       case 'delete_collection_also_videos':
-        return 'Ook de video\'s verwijderen (behoudt je originele videobestanden)';
+        return 'Ook de video\'s verwijderen';
       case 'delete_collection_confirm':
         return 'Alleen de groepering wordt verwijderd. De items erin worden bewaard.';
       case 'delete_custom_theme':
@@ -274939,13 +277979,13 @@ extension on _StringsNl {
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
-        return 'Inhoud';
+        return 'Content';
       case 'settings_group_learning':
         return 'Leren';
       case 'settings_group_connections':
         return 'Verbindingen';
       case 'settings_group_data':
-        return 'Gegevens en apparaten';
+        return 'Data & device';
       case 'settings_group_app':
         return 'App';
       case 'settings_destination_appearance_interaction':
@@ -275067,6 +278107,115 @@ extension on _StringsNl {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Modellen en componenten';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -275831,7 +278980,7 @@ extension on _StringsPtBr {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Modelos de reconhecimento de fala no dispositivo. Baixe apenas os idiomas de que precisa.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -276871,7 +280020,7 @@ extension on _StringsPtBr {
       case 'delete_collection_also_books':
         return 'Também excluir os livros nela';
       case 'delete_collection_also_videos':
-        return 'Também excluir os vídeos (mantém seus arquivos de vídeo originais)';
+        return 'Também excluir os vídeos';
       case 'delete_collection_confirm':
         return 'Apenas o agrupamento é removido. Os itens nele são mantidos.';
       case 'delete_custom_theme':
@@ -284472,13 +287621,13 @@ extension on _StringsPtBr {
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
-        return 'Conteúdo';
+        return 'Content';
       case 'settings_group_learning':
         return 'Aprendizado';
       case 'settings_group_connections':
         return 'Conexões';
       case 'settings_group_data':
-        return 'Dados e dispositivos';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Aplicativo';
       case 'settings_destination_appearance_interaction':
@@ -284600,6 +287749,115 @@ extension on _StringsPtBr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Modelos e componentes';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -285366,7 +288624,7 @@ extension on _StringsRu {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Модели распознавания речи на устройстве. Скачивайте только нужные языки.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -286408,7 +289666,7 @@ extension on _StringsRu {
       case 'delete_collection_also_books':
         return 'Также удалить книги из неё';
       case 'delete_collection_also_videos':
-        return 'Также удалить видео (исходные видеофайлы сохранятся)';
+        return 'Также удалить видео';
       case 'delete_collection_confirm':
         return 'Удаляется только группировка. Элементы в ней сохраняются.';
       case 'delete_custom_theme':
@@ -294012,13 +297270,13 @@ extension on _StringsRu {
       case 'settings_group_interface':
         return 'Интерфейс';
       case 'settings_group_content':
-        return 'Контент';
+        return 'Content';
       case 'settings_group_learning':
         return 'Обучение';
       case 'settings_group_connections':
         return 'Подключения';
       case 'settings_group_data':
-        return 'Данные и устройства';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Приложение';
       case 'settings_destination_appearance_interaction':
@@ -294140,6 +297398,115 @@ extension on _StringsRu {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Модели и компоненты';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -294902,7 +298269,7 @@ extension on _StringsTh {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'โมเดลรู้จำเสียงพูดบนอุปกรณ์ ดาวน์โหลดเฉพาะภาษาที่คุณต้องการ';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -295936,7 +299303,7 @@ extension on _StringsTh {
       case 'delete_collection_also_books':
         return 'ลบหนังสือในนั้นด้วย';
       case 'delete_collection_also_videos':
-        return 'ลบวิดีโอด้วย (เก็บไฟล์วิดีโอต้นฉบับไว้)';
+        return 'ลบวิดีโอด้วย';
       case 'delete_collection_confirm':
         return 'เฉพาะการจัดกลุ่มเท่านั้นที่จะถูกลบ รายการภายในจะยังคงอยู่';
       case 'delete_custom_theme':
@@ -303524,13 +306891,13 @@ extension on _StringsTh {
       case 'settings_group_interface':
         return 'อินเทอร์เฟซ';
       case 'settings_group_content':
-        return 'เนื้อหา';
+        return 'Content';
       case 'settings_group_learning':
         return 'การเรียนรู้';
       case 'settings_group_connections':
         return 'การเชื่อมต่อ';
       case 'settings_group_data':
-        return 'ข้อมูลและอุปกรณ์';
+        return 'Data & device';
       case 'settings_group_app':
         return 'แอป';
       case 'settings_destination_appearance_interaction':
@@ -303652,6 +307019,115 @@ extension on _StringsTh {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'โมเดลและส่วนประกอบ';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -304417,7 +307893,7 @@ extension on _StringsTr {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Cihaz üzerinde çalışan konuşma tanıma modelleri. Yalnızca ihtiyacınız olan dilleri indirin.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -305457,7 +308933,7 @@ extension on _StringsTr {
       case 'delete_collection_also_books':
         return 'İçindeki kitapları da sil';
       case 'delete_collection_also_videos':
-        return 'Videoları da sil (orijinal video dosyalarınız korunur)';
+        return 'Videoları da sil';
       case 'delete_collection_confirm':
         return 'Yalnızca gruplama kaldırılır. İçindeki öğeler korunur.';
       case 'delete_custom_theme':
@@ -313051,13 +316527,13 @@ extension on _StringsTr {
       case 'settings_group_interface':
         return 'Arayüz';
       case 'settings_group_content':
-        return 'İçerik';
+        return 'Content';
       case 'settings_group_learning':
         return 'Öğrenme';
       case 'settings_group_connections':
         return 'Bağlantılar';
       case 'settings_group_data':
-        return 'Veriler ve cihazlar';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Uygulama';
       case 'settings_destination_appearance_interaction':
@@ -313179,6 +316655,115 @@ extension on _StringsTr {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Modeller ve bileşenler';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -313943,7 +317528,7 @@ extension on _StringsVi {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return 'Mô hình nhận dạng giọng nói trên thiết bị. Chỉ tải xuống những ngôn ngữ bạn cần.';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -314978,7 +318563,7 @@ extension on _StringsVi {
       case 'delete_collection_also_books':
         return 'Đồng thời xóa sách trong đó';
       case 'delete_collection_also_videos':
-        return 'Đồng thời xóa video (giữ lại tệp video gốc)';
+        return 'Đồng thời xóa video';
       case 'delete_collection_confirm':
         return 'Chỉ xóa nhóm. Các mục trong đó vẫn được giữ lại.';
       case 'delete_custom_theme':
@@ -322572,13 +326157,13 @@ extension on _StringsVi {
       case 'settings_group_interface':
         return 'Giao diện';
       case 'settings_group_content':
-        return 'Nội dung';
+        return 'Content';
       case 'settings_group_learning':
         return 'Học tập';
       case 'settings_group_connections':
         return 'Kết nối';
       case 'settings_group_data':
-        return 'Dữ liệu và thiết bị';
+        return 'Data & device';
       case 'settings_group_app':
         return 'Ứng dụng';
       case 'settings_destination_appearance_interaction':
@@ -322700,6 +326285,115 @@ extension on _StringsVi {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return 'Mô hình và thành phần';
+      case 'settings_group_tools':
+        return 'Tools';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return 'Rename';
+      case 'media_source_rename_label':
+        return 'Source name';
+      case 'book_rename':
+        return 'Rename';
+      case 'book_rename_label':
+        return 'Title';
+      case 'dict_rename':
+        return 'Rename';
+      case 'dict_rename_label':
+        return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
@@ -323455,7 +327149,7 @@ extension on _StringsZhCn {
       case 'asr_models_section':
         return '语音识别模型';
       case 'asr_models_section_summary':
-        return '有声书设备端转录用的模型，只下载你需要的语言。';
+        return '本机语音识别模型，只下载你需要的语言。';
       case 'asr_models_status_missing':
         return ({required Object size}) => '未下载 · 需要 ${size}';
       case 'asr_models_status_partial':
@@ -324476,7 +328170,7 @@ extension on _StringsZhCn {
       case 'delete_collection_also_books':
         return '同时删除其中的书';
       case 'delete_collection_also_videos':
-        return '同时删除其中的视频（保留你的原始视频文件）';
+        return '同时删除其中的视频';
       case 'delete_collection_confirm':
         return '只解除分组，其中的条目会保留。';
       case 'delete_custom_theme':
@@ -332138,6 +335832,114 @@ extension on _StringsZhCn {
         return '正在让系统安装该语言…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return '这个引擎在文件中途无法暂停，停止会丢掉当前文件的进度。';
+      case 'storage_models_components':
+        return '模型与组件';
+      case 'settings_group_tools':
+        return '工具';
+      case 'mihon_source_login':
+        return '登录';
+      case 'mihon_source_login_hint':
+        return '在网站上登录后，点「完成」保存会话';
+      case 'mihon_source_login_done':
+        return '完成';
+      case 'mihon_source_login_empty':
+        return '没有捕获到会话 cookie，未保存';
+      case 'mihon_source_login_saved':
+        return '已登录该源';
+      case 'media_source_rename':
+        return '重命名';
+      case 'media_source_rename_label':
+        return '来源名称';
+      case 'book_rename':
+        return '重命名';
+      case 'book_rename_label':
+        return '标题';
+      case 'dict_rename':
+        return '重命名';
+      case 'dict_rename_label':
+        return '词典名称';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '唤起主窗并打开查词页';
+      case 'popup_full_width':
+        return '弹窗全宽';
+      case 'popup_full_width_hint':
+        return '忽略最大宽度，让弹窗横向铺满可用宽度；位置仍跟随选中的词。';
+      case 'stat_session_edit':
+        return '编辑会话';
+      case 'stat_session_edit_date':
+        return '日期';
+      case 'stat_session_edit_date_invalid':
+        return '日期请按 YYYY-MM-DD 填写。';
+      case 'stat_session_edit_chars':
+        return '字数';
+      case 'stat_session_edit_chars_invalid':
+        return '字数必须是 0 或更大的整数。';
+      case 'stat_session_edit_message':
+        return '改日期会把整次会话一起挪过去，一天里的时刻不变；字数会按比例分摊回这次会话的各个片段。';
+      case 'stat_sessions_clear_all':
+        return '清除全部会话';
+      case 'stat_sessions_clear_all_title':
+        return '清除全部会话记录';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            '确定清除全部 ${n} 条会话记录吗？这些会话的时长、字数、页数都会被清掉；收藏的词句、制卡历史和游戏库不受影响。此操作不可撤销。';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) => '我确认要删除这 ${n} 条会话记录。';
+      case 'stat_clear_all_overview_message':
+        return '确定把阅读、观看、游戏三个域的统计一起清空吗？三个域的时长、字数以及查词 / 制卡计数都会被删除；收藏的词、句子、制卡卡片、游戏库与活动时间线不受影响。此操作不可撤销。';
+      case 'video_discovery_provider_rate_limited':
+        return '部分来源请求过于频繁，已显示其余结果';
+      case 'video_discovery_provider_failed':
+        return '部分来源暂时请求失败，已显示其余结果';
+      case 'collection_rescrape_pick_work':
+        return '选择要重新刮削的作品';
+      case 'updates_center_title':
+        return '更新';
+      case 'updates_center_empty':
+        return '暂无更新';
+      case 'updates_center_empty_hint':
+        return '订阅的番剧新集、漫画新章、扩展与应用新版本都会出现在这里。';
+      case 'updates_mark_all_seen':
+        return '全部标为已读';
+      case 'updates_filter_all':
+        return '全部';
+      case 'updates_kind_video_episode':
+        return '番剧新集';
+      case 'updates_kind_manga_chapter':
+        return '漫画新章';
+      case 'updates_kind_manga_extension':
+        return '漫画扩展';
+      case 'updates_kind_app_release':
+        return '应用新版';
+      case 'updates_notify_section':
+        return '更新提醒';
+      case 'updates_notify_video_episode':
+        return '番剧新集提醒';
+      case 'updates_notify_video_episode_hint':
+        return '订阅的番剧下载好新集时提醒。';
+      case 'updates_notify_manga_chapter':
+        return '漫画新章提醒';
+      case 'updates_notify_manga_chapter_hint':
+        return '后台检查已追的在线漫画有没有新章。';
+      case 'updates_notify_manga_extension':
+        return '漫画扩展更新提醒';
+      case 'updates_notify_manga_extension_hint':
+        return '已装扩展在仓库里有更高版本时提醒。';
+      case 'updates_notify_app_release':
+        return '应用新版提醒';
+      case 'updates_notify_app_release_hint':
+        return '有更新的 Fushi 版本时提醒。';
+      case 'updates_system_notifications':
+        return '系统通知';
+      case 'updates_system_notifications_hint':
+        return '同时发送系统通知。关掉后仍保留应用内红点。';
+      case 'updates_check_now':
+        return '立即检查更新';
+      case 'updates_checking':
+        return '检查中…';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} 等 ${count} 项';
       default:
         return null;
     }
@@ -332894,7 +336696,7 @@ extension on _StringsZhHk {
       case 'asr_models_section':
         return 'Speech recognition models';
       case 'asr_models_section_summary':
-        return 'Models for on-device audiobook transcription. Download only the languages you need.';
+        return '本機語音辨識模型，只下載你需要的語言。';
       case 'asr_models_status_missing':
         return ({required Object size}) => 'Not downloaded · ${size}';
       case 'asr_models_status_partial':
@@ -333918,7 +337720,7 @@ extension on _StringsZhHk {
       case 'delete_collection_also_books':
         return '同時刪除其中的書';
       case 'delete_collection_also_videos':
-        return '同時刪除其中的影片（保留你的原始影片檔案）';
+        return '同時刪除其中的影片';
       case 'delete_collection_confirm':
         return '只解除分組，其中的條目會保留。';
       case 'delete_custom_theme':
@@ -341588,6 +345390,115 @@ extension on _StringsZhHk {
         return 'Asking the system to install the language…';
       case 'audiobook_transcribe_engine_system_no_pause':
         return 'This engine can\'t pause mid-file — stopping discards the current file\'s progress.';
+      case 'storage_models_components':
+        return '模型與元件';
+      case 'settings_group_tools':
+        return '工具';
+      case 'mihon_source_login':
+        return 'Log in';
+      case 'mihon_source_login_hint':
+        return 'Sign in on the site, then tap Done to save the session';
+      case 'mihon_source_login_done':
+        return 'Done';
+      case 'mihon_source_login_empty':
+        return 'No session cookies were captured; nothing was saved';
+      case 'mihon_source_login_saved':
+        return 'Signed in to this source';
+      case 'media_source_rename':
+        return '重命名';
+      case 'media_source_rename_label':
+        return '來源名稱';
+      case 'book_rename':
+        return '重命名';
+      case 'book_rename_label':
+        return '標題';
+      case 'dict_rename':
+        return '重命名';
+      case 'dict_rename_label':
+        return '詞典名稱';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '喚起主視窗並開啟查詞頁';
+      case 'popup_full_width':
+        return 'Full-width popup';
+      case 'popup_full_width_hint':
+        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
+      case 'stat_session_edit':
+        return 'Edit session';
+      case 'stat_session_edit_date':
+        return 'Date';
+      case 'stat_session_edit_date_invalid':
+        return 'Enter the date as YYYY-MM-DD.';
+      case 'stat_session_edit_chars':
+        return 'Characters';
+      case 'stat_session_edit_chars_invalid':
+        return 'Characters must be a whole number of 0 or more.';
+      case 'stat_session_edit_message':
+        return 'Changing the date moves the whole session and keeps its time of day. The character count is split back across the session\'s segments.';
+      case 'stat_sessions_clear_all':
+        return 'Clear all sessions';
+      case 'stat_sessions_clear_all_title':
+        return 'Clear all session records';
+      case 'stat_sessions_clear_all_message':
+        return ({required Object n}) =>
+            'Clear all ${n} session records? Their time, character and page counts go away. Your saved words and sentences, mined cards and game library are kept. This cannot be undone.';
+      case 'stat_sessions_clear_all_ack':
+        return ({required Object n}) =>
+            'I understand this deletes all ${n} session records.';
+      case 'stat_clear_all_overview_message':
+        return 'Clear reading, watching and game statistics all at once? Time, character counts and lookup/mining counts across all three go away. Your saved words and sentences, mined cards, game library and activity timeline are kept. This cannot be undone.';
+      case 'video_discovery_provider_rate_limited':
+        return 'Some sources are rate limited; showing the rest';
+      case 'video_discovery_provider_failed':
+        return 'Some sources failed temporarily; showing the rest';
+      case 'collection_rescrape_pick_work':
+        return 'Pick a work to rescrape';
+      case 'updates_center_title':
+        return 'Updates';
+      case 'updates_center_empty':
+        return 'No updates yet';
+      case 'updates_center_empty_hint':
+        return 'Subscribed anime, manga chapters, extension and app releases show up here.';
+      case 'updates_mark_all_seen':
+        return 'Mark all as read';
+      case 'updates_filter_all':
+        return 'All';
+      case 'updates_kind_video_episode':
+        return 'Anime episodes';
+      case 'updates_kind_manga_chapter':
+        return 'Manga chapters';
+      case 'updates_kind_manga_extension':
+        return 'Manga extensions';
+      case 'updates_kind_app_release':
+        return 'App releases';
+      case 'updates_notify_section':
+        return 'Update notifications';
+      case 'updates_notify_video_episode':
+        return 'Notify about new anime episodes';
+      case 'updates_notify_video_episode_hint':
+        return 'Alert when a subscribed series finishes downloading a new episode.';
+      case 'updates_notify_manga_chapter':
+        return 'Notify about new manga chapters';
+      case 'updates_notify_manga_chapter_hint':
+        return 'Check followed online manga for new chapters in the background.';
+      case 'updates_notify_manga_extension':
+        return 'Notify about manga extension updates';
+      case 'updates_notify_manga_extension_hint':
+        return 'Alert when an installed extension has a newer version in its repository.';
+      case 'updates_notify_app_release':
+        return 'Notify about app releases';
+      case 'updates_notify_app_release_hint':
+        return 'Alert when a newer Fushi release is available.';
+      case 'updates_system_notifications':
+        return 'System notifications';
+      case 'updates_system_notifications_hint':
+        return 'Also send a system notification. Turning this off keeps the in-app badge.';
+      case 'updates_check_now':
+        return 'Check for updates now';
+      case 'updates_checking':
+        return 'Checking...';
+      case 'updates_notification_summary':
+        return ({required Object first, required Object count}) =>
+            '${first} and ${count} more';
       default:
         return null;
     }
