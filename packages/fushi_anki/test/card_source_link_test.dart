@@ -366,10 +366,11 @@ void main() {
     expect(adjusted.sentence, 'dictionary update');
   });
 
-  test('both exact legacy defaults migrate while custom mappings survive', () {
+  test('all exact legacy defaults migrate while custom mappings survive', () {
     for (final String value in <String>[
       '{document-title}',
       '{document-title} {clip-timestamp}',
+      '{document-title} {clip-timestamp} {source-link}',
     ]) {
       final String upgraded = BaseAnkiRepository.upgradeMiscInfoMapping(
         jsonEncode(<String, Object>{

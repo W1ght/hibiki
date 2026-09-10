@@ -243,14 +243,19 @@ void main() {
       ),
     );
     await _until(tester, () => store.completedReads > 0);
-    final Finder edit = find.widgetWithText(
+    final Finder continueButton = find.widgetWithText(
       TextButton,
-      t.card_source_review_edit,
+      t.card_source_review_continue,
     );
     final Finder back = find.widgetWithText(
       TextButton,
       t.card_source_review_return,
     );
+    // The source toolbar offers navigation, with no original-field editor.
+    expect(find.byType(TextButton), findsNWidgets(2));
+    expect(back, findsOneWidget);
+    expect(continueButton, findsOneWidget);
+    expect(find.byType(TextField), findsNothing);
     FocusNode buttonFocus(Finder button) => Focus.of(
       tester.element(find.descendant(of: button, matching: find.byType(Text))),
     );
@@ -261,19 +266,17 @@ void main() {
 
     // Start inside the banner, as when the user traverses from its first
     // control. All further navigation must bypass the reader's caret handler.
-    buttonFocus(edit).requestFocus();
+    buttonFocus(back).requestFocus();
     await tester.pump();
     await press(LogicalKeyboardKey.tab);
-    expect(buttonFocus(back).hasPrimaryFocus, isTrue);
+    expect(buttonFocus(continueButton).hasPrimaryFocus, isTrue);
     await tester.sendKeyDownEvent(LogicalKeyboardKey.shiftLeft);
     await press(LogicalKeyboardKey.tab);
     await tester.sendKeyUpEvent(LogicalKeyboardKey.shiftLeft);
-    expect(buttonFocus(edit).hasPrimaryFocus, isTrue);
-    await press(LogicalKeyboardKey.arrowRight);
     expect(buttonFocus(back).hasPrimaryFocus, isTrue);
-    await press(LogicalKeyboardKey.arrowLeft);
-    expect(buttonFocus(edit).hasPrimaryFocus, isTrue);
     await press(LogicalKeyboardKey.arrowRight);
+    expect(buttonFocus(continueButton).hasPrimaryFocus, isTrue);
+    await press(LogicalKeyboardKey.arrowLeft);
     expect(buttonFocus(back).hasPrimaryFocus, isTrue);
     await press(LogicalKeyboardKey.enter);
     expect(returns, 1);
@@ -281,6 +284,12 @@ void main() {
     expect(returns, 2);
     await press(LogicalKeyboardKey.gameButtonA);
     expect(returns, 3);
+    await press(LogicalKeyboardKey.arrowRight);
+    expect(buttonFocus(continueButton).hasPrimaryFocus, isTrue);
+    await press(LogicalKeyboardKey.enter);
+    expect(session.isReview, isFalse);
+    expect(find.text(t.card_source_review_source), findsOneWidget);
+    expect(find.byType(TextField), findsNothing);
     expect(interceptedByReader, isEmpty);
     expect(repository.reads, 0);
     expect(repository.patches, 0);
@@ -431,7 +440,7 @@ void main() {
     },
   );
 
-  testWidgets('existing draft blocks both new mining and original editing', (
+  testWidgets('existing draft blocks new mining from replacing saved work', (
     WidgetTester tester,
   ) async {
     await tester.runAsync(
@@ -448,7 +457,6 @@ void main() {
         context: const AnkiMiningContext(sentence: 'replacement'),
       );
       expect(outcome.result, MineResult.error);
-      await session.editOriginal();
       final SourceReviewDraft draft = (await store.read(_sourceId))!;
       expect(draft.mining!.rawPayloadJson, '{"expression":"saved"}');
       expect(draft.mining!.context.sentence, 'saved sentence');

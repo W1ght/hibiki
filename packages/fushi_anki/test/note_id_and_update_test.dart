@@ -268,7 +268,7 @@ void main() {
       final _ConfiguredRepo repo = _ConfiguredRepo(service: service,
         settings: _settings().copyWith(fieldMappings: <String, String>{
           'Expression': '{expression}',
-          'MiscInfo': '{document-title} {source-link}',
+          'MiscInfo': LapisNoteType.defaultFieldMappings['MiscInfo']!,
         }));
       final MineOutcome outcome = await repo.updateMinedNote(noteId: 888,
         rawPayloadJson: _payload,
@@ -276,7 +276,7 @@ void main() {
       expect(outcome.result, MineResult.success);
       final String info = service.updateCalls.single.fields['MiscInfo']!;
       expect(CardSourceLink.fromHtml(info).single.toUri(), link.toUri());
-      expect(info, startsWith('Updated title '));
+      expect(info, link.toHtml(label: 'Updated title'));
       expect(service.addNoteCalls, isEmpty);
     });
     test('renders fields like mineEntry and calls updateNoteFields by id',

@@ -4526,7 +4526,6 @@
   "card_source_review_title": "正在回看卡片来源 · 不影响阅读进度",
   "card_source_review_continue": "从这里继续阅读",
   "card_source_review_return": "返回",
-  "card_source_review_edit": "修改原卡",
   "card_source_review_changes": "选择要更新的字段",
   "card_source_review_save": "保存选中修改",
   "card_source_review_missing": "找不到原卡，请同步 Anki 或连接原卡所在的配对设备。",
@@ -4543,5 +4542,6 @@
   "card_source_review_draft_resume": "恢复草稿",
   "card_source_review_draft_discard": "丢弃草稿",
   "card_source_review_draft_existing": "已有未提交草稿，请先恢复或丢弃草稿，再进行新的修改。",
-  "card_source_review_fingerprint_mismatch": "当前文件与卡片来源不一致，请使用对应的原文件。"
+  "card_source_review_fingerprint_mismatch": "当前文件与卡片来源不一致，请使用对应的原文件。",
+  "card_source_review_source": "卡片来源"
 }

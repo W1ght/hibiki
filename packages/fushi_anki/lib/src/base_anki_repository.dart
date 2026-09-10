@@ -102,8 +102,8 @@ abstract class BaseAnkiRepository {
   static const String _legacySentenceAudioAlias = '{sasayaki-audio}';
 
   /// 载入期一次性迁移：存量配置里 `MiscInfo` 的映射**一字不差**还是旧出厂默认
-  /// `{document-title}` 或 `{document-title} {clip-timestamp}` 时，补成带
-  /// `{source-link}` 的出厂默认，卡片底部提供返回原文入口（见 [LapisNoteType]）。
+  /// （纯标题、标题+时间、标题+时间+独立链接）时，改为标题自身作为来源链接，
+  /// 同时保留片段时间（见 [LapisNoteType]）。
   ///
   /// 为什么只认「等于旧默认」：这等价于「用户从没碰过这个字段」，补齐是在替他
   /// 跟进出厂默认。凡是被改过的值——清空、换成别的占位符、或自己拼过别的
@@ -115,6 +115,8 @@ abstract class BaseAnkiRepository {
       '{document-title} {clip-timestamp}';
   static const String _miscInfoMappingWithSource =
       '{document-title} {clip-timestamp} {source-link}';
+  static const String _miscInfoMappingWithLinkedTitle =
+      '{source-link} {clip-timestamp}';
 
   /// 读原始设置 JSON 的**唯一通道**：三个载入期迁移（W2-7 键搬移 + W2-2 别名改写
   /// + MiscInfo 补片段时间窗）都收敛在这里。子类若覆写 [loadSettings]（AnkiDroid 的
@@ -166,7 +168,8 @@ abstract class BaseAnkiRepository {
     // `jsonEncode`（无空格）；万一哪天形态变了，最坏结果是这条迁移不触发（用户手动改
     // 一次映射），不会误改也不会崩——真正的判据仍是下面的结构化比较。
     if (!raw.contains('"MiscInfo":"$_legacyMiscInfoMapping"') &&
-        !raw.contains('"MiscInfo":"$_miscInfoMappingWithClipTime"')) {
+        !raw.contains('"MiscInfo":"$_miscInfoMappingWithClipTime"') &&
+        !raw.contains('"MiscInfo":"$_miscInfoMappingWithSource"')) {
       return null;
     }
     final Object? decoded;
@@ -179,8 +182,9 @@ abstract class BaseAnkiRepository {
     final Object? mappings = decoded['fieldMappings'];
     if (mappings is! Map) return null;
     if (mappings['MiscInfo'] != _legacyMiscInfoMapping &&
-        mappings['MiscInfo'] != _miscInfoMappingWithClipTime) return null;
-    mappings['MiscInfo'] = _miscInfoMappingWithSource;
+        mappings['MiscInfo'] != _miscInfoMappingWithClipTime &&
+        mappings['MiscInfo'] != _miscInfoMappingWithSource) return null;
+    mappings['MiscInfo'] = _miscInfoMappingWithLinkedTitle;
     return jsonEncode(decoded);
   }
 

@@ -918,7 +918,7 @@ class AnkiHandlebarRenderer {
       case '{document-title}':
         return context.documentTitle ?? '';
       case '{source-link}':
-        return context.sourceLink?.toHtml() ?? '';
+        return renderSourceLink(context);
       case '{clip-timestamp}':
         return formatClipTimestamp(context.clipStartMs, context.clipEndMs);
       // {card-image} 是通用图片键（书籍封面 / 视频 GIF 共用，语义中性、名副其实）：
@@ -941,6 +941,16 @@ class AnkiHandlebarRenderer {
       default:
         return '';
     }
+  }
+
+  /// 作品标题自身作为来源链接；无定位时保留普通标题，不额外重复标题。
+  static String renderSourceLink(AnkiMiningContext context) {
+    final String title = context.documentTitle ?? '';
+    final CardSourceLink? source = context.sourceLink;
+    if (source == null) {
+      return const HtmlEscape(HtmlEscapeMode.element).convert(title);
+    }
+    return source.toHtml(label: title.trim().isEmpty ? '来源' : title);
   }
 
   /// 把媒体片段起止（毫秒偏移）渲染成人类可读的 `HH:MM:SS - HH:MM:SS`。

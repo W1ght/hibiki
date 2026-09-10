@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 77265 (4545 per locale)
 ///
-/// Built on 2026-09-09 at 23:51 UTC
+/// Built on 2026-09-10 at 02:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6356,7 +6356,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Reviewing card source · Reading progress is preserved';
   String get card_source_review_continue => 'Continue reading here';
   String get card_source_review_return => 'Return';
-  String get card_source_review_edit => 'Edit original note';
   String get card_source_review_changes => 'Choose fields to update';
   String get card_source_review_save => 'Save selected changes';
   String get card_source_review_missing =>
@@ -6383,6 +6382,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'A draft already exists. Resume or discard it before making another edit.';
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -17090,8 +17090,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -17134,6 +17132,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -28077,8 +28077,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -28121,6 +28119,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -39114,8 +39114,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -39158,6 +39156,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -50184,8 +50184,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -50228,6 +50226,8 @@ class _StringsFr extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -61054,8 +61054,6 @@ class _StringsId extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -61098,6 +61096,8 @@ class _StringsId extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -72020,8 +72020,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -72064,6 +72062,8 @@ class _StringsIt extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -82354,8 +82354,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -82398,6 +82396,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -92699,8 +92699,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -92743,6 +92741,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -103619,8 +103619,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -103663,6 +103661,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -114592,8 +114592,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -114636,6 +114634,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -125543,8 +125543,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -125587,6 +125585,8 @@ class _StringsRu extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -136291,8 +136291,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -136335,6 +136333,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -147157,8 +147157,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -147201,6 +147199,8 @@ class _StringsTr extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -157992,8 +157992,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -158036,6 +158034,8 @@ class _StringsVi extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 // Path: <root>
@@ -167941,8 +167941,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get card_source_review_return => '返回';
   @override
-  String get card_source_review_edit => '修改原卡';
-  @override
   String get card_source_review_changes => '选择要更新的字段';
   @override
   String get card_source_review_save => '保存选中修改';
@@ -167978,6 +167976,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       '当前文件与卡片来源不一致，请使用对应的原文件。';
+  @override
+  String get card_source_review_source => '卡片来源';
 }
 
 // Path: <root>
@@ -177953,8 +177953,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get card_source_review_return => 'Return';
   @override
-  String get card_source_review_edit => 'Edit original note';
-  @override
   String get card_source_review_changes => 'Choose fields to update';
   @override
   String get card_source_review_save => 'Save selected changes';
@@ -177997,6 +177995,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get card_source_review_fingerprint_mismatch =>
       'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
 }
 
 /// Flat map(s) containing all translations.
@@ -187317,8 +187317,6 @@ extension on _StringsEn {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -187353,6 +187351,8 @@ extension on _StringsEn {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -196668,8 +196668,6 @@ extension on _StringsAr {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -196704,6 +196702,8 @@ extension on _StringsAr {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -206068,8 +206068,6 @@ extension on _StringsDe {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -206104,6 +206102,8 @@ extension on _StringsDe {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -215458,8 +215458,6 @@ extension on _StringsEs {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -215494,6 +215492,8 @@ extension on _StringsEs {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -224856,8 +224856,6 @@ extension on _StringsFr {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -224892,6 +224890,8 @@ extension on _StringsFr {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -234224,8 +234224,6 @@ extension on _StringsId {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -234260,6 +234258,8 @@ extension on _StringsId {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -243615,8 +243615,6 @@ extension on _StringsIt {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -243651,6 +243649,8 @@ extension on _StringsIt {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -252930,8 +252930,6 @@ extension on _StringsJa {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -252966,6 +252964,8 @@ extension on _StringsJa {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -262250,8 +262250,6 @@ extension on _StringsKo {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -262286,6 +262284,8 @@ extension on _StringsKo {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -271636,8 +271636,6 @@ extension on _StringsNl {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -271672,6 +271670,8 @@ extension on _StringsNl {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -281017,8 +281017,6 @@ extension on _StringsPtBr {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -281053,6 +281051,8 @@ extension on _StringsPtBr {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -290404,8 +290404,6 @@ extension on _StringsRu {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -290440,6 +290438,8 @@ extension on _StringsRu {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -299760,8 +299760,6 @@ extension on _StringsTh {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -299796,6 +299794,8 @@ extension on _StringsTh {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -309132,8 +309132,6 @@ extension on _StringsTr {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -309168,6 +309166,8 @@ extension on _StringsTr {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -318498,8 +318498,6 @@ extension on _StringsVi {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -318534,6 +318532,8 @@ extension on _StringsVi {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }
@@ -327780,8 +327780,6 @@ extension on _StringsZhCn {
         return '从这里继续阅读';
       case 'card_source_review_return':
         return '返回';
-      case 'card_source_review_edit':
-        return '修改原卡';
       case 'card_source_review_changes':
         return '选择要更新的字段';
       case 'card_source_review_save':
@@ -327816,6 +327814,8 @@ extension on _StringsZhCn {
         return '已有未提交草稿，请先恢复或丢弃草稿，再进行新的修改。';
       case 'card_source_review_fingerprint_mismatch':
         return '当前文件与卡片来源不一致，请使用对应的原文件。';
+      case 'card_source_review_source':
+        return '卡片来源';
       default:
         return null;
     }
@@ -337073,8 +337073,6 @@ extension on _StringsZhHk {
         return 'Continue reading here';
       case 'card_source_review_return':
         return 'Return';
-      case 'card_source_review_edit':
-        return 'Edit original note';
       case 'card_source_review_changes':
         return 'Choose fields to update';
       case 'card_source_review_save':
@@ -337109,6 +337107,8 @@ extension on _StringsZhHk {
         return 'A draft already exists. Resume or discard it before making another edit.';
       case 'card_source_review_fingerprint_mismatch':
         return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
       default:
         return null;
     }

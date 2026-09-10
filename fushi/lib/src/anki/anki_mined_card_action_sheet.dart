@@ -395,29 +395,17 @@ class _AnkiNoteViewerDialogState extends State<_AnkiNoteViewerDialog> {
 
 /// Shared original-note field UI for source review and the existing viewer.
 /// Values remain selectable in view mode and retain their complete HTML in
-/// edit/diff mode; no hidden truncation is permitted when approving a patch.
+/// diff mode; no hidden truncation is permitted when approving a patch.
 class _AnkiNoteField extends StatelessWidget {
   const _AnkiNoteField(
-      {required this.label,
-      required this.value,
-      this.controller,
-      this.raw = false});
+      {required this.label, required this.value, this.raw = false});
   final String label;
   final String value;
-  final TextEditingController? controller;
   final bool raw;
 
   @override
   Widget build(BuildContext context) {
     final ThemeData theme = Theme.of(context);
-    if (controller != null) {
-      return TextField(
-          key: ValueKey<String>('anki-source-edit-$label'),
-          controller: controller,
-          minLines: 1,
-          maxLines: 8,
-          decoration: InputDecoration(labelText: label));
-    }
     final String preview = BaseAnkiRepository.previewFromFieldValue(value,
         maxLen: value.length + 1);
     return Column(
@@ -518,75 +506,6 @@ class _AnkiSourceNoteChangesDialogState
       ],
     );
   }
-}
-
-/// Reuses the note viewer's field layout in edit mode and returns only changes.
-Future<Map<String, String>?> showAnkiSourceNoteEditor({
-  required BuildContext context,
-  required Map<String, String> fields,
-}) =>
-    showAppDialog<Map<String, String>>(
-      context: context,
-      barrierDismissible: false,
-      builder: (_) => _AnkiSourceNoteEditorDialog(fields: fields),
-    );
-
-class _AnkiSourceNoteEditorDialog extends StatefulWidget {
-  const _AnkiSourceNoteEditorDialog({required this.fields});
-  final Map<String, String> fields;
-  @override
-  State<_AnkiSourceNoteEditorDialog> createState() =>
-      _AnkiSourceNoteEditorDialogState();
-}
-
-class _AnkiSourceNoteEditorDialogState
-    extends State<_AnkiSourceNoteEditorDialog> {
-  late final Map<String, TextEditingController> _controllers =
-      <String, TextEditingController>{
-    for (final MapEntry<String, String> entry in widget.fields.entries)
-      entry.key: TextEditingController(text: entry.value),
-  };
-  @override
-  void dispose() {
-    for (final TextEditingController controller in _controllers.values) {
-      controller.dispose();
-    }
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) => AlertDialog(
-        title: Text(t.card_source_review_edit),
-        content: SizedBox(
-            width: 640,
-            child: SingleChildScrollView(
-                child:
-                    Column(mainAxisSize: MainAxisSize.min, children: <Widget>[
-              Text(t.card_source_review_conflict_warning),
-              const SizedBox(height: 12),
-              for (final MapEntry<String, TextEditingController> entry
-                  in _controllers.entries)
-                Padding(
-                    padding: const EdgeInsets.only(bottom: 12),
-                    child: _AnkiNoteField(
-                        label: entry.key,
-                        value: widget.fields[entry.key]!,
-                        controller: entry.value)),
-            ]))),
-        actions: <Widget>[
-          TextButton(
-              onPressed: () => Navigator.of(context).pop(),
-              child: Text(t.dialog_cancel)),
-          FilledButton(
-              onPressed: () => Navigator.of(context).pop(<String, String>{
-                    for (final MapEntry<String, TextEditingController> entry
-                        in _controllers.entries)
-                      if (entry.value.text != widget.fields[entry.key])
-                        entry.key: entry.value.text,
-                  }),
-              child: Text(t.card_source_review_save)),
-        ],
-      );
 }
 
 /// TODO-1007/1008：点 ✓ 的宿主侧编排收口（mixin / base_source_page 两条车道共用，

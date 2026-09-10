@@ -210,34 +210,6 @@ class SourceReviewSession extends ChangeNotifier {
     }
   }
 
-  Future<void> editOriginal() async {
-    if (_busy) return;
-    _busy = true;
-    _notify();
-    try {
-      if (!await _canStartEdit()) return;
-      final AnkiSourceNote original = await _readOriginal();
-      final BuildContext? ui = _context;
-      if (ui == null || !ui.mounted) return;
-      final Map<String, String>? fields = await showAnkiSourceNoteEditor(
-        context: ui,
-        fields: original.fields,
-      );
-      if (fields == null || fields.isEmpty) return;
-      await _patch(original, fields);
-      _message(t.card_source_review_saved);
-    } catch (_) {
-      _message(
-        _hasDraft
-            ? t.card_source_review_draft_saved
-            : t.card_source_review_failed,
-      );
-    } finally {
-      _busy = false;
-      _notify();
-    }
-  }
-
   Future<void> resumeDraft() async {
     if (_busy) return;
     _busy = true;
@@ -378,7 +350,7 @@ class SourceReviewBanner extends StatelessWidget {
                   Text(
                     session.isReview
                         ? t.card_source_review_title
-                        : t.card_source_review_edit,
+                        : t.card_source_review_source,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -386,12 +358,6 @@ class SourceReviewBanner extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: <Widget>[
-                        TextButton(
-                          onPressed: session.busy
-                              ? null
-                              : () => _runDialog(session.editOriginal),
-                          child: Text(t.card_source_review_edit),
-                        ),
                         if (session.hasDraft) ...<Widget>[
                           TextButton(
                             onPressed: session.busy

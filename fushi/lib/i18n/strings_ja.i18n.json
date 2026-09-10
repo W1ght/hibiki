@@ -4526,7 +4526,6 @@
   "card_source_review_title": "Reviewing card source · Reading progress is preserved",
   "card_source_review_continue": "Continue reading here",
   "card_source_review_return": "Return",
-  "card_source_review_edit": "Edit original note",
   "card_source_review_changes": "Choose fields to update",
   "card_source_review_save": "Save selected changes",
   "card_source_review_missing": "The original note could not be found. Sync Anki or connect its paired device.",
@@ -4543,5 +4542,6 @@
   "card_source_review_draft_resume": "Resume draft",
   "card_source_review_draft_discard": "Discard draft",
   "card_source_review_draft_existing": "A draft already exists. Resume or discard it before making another edit.",
-  "card_source_review_fingerprint_mismatch": "This file does not match the card source. Open the matching file to continue."
+  "card_source_review_fingerprint_mismatch": "This file does not match the card source. Open the matching file to continue.",
+  "card_source_review_source": "Card source"
 }

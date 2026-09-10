@@ -222,6 +222,7 @@ void main() {
     expect(find.byType(AlertDialog, skipOffstage: false), findsOneWidget);
     expect(find.text('Unknown'), findsNothing);
     expect(find.text(t.card_source_review_conflict_warning), findsOneWidget);
+    expect(find.byType(TextField), findsNothing);
     expect(
         tester
             .widget<FilledButton>(
@@ -237,32 +238,6 @@ void main() {
     await tester.tap(find.text(t.card_source_review_save));
     await tester.pumpAndSettle();
     expect(selected, <String, String>{'Sentence': candidate});
-  });
-
-  testWidgets(
-      'shared note editor preserves unmodified fields and original HTML',
-      (WidgetTester tester) async {
-    Map<String, String>? changed;
-    await tester.pumpWidget(_host((BuildContext context) async {
-      changed = await showAnkiSourceNoteEditor(
-          context: context,
-          fields: <String, String>{
-            'Sentence': '<b>original</b>',
-            'Meaning': 'manual meaning'
-          });
-    }));
-    await tester.tap(find.text('open'));
-    await tester.pumpAndSettle();
-    expect(find.byType(AlertDialog, skipOffstage: false), findsOneWidget);
-    final TextField sentence = tester.widget<TextField>(
-        find.byKey(const ValueKey<String>('anki-source-edit-Sentence')));
-    expect(sentence.controller!.text, '<b>original</b>');
-    await tester.enterText(
-        find.byKey(const ValueKey<String>('anki-source-edit-Meaning')),
-        '<i>updated</i>');
-    await tester.tap(find.text(t.card_source_review_save));
-    await tester.pumpAndSettle();
-    expect(changed, <String, String>{'Meaning': '<i>updated</i>'});
   });
 
   // TODO-1007 健壮性：宿主回调抛错时，action sheet 不能卡在 _busy 进度条无反馈。
