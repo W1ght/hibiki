@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78506 (4618 per locale)
+/// Strings: 78489 (4617 per locale)
 ///
-/// Built on 2026-09-10 at 01:23 UTC
+/// Built on 2026-09-10 at 02:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6389,12 +6389,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Large — best on a desktop GPU';
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
-  String get audiobook_transcribe_model_default_badge => 'Default';
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   String get audiobook_transcribe_model_custom_name => 'Model name';
   String get audiobook_transcribe_model_custom_blank => 'Blank token';
@@ -6415,6 +6412,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Only removes it from the model list. Your files are not deleted.';
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -17232,16 +17231,11 @@ class _StringsAr extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -17275,6 +17269,9 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -28320,16 +28317,11 @@ class _StringsDe extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -28363,6 +28355,9 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -39462,16 +39457,11 @@ class _StringsEs extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -39505,6 +39495,9 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -50638,16 +50631,11 @@ class _StringsFr extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -50681,6 +50669,9 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -61616,16 +61607,11 @@ class _StringsId extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -61659,6 +61645,9 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -72687,16 +72676,11 @@ class _StringsIt extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -72730,6 +72714,9 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -83134,16 +83121,11 @@ class _StringsJa extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -83177,6 +83159,9 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -93592,16 +93577,11 @@ class _StringsKo extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -93635,6 +93615,9 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -104619,16 +104602,11 @@ class _StringsNl extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -104662,6 +104640,9 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -115700,16 +115681,11 @@ class _StringsPtBr extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -115743,6 +115719,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -126758,16 +126737,11 @@ class _StringsRu extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -126801,6 +126775,9 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -137615,16 +137592,11 @@ class _StringsTh extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -137658,6 +137630,9 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -148588,16 +148563,11 @@ class _StringsTr extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -148631,6 +148601,9 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -159532,16 +159505,11 @@ class _StringsVi extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -159575,6 +159543,9 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 // Path: <root>
@@ -169587,16 +169558,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_model_fit_heavy_mobile => '大模型 · 手机上能跑，但很慢';
   @override
-  String get audiobook_transcribe_model_default_badge => '默认';
-  @override
   String get audiobook_transcribe_model_custom_badge => '自带';
   @override
   String get audiobook_transcribe_model_custom_add => '手动指定模型…';
   @override
   String get audiobook_transcribe_model_custom_title => '手动指定模型';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      '选一个放着 sherpa-onnx 导出模型的文件夹（encoder / decoder / joiner 三件套，或单个 CTC 模型，外加 tokens.txt）。文件留在原处，不会复制也不会下载。';
   @override
   String get audiobook_transcribe_model_custom_pick => '选择文件夹';
   @override
@@ -169629,6 +169595,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       '已接入 ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      '选一个放着 sherpa-onnx 导出模型的文件夹（encoder / decoder / joiner 三件套，或单个 CTC 模型，外加 tokens.txt）。文件留在原处不会复制，只有文件夹里没有 VAD 模型时会补下那 640 KB。';
 }
 
 // Path: <root>
@@ -179717,16 +179686,11 @@ class _StringsZhHk extends _StringsEn {
   String get audiobook_transcribe_model_fit_heavy_mobile =>
       'Large — runs on phones, but slowly';
   @override
-  String get audiobook_transcribe_model_default_badge => 'Default';
-  @override
   String get audiobook_transcribe_model_custom_badge => 'Added by you';
   @override
   String get audiobook_transcribe_model_custom_add => 'Add a local model…';
   @override
   String get audiobook_transcribe_model_custom_title => 'Add a local model';
-  @override
-  String get audiobook_transcribe_model_custom_intro =>
-      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
   @override
   String get audiobook_transcribe_model_custom_pick => 'Choose folder';
   @override
@@ -179760,6 +179724,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_model_custom_added({required Object name}) =>
       'Added ${name}';
+  @override
+  String get audiobook_transcribe_model_custom_intro =>
+      'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
 }
 
 /// Flat map(s) containing all translations.
@@ -189230,16 +189197,12 @@ extension on _StringsEn {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -189266,6 +189229,8 @@ extension on _StringsEn {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -198731,16 +198696,12 @@ extension on _StringsAr {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -198767,6 +198728,8 @@ extension on _StringsAr {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -208277,16 +208240,12 @@ extension on _StringsDe {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -208313,6 +208272,8 @@ extension on _StringsDe {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -217814,16 +217775,12 @@ extension on _StringsEs {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -217850,6 +217807,8 @@ extension on _StringsEs {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -227360,16 +227319,12 @@ extension on _StringsFr {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -227396,6 +227351,8 @@ extension on _StringsFr {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -236877,16 +236834,12 @@ extension on _StringsId {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -236913,6 +236866,8 @@ extension on _StringsId {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -246416,16 +246371,12 @@ extension on _StringsIt {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -246452,6 +246403,8 @@ extension on _StringsIt {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -255882,16 +255835,12 @@ extension on _StringsJa {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -255918,6 +255867,8 @@ extension on _StringsJa {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -265352,16 +265303,12 @@ extension on _StringsKo {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -265388,6 +265335,8 @@ extension on _StringsKo {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -274884,16 +274833,12 @@ extension on _StringsNl {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -274920,6 +274865,8 @@ extension on _StringsNl {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -284411,16 +284358,12 @@ extension on _StringsPtBr {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -284447,6 +284390,8 @@ extension on _StringsPtBr {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -293945,16 +293890,12 @@ extension on _StringsRu {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -293981,6 +293922,8 @@ extension on _StringsRu {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -303451,16 +303394,12 @@ extension on _StringsTh {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -303487,6 +303426,8 @@ extension on _StringsTh {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -312972,16 +312913,12 @@ extension on _StringsTr {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -313008,6 +312945,8 @@ extension on _StringsTr {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -322487,16 +322426,12 @@ extension on _StringsVi {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -322523,6 +322458,8 @@ extension on _StringsVi {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
@@ -331919,16 +331856,12 @@ extension on _StringsZhCn {
         return '大模型 · 建议桌面（有独显更好）';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return '大模型 · 手机上能跑，但很慢';
-      case 'audiobook_transcribe_model_default_badge':
-        return '默认';
       case 'audiobook_transcribe_model_custom_badge':
         return '自带';
       case 'audiobook_transcribe_model_custom_add':
         return '手动指定模型…';
       case 'audiobook_transcribe_model_custom_title':
         return '手动指定模型';
-      case 'audiobook_transcribe_model_custom_intro':
-        return '选一个放着 sherpa-onnx 导出模型的文件夹（encoder / decoder / joiner 三件套，或单个 CTC 模型，外加 tokens.txt）。文件留在原处，不会复制也不会下载。';
       case 'audiobook_transcribe_model_custom_pick':
         return '选择文件夹';
       case 'audiobook_transcribe_model_custom_name':
@@ -331955,6 +331888,8 @@ extension on _StringsZhCn {
         return '只是从模型列表里移除，你的文件不会被删除。';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => '已接入 ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return '选一个放着 sherpa-onnx 导出模型的文件夹（encoder / decoder / joiner 三件套，或单个 CTC 模型，外加 tokens.txt）。文件留在原处不会复制，只有文件夹里没有 VAD 模型时会补下那 640 KB。';
       default:
         return null;
     }
@@ -341363,16 +341298,12 @@ extension on _StringsZhHk {
         return 'Large — best on a desktop GPU';
       case 'audiobook_transcribe_model_fit_heavy_mobile':
         return 'Large — runs on phones, but slowly';
-      case 'audiobook_transcribe_model_default_badge':
-        return 'Default';
       case 'audiobook_transcribe_model_custom_badge':
         return 'Added by you';
       case 'audiobook_transcribe_model_custom_add':
         return 'Add a local model…';
       case 'audiobook_transcribe_model_custom_title':
         return 'Add a local model';
-      case 'audiobook_transcribe_model_custom_intro':
-        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner or a single CTC model, plus tokens.txt). The files stay where they are and nothing is downloaded.';
       case 'audiobook_transcribe_model_custom_pick':
         return 'Choose folder';
       case 'audiobook_transcribe_model_custom_name':
@@ -341399,6 +341330,8 @@ extension on _StringsZhHk {
         return 'Only removes it from the model list. Your files are not deleted.';
       case 'audiobook_transcribe_model_custom_added':
         return ({required Object name}) => 'Added ${name}';
+      case 'audiobook_transcribe_model_custom_intro':
+        return 'Point Hibiki at a folder holding a sherpa-onnx export (encoder / decoder / joiner, or a single CTC model, plus tokens.txt). The files stay where they are — only the small VAD model (640 KB) is fetched if the folder has none.';
       default:
         return null;
     }
