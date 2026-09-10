@@ -1,7 +1,7 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79781 (4693 per locale)
+/// Strings: 79747 (4691 per locale)
 ///
 /// Built on 2026-09-10 at 15:32 UTC
 
@@ -6434,9 +6434,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_rename_label => 'Dictionary name';
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
-  String get popup_full_width => 'Full-width popup';
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get stat_session_edit => 'Edit session';
   String get stat_session_edit_date => 'Date';
   String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
@@ -17420,10 +17417,7 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -28691,10 +28685,7 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -40016,10 +40007,7 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -51375,10 +51363,7 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -62536,10 +62521,7 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -73790,10 +73772,7 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -84421,10 +84400,7 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       '前面に出して辞書検索ページを開く';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -95062,10 +95038,7 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -106272,10 +106245,7 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -117536,10 +117506,7 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -128777,10 +128744,7 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -139817,10 +139781,7 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -150973,10 +150934,7 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -162100,10 +162058,7 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -172323,9 +172278,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page => '唤起主窗并打开查词页';
   @override
-  String get popup_full_width => '弹窗全宽';
   @override
-  String get popup_full_width_hint => '忽略最大宽度，让弹窗横向铺满可用宽度；位置仍跟随选中的词。';
   @override
   String get stat_session_edit => '编辑会话';
   @override
@@ -182623,10 +182576,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page => '喚起主視窗並開啟查詞頁';
   @override
-  String get popup_full_width => 'Full-width popup';
   @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   @override
   String get stat_session_edit => 'Edit session';
   @override
@@ -192309,10 +192259,6 @@ extension on _StringsEn {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -201970,10 +201916,6 @@ extension on _StringsAr {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -211676,10 +211618,6 @@ extension on _StringsDe {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -221373,10 +221311,6 @@ extension on _StringsEs {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -231079,10 +231013,6 @@ extension on _StringsFr {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -240756,10 +240686,6 @@ extension on _StringsId {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -250455,10 +250381,6 @@ extension on _StringsIt {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -260081,10 +260003,6 @@ extension on _StringsJa {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return '前面に出して辞書検索ページを開く';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -269711,10 +269629,6 @@ extension on _StringsKo {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -279403,10 +279317,6 @@ extension on _StringsNl {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -289090,10 +289000,6 @@ extension on _StringsPtBr {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -298784,10 +298690,6 @@ extension on _StringsRu {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -308450,10 +308352,6 @@ extension on _StringsTh {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -318131,10 +318029,6 @@ extension on _StringsTr {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -327806,10 +327700,6 @@ extension on _StringsVi {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -337398,10 +337288,6 @@ extension on _StringsZhCn {
         return '词典名称';
       case 'shortcut_action_global_external_open_lookup_page':
         return '唤起主窗并打开查词页';
-      case 'popup_full_width':
-        return '弹窗全宽';
-      case 'popup_full_width_hint':
-        return '忽略最大宽度，让弹窗横向铺满可用宽度；位置仍跟随选中的词。';
       case 'stat_session_edit':
         return '编辑会话';
       case 'stat_session_edit_date':
@@ -346999,10 +346885,6 @@ extension on _StringsZhHk {
         return '詞典名稱';
       case 'shortcut_action_global_external_open_lookup_page':
         return '喚起主視窗並開啟查詞頁';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
