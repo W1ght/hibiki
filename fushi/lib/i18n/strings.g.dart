@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 78778 (4634 per locale)
+/// Strings: 78795 (4635 per locale)
 ///
-/// Built on 2026-09-10 at 09:54 UTC
+/// Built on 2026-09-10 at 10:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6433,6 +6433,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get book_rename_label => 'Title';
   String get dict_rename => 'Rename';
   String get dict_rename_label => 'Dictionary name';
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -17327,6 +17329,9 @@ class _StringsAr extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -28449,6 +28454,9 @@ class _StringsDe extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -39625,6 +39633,9 @@ class _StringsEs extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -50835,6 +50846,9 @@ class _StringsFr extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -61847,6 +61861,9 @@ class _StringsId extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -72952,6 +72969,9 @@ class _StringsIt extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -83433,6 +83453,9 @@ class _StringsJa extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      '前面に出して辞書検索ページを開く';
 }
 
 // Path: <root>
@@ -93924,6 +93947,9 @@ class _StringsKo extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -104985,6 +105011,9 @@ class _StringsNl extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -116100,6 +116129,9 @@ class _StringsPtBr extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -127192,6 +127224,9 @@ class _StringsRu extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -138083,6 +138118,9 @@ class _StringsTh extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -149090,6 +149128,9 @@ class _StringsTr extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -160068,6 +160109,9 @@ class _StringsVi extends _StringsEn {
   String get dict_rename => 'Rename';
   @override
   String get dict_rename_label => 'Dictionary name';
+  @override
+  String get shortcut_action_global_external_open_lookup_page =>
+      'Bring to front and open lookup page';
 }
 
 // Path: <root>
@@ -170142,6 +170186,8 @@ class _StringsZhCn extends _StringsEn {
   String get dict_rename => '重命名';
   @override
   String get dict_rename_label => '词典名称';
+  @override
+  String get shortcut_action_global_external_open_lookup_page => '唤起主窗并打开查词页';
 }
 
 // Path: <root>
@@ -180306,6 +180352,8 @@ class _StringsZhHk extends _StringsEn {
   String get dict_rename => '重命名';
   @override
   String get dict_rename_label => '詞典名稱';
+  @override
+  String get shortcut_action_global_external_open_lookup_page => '喚起主視窗並開啟查詞頁';
 }
 
 /// Flat map(s) containing all translations.
@@ -189844,6 +189892,8 @@ extension on _StringsEn {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -199377,6 +199427,8 @@ extension on _StringsAr {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -208955,6 +209007,8 @@ extension on _StringsDe {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -218524,6 +218578,8 @@ extension on _StringsEs {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -228102,6 +228158,8 @@ extension on _StringsFr {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -237651,6 +237709,8 @@ extension on _StringsId {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -247222,6 +247282,8 @@ extension on _StringsIt {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -256720,6 +256782,8 @@ extension on _StringsJa {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '前面に出して辞書検索ページを開く';
       default:
         return null;
     }
@@ -266222,6 +266286,8 @@ extension on _StringsKo {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -275786,6 +275852,8 @@ extension on _StringsNl {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -285345,6 +285413,8 @@ extension on _StringsPtBr {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -294911,6 +294981,8 @@ extension on _StringsRu {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -304449,6 +304521,8 @@ extension on _StringsTh {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -314002,6 +314076,8 @@ extension on _StringsTr {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -323549,6 +323625,8 @@ extension on _StringsVi {
         return 'Rename';
       case 'dict_rename_label':
         return 'Dictionary name';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return 'Bring to front and open lookup page';
       default:
         return null;
     }
@@ -333013,6 +333091,8 @@ extension on _StringsZhCn {
         return '重命名';
       case 'dict_rename_label':
         return '词典名称';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '唤起主窗并打开查词页';
       default:
         return null;
     }
@@ -342489,6 +342569,8 @@ extension on _StringsZhHk {
         return '重命名';
       case 'dict_rename_label':
         return '詞典名稱';
+      case 'shortcut_action_global_external_open_lookup_page':
+        return '喚起主視窗並開啟查詞頁';
       default:
         return null;
     }
