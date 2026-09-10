@@ -171,7 +171,7 @@ class OnlineServicesOnboardingPage extends StatelessWidget {
   Widget build(BuildContext context) => FushiPageScaffold(
         title: t.settings_destination_services,
         body: SingleChildScrollView(
-          // BUG-2425：scaffold 底部安全区不再从 viewport 扣掉，滚动内容末尾自己
+          // BUG-2440：scaffold 底部安全区不再从 viewport 扣掉，滚动内容末尾自己
           // 补上 home indicator / 手势条的高度。
           padding: withBottomSafeInset(context, const EdgeInsets.all(24)),
           child: Center(

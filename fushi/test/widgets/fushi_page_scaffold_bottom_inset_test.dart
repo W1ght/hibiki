@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/utils/components/fushi_material_components.dart';
 
-/// BUG-2425：页面脚手架的底部安全区（iOS home indicator / Android 手势条）。
+/// BUG-2440：页面脚手架的底部安全区（iOS home indicator / Android 手势条）。
 ///
 /// 两条诉求必须**同时**成立，缺一条就是原来那个 bug 或它的反面：
 ///   ① body 的 viewport 要一直铺到屏幕最底——否则被扣掉的那段是一条谁也用不了的底色
@@ -57,7 +57,7 @@ void main() {
         screenHeight,
         reason:
             'SafeArea(bottom: true) 会把 viewport 切在 $screenHeight - $bottomInset，'
-            '留下一条谁也用不了的底色空白，滚动内容在切线处被拦腰截断（BUG-2425）',
+            '留下一条谁也用不了的底色空白，滚动内容在切线处被拦腰截断（BUG-2440）',
       );
     },
   );

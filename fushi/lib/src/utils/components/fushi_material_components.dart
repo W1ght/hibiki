@@ -2179,7 +2179,7 @@ class _FushiPageHeaderRowState extends State<_FushiPageHeaderRow> {
 ///
 /// [FushiPageScaffold] / [FushiToolScaffold] 的 body 外层 `SafeArea` 是
 /// `bottom: false`——底部 inset **不扣 viewport**，让内容能一直画到屏幕最底（否则那条
-/// 34pt 就是一条谁也用不了的底色空白，滚动内容在切线处被拦腰截断，BUG-2425）。代价是
+/// 34pt 就是一条谁也用不了的底色空白，滚动内容在切线处被拦腰截断，BUG-2440）。代价是
 /// body 自己得把这段补进滚动 padding，不然末项静止时被手势条压住。
 ///
 /// 取 `padding` 而不是 `viewPadding`：键盘弹出时 `padding.bottom` 归零（那段已被
@@ -2282,7 +2282,7 @@ class _FushiPageScaffoldState extends State<FushiPageScaffold> {
         bottomNavigationBar: widget.bottomNavigationBar,
         body: SafeArea(
           // bottom:false —— 底部安全区（iOS home indicator / Android 手势条）**不在这里
-          // 扣**，交给 body 自己按 [bottomSafeInsetOf] 加进内容 padding（BUG-2425）。
+          // 扣**，交给 body 自己按 [bottomSafeInsetOf] 加进内容 padding（BUG-2440）。
           // SafeArea 扣底是把 viewport 硬切在手势条之上：那条 34pt 变成一条谁也用不了的
           // 底色空白，滚动内容在切线处被拦腰截断（卡片边框、文字切一半），怎么滚都进不去；
           // 更糟的是它同时 removePadding 把 padding.bottom 清零，让 body 里**已经写好**的
@@ -2388,7 +2388,7 @@ class FushiToolScaffold extends StatelessWidget {
       backgroundColor: backgroundColor ?? tokens.surfaces.page,
       bottomNavigationBar: bottomNavigationBar,
       body: SafeArea(
-        // 与 [FushiPageScaffold] 同一口径（BUG-2425）：底部 inset 不扣 viewport。
+        // 与 [FushiPageScaffold] 同一口径（BUG-2440）：底部 inset 不扣 viewport。
         // 本脚手架的底部动作条走 [Scaffold.bottomNavigationBar]（在这层 SafeArea 之外、
         // 各自已套 SafeArea），不受影响；body 的滚动内容按 [withBottomSafeInset] 补偿。
         bottom: false,

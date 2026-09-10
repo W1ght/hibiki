@@ -1,4 +1,4 @@
-## BUG-2425 · iOS 页面底部安全区留下一条不可用空白，滚动内容被硬切
+## BUG-2440 · iOS 页面底部安全区留下一条不可用空白，滚动内容被硬切
 - **报告**：2026-09-10（用户：录屏，设置 › 查词 详情页）
 - **真实性**：✅ 真 bug。根因 `fushi/lib/src/utils/components/fushi_material_components.dart:2261`（`FushiPageScaffold` 的 `body: SafeArea(...)` 默认 `bottom: true`）与 `:2358`（`FushiToolScaffold` 同款）。
   - 现象：iPhone（home indicator 34pt）上页面底部有一条纯背景色空白，滚动内容在这条线被硬切——卡片边框、文字被切一半，且怎么滚都进不去。

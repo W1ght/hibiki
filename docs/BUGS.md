@@ -33,7 +33,7 @@
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
-| [BUG-2425](bugs/BUG-2425-ios-bottom-safearea-gap.md) | ✅ | ✅ | iOS 页面底部安全区留下一条不可用空白，滚动内容被硬切 |
+| [BUG-2440](bugs/BUG-2440-ios-bottom-safearea-gap.md) | ✅ | ✅ | iOS 页面底部安全区留下一条不可用空白，滚动内容被硬切 |
 | [BUG-2386](bugs/BUG-2386-dictionary-redirect-provenance.md) | ✅ | ✅ | 词典查词把同释义真实词条误判为重定向别名删除 |
 | [BUG-2385](bugs/BUG-2385-dictionary-data-missing-lookup.md) | ✅ | ✅ | 词典登记仍在但资源目录缺失导致完整词查不到 |
 | [BUG-2381](bugs/BUG-2381-aidoku-request-error-unreadable.md) | ✅ | ✅ | Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断 |

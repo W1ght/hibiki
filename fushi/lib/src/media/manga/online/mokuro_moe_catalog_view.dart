@@ -394,7 +394,7 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        // BUG-2425：页面语境下 scaffold 的 body 不再扣底部安全区，内部无 padding
+        // BUG-2440：页面语境下 scaffold 的 body 不再扣底部安全区，内部无 padding
         // 的网格/列表会自动把 MediaQuery.padding 当滚动 padding 用（正是要的）；
         // 但动作行在时那段归动作行的 SafeArea，先摘掉，免得两边各补一次、在按钮
         // 上方多顶出一条空白。对话框语境上面已 return，不受影响。
@@ -407,7 +407,7 @@ class MokuroMoeCatalogViewState extends ConsumerState<MokuroMoeCatalogView> {
                 )
               : body,
         ),
-        // BUG-2425：动作行是贴屏幕最底的固定元素，自己套 SafeArea 才不会被
+        // BUG-2440：动作行是贴屏幕最底的固定元素，自己套 SafeArea 才不会被
         // home indicator / 手势条压住。
         if (hasActions)
           SafeArea(top: false, child: _buildEmbeddedActions(tokens)),

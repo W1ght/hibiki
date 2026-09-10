@@ -234,7 +234,7 @@ Widget buildEmbeddedStatTab(
   );
 }
 
-/// 统计页滚动内容的收尾留白：原有的两倍卡片间距 + 底部安全区（BUG-2425）。
+/// 统计页滚动内容的收尾留白：原有的两倍卡片间距 + 底部安全区（BUG-2440）。
 ///
 /// [FushiPageScaffold] 的 SafeArea 已改成 `bottom: false`（内容画得到屏幕最底，
 /// 不再留一条谁也用不了的底色空白），代价是 body 自己要把 inset 补进滚动内容，

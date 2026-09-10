@@ -100,7 +100,7 @@ class _ChangelogPageState extends State<ChangelogPage>
     }
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
     return ListView.builder(
-      // BUG-2425：scaffold 底部安全区不再从 viewport 扣掉，末条卡片得靠内容
+      // BUG-2440：scaffold 底部安全区不再从 viewport 扣掉，末条卡片得靠内容
       // padding 自己让开 home indicator / 手势条。
       padding: withBottomSafeInset(context, EdgeInsets.all(tokens.spacing.gap)),
       itemCount: _releases.length,

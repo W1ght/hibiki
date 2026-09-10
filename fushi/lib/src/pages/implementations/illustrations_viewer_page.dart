@@ -342,7 +342,7 @@ class _IllustrationsViewerPageState extends State<IllustrationsViewerPage> {
         if (_loading) const LinearProgressIndicator(),
         Expanded(
           child: GridView.builder(
-            // BUG-2425：scaffold 底部安全区不再从 viewport 扣掉，末行缩略图得靠
+            // BUG-2440：scaffold 底部安全区不再从 viewport 扣掉，末行缩略图得靠
             // 内容 padding 自己让开 home indicator / 手势条。
             padding: withBottomSafeInset(
               context,

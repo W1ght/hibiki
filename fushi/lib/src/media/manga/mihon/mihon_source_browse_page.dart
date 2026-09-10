@@ -60,7 +60,7 @@ class MihonSourceBrowsePage extends StatefulWidget {
 
   /// 钉在正文底部的操作条。预览用它放「放弃 / 信任并安装」。
   ///
-  /// BUG-2425：scaffold 的 body 不再扣底部安全区，所以这条动作条贴的是屏幕真正的
+  /// BUG-2440：scaffold 的 body 不再扣底部安全区，所以这条动作条贴的是屏幕真正的
   /// 最底边。**底部安全区由 footer 自己套 SafeArea 补**（`_PreviewFooter` 就是这么
   /// 做的：`ColoredBox` 包在 `SafeArea` 外，让手势条那一段也上底色）——这里不代劳，
   /// 在外面补会把那一段留成页面底色的空条。
@@ -289,7 +289,7 @@ class _MihonSourceBrowsePageState extends State<MihonSourceBrowsePage> {
               error: _error,
               onVerified: () => _load(reset: false),
             ),
-          // BUG-2425：scaffold 的 body 不再扣底部安全区。有 footer 时那段归 footer
+          // BUG-2440：scaffold 的 body 不再扣底部安全区。有 footer 时那段归 footer
           // 自己的 SafeArea 认领，先从网格的 MediaQuery 里摘掉，免得网格底部和
           // footer 各补一次、在动作条上方多顶出一条空白。
           Expanded(
@@ -337,7 +337,7 @@ class _MihonSourceBrowsePageState extends State<MihonSourceBrowsePage> {
       builder: (BuildContext context, BoxConstraints constraints) {
         final int columns = (constraints.maxWidth / 180).floor().clamp(2, 8);
         return GridView.builder(
-          // BUG-2425：scaffold 的 body 不再扣底部安全区，网格最后一行要靠这里
+          // BUG-2440：scaffold 的 body 不再扣底部安全区，网格最后一行要靠这里
           // 补出手势条那一段。有 footer 时上面已把这段从 MediaQuery 摘掉，这里
           // 自动退回纯 16。
           padding: withBottomSafeInset(context, const EdgeInsets.all(16)),

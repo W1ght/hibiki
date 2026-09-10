@@ -606,7 +606,7 @@ class _MangaSeriesPageState extends ConsumerState<MangaSeriesPage> {
       return _buildLoadError(context, loadError);
     }
     return ListView(
-      // BUG-2425：scaffold 的 body 不再扣底部安全区，章节列表得自己把这段补进
+      // BUG-2440：scaffold 的 body 不再扣底部安全区，章节列表得自己把这段补进
       // 滚动 padding，否则最后一章静止时压在手势条底下点不到。
       padding: withBottomSafeInset(context, const EdgeInsets.all(16)),
       children: <Widget>[
