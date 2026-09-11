@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80053 (4709 per locale)
+/// Strings: 80121 (4713 per locale)
 ///
-/// Built on 2026-09-11 at 10:45 UTC
+/// Built on 2026-09-11 at 17:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6550,6 +6550,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_cover_cache_max_age => 'Cover cache retention';
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  String get remote_collection_download_members => 'Download remote episodes';
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -17636,6 +17644,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -28950,6 +28970,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -40318,6 +40350,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -51720,6 +51764,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -62924,6 +62980,18 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -74221,6 +74289,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -84895,6 +84975,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -95579,6 +95671,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -106832,6 +106936,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -118139,6 +118255,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -129423,6 +129551,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -140506,6 +140646,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -151705,6 +151857,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -162875,6 +163039,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 // Path: <root>
@@ -173122,6 +173298,17 @@ class _StringsZhCn extends _StringsEn {
   String get manga_cover_cache_max_age => '封面缓存保留时长';
   @override
   String get manga_cover_cache_max_age_subtitle => '在线源封面超过此天数后重新下载';
+  @override
+  String get remote_collection_download_members => '下载远端集';
+  @override
+  String get remote_collection_download_nothing => '没有需要下载的远端集';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      '正在后台下载 ${count} 个远端集';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      '已下载 ${ok} 个远端集，${failed} 个失败';
 }
 
 // Path: <root>
@@ -183478,6 +183665,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
 }
 
 /// Flat map(s) containing all translations.
@@ -193176,6 +193375,16 @@ extension on _StringsEn {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -202869,6 +203078,16 @@ extension on _StringsAr {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -212607,6 +212826,16 @@ extension on _StringsDe {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -222336,6 +222565,16 @@ extension on _StringsEs {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -232074,6 +232313,16 @@ extension on _StringsFr {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -241783,6 +242032,16 @@ extension on _StringsId {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -251514,6 +251773,16 @@ extension on _StringsIt {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -261172,6 +261441,16 @@ extension on _StringsJa {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -270834,6 +271113,16 @@ extension on _StringsKo {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -280558,6 +280847,16 @@ extension on _StringsNl {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -290277,6 +290576,16 @@ extension on _StringsPtBr {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -300003,6 +300312,16 @@ extension on _StringsRu {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -309701,6 +310020,16 @@ extension on _StringsTh {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -319414,6 +319743,16 @@ extension on _StringsTr {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -329121,6 +329460,16 @@ extension on _StringsVi {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
@@ -338742,6 +339091,15 @@ extension on _StringsZhCn {
         return '封面缓存保留时长';
       case 'manga_cover_cache_max_age_subtitle':
         return '在线源封面超过此天数后重新下载';
+      case 'remote_collection_download_members':
+        return '下载远端集';
+      case 'remote_collection_download_nothing':
+        return '没有需要下载的远端集';
+      case 'remote_collection_download_started':
+        return ({required Object count}) => '正在后台下载 ${count} 个远端集';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            '已下载 ${ok} 个远端集，${failed} 个失败';
       default:
         return null;
     }
@@ -348378,6 +348736,16 @@ extension on _StringsZhHk {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
       default:
         return null;
     }
