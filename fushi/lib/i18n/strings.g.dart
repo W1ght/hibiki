@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80053 (4709 per locale)
+/// Strings: 80155 (4715 per locale)
 ///
-/// Built on 2026-09-11 at 10:45 UTC
+/// Built on 2026-09-11 at 16:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6550,6 +6550,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_cover_cache_max_age => 'Cover cache retention';
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  String get updates_notification_open_video_episode => 'Play';
+  String get updates_notification_open_manga_chapter => 'Read';
+  String get updates_notification_open_manga_extension => 'Update';
+  String get updates_notification_open_app_release => 'Download';
+  String get updates_notification_view_all => 'View updates';
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -17636,6 +17642,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -28950,6 +28968,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -40318,6 +40348,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -51720,6 +51762,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -62924,6 +62978,18 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -74221,6 +74287,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -84895,6 +84973,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -95579,6 +95669,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -106832,6 +106934,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -118139,6 +118253,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -129423,6 +129549,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -140506,6 +140644,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -151705,6 +151855,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -162875,6 +163037,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -173122,6 +173296,18 @@ class _StringsZhCn extends _StringsEn {
   String get manga_cover_cache_max_age => '封面缓存保留时长';
   @override
   String get manga_cover_cache_max_age_subtitle => '在线源封面超过此天数后重新下载';
+  @override
+  String get updates_notification_open_video_episode => '播放';
+  @override
+  String get updates_notification_open_manga_chapter => '阅读';
+  @override
+  String get updates_notification_open_manga_extension => '更新';
+  @override
+  String get updates_notification_open_app_release => '下载';
+  @override
+  String get updates_notification_view_all => '查看更新';
+  @override
+  String get updates_notification_header => '订阅更新';
 }
 
 // Path: <root>
@@ -183478,6 +183664,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 /// Flat map(s) containing all translations.
@@ -193176,6 +193374,18 @@ extension on _StringsEn {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -202869,6 +203079,18 @@ extension on _StringsAr {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -212607,6 +212829,18 @@ extension on _StringsDe {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -222336,6 +222570,18 @@ extension on _StringsEs {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -232074,6 +232320,18 @@ extension on _StringsFr {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -241783,6 +242041,18 @@ extension on _StringsId {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -251514,6 +251784,18 @@ extension on _StringsIt {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -261172,6 +261454,18 @@ extension on _StringsJa {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -270834,6 +271128,18 @@ extension on _StringsKo {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -280558,6 +280864,18 @@ extension on _StringsNl {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -290277,6 +290595,18 @@ extension on _StringsPtBr {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -300003,6 +300333,18 @@ extension on _StringsRu {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -309701,6 +310043,18 @@ extension on _StringsTh {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -319414,6 +319768,18 @@ extension on _StringsTr {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -329121,6 +329487,18 @@ extension on _StringsVi {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -338742,6 +339120,18 @@ extension on _StringsZhCn {
         return '封面缓存保留时长';
       case 'manga_cover_cache_max_age_subtitle':
         return '在线源封面超过此天数后重新下载';
+      case 'updates_notification_open_video_episode':
+        return '播放';
+      case 'updates_notification_open_manga_chapter':
+        return '阅读';
+      case 'updates_notification_open_manga_extension':
+        return '更新';
+      case 'updates_notification_open_app_release':
+        return '下载';
+      case 'updates_notification_view_all':
+        return '查看更新';
+      case 'updates_notification_header':
+        return '订阅更新';
       default:
         return null;
     }
@@ -348378,6 +348768,18 @@ extension on _StringsZhHk {
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
         return 'Online source covers are re-downloaded after this many days';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
