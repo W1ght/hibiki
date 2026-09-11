@@ -2770,12 +2770,8 @@
   "reader_font_size": "字体大小",
   "reader_font_vpal": "VPAL 纵排替代",
   "reader_font_weight": "字体粗细",
-  "reader_furigana_hide": "隐藏",
   "reader_furigana_mode": "振假名",
   "reader_furigana_mode_hint": "",
-  "reader_furigana_partial": "部分",
-  "reader_furigana_show": "显示",
-  "reader_furigana_toggle": "切换",
   "reader_gallery": "插图",
   "reader_gallery_current": "正在阅读",
   "reader_gallery_empty": "本书没有插图",
@@ -4525,5 +4521,8 @@
   "auto_add_char_position_to_tags_hint": "给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。",
   "popup_ctx_edit_start": "编辑句子",
   "popup_ctx_edit_confirm": "确认修改",
-  "popup_ctx_edit_cancel": "放弃修改"
+  "popup_ctx_edit_cancel": "放弃修改",
+  "reader_furigana_off": "关闭",
+  "reader_furigana_toggle": "点击显示",
+  "reader_furigana_hidden": "隐藏"
 }

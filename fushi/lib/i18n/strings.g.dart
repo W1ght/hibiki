@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76959 (4527 per locale)
+/// Strings: 76942 (4526 per locale)
 ///
-/// Built on 2026-09-10 at 08:01 UTC
+/// Built on 2026-09-11 at 14:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -4024,12 +4024,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_font_size => 'Font size';
   String get reader_font_vpal => 'VPAL (vertical alt)';
   String get reader_font_weight => 'Font weight';
-  String get reader_furigana_hide => 'Hide';
   String get reader_furigana_mode => 'Furigana';
   String get reader_furigana_mode_hint => '';
-  String get reader_furigana_partial => 'Partial';
-  String get reader_furigana_show => 'Show';
-  String get reader_furigana_toggle => 'Toggle';
   String get reader_gallery => 'Gallery';
   String get reader_gallery_current => 'Reading here';
   String get reader_gallery_empty => 'No illustrations in this book';
@@ -6355,6 +6351,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_ctx_edit_start => 'Edit sentence';
   String get popup_ctx_edit_confirm => 'Confirm edit';
   String get popup_ctx_edit_cancel => 'Discard edit';
+  String get reader_furigana_off => 'Off';
+  String get reader_furigana_toggle => 'Toggle';
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -12975,17 +12974,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_font_weight => 'وزن الخط';
   @override
-  String get reader_furigana_hide => 'إخفاء';
-  @override
   String get reader_furigana_mode => 'فوريغانا';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'جزئي';
-  @override
-  String get reader_furigana_show => 'عرض';
-  @override
-  String get reader_furigana_toggle => 'تبديل';
   @override
   String get reader_gallery => 'المعرض';
   @override
@@ -17060,6 +17051,12 @@ class _StringsAr extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -23828,17 +23825,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_font_weight => 'Schriftstärke';
   @override
-  String get reader_furigana_hide => 'Ausblenden';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Teilweise';
-  @override
-  String get reader_furigana_show => 'Anzeigen';
-  @override
-  String get reader_furigana_toggle => 'Umschalten';
   @override
   String get reader_gallery => 'Galerie';
   @override
@@ -28001,6 +27990,12 @@ class _StringsDe extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -34786,17 +34781,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_font_weight => 'Grosor de fuente';
   @override
-  String get reader_furigana_hide => 'Ocultar';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Parcial';
-  @override
-  String get reader_furigana_show => 'Mostrar';
-  @override
-  String get reader_furigana_toggle => 'Alternar';
   @override
   String get reader_gallery => 'Galería';
   @override
@@ -38992,6 +38979,12 @@ class _StringsEs extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -45797,17 +45790,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_font_weight => 'Graisse de police';
   @override
-  String get reader_furigana_hide => 'Masquer';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Partiel';
-  @override
-  String get reader_furigana_show => 'Afficher';
-  @override
-  String get reader_furigana_toggle => 'Basculer';
   @override
   String get reader_gallery => 'Galerie';
   @override
@@ -50016,6 +50001,12 @@ class _StringsFr extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -56704,17 +56695,9 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_font_weight => 'Ketebalan font';
   @override
-  String get reader_furigana_hide => 'Sembunyikan';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Sebagian';
-  @override
-  String get reader_furigana_show => 'Tampilkan';
-  @override
-  String get reader_furigana_toggle => 'Alihkan';
   @override
   String get reader_gallery => 'Galeri';
   @override
@@ -60840,6 +60823,12 @@ class _StringsId extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -67585,17 +67574,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_font_weight => 'Spessore carattere';
   @override
-  String get reader_furigana_hide => 'Nascondi';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Parziale';
-  @override
-  String get reader_furigana_show => 'Mostra';
-  @override
-  String get reader_furigana_toggle => 'Alterna';
   @override
   String get reader_gallery => 'Galleria';
   @override
@@ -71760,6 +71741,12 @@ class _StringsIt extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -78132,17 +78119,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_font_weight => 'フォントの太さ';
   @override
-  String get reader_furigana_hide => '非表示';
-  @override
   String get reader_furigana_mode => 'ふりがな';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => '一部';
-  @override
-  String get reader_furigana_show => '表示';
-  @override
-  String get reader_furigana_toggle => '切替';
   @override
   String get reader_gallery => 'ギャラリー';
   @override
@@ -82048,6 +82027,12 @@ class _StringsJa extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -88425,17 +88410,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_font_weight => '글꼴 굵기';
   @override
-  String get reader_furigana_hide => '숨기기';
-  @override
   String get reader_furigana_mode => '후리가나';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => '부분';
-  @override
-  String get reader_furigana_show => '표시';
-  @override
-  String get reader_furigana_toggle => '전환';
   @override
   String get reader_gallery => '갤러리';
   @override
@@ -92347,6 +92324,12 @@ class _StringsKo extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -99062,17 +99045,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_font_weight => 'Letterdikte';
   @override
-  String get reader_furigana_hide => 'Verbergen';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Gedeeltelijk';
-  @override
-  String get reader_furigana_show => 'Tonen';
-  @override
-  String get reader_furigana_toggle => 'Wisselen';
   @override
   String get reader_gallery => 'Galerij';
   @override
@@ -103221,6 +103196,12 @@ class _StringsNl extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -109971,17 +109952,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_font_weight => 'Espessura da fonte';
   @override
-  String get reader_furigana_hide => 'Ocultar';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Parcial';
-  @override
-  String get reader_furigana_show => 'Mostrar';
-  @override
-  String get reader_furigana_toggle => 'Alternar';
   @override
   String get reader_gallery => 'Galeria';
   @override
@@ -114148,6 +114121,12 @@ class _StringsPtBr extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -120879,17 +120858,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_font_weight => 'Насыщенность шрифта';
   @override
-  String get reader_furigana_hide => 'Скрыть';
-  @override
   String get reader_furigana_mode => 'Фуригана';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Частично';
-  @override
-  String get reader_furigana_show => 'Показать';
-  @override
-  String get reader_furigana_toggle => 'Переключить';
   @override
   String get reader_gallery => 'Галерея';
   @override
@@ -125053,6 +125024,12 @@ class _StringsRu extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -131665,17 +131642,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_font_weight => 'น้ำหนักฟอนต์';
   @override
-  String get reader_furigana_hide => 'ซ่อน';
-  @override
   String get reader_furigana_mode => 'ฟุริงานะ';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'บางส่วน';
-  @override
-  String get reader_furigana_show => 'แสดง';
-  @override
-  String get reader_furigana_toggle => 'สลับ';
   @override
   String get reader_gallery => 'แกลเลอรี';
   @override
@@ -135755,6 +135724,12 @@ class _StringsTh extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -142446,17 +142421,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_font_weight => 'Yazı tipi kalınlığı';
   @override
-  String get reader_furigana_hide => 'Gizle';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Kısmi';
-  @override
-  String get reader_furigana_show => 'Göster';
-  @override
-  String get reader_furigana_toggle => 'Değiştir';
   @override
   String get reader_gallery => 'Galeri';
   @override
@@ -146575,6 +146542,12 @@ class _StringsTr extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -153251,17 +153224,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_font_weight => 'Độ đậm phông chữ';
   @override
-  String get reader_furigana_hide => 'Ẩn';
-  @override
   String get reader_furigana_mode => 'Furigana';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => 'Một phần';
-  @override
-  String get reader_furigana_show => 'Hiện';
-  @override
-  String get reader_furigana_toggle => 'Chuyển đổi';
   @override
   String get reader_gallery => 'Bộ sưu tập';
   @override
@@ -157364,6 +157329,12 @@ class _StringsVi extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 // Path: <root>
@@ -163488,17 +163459,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_font_weight => '字体粗细';
   @override
-  String get reader_furigana_hide => '隐藏';
-  @override
   String get reader_furigana_mode => '振假名';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => '部分';
-  @override
-  String get reader_furigana_show => '显示';
-  @override
-  String get reader_furigana_toggle => '切换';
   @override
   String get reader_gallery => '插图';
   @override
@@ -167268,6 +167231,12 @@ class _StringsZhCn extends _StringsEn {
   String get popup_ctx_edit_confirm => '确认修改';
   @override
   String get popup_ctx_edit_cancel => '放弃修改';
+  @override
+  String get reader_furigana_off => '关闭';
+  @override
+  String get reader_furigana_toggle => '点击显示';
+  @override
+  String get reader_furigana_hidden => '隐藏';
 }
 
 // Path: <root>
@@ -173434,17 +173403,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_font_weight => '字型粗細';
   @override
-  String get reader_furigana_hide => '隱藏';
-  @override
   String get reader_furigana_mode => '振假名';
   @override
   String get reader_furigana_mode_hint => '';
-  @override
-  String get reader_furigana_partial => '部分';
-  @override
-  String get reader_furigana_show => '顯示';
-  @override
-  String get reader_furigana_toggle => '切換';
   @override
   String get reader_gallery => '插圖';
   @override
@@ -177241,6 +177202,12 @@ class _StringsZhHk extends _StringsEn {
   String get popup_ctx_edit_confirm => 'Confirm edit';
   @override
   String get popup_ctx_edit_cancel => 'Discard edit';
+  @override
+  String get reader_furigana_off => 'Off';
+  @override
+  String get reader_furigana_toggle => 'Toggle';
+  @override
+  String get reader_furigana_hidden => 'Hidden';
 }
 
 /// Flat map(s) containing all translations.
@@ -182959,18 +182926,10 @@ extension on _StringsEn {
         return 'VPAL (vertical alt)';
       case 'reader_font_weight':
         return 'Font weight';
-      case 'reader_furigana_hide':
-        return 'Hide';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Partial';
-      case 'reader_furigana_show':
-        return 'Show';
-      case 'reader_furigana_toggle':
-        return 'Toggle';
       case 'reader_gallery':
         return 'Gallery';
       case 'reader_gallery_current':
@@ -186561,6 +186520,12 @@ extension on _StringsEn {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -192277,18 +192242,10 @@ extension on _StringsAr {
         return 'VPAL (بديل عمودي)';
       case 'reader_font_weight':
         return 'وزن الخط';
-      case 'reader_furigana_hide':
-        return 'إخفاء';
       case 'reader_furigana_mode':
         return 'فوريغانا';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'جزئي';
-      case 'reader_furigana_show':
-        return 'عرض';
-      case 'reader_furigana_toggle':
-        return 'تبديل';
       case 'reader_gallery':
         return 'المعرض';
       case 'reader_gallery_current':
@@ -195876,6 +195833,12 @@ extension on _StringsAr {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -201624,18 +201587,10 @@ extension on _StringsDe {
         return 'VPAL (Vertikale Alt.)';
       case 'reader_font_weight':
         return 'Schriftstärke';
-      case 'reader_furigana_hide':
-        return 'Ausblenden';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Teilweise';
-      case 'reader_furigana_show':
-        return 'Anzeigen';
-      case 'reader_furigana_toggle':
-        return 'Umschalten';
       case 'reader_gallery':
         return 'Galerie';
       case 'reader_gallery_current':
@@ -205240,6 +205195,12 @@ extension on _StringsDe {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -210980,18 +210941,10 @@ extension on _StringsEs {
         return 'VPAL (alt. vertical)';
       case 'reader_font_weight':
         return 'Grosor de fuente';
-      case 'reader_furigana_hide':
-        return 'Ocultar';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Parcial';
-      case 'reader_furigana_show':
-        return 'Mostrar';
-      case 'reader_furigana_toggle':
-        return 'Alternar';
       case 'reader_gallery':
         return 'Galería';
       case 'reader_gallery_current':
@@ -214594,6 +214547,12 @@ extension on _StringsEs {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -220340,18 +220299,10 @@ extension on _StringsFr {
         return 'VPAL (alt. vertical)';
       case 'reader_font_weight':
         return 'Graisse de police';
-      case 'reader_furigana_hide':
-        return 'Masquer';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Partiel';
-      case 'reader_furigana_show':
-        return 'Afficher';
-      case 'reader_furigana_toggle':
-        return 'Basculer';
       case 'reader_gallery':
         return 'Galerie';
       case 'reader_gallery_current':
@@ -223956,6 +223907,12 @@ extension on _StringsFr {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -229683,18 +229640,10 @@ extension on _StringsId {
         return 'VPAL (Alt Vertikal)';
       case 'reader_font_weight':
         return 'Ketebalan font';
-      case 'reader_furigana_hide':
-        return 'Sembunyikan';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Sebagian';
-      case 'reader_furigana_show':
-        return 'Tampilkan';
-      case 'reader_furigana_toggle':
-        return 'Alihkan';
       case 'reader_gallery':
         return 'Galeri';
       case 'reader_gallery_current':
@@ -233288,6 +233237,12 @@ extension on _StringsId {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -239025,18 +238980,10 @@ extension on _StringsIt {
         return 'VPAL (alt. verticale)';
       case 'reader_font_weight':
         return 'Spessore carattere';
-      case 'reader_furigana_hide':
-        return 'Nascondi';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Parziale';
-      case 'reader_furigana_show':
-        return 'Mostra';
-      case 'reader_furigana_toggle':
-        return 'Alterna';
       case 'reader_gallery':
         return 'Galleria';
       case 'reader_gallery_current':
@@ -242643,6 +242590,12 @@ extension on _StringsIt {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -248343,18 +248296,10 @@ extension on _StringsJa {
         return 'VPAL（縦書き代替）';
       case 'reader_font_weight':
         return 'フォントの太さ';
-      case 'reader_furigana_hide':
-        return '非表示';
       case 'reader_furigana_mode':
         return 'ふりがな';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return '一部';
-      case 'reader_furigana_show':
-        return '表示';
-      case 'reader_furigana_toggle':
-        return '切替';
       case 'reader_gallery':
         return 'ギャラリー';
       case 'reader_gallery_current':
@@ -251922,6 +251867,12 @@ extension on _StringsJa {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -257623,18 +257574,10 @@ extension on _StringsKo {
         return 'VPAL (세로 대체)';
       case 'reader_font_weight':
         return '글꼴 굵기';
-      case 'reader_furigana_hide':
-        return '숨기기';
       case 'reader_furigana_mode':
         return '후리가나';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return '부분';
-      case 'reader_furigana_show':
-        return '표시';
-      case 'reader_furigana_toggle':
-        return '전환';
       case 'reader_gallery':
         return '갤러리';
       case 'reader_gallery_current':
@@ -261206,6 +261149,12 @@ extension on _StringsKo {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -266943,18 +266892,10 @@ extension on _StringsNl {
         return 'VPAL (vert. alt.)';
       case 'reader_font_weight':
         return 'Letterdikte';
-      case 'reader_furigana_hide':
-        return 'Verbergen';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Gedeeltelijk';
-      case 'reader_furigana_show':
-        return 'Tonen';
-      case 'reader_furigana_toggle':
-        return 'Wisselen';
       case 'reader_gallery':
         return 'Galerij';
       case 'reader_gallery_current':
@@ -270556,6 +270497,12 @@ extension on _StringsNl {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -276292,18 +276239,10 @@ extension on _StringsPtBr {
         return 'VPAL (alt. vertical)';
       case 'reader_font_weight':
         return 'Espessura da fonte';
-      case 'reader_furigana_hide':
-        return 'Ocultar';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Parcial';
-      case 'reader_furigana_show':
-        return 'Mostrar';
-      case 'reader_furigana_toggle':
-        return 'Alternar';
       case 'reader_gallery':
         return 'Galeria';
       case 'reader_gallery_current':
@@ -279901,6 +279840,12 @@ extension on _StringsPtBr {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -285644,18 +285589,10 @@ extension on _StringsRu {
         return 'VPAL (верт. альт.)';
       case 'reader_font_weight':
         return 'Насыщенность шрифта';
-      case 'reader_furigana_hide':
-        return 'Скрыть';
       case 'reader_furigana_mode':
         return 'Фуригана';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Частично';
-      case 'reader_furigana_show':
-        return 'Показать';
-      case 'reader_furigana_toggle':
-        return 'Переключить';
       case 'reader_gallery':
         return 'Галерея';
       case 'reader_gallery_current':
@@ -289252,6 +289189,12 @@ extension on _StringsRu {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -294971,18 +294914,10 @@ extension on _StringsTh {
         return 'VPAL (ตัวอักษรทดแทน)';
       case 'reader_font_weight':
         return 'น้ำหนักฟอนต์';
-      case 'reader_furigana_hide':
-        return 'ซ่อน';
       case 'reader_furigana_mode':
         return 'ฟุริงานะ';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'บางส่วน';
-      case 'reader_furigana_show':
-        return 'แสดง';
-      case 'reader_furigana_toggle':
-        return 'สลับ';
       case 'reader_gallery':
         return 'แกลเลอรี';
       case 'reader_gallery_current':
@@ -298572,6 +298507,12 @@ extension on _StringsTh {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -304302,18 +304243,10 @@ extension on _StringsTr {
         return 'VPAL (dikey alt.)';
       case 'reader_font_weight':
         return 'Yazı tipi kalınlığı';
-      case 'reader_furigana_hide':
-        return 'Gizle';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Kısmi';
-      case 'reader_furigana_show':
-        return 'Göster';
-      case 'reader_furigana_toggle':
-        return 'Değiştir';
       case 'reader_gallery':
         return 'Galeri';
       case 'reader_gallery_current':
@@ -307908,6 +307841,12 @@ extension on _StringsTr {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -313634,18 +313573,10 @@ extension on _StringsVi {
         return 'VPAL (thay thế dọc)';
       case 'reader_font_weight':
         return 'Độ đậm phông chữ';
-      case 'reader_furigana_hide':
-        return 'Ẩn';
       case 'reader_furigana_mode':
         return 'Furigana';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return 'Một phần';
-      case 'reader_furigana_show':
-        return 'Hiện';
-      case 'reader_furigana_toggle':
-        return 'Chuyển đổi';
       case 'reader_gallery':
         return 'Bộ sưu tập';
       case 'reader_gallery_current':
@@ -317238,6 +317169,12 @@ extension on _StringsVi {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }
@@ -322920,18 +322857,10 @@ extension on _StringsZhCn {
         return 'VPAL 纵排替代';
       case 'reader_font_weight':
         return '字体粗细';
-      case 'reader_furigana_hide':
-        return '隐藏';
       case 'reader_furigana_mode':
         return '振假名';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return '部分';
-      case 'reader_furigana_show':
-        return '显示';
-      case 'reader_furigana_toggle':
-        return '切换';
       case 'reader_gallery':
         return '插图';
       case 'reader_gallery_current':
@@ -326484,6 +326413,12 @@ extension on _StringsZhCn {
         return '确认修改';
       case 'popup_ctx_edit_cancel':
         return '放弃修改';
+      case 'reader_furigana_off':
+        return '关闭';
+      case 'reader_furigana_toggle':
+        return '点击显示';
+      case 'reader_furigana_hidden':
+        return '隐藏';
       default:
         return null;
     }
@@ -332173,18 +332108,10 @@ extension on _StringsZhHk {
         return 'VPAL 直排替代';
       case 'reader_font_weight':
         return '字型粗細';
-      case 'reader_furigana_hide':
-        return '隱藏';
       case 'reader_furigana_mode':
         return '振假名';
       case 'reader_furigana_mode_hint':
         return '';
-      case 'reader_furigana_partial':
-        return '部分';
-      case 'reader_furigana_show':
-        return '顯示';
-      case 'reader_furigana_toggle':
-        return '切換';
       case 'reader_gallery':
         return '插圖';
       case 'reader_gallery_current':
@@ -335741,6 +335668,12 @@ extension on _StringsZhHk {
         return 'Confirm edit';
       case 'popup_ctx_edit_cancel':
         return 'Discard edit';
+      case 'reader_furigana_off':
+        return 'Off';
+      case 'reader_furigana_toggle':
+        return 'Toggle';
+      case 'reader_furigana_hidden':
+        return 'Hidden';
       default:
         return null;
     }

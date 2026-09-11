@@ -2770,12 +2770,8 @@
   "reader_font_size": "Cỡ chữ",
   "reader_font_vpal": "VPAL (thay thế dọc)",
   "reader_font_weight": "Độ đậm phông chữ",
-  "reader_furigana_hide": "Ẩn",
   "reader_furigana_mode": "Furigana",
   "reader_furigana_mode_hint": "",
-  "reader_furigana_partial": "Một phần",
-  "reader_furigana_show": "Hiện",
-  "reader_furigana_toggle": "Chuyển đổi",
   "reader_gallery": "Bộ sưu tập",
   "reader_gallery_current": "Đang đọc tại đây",
   "reader_gallery_empty": "Không có hình minh họa trong sách này",
@@ -4525,5 +4521,8 @@
   "auto_add_char_position_to_tags_hint": "Tags each card with chars_12345 — how many characters into the book it was mined.",
   "popup_ctx_edit_start": "Edit sentence",
   "popup_ctx_edit_confirm": "Confirm edit",
-  "popup_ctx_edit_cancel": "Discard edit"
+  "popup_ctx_edit_cancel": "Discard edit",
+  "reader_furigana_off": "Off",
+  "reader_furigana_toggle": "Toggle",
+  "reader_furigana_hidden": "Hidden"
 }

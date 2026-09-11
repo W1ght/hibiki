@@ -194,26 +194,22 @@ SettingsDestination buildReadingDestination() {
               group: ReaderGroup.layout,
               order: 13,
             ),
+            // 三态对齐 Hoshi Reader iOS：Off / Toggle / Hidden。
             options: <SettingsSegmentOption<String>>[
               SettingsSegmentOption<String>(
-                value: 'show',
-                label: t.reader_furigana_show,
-                tooltip: t.reader_furigana_show,
-              ),
-              SettingsSegmentOption<String>(
-                value: 'hide',
-                label: t.reader_furigana_hide,
-                tooltip: t.reader_furigana_hide,
-              ),
-              SettingsSegmentOption<String>(
-                value: 'partial',
-                label: t.reader_furigana_partial,
-                tooltip: t.reader_furigana_partial,
+                value: 'off',
+                label: t.reader_furigana_off,
+                tooltip: t.reader_furigana_off,
               ),
               SettingsSegmentOption<String>(
                 value: 'toggle',
                 label: t.reader_furigana_toggle,
                 tooltip: t.reader_furigana_toggle,
+              ),
+              SettingsSegmentOption<String>(
+                value: 'hidden',
+                label: t.reader_furigana_hidden,
+                tooltip: t.reader_furigana_hidden,
               ),
             ],
             selected: (SettingsContext c) => c.readerSource.readerFuriganaMode,
