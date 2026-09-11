@@ -29,10 +29,12 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2171 条。点号进各自文件。
+> 共 2173 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2461](bugs/BUG-2461-reader-settings-live-engine-config.md) | ✅ | ✅ | 阅读器边距等设置改完不实时生效 |
+| [BUG-2460](bugs/BUG-2460-reader-status-footer-inside-bottom-safe-area.md) | ✅ | ✅ | 阅读器状态行坐进系统底部安全区 |
 | [BUG-2459](bugs/BUG-2459-webkit-ruby-paragraph-first-line-growth.md) | ✅ | ✅ | WebKit 上首行含振假名的段落被撑高一截 |
 | [BUG-2457](bugs/BUG-2457-reader-paged-bottom-font-size-band.md) | ✅ | ✅ | 分页布局底部多留一个字号的空带 |
 | [BUG-2454](bugs/BUG-2454-reader-image-max-stale-on-chrome-insets.md) | ✅ | ✅ | 分页整页插图在 chrome inset 变化后被切成三段 |

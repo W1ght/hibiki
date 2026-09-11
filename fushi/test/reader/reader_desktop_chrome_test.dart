@@ -7,63 +7,79 @@ import 'package:fushi/src/reader/reader_desktop_chrome.dart';
 import '../helpers/source_guard.dart';
 
 void main() {
-  test('compact playback leaves footer and system inset outside its surface',
-      () {
-    final String chrome =
-        File('lib/src/pages/implementations/reader_fushi/chrome.part.dart')
-            .readAsStringSync();
-    final String page =
-        File('lib/src/pages/implementations/reader_fushi_page.dart')
-            .readAsStringSync();
-    expect(chrome, contains('? _statusFooterReserve + _stableBottomInset'));
-    expect(chrome,
-        contains('height: _separatePlaybackStatus ? 0 : _stableBottomInset'));
-    expect(
+  test(
+    'compact playback leaves footer and system inset outside its surface',
+    () {
+      final String chrome = File(
+        'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
+      ).readAsStringSync();
+      final String page = File(
+        'lib/src/pages/implementations/reader_fushi_page.dart',
+      ).readAsStringSync();
+      expect(chrome, contains('? _statusFooterBand : 0'));
+      expect(
+        chrome,
+        contains('height: _separatePlaybackStatus ? 0 : _stableBottomInset'),
+      );
+      expect(
         page,
         contains(
-            'chromeHeight: _desktopChromeEnabled && _audiobookController == null'));
-  });
+          'chromeHeight: _desktopChromeEnabled && _audiobookController == null',
+        ),
+      );
+    },
+  );
 
-  testWidgets('320 wide header keeps navigation and folds secondary actions',
-      (WidgetTester tester) async {
+  testWidgets('320 wide header keeps navigation and folds secondary actions', (
+    WidgetTester tester,
+  ) async {
     await tester.binding.setSurfaceSize(const Size(320, 640));
     addTearDown(() => tester.binding.setSurfaceSize(null));
     int galleryOpened = 0;
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(
+      MaterialApp(
         home: Scaffold(
-            body: ReaderDesktopHeader(
-      title: '安達としまむら3 Long book title',
-      textColor: Colors.black,
-      backgroundColor: Colors.white,
-      leading: <ReaderHeaderAction>[
-        ReaderHeaderAction(
-            icon: Icons.arrow_back,
-            label: 'Back',
-            pinned: true,
-            onPressed: () {}),
-        ReaderHeaderAction(
-            icon: Icons.list,
-            label: 'Contents',
-            pinned: true,
-            onPressed: () {}),
-        ReaderHeaderAction(
-            icon: Icons.collections,
-            label: 'Gallery',
-            onPressed: () => galleryOpened++),
-      ],
-      trailing: <ReaderHeaderAction>[
-        ReaderHeaderAction(
-            icon: Icons.tune,
-            label: 'Settings',
-            pinned: true,
-            onPressed: () {}),
-      ],
-    ))));
+          body: ReaderDesktopHeader(
+            title: '安達としまむら3 Long book title',
+            textColor: Colors.black,
+            backgroundColor: Colors.white,
+            leading: <ReaderHeaderAction>[
+              ReaderHeaderAction(
+                icon: Icons.arrow_back,
+                label: 'Back',
+                pinned: true,
+                onPressed: () {},
+              ),
+              ReaderHeaderAction(
+                icon: Icons.list,
+                label: 'Contents',
+                pinned: true,
+                onPressed: () {},
+              ),
+              ReaderHeaderAction(
+                icon: Icons.collections,
+                label: 'Gallery',
+                onPressed: () => galleryOpened++,
+              ),
+            ],
+            trailing: <ReaderHeaderAction>[
+              ReaderHeaderAction(
+                icon: Icons.tune,
+                label: 'Settings',
+                pinned: true,
+                onPressed: () {},
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
     expect(tester.takeException(), isNull);
     expect(find.byIcon(Icons.list), findsOneWidget);
     expect(find.byIcon(Icons.collections), findsNothing);
     await tester.tap(
-        find.byKey(const ValueKey<String>('fushi_desktop_header_overflow')));
+      find.byKey(const ValueKey<String>('fushi_desktop_header_overflow')),
+    );
     await tester.pumpAndSettle();
     await tester.tap(find.text('Gallery'));
     await tester.pumpAndSettle();
@@ -71,40 +87,48 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  testWidgets('pinned 动作在紧凑形态下仍是可见按钮（歌词模式回正文的入口靠它）',
-      (WidgetTester tester) async {
+  testWidgets('pinned 动作在紧凑形态下仍是可见按钮（歌词模式回正文的入口靠它）', (
+    WidgetTester tester,
+  ) async {
     // 歌词模式里「切回阅读模式」是顶栏上唯一可见的回正文入口，页面为此把那颗键
     // 标成 pinned。这里钉的是 pinned 的**行为**：窄到进紧凑形态时它不进溢出菜单，
     // 仍是一颗按得着的图标按钮。
     await tester.binding.setSurfaceSize(const Size(320, 640));
     addTearDown(() => tester.binding.setSurfaceSize(null));
     int toggled = 0;
-    await tester.pumpWidget(MaterialApp(
+    await tester.pumpWidget(
+      MaterialApp(
         home: Scaffold(
-            body: ReaderDesktopHeader(
-      title: 'lyrics mode',
-      textColor: Colors.black,
-      backgroundColor: Colors.white,
-      leading: <ReaderHeaderAction>[
-        ReaderHeaderAction(
-            icon: Icons.arrow_back,
-            label: 'Back',
-            pinned: true,
-            onPressed: () {}),
-        ReaderHeaderAction(
-            icon: Icons.auto_stories_outlined,
-            label: 'Book mode',
-            pinned: true,
-            onPressed: () => toggled++),
-      ],
-      trailing: <ReaderHeaderAction>[
-        ReaderHeaderAction(
-            icon: Icons.tune,
-            label: 'Settings',
-            pinned: true,
-            onPressed: () {}),
-      ],
-    ))));
+          body: ReaderDesktopHeader(
+            title: 'lyrics mode',
+            textColor: Colors.black,
+            backgroundColor: Colors.white,
+            leading: <ReaderHeaderAction>[
+              ReaderHeaderAction(
+                icon: Icons.arrow_back,
+                label: 'Back',
+                pinned: true,
+                onPressed: () {},
+              ),
+              ReaderHeaderAction(
+                icon: Icons.auto_stories_outlined,
+                label: 'Book mode',
+                pinned: true,
+                onPressed: () => toggled++,
+              ),
+            ],
+            trailing: <ReaderHeaderAction>[
+              ReaderHeaderAction(
+                icon: Icons.tune,
+                label: 'Settings',
+                pinned: true,
+                onPressed: () {},
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
     expect(find.byIcon(Icons.auto_stories_outlined), findsOneWidget);
     await tester.tap(find.byIcon(Icons.auto_stories_outlined));
     await tester.pumpAndSettle();
@@ -222,7 +246,8 @@ void main() {
     expect(
       header.substring(headerAt).contains('return ExcludeFocus('),
       isTrue,
-      reason: '纯指针面，不进焦点遍历池（TODO-700 不变式）——ExcludeFocus 在组件内部，'
+      reason:
+          '纯指针面，不进焦点遍历池（TODO-700 不变式）——ExcludeFocus 在组件内部，'
           '让 chrome.part 里的 ExcludeFocus 仍唯一属于 _wrapBottomChromeBar',
     );
     expect(page.contains('_buildDesktopHeader(),'), isTrue);
