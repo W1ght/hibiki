@@ -4524,5 +4524,9 @@
   "popup_ctx_edit_cancel": "放弃修改",
   "reader_furigana_off": "关闭",
   "reader_furigana_toggle": "点击显示",
-  "reader_furigana_hidden": "隐藏"
+  "reader_furigana_hidden": "隐藏",
+  "stat_reading_speed": "阅读速度",
+  "settings_study_diag_export": "导出统计诊断日志",
+  "settings_study_diag_export_hint": "翻页入账、段开封、有声书恢复与跳页流水，用于排查阅读速度异常。保存为文本文件。",
+  "study_diag_share_subject": "Fushi 统计诊断日志"
 }

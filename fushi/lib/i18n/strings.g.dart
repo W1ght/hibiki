@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 76942 (4526 per locale)
+/// Strings: 77010 (4530 per locale)
 ///
-/// Built on 2026-09-11 at 14:50 UTC
+/// Built on 2026-09-11 at 19:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6354,6 +6354,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_furigana_off => 'Off';
   String get reader_furigana_toggle => 'Toggle';
   String get reader_furigana_hidden => 'Hidden';
+  String get stat_reading_speed => 'Reading speed';
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -17057,6 +17062,15 @@ class _StringsAr extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -27996,6 +28010,15 @@ class _StringsDe extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -38985,6 +39008,15 @@ class _StringsEs extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -50007,6 +50039,15 @@ class _StringsFr extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -60829,6 +60870,15 @@ class _StringsId extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -71747,6 +71797,15 @@ class _StringsIt extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -82033,6 +82092,15 @@ class _StringsJa extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -92330,6 +92398,15 @@ class _StringsKo extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -103202,6 +103279,15 @@ class _StringsNl extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -114127,6 +114213,15 @@ class _StringsPtBr extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -125030,6 +125125,15 @@ class _StringsRu extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -135730,6 +135834,15 @@ class _StringsTh extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -146548,6 +146661,15 @@ class _StringsTr extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -157335,6 +157457,15 @@ class _StringsVi extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -167237,6 +167368,15 @@ class _StringsZhCn extends _StringsEn {
   String get reader_furigana_toggle => '点击显示';
   @override
   String get reader_furigana_hidden => '隐藏';
+  @override
+  String get stat_reading_speed => '阅读速度';
+  @override
+  String get settings_study_diag_export => '导出统计诊断日志';
+  @override
+  String get settings_study_diag_export_hint =>
+      '翻页入账、段开封、有声书恢复与跳页流水，用于排查阅读速度异常。保存为文本文件。';
+  @override
+  String get study_diag_share_subject => 'Fushi 统计诊断日志';
 }
 
 // Path: <root>
@@ -177208,6 +177348,15 @@ class _StringsZhHk extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 /// Flat map(s) containing all translations.
@@ -186526,6 +186675,14 @@ extension on _StringsEn {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -195839,6 +195996,14 @@ extension on _StringsAr {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -205201,6 +205366,14 @@ extension on _StringsDe {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -214553,6 +214726,14 @@ extension on _StringsEs {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -223913,6 +224094,14 @@ extension on _StringsFr {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -233243,6 +233432,14 @@ extension on _StringsId {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -242596,6 +242793,14 @@ extension on _StringsIt {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -251873,6 +252078,14 @@ extension on _StringsJa {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -261155,6 +261368,14 @@ extension on _StringsKo {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -270503,6 +270724,14 @@ extension on _StringsNl {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -279846,6 +280075,14 @@ extension on _StringsPtBr {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -289195,6 +289432,14 @@ extension on _StringsRu {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -298513,6 +298758,14 @@ extension on _StringsTh {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -307847,6 +308100,14 @@ extension on _StringsTr {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -317175,6 +317436,14 @@ extension on _StringsVi {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -326419,6 +326688,14 @@ extension on _StringsZhCn {
         return '点击显示';
       case 'reader_furigana_hidden':
         return '隐藏';
+      case 'stat_reading_speed':
+        return '阅读速度';
+      case 'settings_study_diag_export':
+        return '导出统计诊断日志';
+      case 'settings_study_diag_export_hint':
+        return '翻页入账、段开封、有声书恢复与跳页流水，用于排查阅读速度异常。保存为文本文件。';
+      case 'study_diag_share_subject':
+        return 'Fushi 统计诊断日志';
       default:
         return null;
     }
@@ -335674,6 +335951,14 @@ extension on _StringsZhHk {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }

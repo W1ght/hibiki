@@ -29,10 +29,12 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2173 条。点号进各自文件。
+> 共 2175 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2463](bugs/BUG-2463-reader-continuous-reveal-smooth-scroll-inflates-ledger.md) | ✅ | ✅ | 连续模式听书长距离平滑跟随滚动把途中视口计入阅读账本 |
+| [BUG-2462](bugs/BUG-2462-audiobook-resume-text-behind-audio.md) | ✅ | ✅ | 有声书重开书正文恢复点落后于音频位置 |
 | [BUG-2461](bugs/BUG-2461-reader-settings-live-engine-config.md) | ✅ | ✅ | 阅读器边距等设置改完不实时生效 |
 | [BUG-2460](bugs/BUG-2460-reader-status-footer-inside-bottom-safe-area.md) | ✅ | ✅ | 阅读器状态行坐进系统底部安全区 |
 | [BUG-2459](bugs/BUG-2459-webkit-ruby-paragraph-first-line-growth.md) | ✅ | ✅ | WebKit 上首行含振假名的段落被撑高一截 |

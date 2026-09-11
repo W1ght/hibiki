@@ -3223,20 +3223,26 @@ $_sharedJs
     // 保持 TODO-825 的 smooth（用户点名要动画，settle 窗治闪屏），零行为变化。
     var behavior = (window.getComputedStyle(document.documentElement)
       .getPropertyValue('--fushi-reader-eink-mode').trim() === '1') ? 'auto' : 'smooth';
+    // BUG-2463：跨过一整个视口以上的「跟随」不是跟、是跳（重开书音频在几十页外 /
+    // 跨章落地 / 手动 seek）——smooth 补间会连续多帧滚过中间所有页，settle 窗（250ms）
+    // 关了之后每次 scroll 回传都把途中视口 arrive 进阅读账本，那些从没读过的页全部
+    // 入账 = 字数虚增、字/时爆表。一个视口之内（逐句跟读翻到下一屏）仍走 behavior
+    // 变量的 smooth（TODO-825 用户点名要的动画一根毛不动），只有跳才瞬时落地。
+    var followBehavior = function(delta, viewport) {
+      return Math.abs(delta) > viewport ? 'auto' : behavior;
+    };
     if (wm.startsWith('vertical')) {
       var vw = window.innerWidth;
       var safe = vw * margin;
       if (rect.left >= safe && rect.right <= vw - safe) return false;
-      if (wm === 'vertical-rl') {
-        window.scrollBy({left: rect.right - (vw - safe), behavior: behavior});
-      } else {
-        window.scrollBy({left: rect.left - safe, behavior: behavior});
-      }
+      var dx = (wm === 'vertical-rl') ? rect.right - (vw - safe) : rect.left - safe;
+      window.scrollBy({left: dx, behavior: followBehavior(dx, vw)});
     } else {
       var vh = window.innerHeight;
       var safe = vh * margin;
       if (rect.top >= safe && rect.bottom <= vh - safe) return false;
-      window.scrollBy({top: rect.top - safe, behavior: behavior});
+      var dy = rect.top - safe;
+      window.scrollBy({top: dy, behavior: followBehavior(dy, vh)});
     }
     return true;
   },
