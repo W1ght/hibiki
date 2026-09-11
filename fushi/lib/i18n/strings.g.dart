@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80002 (4706 per locale)
+/// Strings: 80053 (4709 per locale)
 ///
-/// Built on 2026-09-11 at 05:39 UTC
+/// Built on 2026-09-11 at 10:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6543,6 +6543,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  String get popup_history_back => 'Back';
+  String get popup_history_forward => 'Forward';
   String get manga_cover_cache_max_age => 'Cover cache retention';
   String get manga_cover_cache_max_age_subtitle =>
       'Online source covers are re-downloaded after this many days';
@@ -17620,6 +17624,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
   @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
@@ -28927,6 +28938,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
   @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
@@ -40288,6 +40306,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
   @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
@@ -51684,6 +51709,13 @@ class _StringsFr extends _StringsEn {
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
   @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
+  @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
   String get manga_cover_cache_max_age_subtitle =>
@@ -62880,6 +62912,13 @@ class _StringsId extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
   @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
@@ -74171,6 +74210,13 @@ class _StringsIt extends _StringsEn {
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
   @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
+  @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
   String get manga_cover_cache_max_age_subtitle =>
@@ -84837,6 +84883,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
   @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
@@ -95514,6 +95567,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
   @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
@@ -106760,6 +106820,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
   @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
@@ -118061,6 +118128,13 @@ class _StringsPtBr extends _StringsEn {
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
   @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
+  @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
   String get manga_cover_cache_max_age_subtitle =>
@@ -129338,6 +129412,13 @@ class _StringsRu extends _StringsEn {
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
   @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
+  @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
   String get manga_cover_cache_max_age_subtitle =>
@@ -140413,6 +140494,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
   @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
@@ -151606,6 +151694,13 @@ class _StringsTr extends _StringsEn {
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
   @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
+  @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
   String get manga_cover_cache_max_age_subtitle =>
@@ -162769,6 +162864,13 @@ class _StringsVi extends _StringsEn {
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
   @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
+  @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
   String get manga_cover_cache_max_age_subtitle =>
@@ -173010,6 +173112,12 @@ class _StringsZhCn extends _StringsEn {
       '在浏览器里打开一张由 Fushi 提供的网页，验证右上角弹窗与 Shift 查词。';
   @override
   String get browser_extension_test_page_server_off => '请先开启查词服务器，再打开试用网页。';
+  @override
+  String get video_source_scrape_locale_follow_ui => '留空 = 跟随界面语言';
+  @override
+  String get popup_history_back => '后退';
+  @override
+  String get popup_history_forward => '前进';
   @override
   String get manga_cover_cache_max_age => '封面缓存保留时长';
   @override
@@ -183359,6 +183467,13 @@ class _StringsZhHk extends _StringsEn {
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
   @override
+  String get video_source_scrape_locale_follow_ui =>
+      'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
+  @override
   String get manga_cover_cache_max_age => 'Cover cache retention';
   @override
   String get manga_cover_cache_max_age_subtitle =>
@@ -193051,6 +193166,12 @@ extension on _StringsEn {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -202738,6 +202859,12 @@ extension on _StringsAr {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -212470,6 +212597,12 @@ extension on _StringsDe {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -222193,6 +222326,12 @@ extension on _StringsEs {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -231925,6 +232064,12 @@ extension on _StringsFr {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -241628,6 +241773,12 @@ extension on _StringsId {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -251353,6 +251504,12 @@ extension on _StringsIt {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -261005,6 +261162,12 @@ extension on _StringsJa {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -270661,6 +270824,12 @@ extension on _StringsKo {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -280379,6 +280548,12 @@ extension on _StringsNl {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -290092,6 +290267,12 @@ extension on _StringsPtBr {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -299812,6 +299993,12 @@ extension on _StringsRu {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -309504,6 +309691,12 @@ extension on _StringsTh {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -319211,6 +319404,12 @@ extension on _StringsTr {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -328912,6 +329111,12 @@ extension on _StringsVi {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
@@ -338527,6 +338732,12 @@ extension on _StringsZhCn {
         return '在浏览器里打开一张由 Fushi 提供的网页，验证右上角弹窗与 Shift 查词。';
       case 'browser_extension_test_page_server_off':
         return '请先开启查词服务器，再打开试用网页。';
+      case 'video_source_scrape_locale_follow_ui':
+        return '留空 = 跟随界面语言';
+      case 'popup_history_back':
+        return '后退';
+      case 'popup_history_forward':
+        return '前进';
       case 'manga_cover_cache_max_age':
         return '封面缓存保留时长';
       case 'manga_cover_cache_max_age_subtitle':
@@ -348157,6 +348368,12 @@ extension on _StringsZhHk {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'video_source_scrape_locale_follow_ui':
+        return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       case 'manga_cover_cache_max_age':
         return 'Cover cache retention';
       case 'manga_cover_cache_max_age_subtitle':
