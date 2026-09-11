@@ -24,11 +24,13 @@ import 'test_helpers.dart';
 ///
 /// 用户反馈：macOS / iOS 的 WKWebView（WebKit）上，带振假名的行比纯正文行更高，
 /// 行距忽大忽小；Windows / Android（Blink）正常。本探针在**真阅读器**（真 CSS
-/// 注入、真分页 shell、`furigana_mode=off`、`line_height=1.65`、横排分页）里：
+/// 注入、真分页 shell、`furigana_mode=off`、`line_height=1.65`、分页，横排 / 竖排 ×
+/// 字号 22 / 43 四轮，用户报的场景是竖排 + 43）里：
 ///
 ///  1. 开一本正文交替「纯文本段落」与「带 ruby 段落」（每段 3~4 行）的 EPUB；
-///  2. JS 对每个段落逐字符 `Range.getClientRects()`，按 top 聚类得行盒，行距 =
-///     相邻行 top 之差（跨栏的负跳变丢弃），取段落中位数；再按段落种类取中位数；
+///  2. JS 对每个段落逐字符 `Range.getClientRects()`，横排按 top 聚类得行盒，行距 =
+///     相邻行 top 之差；竖排按 left 聚类得列，行距 = 前一列 left − 本列 left（跨栏的
+///     负跳变丢弃），取段落中位数；再按段落种类取中位数；
 ///  3. 依次向 `<head>` 追加 `<style id="probe">`（每个候选换掉上一个）再量一遍：
 ///       * baseline —— 不注入；
 ///       * C1 `ruby, rt { line-height: 1 !important; }`
@@ -37,8 +39,8 @@ import 'test_helpers.dart';
 ///       * C4 `rt { line-height: 1 !important; } ruby { line-height: 1 !important; }
 ///             body { line-height: 1.9 !important; }`
 ///  4. 每个 case 打一行
-///     `[ruby-line-box] engine=<UA 摘要> case=<名> plain=<px> ruby=<px> delta=<px>`
-///     并抓一张 WebView 截图（`observe-b-<case>-webview.png`，Mac 抓不到时只记
+///     `[ruby-line-box] engine=<UA 摘要> pass=<h22|h43|v22|v43> case=<名> plain=<px> ruby=<px> delta=<px>`
+///     并抓一张 WebView 截图（`observe-b-<pass>-<case>-webview.png`，Mac 抓不到时只记
 ///     saved=false、不判红）。
 ///
 /// 断言只做「探针跑通、每个 case 都量到了数值、基线两类段落都至少 2 行」——**不断言
@@ -91,8 +93,7 @@ Future<void> _pumpForPref(WidgetTester tester) async {
 
 // ── 素材：纯文本段 / ruby 段交替 ────────────────────────────────────────
 
-const String _plainA =
-    '桜の花が咲き始めた頃、少年は初めてその図書館を訪れた。古い木の扉を押し開けると、'
+const String _plainA = '桜の花が咲き始めた頃、少年は初めてその図書館を訪れた。古い木の扉を押し開けると、'
     '埃の匂いと紙の香りが混ざり合った空気が流れ出てきた。窓から差し込む午後の光が、'
     '本棚の間を縫うように伸びていた。少年は息を殺して、その光の道を辿った。図書館の'
     '奥には、誰も近寄らない古びた書架があった。そこには、背表紙の文字も読めないほど'
@@ -113,8 +114,7 @@ const String _rubyA =
     '<ruby>背表紙<rt>せびょうし</rt></ruby>の<ruby>文字<rt>もじ</rt></ruby>も'
     '読めないほど古い<ruby>本<rt>ほん</rt></ruby>が並んでいた。';
 
-const String _plainB =
-    '彼は鍵を握りしめ、図書館の中を探索し始めた。廊下の突き当たりに、見覚えのない'
+const String _plainB = '彼は鍵を握りしめ、図書館の中を探索し始めた。廊下の突き当たりに、見覚えのない'
     '扉を見つけた。扉の向こうには、想像もしなかった世界が広がっていた。空は紫色で、'
     '二つの月が浮かんでいた。風が吹くたびに、木々の葉が音楽を奏でた。まるで森全体が'
     '一つの楽器のようだった。小さな川のほとりに座って、少年は持ってきた本を開いた。'
@@ -258,6 +258,9 @@ const String _measureJs = r'''
   }
   var bodyCs = getComputedStyle(document.body);
   var fontSize = parseFloat(bodyCs.fontSize) || 16;
+  // 竖排：一「行」是一列（同 left），行距沿 x 轴（vertical-rl 向左推进，取
+  // 前一列 left − 本列 left 为正）；横排：一行同 top，行距沿 y 轴。
+  var vertical = /^vertical/.test(bodyCs.writingMode || '');
   var out = { engine: ua(), ua: navigator.userAgent,
               bodyFontSize: bodyCs.fontSize, bodyLineHeight: bodyCs.lineHeight,
               bodyWritingMode: bodyCs.writingMode,
@@ -298,26 +301,33 @@ const String _measureJs = r'''
         if (cr.width <= 0 || cr.height <= 0) continue;
         var found = null;
         for (var L = 0; L < lines.length; L++) {
-          if (Math.abs(lines[L].top - cr.top) <= 2 && Math.abs(lines[L].left - cr.left) < 4000) {
-            found = lines[L]; break;
-          }
+          var same = vertical
+            ? (Math.abs(lines[L].left - cr.left) <= 2 && Math.abs(lines[L].top - cr.top) < 4000)
+            : (Math.abs(lines[L].top - cr.top) <= 2 && Math.abs(lines[L].left - cr.left) < 4000);
+          if (same) { found = lines[L]; break; }
         }
         if (found) {
           found.bottom = Math.max(found.bottom, cr.bottom);
           found.top = Math.min(found.top, cr.top);
+          found.right = Math.max(found.right, cr.right);
+          found.left = Math.min(found.left, cr.left);
           found.chars++;
         } else {
-          lines.push({ top: cr.top, bottom: cr.bottom, left: cr.left, chars: 1 });
+          lines.push({ top: cr.top, bottom: cr.bottom, left: cr.left, right: cr.right, chars: 1 });
         }
       }
     }
     // 文档序 = 出现序；相邻行 top 差为行距（同栏内为正）。
     var pitches = [];
     for (var L2 = 1; L2 < lines.length; L2++) {
-      var d = lines[L2].top - lines[L2 - 1].top;
+      var d = vertical
+        ? (lines[L2 - 1].left - lines[L2].left)
+        : (lines[L2].top - lines[L2 - 1].top);
       if (d > 0 && d < fontSize * 4) pitches.push(d);
     }
-    var glyphHeights = lines.map(function (l) { return l.bottom - l.top; });
+    var glyphHeights = lines.map(function (l) {
+      return vertical ? (l.right - l.left) : (l.bottom - l.top);
+    });
     out.paragraphs.push({
       id: p.id, kind: p.getAttribute('data-kind'),
       lineCount: lines.length,
@@ -424,7 +434,7 @@ void main() {
   testWidgets(
     'ruby line-box probe: plain vs ruby line pitch under baseline and four '
     'candidate CSS overrides (engine-tagged, no WebKit assertion)',
-    timeout: const Timeout(Duration(minutes: 12)),
+    timeout: const Timeout(Duration(minutes: 25)),
     (WidgetTester tester) async {
       await runFushiItest(
         label: 'ruby-line-box',
@@ -440,76 +450,95 @@ void main() {
           final String originalWritingMode = source.readerWritingMode;
           final String originalViewMode = source.readerViewMode;
           final double originalLineHeight = source.readerLineHeight;
+          final double originalFontSize = source.readerFontSize;
           debugPrint('[ruby-line-box] original prefs: furigana_mode='
               '$originalMode writing_mode=$originalWritingMode '
-              'view_mode=$originalViewMode line_height=$originalLineHeight');
+              'view_mode=$originalViewMode line_height=$originalLineHeight '
+              'font_size=$originalFontSize');
 
           _RunJs? runJs;
           try {
-            await source.setReaderWritingMode('horizontal-tb');
             await source.setReaderViewMode('paginated');
             await source.setReaderFuriganaMode('off');
             await source.setReaderLineHeight(1.65);
             await _pumpForPref(tester);
 
             final String bookKey = await _seedProbeBook(tester);
-            await _openSeededBook(tester, bookKey);
-            await tester.pump(const Duration(seconds: 2));
-
-            runJs = ReaderFushiPage.debugEvaluateJavascript;
-            expect(runJs, isNotNull,
-                reason: 'reader must expose debugEvaluateJavascript');
-            expect(ReaderFushiSource.readerSettings?.furiganaMode, 'off');
-            expect(ReaderFushiSource.readerSettings?.lineHeight, 1.65);
-            expect(ReaderFushiSource.readerSettings?.isContinuousMode, isFalse);
-
             final List<String> summary = <String>[];
-            for (final MapEntry<String, String> c in _cases) {
-              if (c.value.isEmpty) {
-                await runJs!(_removeProbeCssJs);
-              } else {
-                final Object? len = await runJs!(_setProbeCssJs(c.value));
-                debugPrint('[ruby-line-box] case=${c.key} probe css set '
-                    '(len=$len): ${c.value}');
-              }
-              await tester.pump(const Duration(milliseconds: 500));
-              final _LineBoxResult r =
-                  _LineBoxResult.fromRaw(await runJs(_measureJs));
-              final String line = '[ruby-line-box] engine=${r.engine} '
-                  'case=${c.key} plain=${r.plain} ruby=${r.ruby} '
-                  'delta=${r.delta}';
-              debugPrint(line);
-              summary.add(line);
-              debugPrint('[ruby-line-box]   body font=${r.raw['bodyFontSize']} '
-                  'lineHeight=${r.raw['bodyLineHeight']} '
-                  'writingMode=${r.raw['bodyWritingMode']} '
-                  'rt=${r.raw['rtCss']} ruby=${r.raw['rubyCss']}');
-              for (final Map<String, dynamic> p in r.paragraphs) {
-                debugPrint('[ruby-line-box]   ${p['id']} ${p['kind']} '
-                    'lines=${p['lineCount']} medianPitch=${p['medianPitch']} '
-                    'glyphH=${p['medianGlyphHeight']} '
-                    'pRectH=${p['pRectHeight']} pitches=${p['pitches']}');
-              }
-              final ObserveShot web =
-                  await captureReaderWebView('observe-b-${c.key}-webview');
-              debugPrint('[ruby-line-box]   webview ${c.key} saved=${web.saved} '
-                  'nonBlank=${web.nonBlank} path=${web.path}');
+            // 双写向 × 双字号：用户报的场景是竖排 + 字号 43，横排 22 是 Blink 基线。
+            for (final String wm in <String>['horizontal-tb', 'vertical-rl']) {
+              for (final double fs in <double>[22, 43]) {
+                final String pass =
+                    '${wm == 'vertical-rl' ? 'v' : 'h'}${fs.round()}';
+                await source.setReaderWritingMode(wm);
+                await source.setReaderFontSize(fs);
+                await _pumpForPref(tester);
+                await _openSeededBook(tester, bookKey);
+                await tester.pump(const Duration(seconds: 2));
 
-              expect(r.plain, greaterThan(0),
-                  reason: 'case ${c.key}: plain paragraphs must yield a pitch');
-              expect(r.ruby, greaterThan(0),
-                  reason: 'case ${c.key}: ruby paragraphs must yield a pitch');
-              if (c.key == 'baseline') {
-                expect(r.minLines('plain'), greaterThanOrEqualTo(2),
-                    reason: 'every plain paragraph must wrap to ≥2 lines '
-                        '(pitch needs two line tops)');
-                expect(r.minLines('ruby'), greaterThanOrEqualTo(2),
-                    reason: 'every ruby paragraph must wrap to ≥2 lines');
+                runJs = ReaderFushiPage.debugEvaluateJavascript;
+                expect(runJs, isNotNull,
+                    reason: 'reader must expose debugEvaluateJavascript');
+                expect(ReaderFushiSource.readerSettings?.furiganaMode, 'off');
+                expect(ReaderFushiSource.readerSettings?.lineHeight, 1.65);
+                expect(ReaderFushiSource.readerSettings?.isContinuousMode,
+                    isFalse);
+                expect(ReaderFushiSource.readerSettings?.writingMode, wm);
+
+                for (final MapEntry<String, String> c in _cases) {
+                  if (c.value.isEmpty) {
+                    await runJs!(_removeProbeCssJs);
+                  } else {
+                    final Object? len = await runJs!(_setProbeCssJs(c.value));
+                    debugPrint('[ruby-line-box] case=${c.key} probe css set '
+                        '(len=$len): ${c.value}');
+                  }
+                  await tester.pump(const Duration(milliseconds: 500));
+                  final _LineBoxResult r =
+                      _LineBoxResult.fromRaw(await runJs(_measureJs));
+                  final String line = '[ruby-line-box] engine=${r.engine} '
+                      'pass=$pass case=${c.key} plain=${r.plain} ruby=${r.ruby} '
+                      'delta=${r.delta}';
+                  debugPrint(line);
+                  summary.add(line);
+                  debugPrint(
+                      '[ruby-line-box]   body font=${r.raw['bodyFontSize']} '
+                      'lineHeight=${r.raw['bodyLineHeight']} '
+                      'writingMode=${r.raw['bodyWritingMode']} '
+                      'rt=${r.raw['rtCss']} ruby=${r.raw['rubyCss']}');
+                  for (final Map<String, dynamic> p in r.paragraphs) {
+                    debugPrint('[ruby-line-box]   ${p['id']} ${p['kind']} '
+                        'lines=${p['lineCount']} medianPitch=${p['medianPitch']} '
+                        'glyphH=${p['medianGlyphHeight']} '
+                        'pRectH=${p['pRectHeight']} pitches=${p['pitches']}');
+                  }
+                  final ObserveShot web = await captureReaderWebView(
+                      'observe-b-$pass-${c.key}-webview');
+                  debugPrint(
+                      '[ruby-line-box]   webview ${c.key} saved=${web.saved} '
+                      'nonBlank=${web.nonBlank} path=${web.path}');
+
+                  expect(r.plain, greaterThan(0),
+                      reason:
+                          'case ${c.key}: plain paragraphs must yield a pitch');
+                  expect(r.ruby, greaterThan(0),
+                      reason:
+                          'case ${c.key}: ruby paragraphs must yield a pitch');
+                  if (c.key == 'baseline') {
+                    expect(r.minLines('plain'), greaterThanOrEqualTo(2),
+                        reason: 'every plain paragraph must wrap to ≥2 lines '
+                            '(pitch needs two line tops)');
+                    expect(r.minLines('ruby'), greaterThanOrEqualTo(2),
+                        reason: 'every ruby paragraph must wrap to ≥2 lines');
+                  }
+                }
+                await runJs!(_removeProbeCssJs);
+                debugPrint('[ruby-line-box] UA=${(await runJs(
+                  'navigator.userAgent',
+                ))}');
+                await _closeReader(tester);
               }
             }
-            debugPrint('[ruby-line-box] UA=${(await runJs!(
-              'navigator.userAgent',
-            ))}');
             debugPrint('[ruby-line-box] SUMMARY\n${summary.join('\n')}');
           } finally {
             try {
@@ -522,11 +551,13 @@ void main() {
             await source.setReaderWritingMode(originalWritingMode);
             await source.setReaderViewMode(originalViewMode);
             await source.setReaderLineHeight(originalLineHeight);
+            await source.setReaderFontSize(originalFontSize);
             await _pumpForPref(tester);
             debugPrint('[ruby-line-box] restored prefs: furigana_mode='
                 '${source.readerFuriganaMode} writing_mode='
                 '${source.readerWritingMode} view_mode=${source.readerViewMode} '
-                'line_height=${source.readerLineHeight}');
+                'line_height=${source.readerLineHeight} '
+                'font_size=${source.readerFontSize}');
           }
         },
       );
