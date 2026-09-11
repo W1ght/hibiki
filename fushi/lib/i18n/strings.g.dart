@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79968 (4704 per locale)
+/// Strings: 80070 (4710 per locale)
 ///
-/// Built on 2026-09-10 at 17:52 UTC
+/// Built on 2026-09-11 at 05:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6543,6 +6543,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  String get updates_notification_open_video_episode => 'Play';
+  String get updates_notification_open_manga_chapter => 'Read';
+  String get updates_notification_open_manga_extension => 'Update';
+  String get updates_notification_open_app_release => 'Download';
+  String get updates_notification_view_all => 'View updates';
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -17617,6 +17623,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -28919,6 +28937,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -40275,6 +40305,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -51665,6 +51707,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -62857,6 +62911,18 @@ class _StringsId extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -74142,6 +74208,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -84804,6 +84882,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -95476,6 +95566,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -106717,6 +106819,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -118012,6 +118126,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -129284,6 +129410,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -140355,6 +140493,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -151542,6 +151692,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -162700,6 +162862,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 // Path: <root>
@@ -172937,6 +173111,18 @@ class _StringsZhCn extends _StringsEn {
       '在浏览器里打开一张由 Fushi 提供的网页，验证右上角弹窗与 Shift 查词。';
   @override
   String get browser_extension_test_page_server_off => '请先开启查词服务器，再打开试用网页。';
+  @override
+  String get updates_notification_open_video_episode => '播放';
+  @override
+  String get updates_notification_open_manga_chapter => '阅读';
+  @override
+  String get updates_notification_open_manga_extension => '更新';
+  @override
+  String get updates_notification_open_app_release => '下载';
+  @override
+  String get updates_notification_view_all => '查看更新';
+  @override
+  String get updates_notification_header => '订阅更新';
 }
 
 // Path: <root>
@@ -183281,6 +183467,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get browser_extension_test_page_server_off =>
       'Enable the lookup server first, then try again.';
+  @override
+  String get updates_notification_open_video_episode => 'Play';
+  @override
+  String get updates_notification_open_manga_chapter => 'Read';
+  @override
+  String get updates_notification_open_manga_extension => 'Update';
+  @override
+  String get updates_notification_open_app_release => 'Download';
+  @override
+  String get updates_notification_view_all => 'View updates';
+  @override
+  String get updates_notification_header => 'Subscription updates';
 }
 
 /// Flat map(s) containing all translations.
@@ -192969,6 +193167,18 @@ extension on _StringsEn {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -202652,6 +202862,18 @@ extension on _StringsAr {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -212380,6 +212602,18 @@ extension on _StringsDe {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -222099,6 +222333,18 @@ extension on _StringsEs {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -231827,6 +232073,18 @@ extension on _StringsFr {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -241526,6 +241784,18 @@ extension on _StringsId {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -251247,6 +251517,18 @@ extension on _StringsIt {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -260895,6 +261177,18 @@ extension on _StringsJa {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -270547,6 +270841,18 @@ extension on _StringsKo {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -280261,6 +280567,18 @@ extension on _StringsNl {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -289970,6 +290288,18 @@ extension on _StringsPtBr {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -299686,6 +300016,18 @@ extension on _StringsRu {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -309374,6 +309716,18 @@ extension on _StringsTh {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -319077,6 +319431,18 @@ extension on _StringsTr {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -328774,6 +329140,18 @@ extension on _StringsVi {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
@@ -338385,6 +338763,18 @@ extension on _StringsZhCn {
         return '在浏览器里打开一张由 Fushi 提供的网页，验证右上角弹窗与 Shift 查词。';
       case 'browser_extension_test_page_server_off':
         return '请先开启查词服务器，再打开试用网页。';
+      case 'updates_notification_open_video_episode':
+        return '播放';
+      case 'updates_notification_open_manga_chapter':
+        return '阅读';
+      case 'updates_notification_open_manga_extension':
+        return '更新';
+      case 'updates_notification_open_app_release':
+        return '下载';
+      case 'updates_notification_view_all':
+        return '查看更新';
+      case 'updates_notification_header':
+        return '订阅更新';
       default:
         return null;
     }
@@ -348011,6 +348401,18 @@ extension on _StringsZhHk {
         return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
       case 'browser_extension_test_page_server_off':
         return 'Enable the lookup server first, then try again.';
+      case 'updates_notification_open_video_episode':
+        return 'Play';
+      case 'updates_notification_open_manga_chapter':
+        return 'Read';
+      case 'updates_notification_open_manga_extension':
+        return 'Update';
+      case 'updates_notification_open_app_release':
+        return 'Download';
+      case 'updates_notification_view_all':
+        return 'View updates';
+      case 'updates_notification_header':
+        return 'Subscription updates';
       default:
         return null;
     }
