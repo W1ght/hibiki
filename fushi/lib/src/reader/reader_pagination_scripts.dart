@@ -959,6 +959,14 @@ window.__fushiInstallShell = function(C) {
       try { window.flutter_inappwebview.callHandler('onReanchorSettled'); } catch (e) {}
     }
   },
+  // BUG-2462 取证附带：重锚的落定一律排在下一帧（rAF），但页面隐藏时（macOS 窗口不可见 /
+  // 隐藏、Chromium 最小化）浏览器冻结 requestAnimationFrame，`_reanchorPending` 就一直
+  // 挂着——stableProgress 恒 null、位置永不落库、账本永不 arrive，直到窗口回到前台。
+  // 隐藏时改用 setTimeout(0)：没有可见帧可等，布局在隐藏文档里照常可读，立刻落定。
+  _reanchorFrame: function(fn) {
+    if (document.hidden === true) { setTimeout(fn, 0); return; }
+    requestAnimationFrame(fn);
+  },
   // wave1 去重：content-box 尺寸探针（body clientWidth/Height 扣 padding）。曾在分页/连续
   // 两 shell 尾部各挂一份逐字相同的 window.fushiReader._contentSize = function(){...}；上移进
   // _sharedJs 作对象字面量属性，两 shell 经 $_sharedJs 各得一份、字节等价（_imageMaxBox 经
@@ -2923,7 +2931,7 @@ $_sharedJs
     if (inFlight || charOffset < 0) return;
     this._setReanchorPending(true);
     var self = this;
-    requestAnimationFrame(function() {
+    this._reanchorFrame(function() {
       try {
         self.scrollToCharOffset(charOffset, scrollBefore);
       } finally {
@@ -3057,7 +3065,7 @@ window.fushiReader.updatePageSize = function(cssWidth, cssHeight) {
   if (inFlight) return;
   this._setReanchorPending(true);
   var self = this;
-  requestAnimationFrame(function() {
+  this._reanchorFrame(function() {
     try {
       self.scrollToProgressPaged(self.getScrollContext(), progress);
     } finally {
@@ -3589,7 +3597,7 @@ $_sharedJs
     if (inFlight || charOffset < 0) return;
     this._setReanchorPending(true);
     var self = this;
-    requestAnimationFrame(function() {
+    this._reanchorFrame(function() {
       try {
         self.scrollToCharOffset(charOffset, undefined, scrollBefore);
       } finally {
@@ -3756,7 +3764,7 @@ window.fushiReader.updatePageSize = function(cssWidth, cssHeight) {
   if (inFlight || progress <= 0) return;
   this._setReanchorPending(true);
   var self = this;
-  requestAnimationFrame(function() {
+  this._reanchorFrame(function() {
     try {
       self.scrollToProgressContinuous(progress);
     } finally {
