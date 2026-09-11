@@ -19,12 +19,16 @@ import 'package:fushi/utils.dart';
 /// 会话行展示名：段 title 快照 → 调用方按域换成当前显示名（书走 override 书名）。
 typedef StatSessionTitleOf = String Function(StudySession session);
 
-/// 一行的量纲文案：时长 · 字数 · 页数，为 0 的量纲不显示；全 0 显示 0 分钟。
+/// 一行的量纲文案：时长 · 字数 · 页数 · 速度（字/时），为 0 的量纲不显示；全 0
+/// 显示 0 分钟。速度只在有字数且时长够 1 分钟样本时出现（[formatStatCphOf]），
+/// 用户 2026-09-12：每个会话都要能看到「每小时多少字」，排查读速异常。
 String formatStatSessionMeta(StudySession s) {
+  final String? cph = formatStatCphOf(s.chars, s.durationMs);
   final List<String> parts = <String>[
     if (s.durationMs > 0) formatStatTime(s.durationMs),
     if (s.chars > 0) formatStatChars(s.chars),
     if (s.pages > 0) t.stat_format_pages(n: s.pages),
+    if (cph != null) cph,
   ];
   return parts.isEmpty ? formatStatTime(0) : parts.join(' · ');
 }

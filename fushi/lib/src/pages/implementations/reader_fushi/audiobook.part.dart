@@ -455,9 +455,67 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     return (map, ranges);
   }
 
+  /// 没有保存位置时的起点：当前音频 cue 推出来的位置（[_positionFromCurrentAudioCue]）。
   void _restoreFromCurrentAudioCue() {
+    final AudioCueStart? pos = _positionFromCurrentAudioCue();
+    if (pos == null) return;
+    _applyAudioCueStart(pos, reason: 'no saved position');
+  }
+
+  /// BUG-2462：保存位置之外，有声书是不是「跑到前面去了」——音频位置时间戳比正文
+  /// 位置新出宽限以上，且本书开着「跟随音频」（关着 = 用户有意让两者分离，不动）。
+  /// 只做两三次 DB 往返、**不等音频槽**（槽要等音频服务初始化 + 会话 load，本就刻意
+  /// 不挡首屏）；判真后调用方才等槽、按 cue 推起点。判据本体见
+  /// `audiobook_resume_reconcile.dart`。
+  Future<bool> _audioPositionOutranksSaved(ReaderPosition saved) async {
+    if (!_moduleVisibility.isEnabled(ModuleId.listening)) return false;
+    final FushiDatabase db = appModel.database;
+    final String? key = await AudiobookSessionLauncher(
+      db,
+    ).resolvePrefsKey(widget.bookKey);
+    if (key == null) return false;
+    final AudiobookRepository repo = AudiobookRepository(db);
+    final int audioAt = await repo.readPositionUpdatedAtMs(key);
+    final bool newer = audiobookPositionIsNewer(
+      audioUpdatedAt: audioAt,
+      readerUpdatedAt: saved.updatedAt,
+    );
+    studyDiag(
+      'reader',
+      'open ${widget.bookKey} saved=${saved.sectionIndex}/'
+      '${saved.normCharOffset}@${saved.updatedAt} audioAt=$audioAt '
+      'audioNewer=$newer',
+    );
+    if (!newer) return false;
+    return repo.readFollowAudio(key);
+  }
+
+  /// BUG-2462：有保存位置但音频更新时，按 cue 推出的起点是否值得取代保存位置——
+  /// 定得到章内位置（`precise`）或至少章不同，且与保存位置隔得够远
+  /// （[readerPositionsFarApart]）。章级兜底 + 同章 = 只知道「在这一章」，保存位置
+  /// 更准，不动。
+  AudioCueStart? _audioCueStartOutrankingSaved(ReaderPosition saved) {
+    final AudioCueStart? pos = _positionFromCurrentAudioCue();
+    if (pos == null) return null;
+    if (!pos.precise && pos.chapter == saved.sectionIndex) return null;
+    final int chapterChars = saved.sectionIndex < _chapterCharCounts.length
+        ? _chapterCharCounts[saved.sectionIndex]
+        : 0;
+    final bool far = readerPositionsFarApart(
+      savedSection: saved.sectionIndex,
+      savedProgress: saved.normCharOffset / 10000.0,
+      audioSection: pos.chapter,
+      audioProgress: pos.progress,
+      chapterChars: chapterChars,
+    );
+    return far ? pos : null;
+  }
+
+  /// 当前音频 cue 推出的正文起点。`precise` = sasayaki 片段（章内字符偏移）或 SRT
+  /// 章内比例；章级兜底只知道章、进度恒 0（不精确）。null = 没有 cue / 定不到章。
+  AudioCueStart? _positionFromCurrentAudioCue() {
     final AudioCue? cue = _audiobookController?.cueAtCurrentPositionInBook();
-    if (cue == null || _book == null) return;
+    if (cue == null || _book == null) return null;
 
     final SubtitleRematchFragment? frag = SubtitleRematchCodec.tryDecode(
       cue.textFragmentId,
@@ -465,23 +523,16 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     if (frag != null &&
         frag.sectionIndex >= 0 &&
         frag.sectionIndex < _book!.chapters.length) {
-      _currentChapter = frag.sectionIndex;
       // TODO-746: reuse the shared in-chapter progress helper (DRY). On initial
       // open a null (unknown char count) falls back to 0.0 = chapter start,
       // which is a sane initial anchor and preserves the original behaviour.
-      _initialProgress =
+      final double progress =
           audiobookSentenceAudioCrossChapterProgress(
             normCharStart: frag.normCharStart,
             chapterChars: _chapterCharCounts[frag.sectionIndex],
           ) ??
           0.0;
-      _lastProgressSection = _currentChapter;
-      _lastProgressValue = _initialProgress;
-      debugPrint(
-        '[ReaderFushi] restore from audio cue: '
-        'chapter=$_currentChapter progress=$_initialProgress',
-      );
-      return;
+      return (chapter: frag.sectionIndex, progress: progress, precise: true);
     }
 
     if (_srtCueChapterMap != null && _srtChapterRanges != null) {
@@ -490,25 +541,18 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
           srtChapter >= 0 &&
           srtChapter < _srtChapterRanges!.length &&
           srtChapter < _book!.chapters.length) {
-        _currentChapter = srtChapter;
         final (int first, int last) = _srtChapterRanges![srtChapter];
         // TODO-746: reuse the shared in-chapter progress helper (DRY). On
         // initial open a null (single-cue chapter) falls back to 0.0 =
         // chapter start, preserving the original restore behaviour.
-        _initialProgress =
+        final double progress =
             audiobookSrtCrossChapterProgress(
               sentenceIndex: cue.sentenceIndex,
               first: first,
               last: last,
             ) ??
             0.0;
-        _lastProgressSection = srtChapter;
-        _lastProgressValue = _initialProgress;
-        debugPrint(
-          '[ReaderFushi] restore from SRT cue: '
-          'chapter=$srtChapter progress=$_initialProgress',
-        );
-        return;
+        return (chapter: srtChapter, progress: progress, precise: true);
       }
     }
 
@@ -516,14 +560,29 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     final int fallbackChapter = chapter >= 0
         ? chapter
         : _chapterIndexForText(cue.text);
-    if (fallbackChapter < 0) return;
-    _currentChapter = fallbackChapter;
-    _initialProgress = 0.0;
-    _lastProgressSection = fallbackChapter;
-    _lastProgressValue = 0.0;
+    if (fallbackChapter < 0) return null;
+    return (chapter: fallbackChapter, progress: 0.0, precise: false);
+  }
+
+  /// 把 cue 推出的起点写进恢复字段。cue 派生位置没有精确字符锚（BUG-162）：锚一律
+  /// -1，shell 走 `restoreProgress(分数)`。
+  void _applyAudioCueStart(AudioCueStart pos, {required String reason}) {
+    _currentChapter = pos.chapter;
+    _initialProgress = pos.progress;
+    _initialCharOffset = -1;
+    _initialCharOffsetEnd = -1;
+    _lastProgressSection = pos.chapter;
+    _lastProgressValue = pos.progress;
+    _lastProgressCharOffset = -1;
     debugPrint(
-      '[ReaderFushi] restore from audio cue chapter: '
-      'chapter=$_currentChapter href=${cue.chapterHref}',
+      '[ReaderFushi] restore from audio cue: chapter=${pos.chapter} '
+      'progress=${pos.progress} precise=${pos.precise} ($reason)',
+    );
+    studyDiag(
+      'reader',
+      'resume from audio cue chapter=${pos.chapter} '
+      'progress=${pos.progress.toStringAsFixed(4)} precise=${pos.precise} '
+      '($reason)',
     );
   }
 
@@ -870,6 +929,11 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
   /// 「到达」新单元，旧位置 → 目标 cue 之间被跳过的正文从未成为当前单元、不计。
   /// 后跳（上一句）同理：目标页若已在会话并集里，翻走时结算为 0（重听不重复计）。
   void _handleExplicitCueJump(AudioCue cue) {
+    studyDiag(
+      'reader',
+      'explicit cue jump → sentence=${cue.sentenceIndex} '
+      '${cue.startMs}ms (leave current unit)',
+    );
     _readLedger.leave();
   }
 

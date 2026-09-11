@@ -60,6 +60,9 @@ flutter test integration_test/<t>_test.dart -d emulator-<port>     # 或 ci/inte
 .\fushi\tool\run_windows_itest.ps1 -Visible -KeepUserDirs integration_test/web_video_netflix_live_itest.dart
 # Mac 跨机（Windows 当总指挥，push origin/mac-probe→Mac ff→跑；隔离数据根，Mac 真库 schema 更新）
 .\tool\run_mac_itest.ps1 integration_test/<t>_test.dart
+#   ↑ 隐藏窗口下 WKWebView 页面常报 document.hidden=true、requestAnimationFrame 不跑（2026-09-12 探针多次 raf=0，
+#   非每次）。重锚落定已改经 _reanchorFrame（隐藏页走 setTimeout，BUG-2464），位置 / 进度 / 账本在 Mac runner 上
+#   照常落地；若某测试仍卡 pending，给它加 WebView 探针（见 audiobook_resume_align_itest）打 raf/hidden 再判，或改跑 -Ios
 # iOS 模拟器（同一台 Mac，iOS 26.5 运行时 + iPhone 17 Pro「FushiProbe」；WebKit + 真安全区 34pt）
 .\tool\run_mac_itest.ps1 integration_test/<t>_test.dart -Ios
 ```

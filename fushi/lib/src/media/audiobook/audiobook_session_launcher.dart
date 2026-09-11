@@ -32,6 +32,22 @@ class AudiobookSessionLauncher {
     return null;
   }
 
+  /// [resolve] 给会话 prefs（位置 / 跟随 / 倍速…）用的键：EPUB 有声书 = bookKey 本身，
+  /// 字幕书 = `SrtBook.uid`（[_resolveSrtBook] 同一判据）。没有可播放材料返回 null。
+  ///
+  /// BUG-2462：开书要在**音频槽落定之前**用它读位置时间戳判「音频位置是否比正文
+  /// 位置新」——两个 DB 往返，不用等音频服务初始化 / 会话 load。
+  Future<String?> resolvePrefsKey(String bookKey) async {
+    final AudiobookRow? abRow = await _db.getAudiobookByBookKey(bookKey);
+    if (abRow != null &&
+        (_audiobookFromRow(abRow).audioPaths?.isNotEmpty ?? false)) {
+      return bookKey;
+    }
+    final SrtBookRow? srtRow = await _db.getSrtBookByBookKey(bookKey);
+    if (srtRow != null) return _srtBookFromRow(srtRow).uid;
+    return null;
+  }
+
   Future<AudiobookSessionStartRequest?> _resolveAudiobook(
     AudiobookRow row,
     String bookKey,

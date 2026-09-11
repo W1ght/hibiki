@@ -28,6 +28,7 @@ import 'package:fushi/src/epub/epub_spread_map.dart';
 import 'package:fushi/src/epub/epub_storage.dart';
 import 'package:fushi/src/media/audiobook/audiobook_bridge.dart';
 import 'package:fushi/src/media/audiobook/audiobook_session.dart';
+import 'package:fushi/src/media/audiobook/audiobook_resume_reconcile.dart';
 import 'package:fushi/src/media/audiobook/audiobook_session_launcher.dart';
 import 'package:fushi/src/media/audiobook/lyrics_mode_html.dart';
 import 'package:fushi/src/media/audiobook/floating_lyric_lookup_routing.dart';
@@ -85,6 +86,7 @@ import 'package:fushi/src/reader/reader_statistics_dialog.dart';
 import 'package:fushi/src/reader/reader_status_footer.dart';
 import 'package:fushi/src/stats/read_unit_ledger.dart';
 import 'package:fushi/src/stats/stat_facts.dart';
+import 'package:fushi/src/stats/study_diag_log.dart';
 import 'package:fushi/src/reader/reader_top_progress.dart';
 import 'package:fushi/src/reader/ttu_toc_flatten.dart';
 import 'package:fushi/src/startup/exit_flush_registry.dart';
@@ -993,6 +995,9 @@ Future<void> runUiScaleReanchorOrchestration({
   });
 }
 
+/// 当前音频 cue 推出的正文起点（BUG-2462；见 `_positionFromCurrentAudioCue`）。
+typedef AudioCueStart = ({int chapter, double progress, bool precise});
+
 typedef ReaderStableProgressDetails = ({
   int current,
   int total,
@@ -1541,6 +1546,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
 
   /// 听书跟随 reveal 落定后的进度补刷（见 `_scheduleReanchorSettleProgressRefresh`）。
   Timer? _revealProgressRefreshTimer;
+
+  /// 统计诊断流水上次记过的单元（`_traceArrive` 去重用）。
+  (int, int)? _lastTracedUnit;
 
   List<int> get _chapterCharCounts => _progress.chapterCharCounts;
   set _chapterCharCounts(List<int> v) => _progress.chapterCharCounts = v;
@@ -2416,15 +2424,35 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       if (saved != null &&
           saved.sectionIndex >= 0 &&
           saved.sectionIndex < _book!.chapters.length) {
-        _currentChapter = saved.sectionIndex;
-        _initialProgress = saved.normCharOffset / 10000.0;
-        // BUG-162: 有精确锚就用它（restoreToCharOffset 不动点），否则 -1 回退分数。
-        _initialCharOffset = saved.charOffset ?? -1;
-        // BUG-461: 存档恢复无句子区间，单点句首锚（仅收藏句跳转才有句尾锚）。
-        _initialCharOffsetEnd = -1;
-        _lastProgressSection = _currentChapter;
-        _lastProgressValue = _initialProgress;
-        _lastProgressCharOffset = _initialCharOffset;
+        // BUG-2462：音频位置比正文位置新（退书后台续听 / 锁屏听完 / 换端听过）且
+        // 开着跟随 → 起点改从当前音频 cue 推，与「无保存位置」同一条路；否则一按
+        // 播放就从旧页被拽到音频处，中间几十页瞬间翻过。判据只读两个时间戳，不等
+        // 音频槽；只有判真才等槽（槽刻意不挡首屏）。
+        AudioCueStart? fromAudio;
+        if (await _audioPositionOutranksSaved(saved)) {
+          await audioSlotFuture;
+          if (!mounted) return;
+          fromAudio = _audioCueStartOutrankingSaved(saved);
+          if (fromAudio == null) {
+            studyDiag(
+              'reader',
+              'resume keeps saved position (audio cue not far / not precise)',
+            );
+          }
+        }
+        if (fromAudio != null) {
+          _applyAudioCueStart(fromAudio, reason: 'audio position newer');
+        } else {
+          _currentChapter = saved.sectionIndex;
+          _initialProgress = saved.normCharOffset / 10000.0;
+          // BUG-162: 有精确锚就用它（restoreToCharOffset 不动点），否则 -1 回退分数。
+          _initialCharOffset = saved.charOffset ?? -1;
+          // BUG-461: 存档恢复无句子区间，单点句首锚（仅收藏句跳转才有句尾锚）。
+          _initialCharOffsetEnd = -1;
+          _lastProgressSection = _currentChapter;
+          _lastProgressValue = _initialProgress;
+          _lastProgressCharOffset = _initialCharOffset;
+        }
       } else {
         // 没有保存位置：起点从当前音频 cue 推，这条路必须等有声书槽落定。
         await audioSlotFuture;

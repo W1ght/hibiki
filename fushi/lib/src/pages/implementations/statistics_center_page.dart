@@ -235,8 +235,8 @@ class _StatsOverviewTabState extends ConsumerState<_StatsOverviewTab> {
     );
   }
 
-  /// 四张跨域时段卡：主值=学习总时长，副行=学习总字数；点卡 → 完整日面的时段
-  /// 明细 sheet。
+  /// 四张跨域时段卡：主值=学习总时长，副行=学习总字数 + 阅读速度；点卡 → 完整
+  /// 日面的时段明细 sheet。
   Widget _buildSummaryCards(StatWindow w) {
     return buildStatPeriodSummaryGrid(context, <StatPeriodSummary>[
       _periodSummary(t.stat_today, w.isToday),
@@ -257,11 +257,18 @@ class _StatsOverviewTabState extends ConsumerState<_StatsOverviewTab> {
       chars += f.chars;
       ms += f.ms;
     }
+    // 阅读速度只按阅读域算（[statBookCphOf]）：卡上的时长 / 字数是跨域总和，
+    // 视频只计时不计字、游戏 hook 只计字不计时，混进去的「字/时」谁也解释不了。
+    final String? cph = statBookCphOf(_daily, contains);
     return StatPeriodSummary(
       label: label,
       primaryValue: formatStatTime(ms),
       onTap: () => unawaited(_showPeriodDetail(label, contains)),
-      lines: <StatSummaryLine>[StatSummaryLine(value: formatStatChars(chars))],
+      lines: <StatSummaryLine>[
+        StatSummaryLine(value: formatStatChars(chars)),
+        if (cph != null)
+          StatSummaryLine(label: t.stat_reading_speed, value: cph),
+      ],
     );
   }
 
