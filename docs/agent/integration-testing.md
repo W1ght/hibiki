@@ -60,6 +60,9 @@ flutter test integration_test/<t>_test.dart -d emulator-<port>     # 或 ci/inte
 .\fushi\tool\run_windows_itest.ps1 -Visible -KeepUserDirs integration_test/web_video_netflix_live_itest.dart
 # Mac 跨机（Windows 当总指挥，push origin/mac-probe→Mac ff→跑；隔离数据根，Mac 真库 schema 更新）
 .\tool\run_mac_itest.ps1 integration_test/<t>_test.dart
+#   ↑ 隐藏窗口下 WKWebView 页面 document.hidden=true、requestAnimationFrame 不跑（2026-09-12 探针 raf=0）：
+#   阅读器重锚旗只在 rAF 里清，进度快照恒 null → 阅读位置 / 进度 / 阅读账本在 Mac runner 上永不落地。
+#   断言这些的测试（reader position、chars 入账、跟随落点）Mac 端一律改跑 -Ios；Mac runner 只验不依赖 rAF 的东西
 # iOS 模拟器（同一台 Mac，iOS 26.5 运行时 + iPhone 17 Pro「FushiProbe」；WebKit + 真安全区 34pt）
 .\tool\run_mac_itest.ps1 integration_test/<t>_test.dart -Ios
 ```

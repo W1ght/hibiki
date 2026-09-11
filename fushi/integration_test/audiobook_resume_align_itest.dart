@@ -26,6 +26,7 @@ import 'package:fushi_core/fushi_core.dart'
 import 'helpers/library_fixture.dart'
     show openBookViaProductionPath, readyAppModel, seedAudiobook;
 import 'helpers/media_fixtures.dart' show buildSampleCues, kFixtureChapterHref;
+import 'helpers/observe_capture.dart';
 import 'support/itest_startup_guard.dart';
 import 'test_helpers.dart';
 
@@ -281,6 +282,18 @@ void main() {
               isFalse,
               reason: '对账不触发播放',
             );
+            // 像素证据：重开后正文已在音频处（WebView 截图）+ Flutter 帧。
+            final ObserveShot webA = await captureReaderWebView(
+              'resume-a-reader-webview',
+            );
+            final ObserveShot frameA = await captureFlutterFrame(
+              tester,
+              'resume-a-reader-frame',
+            );
+            debugPrint(
+              '[resume-align] A shots webview=${webA.saved}/${webA.nonBlank} '
+              'frame=${frameA.saved}/${frameA.nonBlank}',
+            );
             final List<String> traceA = StudyDiagLog.instance.lines
                 .skip(traceBefore)
                 .toList();
@@ -338,6 +351,14 @@ void main() {
               find.textContaining(cardLine),
               findsWidgets,
               reason: '顶部时段卡必须显示阅读速度行',
+            );
+            final ObserveShot statsShot = await captureFlutterFrame(
+              tester,
+              'stats-center-cph',
+            );
+            debugPrint(
+              '[resume-align] stats shot saved=${statsShot.saved} '
+              'nonBlank=${statsShot.nonBlank} path=${statsShot.path}',
             );
             final Finder sessionRow = find.byWidgetPredicate((Widget w) {
               if (w is! Text) return false;
