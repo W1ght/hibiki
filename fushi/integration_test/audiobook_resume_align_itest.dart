@@ -194,7 +194,40 @@ void main() {
           );
 
           try {
+            // ── B. 正文更新 → 保留正文位置 ────────────────────────────────
+            await positions.save(
+              bookUid: uid,
+              sectionIndex: 0,
+              normCharOffset: 500,
+              charOffset: null,
+            );
+            final int traceB = StudyDiagLog.instance.lines.length;
+            final int savedAtB = (await positions.findByBookUid(uid))!.updatedAt;
+            final ReaderPosition? posB = await _openAndSettle(
+              tester,
+              bookKey,
+              positions,
+              uid,
+              (ReaderPosition p) =>
+                  p.updatedAt > savedAtB && p.normCharOffset < 2500,
+              'B',
+            );
+            expect(posB, isNotNull);
+            expect(
+              posB!.normCharOffset,
+              lessThan(2500),
+              reason: '正文位置更新时不得被旧音频位置拽走',
+            );
+            expect(
+              StudyDiagLog.instance.lines
+                  .skip(traceB)
+                  .any((String l) => l.contains('audioNewer=false')),
+              isTrue,
+            );
+            await _closeReader(tester);
+
             // ── A. 音频更新 → 重开书起点在音频处 ──────────────────────────
+            await tester.pump(const Duration(milliseconds: 500));
             await positions.save(
               bookUid: uid,
               sectionIndex: 0,
@@ -240,37 +273,6 @@ void main() {
               ),
               isTrue,
               reason: '诊断流水必须记下这次对账决策\n${traceA.join('\n')}',
-            );
-            await _closeReader(tester);
-
-            // ── B. 正文更新 → 保留正文位置 ────────────────────────────────
-            await tester.pump(const Duration(milliseconds: 500));
-            await positions.save(
-              bookUid: uid,
-              sectionIndex: 0,
-              normCharOffset: 500,
-              charOffset: null,
-            );
-            final int traceB = StudyDiagLog.instance.lines.length;
-            final ReaderPosition? posB = await _openAndSettle(
-              tester,
-              bookKey,
-              positions,
-              uid,
-              (ReaderPosition p) => p.updatedAt > 0 && p.normCharOffset < 2500,
-              'B',
-            );
-            expect(posB, isNotNull);
-            expect(
-              posB!.normCharOffset,
-              lessThan(2500),
-              reason: '正文位置更新时不得被旧音频位置拽走',
-            );
-            expect(
-              StudyDiagLog.instance.lines
-                  .skip(traceB)
-                  .any((String l) => l.contains('audioNewer=false')),
-              isTrue,
             );
             await _closeReader(tester);
 
