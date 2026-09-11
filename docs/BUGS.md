@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2175 条。点号进各自文件。
+> 共 2176 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2464](bugs/BUG-2464-reader-reanchor-frozen-when-page-hidden.md) | ✅ | ✅ | 页面隐藏时阅读器重锚旗永不清（rAF 冻结）位置与进度不落库 |
 | [BUG-2463](bugs/BUG-2463-reader-continuous-reveal-smooth-scroll-inflates-ledger.md) | ✅ | ✅ | 连续模式听书长距离平滑跟随滚动把途中视口计入阅读账本 |
 | [BUG-2462](bugs/BUG-2462-audiobook-resume-text-behind-audio.md) | ✅ | ✅ | 有声书重开书正文恢复点落后于音频位置 |
 | [BUG-2461](bugs/BUG-2461-reader-settings-live-engine-config.md) | ✅ | ✅ | 阅读器边距等设置改完不实时生效 |
