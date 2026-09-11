@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80019 (4707 per locale)
+/// Strings: 80053 (4709 per locale)
 ///
-/// Built on 2026-09-11 at 10:00 UTC
+/// Built on 2026-09-11 at 10:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6547,6 +6547,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Leave empty to follow the interface language';
   String get popup_history_back => 'Back';
   String get popup_history_forward => 'Forward';
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -17628,6 +17631,11 @@ class _StringsAr extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -28937,6 +28945,11 @@ class _StringsDe extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -40300,6 +40313,11 @@ class _StringsEs extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -51697,6 +51715,11 @@ class _StringsFr extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -62896,6 +62919,11 @@ class _StringsId extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -74188,6 +74216,11 @@ class _StringsIt extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -84857,6 +84890,11 @@ class _StringsJa extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -95536,6 +95574,11 @@ class _StringsKo extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -106784,6 +106827,11 @@ class _StringsNl extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -118086,6 +118134,11 @@ class _StringsPtBr extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -129365,6 +129418,11 @@ class _StringsRu extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -140443,6 +140501,11 @@ class _StringsTh extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -151637,6 +151700,11 @@ class _StringsTr extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -162802,6 +162870,11 @@ class _StringsVi extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 // Path: <root>
@@ -173045,6 +173118,10 @@ class _StringsZhCn extends _StringsEn {
   String get popup_history_back => '后退';
   @override
   String get popup_history_forward => '前进';
+  @override
+  String get manga_cover_cache_max_age => '封面缓存保留时长';
+  @override
+  String get manga_cover_cache_max_age_subtitle => '在线源封面超过此天数后重新下载';
 }
 
 // Path: <root>
@@ -183396,6 +183473,11 @@ class _StringsZhHk extends _StringsEn {
   String get popup_history_back => 'Back';
   @override
   String get popup_history_forward => 'Forward';
+  @override
+  String get manga_cover_cache_max_age => 'Cover cache retention';
+  @override
+  String get manga_cover_cache_max_age_subtitle =>
+      'Online source covers are re-downloaded after this many days';
 }
 
 /// Flat map(s) containing all translations.
@@ -193090,6 +193172,10 @@ extension on _StringsEn {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -202779,6 +202865,10 @@ extension on _StringsAr {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -212513,6 +212603,10 @@ extension on _StringsDe {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -222238,6 +222332,10 @@ extension on _StringsEs {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -231972,6 +232070,10 @@ extension on _StringsFr {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -241677,6 +241779,10 @@ extension on _StringsId {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -251404,6 +251510,10 @@ extension on _StringsIt {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -261058,6 +261168,10 @@ extension on _StringsJa {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -270716,6 +270830,10 @@ extension on _StringsKo {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -280436,6 +280554,10 @@ extension on _StringsNl {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -290151,6 +290273,10 @@ extension on _StringsPtBr {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -299873,6 +299999,10 @@ extension on _StringsRu {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -309567,6 +309697,10 @@ extension on _StringsTh {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -319276,6 +319410,10 @@ extension on _StringsTr {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -328979,6 +329117,10 @@ extension on _StringsVi {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
@@ -338596,6 +338738,10 @@ extension on _StringsZhCn {
         return '后退';
       case 'popup_history_forward':
         return '前进';
+      case 'manga_cover_cache_max_age':
+        return '封面缓存保留时长';
+      case 'manga_cover_cache_max_age_subtitle':
+        return '在线源封面超过此天数后重新下载';
       default:
         return null;
     }
@@ -348228,6 +348374,10 @@ extension on _StringsZhHk {
         return 'Back';
       case 'popup_history_forward':
         return 'Forward';
+      case 'manga_cover_cache_max_age':
+        return 'Cover cache retention';
+      case 'manga_cover_cache_max_age_subtitle':
+        return 'Online source covers are re-downloaded after this many days';
       default:
         return null;
     }
