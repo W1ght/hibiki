@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79985 (4705 per locale)
+/// Strings: 80019 (4707 per locale)
 ///
-/// Built on 2026-09-11 at 05:54 UTC
+/// Built on 2026-09-11 at 10:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6545,6 +6545,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Enable the lookup server first, then try again.';
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  String get popup_history_back => 'Back';
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -17622,6 +17624,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -28927,6 +28933,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -40286,6 +40296,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -51679,6 +51693,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -62874,6 +62892,10 @@ class _StringsId extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -74162,6 +74184,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -84827,6 +84853,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -95502,6 +95532,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -106746,6 +106780,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -118044,6 +118082,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -129319,6 +129361,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -140393,6 +140439,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -151583,6 +151633,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -162744,6 +162798,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 // Path: <root>
@@ -172983,6 +173041,10 @@ class _StringsZhCn extends _StringsEn {
   String get browser_extension_test_page_server_off => '请先开启查词服务器，再打开试用网页。';
   @override
   String get video_source_scrape_locale_follow_ui => '留空 = 跟随界面语言';
+  @override
+  String get popup_history_back => '后退';
+  @override
+  String get popup_history_forward => '前进';
 }
 
 // Path: <root>
@@ -183330,6 +183392,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_source_scrape_locale_follow_ui =>
       'Leave empty to follow the interface language';
+  @override
+  String get popup_history_back => 'Back';
+  @override
+  String get popup_history_forward => 'Forward';
 }
 
 /// Flat map(s) containing all translations.
@@ -193020,6 +193086,10 @@ extension on _StringsEn {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -202705,6 +202775,10 @@ extension on _StringsAr {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -212435,6 +212509,10 @@ extension on _StringsDe {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -222156,6 +222234,10 @@ extension on _StringsEs {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -231886,6 +231968,10 @@ extension on _StringsFr {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -241587,6 +241673,10 @@ extension on _StringsId {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -251310,6 +251400,10 @@ extension on _StringsIt {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -260960,6 +261054,10 @@ extension on _StringsJa {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -270614,6 +270712,10 @@ extension on _StringsKo {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -280330,6 +280432,10 @@ extension on _StringsNl {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -290041,6 +290147,10 @@ extension on _StringsPtBr {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -299759,6 +299869,10 @@ extension on _StringsRu {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -309449,6 +309563,10 @@ extension on _StringsTh {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -319154,6 +319272,10 @@ extension on _StringsTr {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -328853,6 +328975,10 @@ extension on _StringsVi {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -338466,6 +338592,10 @@ extension on _StringsZhCn {
         return '请先开启查词服务器，再打开试用网页。';
       case 'video_source_scrape_locale_follow_ui':
         return '留空 = 跟随界面语言';
+      case 'popup_history_back':
+        return '后退';
+      case 'popup_history_forward':
+        return '前进';
       default:
         return null;
     }
@@ -348094,6 +348224,10 @@ extension on _StringsZhHk {
         return 'Enable the lookup server first, then try again.';
       case 'video_source_scrape_locale_follow_ui':
         return 'Leave empty to follow the interface language';
+      case 'popup_history_back':
+        return 'Back';
+      case 'popup_history_forward':
+        return 'Forward';
       default:
         return null;
     }
