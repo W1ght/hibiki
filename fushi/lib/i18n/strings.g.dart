@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80155 (4715 per locale)
+/// Strings: 80138 (4714 per locale)
 ///
-/// Built on 2026-09-11 at 16:39 UTC
+/// Built on 2026-09-11 at 17:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6321,8 +6321,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Auto-add mining position to tags';
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   String get settings_group_interface => 'Interface';
   String get settings_group_content => 'Content';
   String get settings_group_learning => 'Learning';
@@ -17264,9 +17262,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   @override
   String get settings_group_interface => 'الواجهة';
   @override
@@ -28589,9 +28584,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   @override
   String get settings_group_interface => 'Oberfläche';
   @override
@@ -39969,9 +39961,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   @override
   String get settings_group_interface => 'Interfaz';
   @override
@@ -51384,9 +51373,6 @@ class _StringsFr extends _StringsEn {
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
   @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
-  @override
   String get settings_group_interface => 'Interface';
   @override
   String get settings_group_content => 'Content';
@@ -62599,9 +62585,6 @@ class _StringsId extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   @override
   String get settings_group_interface => 'Antarmuka';
   @override
@@ -73908,9 +73891,6 @@ class _StringsIt extends _StringsEn {
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
   @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
-  @override
   String get settings_group_interface => 'Interfaccia';
   @override
   String get settings_group_content => 'Content';
@@ -84597,9 +84577,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   @override
   String get settings_group_interface => 'インターフェース';
   @override
@@ -95293,9 +95270,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   @override
   String get settings_group_interface => '인터페이스';
   @override
@@ -106555,9 +106529,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   @override
   String get settings_group_interface => 'Interface';
   @override
@@ -117874,9 +117845,6 @@ class _StringsPtBr extends _StringsEn {
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
   @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
-  @override
   String get settings_group_interface => 'Interface';
   @override
   String get settings_group_content => 'Content';
@@ -129170,9 +129138,6 @@ class _StringsRu extends _StringsEn {
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
   @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
-  @override
   String get settings_group_interface => 'Интерфейс';
   @override
   String get settings_group_content => 'Content';
@@ -140265,9 +140230,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
   @override
   String get settings_group_interface => 'อินเทอร์เฟซ';
   @override
@@ -151477,9 +151439,6 @@ class _StringsTr extends _StringsEn {
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
   @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
-  @override
   String get settings_group_interface => 'Arayüz';
   @override
   String get settings_group_content => 'Content';
@@ -162659,9 +162618,6 @@ class _StringsVi extends _StringsEn {
   String get auto_add_char_position_to_tags_hint =>
       'Tags each card with chars_12345 — how many characters into the book it was mined.';
   @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
-  @override
   String get settings_group_interface => 'Giao diện';
   @override
   String get settings_group_content => 'Content';
@@ -172950,9 +172906,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get auto_add_char_position_to_tags_hint =>
       '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
-  @override
-  String get audiobook_transcribe_alignment_hint =>
-      '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
   @override
   String get settings_group_interface => '界面';
   @override
@@ -183290,9 +183243,6 @@ class _StringsZhHk extends _StringsEn {
   String get auto_add_char_position_to_tags_hint =>
       '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
   @override
-  String get audiobook_transcribe_alignment_hint =>
-      'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
-  @override
   String get settings_group_interface => '介面';
   @override
   String get settings_group_content => '內容';
@@ -193055,8 +193005,6 @@ extension on _StringsEn {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
@@ -202760,8 +202708,6 @@ extension on _StringsAr {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'الواجهة';
       case 'settings_group_content':
@@ -212510,8 +212456,6 @@ extension on _StringsDe {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Oberfläche';
       case 'settings_group_content':
@@ -222251,8 +222195,6 @@ extension on _StringsEs {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Interfaz';
       case 'settings_group_content':
@@ -232001,8 +231943,6 @@ extension on _StringsFr {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
@@ -241722,8 +241662,6 @@ extension on _StringsId {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Antarmuka';
       case 'settings_group_content':
@@ -251465,8 +251403,6 @@ extension on _StringsIt {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Interfaccia';
       case 'settings_group_content':
@@ -261135,8 +261071,6 @@ extension on _StringsJa {
         return 'タグにカード作成位置を自動追加';
       case 'auto_add_char_position_to_tags_hint':
         return 'カード作成時に本の何文字目まで読んだかを chars_12345 タグで記録します。';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'インターフェース';
       case 'settings_group_content':
@@ -270809,8 +270743,6 @@ extension on _StringsKo {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return '인터페이스';
       case 'settings_group_content':
@@ -280545,8 +280477,6 @@ extension on _StringsNl {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
@@ -290276,8 +290206,6 @@ extension on _StringsPtBr {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Interface';
       case 'settings_group_content':
@@ -300014,8 +299942,6 @@ extension on _StringsRu {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Интерфейс';
       case 'settings_group_content':
@@ -309724,8 +309650,6 @@ extension on _StringsTh {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'อินเทอร์เฟซ';
       case 'settings_group_content':
@@ -319449,8 +319373,6 @@ extension on _StringsTr {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Arayüz';
       case 'settings_group_content':
@@ -329168,8 +329090,6 @@ extension on _StringsVi {
         return 'Auto-add mining position to tags';
       case 'auto_add_char_position_to_tags_hint':
         return 'Tags each card with chars_12345 — how many characters into the book it was mined.';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return 'Giao diện';
       case 'settings_group_content':
@@ -338805,8 +338725,6 @@ extension on _StringsZhCn {
         return '自动添加制卡位置到标签';
       case 'auto_add_char_position_to_tags_hint':
         return '给卡片加上 chars_12345 标签，记录制卡时读到全书第几个字。';
-      case 'audiobook_transcribe_alignment_hint':
-        return '生成文字后会再运行一遍模型校准时间，再保存字幕。首次使用会下载所需的调轴模型。';
       case 'settings_group_interface':
         return '界面';
       case 'settings_group_content':
@@ -348449,8 +348367,6 @@ extension on _StringsZhHk {
         return '自動將製卡位置加入標籤';
       case 'auto_add_char_position_to_tags_hint':
         return '為卡片加上 chars_12345 標籤，記錄製卡時讀到全書第幾個字。';
-      case 'audiobook_transcribe_alignment_hint':
-        return 'Generated text is aligned to the audio in a second model pass before saving. The alignment model is downloaded if needed.';
       case 'settings_group_interface':
         return '介面';
       case 'settings_group_content':
