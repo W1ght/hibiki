@@ -140,15 +140,17 @@ Uint8List _utf8(String s) => Uint8List.fromList(utf8.encode(s));
 Uint8List _buildProbeEpub() {
   const String title = '行盒高さ探針';
   final StringBuffer body = StringBuffer();
+  // ruby 段放最前：每轮截图只抓首屏，首屏必须看得到注音（C2 等候选在竖排下
+  // 是否把注音塌进基字列要靠截图判）。
   const List<List<String>> paragraphs = <List<String>>[
-    <String>['plain', _plainA],
     <String>['ruby', _rubyA],
-    <String>['plain', _plainB],
-    <String>['ruby', _rubyB],
     <String>['plain', _plainA],
-    <String>['ruby', _rubyA],
-    <String>['plain', _plainB],
     <String>['ruby', _rubyB],
+    <String>['plain', _plainB],
+    <String>['ruby', _rubyA],
+    <String>['plain', _plainA],
+    <String>['ruby', _rubyB],
+    <String>['plain', _plainB],
   ];
   for (int i = 0; i < paragraphs.length; i++) {
     body.writeln('  <p id="lb${i + 1}" data-kind="${paragraphs[i][0]}">'
@@ -328,13 +330,22 @@ const String _measureJs = r'''
     var glyphHeights = lines.map(function (l) {
       return vertical ? (l.right - l.left) : (l.bottom - l.top);
     });
+    // 块轴尺寸（横排=高、竖排=宽）减去 行数×行距 = 段落里多出来的空间。WebKit 会把
+    // 首行注音溢出的部分加在段落块首（首行变高），行距不变但段落更长——这就是
+    // 「带振假名的段落更高」的落点；Blink 为 0。
+    var pr = p.getBoundingClientRect();
+    var blockSize = vertical ? pr.width : pr.height;
+    var mp = median(pitches);
+    var extra = mp > 0 ? (blockSize - lines.length * mp) : 0;
     out.paragraphs.push({
       id: p.id, kind: p.getAttribute('data-kind'),
       lineCount: lines.length,
       pitches: pitches.map(function (v) { return Math.round(v * 100) / 100; }),
       medianPitch: Math.round(median(pitches) * 100) / 100,
       medianGlyphHeight: Math.round(median(glyphHeights) * 100) / 100,
-      pRectHeight: Math.round(p.getBoundingClientRect().height * 100) / 100
+      pRectHeight: Math.round(pr.height * 100) / 100,
+      blockSize: Math.round(blockSize * 100) / 100,
+      extra: Math.round(extra * 100) / 100
     });
   }
   function kindMedian(kind) {
@@ -345,6 +356,13 @@ const String _measureJs = r'''
   out.plain = kindMedian('plain');
   out.ruby = kindMedian('ruby');
   out.delta = Math.round((out.ruby - out.plain) * 100) / 100;
+  function kindExtra(kind) {
+    var v = [];
+    out.paragraphs.forEach(function (q) { if (q.kind === kind && q.medianPitch > 0) v.push(q.extra); });
+    return Math.round(median(v) * 100) / 100;
+  }
+  out.plainExtra = kindExtra('plain');
+  out.rubyExtra = kindExtra('ruby');
   return JSON.stringify(out);
 })()
 ''';
@@ -409,6 +427,7 @@ const List<MapEntry<String, String>> _cases = <MapEntry<String, String>>[
       'rt { line-height: 1 !important; } '
           'ruby { line-height: 1 !important; } '
           'body { line-height: 1.9 !important; }'),
+  MapEntry<String, String>('C5', 'rt { line-height: 1 !important; }'),
 ];
 
 Future<void> _openSeededBook(WidgetTester tester, String bookKey) async {
@@ -498,7 +517,8 @@ void main() {
                       _LineBoxResult.fromRaw(await runJs(_measureJs));
                   final String line = '[ruby-line-box] engine=${r.engine} '
                       'pass=$pass case=${c.key} plain=${r.plain} ruby=${r.ruby} '
-                      'delta=${r.delta}';
+                      'delta=${r.delta} blockExtra plain=${r.raw['plainExtra']} '
+                      'ruby=${r.raw['rubyExtra']}';
                   debugPrint(line);
                   summary.add(line);
                   debugPrint(
@@ -510,7 +530,8 @@ void main() {
                     debugPrint('[ruby-line-box]   ${p['id']} ${p['kind']} '
                         'lines=${p['lineCount']} medianPitch=${p['medianPitch']} '
                         'glyphH=${p['medianGlyphHeight']} '
-                        'pRectH=${p['pRectHeight']} pitches=${p['pitches']}');
+                        'block=${p['blockSize']} extra=${p['extra']} '
+                        'pitches=${p['pitches']}');
                   }
                   final ObserveShot web = await captureReaderWebView(
                       'observe-b-$pass-${c.key}-webview');
