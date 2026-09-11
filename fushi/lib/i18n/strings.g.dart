@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79900 (4700 per locale)
+/// Strings: 80053 (4709 per locale)
 ///
-/// Built on 2026-09-11 at 17:35 UTC
+/// Built on 2026-09-11 at 18:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6534,6 +6534,18 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_notification_open_app_release => 'Download';
   String get updates_notification_view_all => 'View updates';
   String get updates_notification_header => 'Subscription updates';
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  String get manga_chapter_download_action => 'Download';
+  String get manga_chapter_download_delete_action => 'Delete download';
+  String get manga_chapter_download_retry_action => 'Retry download';
+  String get manga_chapter_download_status_queued => 'Queued';
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -17596,6 +17608,27 @@ class _StringsAr extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -28884,6 +28917,27 @@ class _StringsDe extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -40226,6 +40280,27 @@ class _StringsEs extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -51601,6 +51676,27 @@ class _StringsFr extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -62780,6 +62876,27 @@ class _StringsId extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -74050,6 +74167,27 @@ class _StringsIt extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -84702,6 +84840,27 @@ class _StringsJa extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -95364,6 +95523,27 @@ class _StringsKo extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -106592,6 +106772,27 @@ class _StringsNl extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -117873,6 +118074,27 @@ class _StringsPtBr extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -129131,6 +129353,27 @@ class _StringsRu extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -140190,6 +140433,27 @@ class _StringsTh extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -151364,6 +151628,27 @@ class _StringsTr extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -162508,6 +162793,27 @@ class _StringsVi extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 // Path: <root>
@@ -172735,6 +173041,26 @@ class _StringsZhCn extends _StringsEn {
   String get updates_notification_view_all => '查看更新';
   @override
   String get updates_notification_header => '订阅更新';
+  @override
+  String get manga_chapter_not_downloaded => '本章尚未下载';
+  @override
+  String get manga_chapter_download_queued => '已加入下载队列';
+  @override
+  String get manga_chapter_download_action => '下载';
+  @override
+  String get manga_chapter_download_delete_action => '删除下载';
+  @override
+  String get manga_chapter_download_retry_action => '重试下载';
+  @override
+  String get manga_chapter_download_status_queued => '排队中';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      '下载中 ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => '已下载';
+  @override
+  String get manga_chapter_download_status_failed => '下载失败';
 }
 
 // Path: <root>
@@ -183071,6 +183397,27 @@ class _StringsZhHk extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
 }
 
 /// Flat map(s) containing all translations.
@@ -192751,6 +193098,25 @@ extension on _StringsEn {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -202426,6 +202792,25 @@ extension on _StringsAr {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -212146,6 +212531,25 @@ extension on _StringsDe {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -221857,6 +222261,25 @@ extension on _StringsEs {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -231577,6 +232000,25 @@ extension on _StringsFr {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -241268,6 +241710,25 @@ extension on _StringsId {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -250981,6 +251442,25 @@ extension on _StringsIt {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -260621,6 +261101,25 @@ extension on _StringsJa {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -270265,6 +270764,25 @@ extension on _StringsKo {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -279971,6 +280489,25 @@ extension on _StringsNl {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -289672,6 +290209,25 @@ extension on _StringsPtBr {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -299380,6 +299936,25 @@ extension on _StringsRu {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -309060,6 +309635,25 @@ extension on _StringsTh {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -318755,6 +319349,25 @@ extension on _StringsTr {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -328444,6 +329057,25 @@ extension on _StringsVi {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
@@ -338047,6 +338679,25 @@ extension on _StringsZhCn {
         return '查看更新';
       case 'updates_notification_header':
         return '订阅更新';
+      case 'manga_chapter_not_downloaded':
+        return '本章尚未下载';
+      case 'manga_chapter_download_queued':
+        return '已加入下载队列';
+      case 'manga_chapter_download_action':
+        return '下载';
+      case 'manga_chapter_download_delete_action':
+        return '删除下载';
+      case 'manga_chapter_download_retry_action':
+        return '重试下载';
+      case 'manga_chapter_download_status_queued':
+        return '排队中';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            '下载中 ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return '已下载';
+      case 'manga_chapter_download_status_failed':
+        return '下载失败';
       default:
         return null;
     }
@@ -347665,6 +348316,25 @@ extension on _StringsZhHk {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
       default:
         return null;
     }
