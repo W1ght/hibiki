@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79883 (4699 per locale)
+/// Strings: 80070 (4710 per locale)
 ///
-/// Built on 2026-09-11 at 18:00 UTC
+/// Built on 2026-09-11 at 20:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6532,6 +6532,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get updates_notification_open_app_release => 'Download';
   String get updates_notification_view_all => 'View updates';
   String get updates_notification_header => 'Subscription updates';
+  String get remote_collection_download_members => 'Download remote episodes';
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -17591,6 +17612,38 @@ class _StringsAr extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -28876,6 +28929,38 @@ class _StringsDe extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -40215,6 +40300,38 @@ class _StringsEs extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -51587,6 +51704,38 @@ class _StringsFr extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -62763,6 +62912,38 @@ class _StringsId extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -74030,6 +74211,38 @@ class _StringsIt extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -84679,6 +84892,38 @@ class _StringsJa extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -95338,6 +95583,38 @@ class _StringsKo extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -106563,6 +106840,38 @@ class _StringsNl extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -117841,6 +118150,38 @@ class _StringsPtBr extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -129096,6 +129437,38 @@ class _StringsRu extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -140152,6 +140525,38 @@ class _StringsTh extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -151323,6 +151728,38 @@ class _StringsTr extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -162464,6 +162901,38 @@ class _StringsVi extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 // Path: <root>
@@ -172688,6 +173157,33 @@ class _StringsZhCn extends _StringsEn {
   String get updates_notification_view_all => '查看更新';
   @override
   String get updates_notification_header => '订阅更新';
+  @override
+  String get remote_collection_download_members => '下载远端集';
+  @override
+  String get remote_collection_download_nothing => '没有需要下载的远端集';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      '正在后台下载 ${count} 个远端集';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      '已下载 ${ok} 个远端集，${failed} 个失败';
+  @override
+  String get remote_collection_scrape_on_host => '在主机上刮削';
+  @override
+  String get remote_collection_scrape_push_to_host => '本机刮削并回写主机';
+  @override
+  String get remote_collection_scrape_unavailable => '对端主机不支持远程刮削';
+  @override
+  String get remote_collection_scrape_done => '已从主机更新资料';
+  @override
+  String get remote_collection_scrape_failed => '远程刮削失败：作品不在主机的刮削计划里';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      '主机上该作品已绑定 ${provider} ID ${id}，要替换吗？';
+  @override
+  String get remote_collection_scrape_pick_work => '选择要刮削的作品';
 }
 
 // Path: <root>
@@ -183021,6 +183517,38 @@ class _StringsZhHk extends _StringsEn {
   String get updates_notification_view_all => 'View updates';
   @override
   String get updates_notification_header => 'Subscription updates';
+  @override
+  String get remote_collection_download_members => 'Download remote episodes';
+  @override
+  String get remote_collection_download_nothing =>
+      'No remote episodes to download';
+  @override
+  String remote_collection_download_started({required Object count}) =>
+      'Downloading ${count} remote episode(s) in the background';
+  @override
+  String remote_collection_download_done(
+          {required Object ok, required Object failed}) =>
+      'Downloaded ${ok} remote episode(s), ${failed} failed';
+  @override
+  String get remote_collection_scrape_on_host => 'Scrape on host';
+  @override
+  String get remote_collection_scrape_push_to_host =>
+      'Scrape here and send to host';
+  @override
+  String get remote_collection_scrape_unavailable =>
+      'Remote scraping is not available for this host';
+  @override
+  String get remote_collection_scrape_done => 'Metadata updated from host';
+  @override
+  String get remote_collection_scrape_failed =>
+      'Remote scrape failed: the work is not in the host library plan';
+  @override
+  String remote_collection_scrape_identity_conflict(
+          {required Object provider, required Object id}) =>
+      'The host already binds this work to ${provider} ID ${id}. Replace it?';
+  @override
+  String get remote_collection_scrape_pick_work =>
+      'Choose which work to scrape';
 }
 
 /// Flat map(s) containing all translations.
@@ -192699,6 +193227,31 @@ extension on _StringsEn {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -202372,6 +202925,31 @@ extension on _StringsAr {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -212090,6 +212668,31 @@ extension on _StringsDe {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -221799,6 +222402,31 @@ extension on _StringsEs {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -231517,6 +232145,31 @@ extension on _StringsFr {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -241206,6 +241859,31 @@ extension on _StringsId {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -250917,6 +251595,31 @@ extension on _StringsIt {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -260555,6 +261258,31 @@ extension on _StringsJa {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -270197,6 +270925,31 @@ extension on _StringsKo {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -279901,6 +280654,31 @@ extension on _StringsNl {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -289600,6 +290378,31 @@ extension on _StringsPtBr {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -299306,6 +300109,31 @@ extension on _StringsRu {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -308984,6 +309812,31 @@ extension on _StringsTh {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -318677,6 +319530,31 @@ extension on _StringsTr {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -328364,6 +329242,31 @@ extension on _StringsVi {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
@@ -337965,6 +338868,30 @@ extension on _StringsZhCn {
         return '查看更新';
       case 'updates_notification_header':
         return '订阅更新';
+      case 'remote_collection_download_members':
+        return '下载远端集';
+      case 'remote_collection_download_nothing':
+        return '没有需要下载的远端集';
+      case 'remote_collection_download_started':
+        return ({required Object count}) => '正在后台下载 ${count} 个远端集';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            '已下载 ${ok} 个远端集，${failed} 个失败';
+      case 'remote_collection_scrape_on_host':
+        return '在主机上刮削';
+      case 'remote_collection_scrape_push_to_host':
+        return '本机刮削并回写主机';
+      case 'remote_collection_scrape_unavailable':
+        return '对端主机不支持远程刮削';
+      case 'remote_collection_scrape_done':
+        return '已从主机更新资料';
+      case 'remote_collection_scrape_failed':
+        return '远程刮削失败：作品不在主机的刮削计划里';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            '主机上该作品已绑定 ${provider} ID ${id}，要替换吗？';
+      case 'remote_collection_scrape_pick_work':
+        return '选择要刮削的作品';
       default:
         return null;
     }
@@ -347581,6 +348508,31 @@ extension on _StringsZhHk {
         return 'View updates';
       case 'updates_notification_header':
         return 'Subscription updates';
+      case 'remote_collection_download_members':
+        return 'Download remote episodes';
+      case 'remote_collection_download_nothing':
+        return 'No remote episodes to download';
+      case 'remote_collection_download_started':
+        return ({required Object count}) =>
+            'Downloading ${count} remote episode(s) in the background';
+      case 'remote_collection_download_done':
+        return ({required Object ok, required Object failed}) =>
+            'Downloaded ${ok} remote episode(s), ${failed} failed';
+      case 'remote_collection_scrape_on_host':
+        return 'Scrape on host';
+      case 'remote_collection_scrape_push_to_host':
+        return 'Scrape here and send to host';
+      case 'remote_collection_scrape_unavailable':
+        return 'Remote scraping is not available for this host';
+      case 'remote_collection_scrape_done':
+        return 'Metadata updated from host';
+      case 'remote_collection_scrape_failed':
+        return 'Remote scrape failed: the work is not in the host library plan';
+      case 'remote_collection_scrape_identity_conflict':
+        return ({required Object provider, required Object id}) =>
+            'The host already binds this work to ${provider} ID ${id}. Replace it?';
+      case 'remote_collection_scrape_pick_work':
+        return 'Choose which work to scrape';
       default:
         return null;
     }
