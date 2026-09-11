@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79781 (4693 per locale)
+/// Strings: 79968 (4704 per locale)
 ///
-/// Built on 2026-09-10 at 15:32 UTC
+/// Built on 2026-09-10 at 17:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6434,9 +6434,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get dict_rename_label => 'Dictionary name';
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
-  String get popup_full_width => 'Full-width popup';
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
   String get stat_session_edit => 'Edit session';
   String get stat_session_edit_date => 'Date';
   String get stat_session_edit_date_invalid => 'Enter the date as YYYY-MM-DD.';
@@ -6523,6 +6520,29 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The host has no indexer for this resource (${provider})';
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  String get browser_extension_test_page_action => 'Open the test page';
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -17420,11 +17440,6 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -17566,6 +17581,42 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -28691,11 +28742,6 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -28837,6 +28883,42 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -40016,11 +40098,6 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -40162,6 +40239,42 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -51375,11 +51488,6 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -51521,6 +51629,42 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -62536,11 +62680,6 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -62682,6 +62821,42 @@ class _StringsId extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -73790,11 +73965,6 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -73936,6 +74106,42 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -84421,11 +84627,6 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       '前面に出して辞書検索ページを開く';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -84567,6 +84768,42 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -95062,11 +95299,6 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -95208,6 +95440,42 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -106272,11 +106540,6 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -106418,6 +106681,42 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -117536,11 +117835,6 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -117682,6 +117976,42 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -128777,11 +129107,6 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -128923,6 +129248,42 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -139817,11 +140178,6 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -139963,6 +140319,42 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -150973,11 +151365,6 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -151119,6 +151506,42 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -162100,11 +162523,6 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_external_open_lookup_page =>
       'Bring to front and open lookup page';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -162246,6 +162664,42 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 // Path: <root>
@@ -172323,10 +172777,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page => '唤起主窗并打开查词页';
   @override
-  String get popup_full_width => '弹窗全宽';
-  @override
-  String get popup_full_width_hint => '忽略最大宽度，让弹窗横向铺满可用宽度；位置仍跟随选中的词。';
-  @override
   String get stat_session_edit => '编辑会话';
   @override
   String get stat_session_edit_date => '日期';
@@ -172456,6 +172906,37 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       '播放器打不开该视频。文件可能被占用，或播放引擎需要重启应用后才能恢复。';
+  @override
+  String get browser_extension_test_page_title => '试一试浏览器扩展';
+  @override
+  String get browser_extension_test_page_intro =>
+      '这张页面由 Fushi 自己提供，扩展一定能注入它。按下面两步试一下。';
+  @override
+  String get browser_extension_test_page_probe_checking => '正在检测扩展是否已注入本页…';
+  @override
+  String get browser_extension_test_page_probe_ok => '扩展已注入本页，连接正常。';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      '没有检测到扩展。请先在浏览器里加载扩展，然后刷新本页。';
+  @override
+  String get browser_extension_test_page_step_popup_title => '从右上角打开扩展';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      '点击浏览器右上角的 Fushi 图标，应该弹出扩展面板。';
+  @override
+  String get browser_extension_test_page_step_lookup_title => '按 Shift 查词';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      '按住 Shift 并把鼠标移到下面句子里的词上，应该弹出词典查词结果。';
+  @override
+  String get browser_extension_test_page_sample_label => '练习句';
+  @override
+  String get browser_extension_test_page_action => '打开试用网页';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      '在浏览器里打开一张由 Fushi 提供的网页，验证右上角弹窗与 Shift 查词。';
+  @override
+  String get browser_extension_test_page_server_off => '请先开启查词服务器，再打开试用网页。';
 }
 
 // Path: <root>
@@ -182623,11 +183104,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_global_external_open_lookup_page => '喚起主視窗並開啟查詞頁';
   @override
-  String get popup_full_width => 'Full-width popup';
-  @override
-  String get popup_full_width_hint =>
-      'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
-  @override
   String get stat_session_edit => 'Edit session';
   @override
   String get stat_session_edit_date => 'Date';
@@ -182769,6 +183245,42 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_load_failed_not_opened =>
       'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+  @override
+  String get browser_extension_test_page_title => 'Try the browser extension';
+  @override
+  String get browser_extension_test_page_intro =>
+      'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+  @override
+  String get browser_extension_test_page_probe_checking =>
+      'Checking whether the extension is injected…';
+  @override
+  String get browser_extension_test_page_probe_ok =>
+      'The extension is injected on this page.';
+  @override
+  String get browser_extension_test_page_probe_missing =>
+      'The extension was not injected. Load it in your browser and reload this page.';
+  @override
+  String get browser_extension_test_page_step_popup_title =>
+      'Open the extension from the toolbar';
+  @override
+  String get browser_extension_test_page_step_popup_body =>
+      'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+  @override
+  String get browser_extension_test_page_step_lookup_title =>
+      'Look a word up with Shift';
+  @override
+  String get browser_extension_test_page_step_lookup_body =>
+      'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+  @override
+  String get browser_extension_test_page_sample_label => 'Practice sentence';
+  @override
+  String get browser_extension_test_page_action => 'Open the test page';
+  @override
+  String get browser_extension_test_page_action_desc =>
+      'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+  @override
+  String get browser_extension_test_page_server_off =>
+      'Enable the lookup server first, then try again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -192309,10 +192821,6 @@ extension on _StringsEn {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -192435,6 +192943,32 @@ extension on _StringsEn {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -201970,10 +202504,6 @@ extension on _StringsAr {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -202096,6 +202626,32 @@ extension on _StringsAr {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -211676,10 +212232,6 @@ extension on _StringsDe {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -211802,6 +212354,32 @@ extension on _StringsDe {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -221373,10 +221951,6 @@ extension on _StringsEs {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -221499,6 +222073,32 @@ extension on _StringsEs {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -231079,10 +231679,6 @@ extension on _StringsFr {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -231205,6 +231801,32 @@ extension on _StringsFr {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -240756,10 +241378,6 @@ extension on _StringsId {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -240882,6 +241500,32 @@ extension on _StringsId {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -250455,10 +251099,6 @@ extension on _StringsIt {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -250581,6 +251221,32 @@ extension on _StringsIt {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -260081,10 +260747,6 @@ extension on _StringsJa {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return '前面に出して辞書検索ページを開く';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -260207,6 +260869,32 @@ extension on _StringsJa {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -269711,10 +270399,6 @@ extension on _StringsKo {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -269837,6 +270521,32 @@ extension on _StringsKo {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -279403,10 +280113,6 @@ extension on _StringsNl {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -279529,6 +280235,32 @@ extension on _StringsNl {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -289090,10 +289822,6 @@ extension on _StringsPtBr {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -289216,6 +289944,32 @@ extension on _StringsPtBr {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -298784,10 +299538,6 @@ extension on _StringsRu {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -298910,6 +299660,32 @@ extension on _StringsRu {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -308450,10 +309226,6 @@ extension on _StringsTh {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -308576,6 +309348,32 @@ extension on _StringsTh {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -318131,10 +318929,6 @@ extension on _StringsTr {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -318257,6 +319051,32 @@ extension on _StringsTr {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -327806,10 +328626,6 @@ extension on _StringsVi {
         return 'Dictionary name';
       case 'shortcut_action_global_external_open_lookup_page':
         return 'Bring to front and open lookup page';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -327932,6 +328748,32 @@ extension on _StringsVi {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
@@ -337398,10 +338240,6 @@ extension on _StringsZhCn {
         return '词典名称';
       case 'shortcut_action_global_external_open_lookup_page':
         return '唤起主窗并打开查词页';
-      case 'popup_full_width':
-        return '弹窗全宽';
-      case 'popup_full_width_hint':
-        return '忽略最大宽度，让弹窗横向铺满可用宽度；位置仍跟随选中的词。';
       case 'stat_session_edit':
         return '编辑会话';
       case 'stat_session_edit_date':
@@ -337521,6 +338359,32 @@ extension on _StringsZhCn {
         return ({required Object provider}) => '主机上没有这个资源的索引器（${provider}）';
       case 'video_load_failed_not_opened':
         return '播放器打不开该视频。文件可能被占用，或播放引擎需要重启应用后才能恢复。';
+      case 'browser_extension_test_page_title':
+        return '试一试浏览器扩展';
+      case 'browser_extension_test_page_intro':
+        return '这张页面由 Fushi 自己提供，扩展一定能注入它。按下面两步试一下。';
+      case 'browser_extension_test_page_probe_checking':
+        return '正在检测扩展是否已注入本页…';
+      case 'browser_extension_test_page_probe_ok':
+        return '扩展已注入本页，连接正常。';
+      case 'browser_extension_test_page_probe_missing':
+        return '没有检测到扩展。请先在浏览器里加载扩展，然后刷新本页。';
+      case 'browser_extension_test_page_step_popup_title':
+        return '从右上角打开扩展';
+      case 'browser_extension_test_page_step_popup_body':
+        return '点击浏览器右上角的 Fushi 图标，应该弹出扩展面板。';
+      case 'browser_extension_test_page_step_lookup_title':
+        return '按 Shift 查词';
+      case 'browser_extension_test_page_step_lookup_body':
+        return '按住 Shift 并把鼠标移到下面句子里的词上，应该弹出词典查词结果。';
+      case 'browser_extension_test_page_sample_label':
+        return '练习句';
+      case 'browser_extension_test_page_action':
+        return '打开试用网页';
+      case 'browser_extension_test_page_action_desc':
+        return '在浏览器里打开一张由 Fushi 提供的网页，验证右上角弹窗与 Shift 查词。';
+      case 'browser_extension_test_page_server_off':
+        return '请先开启查词服务器，再打开试用网页。';
       default:
         return null;
     }
@@ -346999,10 +347863,6 @@ extension on _StringsZhHk {
         return '詞典名稱';
       case 'shortcut_action_global_external_open_lookup_page':
         return '喚起主視窗並開啟查詞頁';
-      case 'popup_full_width':
-        return 'Full-width popup';
-      case 'popup_full_width_hint':
-        return 'Ignore the maximum width and let the popup span the available width. Its position still follows the selected word.';
       case 'stat_session_edit':
         return 'Edit session';
       case 'stat_session_edit_date':
@@ -347125,6 +347985,32 @@ extension on _StringsZhHk {
             'The host has no indexer for this resource (${provider})';
       case 'video_load_failed_not_opened':
         return 'The player couldn\'t open this video. The file may be in use, or the video engine needs the app restarted.';
+      case 'browser_extension_test_page_title':
+        return 'Try the browser extension';
+      case 'browser_extension_test_page_intro':
+        return 'This page is served by Fushi itself, so the extension can inject it. Try the two things below.';
+      case 'browser_extension_test_page_probe_checking':
+        return 'Checking whether the extension is injected…';
+      case 'browser_extension_test_page_probe_ok':
+        return 'The extension is injected on this page.';
+      case 'browser_extension_test_page_probe_missing':
+        return 'The extension was not injected. Load it in your browser and reload this page.';
+      case 'browser_extension_test_page_step_popup_title':
+        return 'Open the extension from the toolbar';
+      case 'browser_extension_test_page_step_popup_body':
+        return 'Click the Fushi icon in the top-right toolbar; the extension popup should open.';
+      case 'browser_extension_test_page_step_lookup_title':
+        return 'Look a word up with Shift';
+      case 'browser_extension_test_page_step_lookup_body':
+        return 'Hold Shift and hover a word in the sentence below; the dictionary popup should appear.';
+      case 'browser_extension_test_page_sample_label':
+        return 'Practice sentence';
+      case 'browser_extension_test_page_action':
+        return 'Open the test page';
+      case 'browser_extension_test_page_action_desc':
+        return 'Opens a page served by Fushi in your browser to check the toolbar popup and Shift lookup.';
+      case 'browser_extension_test_page_server_off':
+        return 'Enable the lookup server first, then try again.';
       default:
         return null;
     }
