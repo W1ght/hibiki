@@ -102,8 +102,37 @@ Future<ReaderPosition?> _openAndSettle(
     '[resume-align] $label persisted position: section=${last?.sectionIndex} '
     'norm=${last?.normCharOffset} charOffset=${last?.charOffset}',
   );
+  // 取证：WebView 侧视口 / 重锚旗 / 进度快照原文（Mac 隐藏窗口下 WebKit 的
+  // innerWidth/innerHeight 可能为 0，进度快照随之为空，位置便不会落库）。
+  final Future<dynamic> Function(String)? runJs =
+      ReaderFushiPage.debugEvaluateJavascript;
+  if (runJs != null) {
+    try {
+      final Object? probe = await runJs(_kViewportProbeJs);
+      debugPrint('[resume-align] $label webview probe: $probe');
+    } catch (e) {
+      debugPrint('[resume-align] $label webview probe failed: $e');
+    }
+  }
   return last;
 }
+
+const String _kViewportProbeJs = r'''
+(function () {
+  var r = window.fushiReader;
+  var details = '';
+  try { details = window.fushiProgressDetails ? String(window.fushiProgressDetails()) : 'no-fn'; } catch (e) { details = 'err:' + e; }
+  var p = -1;
+  try { p = r && r.calculateProgress ? r.calculateProgress() : -1; } catch (e) { p = 'err:' + e; }
+  return JSON.stringify({
+    innerW: window.innerWidth, innerH: window.innerHeight,
+    clientW: document.documentElement.clientWidth, clientH: document.documentElement.clientHeight,
+    pending: !!(r && r._reanchorPending === true),
+    progress: p, details: details,
+    scrollW: document.documentElement.scrollWidth, scrollH: document.documentElement.scrollHeight
+  });
+})()
+''';
 
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
