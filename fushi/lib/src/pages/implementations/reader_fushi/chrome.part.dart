@@ -2472,13 +2472,16 @@ extension _ReaderChrome on _ReaderFushiPageState {
   /// 绘制门控与底栏同源用 set-once `_hasEverLoaded`（不用每切章翻转的
   /// `_readerContentReady`，否则切章闪烁）；预留高**不**随它翻转，见 getter 注释。
   /// 悬浮底栏（默认形态）唤出时 `Positioned(bottom: 0)` 盖在状态行之上，与顶部进度
-  /// pill 被底栏盖住是同一形态；底栏挤压模式下状态行坐在底栏之上
-  /// （`bottom: _bottomChromeReserve + _stableBottomInset`）。
+  /// pill 被底栏盖住是同一形态。底栏挤压模式下：宽屏读数并进底栏右端，状态行整条
+  /// 让位（[_statusFooterAbsorbedByBar]，不画、不占预留，BUG-2453）；窄屏读数独立
+  /// 成行时状态行坐在底栏之上（`bottom: _bottomChromeReserve + _stableBottomInset`）。
   ///
   /// 点状态行 = 点顶部进度 pill 的同义动作（悬浮态唤出 / 收起，挤压态切底栏）。
   /// 纯指针面，不进焦点遍历池（TODO-700 不变式）。
   Widget _buildStatusFooter() {
-    if (!_statusFooterEnabled || !_hasEverLoaded) {
+    if (!_statusFooterEnabled ||
+        !_hasEverLoaded ||
+        _statusFooterAbsorbedByBar) {
       return const SizedBox.shrink();
     }
     return Positioned(
