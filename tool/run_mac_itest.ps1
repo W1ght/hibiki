@@ -20,10 +20,19 @@
 # origin 的 $Branch → Mac `git pull --ff-only origin $Branch`」。测试一律带
 # `--dart-define=FUSHI_TEST_ROOT=~/dev/fushi-test-root`：Mac 的真库是更新的
 # schema（v102），裸跑会撞 FushiDatabaseDowngradeException。
+#
+# `-Ios`：同一份测试改跑在 Mac 上的 iOS 模拟器（2026-09-12 装好 iOS 26.5 运行时，
+# 设备 FushiProbe = iPhone 17 Pro，udid 见 $IosDevice；关机状态会先 boot）。iOS
+# 沙盒里 FUSHI_TEST_ROOT 那种绝对路径没意义也不需要——模拟器容器本就是干净库，
+# 所以不带隔离根。iOS 构建要 Rust 的 aarch64-apple-ios-sim 目标（已装）与
+# `~/.cargo/bin` 在 PATH。想看真屏用 `xcrun simctl io <udid> screenshot x.png`
+# （Flutter 侧 captureFlutterFrame 在 iOS 上抓不到像素，WebView 截图可用）。
 param(
   [string]$Target = "integration_test/desktop_settings_smoke_test.dart",
   [string]$Branch = "mac-probe",
-  [string[]]$DartDefine = @()
+  [string[]]$DartDefine = @(),
+  [switch]$Ios,
+  [string]$IosDevice = "969CB3A4-036B-4494-824E-087A427F3C10"
 )
 
 $mac = "mac"
@@ -38,18 +47,25 @@ if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 # argument, and (2) PowerShell piping to stdin with CRLF line endings (the \r
 # corrupts each bash command). The decoded script sets the pinned toolchain
 # env, fast-forwards the checkout, and runs the test hidden on -d macos.
-$defines = @("--dart-define=FUSHI_TEST_ROOT=`$HOME/dev/fushi-test-root")
+$defines = @()
+if (-not $Ios) { $defines += "--dart-define=FUSHI_TEST_ROOT=`$HOME/dev/fushi-test-root" }
 foreach ($d in $DartDefine) { $defines += "--dart-define=$d" }
 $defineArgs = $defines -join ' '
+$device = if ($Ios) { $IosDevice } else { "macos" }
+$rootEnv = if ($Ios) { "" } else { "FUSHI_TEST_ROOT=`$HOME/dev/fushi-test-root " }
 $lines = @(
   'export LANG=en_US.UTF-8',
-  'export PATH=$HOME/fvm/versions/3.41.6/bin:/opt/homebrew/bin:$PATH',
+  'export PATH=$HOME/fvm/versions/3.41.6/bin:$HOME/.cargo/bin:/opt/homebrew/bin:$PATH',
   'export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890',
-  "cd ~/dev/hibiki && git pull --ff-only origin $Branch && cd fushi",
-  "FUSHI_TEST_HIDDEN=1 FUSHI_TEST_ROOT=`$HOME/dev/fushi-test-root flutter test $Target -d macos --no-pub $defineArgs"
+  "cd ~/dev/hibiki && git pull --ff-only origin $Branch && cd fushi"
 )
+if ($Ios) {
+  $lines += "xcrun simctl boot $IosDevice 2>/dev/null || true"
+}
+$lines += "FUSHI_TEST_HIDDEN=1 ${rootEnv}flutter test $Target -d $device --no-pub $defineArgs"
 $b64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes(($lines -join "`n")))
 
-Write-Host "[mac-itest] running $Target on macOS (hidden runner)..." -ForegroundColor Cyan
+$where = if ($Ios) { "iOS simulator $IosDevice" } else { "macOS (hidden runner)" }
+Write-Host "[mac-itest] running $Target on $where..." -ForegroundColor Cyan
 ssh $mac "echo $b64 | base64 --decode | bash"
 exit $LASTEXITCODE
