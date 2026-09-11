@@ -110,12 +110,31 @@ Future<ReaderPosition?> _openAndSettle(
     try {
       final Object? probe = await runJs(_kViewportProbeJs);
       debugPrint('[resume-align] $label webview probe: $probe');
+      // rAF 是否在跑（重锚旗只在 rAF 回调里清）：先武装，1s 后读计数。
+      await runJs(_kArmTimersJs);
+      await tester.pump(const Duration(seconds: 1));
+      final Object? timers = await runJs(_kReadTimersJs);
+      debugPrint('[resume-align] $label webview timers: $timers');
     } catch (e) {
       debugPrint('[resume-align] $label webview probe failed: $e');
     }
   }
   return last;
 }
+
+const String _kArmTimersJs = r'''
+(function () {
+  window.__fushiRafTicks = 0; window.__fushiTimeoutTicks = 0;
+  var step = function () { window.__fushiRafTicks++; if (window.__fushiRafTicks < 30) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+  setTimeout(function () { window.__fushiTimeoutTicks++; }, 50);
+  return 'armed';
+})()
+''';
+
+const String _kReadTimersJs = r'''
+JSON.stringify({raf: window.__fushiRafTicks, timeout: window.__fushiTimeoutTicks, hidden: document.hidden, vis: document.visibilityState})
+''';
 
 const String _kViewportProbeJs = r'''
 (function () {
