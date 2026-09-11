@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:fushi_audio/fushi_audio.dart' show StudySessionTotals;
@@ -35,8 +36,7 @@ const double kReaderStatusFooterFontSize = kTopProgressFontSize;
 bool readerStatusFooterEnabled({
   required bool desktop,
   required bool lyricsMode,
-}) =>
-    !lyricsMode;
+}) => !lyricsMode;
 
 /// 状态行是否已被底栏**吸收**：挤压态底栏占位（[bottomChromeReserve] > 0）且宽屏把
 /// 同一串读数并进了底栏右端（[inlineStatus]，[ReaderStatusInline]）。
@@ -49,8 +49,7 @@ bool readerStatusFooterEnabled({
 bool readerStatusFooterAbsorbedByBar({
   required bool inlineStatus,
   required double bottomChromeReserve,
-}) =>
-    inlineStatus && bottomChromeReserve > 0;
+}) => inlineStatus && bottomChromeReserve > 0;
 
 /// 状态行的底部预留高：启用且未被底栏吸收（[absorbedByBar]，见
 /// [readerStatusFooterAbsorbedByBar]）时占 [footerHeight]，否则 0。
@@ -58,8 +57,21 @@ double readerStatusFooterReserve({
   required bool enabled,
   required double footerHeight,
   bool absorbedByBar = false,
-}) =>
-    enabled && !absorbedByBar ? footerHeight : 0;
+}) => enabled && !absorbedByBar ? footerHeight : 0;
+
+/// 状态行**底部带**的高度：状态行坐进系统底部安全区（iPhone home indicator 34pt /
+/// Android 手势条）里，带高 = max(状态行预留 [footerReserve], 系统底 inset
+/// [bottomInset])；状态行不在场（预留 0：歌词模式 / 被底栏吸收）时只剩系统 inset。
+///
+/// 此前预留是 `状态行高 + 系统 inset` 两段相加、状态行画在安全区**之上**：iPhone 上
+/// 底部一共扣掉 28 + 34 = 62pt，其中 34pt 是一条谁也不用的纯背景空带（BUG-2460）。
+/// home indicator 是叠在内容上的一条 5pt 细线（8pt 离底），不是不可用区域——参照
+/// Hoshi Reader iOS 把进度读数直接放进去；桌面 / Android 沉浸模式 inset 为 0，带高就是
+/// 状态行高，零变化。
+double readerStatusFooterBandHeight({
+  required double footerReserve,
+  required double bottomInset,
+}) => math.max(footerReserve, bottomInset);
 
 /// 每小时字数（四舍五入到整数）。时长或字数为 0 时返回 0，不做「不足 1 分钟无值」的
 /// 统计口径门槛（那是统计页 `computeCph` 的事）：状态行开局就要显示 `0 / h`。
@@ -122,6 +134,7 @@ class ReaderStatusFooter extends StatefulWidget {
     required this.textColor,
     required this.backgroundColor,
     this.height = kReaderStatusFooterHeight,
+    this.bottomInset = 0,
     this.tick = const Duration(seconds: 1),
     this.onTap,
     this.onTapTracker,
@@ -144,7 +157,14 @@ class ReaderStatusFooter extends StatefulWidget {
 
   final Color textColor;
   final Color backgroundColor;
+
+  /// 读数行本身的高度（[kReaderStatusFooterHeight]）。
   final double height;
+
+  /// 系统底部安全区高（iPhone home indicator）。整条状态行占
+  /// `max(height, bottomInset)` 的带（[readerStatusFooterBandHeight]），读数行贴带顶、
+  /// 多出的部分在读数行**之下**——读数落在 home indicator 细线之上，不与它重叠。
+  final double bottomInset;
 
   /// 秒表刷新周期（测试可缩短）。
   final Duration tick;
@@ -220,76 +240,83 @@ class _ReaderStatusFooterState extends State<ReaderStatusFooter> {
             chapterTotal: widget.chapterTotalChars,
           )
         : null;
+    final double bandHeight = readerStatusFooterBandHeight(
+      footerReserve: widget.height,
+      bottomInset: widget.bottomInset,
+    );
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: widget.onTap,
       child: ColoredBox(
         color: widget.backgroundColor,
         child: SizedBox(
-          height: widget.height,
+          height: bandHeight,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16),
+            padding: EdgeInsets.fromLTRB(16, 0, 16, bandHeight - widget.height),
             // 两段读数并排贴右：Row 主轴 end 对齐把它们一起推到右缘，追踪块不再被
             // Expanded 的进度段挤到左角。窄屏保护不变——追踪块仍最多占 40% 宽、
             // 两段都 ellipsis，谁放不下谁先省略，行永远不溢出。
             child: LayoutBuilder(
-                builder: (BuildContext context, BoxConstraints constraints) {
-              return Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: <Widget>[
-                  ConstrainedBox(
-                    constraints: BoxConstraints(
-                      maxWidth:
-                          constraints.maxWidth * (progress == null ? 1 : .4),
+              builder: (BuildContext context, BoxConstraints constraints) {
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    ConstrainedBox(
+                      constraints: BoxConstraints(
+                        maxWidth:
+                            constraints.maxWidth * (progress == null ? 1 : .4),
+                      ),
+                      child: _hitTarget(
+                        onTap: widget.onTapTracker,
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            Icon(
+                              totals.active
+                                  ? Icons.timer_outlined
+                                  : Icons.timer_off_outlined,
+                              key: ValueKey<bool>(totals.active),
+                              size: kReaderStatusFooterFontSize + 2,
+                              color: muted,
+                            ),
+                            const SizedBox(width: 6),
+                            Flexible(
+                              child: Text(
+                                readerTrackerLabel(totals),
+                                key: const ValueKey<String>(
+                                  'fushi_status_tracker',
+                                ),
+                                style: style,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
-                    child: _hitTarget(
-                      onTap: widget.onTapTracker,
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          Icon(
-                            totals.active
-                                ? Icons.timer_outlined
-                                : Icons.timer_off_outlined,
-                            key: ValueKey<bool>(totals.active),
-                            size: kReaderStatusFooterFontSize + 2,
-                            color: muted,
-                          ),
-                          const SizedBox(width: 6),
-                          Flexible(
+                    if (progress != null)
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8),
+                          child: _hitTarget(
+                            onTap: widget.onTapProgress,
                             child: Text(
-                              readerTrackerLabel(totals),
+                              progress,
                               key: const ValueKey<String>(
-                                  'fushi_status_tracker'),
+                                'fushi_status_progress',
+                              ),
                               style: style,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  if (progress != null)
-                    Flexible(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 8),
-                        child: _hitTarget(
-                          onTap: widget.onTapProgress,
-                          child: Text(
-                            progress,
-                            key:
-                                const ValueKey<String>('fushi_status_progress'),
-                            style: style,
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          ),
                         ),
                       ),
-                    ),
-                ],
-              );
-            }),
+                  ],
+                );
+              },
+            ),
           ),
         ),
       ),
