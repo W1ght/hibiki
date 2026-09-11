@@ -1941,11 +1941,23 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   );
 
   /// 状态行的底部预留高（挤压式：视觉高度 == 预留高度，正文永不压到它下面）。
-  /// 不随 `_hasEverLoaded` 翻转——预留从初始 HTML 起就含它，首屏就绪后不必再补发
-  /// insets 触发一次 reflow；只有**绘制**才等首次冷加载完成（[_buildStatusFooter]）。
+  /// 预留从初始 HTML 起就含它；只有**绘制**才等首次冷加载完成（[_buildStatusFooter]）。
+  ///
+  /// 挤压态底栏占位且读数并进底栏右端时（[_statusFooterAbsorbedByBar]）预留归 0：
+  /// 底部只有一条，不再是底栏 + 状态行叠两行（BUG-2453）。这层门控与底栏预留
+  /// [_bottomChromeReserve] 同一时刻翻转（首次就绪 / 挤压态收放底栏），那两处本就
+  /// 会重下 chrome insets，不引入额外 reflow。
   double get _statusFooterReserve => readerStatusFooterReserve(
     enabled: _statusFooterEnabled,
     footerHeight: kReaderStatusFooterHeight,
+    absorbedByBar: _statusFooterAbsorbedByBar,
+  );
+
+  /// 状态行是否被挤压态底栏吸收（既不画也不占预留），单一真相源
+  /// [readerStatusFooterAbsorbedByBar]。
+  bool get _statusFooterAbsorbedByBar => readerStatusFooterAbsorbedByBar(
+    inlineStatus: _playbackStatusInline,
+    bottomChromeReserve: _bottomChromeReserve,
   );
 
   /// ッツ 形态共用 chrome（顶部工具栏 + 右侧抽屉）是否启用：**所有平台、两种模式**。

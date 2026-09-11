@@ -38,12 +38,28 @@ bool readerStatusFooterEnabled({
 }) =>
     !lyricsMode;
 
-/// 状态行的底部预留高：启用时占 [footerHeight]，否则 0。
+/// 状态行是否已被底栏**吸收**：挤压态底栏占位（[bottomChromeReserve] > 0）且宽屏把
+/// 同一串读数并进了底栏右端（[inlineStatus]，[ReaderStatusInline]）。
+///
+/// 那时状态行既不画也不占预留——底部只有一条。此前挤压态下状态行坐在底栏之上、底栏
+/// 右端又画一份同样的数字：同一串「计时 / 已读 / 百分比」上下叠两行，多占一条
+/// [kReaderStatusFooterHeight] 的正文高度（BUG-2453）。悬浮态底栏不占位
+/// （[bottomChromeReserve] == 0），状态行照常在场，底栏唤出时盖在其上、收起后露出。
+/// 窄屏（读数不并进底栏）状态行仍独立成行，坐在底栏之上，不吸收。
+bool readerStatusFooterAbsorbedByBar({
+  required bool inlineStatus,
+  required double bottomChromeReserve,
+}) =>
+    inlineStatus && bottomChromeReserve > 0;
+
+/// 状态行的底部预留高：启用且未被底栏吸收（[absorbedByBar]，见
+/// [readerStatusFooterAbsorbedByBar]）时占 [footerHeight]，否则 0。
 double readerStatusFooterReserve({
   required bool enabled,
   required double footerHeight,
+  bool absorbedByBar = false,
 }) =>
-    enabled ? footerHeight : 0;
+    enabled && !absorbedByBar ? footerHeight : 0;
 
 /// 每小时字数（四舍五入到整数）。时长或字数为 0 时返回 0，不做「不足 1 分钟无值」的
 /// 统计口径门槛（那是统计页 `computeCph` 的事）：状态行开局就要显示 `0 / h`。

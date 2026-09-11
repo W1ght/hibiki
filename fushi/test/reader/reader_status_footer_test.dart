@@ -29,8 +29,37 @@ void main() {
       expect(readerStatusFooterReserve(enabled: true, footerHeight: 28), 28);
       expect(readerStatusFooterReserve(enabled: false, footerHeight: 28), 0);
       expect(
+        readerStatusFooterReserve(
+            enabled: true, footerHeight: 28, absorbedByBar: true),
+        0,
+        reason: 'BUG-2453：读数已并进挤压态底栏，状态行不再另占一条预留',
+      );
+      expect(
           kReaderStatusFooterHeight, greaterThan(kReaderStatusFooterFontSize),
           reason: '预留高必须装得下文字行盒（视觉高度 == 预留高度铁律）');
+    });
+
+    test(
+        'absorbed by bar: only squeeze bar occupying + inline status (BUG-2453)',
+        () {
+      // 挤压态底栏占位（预留 > 0）且宽屏读数并进底栏右端 → 吸收。
+      expect(
+        readerStatusFooterAbsorbedByBar(
+            inlineStatus: true, bottomChromeReserve: 56),
+        isTrue,
+      );
+      // 悬浮态 / 底栏收起 / 无有声书：底栏不占位 → 状态行照常在场。
+      expect(
+        readerStatusFooterAbsorbedByBar(
+            inlineStatus: true, bottomChromeReserve: 0),
+        isFalse,
+      );
+      // 窄屏读数独立成行：状态行坐在底栏之上，不吸收。
+      expect(
+        readerStatusFooterAbsorbedByBar(
+            inlineStatus: false, bottomChromeReserve: 56),
+        isFalse,
+      );
     });
 
     test('chars per hour: 0 when nothing read; rounded otherwise', () {
@@ -270,6 +299,44 @@ void main() {
       expect(
         src.contains('_statusFooterEnabled => readerStatusFooterEnabled('),
         isTrue,
+      );
+    });
+
+    test(
+        'footer yields to the squeeze bar that already carries its numbers '
+        '(BUG-2453)', () {
+      // 预留与绘制两处都走同一个吸收判据，否则又回到「预留 28px 却画在底栏后面」
+      // 或「不预留却画出来压正文」。
+      expect(
+        src.contains('absorbedByBar: _statusFooterAbsorbedByBar,'),
+        isTrue,
+        reason: '状态行预留必须受吸收判据门控',
+      );
+      expect(
+        src.contains(
+            '_statusFooterAbsorbedByBar => readerStatusFooterAbsorbedByBar('),
+        isTrue,
+      );
+      final String footerBuild = _slice(
+        src,
+        '  Widget _buildStatusFooter() {',
+        '    return Positioned(',
+      );
+      expect(
+        footerBuild.contains('_statusFooterAbsorbedByBar'),
+        isTrue,
+        reason: '挤压态底栏已并入读数时状态行整条不画（不再叠两行同样的数字）',
+      );
+      final String barBuild = _slice(
+        src,
+        '  Widget _buildAudiobookBar() {',
+        '  /// 小说页的窗口全屏切换',
+      );
+      expect(
+        barBuild.contains(
+            'trailing: _playbackStatusInline ? _buildBarStatusText() : null,'),
+        isTrue,
+        reason: '底栏右端仍是读数的唯一落点',
       );
     });
 
