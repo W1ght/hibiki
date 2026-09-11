@@ -155,6 +155,7 @@ const String _measureJs = r'''
   out.rubyCount = document.querySelectorAll('ruby').length;
   var blocks = document.querySelectorAll('p, div, li, h1, h2, h3');
   var plainPitches = [], rubyPitches = [];
+  var plainExtras = [], rubyExtras = [], firstRubyExtras = [];
   var detail = [];
   for (var i = 0; i < blocks.length; i++) {
     var p = blocks[i];
@@ -202,6 +203,22 @@ const String _measureJs = r'''
     }
     if (lines.length < 2) continue;
     out.blocks++;
+    // 段落块轴尺寸 − 行数×本段行距中位数 = 段落多出的空间（首行被注音撑高会落在这里）。
+    (function () {
+      var ps = [];
+      for (var q = 1; q < lines.length; q++) {
+        var dq = vertical ? (lines[q - 1].left - lines[q].left) : (lines[q].top - lines[q - 1].top);
+        if (dq > 0 && dq < fontSize * 4) ps.push(dq);
+      }
+      if (!ps.length) return;
+      var pr = p.getBoundingClientRect();
+      var blockSize = vertical ? pr.width : pr.height;
+      var extra = blockSize - lines.length * median(ps);
+      var hasRuby = lines.some(function (l) { return l.ruby > 0; });
+      var firstRuby = lines[0].ruby > 0;
+      (hasRuby ? rubyExtras : plainExtras).push(extra);
+      if (firstRuby) firstRubyExtras.push(extra);
+    })();
     for (var L2 = 1; L2 < lines.length; L2++) {
       var a = lines[L2 - 1], b = lines[L2];
       var d = vertical ? (a.left - b.left) : (b.top - a.top);
@@ -220,6 +237,11 @@ const String _measureJs = r'''
   out.plainMax = Math.round(Math.max.apply(null, plainPitches.concat([0])) * 100) / 100;
   out.rubyMax = Math.round(Math.max.apply(null, rubyPitches.concat([0])) * 100) / 100;
   out.delta = Math.round((out.ruby - out.plain) * 100) / 100;
+  out.plainExtra = Math.round(median(plainExtras) * 100) / 100;
+  out.rubyExtra = Math.round(median(rubyExtras) * 100) / 100;
+  out.firstRubyExtra = Math.round(median(firstRubyExtras) * 100) / 100;
+  out.plainExtraN = plainExtras.length; out.rubyExtraN = rubyExtras.length;
+  out.firstRubyExtraN = firstRubyExtras.length;
   out.lines = detail;
   return JSON.stringify(out);
 })()
@@ -307,7 +329,11 @@ void main() {
                     'pass=$pass plain=${r['plain']} (n=${r['plainN']}, '
                     'max=${r['plainMax']}) ruby=${r['ruby']} (n=${r['rubyN']}, '
                     'max=${r['rubyMax']}) delta=${r['delta']} '
-                    'blocks=${r['blocks']} rubies=${r['rubyCount']}';
+                    'blocks=${r['blocks']} rubies=${r['rubyCount']} '
+                    'blockExtra plain=${r['plainExtra']} (n=${r['plainExtraN']}) '
+                    'ruby=${r['rubyExtra']} (n=${r['rubyExtraN']}) '
+                    'firstLineRuby=${r['firstRubyExtra']} '
+                    '(n=${r['firstRubyExtraN']})';
                 debugPrint(line);
                 summary.add(line);
                 debugPrint('[ruby-realbook]   body font=${r['bodyFontSize']} '
