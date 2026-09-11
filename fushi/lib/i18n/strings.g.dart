@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80053 (4709 per locale)
+/// Strings: 79798 (4694 per locale)
 ///
-/// Built on 2026-09-11 at 10:45 UTC
+/// Built on 2026-09-11 at 17:13 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3154,18 +3154,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String manga_remote_ocr_uploading(
           {required Object done, required Object total}) =>
       'Uploading pages ${done} / ${total}…';
-  String get manga_rescan_empty => 'No text was recognized in this box.';
-  String get manga_rescan_failed => 'Re-OCR of the selected area failed';
-  String get manga_rescan_hint =>
-      'Drag a box over the text you want to re-run OCR on. The result replaces the existing text layer inside that box.';
-  String get manga_rescan_region_updated =>
-      'Selected area re-recognized and saved to the page';
-  String get manga_rescan_run => 'Re-OCR selected area';
-  String get manga_rescan_running => 'Recognizing the selected box...';
-  String get manga_rescan_undo_failed =>
-      'Could not restore the previous text layer';
-  String get manga_rescan_undone =>
-      'Restored the text layer from before the re-scan';
   String get manga_section_viewing => 'Viewing and page turning';
   String get manga_series_all_read => 'Every chapter has been read';
   String get manga_series_chapters_action => 'Chapters';
@@ -3202,16 +3190,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_source_cloudflare_verify_hint =>
       'Complete the Cloudflare check below. Loading resumes automatically once it passes.';
   String get manga_source_cloudflare_verify_title => 'Site verification';
-  String get manga_tap_ocr_notice_body =>
-      'This page has no text data yet. Fushi will recognise it with the OCR engine you picked in settings, then you can tap words to look them up. You can change the engine or turn this off in Settings › Manga OCR.';
-  String get manga_tap_ocr_notice_confirm => 'Recognise now';
-  String get manga_tap_ocr_notice_title => 'Tap to recognise';
-  String get manga_tap_ocr_online_lens_only =>
-      'Online chapters are not stored locally, so only Google Lens can read them — the page image is uploaded to Google.';
-  String get manga_tap_ocr_running => 'Recognising this page…';
-  String get manga_tap_to_ocr => 'Tap to recognise';
-  String get manga_tap_to_ocr_desc =>
-      'Tap an unrecognised speech bubble to recognise the page and look words up right away.';
   String get manga_tap_zone_paging => 'Tap edges to turn pages';
   String get manga_tap_zone_paging_subtitle =>
       'Tap the left or right edge of the page to turn';
@@ -11715,25 +11693,6 @@ class _StringsAr extends _StringsEn {
           {required Object done, required Object total}) =>
       'جارٍ رفع الصفحات ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'لم يتم التعرف على أي نص في هذا المربع.';
-  @override
-  String get manga_rescan_failed => 'فشلت إعادة التعرف على المنطقة المحددة';
-  @override
-  String get manga_rescan_hint =>
-      'اسحب مربعًا فوق النص الذي تريد إعادة التعرف عليه. تحل النتيجة محل طبقة النص الموجودة داخل المربع.';
-  @override
-  String get manga_rescan_region_updated =>
-      'تم التعرف على المنطقة المحددة من جديد وحُفظت في الصفحة';
-  @override
-  String get manga_rescan_run => 'إعادة التعرف على المنطقة المحددة';
-  @override
-  String get manga_rescan_running => 'جارٍ التعرف على المربع المحدد...';
-  @override
-  String get manga_rescan_undo_failed => 'تعذّرت استعادة طبقة النص السابقة';
-  @override
-  String get manga_rescan_undone =>
-      'تمت استعادة طبقة النص التي كانت قبل إعادة المسح';
-  @override
   String get manga_section_viewing => 'العرض وتقليب الصفحات';
   @override
   String get manga_series_all_read => 'تمت قراءة جميع الفصول';
@@ -11797,23 +11756,6 @@ class _StringsAr extends _StringsEn {
       'أكمل فحص Cloudflare أدناه. سيستأنف التحميل تلقائيًا بعد اجتيازه.';
   @override
   String get manga_source_cloudflare_verify_title => 'التحقق من الموقع';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'لا تحتوي هذه الصفحة على بيانات نصية بعد. سيتعرف عليها Fushi بمحرك OCR الذي اخترته في الإعدادات، ثم يمكنك النقر على الكلمات للبحث عنها. يمكنك تغيير المحرك أو إيقاف هذا من الإعدادات › OCR المانغا.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'تعرّف الآن';
-  @override
-  String get manga_tap_ocr_notice_title => 'انقر للتعرف';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'الفصول عبر الإنترنت غير مخزّنة محليًا، لذا لا يمكن قراءتها إلا بواسطة Google Lens — تُرفع صورة الصفحة إلى Google.';
-  @override
-  String get manga_tap_ocr_running => 'جارٍ التعرف على هذه الصفحة…';
-  @override
-  String get manga_tap_to_ocr => 'انقر للتعرف';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'انقر على فقاعة حوار لم يتم التعرف عليها لتتعرف على الصفحة وتبحث عن الكلمات فورًا.';
   @override
   String get manga_tap_zone_paging => 'النقر على الحواف لتقليب الصفحات';
   @override
@@ -22908,27 +22850,6 @@ class _StringsDe extends _StringsEn {
           {required Object done, required Object total}) =>
       'Seiten hochladen ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'In diesem Bereich wurde kein Text erkannt.';
-  @override
-  String get manga_rescan_failed =>
-      'Neuerkennung des ausgewählten Bereichs fehlgeschlagen';
-  @override
-  String get manga_rescan_hint =>
-      'Ziehe einen Rahmen über den Text, der neu erkannt werden soll. Das Ergebnis ersetzt die vorhandene Textebene innerhalb des Rahmens.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Ausgewählter Bereich neu erkannt und in die Seite übernommen';
-  @override
-  String get manga_rescan_run => 'Ausgewählten Bereich neu erkennen';
-  @override
-  String get manga_rescan_running => 'Ausgewählter Bereich wird erkannt...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Die vorherige Textebene konnte nicht wiederhergestellt werden';
-  @override
-  String get manga_rescan_undone =>
-      'Textebene von vor der Neuerkennung wiederhergestellt';
-  @override
   String get manga_section_viewing => 'Anzeige und Seitenumblättern';
   @override
   String get manga_series_all_read => 'Alle Kapitel wurden gelesen';
@@ -22994,23 +22915,6 @@ class _StringsDe extends _StringsEn {
       'Schließe die Cloudflare-Prüfung unten ab. Der Ladevorgang wird nach dem Bestehen automatisch fortgesetzt.';
   @override
   String get manga_source_cloudflare_verify_title => 'Website-Überprüfung';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Diese Seite hat noch keine Textdaten. Fushi erkennt sie mit der OCR-Engine, die du in den Einstellungen gewählt hast; danach kannst du Wörter antippen, um sie nachzuschlagen. Unter Einstellungen › Manga-OCR kannst du die Engine wechseln oder dieses Verhalten abschalten.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Jetzt erkennen';
-  @override
-  String get manga_tap_ocr_notice_title => 'Zum Erkennen tippen';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Online-Kapitel liegen nicht lokal vor, daher kann sie nur Google Lens lesen — das Seitenbild wird zu Google hochgeladen.';
-  @override
-  String get manga_tap_ocr_running => 'Seite wird erkannt…';
-  @override
-  String get manga_tap_to_ocr => 'Zum Erkennen tippen';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Tippe auf eine noch nicht erkannte Sprechblase, um die Seite zu erkennen und Wörter direkt nachzuschlagen.';
   @override
   String get manga_tap_zone_paging => 'Ränder antippen zum Blättern';
   @override
@@ -34244,27 +34148,6 @@ class _StringsEs extends _StringsEn {
           {required Object done, required Object total}) =>
       'Subiendo páginas ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'No se reconoció texto en este recuadro.';
-  @override
-  String get manga_rescan_failed =>
-      'Falló el reconocimiento del área seleccionada';
-  @override
-  String get manga_rescan_hint =>
-      'Arrastra un recuadro sobre el texto que quieras volver a reconocer. El resultado reemplaza la capa de texto existente dentro del recuadro.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Área seleccionada reconocida de nuevo y guardada en la página';
-  @override
-  String get manga_rescan_run => 'Volver a reconocer el área seleccionada';
-  @override
-  String get manga_rescan_running => 'Reconociendo el recuadro seleccionado...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'No se pudo restaurar la capa de texto anterior';
-  @override
-  String get manga_rescan_undone =>
-      'Se restauró la capa de texto anterior al nuevo reconocimiento';
-  @override
   String get manga_section_viewing => 'Visualización y paso de página';
   @override
   String get manga_series_all_read => 'Se han leído todos los capítulos';
@@ -34331,23 +34214,6 @@ class _StringsEs extends _StringsEn {
       'Completa la verificación de Cloudflare a continuación. La carga se reanudará automáticamente al superarla.';
   @override
   String get manga_source_cloudflare_verify_title => 'Verificación del sitio';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Esta página aún no tiene datos de texto. Fushi la reconocerá con el motor de OCR que elegiste en los ajustes y luego podrás tocar las palabras para buscarlas. Puedes cambiar el motor o desactivar esto en Configuración › OCR de manga.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Reconocer ahora';
-  @override
-  String get manga_tap_ocr_notice_title => 'Toca para reconocer';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Los capítulos en línea no se guardan localmente, así que solo Google Lens puede leerlos — la imagen de la página se sube a Google.';
-  @override
-  String get manga_tap_ocr_running => 'Reconociendo esta página…';
-  @override
-  String get manga_tap_to_ocr => 'Toca para reconocer';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Toca un globo de diálogo sin reconocer para reconocer la página y buscar palabras al instante.';
   @override
   String get manga_tap_zone_paging => 'Tocar bordes para pasar páginas';
   @override
@@ -45623,28 +45489,6 @@ class _StringsFr extends _StringsEn {
           {required Object done, required Object total}) =>
       'Envoi des pages ${done} / ${total}…';
   @override
-  String get manga_rescan_empty =>
-      'Aucun texte n\'a été reconnu dans cette zone.';
-  @override
-  String get manga_rescan_failed =>
-      'Échec de la réanalyse de la zone sélectionnée';
-  @override
-  String get manga_rescan_hint =>
-      'Tracez un cadre sur le texte à réanalyser. Le résultat remplace la couche de texte existante à l\'intérieur du cadre.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Zone sélectionnée re-reconnue et enregistrée dans la page';
-  @override
-  String get manga_rescan_run => 'Réanalyser la zone sélectionnée';
-  @override
-  String get manga_rescan_running => 'Reconnaissance de la zone sélectionnée…';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Impossible de restaurer la couche de texte précédente';
-  @override
-  String get manga_rescan_undone =>
-      'Couche de texte d\'avant la nouvelle reconnaissance restaurée';
-  @override
   String get manga_section_viewing => 'Affichage et changement de page';
   @override
   String get manga_series_all_read => 'Tous les chapitres ont été lus';
@@ -45711,23 +45555,6 @@ class _StringsFr extends _StringsEn {
       'Effectuez la vérification Cloudflare ci-dessous. Le chargement reprend automatiquement une fois validée.';
   @override
   String get manga_source_cloudflare_verify_title => 'Vérification du site';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Cette page n\'a pas encore de données textuelles. Fushi va la reconnaître avec le moteur OCR choisi dans les paramètres, puis vous pourrez toucher les mots pour les rechercher. Vous pouvez changer de moteur ou désactiver ce comportement dans Paramètres › OCR de manga.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Reconnaître';
-  @override
-  String get manga_tap_ocr_notice_title => 'Toucher pour reconnaître';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Les chapitres en ligne ne sont pas stockés localement, seul Google Lens peut donc les lire — l\'image de la page est envoyée à Google.';
-  @override
-  String get manga_tap_ocr_running => 'Reconnaissance de la page…';
-  @override
-  String get manga_tap_to_ocr => 'Toucher pour reconnaître';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Touchez une bulle de dialogue non reconnue pour reconnaître la page et rechercher les mots aussitôt.';
   @override
   String get manga_tap_zone_paging =>
       'Appuyer sur les bords pour tourner les pages';
@@ -56939,26 +56766,6 @@ class _StringsId extends _StringsEn {
           {required Object done, required Object total}) =>
       'Mengunggah halaman ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'Tidak ada teks yang dikenali di kotak ini.';
-  @override
-  String get manga_rescan_failed => 'Gagal mengenali ulang area terpilih';
-  @override
-  String get manga_rescan_hint =>
-      'Seret kotak di atas teks yang ingin dikenali ulang. Hasilnya menggantikan lapisan teks yang sudah ada di dalam kotak itu.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Area terpilih dikenali ulang dan disimpan ke halaman';
-  @override
-  String get manga_rescan_run => 'Kenali ulang area terpilih';
-  @override
-  String get manga_rescan_running => 'Mengenali kotak yang dipilih...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Tidak dapat memulihkan lapisan teks sebelumnya';
-  @override
-  String get manga_rescan_undone =>
-      'Lapisan teks sebelum pemindaian ulang telah dipulihkan';
-  @override
   String get manga_section_viewing => 'Tampilan dan pergantian halaman';
   @override
   String get manga_series_all_read => 'Semua bab telah dibaca';
@@ -57024,23 +56831,6 @@ class _StringsId extends _StringsEn {
       'Selesaikan pemeriksaan Cloudflare di bawah ini. Pemuatan akan dilanjutkan otomatis setelah lolos.';
   @override
   String get manga_source_cloudflare_verify_title => 'Verifikasi situs';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Halaman ini belum punya data teks. Fushi akan mengenalinya dengan mesin OCR yang Anda pilih di pengaturan, lalu Anda bisa mengetuk kata untuk mencarinya. Mesin bisa diganti atau fitur ini dimatikan di Pengaturan › OCR Manga.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Kenali sekarang';
-  @override
-  String get manga_tap_ocr_notice_title => 'Ketuk untuk mengenali';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Bab daring tidak disimpan di perangkat, jadi hanya Google Lens yang bisa membacanya — gambar halaman diunggah ke Google.';
-  @override
-  String get manga_tap_ocr_running => 'Mengenali halaman ini…';
-  @override
-  String get manga_tap_to_ocr => 'Ketuk untuk mengenali';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Ketuk balon percakapan yang belum dikenali untuk mengenali halaman dan langsung mencari kata.';
   @override
   String get manga_tap_zone_paging => 'Ketuk tepi untuk ganti halaman';
   @override
@@ -68180,28 +67970,6 @@ class _StringsIt extends _StringsEn {
           {required Object done, required Object total}) =>
       'Caricamento pagine ${done} / ${total}…';
   @override
-  String get manga_rescan_empty =>
-      'Nessun testo riconosciuto in questo riquadro.';
-  @override
-  String get manga_rescan_failed => 'OCR dell\'area selezionata non riuscito';
-  @override
-  String get manga_rescan_hint =>
-      'Trascina un riquadro sul testo da rianalizzare. Il risultato sostituisce il livello di testo già presente nel riquadro.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Area selezionata riconosciuta di nuovo e salvata nella pagina';
-  @override
-  String get manga_rescan_run => 'Ripeti l\'OCR sull\'area selezionata';
-  @override
-  String get manga_rescan_running =>
-      'Riconoscimento del riquadro selezionato...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Impossibile ripristinare il livello di testo precedente';
-  @override
-  String get manga_rescan_undone =>
-      'Ripristinato il livello di testo precedente al nuovo riconoscimento';
-  @override
   String get manga_section_viewing => 'Visualizzazione e cambio pagina';
   @override
   String get manga_series_all_read => 'Tutti i capitoli sono stati letti';
@@ -68268,23 +68036,6 @@ class _StringsIt extends _StringsEn {
       'Completa il controllo Cloudflare qui sotto. Il caricamento riprenderà automaticamente al superamento.';
   @override
   String get manga_source_cloudflare_verify_title => 'Verifica del sito';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Questa pagina non ha ancora dati di testo. Fushi la riconoscerà con il motore OCR che hai scelto nelle impostazioni, poi potrai toccare le parole per cercarle. Puoi cambiare motore o disattivare questo comportamento in Impostazioni › OCR manga.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Riconosci ora';
-  @override
-  String get manga_tap_ocr_notice_title => 'Tocca per riconoscere';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'I capitoli online non sono salvati in locale, quindi può leggerli solo Google Lens — l\'immagine della pagina viene inviata a Google.';
-  @override
-  String get manga_tap_ocr_running => 'Riconoscimento della pagina…';
-  @override
-  String get manga_tap_to_ocr => 'Tocca per riconoscere';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Tocca un fumetto non ancora riconosciuto per riconoscere la pagina e cercare subito le parole.';
   @override
   String get manga_tap_zone_paging => 'Tocca i bordi per cambiare pagina';
   @override
@@ -79199,23 +78950,6 @@ class _StringsJa extends _StringsEn {
           {required Object done, required Object total}) =>
       'ページをアップロード中 ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'このボックス内にテキストが認識されませんでした。';
-  @override
-  String get manga_rescan_failed => '選択範囲の再認識に失敗しました';
-  @override
-  String get manga_rescan_hint =>
-      '再認識したいテキストを枠で囲んでドラッグします。結果は枠内の既存のテキストレイヤーを置き換えます。';
-  @override
-  String get manga_rescan_region_updated => '選択範囲を再認識してページに保存しました';
-  @override
-  String get manga_rescan_run => '選択範囲を再認識';
-  @override
-  String get manga_rescan_running => '選択したボックスを認識中...';
-  @override
-  String get manga_rescan_undo_failed => '前のテキストレイヤーに戻せませんでした';
-  @override
-  String get manga_rescan_undone => '再認識する前のテキストレイヤーに戻しました';
-  @override
   String get manga_section_viewing => '表示とページめくり';
   @override
   String get manga_series_all_read => 'すべての章を読み終えました';
@@ -79276,23 +79010,6 @@ class _StringsJa extends _StringsEn {
       '下の Cloudflare 認証を完了してください。通過すると自動で読み込みを再開します。';
   @override
   String get manga_source_cloudflare_verify_title => 'サイト認証';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'このページにはまだテキストデータがありません。Fushi は設定で選んだ OCR エンジンでその場で認識し、認識が終われば単語をタップして調べられます。エンジンの変更やこの動作の無効化は「設定 › マンガOCR」で行えます。';
-  @override
-  String get manga_tap_ocr_notice_confirm => '今すぐ認識';
-  @override
-  String get manga_tap_ocr_notice_title => 'タップで認識';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'オンラインの章はローカルに保存されないため、読み取れるのは Google Lens だけです。ページ画像は Google にアップロードされます。';
-  @override
-  String get manga_tap_ocr_running => 'このページを認識しています…';
-  @override
-  String get manga_tap_to_ocr => 'タップで認識';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'まだ認識していない吹き出しをタップすると、そのページを認識してすぐに単語を調べられます。';
   @override
   String get manga_tap_zone_paging => '端をタップしてページめくり';
   @override
@@ -89875,23 +89592,6 @@ class _StringsKo extends _StringsEn {
           {required Object done, required Object total}) =>
       '페이지 업로드 중 ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => '이 박스에서 텍스트를 인식하지 못했습니다.';
-  @override
-  String get manga_rescan_failed => '선택 영역을 다시 인식하지 못했어요';
-  @override
-  String get manga_rescan_hint =>
-      '다시 인식할 텍스트를 드래그해 상자로 감싸세요. 결과는 상자 안의 기존 텍스트 레이어를 대체해요.';
-  @override
-  String get manga_rescan_region_updated => '선택 영역을 다시 인식해 페이지에 저장했어요';
-  @override
-  String get manga_rescan_run => '선택 영역 다시 인식';
-  @override
-  String get manga_rescan_running => '선택한 박스를 인식하는 중...';
-  @override
-  String get manga_rescan_undo_failed => '이전 텍스트 레이어로 되돌리지 못했어요';
-  @override
-  String get manga_rescan_undone => '다시 인식하기 전의 텍스트 레이어로 되돌렸어요';
-  @override
   String get manga_section_viewing => '보기 및 페이지 넘기기';
   @override
   String get manga_series_all_read => '모든 챕터를 읽었습니다';
@@ -89953,23 +89653,6 @@ class _StringsKo extends _StringsEn {
       '아래 Cloudflare 확인을 완료하세요. 통과하면 자동으로 불러오기를 계속합니다.';
   @override
   String get manga_source_cloudflare_verify_title => '사이트 확인';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      '이 페이지에는 아직 텍스트 데이터가 없어요. Fushi가 설정에서 고른 OCR 엔진으로 바로 인식하고, 인식이 끝나면 단어를 탭해서 찾아볼 수 있어요. 엔진을 바꾸거나 이 동작을 끄려면 설정 › 만화 OCR에서 하면 돼요.';
-  @override
-  String get manga_tap_ocr_notice_confirm => '지금 인식';
-  @override
-  String get manga_tap_ocr_notice_title => '탭해서 인식';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      '온라인 챕터는 기기에 저장되지 않아 Google Lens로만 읽을 수 있어요. 페이지 이미지는 Google로 업로드돼요.';
-  @override
-  String get manga_tap_ocr_running => '이 페이지를 인식하는 중…';
-  @override
-  String get manga_tap_to_ocr => '탭해서 인식';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      '아직 인식하지 않은 말풍선을 탭하면 페이지를 인식하고 바로 단어를 찾아볼 수 있어요.';
   @override
   String get manga_tap_zone_paging => '가장자리 탭으로 페이지 넘기기';
   @override
@@ -100814,26 +100497,6 @@ class _StringsNl extends _StringsEn {
           {required Object done, required Object total}) =>
       'Pagina\'s uploaden ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'Geen tekst herkend in dit kader.';
-  @override
-  String get manga_rescan_failed =>
-      'Opnieuw herkennen van het geselecteerde gebied is mislukt';
-  @override
-  String get manga_rescan_hint =>
-      'Sleep een kader over de tekst die je opnieuw wilt laten herkennen. Het resultaat vervangt de bestaande tekstlaag binnen dat kader.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Geselecteerd gebied opnieuw herkend en in de pagina opgeslagen';
-  @override
-  String get manga_rescan_run => 'Geselecteerd gebied opnieuw herkennen';
-  @override
-  String get manga_rescan_running => 'Geselecteerd kader herkennen...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Kan de vorige tekstlaag niet herstellen';
-  @override
-  String get manga_rescan_undone => 'Tekstlaag van vóór de herscan hersteld';
-  @override
   String get manga_section_viewing => 'Weergave en paginabladeren';
   @override
   String get manga_series_all_read => 'Alle hoofdstukken zijn gelezen';
@@ -100900,23 +100563,6 @@ class _StringsNl extends _StringsEn {
       'Voltooi de Cloudflare-controle hieronder. Het laden gaat automatisch verder zodra deze is geslaagd.';
   @override
   String get manga_source_cloudflare_verify_title => 'Siteverificatie';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Deze pagina heeft nog geen tekstgegevens. Fushi herkent hem met de OCR-engine die je in de instellingen hebt gekozen; daarna kun je op woorden tikken om ze op te zoeken. Je kunt de engine wijzigen of dit uitschakelen bij Instellingen › Manga OCR.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Nu herkennen';
-  @override
-  String get manga_tap_ocr_notice_title => 'Tik om te herkennen';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Online hoofdstukken staan niet lokaal opgeslagen, dus alleen Google Lens kan ze lezen — de pagina-afbeelding wordt naar Google geüpload.';
-  @override
-  String get manga_tap_ocr_running => 'Deze pagina wordt herkend…';
-  @override
-  String get manga_tap_to_ocr => 'Tik om te herkennen';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Tik op een nog niet herkende tekstballon om de pagina te herkennen en woorden meteen op te zoeken.';
   @override
   String get manga_tap_zone_paging => 'Tik op randen om pagina\'s te bladeren';
   @override
@@ -112095,27 +111741,6 @@ class _StringsPtBr extends _StringsEn {
           {required Object done, required Object total}) =>
       'Enviando páginas ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'Nenhum texto foi reconhecido nesta caixa.';
-  @override
-  String get manga_rescan_failed =>
-      'Falha ao reconhecer novamente a área selecionada';
-  @override
-  String get manga_rescan_hint =>
-      'Arraste um retângulo sobre o texto que deseja reconhecer de novo. O resultado substitui a camada de texto existente dentro do retângulo.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Área selecionada reconhecida novamente e salva na página';
-  @override
-  String get manga_rescan_run => 'Reconhecer novamente a área selecionada';
-  @override
-  String get manga_rescan_running => 'Reconhecendo a caixa selecionada...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Não foi possível restaurar a camada de texto anterior';
-  @override
-  String get manga_rescan_undone =>
-      'Camada de texto anterior ao novo reconhecimento restaurada';
-  @override
   String get manga_section_viewing => 'Visualização e virada de página';
   @override
   String get manga_series_all_read => 'Todos os capítulos foram lidos';
@@ -112182,23 +111807,6 @@ class _StringsPtBr extends _StringsEn {
       'Conclua a verificação do Cloudflare abaixo. O carregamento continua automaticamente após a aprovação.';
   @override
   String get manga_source_cloudflare_verify_title => 'Verificação do site';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Esta página ainda não tem dados de texto. O Fushi vai reconhecê-la com o mecanismo de OCR que você escolheu nas configurações e depois você poderá tocar nas palavras para consultá-las. Você pode trocar o mecanismo ou desativar isso em Configurações › OCR de mangá.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Reconhecer agora';
-  @override
-  String get manga_tap_ocr_notice_title => 'Toque para reconhecer';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Os capítulos online não ficam salvos localmente, então só o Google Lens consegue lê-los — a imagem da página é enviada ao Google.';
-  @override
-  String get manga_tap_ocr_running => 'Reconhecendo esta página…';
-  @override
-  String get manga_tap_to_ocr => 'Toque para reconhecer';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Toque em um balão de fala ainda não reconhecido para reconhecer a página e consultar as palavras na hora.';
   @override
   String get manga_tap_zone_paging => 'Tocar nas bordas para virar páginas';
   @override
@@ -123377,27 +122985,6 @@ class _StringsRu extends _StringsEn {
           {required Object done, required Object total}) =>
       'Загрузка страниц ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'Текст в этой области не распознан.';
-  @override
-  String get manga_rescan_failed =>
-      'Не удалось заново распознать выделенную область';
-  @override
-  String get manga_rescan_hint =>
-      'Обведите рамкой текст, который нужно распознать заново. Результат заменит существующий текстовый слой внутри рамки.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Выделенная область распознана заново и сохранена на странице';
-  @override
-  String get manga_rescan_run => 'Распознать выделенную область заново';
-  @override
-  String get manga_rescan_running => 'Распознавание выбранной области...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Не удалось восстановить предыдущий текстовый слой';
-  @override
-  String get manga_rescan_undone =>
-      'Текстовый слой до повторного распознавания восстановлен';
-  @override
   String get manga_section_viewing => 'Просмотр и перелистывание';
   @override
   String get manga_series_all_read => 'Все главы прочитаны';
@@ -123462,23 +123049,6 @@ class _StringsRu extends _StringsEn {
       'Пройдите проверку Cloudflare ниже. После её прохождения загрузка продолжится автоматически.';
   @override
   String get manga_source_cloudflare_verify_title => 'Проверка сайта';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'На этой странице ещё нет текстовых данных. Fushi распознает её движком OCR, выбранным в настройках, после чего можно нажимать на слова и искать их. Сменить движок или отключить это поведение можно в «Настройки › OCR манги».';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Распознать';
-  @override
-  String get manga_tap_ocr_notice_title => 'Распознать по нажатию';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Онлайн-главы не хранятся локально, поэтому прочитать их может только Google Lens — изображение страницы отправляется в Google.';
-  @override
-  String get manga_tap_ocr_running => 'Распознавание страницы…';
-  @override
-  String get manga_tap_to_ocr => 'Распознавание по нажатию';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Нажмите на нераспознанное текстовое облачко, чтобы распознать страницу и сразу искать слова.';
   @override
   String get manga_tap_zone_paging => 'Перелистывание касанием краёв';
   @override
@@ -134576,25 +134146,6 @@ class _StringsTh extends _StringsEn {
           {required Object done, required Object total}) =>
       'กำลังอัปโหลดหน้า ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'ไม่พบข้อความในกล่องนี้';
-  @override
-  String get manga_rescan_failed => 'รู้จำพื้นที่ที่เลือกใหม่ไม่สำเร็จ';
-  @override
-  String get manga_rescan_hint =>
-      'ลากกรอบครอบข้อความที่ต้องการรู้จำใหม่ ผลลัพธ์จะแทนที่ชั้นข้อความเดิมภายในกรอบนั้น';
-  @override
-  String get manga_rescan_region_updated =>
-      'รู้จำพื้นที่ที่เลือกใหม่แล้วและบันทึกลงหน้านี้';
-  @override
-  String get manga_rescan_run => 'รู้จำพื้นที่ที่เลือกใหม่';
-  @override
-  String get manga_rescan_running => 'กำลังรู้จำกล่องที่เลือก...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'คืนค่าชั้นข้อความเวอร์ชันก่อนหน้าไม่สำเร็จ';
-  @override
-  String get manga_rescan_undone => 'คืนค่าชั้นข้อความก่อนการรู้จำใหม่แล้ว';
-  @override
   String get manga_section_viewing => 'การดูและการพลิกหน้า';
   @override
   String get manga_series_all_read => 'อ่านครบทุกตอนแล้ว';
@@ -134659,23 +134210,6 @@ class _StringsTh extends _StringsEn {
       'ทำการยืนยัน Cloudflare ด้านล่างให้เสร็จ เมื่อผ่านแล้วระบบจะโหลดต่อโดยอัตโนมัติ';
   @override
   String get manga_source_cloudflare_verify_title => 'การยืนยันเว็บไซต์';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'หน้านี้ยังไม่มีข้อมูลข้อความ Fushi จะรู้จำข้อความด้วยเอนจิน OCR ที่คุณเลือกไว้ในการตั้งค่า จากนั้นคุณจะแตะคำเพื่อค้นความหมายได้ เปลี่ยนเอนจินหรือปิดพฤติกรรมนี้ได้ที่ การตั้งค่า › OCR มังงะ';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'เริ่มรู้จำ';
-  @override
-  String get manga_tap_ocr_notice_title => 'แตะเพื่อรู้จำข้อความ';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'หน้าของตอนแบบออนไลน์ไม่ได้เก็บไว้ในเครื่อง จึงอ่านได้ด้วย Google Lens เท่านั้น — ภาพหน้านั้นจะถูกอัปโหลดไปยัง Google';
-  @override
-  String get manga_tap_ocr_running => 'กำลังรู้จำหน้านี้…';
-  @override
-  String get manga_tap_to_ocr => 'แตะเพื่อรู้จำข้อความ';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'แตะช่องคำพูดที่ยังไม่ได้รู้จำ เพื่อรู้จำข้อความทั้งหน้าแล้วค้นคำได้ทันที';
   @override
   String get manga_tap_zone_paging => 'แตะขอบเพื่อพลิกหน้า';
   @override
@@ -145725,26 +145259,6 @@ class _StringsTr extends _StringsEn {
           {required Object done, required Object total}) =>
       'Sayfalar yükleniyor ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => 'Bu kutuda metin tanınamadı.';
-  @override
-  String get manga_rescan_failed => 'Seçili alanın yeniden tanınması başarısız';
-  @override
-  String get manga_rescan_hint =>
-      'Yeniden tanıtmak istediğiniz metnin üzerine bir kutu sürükleyin. Sonuç, kutunun içindeki mevcut metin katmanının yerini alır.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Seçilen alan yeniden tanındı ve sayfaya kaydedildi';
-  @override
-  String get manga_rescan_run => 'Seçili alanı yeniden tanı';
-  @override
-  String get manga_rescan_running => 'Seçili kutu tanınıyor...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Önceki metin katmanı geri yüklenemedi';
-  @override
-  String get manga_rescan_undone =>
-      'Yeniden taramadan önceki metin katmanı geri yüklendi';
-  @override
   String get manga_section_viewing => 'Görüntüleme ve sayfa çevirme';
   @override
   String get manga_series_all_read => 'Tüm bölümler okundu';
@@ -145809,23 +145323,6 @@ class _StringsTr extends _StringsEn {
       'Aşağıdaki Cloudflare doğrulamasını tamamlayın. Doğrulama geçilince yükleme otomatik olarak sürer.';
   @override
   String get manga_source_cloudflare_verify_title => 'Site doğrulaması';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Bu sayfanın henüz metin verisi yok. Fushi, ayarlarda seçtiğiniz OCR motoruyla sayfayı tanıyacak; ardından kelimelere dokunup arayabilirsiniz. Motoru değiştirmeyi ya da bunu kapatmayı Ayarlar › Manga OCR bölümünden yapabilirsiniz.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Şimdi tanı';
-  @override
-  String get manga_tap_ocr_notice_title => 'Dokunarak tanıma';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Çevrimiçi bölümler yerelde saklanmaz, bu yüzden onları yalnızca Google Lens okuyabilir — sayfa görüntüsü Google\'a yüklenir.';
-  @override
-  String get manga_tap_ocr_running => 'Bu sayfa tanınıyor…';
-  @override
-  String get manga_tap_to_ocr => 'Dokunarak tanıma';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Tanınmamış bir konuşma balonuna dokunun; sayfa tanınsın, kelimeleri hemen aratın.';
   @override
   String get manga_tap_zone_paging => 'Kenarlara dokunarak sayfa çevirme';
   @override
@@ -156918,27 +156415,6 @@ class _StringsVi extends _StringsEn {
           {required Object done, required Object total}) =>
       'Đang tải lên trang ${done} / ${total}…';
   @override
-  String get manga_rescan_empty =>
-      'Không nhận dạng được văn bản nào trong vùng này.';
-  @override
-  String get manga_rescan_failed => 'Nhận dạng lại vùng đã chọn thất bại';
-  @override
-  String get manga_rescan_hint =>
-      'Kéo một khung quanh phần chữ cần nhận dạng lại. Kết quả sẽ thay thế lớp văn bản đang có bên trong khung đó.';
-  @override
-  String get manga_rescan_region_updated =>
-      'Đã nhận dạng lại vùng đã chọn và lưu vào trang';
-  @override
-  String get manga_rescan_run => 'Nhận dạng lại vùng đã chọn';
-  @override
-  String get manga_rescan_running => 'Đang nhận dạng vùng đã chọn...';
-  @override
-  String get manga_rescan_undo_failed =>
-      'Không khôi phục được lớp văn bản trước đó';
-  @override
-  String get manga_rescan_undone =>
-      'Đã khôi phục lớp văn bản trước khi quét lại';
-  @override
   String get manga_section_viewing => 'Xem và lật trang';
   @override
   String get manga_series_all_read => 'Đã đọc hết tất cả các chương';
@@ -157003,23 +156479,6 @@ class _StringsVi extends _StringsEn {
       'Hoàn tất kiểm tra Cloudflare bên dưới. Quá trình tải sẽ tự động tiếp tục sau khi vượt qua.';
   @override
   String get manga_source_cloudflare_verify_title => 'Xác minh trang web';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      'Trang này chưa có dữ liệu văn bản. Fushi sẽ nhận dạng bằng công cụ OCR bạn chọn trong cài đặt, sau đó bạn có thể chạm vào từ để tra cứu. Bạn có thể đổi công cụ hoặc tắt tính năng này trong Cài đặt › OCR truyện tranh.';
-  @override
-  String get manga_tap_ocr_notice_confirm => 'Nhận dạng ngay';
-  @override
-  String get manga_tap_ocr_notice_title => 'Chạm để nhận dạng';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      'Chương trực tuyến không lưu trên máy, nên chỉ Google Lens đọc được — ảnh trang sẽ được tải lên Google.';
-  @override
-  String get manga_tap_ocr_running => 'Đang nhận dạng trang này…';
-  @override
-  String get manga_tap_to_ocr => 'Chạm để nhận dạng';
-  @override
-  String get manga_tap_to_ocr_desc =>
-      'Chạm vào bong bóng thoại chưa nhận dạng để nhận dạng cả trang và tra từ ngay.';
   @override
   String get manga_tap_zone_paging => 'Chạm cạnh để lật trang';
   @override
@@ -167662,22 +167121,6 @@ class _StringsZhCn extends _StringsEn {
           {required Object done, required Object total}) =>
       '正在上传页面 ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => '该区域未识别出文字。';
-  @override
-  String get manga_rescan_failed => '重新识别框选区域失败';
-  @override
-  String get manga_rescan_hint => '拖动框选要重新识别的文字。识别结果会替换框内已有的文字层。';
-  @override
-  String get manga_rescan_region_updated => '已重新识别该区域并回写本页';
-  @override
-  String get manga_rescan_run => '重新识别框选区域';
-  @override
-  String get manga_rescan_running => '正在识别所选区域…';
-  @override
-  String get manga_rescan_undo_failed => '还原上一版文字层失败';
-  @override
-  String get manga_rescan_undone => '已还原重新识别前的文字层';
-  @override
   String get manga_section_viewing => '浏览与翻页';
   @override
   String get manga_series_all_read => '所有章节都已读完';
@@ -167738,22 +167181,6 @@ class _StringsZhCn extends _StringsEn {
       '在下方完成 Cloudflare 验证，通过后会自动继续加载。';
   @override
   String get manga_source_cloudflare_verify_title => '站点验证';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      '这一页还没有文字数据。Fushi 会用你在设置里选的 OCR 引擎就地识别，识别完就能点词查询。可以在「设置 › 漫画 OCR」里更换引擎或关掉这个行为。';
-  @override
-  String get manga_tap_ocr_notice_confirm => '开始识别';
-  @override
-  String get manga_tap_ocr_notice_title => '点一下就识别';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      '在线章节的页面不在本地，只能用 Google Lens 识别——页面图片会上传给 Google。';
-  @override
-  String get manga_tap_ocr_running => '正在识别本页…';
-  @override
-  String get manga_tap_to_ocr => '点击即识别';
-  @override
-  String get manga_tap_to_ocr_desc => '点一下还没识别的对话框，就地识别本页并直接查词。';
   @override
   String get manga_tap_zone_paging => '点击边缘翻页';
   @override
@@ -177944,22 +177371,6 @@ class _StringsZhHk extends _StringsEn {
           {required Object done, required Object total}) =>
       '正在上傳頁面 ${done} / ${total}…';
   @override
-  String get manga_rescan_empty => '該區域未識別出文字。';
-  @override
-  String get manga_rescan_failed => '重新識別框選區域失敗';
-  @override
-  String get manga_rescan_hint => '拖動框選要重新識別的文字。識別結果會替換框內已有的文字層。';
-  @override
-  String get manga_rescan_region_updated => '已重新識別該區域並回寫本頁';
-  @override
-  String get manga_rescan_run => '重新識別框選區域';
-  @override
-  String get manga_rescan_running => '正在識別所選區域…';
-  @override
-  String get manga_rescan_undo_failed => '還原上一版文字層失敗';
-  @override
-  String get manga_rescan_undone => '已還原重新識別前的文字層';
-  @override
   String get manga_section_viewing => '瀏覽與翻頁';
   @override
   String get manga_series_all_read => '所有章節都已讀完';
@@ -178020,22 +177431,6 @@ class _StringsZhHk extends _StringsEn {
       '請在下方完成 Cloudflare 驗證，通過後會自動繼續載入。';
   @override
   String get manga_source_cloudflare_verify_title => '網站驗證';
-  @override
-  String get manga_tap_ocr_notice_body =>
-      '這一頁還未有文字資料。Fushi 會用你在設定中選擇的 OCR 引擎就地識別，識別完成後即可點字查詢。可在「設定 › 漫畫 OCR」中更換引擎或關閉這個行為。';
-  @override
-  String get manga_tap_ocr_notice_confirm => '開始識別';
-  @override
-  String get manga_tap_ocr_notice_title => '點一下即識別';
-  @override
-  String get manga_tap_ocr_online_lens_only =>
-      '網上章節的頁面不在本機，只能用 Google Lens 識別——頁面圖片會上傳至 Google。';
-  @override
-  String get manga_tap_ocr_running => '正在識別本頁…';
-  @override
-  String get manga_tap_to_ocr => '點擊即識別';
-  @override
-  String get manga_tap_to_ocr_desc => '點一下尚未識別的對話框，即可就地識別本頁並直接查詞。';
   @override
   String get manga_tap_zone_paging => '點擊邊緣翻頁';
   @override
@@ -187991,22 +187386,6 @@ extension on _StringsEn {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Uploading pages ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'No text was recognized in this box.';
-      case 'manga_rescan_failed':
-        return 'Re-OCR of the selected area failed';
-      case 'manga_rescan_hint':
-        return 'Drag a box over the text you want to re-run OCR on. The result replaces the existing text layer inside that box.';
-      case 'manga_rescan_region_updated':
-        return 'Selected area re-recognized and saved to the page';
-      case 'manga_rescan_run':
-        return 'Re-OCR selected area';
-      case 'manga_rescan_running':
-        return 'Recognizing the selected box...';
-      case 'manga_rescan_undo_failed':
-        return 'Could not restore the previous text layer';
-      case 'manga_rescan_undone':
-        return 'Restored the text layer from before the re-scan';
       case 'manga_section_viewing':
         return 'Viewing and page turning';
       case 'manga_series_all_read':
@@ -188064,20 +187443,6 @@ extension on _StringsEn {
         return 'Complete the Cloudflare check below. Loading resumes automatically once it passes.';
       case 'manga_source_cloudflare_verify_title':
         return 'Site verification';
-      case 'manga_tap_ocr_notice_body':
-        return 'This page has no text data yet. Fushi will recognise it with the OCR engine you picked in settings, then you can tap words to look them up. You can change the engine or turn this off in Settings › Manga OCR.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Recognise now';
-      case 'manga_tap_ocr_notice_title':
-        return 'Tap to recognise';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Online chapters are not stored locally, so only Google Lens can read them — the page image is uploaded to Google.';
-      case 'manga_tap_ocr_running':
-        return 'Recognising this page…';
-      case 'manga_tap_to_ocr':
-        return 'Tap to recognise';
-      case 'manga_tap_to_ocr_desc':
-        return 'Tap an unrecognised speech bubble to recognise the page and look words up right away.';
       case 'manga_tap_zone_paging':
         return 'Tap edges to turn pages';
       case 'manga_tap_zone_paging_subtitle':
@@ -197686,22 +197051,6 @@ extension on _StringsAr {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'جارٍ رفع الصفحات ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'لم يتم التعرف على أي نص في هذا المربع.';
-      case 'manga_rescan_failed':
-        return 'فشلت إعادة التعرف على المنطقة المحددة';
-      case 'manga_rescan_hint':
-        return 'اسحب مربعًا فوق النص الذي تريد إعادة التعرف عليه. تحل النتيجة محل طبقة النص الموجودة داخل المربع.';
-      case 'manga_rescan_region_updated':
-        return 'تم التعرف على المنطقة المحددة من جديد وحُفظت في الصفحة';
-      case 'manga_rescan_run':
-        return 'إعادة التعرف على المنطقة المحددة';
-      case 'manga_rescan_running':
-        return 'جارٍ التعرف على المربع المحدد...';
-      case 'manga_rescan_undo_failed':
-        return 'تعذّرت استعادة طبقة النص السابقة';
-      case 'manga_rescan_undone':
-        return 'تمت استعادة طبقة النص التي كانت قبل إعادة المسح';
       case 'manga_section_viewing':
         return 'العرض وتقليب الصفحات';
       case 'manga_series_all_read':
@@ -197759,20 +197108,6 @@ extension on _StringsAr {
         return 'أكمل فحص Cloudflare أدناه. سيستأنف التحميل تلقائيًا بعد اجتيازه.';
       case 'manga_source_cloudflare_verify_title':
         return 'التحقق من الموقع';
-      case 'manga_tap_ocr_notice_body':
-        return 'لا تحتوي هذه الصفحة على بيانات نصية بعد. سيتعرف عليها Fushi بمحرك OCR الذي اخترته في الإعدادات، ثم يمكنك النقر على الكلمات للبحث عنها. يمكنك تغيير المحرك أو إيقاف هذا من الإعدادات › OCR المانغا.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'تعرّف الآن';
-      case 'manga_tap_ocr_notice_title':
-        return 'انقر للتعرف';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'الفصول عبر الإنترنت غير مخزّنة محليًا، لذا لا يمكن قراءتها إلا بواسطة Google Lens — تُرفع صورة الصفحة إلى Google.';
-      case 'manga_tap_ocr_running':
-        return 'جارٍ التعرف على هذه الصفحة…';
-      case 'manga_tap_to_ocr':
-        return 'انقر للتعرف';
-      case 'manga_tap_to_ocr_desc':
-        return 'انقر على فقاعة حوار لم يتم التعرف عليها لتتعرف على الصفحة وتبحث عن الكلمات فورًا.';
       case 'manga_tap_zone_paging':
         return 'النقر على الحواف لتقليب الصفحات';
       case 'manga_tap_zone_paging_subtitle':
@@ -207404,22 +206739,6 @@ extension on _StringsDe {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Seiten hochladen ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'In diesem Bereich wurde kein Text erkannt.';
-      case 'manga_rescan_failed':
-        return 'Neuerkennung des ausgewählten Bereichs fehlgeschlagen';
-      case 'manga_rescan_hint':
-        return 'Ziehe einen Rahmen über den Text, der neu erkannt werden soll. Das Ergebnis ersetzt die vorhandene Textebene innerhalb des Rahmens.';
-      case 'manga_rescan_region_updated':
-        return 'Ausgewählter Bereich neu erkannt und in die Seite übernommen';
-      case 'manga_rescan_run':
-        return 'Ausgewählten Bereich neu erkennen';
-      case 'manga_rescan_running':
-        return 'Ausgewählter Bereich wird erkannt...';
-      case 'manga_rescan_undo_failed':
-        return 'Die vorherige Textebene konnte nicht wiederhergestellt werden';
-      case 'manga_rescan_undone':
-        return 'Textebene von vor der Neuerkennung wiederhergestellt';
       case 'manga_section_viewing':
         return 'Anzeige und Seitenumblättern';
       case 'manga_series_all_read':
@@ -207477,20 +206796,6 @@ extension on _StringsDe {
         return 'Schließe die Cloudflare-Prüfung unten ab. Der Ladevorgang wird nach dem Bestehen automatisch fortgesetzt.';
       case 'manga_source_cloudflare_verify_title':
         return 'Website-Überprüfung';
-      case 'manga_tap_ocr_notice_body':
-        return 'Diese Seite hat noch keine Textdaten. Fushi erkennt sie mit der OCR-Engine, die du in den Einstellungen gewählt hast; danach kannst du Wörter antippen, um sie nachzuschlagen. Unter Einstellungen › Manga-OCR kannst du die Engine wechseln oder dieses Verhalten abschalten.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Jetzt erkennen';
-      case 'manga_tap_ocr_notice_title':
-        return 'Zum Erkennen tippen';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Online-Kapitel liegen nicht lokal vor, daher kann sie nur Google Lens lesen — das Seitenbild wird zu Google hochgeladen.';
-      case 'manga_tap_ocr_running':
-        return 'Seite wird erkannt…';
-      case 'manga_tap_to_ocr':
-        return 'Zum Erkennen tippen';
-      case 'manga_tap_to_ocr_desc':
-        return 'Tippe auf eine noch nicht erkannte Sprechblase, um die Seite zu erkennen und Wörter direkt nachzuschlagen.';
       case 'manga_tap_zone_paging':
         return 'Ränder antippen zum Blättern';
       case 'manga_tap_zone_paging_subtitle':
@@ -217135,22 +216440,6 @@ extension on _StringsEs {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Subiendo páginas ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'No se reconoció texto en este recuadro.';
-      case 'manga_rescan_failed':
-        return 'Falló el reconocimiento del área seleccionada';
-      case 'manga_rescan_hint':
-        return 'Arrastra un recuadro sobre el texto que quieras volver a reconocer. El resultado reemplaza la capa de texto existente dentro del recuadro.';
-      case 'manga_rescan_region_updated':
-        return 'Área seleccionada reconocida de nuevo y guardada en la página';
-      case 'manga_rescan_run':
-        return 'Volver a reconocer el área seleccionada';
-      case 'manga_rescan_running':
-        return 'Reconociendo el recuadro seleccionado...';
-      case 'manga_rescan_undo_failed':
-        return 'No se pudo restaurar la capa de texto anterior';
-      case 'manga_rescan_undone':
-        return 'Se restauró la capa de texto anterior al nuevo reconocimiento';
       case 'manga_section_viewing':
         return 'Visualización y paso de página';
       case 'manga_series_all_read':
@@ -217208,20 +216497,6 @@ extension on _StringsEs {
         return 'Completa la verificación de Cloudflare a continuación. La carga se reanudará automáticamente al superarla.';
       case 'manga_source_cloudflare_verify_title':
         return 'Verificación del sitio';
-      case 'manga_tap_ocr_notice_body':
-        return 'Esta página aún no tiene datos de texto. Fushi la reconocerá con el motor de OCR que elegiste en los ajustes y luego podrás tocar las palabras para buscarlas. Puedes cambiar el motor o desactivar esto en Configuración › OCR de manga.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Reconocer ahora';
-      case 'manga_tap_ocr_notice_title':
-        return 'Toca para reconocer';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Los capítulos en línea no se guardan localmente, así que solo Google Lens puede leerlos — la imagen de la página se sube a Google.';
-      case 'manga_tap_ocr_running':
-        return 'Reconociendo esta página…';
-      case 'manga_tap_to_ocr':
-        return 'Toca para reconocer';
-      case 'manga_tap_to_ocr_desc':
-        return 'Toca un globo de diálogo sin reconocer para reconocer la página y buscar palabras al instante.';
       case 'manga_tap_zone_paging':
         return 'Tocar bordes para pasar páginas';
       case 'manga_tap_zone_paging_subtitle':
@@ -226870,22 +226145,6 @@ extension on _StringsFr {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Envoi des pages ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'Aucun texte n\'a été reconnu dans cette zone.';
-      case 'manga_rescan_failed':
-        return 'Échec de la réanalyse de la zone sélectionnée';
-      case 'manga_rescan_hint':
-        return 'Tracez un cadre sur le texte à réanalyser. Le résultat remplace la couche de texte existante à l\'intérieur du cadre.';
-      case 'manga_rescan_region_updated':
-        return 'Zone sélectionnée re-reconnue et enregistrée dans la page';
-      case 'manga_rescan_run':
-        return 'Réanalyser la zone sélectionnée';
-      case 'manga_rescan_running':
-        return 'Reconnaissance de la zone sélectionnée…';
-      case 'manga_rescan_undo_failed':
-        return 'Impossible de restaurer la couche de texte précédente';
-      case 'manga_rescan_undone':
-        return 'Couche de texte d\'avant la nouvelle reconnaissance restaurée';
       case 'manga_section_viewing':
         return 'Affichage et changement de page';
       case 'manga_series_all_read':
@@ -226943,20 +226202,6 @@ extension on _StringsFr {
         return 'Effectuez la vérification Cloudflare ci-dessous. Le chargement reprend automatiquement une fois validée.';
       case 'manga_source_cloudflare_verify_title':
         return 'Vérification du site';
-      case 'manga_tap_ocr_notice_body':
-        return 'Cette page n\'a pas encore de données textuelles. Fushi va la reconnaître avec le moteur OCR choisi dans les paramètres, puis vous pourrez toucher les mots pour les rechercher. Vous pouvez changer de moteur ou désactiver ce comportement dans Paramètres › OCR de manga.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Reconnaître';
-      case 'manga_tap_ocr_notice_title':
-        return 'Toucher pour reconnaître';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Les chapitres en ligne ne sont pas stockés localement, seul Google Lens peut donc les lire — l\'image de la page est envoyée à Google.';
-      case 'manga_tap_ocr_running':
-        return 'Reconnaissance de la page…';
-      case 'manga_tap_to_ocr':
-        return 'Toucher pour reconnaître';
-      case 'manga_tap_to_ocr_desc':
-        return 'Touchez une bulle de dialogue non reconnue pour reconnaître la page et rechercher les mots aussitôt.';
       case 'manga_tap_zone_paging':
         return 'Appuyer sur les bords pour tourner les pages';
       case 'manga_tap_zone_paging_subtitle':
@@ -236595,22 +235840,6 @@ extension on _StringsId {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Mengunggah halaman ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'Tidak ada teks yang dikenali di kotak ini.';
-      case 'manga_rescan_failed':
-        return 'Gagal mengenali ulang area terpilih';
-      case 'manga_rescan_hint':
-        return 'Seret kotak di atas teks yang ingin dikenali ulang. Hasilnya menggantikan lapisan teks yang sudah ada di dalam kotak itu.';
-      case 'manga_rescan_region_updated':
-        return 'Area terpilih dikenali ulang dan disimpan ke halaman';
-      case 'manga_rescan_run':
-        return 'Kenali ulang area terpilih';
-      case 'manga_rescan_running':
-        return 'Mengenali kotak yang dipilih...';
-      case 'manga_rescan_undo_failed':
-        return 'Tidak dapat memulihkan lapisan teks sebelumnya';
-      case 'manga_rescan_undone':
-        return 'Lapisan teks sebelum pemindaian ulang telah dipulihkan';
       case 'manga_section_viewing':
         return 'Tampilan dan pergantian halaman';
       case 'manga_series_all_read':
@@ -236668,20 +235897,6 @@ extension on _StringsId {
         return 'Selesaikan pemeriksaan Cloudflare di bawah ini. Pemuatan akan dilanjutkan otomatis setelah lolos.';
       case 'manga_source_cloudflare_verify_title':
         return 'Verifikasi situs';
-      case 'manga_tap_ocr_notice_body':
-        return 'Halaman ini belum punya data teks. Fushi akan mengenalinya dengan mesin OCR yang Anda pilih di pengaturan, lalu Anda bisa mengetuk kata untuk mencarinya. Mesin bisa diganti atau fitur ini dimatikan di Pengaturan › OCR Manga.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Kenali sekarang';
-      case 'manga_tap_ocr_notice_title':
-        return 'Ketuk untuk mengenali';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Bab daring tidak disimpan di perangkat, jadi hanya Google Lens yang bisa membacanya — gambar halaman diunggah ke Google.';
-      case 'manga_tap_ocr_running':
-        return 'Mengenali halaman ini…';
-      case 'manga_tap_to_ocr':
-        return 'Ketuk untuk mengenali';
-      case 'manga_tap_to_ocr_desc':
-        return 'Ketuk balon percakapan yang belum dikenali untuk mengenali halaman dan langsung mencari kata.';
       case 'manga_tap_zone_paging':
         return 'Ketuk tepi untuk ganti halaman';
       case 'manga_tap_zone_paging_subtitle':
@@ -246310,22 +245525,6 @@ extension on _StringsIt {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Caricamento pagine ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'Nessun testo riconosciuto in questo riquadro.';
-      case 'manga_rescan_failed':
-        return 'OCR dell\'area selezionata non riuscito';
-      case 'manga_rescan_hint':
-        return 'Trascina un riquadro sul testo da rianalizzare. Il risultato sostituisce il livello di testo già presente nel riquadro.';
-      case 'manga_rescan_region_updated':
-        return 'Area selezionata riconosciuta di nuovo e salvata nella pagina';
-      case 'manga_rescan_run':
-        return 'Ripeti l\'OCR sull\'area selezionata';
-      case 'manga_rescan_running':
-        return 'Riconoscimento del riquadro selezionato...';
-      case 'manga_rescan_undo_failed':
-        return 'Impossibile ripristinare il livello di testo precedente';
-      case 'manga_rescan_undone':
-        return 'Ripristinato il livello di testo precedente al nuovo riconoscimento';
       case 'manga_section_viewing':
         return 'Visualizzazione e cambio pagina';
       case 'manga_series_all_read':
@@ -246383,20 +245582,6 @@ extension on _StringsIt {
         return 'Completa il controllo Cloudflare qui sotto. Il caricamento riprenderà automaticamente al superamento.';
       case 'manga_source_cloudflare_verify_title':
         return 'Verifica del sito';
-      case 'manga_tap_ocr_notice_body':
-        return 'Questa pagina non ha ancora dati di testo. Fushi la riconoscerà con il motore OCR che hai scelto nelle impostazioni, poi potrai toccare le parole per cercarle. Puoi cambiare motore o disattivare questo comportamento in Impostazioni › OCR manga.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Riconosci ora';
-      case 'manga_tap_ocr_notice_title':
-        return 'Tocca per riconoscere';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'I capitoli online non sono salvati in locale, quindi può leggerli solo Google Lens — l\'immagine della pagina viene inviata a Google.';
-      case 'manga_tap_ocr_running':
-        return 'Riconoscimento della pagina…';
-      case 'manga_tap_to_ocr':
-        return 'Tocca per riconoscere';
-      case 'manga_tap_to_ocr_desc':
-        return 'Tocca un fumetto non ancora riconosciuto per riconoscere la pagina e cercare subito le parole.';
       case 'manga_tap_zone_paging':
         return 'Tocca i bordi per cambiare pagina';
       case 'manga_tap_zone_paging_subtitle':
@@ -256010,22 +255195,6 @@ extension on _StringsJa {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'ページをアップロード中 ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'このボックス内にテキストが認識されませんでした。';
-      case 'manga_rescan_failed':
-        return '選択範囲の再認識に失敗しました';
-      case 'manga_rescan_hint':
-        return '再認識したいテキストを枠で囲んでドラッグします。結果は枠内の既存のテキストレイヤーを置き換えます。';
-      case 'manga_rescan_region_updated':
-        return '選択範囲を再認識してページに保存しました';
-      case 'manga_rescan_run':
-        return '選択範囲を再認識';
-      case 'manga_rescan_running':
-        return '選択したボックスを認識中...';
-      case 'manga_rescan_undo_failed':
-        return '前のテキストレイヤーに戻せませんでした';
-      case 'manga_rescan_undone':
-        return '再認識する前のテキストレイヤーに戻しました';
       case 'manga_section_viewing':
         return '表示とページめくり';
       case 'manga_series_all_read':
@@ -256083,20 +255252,6 @@ extension on _StringsJa {
         return '下の Cloudflare 認証を完了してください。通過すると自動で読み込みを再開します。';
       case 'manga_source_cloudflare_verify_title':
         return 'サイト認証';
-      case 'manga_tap_ocr_notice_body':
-        return 'このページにはまだテキストデータがありません。Fushi は設定で選んだ OCR エンジンでその場で認識し、認識が終われば単語をタップして調べられます。エンジンの変更やこの動作の無効化は「設定 › マンガOCR」で行えます。';
-      case 'manga_tap_ocr_notice_confirm':
-        return '今すぐ認識';
-      case 'manga_tap_ocr_notice_title':
-        return 'タップで認識';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'オンラインの章はローカルに保存されないため、読み取れるのは Google Lens だけです。ページ画像は Google にアップロードされます。';
-      case 'manga_tap_ocr_running':
-        return 'このページを認識しています…';
-      case 'manga_tap_to_ocr':
-        return 'タップで認識';
-      case 'manga_tap_to_ocr_desc':
-        return 'まだ認識していない吹き出しをタップすると、そのページを認識してすぐに単語を調べられます。';
       case 'manga_tap_zone_paging':
         return '端をタップしてページめくり';
       case 'manga_tap_zone_paging_subtitle':
@@ -265669,22 +264824,6 @@ extension on _StringsKo {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             '페이지 업로드 중 ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return '이 박스에서 텍스트를 인식하지 못했습니다.';
-      case 'manga_rescan_failed':
-        return '선택 영역을 다시 인식하지 못했어요';
-      case 'manga_rescan_hint':
-        return '다시 인식할 텍스트를 드래그해 상자로 감싸세요. 결과는 상자 안의 기존 텍스트 레이어를 대체해요.';
-      case 'manga_rescan_region_updated':
-        return '선택 영역을 다시 인식해 페이지에 저장했어요';
-      case 'manga_rescan_run':
-        return '선택 영역 다시 인식';
-      case 'manga_rescan_running':
-        return '선택한 박스를 인식하는 중...';
-      case 'manga_rescan_undo_failed':
-        return '이전 텍스트 레이어로 되돌리지 못했어요';
-      case 'manga_rescan_undone':
-        return '다시 인식하기 전의 텍스트 레이어로 되돌렸어요';
       case 'manga_section_viewing':
         return '보기 및 페이지 넘기기';
       case 'manga_series_all_read':
@@ -265742,20 +264881,6 @@ extension on _StringsKo {
         return '아래 Cloudflare 확인을 완료하세요. 통과하면 자동으로 불러오기를 계속합니다.';
       case 'manga_source_cloudflare_verify_title':
         return '사이트 확인';
-      case 'manga_tap_ocr_notice_body':
-        return '이 페이지에는 아직 텍스트 데이터가 없어요. Fushi가 설정에서 고른 OCR 엔진으로 바로 인식하고, 인식이 끝나면 단어를 탭해서 찾아볼 수 있어요. 엔진을 바꾸거나 이 동작을 끄려면 설정 › 만화 OCR에서 하면 돼요.';
-      case 'manga_tap_ocr_notice_confirm':
-        return '지금 인식';
-      case 'manga_tap_ocr_notice_title':
-        return '탭해서 인식';
-      case 'manga_tap_ocr_online_lens_only':
-        return '온라인 챕터는 기기에 저장되지 않아 Google Lens로만 읽을 수 있어요. 페이지 이미지는 Google로 업로드돼요.';
-      case 'manga_tap_ocr_running':
-        return '이 페이지를 인식하는 중…';
-      case 'manga_tap_to_ocr':
-        return '탭해서 인식';
-      case 'manga_tap_to_ocr_desc':
-        return '아직 인식하지 않은 말풍선을 탭하면 페이지를 인식하고 바로 단어를 찾아볼 수 있어요.';
       case 'manga_tap_zone_paging':
         return '가장자리 탭으로 페이지 넘기기';
       case 'manga_tap_zone_paging_subtitle':
@@ -275360,22 +274485,6 @@ extension on _StringsNl {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Pagina\'s uploaden ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'Geen tekst herkend in dit kader.';
-      case 'manga_rescan_failed':
-        return 'Opnieuw herkennen van het geselecteerde gebied is mislukt';
-      case 'manga_rescan_hint':
-        return 'Sleep een kader over de tekst die je opnieuw wilt laten herkennen. Het resultaat vervangt de bestaande tekstlaag binnen dat kader.';
-      case 'manga_rescan_region_updated':
-        return 'Geselecteerd gebied opnieuw herkend en in de pagina opgeslagen';
-      case 'manga_rescan_run':
-        return 'Geselecteerd gebied opnieuw herkennen';
-      case 'manga_rescan_running':
-        return 'Geselecteerd kader herkennen...';
-      case 'manga_rescan_undo_failed':
-        return 'Kan de vorige tekstlaag niet herstellen';
-      case 'manga_rescan_undone':
-        return 'Tekstlaag van vóór de herscan hersteld';
       case 'manga_section_viewing':
         return 'Weergave en paginabladeren';
       case 'manga_series_all_read':
@@ -275433,20 +274542,6 @@ extension on _StringsNl {
         return 'Voltooi de Cloudflare-controle hieronder. Het laden gaat automatisch verder zodra deze is geslaagd.';
       case 'manga_source_cloudflare_verify_title':
         return 'Siteverificatie';
-      case 'manga_tap_ocr_notice_body':
-        return 'Deze pagina heeft nog geen tekstgegevens. Fushi herkent hem met de OCR-engine die je in de instellingen hebt gekozen; daarna kun je op woorden tikken om ze op te zoeken. Je kunt de engine wijzigen of dit uitschakelen bij Instellingen › Manga OCR.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Nu herkennen';
-      case 'manga_tap_ocr_notice_title':
-        return 'Tik om te herkennen';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Online hoofdstukken staan niet lokaal opgeslagen, dus alleen Google Lens kan ze lezen — de pagina-afbeelding wordt naar Google geüpload.';
-      case 'manga_tap_ocr_running':
-        return 'Deze pagina wordt herkend…';
-      case 'manga_tap_to_ocr':
-        return 'Tik om te herkennen';
-      case 'manga_tap_to_ocr_desc':
-        return 'Tik op een nog niet herkende tekstballon om de pagina te herkennen en woorden meteen op te zoeken.';
       case 'manga_tap_zone_paging':
         return 'Tik op randen om pagina\'s te bladeren';
       case 'manga_tap_zone_paging_subtitle':
@@ -285083,22 +284178,6 @@ extension on _StringsPtBr {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Enviando páginas ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'Nenhum texto foi reconhecido nesta caixa.';
-      case 'manga_rescan_failed':
-        return 'Falha ao reconhecer novamente a área selecionada';
-      case 'manga_rescan_hint':
-        return 'Arraste um retângulo sobre o texto que deseja reconhecer de novo. O resultado substitui a camada de texto existente dentro do retângulo.';
-      case 'manga_rescan_region_updated':
-        return 'Área selecionada reconhecida novamente e salva na página';
-      case 'manga_rescan_run':
-        return 'Reconhecer novamente a área selecionada';
-      case 'manga_rescan_running':
-        return 'Reconhecendo a caixa selecionada...';
-      case 'manga_rescan_undo_failed':
-        return 'Não foi possível restaurar a camada de texto anterior';
-      case 'manga_rescan_undone':
-        return 'Camada de texto anterior ao novo reconhecimento restaurada';
       case 'manga_section_viewing':
         return 'Visualização e virada de página';
       case 'manga_series_all_read':
@@ -285156,20 +284235,6 @@ extension on _StringsPtBr {
         return 'Conclua a verificação do Cloudflare abaixo. O carregamento continua automaticamente após a aprovação.';
       case 'manga_source_cloudflare_verify_title':
         return 'Verificação do site';
-      case 'manga_tap_ocr_notice_body':
-        return 'Esta página ainda não tem dados de texto. O Fushi vai reconhecê-la com o mecanismo de OCR que você escolheu nas configurações e depois você poderá tocar nas palavras para consultá-las. Você pode trocar o mecanismo ou desativar isso em Configurações › OCR de mangá.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Reconhecer agora';
-      case 'manga_tap_ocr_notice_title':
-        return 'Toque para reconhecer';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Os capítulos online não ficam salvos localmente, então só o Google Lens consegue lê-los — a imagem da página é enviada ao Google.';
-      case 'manga_tap_ocr_running':
-        return 'Reconhecendo esta página…';
-      case 'manga_tap_to_ocr':
-        return 'Toque para reconhecer';
-      case 'manga_tap_to_ocr_desc':
-        return 'Toque em um balão de fala ainda não reconhecido para reconhecer a página e consultar as palavras na hora.';
       case 'manga_tap_zone_paging':
         return 'Tocar nas bordas para virar páginas';
       case 'manga_tap_zone_paging_subtitle':
@@ -294809,22 +293874,6 @@ extension on _StringsRu {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Загрузка страниц ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'Текст в этой области не распознан.';
-      case 'manga_rescan_failed':
-        return 'Не удалось заново распознать выделенную область';
-      case 'manga_rescan_hint':
-        return 'Обведите рамкой текст, который нужно распознать заново. Результат заменит существующий текстовый слой внутри рамки.';
-      case 'manga_rescan_region_updated':
-        return 'Выделенная область распознана заново и сохранена на странице';
-      case 'manga_rescan_run':
-        return 'Распознать выделенную область заново';
-      case 'manga_rescan_running':
-        return 'Распознавание выбранной области...';
-      case 'manga_rescan_undo_failed':
-        return 'Не удалось восстановить предыдущий текстовый слой';
-      case 'manga_rescan_undone':
-        return 'Текстовый слой до повторного распознавания восстановлен';
       case 'manga_section_viewing':
         return 'Просмотр и перелистывание';
       case 'manga_series_all_read':
@@ -294882,20 +293931,6 @@ extension on _StringsRu {
         return 'Пройдите проверку Cloudflare ниже. После её прохождения загрузка продолжится автоматически.';
       case 'manga_source_cloudflare_verify_title':
         return 'Проверка сайта';
-      case 'manga_tap_ocr_notice_body':
-        return 'На этой странице ещё нет текстовых данных. Fushi распознает её движком OCR, выбранным в настройках, после чего можно нажимать на слова и искать их. Сменить движок или отключить это поведение можно в «Настройки › OCR манги».';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Распознать';
-      case 'manga_tap_ocr_notice_title':
-        return 'Распознать по нажатию';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Онлайн-главы не хранятся локально, поэтому прочитать их может только Google Lens — изображение страницы отправляется в Google.';
-      case 'manga_tap_ocr_running':
-        return 'Распознавание страницы…';
-      case 'manga_tap_to_ocr':
-        return 'Распознавание по нажатию';
-      case 'manga_tap_to_ocr_desc':
-        return 'Нажмите на нераспознанное текстовое облачко, чтобы распознать страницу и сразу искать слова.';
       case 'manga_tap_zone_paging':
         return 'Перелистывание касанием краёв';
       case 'manga_tap_zone_paging_subtitle':
@@ -304517,22 +303552,6 @@ extension on _StringsTh {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'กำลังอัปโหลดหน้า ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'ไม่พบข้อความในกล่องนี้';
-      case 'manga_rescan_failed':
-        return 'รู้จำพื้นที่ที่เลือกใหม่ไม่สำเร็จ';
-      case 'manga_rescan_hint':
-        return 'ลากกรอบครอบข้อความที่ต้องการรู้จำใหม่ ผลลัพธ์จะแทนที่ชั้นข้อความเดิมภายในกรอบนั้น';
-      case 'manga_rescan_region_updated':
-        return 'รู้จำพื้นที่ที่เลือกใหม่แล้วและบันทึกลงหน้านี้';
-      case 'manga_rescan_run':
-        return 'รู้จำพื้นที่ที่เลือกใหม่';
-      case 'manga_rescan_running':
-        return 'กำลังรู้จำกล่องที่เลือก...';
-      case 'manga_rescan_undo_failed':
-        return 'คืนค่าชั้นข้อความเวอร์ชันก่อนหน้าไม่สำเร็จ';
-      case 'manga_rescan_undone':
-        return 'คืนค่าชั้นข้อความก่อนการรู้จำใหม่แล้ว';
       case 'manga_section_viewing':
         return 'การดูและการพลิกหน้า';
       case 'manga_series_all_read':
@@ -304590,20 +303609,6 @@ extension on _StringsTh {
         return 'ทำการยืนยัน Cloudflare ด้านล่างให้เสร็จ เมื่อผ่านแล้วระบบจะโหลดต่อโดยอัตโนมัติ';
       case 'manga_source_cloudflare_verify_title':
         return 'การยืนยันเว็บไซต์';
-      case 'manga_tap_ocr_notice_body':
-        return 'หน้านี้ยังไม่มีข้อมูลข้อความ Fushi จะรู้จำข้อความด้วยเอนจิน OCR ที่คุณเลือกไว้ในการตั้งค่า จากนั้นคุณจะแตะคำเพื่อค้นความหมายได้ เปลี่ยนเอนจินหรือปิดพฤติกรรมนี้ได้ที่ การตั้งค่า › OCR มังงะ';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'เริ่มรู้จำ';
-      case 'manga_tap_ocr_notice_title':
-        return 'แตะเพื่อรู้จำข้อความ';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'หน้าของตอนแบบออนไลน์ไม่ได้เก็บไว้ในเครื่อง จึงอ่านได้ด้วย Google Lens เท่านั้น — ภาพหน้านั้นจะถูกอัปโหลดไปยัง Google';
-      case 'manga_tap_ocr_running':
-        return 'กำลังรู้จำหน้านี้…';
-      case 'manga_tap_to_ocr':
-        return 'แตะเพื่อรู้จำข้อความ';
-      case 'manga_tap_to_ocr_desc':
-        return 'แตะช่องคำพูดที่ยังไม่ได้รู้จำ เพื่อรู้จำข้อความทั้งหน้าแล้วค้นคำได้ทันที';
       case 'manga_tap_zone_paging':
         return 'แตะขอบเพื่อพลิกหน้า';
       case 'manga_tap_zone_paging_subtitle':
@@ -314224,22 +313229,6 @@ extension on _StringsTr {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Sayfalar yükleniyor ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'Bu kutuda metin tanınamadı.';
-      case 'manga_rescan_failed':
-        return 'Seçili alanın yeniden tanınması başarısız';
-      case 'manga_rescan_hint':
-        return 'Yeniden tanıtmak istediğiniz metnin üzerine bir kutu sürükleyin. Sonuç, kutunun içindeki mevcut metin katmanının yerini alır.';
-      case 'manga_rescan_region_updated':
-        return 'Seçilen alan yeniden tanındı ve sayfaya kaydedildi';
-      case 'manga_rescan_run':
-        return 'Seçili alanı yeniden tanı';
-      case 'manga_rescan_running':
-        return 'Seçili kutu tanınıyor...';
-      case 'manga_rescan_undo_failed':
-        return 'Önceki metin katmanı geri yüklenemedi';
-      case 'manga_rescan_undone':
-        return 'Yeniden taramadan önceki metin katmanı geri yüklendi';
       case 'manga_section_viewing':
         return 'Görüntüleme ve sayfa çevirme';
       case 'manga_series_all_read':
@@ -314297,20 +313286,6 @@ extension on _StringsTr {
         return 'Aşağıdaki Cloudflare doğrulamasını tamamlayın. Doğrulama geçilince yükleme otomatik olarak sürer.';
       case 'manga_source_cloudflare_verify_title':
         return 'Site doğrulaması';
-      case 'manga_tap_ocr_notice_body':
-        return 'Bu sayfanın henüz metin verisi yok. Fushi, ayarlarda seçtiğiniz OCR motoruyla sayfayı tanıyacak; ardından kelimelere dokunup arayabilirsiniz. Motoru değiştirmeyi ya da bunu kapatmayı Ayarlar › Manga OCR bölümünden yapabilirsiniz.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Şimdi tanı';
-      case 'manga_tap_ocr_notice_title':
-        return 'Dokunarak tanıma';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Çevrimiçi bölümler yerelde saklanmaz, bu yüzden onları yalnızca Google Lens okuyabilir — sayfa görüntüsü Google\'a yüklenir.';
-      case 'manga_tap_ocr_running':
-        return 'Bu sayfa tanınıyor…';
-      case 'manga_tap_to_ocr':
-        return 'Dokunarak tanıma';
-      case 'manga_tap_to_ocr_desc':
-        return 'Tanınmamış bir konuşma balonuna dokunun; sayfa tanınsın, kelimeleri hemen aratın.';
       case 'manga_tap_zone_paging':
         return 'Kenarlara dokunarak sayfa çevirme';
       case 'manga_tap_zone_paging_subtitle':
@@ -323933,22 +322908,6 @@ extension on _StringsVi {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             'Đang tải lên trang ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return 'Không nhận dạng được văn bản nào trong vùng này.';
-      case 'manga_rescan_failed':
-        return 'Nhận dạng lại vùng đã chọn thất bại';
-      case 'manga_rescan_hint':
-        return 'Kéo một khung quanh phần chữ cần nhận dạng lại. Kết quả sẽ thay thế lớp văn bản đang có bên trong khung đó.';
-      case 'manga_rescan_region_updated':
-        return 'Đã nhận dạng lại vùng đã chọn và lưu vào trang';
-      case 'manga_rescan_run':
-        return 'Nhận dạng lại vùng đã chọn';
-      case 'manga_rescan_running':
-        return 'Đang nhận dạng vùng đã chọn...';
-      case 'manga_rescan_undo_failed':
-        return 'Không khôi phục được lớp văn bản trước đó';
-      case 'manga_rescan_undone':
-        return 'Đã khôi phục lớp văn bản trước khi quét lại';
       case 'manga_section_viewing':
         return 'Xem và lật trang';
       case 'manga_series_all_read':
@@ -324006,20 +322965,6 @@ extension on _StringsVi {
         return 'Hoàn tất kiểm tra Cloudflare bên dưới. Quá trình tải sẽ tự động tiếp tục sau khi vượt qua.';
       case 'manga_source_cloudflare_verify_title':
         return 'Xác minh trang web';
-      case 'manga_tap_ocr_notice_body':
-        return 'Trang này chưa có dữ liệu văn bản. Fushi sẽ nhận dạng bằng công cụ OCR bạn chọn trong cài đặt, sau đó bạn có thể chạm vào từ để tra cứu. Bạn có thể đổi công cụ hoặc tắt tính năng này trong Cài đặt › OCR truyện tranh.';
-      case 'manga_tap_ocr_notice_confirm':
-        return 'Nhận dạng ngay';
-      case 'manga_tap_ocr_notice_title':
-        return 'Chạm để nhận dạng';
-      case 'manga_tap_ocr_online_lens_only':
-        return 'Chương trực tuyến không lưu trên máy, nên chỉ Google Lens đọc được — ảnh trang sẽ được tải lên Google.';
-      case 'manga_tap_ocr_running':
-        return 'Đang nhận dạng trang này…';
-      case 'manga_tap_to_ocr':
-        return 'Chạm để nhận dạng';
-      case 'manga_tap_to_ocr_desc':
-        return 'Chạm vào bong bóng thoại chưa nhận dạng để nhận dạng cả trang và tra từ ngay.';
       case 'manga_tap_zone_paging':
         return 'Chạm cạnh để lật trang';
       case 'manga_tap_zone_paging_subtitle':
@@ -333600,22 +332545,6 @@ extension on _StringsZhCn {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             '正在上传页面 ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return '该区域未识别出文字。';
-      case 'manga_rescan_failed':
-        return '重新识别框选区域失败';
-      case 'manga_rescan_hint':
-        return '拖动框选要重新识别的文字。识别结果会替换框内已有的文字层。';
-      case 'manga_rescan_region_updated':
-        return '已重新识别该区域并回写本页';
-      case 'manga_rescan_run':
-        return '重新识别框选区域';
-      case 'manga_rescan_running':
-        return '正在识别所选区域…';
-      case 'manga_rescan_undo_failed':
-        return '还原上一版文字层失败';
-      case 'manga_rescan_undone':
-        return '已还原重新识别前的文字层';
       case 'manga_section_viewing':
         return '浏览与翻页';
       case 'manga_series_all_read':
@@ -333673,20 +332602,6 @@ extension on _StringsZhCn {
         return '在下方完成 Cloudflare 验证，通过后会自动继续加载。';
       case 'manga_source_cloudflare_verify_title':
         return '站点验证';
-      case 'manga_tap_ocr_notice_body':
-        return '这一页还没有文字数据。Fushi 会用你在设置里选的 OCR 引擎就地识别，识别完就能点词查询。可以在「设置 › 漫画 OCR」里更换引擎或关掉这个行为。';
-      case 'manga_tap_ocr_notice_confirm':
-        return '开始识别';
-      case 'manga_tap_ocr_notice_title':
-        return '点一下就识别';
-      case 'manga_tap_ocr_online_lens_only':
-        return '在线章节的页面不在本地，只能用 Google Lens 识别——页面图片会上传给 Google。';
-      case 'manga_tap_ocr_running':
-        return '正在识别本页…';
-      case 'manga_tap_to_ocr':
-        return '点击即识别';
-      case 'manga_tap_to_ocr_desc':
-        return '点一下还没识别的对话框，就地识别本页并直接查词。';
       case 'manga_tap_zone_paging':
         return '点击边缘翻页';
       case 'manga_tap_zone_paging_subtitle':
@@ -343227,22 +342142,6 @@ extension on _StringsZhHk {
       case 'manga_remote_ocr_uploading':
         return ({required Object done, required Object total}) =>
             '正在上傳頁面 ${done} / ${total}…';
-      case 'manga_rescan_empty':
-        return '該區域未識別出文字。';
-      case 'manga_rescan_failed':
-        return '重新識別框選區域失敗';
-      case 'manga_rescan_hint':
-        return '拖動框選要重新識別的文字。識別結果會替換框內已有的文字層。';
-      case 'manga_rescan_region_updated':
-        return '已重新識別該區域並回寫本頁';
-      case 'manga_rescan_run':
-        return '重新識別框選區域';
-      case 'manga_rescan_running':
-        return '正在識別所選區域…';
-      case 'manga_rescan_undo_failed':
-        return '還原上一版文字層失敗';
-      case 'manga_rescan_undone':
-        return '已還原重新識別前的文字層';
       case 'manga_section_viewing':
         return '瀏覽與翻頁';
       case 'manga_series_all_read':
@@ -343300,20 +342199,6 @@ extension on _StringsZhHk {
         return '請在下方完成 Cloudflare 驗證，通過後會自動繼續載入。';
       case 'manga_source_cloudflare_verify_title':
         return '網站驗證';
-      case 'manga_tap_ocr_notice_body':
-        return '這一頁還未有文字資料。Fushi 會用你在設定中選擇的 OCR 引擎就地識別，識別完成後即可點字查詢。可在「設定 › 漫畫 OCR」中更換引擎或關閉這個行為。';
-      case 'manga_tap_ocr_notice_confirm':
-        return '開始識別';
-      case 'manga_tap_ocr_notice_title':
-        return '點一下即識別';
-      case 'manga_tap_ocr_online_lens_only':
-        return '網上章節的頁面不在本機，只能用 Google Lens 識別——頁面圖片會上傳至 Google。';
-      case 'manga_tap_ocr_running':
-        return '正在識別本頁…';
-      case 'manga_tap_to_ocr':
-        return '點擊即識別';
-      case 'manga_tap_to_ocr_desc':
-        return '點一下尚未識別的對話框，即可就地識別本頁並直接查詞。';
       case 'manga_tap_zone_paging':
         return '點擊邊緣翻頁';
       case 'manga_tap_zone_paging_subtitle':
