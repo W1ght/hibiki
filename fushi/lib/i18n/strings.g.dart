@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80070 (4710 per locale)
+/// Strings: 80291 (4723 per locale)
 ///
-/// Built on 2026-09-11 at 20:03 UTC
+/// Built on 2026-09-11 at 21:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6553,6 +6553,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The host already binds this work to ${provider} ID ${id}. Replace it?';
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  String get manga_chapter_download_action => 'Download';
+  String get manga_chapter_download_delete_action => 'Delete download';
+  String get manga_chapter_download_retry_action => 'Retry download';
+  String get manga_chapter_download_status_queued => 'Queued';
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  String get manga_chapter_download_status_failed => 'Download failed';
+  String get stat_reading_speed => 'Reading speed';
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -17644,6 +17661,36 @@ class _StringsAr extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -28961,6 +29008,36 @@ class _StringsDe extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -40332,6 +40409,36 @@ class _StringsEs extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -51736,6 +51843,36 @@ class _StringsFr extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -62944,6 +63081,36 @@ class _StringsId extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -74243,6 +74410,36 @@ class _StringsIt extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -84924,6 +85121,36 @@ class _StringsJa extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -95615,6 +95842,36 @@ class _StringsKo extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -106872,6 +107129,36 @@ class _StringsNl extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -118182,6 +118469,36 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -129469,6 +129786,36 @@ class _StringsRu extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -140557,6 +140904,36 @@ class _StringsTh extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -151760,6 +152137,36 @@ class _StringsTr extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -162933,6 +163340,36 @@ class _StringsVi extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 // Path: <root>
@@ -173184,6 +173621,35 @@ class _StringsZhCn extends _StringsEn {
       '主机上该作品已绑定 ${provider} ID ${id}，要替换吗？';
   @override
   String get remote_collection_scrape_pick_work => '选择要刮削的作品';
+  @override
+  String get manga_chapter_not_downloaded => '本章尚未下载';
+  @override
+  String get manga_chapter_download_queued => '已加入下载队列';
+  @override
+  String get manga_chapter_download_action => '下载';
+  @override
+  String get manga_chapter_download_delete_action => '删除下载';
+  @override
+  String get manga_chapter_download_retry_action => '重试下载';
+  @override
+  String get manga_chapter_download_status_queued => '排队中';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      '下载中 ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => '已下载';
+  @override
+  String get manga_chapter_download_status_failed => '下载失败';
+  @override
+  String get stat_reading_speed => '阅读速度';
+  @override
+  String get settings_study_diag_export => '导出统计诊断日志';
+  @override
+  String get settings_study_diag_export_hint =>
+      '翻页入账、段开封、有声书恢复与跳页流水，用于排查阅读速度异常。保存为文本文件。';
+  @override
+  String get study_diag_share_subject => 'Fushi 统计诊断日志';
 }
 
 // Path: <root>
@@ -183549,6 +184015,36 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get remote_collection_scrape_pick_work =>
       'Choose which work to scrape';
+  @override
+  String get manga_chapter_not_downloaded =>
+      'This chapter has not been downloaded yet';
+  @override
+  String get manga_chapter_download_queued => 'Added to the download queue';
+  @override
+  String get manga_chapter_download_action => 'Download';
+  @override
+  String get manga_chapter_download_delete_action => 'Delete download';
+  @override
+  String get manga_chapter_download_retry_action => 'Retry download';
+  @override
+  String get manga_chapter_download_status_queued => 'Queued';
+  @override
+  String manga_chapter_download_status_downloading(
+          {required Object done, required Object total}) =>
+      'Downloading ${done}/${total}';
+  @override
+  String get manga_chapter_download_status_downloaded => 'Downloaded';
+  @override
+  String get manga_chapter_download_status_failed => 'Download failed';
+  @override
+  String get stat_reading_speed => 'Reading speed';
+  @override
+  String get settings_study_diag_export => 'Export study diagnostics log';
+  @override
+  String get settings_study_diag_export_hint =>
+      'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+  @override
+  String get study_diag_share_subject => 'Fushi study diagnostics';
 }
 
 /// Flat map(s) containing all translations.
@@ -193252,6 +193748,33 @@ extension on _StringsEn {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -202950,6 +203473,33 @@ extension on _StringsAr {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -212693,6 +213243,33 @@ extension on _StringsDe {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -222427,6 +223004,33 @@ extension on _StringsEs {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -232170,6 +232774,33 @@ extension on _StringsFr {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -241884,6 +242515,33 @@ extension on _StringsId {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -251620,6 +252278,33 @@ extension on _StringsIt {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -261283,6 +261968,33 @@ extension on _StringsJa {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -270950,6 +271662,33 @@ extension on _StringsKo {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -280679,6 +281418,33 @@ extension on _StringsNl {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -290403,6 +291169,33 @@ extension on _StringsPtBr {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -300134,6 +300927,33 @@ extension on _StringsRu {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -309837,6 +310657,33 @@ extension on _StringsTh {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -319555,6 +320402,33 @@ extension on _StringsTr {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -329267,6 +330141,33 @@ extension on _StringsVi {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
@@ -338892,6 +339793,33 @@ extension on _StringsZhCn {
             '主机上该作品已绑定 ${provider} ID ${id}，要替换吗？';
       case 'remote_collection_scrape_pick_work':
         return '选择要刮削的作品';
+      case 'manga_chapter_not_downloaded':
+        return '本章尚未下载';
+      case 'manga_chapter_download_queued':
+        return '已加入下载队列';
+      case 'manga_chapter_download_action':
+        return '下载';
+      case 'manga_chapter_download_delete_action':
+        return '删除下载';
+      case 'manga_chapter_download_retry_action':
+        return '重试下载';
+      case 'manga_chapter_download_status_queued':
+        return '排队中';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            '下载中 ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return '已下载';
+      case 'manga_chapter_download_status_failed':
+        return '下载失败';
+      case 'stat_reading_speed':
+        return '阅读速度';
+      case 'settings_study_diag_export':
+        return '导出统计诊断日志';
+      case 'settings_study_diag_export_hint':
+        return '翻页入账、段开封、有声书恢复与跳页流水，用于排查阅读速度异常。保存为文本文件。';
+      case 'study_diag_share_subject':
+        return 'Fushi 统计诊断日志';
       default:
         return null;
     }
@@ -348533,6 +349461,33 @@ extension on _StringsZhHk {
             'The host already binds this work to ${provider} ID ${id}. Replace it?';
       case 'remote_collection_scrape_pick_work':
         return 'Choose which work to scrape';
+      case 'manga_chapter_not_downloaded':
+        return 'This chapter has not been downloaded yet';
+      case 'manga_chapter_download_queued':
+        return 'Added to the download queue';
+      case 'manga_chapter_download_action':
+        return 'Download';
+      case 'manga_chapter_download_delete_action':
+        return 'Delete download';
+      case 'manga_chapter_download_retry_action':
+        return 'Retry download';
+      case 'manga_chapter_download_status_queued':
+        return 'Queued';
+      case 'manga_chapter_download_status_downloading':
+        return ({required Object done, required Object total}) =>
+            'Downloading ${done}/${total}';
+      case 'manga_chapter_download_status_downloaded':
+        return 'Downloaded';
+      case 'manga_chapter_download_status_failed':
+        return 'Download failed';
+      case 'stat_reading_speed':
+        return 'Reading speed';
+      case 'settings_study_diag_export':
+        return 'Export study diagnostics log';
+      case 'settings_study_diag_export_hint':
+        return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
+      case 'study_diag_share_subject':
+        return 'Fushi study diagnostics';
       default:
         return null;
     }
