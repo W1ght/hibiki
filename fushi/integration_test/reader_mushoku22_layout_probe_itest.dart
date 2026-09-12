@@ -33,9 +33,25 @@ const String _epubPath = String.fromEnvironment(
 );
 
 const List<String> _targets = <String>[
-  'p-titlepage.xhtml',
   'p-toc-002.xhtml',
+  'p-002.xhtml',
+  'p-titlepage.xhtml',
 ];
+
+/// 候选 CSS（追加到 head 末尾，压过阅读器样式）：A/B WebKit 行盒规则。
+const Map<String, String> _candidates = <String, String>{
+  'current': '',
+  'lbc-default':
+      'html{-webkit-line-box-contain: block inline replaced !important}',
+  'lbc-default-rt1':
+      'html{-webkit-line-box-contain: block inline replaced !important} rt{line-height:1 !important}',
+  'lbc-default-rt07':
+      'html{-webkit-line-box-contain: block inline replaced !important} rt{line-height:0.7 !important}',
+  'lbc-default-rt0':
+      'html{-webkit-line-box-contain: block inline replaced !important} rt{line-height:0 !important}',
+  'lbc-block-inlinebox':
+      'html{-webkit-line-box-contain: block replaced inline-box !important}',
+};
 
 const Key _kWebViewKey = ValueKey<String>('fushi_webview');
 const Key _kContentReadyKey = ValueKey<String>('fushi_content_ready');
@@ -60,8 +76,10 @@ Future<void> _waitFor(
       return;
     }
   }
-  fail('$label did not become ready within '
-      '${maxPolls * step.inMilliseconds}ms');
+  fail(
+    '$label did not become ready within '
+    '${maxPolls * step.inMilliseconds}ms',
+  );
 }
 
 Future<void> _pumpForPref(WidgetTester tester) async {
@@ -74,14 +92,19 @@ Future<void> _openBook(WidgetTester tester, String bookKey) async {
   await openBookViaProductionPath(tester, bookKey);
   await _waitFor(tester, _webViewShown, 'reader WebView');
   await _waitFor(tester, _contentReady, 'reader content', maxPolls: 240);
-  await _waitFor(tester, readerWebViewReady, 'reader debug hooks',
-      maxPolls: 20);
+  await _waitFor(
+    tester,
+    readerWebViewReady,
+    'reader debug hooks',
+    maxPolls: 20,
+  );
 }
 
 Future<void> _closeReader(WidgetTester tester) async {
   if (_readerPageGone()) return;
-  final NavigatorState nav =
-      Navigator.of(tester.element(find.byType(ReaderFushiPage)));
+  final NavigatorState nav = Navigator.of(
+    tester.element(find.byType(ReaderFushiPage)),
+  );
   nav.pop();
   await _waitFor(tester, _readerPageGone, 'reader closed', maxPolls: 40);
   await tester.pump(const Duration(seconds: 1));
@@ -115,8 +138,17 @@ const String _probeJs = r'''
               ratio: window.fushiReader && window.fushiReader._imageWidthRatio,
               csize: window.fushiReader && window.fushiReader._contentSize && window.fushiReader._contentSize(),
               ibox: window.fushiReader && window.fushiReader._imageMaxBox && window.fushiReader._imageMaxBox() },
-    ps: [], imgs: [], mains: []
+    ps: [], imgs: [], mains: [], zeroP: 0, totalP: 0
   };
+  (function () {
+    var all = document.querySelectorAll('p');
+    var vertical = /^vertical/.test(bcs.writingMode || '');
+    for (var q = 0; q < all.length; q++) {
+      var rr = all[q].getBoundingClientRect();
+      out.totalP++;
+      if ((vertical ? rr.width : rr.height) < 1) out.zeroP++;
+    }
+  })();
   var ps = document.querySelectorAll('p');
   for (var i = 0; i < ps.length && i < 30; i++) {
     var p = ps[i];
@@ -146,6 +178,138 @@ const String _probeJs = r'''
 })()
 ''';
 
+const String _rubyJs = r'''
+(function () {
+  function median(a) {
+    if (!a.length) return 0;
+    var s = a.slice().sort(function (x, y) { return x - y; });
+    var m = s.length >> 1;
+    return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+  }
+  function ua() {
+    var u = navigator.userAgent || '';
+    var m;
+    if ((m = /Chrome\/([\d.]+)/.exec(u))) return 'Blink Chrome/' + m[1];
+    if ((m = /AppleWebKit\/([\d.]+)/.exec(u))) return 'WebKit AppleWebKit/' + m[1];
+    return u.slice(0, 60);
+  }
+  var bodyCs = getComputedStyle(document.body);
+  var fontSize = parseFloat(bodyCs.fontSize) || 16;
+  var vertical = /^vertical/.test(bodyCs.writingMode || '');
+  var out = { engine: ua(), bodyFontSize: bodyCs.fontSize, bodyLineHeight: bodyCs.lineHeight,
+              bodyWritingMode: bodyCs.writingMode, blocks: 0, lines: [] };
+  var firstRt = document.querySelector('rt');
+  if (firstRt) {
+    var rc = getComputedStyle(firstRt);
+    out.rtCss = { display: rc.display, fontSize: rc.fontSize, lineHeight: rc.lineHeight };
+    var ru = getComputedStyle(firstRt.parentNode);
+    out.rubyCss = { display: ru.display, lineHeight: ru.lineHeight,
+                    rubyPosition: ru.rubyPosition || ru.webkitRubyPosition || '' };
+  }
+  out.rubyCount = document.querySelectorAll('ruby').length;
+  var blocks = document.querySelectorAll('p, div, li, h1, h2, h3');
+  var plainPitches = [], rubyPitches = [];
+  var plainExtras = [], rubyExtras = [], firstRubyExtras = [];
+  var detail = [];
+  for (var i = 0; i < blocks.length; i++) {
+    var p = blocks[i];
+    // 只取叶子块（不含子块级元素），避免同一文本被父块重复量。
+    if (p.querySelector('p, div, li, h1, h2, h3')) continue;
+    var walker = document.createTreeWalker(p, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        var e = n.parentNode;
+        while (e && e !== p) {
+          var t = e.tagName;
+          if (t === 'RT' || t === 'RP' || t === 'RTC') return NodeFilter.FILTER_REJECT;
+          e = e.parentNode;
+        }
+        return n.textContent.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+      }
+    });
+    var lines = [];
+    var node;
+    while ((node = walker.nextNode())) {
+      var inRuby = !!(node.parentNode && node.parentNode.closest && node.parentNode.closest('ruby'));
+      var len = node.textContent.length;
+      for (var k = 0; k < len; k++) {
+        if (!node.textContent[k].trim()) continue;
+        var r = document.createRange();
+        r.setStart(node, k); r.setEnd(node, k + 1);
+        var rects = r.getClientRects();
+        if (!rects.length) continue;
+        var cr = rects[0];
+        if (cr.width <= 0 || cr.height <= 0) continue;
+        var found = null;
+        for (var L = 0; L < lines.length; L++) {
+          var same = vertical
+            ? (Math.abs(lines[L].left - cr.left) <= 2)
+            : (Math.abs(lines[L].top - cr.top) <= 2);
+          if (same) { found = lines[L]; break; }
+        }
+        if (found) {
+          found.top = Math.min(found.top, cr.top); found.bottom = Math.max(found.bottom, cr.bottom);
+          found.left = Math.min(found.left, cr.left); found.right = Math.max(found.right, cr.right);
+          found.chars++; if (inRuby) found.ruby++;
+        } else {
+          lines.push({ top: cr.top, bottom: cr.bottom, left: cr.left, right: cr.right, chars: 1, ruby: inRuby ? 1 : 0 });
+        }
+      }
+    }
+    if (lines.length < 2) continue;
+    out.blocks++;
+    // 段落块轴尺寸 − 行数×本段行距中位数 = 段落多出的空间（首行被注音撑高会落在这里）。
+    (function () {
+      var ps = [];
+      for (var q = 1; q < lines.length; q++) {
+        var dq = vertical ? (lines[q - 1].left - lines[q].left) : (lines[q].top - lines[q - 1].top);
+        if (dq > 0 && dq < fontSize * 4) ps.push(dq);
+      }
+      if (!ps.length) return;
+      var pr = p.getBoundingClientRect();
+      var blockSize = vertical ? pr.width : pr.height;
+      var extra = blockSize - lines.length * median(ps);
+      var hasRuby = lines.some(function (l) { return l.ruby > 0; });
+      var firstRuby = lines[0].ruby > 0;
+      (hasRuby ? rubyExtras : plainExtras).push(extra);
+      if (firstRuby) firstRubyExtras.push(extra);
+    })();
+    for (var L2 = 1; L2 < lines.length; L2++) {
+      var a = lines[L2 - 1], b = lines[L2];
+      var d = vertical ? (a.left - b.left) : (b.top - a.top);
+      if (!(d > 0 && d < fontSize * 4)) continue;
+      var anyRuby = a.ruby > 0 || b.ruby > 0;
+      (anyRuby ? rubyPitches : plainPitches).push(d);
+      if (detail.length < 40) {
+        detail.push({ block: i, pitch: Math.round(d * 100) / 100, aRuby: a.ruby, bRuby: b.ruby,
+                      aChars: a.chars, bChars: b.chars });
+      }
+    }
+  }
+  out.plain = Math.round(median(plainPitches) * 100) / 100;
+  out.ruby = Math.round(median(rubyPitches) * 100) / 100;
+  out.plainN = plainPitches.length; out.rubyN = rubyPitches.length;
+  out.plainMax = Math.round(Math.max.apply(null, plainPitches.concat([0])) * 100) / 100;
+  out.rubyMax = Math.round(Math.max.apply(null, rubyPitches.concat([0])) * 100) / 100;
+  out.delta = Math.round((out.ruby - out.plain) * 100) / 100;
+  out.plainExtra = Math.round(median(plainExtras) * 100) / 100;
+  out.rubyExtra = Math.round(median(rubyExtras) * 100) / 100;
+  out.firstRubyExtra = Math.round(median(firstRubyExtras) * 100) / 100;
+  out.plainExtraN = plainExtras.length; out.rubyExtraN = rubyExtras.length;
+  out.firstRubyExtraN = firstRubyExtras.length;
+  out.lines = detail;
+  return JSON.stringify(out);
+})()
+''';
+
+String _describeInsets(BuildContext c, ReaderFushiSource source) =>
+    '[m22] flutter viewPadding=${MediaQuery.viewPaddingOf(c)} '
+    'padding=${MediaQuery.paddingOf(c)} size=${MediaQuery.sizeOf(c)} '
+    'dpr=${MediaQuery.devicePixelRatioOf(c)} '
+    'marginTop=${source.readerMarginTop} '
+    'marginBottom=${source.readerMarginBottom} '
+    'topProgress=${source.showTopProgressBar} '
+    'topProgressFloating=${source.topProgressFloating}';
+
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
@@ -160,8 +324,11 @@ void main() {
         label: 'm22',
         body: () async {
           await launchFushiTestApp();
-          expect(await waitForHome(tester), isTrue,
-              reason: 'home (nav bar) must render');
+          expect(
+            await waitForHome(tester),
+            isTrue,
+            reason: 'home (nav bar) must render',
+          );
           await tester.pump(const Duration(seconds: 2));
           final AppModel appModel = await readyAppModel(tester);
 
@@ -170,9 +337,11 @@ void main() {
           final String originalViewMode = source.readerViewMode;
           final bool originalFloating = source.tapEmptyToHideChrome;
           final double originalFontSize = source.readerFontSize;
-          debugPrint('[m22] original prefs: writing_mode=$originalWritingMode '
-              'view_mode=$originalViewMode floating=$originalFloating '
-              'font_size=$originalFontSize merge=${source.readerMergeImagePages}');
+          debugPrint(
+            '[m22] original prefs: writing_mode=$originalWritingMode '
+            'view_mode=$originalViewMode floating=$originalFloating '
+            'font_size=$originalFontSize merge=${source.readerMergeImagePages}',
+          );
 
           try {
             await source.setReaderViewMode('paginated');
@@ -188,13 +357,15 @@ void main() {
               fileName: epub.uri.pathSegments.last,
             );
             debugPrint('[m22] imported key=$bookKey');
-            final EpubBookRow? row =
-                await appModel.database.getEpubBook(bookKey);
+            final EpubBookRow? row = await appModel.database.getEpubBook(
+              bookKey,
+            );
             expect(row, isNotNull);
             final List<dynamic> chapters =
                 jsonDecode(row!.chaptersJson) as List<dynamic>;
             for (int i = 0; i < chapters.length; i++) {
-              final Map<String, dynamic> c = chapters[i] as Map<String, dynamic>;
+              final Map<String, dynamic> c =
+                  chapters[i] as Map<String, dynamic>;
               debugPrint('[m22] chapter $i href=${c['href']}');
             }
 
@@ -205,8 +376,11 @@ void main() {
                     (chapters[i] as Map<String, dynamic>)['href'] as String;
                 if (href.endsWith(target)) section = i;
               }
-              expect(section, greaterThanOrEqualTo(0),
-                  reason: 'target $target not in spine');
+              expect(
+                section,
+                greaterThanOrEqualTo(0),
+                reason: 'target $target not in spine',
+              );
               await appModel.database.upsertReaderPosition(
                 ReaderPositionsCompanion(
                   bookUid: Value<String>(row.uid),
@@ -219,52 +393,64 @@ void main() {
               await tester.pump(const Duration(seconds: 1));
               await _openBook(tester, bookKey);
               await tester.pump(const Duration(seconds: 2));
-              final BuildContext readerCtx =
-                  tester.element(find.byType(ReaderFushiPage));
-              debugPrint('[m22] flutter viewPadding='
-                  '${MediaQuery.viewPaddingOf(readerCtx)} padding='
-                  '${MediaQuery.paddingOf(readerCtx)} size='
-                  '${MediaQuery.sizeOf(readerCtx)} dpr='
-                  '${MediaQuery.devicePixelRatioOf(readerCtx)} '
-                  'marginTop=${source.readerMarginTop} '
-                  'marginBottom=${source.readerMarginBottom} '
-                  'topProgress=${source.showTopProgressBar} '
-                  'topProgressFloating=${source.topProgressFloating}');
-
+              debugPrint(
+                _describeInsets(
+                  tester.element(find.byType(ReaderFushiPage)),
+                  source,
+                ),
+              );
               final Future<dynamic> Function(String)? runJs =
                   ReaderFushiPage.debugEvaluateJavascript;
               expect(runJs, isNotNull);
+              // Mac hidden runner：initialize 时 WKWebView 尚未有尺寸，图片盒被钉成
+              // 1px；强制按当前几何重算一次，让插图按真实列高铺开再取证。
+              await runJs('window.fushiReader._resetImageMaxVars()');
+              await tester.pump(const Duration(seconds: 2));
+
               final String tag = target.replaceAll('.xhtml', '');
-              for (final String phase in <String>[
+              final List<String> phases = <String>[
                 'open',
-                'settled',
-                'lbc-default',
-                'lbc-inline',
-                'lbc-block',
-                'page2',
-                'page3',
-              ]) {
-                if (phase == 'settled') {
-                  await tester.pump(const Duration(seconds: 6));
-                } else if (phase.startsWith('lbc-')) {
-                  final String v = phase == 'lbc-default'
-                      ? 'block inline replaced'
-                      : phase == 'lbc-inline'
-                          ? 'inline replaced'
-                          : 'block replaced';
-                  await runJs!(
-                    "document.documentElement.style.setProperty('-webkit-line-box-contain', '$v', 'important'); void document.body.offsetWidth;",
+                ..._candidates.keys.where((String k) => k != 'current'),
+                'restore',
+                if (target == 'p-titlepage.xhtml') ...<String>[
+                  'page2',
+                  'page3',
+                ],
+              ];
+              for (final String phase in phases) {
+                if (_candidates.containsKey(phase) || phase == 'restore') {
+                  final String css = _candidates[phase] ?? '';
+                  await runJs(
+                    "(function(){var s=document.getElementById('fushi-probe-css');"
+                    "if(!s){s=document.createElement('style');s.id='fushi-probe-css';document.head.appendChild(s);}"
+                    's.textContent=${jsonEncode(css)};void document.body.offsetWidth;})()',
                   );
                   await tester.pump(const Duration(seconds: 1));
                 } else if (phase.startsWith('page')) {
                   await runJs!('window.fushiReader.paginate("forward")');
                   await tester.pump(const Duration(seconds: 2));
                 }
-                final String raw = (await runJs!(_probeJs)) as String;
-                debugPrint('[m22] $tag $phase ${raw.length} chars');
-                // 分段打印，避免单行被日志截断。
+                final String raw = (await runJs(_probeJs)) as String;
                 final Map<String, dynamic> r =
                     jsonDecode(raw) as Map<String, dynamic>;
+                String rubyLine = '';
+                if (target == 'p-002.xhtml') {
+                  final Map<String, dynamic> rb =
+                      jsonDecode((await runJs(_rubyJs)) as String)
+                          as Map<String, dynamic>;
+                  rubyLine =
+                      ' plain=${rb['plain']}(n=${rb['plainN']}) '
+                      'ruby=${rb['ruby']}(n=${rb['rubyN']}) delta=${rb['delta']} '
+                      'plainExtra=${rb['plainExtra']} rubyExtra=${rb['rubyExtra']} '
+                      'firstRubyExtra=${rb['firstRubyExtra']}'
+                      '(n=${rb['firstRubyExtraN']}) rtCss=${jsonEncode(rb['rtCss'])}';
+                }
+                debugPrint(
+                  '[m22] SUMMARY $tag $phase zeroP=${r['zeroP']}/'
+                  '${r['totalP']} lbc=${(r['html'] as Map)['lbc']} '
+                  'imgMax=${jsonEncode(r['imgMax'])} '
+                  'client=${jsonEncode(r['client'])}$rubyLine',
+                );
                 for (final String key in r.keys) {
                   final dynamic v = r[key];
                   if (v is List) {
@@ -275,12 +461,14 @@ void main() {
                     debugPrint('[m22] $tag $phase $key ${jsonEncode(v)}');
                   }
                 }
-                final ObserveShot web =
-                    await captureReaderWebView('m22-$tag-$phase-webview');
-                final ObserveShot frame =
-                    await captureFlutterFrame(tester, 'm22-$tag-$phase-frame');
-                debugPrint('[m22] $tag $phase shots web=${web.path} '
-                    'frame=${frame.path}');
+                if (phase == 'open' ||
+                    phase.startsWith('page') ||
+                    phase == 'lbc-default') {
+                  final ObserveShot web = await captureReaderWebView(
+                    'm22-$tag-$phase-webview',
+                  );
+                  debugPrint('[m22] $tag $phase shot web=${web.path}');
+                }
               }
               await _closeReader(tester);
             }
