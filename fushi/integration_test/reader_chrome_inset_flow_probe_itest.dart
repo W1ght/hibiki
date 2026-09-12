@@ -24,10 +24,7 @@ import 'test_helpers.dart';
 /// chrome 顶部 inset 流转探针：挤压态开书 → 点空白收起 chrome → 切到悬浮态 →
 /// 再唤出 / 收起，每一步读 WebView 里的 `--chrome-top-inset` / `--chrome-bottom-inset`
 /// 与 body padding，看 Dart 侧预留是否真的喂到了页内。
-const String _epubPath = String.fromEnvironment(
-  'FUSHI_PROBE_EPUB',
-  defaultValue: r'C:\Users\Wight\.claude\jobs\181ad860\tmp\mushoku22\book.epub',
-);
+const String _epubPath = String.fromEnvironment('FUSHI_PROBE_EPUB');
 
 const Key _kWebViewKey = ValueKey<String>('fushi_webview');
 const Key _kContentReadyKey = ValueKey<String>('fushi_content_ready');
@@ -95,6 +92,11 @@ void main() {
     'chrome inset flow: squeeze → hide → floating → reveal/hide',
     timeout: const Timeout(Duration(minutes: 15)),
     (WidgetTester tester) async {
+      expect(
+        _epubPath,
+        isNotEmpty,
+        reason: 'pass --dart-define=FUSHI_PROBE_EPUB=<path to epub>',
+      );
       final File epub = File(_epubPath);
       expect(epub.existsSync(), isTrue, reason: 'epub not found: $_epubPath');
 

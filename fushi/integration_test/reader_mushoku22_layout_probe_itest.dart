@@ -27,10 +27,7 @@ import 'test_helpers.dart';
 /// 钉阅读位置、竖排分页开书，抓 WebView 截图并 dump DOM 几何（段落矩形 / 图片矩形 /
 /// chrome 顶部 inset / body padding），每章抓两次：开书即刻（悬浮 chrome 唤出态）与
 /// 5s 后（自动收起态）。
-const String _epubPath = String.fromEnvironment(
-  'FUSHI_PROBE_EPUB',
-  defaultValue: r'C:\Users\Wight\.claude\jobs\181ad860\tmp\mushoku22\book.epub',
-);
+const String _epubPath = String.fromEnvironment('FUSHI_PROBE_EPUB');
 
 typedef _Pass = ({
   String target,
@@ -407,6 +404,11 @@ void main() {
     'mushoku22 layout probe: toc overlap / merged image / floating top gap',
     timeout: const Timeout(Duration(minutes: 20)),
     (WidgetTester tester) async {
+      expect(
+        _epubPath,
+        isNotEmpty,
+        reason: 'pass --dart-define=FUSHI_PROBE_EPUB=<path to epub>',
+      );
       final File epub = File(_epubPath);
       expect(epub.existsSync(), isTrue, reason: 'epub not found: $_epubPath');
 
