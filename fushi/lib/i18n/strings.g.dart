@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77010 (4530 per locale)
+/// Strings: 77027 (4531 per locale)
 ///
-/// Built on 2026-09-11 at 19:23 UTC
+/// Built on 2026-09-12 at 03:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6359,6 +6359,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_study_diag_export_hint =>
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -17071,6 +17072,8 @@ class _StringsAr extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -28019,6 +28022,8 @@ class _StringsDe extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -39017,6 +39022,8 @@ class _StringsEs extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -50048,6 +50055,8 @@ class _StringsFr extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -60879,6 +60888,8 @@ class _StringsId extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -71806,6 +71817,8 @@ class _StringsIt extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -82101,6 +82114,8 @@ class _StringsJa extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -92407,6 +92422,8 @@ class _StringsKo extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -103288,6 +103305,8 @@ class _StringsNl extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -114222,6 +114241,8 @@ class _StringsPtBr extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -125134,6 +125155,8 @@ class _StringsRu extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -135843,6 +135866,8 @@ class _StringsTh extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -146670,6 +146695,8 @@ class _StringsTr extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -157466,6 +157493,8 @@ class _StringsVi extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 // Path: <root>
@@ -167377,6 +167406,8 @@ class _StringsZhCn extends _StringsEn {
       '翻页入账、段开封、有声书恢复与跳页流水，用于排查阅读速度异常。保存为文本文件。';
   @override
   String get study_diag_share_subject => 'Fushi 统计诊断日志';
+  @override
+  String get reader_furigana_dimmed => '淡显';
 }
 
 // Path: <root>
@@ -177357,6 +177388,8 @@ class _StringsZhHk extends _StringsEn {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   @override
   String get study_diag_share_subject => 'Fushi study diagnostics';
+  @override
+  String get reader_furigana_dimmed => 'Dimmed';
 }
 
 /// Flat map(s) containing all translations.
@@ -186683,6 +186716,8 @@ extension on _StringsEn {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -196004,6 +196039,8 @@ extension on _StringsAr {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -205374,6 +205411,8 @@ extension on _StringsDe {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -214734,6 +214773,8 @@ extension on _StringsEs {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -224102,6 +224143,8 @@ extension on _StringsFr {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -233440,6 +233483,8 @@ extension on _StringsId {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -242801,6 +242846,8 @@ extension on _StringsIt {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -252086,6 +252133,8 @@ extension on _StringsJa {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -261376,6 +261425,8 @@ extension on _StringsKo {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -270732,6 +270783,8 @@ extension on _StringsNl {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -280083,6 +280136,8 @@ extension on _StringsPtBr {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -289440,6 +289495,8 @@ extension on _StringsRu {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -298766,6 +298823,8 @@ extension on _StringsTh {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -308108,6 +308167,8 @@ extension on _StringsTr {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -317444,6 +317505,8 @@ extension on _StringsVi {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
@@ -326696,6 +326759,8 @@ extension on _StringsZhCn {
         return '翻页入账、段开封、有声书恢复与跳页流水，用于排查阅读速度异常。保存为文本文件。';
       case 'study_diag_share_subject':
         return 'Fushi 统计诊断日志';
+      case 'reader_furigana_dimmed':
+        return '淡显';
       default:
         return null;
     }
@@ -335959,6 +336024,8 @@ extension on _StringsZhHk {
         return 'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
       case 'study_diag_share_subject':
         return 'Fushi study diagnostics';
+      case 'reader_furigana_dimmed':
+        return 'Dimmed';
       default:
         return null;
     }
