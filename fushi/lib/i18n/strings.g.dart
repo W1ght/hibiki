@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80274 (4722 per locale)
+/// Strings: 80614 (4742 per locale)
 ///
-/// Built on 2026-09-11 at 22:05 UTC
+/// Built on 2026-09-12 at 04:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6569,6 +6569,31 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_furigana_off => 'Off';
   String get reader_furigana_toggle => 'Toggle';
   String get reader_furigana_hidden => 'Hidden';
+  String get manga_series_download_all => 'Download all';
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  String get manga_series_auto_ocr => 'Recognize after download';
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  String get manga_series_ocr_queued => 'Recognition queued';
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  String get manga_series_subscribe => 'Subscribe';
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  String get manga_online_download_all => 'Download all';
+  String get manga_online_select_all => 'Select all';
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  String get manga_chapter_locked_title => 'Chapter locked';
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  String get mihon_sources_search_hint => 'Search sources';
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -17688,6 +17713,51 @@ class _StringsAr extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -29033,6 +29103,51 @@ class _StringsDe extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -40432,6 +40547,51 @@ class _StringsEs extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -51864,6 +52024,51 @@ class _StringsFr extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -63100,6 +63305,51 @@ class _StringsId extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -74427,6 +74677,51 @@ class _StringsIt extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -85136,6 +85431,51 @@ class _StringsJa extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -95855,6 +96195,51 @@ class _StringsKo extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -107140,6 +107525,51 @@ class _StringsNl extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -118478,6 +118908,51 @@ class _StringsPtBr extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -129793,6 +130268,51 @@ class _StringsRu extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -140909,6 +141429,51 @@ class _StringsTh extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -152140,6 +152705,51 @@ class _StringsTr extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -163341,6 +163951,51 @@ class _StringsVi extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -173619,6 +174274,48 @@ class _StringsZhCn extends _StringsEn {
   String get reader_furigana_toggle => '点击显示';
   @override
   String get reader_furigana_hidden => '隐藏';
+  @override
+  String get manga_series_download_all => '下载全部';
+  @override
+  String get manga_series_download_all_none => '所有章节都已下载或在队列中';
+  @override
+  String get manga_series_auto_ocr => '完成后自动识别';
+  @override
+  String get manga_series_ocr_all_downloaded => '识别全部已下载';
+  @override
+  String get manga_series_ocr_all_none => '没有需要识别的已下载章节';
+  @override
+  String get manga_series_ocr_queued => '已加入识别队列';
+  @override
+  String get manga_series_ocr_no_engine => '没有可用的识别引擎';
+  @override
+  String get manga_chapter_ocr_action => '识别本章';
+  @override
+  String get manga_series_subscribe => '订阅';
+  @override
+  String get manga_series_unsubscribe => '取消订阅';
+  @override
+  String get manga_series_auto_download => '新章自动下载';
+  @override
+  String get manga_online_download_all => '下载全部';
+  @override
+  String get manga_online_select_all => '全选';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '已加入 ${count} 章到下载队列';
+  @override
+  String get manga_chapter_locked_title => '章节已锁定';
+  @override
+  String get manga_chapter_locked_hint => '源站要求登录并购买或租借后才能下载本章。';
+  @override
+  String get manga_chapter_locked_download_anyway => '仍然下载';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      '已跳过 ${count} 个锁定章节';
+  @override
+  String get mihon_sources_search_hint => '搜索漫画源';
+  @override
+  String get mihon_source_login_forward => '前进';
 }
 
 // Path: <root>
@@ -184012,6 +184709,51 @@ class _StringsZhHk extends _StringsEn {
   String get reader_furigana_toggle => 'Toggle';
   @override
   String get reader_furigana_hidden => 'Hidden';
+  @override
+  String get manga_series_download_all => 'Download all';
+  @override
+  String get manga_series_download_all_none =>
+      'Every chapter is already downloaded or queued';
+  @override
+  String get manga_series_auto_ocr => 'Recognize after download';
+  @override
+  String get manga_series_ocr_all_downloaded => 'Recognize all downloaded';
+  @override
+  String get manga_series_ocr_all_none =>
+      'No downloaded chapter needs recognition';
+  @override
+  String get manga_series_ocr_queued => 'Recognition queued';
+  @override
+  String get manga_series_ocr_no_engine => 'No OCR engine is available';
+  @override
+  String get manga_chapter_ocr_action => 'Recognize this chapter';
+  @override
+  String get manga_series_subscribe => 'Subscribe';
+  @override
+  String get manga_series_unsubscribe => 'Unsubscribe';
+  @override
+  String get manga_series_auto_download => 'Auto-download new chapters';
+  @override
+  String get manga_online_download_all => 'Download all';
+  @override
+  String get manga_online_select_all => 'Select all';
+  @override
+  String manga_series_download_all_queued({required Object count}) =>
+      '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 /// Flat map(s) containing all translations.
@@ -193740,6 +194482,46 @@ extension on _StringsEn {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -203463,6 +204245,46 @@ extension on _StringsAr {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -213231,6 +214053,46 @@ extension on _StringsDe {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -222990,6 +223852,46 @@ extension on _StringsEs {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -232758,6 +233660,46 @@ extension on _StringsFr {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -242497,6 +243439,46 @@ extension on _StringsId {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -252258,6 +253240,46 @@ extension on _StringsIt {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -261946,6 +262968,46 @@ extension on _StringsJa {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -271638,6 +272700,46 @@ extension on _StringsKo {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -281392,6 +282494,46 @@ extension on _StringsNl {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -291141,6 +292283,46 @@ extension on _StringsPtBr {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -300897,6 +302079,46 @@ extension on _StringsRu {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -310625,6 +311847,46 @@ extension on _StringsTh {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -320368,6 +321630,46 @@ extension on _StringsTr {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -330105,6 +331407,46 @@ extension on _StringsVi {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -339755,6 +341097,46 @@ extension on _StringsZhCn {
         return '点击显示';
       case 'reader_furigana_hidden':
         return '隐藏';
+      case 'manga_series_download_all':
+        return '下载全部';
+      case 'manga_series_download_all_none':
+        return '所有章节都已下载或在队列中';
+      case 'manga_series_auto_ocr':
+        return '完成后自动识别';
+      case 'manga_series_ocr_all_downloaded':
+        return '识别全部已下载';
+      case 'manga_series_ocr_all_none':
+        return '没有需要识别的已下载章节';
+      case 'manga_series_ocr_queued':
+        return '已加入识别队列';
+      case 'manga_series_ocr_no_engine':
+        return '没有可用的识别引擎';
+      case 'manga_chapter_ocr_action':
+        return '识别本章';
+      case 'manga_series_subscribe':
+        return '订阅';
+      case 'manga_series_unsubscribe':
+        return '取消订阅';
+      case 'manga_series_auto_download':
+        return '新章自动下载';
+      case 'manga_online_download_all':
+        return '下载全部';
+      case 'manga_online_select_all':
+        return '全选';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '已加入 ${count} 章到下载队列';
+      case 'manga_chapter_locked_title':
+        return '章节已锁定';
+      case 'manga_chapter_locked_hint':
+        return '源站要求登录并购买或租借后才能下载本章。';
+      case 'manga_chapter_locked_download_anyway':
+        return '仍然下载';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => '已跳过 ${count} 个锁定章节';
+      case 'mihon_sources_search_hint':
+        return '搜索漫画源';
+      case 'mihon_source_login_forward':
+        return '前进';
       default:
         return null;
     }
@@ -349421,6 +350803,46 @@ extension on _StringsZhHk {
         return 'Toggle';
       case 'reader_furigana_hidden':
         return 'Hidden';
+      case 'manga_series_download_all':
+        return 'Download all';
+      case 'manga_series_download_all_none':
+        return 'Every chapter is already downloaded or queued';
+      case 'manga_series_auto_ocr':
+        return 'Recognize after download';
+      case 'manga_series_ocr_all_downloaded':
+        return 'Recognize all downloaded';
+      case 'manga_series_ocr_all_none':
+        return 'No downloaded chapter needs recognition';
+      case 'manga_series_ocr_queued':
+        return 'Recognition queued';
+      case 'manga_series_ocr_no_engine':
+        return 'No OCR engine is available';
+      case 'manga_chapter_ocr_action':
+        return 'Recognize this chapter';
+      case 'manga_series_subscribe':
+        return 'Subscribe';
+      case 'manga_series_unsubscribe':
+        return 'Unsubscribe';
+      case 'manga_series_auto_download':
+        return 'Auto-download new chapters';
+      case 'manga_online_download_all':
+        return 'Download all';
+      case 'manga_online_select_all':
+        return 'Select all';
+      case 'manga_series_download_all_queued':
+        return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
