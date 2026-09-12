@@ -399,9 +399,9 @@ void main() {
                   source,
                 ),
               );
-              final Future<dynamic> Function(String)? runJs =
-                  ReaderFushiPage.debugEvaluateJavascript;
-              expect(runJs, isNotNull);
+              expect(ReaderFushiPage.debugEvaluateJavascript, isNotNull);
+              final Future<dynamic> Function(String) runJs =
+                  ReaderFushiPage.debugEvaluateJavascript!;
               // Mac hidden runner：initialize 时 WKWebView 尚未有尺寸，图片盒被钉成
               // 1px；强制按当前几何重算一次，让插图按真实列高铺开再取证。
               await runJs('window.fushiReader._resetImageMaxVars()');
