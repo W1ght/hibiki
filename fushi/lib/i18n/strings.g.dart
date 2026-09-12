@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80512 (4736 per locale)
+/// Strings: 80546 (4738 per locale)
 ///
-/// Built on 2026-09-11 at 23:14 UTC
+/// Built on 2026-09-12 at 04:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6586,6 +6586,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_online_select_all => 'Select all';
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  String get backup_category_games => 'Games';
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -17736,6 +17739,11 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -29112,6 +29120,11 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -40542,6 +40555,11 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -52005,6 +52023,11 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -63272,6 +63295,11 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -74630,6 +74658,11 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -85370,6 +85403,11 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -96120,6 +96158,11 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -107436,6 +107479,11 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -118805,6 +118853,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -130151,6 +130204,11 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -141298,6 +141356,11 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -152560,6 +152623,11 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -163792,6 +163860,11 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -174099,6 +174172,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '已加入 ${count} 章到下载队列';
+  @override
+  String get backup_category_games => '游戏';
+  @override
+  String get backup_category_games_desc => '游戏库、元数据来源与封面';
 }
 
 // Path: <root>
@@ -184523,6 +184600,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 /// Flat map(s) containing all translations.
@@ -194279,6 +194361,10 @@ extension on _StringsEn {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -204030,6 +204116,10 @@ extension on _StringsAr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -213826,6 +213916,10 @@ extension on _StringsDe {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -223613,6 +223707,10 @@ extension on _StringsEs {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -233409,6 +233507,10 @@ extension on _StringsFr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -243176,6 +243278,10 @@ extension on _StringsId {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -252965,6 +253071,10 @@ extension on _StringsIt {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -262681,6 +262791,10 @@ extension on _StringsJa {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -272401,6 +272515,10 @@ extension on _StringsKo {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -282183,6 +282301,10 @@ extension on _StringsNl {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -291960,6 +292082,10 @@ extension on _StringsPtBr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -301744,6 +301870,10 @@ extension on _StringsRu {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -311500,6 +311630,10 @@ extension on _StringsTh {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -321271,6 +321405,10 @@ extension on _StringsTr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -331036,6 +331174,10 @@ extension on _StringsVi {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -340714,6 +340856,10 @@ extension on _StringsZhCn {
         return '全选';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '已加入 ${count} 章到下载队列';
+      case 'backup_category_games':
+        return '游戏';
+      case 'backup_category_games_desc':
+        return '游戏库、元数据来源与封面';
       default:
         return null;
     }
@@ -350408,6 +350554,10 @@ extension on _StringsZhHk {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
