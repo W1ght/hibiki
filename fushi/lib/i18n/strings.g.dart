@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 81141 (4773 per locale)
+/// Strings: 81192 (4776 per locale)
 ///
-/// Built on 2026-09-12 at 13:50 UTC
+/// Built on 2026-09-12 at 15:46 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6651,6 +6651,12 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mining_audio_tail_pad_hint =>
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -17903,6 +17909,15 @@ class _StringsAr extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -29381,6 +29396,15 @@ class _StringsDe extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -40913,6 +40937,15 @@ class _StringsEs extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -52478,6 +52511,15 @@ class _StringsFr extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -63847,6 +63889,15 @@ class _StringsId extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -75307,6 +75358,15 @@ class _StringsIt extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -86149,6 +86209,15 @@ class _StringsJa extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -97001,6 +97070,15 @@ class _StringsKo extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -108419,6 +108497,15 @@ class _StringsNl extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -119890,6 +119977,15 @@ class _StringsPtBr extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -131338,6 +131434,15 @@ class _StringsRu extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -142587,6 +142692,15 @@ class _StringsTh extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -153951,6 +154065,15 @@ class _StringsTr extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -165285,6 +165408,15 @@ class _StringsVi extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -175685,6 +175817,14 @@ class _StringsZhCn extends _StringsEn {
   String get mining_audio_tail_pad_hint => '字幕结束后多保留这么多音频，避免句尾被切短；不会越过下一句。';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} 毫秒';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated => '专用模型 · 这门语言识别最准';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      '通用模型 · 语言覆盖广，单语言精度不如专用模型';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      '总耗时 ${elapsed}';
 }
 
 // Path: <root>
@@ -186211,6 +186351,15 @@ class _StringsZhHk extends _StringsEn {
       'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
   @override
   String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 /// Flat map(s) containing all translations.
@@ -196056,6 +196205,12 @@ extension on _StringsEn {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -205896,6 +206051,12 @@ extension on _StringsAr {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -215781,6 +215942,12 @@ extension on _StringsDe {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -225657,6 +225824,12 @@ extension on _StringsEs {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -235542,6 +235715,12 @@ extension on _StringsFr {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -245398,6 +245577,12 @@ extension on _StringsId {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -255276,6 +255461,12 @@ extension on _StringsIt {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -265081,6 +265272,12 @@ extension on _StringsJa {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -274890,6 +275087,12 @@ extension on _StringsKo {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -284761,6 +284964,12 @@ extension on _StringsNl {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -294627,6 +294836,12 @@ extension on _StringsPtBr {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -304500,6 +304715,12 @@ extension on _StringsRu {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -314345,6 +314566,12 @@ extension on _StringsTh {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -324205,6 +324432,12 @@ extension on _StringsTr {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -334059,6 +334292,12 @@ extension on _StringsVi {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -343824,6 +344063,12 @@ extension on _StringsZhCn {
         return '字幕结束后多保留这么多音频，避免句尾被切短；不会越过下一句。';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} 毫秒';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return '专用模型 · 这门语言识别最准';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return '通用模型 · 语言覆盖广，单语言精度不如专用模型';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => '总耗时 ${elapsed}';
       default:
         return null;
     }
@@ -353607,6 +353852,12 @@ extension on _StringsZhHk {
         return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
       case 'mining_audio_pad_readout':
         return ({required Object ms}) => '${ms} ms';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
