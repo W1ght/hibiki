@@ -106,7 +106,15 @@ const String _probeJs = r'''
             colW: bcs.columnWidth, colGap: bcs.columnGap, colCount: bcs.columnCount },
     imgMax: { w: getComputedStyle(doc).getPropertyValue('--fushi-image-max-width'),
               h: getComputedStyle(doc).getPropertyValue('--fushi-image-max-height') },
-    html: { cls: doc.className, wm: getComputedStyle(doc).writingMode, fs: getComputedStyle(doc).fontSize },
+    html: { cls: doc.className, wm: getComputedStyle(doc).writingMode, fs: getComputedStyle(doc).fontSize,
+            lbc: getComputedStyle(doc).getPropertyValue('-webkit-line-box-contain') },
+    client: { bcw: document.body.clientWidth, bch: document.body.clientHeight,
+              dcw: doc.clientWidth, dch: doc.clientHeight,
+              bsw: document.body.scrollWidth, bsh: document.body.scrollHeight,
+              brect: rect(document.body),
+              ratio: window.fushiReader && window.fushiReader._imageWidthRatio,
+              csize: window.fushiReader && window.fushiReader._contentSize && window.fushiReader._contentSize(),
+              ibox: window.fushiReader && window.fushiReader._imageMaxBox && window.fushiReader._imageMaxBox() },
     ps: [], imgs: [], mains: []
   };
   var ps = document.querySelectorAll('p');
@@ -230,11 +238,24 @@ void main() {
               for (final String phase in <String>[
                 'open',
                 'settled',
+                'lbc-default',
+                'lbc-inline',
+                'lbc-block',
                 'page2',
                 'page3',
               ]) {
                 if (phase == 'settled') {
                   await tester.pump(const Duration(seconds: 6));
+                } else if (phase.startsWith('lbc-')) {
+                  final String v = phase == 'lbc-default'
+                      ? 'block inline replaced'
+                      : phase == 'lbc-inline'
+                          ? 'inline replaced'
+                          : 'block replaced';
+                  await runJs!(
+                    "document.documentElement.style.setProperty('-webkit-line-box-contain', '$v', 'important'); void document.body.offsetWidth;",
+                  );
+                  await tester.pump(const Duration(seconds: 1));
                 } else if (phase.startsWith('page')) {
                   await runJs!('window.fushiReader.paginate(1)');
                   await tester.pump(const Duration(seconds: 2));
