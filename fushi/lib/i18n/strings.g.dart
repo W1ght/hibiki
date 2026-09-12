@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80614 (4742 per locale)
+/// Strings: 80682 (4746 per locale)
 ///
-/// Built on 2026-09-12 at 04:45 UTC
+/// Built on 2026-09-12 at 06:15 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6594,6 +6594,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Skipped ${count} locked chapters';
   String get mihon_sources_search_hint => 'Search sources';
   String get mihon_source_login_forward => 'Forward';
+  String get mihon_source_login_import_browser => 'Import from browser';
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -17758,6 +17765,17 @@ class _StringsAr extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -29148,6 +29166,17 @@ class _StringsDe extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -40592,6 +40621,17 @@ class _StringsEs extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -52069,6 +52109,17 @@ class _StringsFr extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -63350,6 +63401,17 @@ class _StringsId extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -74722,6 +74784,17 @@ class _StringsIt extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -85476,6 +85549,17 @@ class _StringsJa extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -96240,6 +96324,17 @@ class _StringsKo extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -107570,6 +107665,17 @@ class _StringsNl extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -118953,6 +119059,17 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -130313,6 +130430,17 @@ class _StringsRu extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -141474,6 +141602,17 @@ class _StringsTh extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -152750,6 +152889,17 @@ class _StringsTr extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -163996,6 +164146,17 @@ class _StringsVi extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 // Path: <root>
@@ -174316,6 +174477,16 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_sources_search_hint => '搜索漫画源';
   @override
   String get mihon_source_login_forward => '前进';
+  @override
+  String get mihon_source_login_import_browser => '从浏览器导入';
+  @override
+  String get mihon_source_login_import_hint =>
+      '已在系统浏览器打开源站，Fushi 扩展会把会话送过来；还没登录就在浏览器里登录，然后点「完成」。';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      '已从浏览器导入 ${count} 条 cookie';
+  @override
+  String get mihon_source_login_import_none => '还没收到浏览器送来的会话';
 }
 
 // Path: <root>
@@ -184754,6 +184925,17 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_sources_search_hint => 'Search sources';
   @override
   String get mihon_source_login_forward => 'Forward';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
 }
 
 /// Flat map(s) containing all translations.
@@ -194522,6 +194704,15 @@ extension on _StringsEn {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -204285,6 +204476,15 @@ extension on _StringsAr {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -214093,6 +214293,15 @@ extension on _StringsDe {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -223892,6 +224101,15 @@ extension on _StringsEs {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -233700,6 +233918,15 @@ extension on _StringsFr {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -243479,6 +243706,15 @@ extension on _StringsId {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -253280,6 +253516,15 @@ extension on _StringsIt {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -263008,6 +263253,15 @@ extension on _StringsJa {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -272740,6 +272994,15 @@ extension on _StringsKo {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -282534,6 +282797,15 @@ extension on _StringsNl {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -292323,6 +292595,15 @@ extension on _StringsPtBr {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -302119,6 +302400,15 @@ extension on _StringsRu {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -311887,6 +312177,15 @@ extension on _StringsTh {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -321670,6 +321969,15 @@ extension on _StringsTr {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -331447,6 +331755,15 @@ extension on _StringsVi {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
@@ -341137,6 +341454,14 @@ extension on _StringsZhCn {
         return '搜索漫画源';
       case 'mihon_source_login_forward':
         return '前进';
+      case 'mihon_source_login_import_browser':
+        return '从浏览器导入';
+      case 'mihon_source_login_import_hint':
+        return '已在系统浏览器打开源站，Fushi 扩展会把会话送过来；还没登录就在浏览器里登录，然后点「完成」。';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) => '已从浏览器导入 ${count} 条 cookie';
+      case 'mihon_source_login_import_none':
+        return '还没收到浏览器送来的会话';
       default:
         return null;
     }
@@ -350843,6 +351168,15 @@ extension on _StringsZhHk {
         return 'Search sources';
       case 'mihon_source_login_forward':
         return 'Forward';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
       default:
         return null;
     }
