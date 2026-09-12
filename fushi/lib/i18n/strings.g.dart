@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 81056 (4768 per locale)
+/// Strings: 81090 (4770 per locale)
 ///
-/// Built on 2026-09-12 at 12:05 UTC
+/// Built on 2026-09-12 at 13:06 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6644,6 +6644,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -17884,6 +17888,12 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -29350,6 +29360,12 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -40870,6 +40886,12 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -52423,6 +52445,12 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -63780,6 +63808,12 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -75228,6 +75262,12 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -86058,6 +86098,12 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -96898,6 +96944,12 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -108304,6 +108356,12 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -119763,6 +119821,12 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -131199,6 +131263,12 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -142436,6 +142506,12 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -153788,6 +153864,12 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -165110,6 +165192,12 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 // Path: <root>
@@ -175500,6 +175588,11 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => '滚动到顶部';
   @override
   String get shortcut_action_global_scroll_to_bottom => '滚动到底部';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated => '专用模型 · 这门语言识别最准';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      '通用模型 · 语言覆盖广，单语言精度不如专用模型';
 }
 
 // Path: <root>
@@ -186014,6 +186107,12 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get audiobook_transcribe_model_scope_dedicated =>
+      'Dedicated — most accurate for this language';
+  @override
+  String get audiobook_transcribe_model_scope_multilingual =>
+      'Multilingual — wide coverage, less accurate per language';
 }
 
 /// Flat map(s) containing all translations.
@@ -195849,6 +195948,10 @@ extension on _StringsEn {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -205679,6 +205782,10 @@ extension on _StringsAr {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -215554,6 +215661,10 @@ extension on _StringsDe {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -225420,6 +225531,10 @@ extension on _StringsEs {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -235295,6 +235410,10 @@ extension on _StringsFr {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -245141,6 +245260,10 @@ extension on _StringsId {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -255009,6 +255132,10 @@ extension on _StringsIt {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -264804,6 +264931,10 @@ extension on _StringsJa {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -274603,6 +274734,10 @@ extension on _StringsKo {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -284464,6 +284599,10 @@ extension on _StringsNl {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -294320,6 +294459,10 @@ extension on _StringsPtBr {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -304183,6 +304326,10 @@ extension on _StringsRu {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -314018,6 +314165,10 @@ extension on _StringsTh {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -323868,6 +324019,10 @@ extension on _StringsTr {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -333712,6 +333867,10 @@ extension on _StringsVi {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
@@ -343467,6 +343626,10 @@ extension on _StringsZhCn {
         return '滚动到顶部';
       case 'shortcut_action_global_scroll_to_bottom':
         return '滚动到底部';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return '专用模型 · 这门语言识别最准';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return '通用模型 · 语言覆盖广，单语言精度不如专用模型';
       default:
         return null;
     }
@@ -353240,6 +353403,10 @@ extension on _StringsZhHk {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'audiobook_transcribe_model_scope_dedicated':
+        return 'Dedicated — most accurate for this language';
+      case 'audiobook_transcribe_model_scope_multilingual':
+        return 'Multilingual — wide coverage, less accurate per language';
       default:
         return null;
     }
