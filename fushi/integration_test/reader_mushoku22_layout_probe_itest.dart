@@ -43,14 +43,16 @@ const Map<String, String> _candidates = <String, String>{
   'current': '',
   'lbc-default':
       'html{-webkit-line-box-contain: block inline replaced !important}',
-  'lbc-default-rt1':
-      'html{-webkit-line-box-contain: block inline replaced !important} rt{line-height:1 !important}',
-  'lbc-default-rt07':
-      'html{-webkit-line-box-contain: block inline replaced !important} rt{line-height:0.7 !important}',
-  'lbc-default-rt0':
-      'html{-webkit-line-box-contain: block inline replaced !important} rt{line-height:0 !important}',
-  'lbc-block-inlinebox':
-      'html{-webkit-line-box-contain: block replaced inline-box !important}',
+  'rt-h0':
+      'html{-webkit-line-box-contain: block inline replaced !important} rt{height:0 !important}',
+  'rt-h0-lh0':
+      'html{-webkit-line-box-contain: block inline replaced !important} rt{height:0 !important;line-height:0 !important}',
+  'rt-mbs':
+      'html{-webkit-line-box-contain: block inline replaced !important} rt{margin-block-start:-0.5em !important}',
+  'ruby-lh0':
+      'html{-webkit-line-box-contain: block inline replaced !important} ruby{line-height:0 !important}',
+  'scoped':
+      'html{-webkit-line-box-contain: block inline replaced !important} p:has(ruby):not(:has(a,br)),div:has(>ruby):not(:has(a,br)){-webkit-line-box-contain: block replaced !important}',
 };
 
 const Key _kWebViewKey = ValueKey<String>('fushi_webview');
@@ -138,8 +140,36 @@ const String _probeJs = r'''
               ratio: window.fushiReader && window.fushiReader._imageWidthRatio,
               csize: window.fushiReader && window.fushiReader._contentSize && window.fushiReader._contentSize(),
               ibox: window.fushiReader && window.fushiReader._imageMaxBox && window.fushiReader._imageMaxBox() },
-    ps: [], imgs: [], mains: [], zeroP: 0, totalP: 0
+    ps: [], imgs: [], mains: [], zeroP: 0, totalP: 0,
+    compat: document.compatMode, synth: []
   };
+  (function () {
+    var host = document.getElementById('fushi-synth');
+    if (!host) {
+      host = document.createElement('div');
+      host.id = 'fushi-synth';
+      host.innerHTML = '<p data-k="bare">漢字テキスト</p>'
+        + '<p data-k="span1"><span>漢字テキスト</span></p>'
+        + '<p data-k="span2"><span><span>漢字テキスト</span></span></p>'
+        + '<p data-k="a1"><a href="#x">漢字テキスト</a></p>'
+        + '<p data-k="a-span"><a href="#x"><span>漢字テキスト</span></a></p>'
+        + '<p data-k="br"><br/></p>'
+        + '<p data-k="mixed">前<a href="#x"><span>漢字</span></a>後</p>'
+        + '<p data-k="ruby"><ruby>漢字<rt>かんじ</rt></ruby>テキスト</p>'
+        + '<p data-k="span-ruby"><span><ruby>漢字<rt>かんじ</rt></ruby>テキスト</span></p>'
+        + '<p data-k="em-span"><em><span>漢字テキスト</span></em></p>'
+        + '<p data-k="nbsp">&nbsp;</p>'
+        + '<p data-k="empty"></p>';
+      document.body.appendChild(host);
+      void document.body.offsetWidth;
+    }
+    var vertical = /^vertical/.test(bcs.writingMode || '');
+    var list = host.querySelectorAll('p');
+    for (var q = 0; q < list.length; q++) {
+      var rr = list[q].getBoundingClientRect();
+      out.synth.push({ k: list[q].getAttribute('data-k'), size: Math.round((vertical ? rr.width : rr.height) * 10) / 10 });
+    }
+  })();
   (function () {
     var all = document.querySelectorAll('p');
     var vertical = /^vertical/.test(bcs.writingMode || '');
@@ -285,6 +315,30 @@ const String _rubyJs = r'''
       }
     }
   }
+  (function () {
+    var rubies = document.querySelectorAll('ruby');
+    var gaps = [], centers = [], rtSizes = [];
+    for (var i = 0; i < rubies.length && gaps.length < 40; i++) {
+      var rb = rubies[i];
+      var rt = rb.querySelector('rt');
+      if (!rt) continue;
+      var baseNode = null;
+      for (var c = 0; c < rb.childNodes.length; c++) {
+        var n = rb.childNodes[c];
+        if (n.nodeType === Node.TEXT_NODE && n.textContent.trim()) { baseNode = n; break; }
+      }
+      if (!baseNode) continue;
+      var r = document.createRange(); r.selectNodeContents(baseNode);
+      var br = r.getBoundingClientRect(); var tr = rt.getBoundingClientRect();
+      if (!br.width || !tr.width) continue;
+      if (vertical) { gaps.push(tr.left - br.right); centers.push((tr.top + tr.bottom) / 2 - (br.top + br.bottom) / 2); rtSizes.push(tr.width); }
+      else { gaps.push(br.top - tr.bottom); centers.push((tr.left + tr.right) / 2 - (br.left + br.right) / 2); rtSizes.push(tr.height); }
+    }
+    out.rtGap = Math.round(median(gaps) * 100) / 100;
+    out.rtCenter = Math.round(median(centers) * 100) / 100;
+    out.rtSize = Math.round(median(rtSizes) * 100) / 100;
+    out.rtN = gaps.length;
+  })();
   out.plain = Math.round(median(plainPitches) * 100) / 100;
   out.ruby = Math.round(median(rubyPitches) * 100) / 100;
   out.plainN = plainPitches.length; out.rubyN = rubyPitches.length;
@@ -443,7 +497,9 @@ void main() {
                       'ruby=${rb['ruby']}(n=${rb['rubyN']}) delta=${rb['delta']} '
                       'plainExtra=${rb['plainExtra']} rubyExtra=${rb['rubyExtra']} '
                       'firstRubyExtra=${rb['firstRubyExtra']}'
-                      '(n=${rb['firstRubyExtraN']}) rtCss=${jsonEncode(rb['rtCss'])}';
+                      '(n=${rb['firstRubyExtraN']}) rtGap=${rb['rtGap']} '
+                      'rtCenter=${rb['rtCenter']} rtSize=${rb['rtSize']} '
+                      '(n=${rb['rtN']}) rtCss=${jsonEncode(rb['rtCss'])}';
                 }
                 debugPrint(
                   '[m22] SUMMARY $tag $phase zeroP=${r['zeroP']}/'
