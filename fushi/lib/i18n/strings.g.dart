@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80937 (4761 per locale)
+/// Strings: 80971 (4763 per locale)
 ///
-/// Built on 2026-09-12 at 10:36 UTC
+/// Built on 2026-09-12 at 10:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6636,6 +6636,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  String get backup_category_games => 'Games';
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -17861,6 +17864,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -29312,6 +29320,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -40817,6 +40830,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -52355,6 +52373,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -63697,6 +63720,11 @@ class _StringsId extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -75130,6 +75158,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -85945,6 +85978,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -96770,6 +96808,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -108161,6 +108204,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -119605,6 +119653,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -131026,6 +131079,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -142248,6 +142306,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -153585,6 +153648,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -164892,6 +164960,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 // Path: <root>
@@ -175268,6 +175341,10 @@ class _StringsZhCn extends _StringsEn {
   String get manga_ocr_boxes_toggle => '显示识别范围';
   @override
   String get remote_manga_added_to_shelf => '已加入漫画书架，章节从对端下载';
+  @override
+  String get backup_category_games => '游戏';
+  @override
+  String get backup_category_games_desc => '游戏库、元数据来源与封面';
 }
 
 // Path: <root>
@@ -185767,6 +185844,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get remote_manga_added_to_shelf =>
       'Added to the manga shelf; chapters download from the peer';
+  @override
+  String get backup_category_games => 'Games';
+  @override
+  String get backup_category_games_desc =>
+      'Game library, metadata sources and covers';
 }
 
 /// Flat map(s) containing all translations.
@@ -195588,6 +195670,10 @@ extension on _StringsEn {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -205404,6 +205490,10 @@ extension on _StringsAr {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -215265,6 +215355,10 @@ extension on _StringsDe {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -225117,6 +225211,10 @@ extension on _StringsEs {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -234978,6 +235076,10 @@ extension on _StringsFr {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -244810,6 +244912,10 @@ extension on _StringsId {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -254664,6 +254770,10 @@ extension on _StringsIt {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -264445,6 +264555,10 @@ extension on _StringsJa {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -274230,6 +274344,10 @@ extension on _StringsKo {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -284077,6 +284195,10 @@ extension on _StringsNl {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -293919,6 +294041,10 @@ extension on _StringsPtBr {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -303768,6 +303894,10 @@ extension on _StringsRu {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -313589,6 +313719,10 @@ extension on _StringsTh {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -323425,6 +323559,10 @@ extension on _StringsTr {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -333255,6 +333393,10 @@ extension on _StringsVi {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
@@ -342996,6 +343138,10 @@ extension on _StringsZhCn {
         return '显示识别范围';
       case 'remote_manga_added_to_shelf':
         return '已加入漫画书架，章节从对端下载';
+      case 'backup_category_games':
+        return '游戏';
+      case 'backup_category_games_desc':
+        return '游戏库、元数据来源与封面';
       default:
         return null;
     }
@@ -352755,6 +352901,10 @@ extension on _StringsZhHk {
         return 'Show recognized text regions';
       case 'remote_manga_added_to_shelf':
         return 'Added to the manga shelf; chapters download from the peer';
+      case 'backup_category_games':
+        return 'Games';
+      case 'backup_category_games_desc':
+        return 'Game library, metadata sources and covers';
       default:
         return null;
     }
