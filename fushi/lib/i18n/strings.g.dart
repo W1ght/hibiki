@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 81090 (4770 per locale)
+/// Strings: 81107 (4771 per locale)
 ///
-/// Built on 2026-09-12 at 13:06 UTC
+/// Built on 2026-09-12 at 13:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6648,6 +6648,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Dedicated — most accurate for this language';
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -17894,6 +17896,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -29366,6 +29371,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -40892,6 +40900,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -52451,6 +52462,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -63814,6 +63828,9 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -75268,6 +75285,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -86104,6 +86124,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -96950,6 +96973,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -108362,6 +108388,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -119827,6 +119856,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -131269,6 +131301,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -142512,6 +142547,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -153870,6 +153908,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -165198,6 +165239,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 // Path: <root>
@@ -175593,6 +175637,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       '通用模型 · 语言覆盖广，单语言精度不如专用模型';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      '总耗时 ${elapsed}';
 }
 
 // Path: <root>
@@ -186113,6 +186160,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_transcribe_model_scope_multilingual =>
       'Multilingual — wide coverage, less accurate per language';
+  @override
+  String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
+      'Total time ${elapsed}';
 }
 
 /// Flat map(s) containing all translations.
@@ -195952,6 +196002,8 @@ extension on _StringsEn {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -205786,6 +205838,8 @@ extension on _StringsAr {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -215665,6 +215719,8 @@ extension on _StringsDe {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -225535,6 +225591,8 @@ extension on _StringsEs {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -235414,6 +235472,8 @@ extension on _StringsFr {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -245264,6 +245324,8 @@ extension on _StringsId {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -255136,6 +255198,8 @@ extension on _StringsIt {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -264935,6 +264999,8 @@ extension on _StringsJa {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -274738,6 +274804,8 @@ extension on _StringsKo {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -284603,6 +284671,8 @@ extension on _StringsNl {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -294463,6 +294533,8 @@ extension on _StringsPtBr {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -304330,6 +304402,8 @@ extension on _StringsRu {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -314169,6 +314243,8 @@ extension on _StringsTh {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -324023,6 +324099,8 @@ extension on _StringsTr {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -333871,6 +333949,8 @@ extension on _StringsVi {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
@@ -343630,6 +343710,8 @@ extension on _StringsZhCn {
         return '专用模型 · 这门语言识别最准';
       case 'audiobook_transcribe_model_scope_multilingual':
         return '通用模型 · 语言覆盖广，单语言精度不如专用模型';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => '总耗时 ${elapsed}';
       default:
         return null;
     }
@@ -353407,6 +353489,8 @@ extension on _StringsZhHk {
         return 'Dedicated — most accurate for this language';
       case 'audiobook_transcribe_model_scope_multilingual':
         return 'Multilingual — wide coverage, less accurate per language';
+      case 'audiobook_transcribe_elapsed_total':
+        return ({required Object elapsed}) => 'Total time ${elapsed}';
       default:
         return null;
     }
