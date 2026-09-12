@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80512 (4736 per locale)
+/// Strings: 80580 (4740 per locale)
 ///
-/// Built on 2026-09-11 at 23:14 UTC
+/// Built on 2026-09-12 at 04:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6586,6 +6586,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_online_select_all => 'Select all';
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -17736,6 +17740,14 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -29112,6 +29124,14 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -40542,6 +40562,14 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -52005,6 +52033,14 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -63272,6 +63308,14 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -74630,6 +74674,14 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -85370,6 +85422,14 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -96120,6 +96180,14 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -107436,6 +107504,14 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -118805,6 +118881,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -130151,6 +130235,14 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -141298,6 +141390,14 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -152560,6 +152660,14 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -163792,6 +163900,14 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -174099,6 +174215,14 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '已加入 ${count} 章到下载队列';
+  @override
+  String get shortcut_action_global_scroll_line_down => '向下滚动一行';
+  @override
+  String get shortcut_action_global_scroll_line_up => '向上滚动一行';
+  @override
+  String get shortcut_action_global_scroll_to_top => '滚动到顶部';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => '滚动到底部';
 }
 
 // Path: <root>
@@ -184523,6 +184647,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 /// Flat map(s) containing all translations.
@@ -194279,6 +194411,14 @@ extension on _StringsEn {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -204030,6 +204170,14 @@ extension on _StringsAr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -213826,6 +213974,14 @@ extension on _StringsDe {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -223613,6 +223769,14 @@ extension on _StringsEs {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -233409,6 +233573,14 @@ extension on _StringsFr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -243176,6 +243348,14 @@ extension on _StringsId {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -252965,6 +253145,14 @@ extension on _StringsIt {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -262681,6 +262869,14 @@ extension on _StringsJa {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -272401,6 +272597,14 @@ extension on _StringsKo {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -282183,6 +282387,14 @@ extension on _StringsNl {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -291960,6 +292172,14 @@ extension on _StringsPtBr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -301744,6 +301964,14 @@ extension on _StringsRu {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -311500,6 +311728,14 @@ extension on _StringsTh {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -321271,6 +321507,14 @@ extension on _StringsTr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -331036,6 +331280,14 @@ extension on _StringsVi {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -340714,6 +340966,14 @@ extension on _StringsZhCn {
         return '全选';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '已加入 ${count} 章到下载队列';
+      case 'shortcut_action_global_scroll_line_down':
+        return '向下滚动一行';
+      case 'shortcut_action_global_scroll_line_up':
+        return '向上滚动一行';
+      case 'shortcut_action_global_scroll_to_top':
+        return '滚动到顶部';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return '滚动到底部';
       default:
         return null;
     }
@@ -350408,6 +350668,14 @@ extension on _StringsZhHk {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
