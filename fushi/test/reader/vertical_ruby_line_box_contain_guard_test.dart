@@ -62,7 +62,7 @@ void main() {
     });
 
     test(
-        'BUG-2459 / BUG-2473：任何平台都不再发出 -webkit-line-box-contain；'
+        'BUG-2459 / BUG-2474：任何平台都不再发出 -webkit-line-box-contain；'
         'Apple 端（WebKit）改发 ruby 注音盒的负 margin-block-start，'
         'Android / Windows / Linux 不发', () async {
       for (final TargetPlatform p in <TargetPlatform>[
@@ -76,7 +76,7 @@ void main() {
           expect(css.contains('-webkit-line-box-contain'), isFalse,
               reason: '$p：`block replaced` 在 quirks 模式下把整行 strut 一并剔掉，'
                   '整行文字都在 inline 盒里的行与 <br/> 空行行盒归零'
-                  '（BUG-2473：目录列叠印、空行消失）——任何平台都不得再发');
+                  '（BUG-2474：目录列叠印、空行消失）——任何平台都不得再发');
           expect(
               css.contains('ruby > rt, ruby > rtc {' '\n' '  margin-block-start: -2em !important;' '\n' '}'),
               isTrue,

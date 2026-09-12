@@ -188,7 +188,7 @@ class ReaderContentStyles {
   ///
   /// 第一版修法（`0ad4bd4fa8`）是 `html { -webkit-line-box-contain: block replaced }`，
   /// 让行盒只按块 strut + 替换元素算高。它在 Mac 真机上把注音段落的多出量归了 0，但
-  /// BUG-2473 实证它同时把**整条行盒**的 strut 也剔掉了：EPUB 的 XHTML 当 text/html
+  /// BUG-2474 实证它同时把**整条行盒**的 strut 也剔掉了：EPUB 的 XHTML 当 text/html
   /// 端上、多数没有 DOCTYPE（`document.compatMode === "BackCompat"`），quirks 模式下
   /// WebKit 只给「根 inline 盒里直接有文本节点」的行加 strut，于是整行文字都住在
   /// inline 盒里的行（`<p><a><span>…</span></a></p>`、`<p><span>…</span></p>`、
@@ -207,10 +207,10 @@ class ReaderContentStyles {
   /// 的是整个注音盒，−1.5em 已够，WebKit 对超出的负 margin 只是钳掉（−3em 与 −1.5em
   /// 结果逐字节相同），留余量给 normal 行高更大的字体。Blink 本就不长高，且旧版
   /// Android WebView 的 ruby 实现不同，故仍**按平台门控**只发给 Apple 端；
-  /// `-webkit-line-box-contain` 在任何平台都不再发出（BUG-611 / BUG-2473 两道守卫）。
+  /// `-webkit-line-box-contain` 在任何平台都不再发出（BUG-611 / BUG-2474 两道守卫）。
   static String _webKitRubyAnnotationCss() => switch (defaultTargetPlatform) {
         TargetPlatform.iOS || TargetPlatform.macOS => '''
-/* BUG-2459 / BUG-2473: WebKit only — see _webKitRubyAnnotationCss. */
+/* BUG-2459 / BUG-2474: WebKit only — see _webKitRubyAnnotationCss. */
 ruby > rt, ruby > rtc {
   margin-block-start: -2em !important;
 }
@@ -516,7 +516,7 @@ html {
      the line box is allowed to grow.
      BUG-2459 addendum: on WebKit (macOS / iOS) the SAME reserve is what makes a
      paragraph whose first line carries furigana taller than its neighbours. The
-     first fix emitted `block replaced` here for Apple only; BUG-2473 showed that
+     first fix emitted `block replaced` here for Apple only; BUG-2474 showed that
      in quirks mode it also drops the strut of every line whose text lives only
      inside inline boxes (TOC entries, `<p><br/></p>` blank lines collapse to
      zero height). The property is therefore emitted on NO engine any more; the

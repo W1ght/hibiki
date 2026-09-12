@@ -1,4 +1,4 @@
-## BUG-2473 · WebKit 上 BUG-2459 的 line-box-contain 把嵌套 inline / 空行行盒压成零高：目录列叠印、空行消失
+## BUG-2474 · WebKit 上 BUG-2459 的 line-box-contain 把嵌套 inline / 空行行盒压成零高：目录列叠印、空行消失
 - **报告**：2026-09-12（用户：「mac 端無職転生 22 实测，章节列表贴在一起」，截图为目录页 17 条章节标题全部叠印在同一列）
 - **真实性**：✅ 真 bug（WebKit 专属，BUG-2459 的修法引入的回归）。根因 `fushi/lib/src/reader/reader_content_styles.dart:196`（`_webKitLineBoxCss` 对 iOS / macOS 发出 `html { -webkit-line-box-contain: block replaced !important }`）。
   - 机制：EPUB 的 XHTML 被当 `text/html` 端上且多数没有 `<!DOCTYPE>`（`document.compatMode === "BackCompat"`，quirks 模式）。quirks 模式下 WebKit 只给「根 inline 盒里直接有文本节点」的行加块级 strut；`block replaced` 又把所有 inline 盒的贡献剔掉。于是凡是一行的文字**全部**住在 inline 盒里（`<p><a><span>…</span></a></p>`、`<p><span>…</span></p>`、`<p><em>…</em></p>`，甚至 `<p><span><ruby>…</ruby></span></p>`）或只有 `<br/>` 的空行，行盒高度为 0——段落块轴尺寸 0，下一段直接叠上来。
