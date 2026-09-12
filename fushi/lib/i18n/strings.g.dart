@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80971 (4763 per locale)
+/// Strings: 81056 (4768 per locale)
 ///
-/// Built on 2026-09-12 at 10:42 UTC
+/// Built on 2026-09-12 at 11:41 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6639,6 +6639,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_games => 'Games';
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -17869,6 +17876,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -29325,6 +29344,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -40835,6 +40866,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -52378,6 +52421,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -63725,6 +63780,18 @@ class _StringsId extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -75163,6 +75230,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -85983,6 +86062,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -96813,6 +96904,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -108209,6 +108312,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -119658,6 +119773,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -131084,6 +131211,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -142311,6 +142450,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -153653,6 +153804,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -164965,6 +165128,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -175345,6 +175520,16 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_games => '游戏';
   @override
   String get backup_category_games_desc => '游戏库、元数据来源与封面';
+  @override
+  String get mining_audio_head_pad => '句子音频开头余量';
+  @override
+  String get mining_audio_head_pad_hint => '字幕开始前多保留这么多音频，避免首音被切掉；不会越过上一句。';
+  @override
+  String get mining_audio_tail_pad => '句子音频结尾余量';
+  @override
+  String get mining_audio_tail_pad_hint => '字幕结束后多保留这么多音频，避免句尾被切短；不会越过下一句。';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} 毫秒';
 }
 
 // Path: <root>
@@ -185849,6 +186034,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 /// Flat map(s) containing all translations.
@@ -195674,6 +195871,16 @@ extension on _StringsEn {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -205494,6 +205701,16 @@ extension on _StringsAr {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -215359,6 +215576,16 @@ extension on _StringsDe {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -225215,6 +225442,16 @@ extension on _StringsEs {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -235080,6 +235317,16 @@ extension on _StringsFr {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -244916,6 +245163,16 @@ extension on _StringsId {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -254774,6 +255031,16 @@ extension on _StringsIt {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -264559,6 +264826,16 @@ extension on _StringsJa {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -274348,6 +274625,16 @@ extension on _StringsKo {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -284199,6 +284486,16 @@ extension on _StringsNl {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -294045,6 +294342,16 @@ extension on _StringsPtBr {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -303898,6 +304205,16 @@ extension on _StringsRu {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -313723,6 +314040,16 @@ extension on _StringsTh {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -323563,6 +323890,16 @@ extension on _StringsTr {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -333397,6 +333734,16 @@ extension on _StringsVi {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -343142,6 +343489,16 @@ extension on _StringsZhCn {
         return '游戏';
       case 'backup_category_games_desc':
         return '游戏库、元数据来源与封面';
+      case 'mining_audio_head_pad':
+        return '句子音频开头余量';
+      case 'mining_audio_head_pad_hint':
+        return '字幕开始前多保留这么多音频，避免首音被切掉；不会越过上一句。';
+      case 'mining_audio_tail_pad':
+        return '句子音频结尾余量';
+      case 'mining_audio_tail_pad_hint':
+        return '字幕结束后多保留这么多音频，避免句尾被切短；不会越过下一句。';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} 毫秒';
       default:
         return null;
     }
@@ -352905,6 +353262,16 @@ extension on _StringsZhHk {
         return 'Games';
       case 'backup_category_games_desc':
         return 'Game library, metadata sources and covers';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
