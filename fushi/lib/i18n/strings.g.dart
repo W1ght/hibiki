@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 81056 (4768 per locale)
+/// Strings: 81141 (4773 per locale)
 ///
-/// Built on 2026-09-12 at 12:05 UTC
+/// Built on 2026-09-12 at 13:50 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6644,6 +6644,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -17884,6 +17891,18 @@ class _StringsAr extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -29350,6 +29369,18 @@ class _StringsDe extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -40870,6 +40901,18 @@ class _StringsEs extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -52423,6 +52466,18 @@ class _StringsFr extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -63780,6 +63835,18 @@ class _StringsId extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -75228,6 +75295,18 @@ class _StringsIt extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -86058,6 +86137,18 @@ class _StringsJa extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -96898,6 +96989,18 @@ class _StringsKo extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -108304,6 +108407,18 @@ class _StringsNl extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -119763,6 +119878,18 @@ class _StringsPtBr extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -131199,6 +131326,18 @@ class _StringsRu extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -142436,6 +142575,18 @@ class _StringsTh extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -153788,6 +153939,18 @@ class _StringsTr extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -165110,6 +165273,18 @@ class _StringsVi extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 // Path: <root>
@@ -175500,6 +175675,16 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => '滚动到顶部';
   @override
   String get shortcut_action_global_scroll_to_bottom => '滚动到底部';
+  @override
+  String get mining_audio_head_pad => '句子音频开头余量';
+  @override
+  String get mining_audio_head_pad_hint => '字幕开始前多保留这么多音频，避免首音被切掉；不会越过上一句。';
+  @override
+  String get mining_audio_tail_pad => '句子音频结尾余量';
+  @override
+  String get mining_audio_tail_pad_hint => '字幕结束后多保留这么多音频，避免句尾被切短；不会越过下一句。';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} 毫秒';
 }
 
 // Path: <root>
@@ -186014,6 +186199,18 @@ class _StringsZhHk extends _StringsEn {
   String get shortcut_action_global_scroll_to_top => 'Scroll to top';
   @override
   String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
+  @override
+  String get mining_audio_head_pad => 'Audio padding before sentence';
+  @override
+  String get mining_audio_head_pad_hint =>
+      'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+  @override
+  String get mining_audio_tail_pad => 'Audio padding after sentence';
+  @override
+  String get mining_audio_tail_pad_hint =>
+      'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+  @override
+  String mining_audio_pad_readout({required Object ms}) => '${ms} ms';
 }
 
 /// Flat map(s) containing all translations.
@@ -195849,6 +196046,16 @@ extension on _StringsEn {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -205679,6 +205886,16 @@ extension on _StringsAr {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -215554,6 +215771,16 @@ extension on _StringsDe {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -225420,6 +225647,16 @@ extension on _StringsEs {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -235295,6 +235532,16 @@ extension on _StringsFr {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -245141,6 +245388,16 @@ extension on _StringsId {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -255009,6 +255266,16 @@ extension on _StringsIt {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -264804,6 +265071,16 @@ extension on _StringsJa {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -274603,6 +274880,16 @@ extension on _StringsKo {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -284464,6 +284751,16 @@ extension on _StringsNl {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -294320,6 +294617,16 @@ extension on _StringsPtBr {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -304183,6 +304490,16 @@ extension on _StringsRu {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -314018,6 +314335,16 @@ extension on _StringsTh {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -323868,6 +324195,16 @@ extension on _StringsTr {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -333712,6 +334049,16 @@ extension on _StringsVi {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
@@ -343467,6 +343814,16 @@ extension on _StringsZhCn {
         return '滚动到顶部';
       case 'shortcut_action_global_scroll_to_bottom':
         return '滚动到底部';
+      case 'mining_audio_head_pad':
+        return '句子音频开头余量';
+      case 'mining_audio_head_pad_hint':
+        return '字幕开始前多保留这么多音频，避免首音被切掉；不会越过上一句。';
+      case 'mining_audio_tail_pad':
+        return '句子音频结尾余量';
+      case 'mining_audio_tail_pad_hint':
+        return '字幕结束后多保留这么多音频，避免句尾被切短；不会越过下一句。';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} 毫秒';
       default:
         return null;
     }
@@ -353240,6 +353597,16 @@ extension on _StringsZhHk {
         return 'Scroll to top';
       case 'shortcut_action_global_scroll_to_bottom':
         return 'Scroll to bottom';
+      case 'mining_audio_head_pad':
+        return 'Audio padding before sentence';
+      case 'mining_audio_head_pad_hint':
+        return 'Extra audio kept before the subtitle starts, so the first syllable is not clipped. Never runs into the previous line.';
+      case 'mining_audio_tail_pad':
+        return 'Audio padding after sentence';
+      case 'mining_audio_tail_pad_hint':
+        return 'Extra audio kept after the subtitle ends, so trailing sounds are not cut short. Never runs into the next line.';
+      case 'mining_audio_pad_readout':
+        return ({required Object ms}) => '${ms} ms';
       default:
         return null;
     }
