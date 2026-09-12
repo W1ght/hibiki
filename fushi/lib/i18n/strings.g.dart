@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80631 (4743 per locale)
+/// Strings: 80920 (4760 per locale)
 ///
-/// Built on 2026-09-12 at 05:05 UTC
+/// Built on 2026-09-12 at 07:33 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6595,6 +6595,45 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_sources_search_hint => 'Search sources';
   String get mihon_source_login_forward => 'Forward';
   String get reader_furigana_dimmed => 'Dimmed';
+  String get mihon_source_login_import_browser => 'Import from browser';
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  String get mihon_extension_update_all => 'Update all';
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -17761,6 +17800,62 @@ class _StringsAr extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -29153,6 +29248,62 @@ class _StringsDe extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -40599,6 +40750,62 @@ class _StringsEs extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -52078,6 +52285,62 @@ class _StringsFr extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -63361,6 +63624,62 @@ class _StringsId extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -74735,6 +75054,62 @@ class _StringsIt extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -85491,6 +85866,62 @@ class _StringsJa extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -96257,6 +96688,62 @@ class _StringsKo extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -107589,6 +108076,62 @@ class _StringsNl extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -118974,6 +119517,62 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -130336,6 +130935,62 @@ class _StringsRu extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -141499,6 +142154,62 @@ class _StringsTh extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -152777,6 +153488,62 @@ class _StringsTr extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -164025,6 +164792,62 @@ class _StringsVi extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -174347,6 +175170,58 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_source_login_forward => '前进';
   @override
   String get reader_furigana_dimmed => '淡显';
+  @override
+  String get mihon_source_login_import_browser => '从浏览器导入';
+  @override
+  String get mihon_source_login_import_hint =>
+      '已在系统浏览器打开源站，Fushi 扩展会把会话送过来；还没登录就在浏览器里登录，然后点「完成」。';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      '已从浏览器导入 ${count} 条 cookie';
+  @override
+  String get mihon_source_login_import_none => '还没收到浏览器送来的会话';
+  @override
+  String get mihon_extension_update_all => '一键更新';
+  @override
+  String get mihon_extension_update_all_nothing => '已安装的扩展都是最新版。';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      '把 ${count} 个已安装扩展更新到仓库里的最新版？';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      '正在更新 ${current}/${total}：${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      '已更新 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
+  @override
+  String get mihon_sources_sort_by_downloads => '按下载量排序';
+  @override
+  String get mihon_sources_sort_by_downloads_done => '已按扩展下载量重排源';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data => '还没有下载量数据，先刷新扩展仓库';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      '识别中 ${chapter}：第 ${done}/${total} 页';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} 章排队中';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      '识别中 ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => '等待识别';
+  @override
+  String get manga_ocr_boxes_toggle => '显示识别范围';
 }
 
 // Path: <root>
@@ -184787,6 +185662,62 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_source_login_forward => 'Forward';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get mihon_source_login_import_browser => 'Import from browser';
+  @override
+  String get mihon_source_login_import_hint =>
+      'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+  @override
+  String mihon_source_login_import_received({required Object count}) =>
+      'Imported ${count} cookies from the browser';
+  @override
+  String get mihon_source_login_import_none =>
+      'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 /// Flat map(s) containing all translations.
@@ -194557,6 +195488,55 @@ extension on _StringsEn {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -204322,6 +205302,55 @@ extension on _StringsAr {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -214132,6 +215161,55 @@ extension on _StringsDe {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -223933,6 +225011,55 @@ extension on _StringsEs {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -233743,6 +234870,55 @@ extension on _StringsFr {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -243524,6 +244700,55 @@ extension on _StringsId {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -253327,6 +254552,55 @@ extension on _StringsIt {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -263057,6 +264331,55 @@ extension on _StringsJa {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -272791,6 +274114,55 @@ extension on _StringsKo {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -282587,6 +283959,55 @@ extension on _StringsNl {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -292378,6 +293799,55 @@ extension on _StringsPtBr {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -302176,6 +303646,55 @@ extension on _StringsRu {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -311946,6 +313465,55 @@ extension on _StringsTh {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -321731,6 +323299,55 @@ extension on _StringsTr {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -331510,6 +333127,55 @@ extension on _StringsVi {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -341202,6 +342868,53 @@ extension on _StringsZhCn {
         return '前进';
       case 'reader_furigana_dimmed':
         return '淡显';
+      case 'mihon_source_login_import_browser':
+        return '从浏览器导入';
+      case 'mihon_source_login_import_hint':
+        return '已在系统浏览器打开源站，Fushi 扩展会把会话送过来；还没登录就在浏览器里登录，然后点「完成」。';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) => '已从浏览器导入 ${count} 条 cookie';
+      case 'mihon_source_login_import_none':
+        return '还没收到浏览器送来的会话';
+      case 'mihon_extension_update_all':
+        return '一键更新';
+      case 'mihon_extension_update_all_nothing':
+        return '已安装的扩展都是最新版。';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) => '把 ${count} 个已安装扩展更新到仓库里的最新版？';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            '正在更新 ${current}/${total}：${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            '已更新 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
+      case 'mihon_sources_sort_by_downloads':
+        return '按下载量排序';
+      case 'mihon_sources_sort_by_downloads_done':
+        return '已按扩展下载量重排源';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return '还没有下载量数据，先刷新扩展仓库';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            '识别中 ${chapter}：第 ${done}/${total} 页';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} 章排队中';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            '识别中 ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return '等待识别';
+      case 'manga_ocr_boxes_toggle':
+        return '显示识别范围';
       default:
         return null;
     }
@@ -350910,6 +352623,55 @@ extension on _StringsZhHk {
         return 'Forward';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'mihon_source_login_import_browser':
+        return 'Import from browser';
+      case 'mihon_source_login_import_hint':
+        return 'The site was opened in your browser. The Fushi extension will send its session here; sign in there if needed, then tap Done.';
+      case 'mihon_source_login_import_received':
+        return ({required Object count}) =>
+            'Imported ${count} cookies from the browser';
+      case 'mihon_source_login_import_none':
+        return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
