@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80920 (4760 per locale)
+/// Strings: 80937 (4761 per locale)
 ///
-/// Built on 2026-09-12 at 07:33 UTC
+/// Built on 2026-09-12 at 10:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6634,6 +6634,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Recognizing ${done}/${total}';
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -17856,6 +17858,9 @@ class _StringsAr extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -29304,6 +29309,9 @@ class _StringsDe extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -40806,6 +40814,9 @@ class _StringsEs extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -52341,6 +52352,9 @@ class _StringsFr extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -63680,6 +63694,9 @@ class _StringsId extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -75110,6 +75127,9 @@ class _StringsIt extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -85922,6 +85942,9 @@ class _StringsJa extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -96744,6 +96767,9 @@ class _StringsKo extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -108132,6 +108158,9 @@ class _StringsNl extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -119573,6 +119602,9 @@ class _StringsPtBr extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -130991,6 +131023,9 @@ class _StringsRu extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -142210,6 +142245,9 @@ class _StringsTh extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -153544,6 +153582,9 @@ class _StringsTr extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -164848,6 +164889,9 @@ class _StringsVi extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 // Path: <root>
@@ -175222,6 +175266,8 @@ class _StringsZhCn extends _StringsEn {
   String get manga_chapter_ocr_status_queued => '等待识别';
   @override
   String get manga_ocr_boxes_toggle => '显示识别范围';
+  @override
+  String get remote_manga_added_to_shelf => '已加入漫画书架，章节从对端下载';
 }
 
 // Path: <root>
@@ -185718,6 +185764,9 @@ class _StringsZhHk extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get remote_manga_added_to_shelf =>
+      'Added to the manga shelf; chapters download from the peer';
 }
 
 /// Flat map(s) containing all translations.
@@ -195537,6 +195586,8 @@ extension on _StringsEn {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -205351,6 +205402,8 @@ extension on _StringsAr {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -215210,6 +215263,8 @@ extension on _StringsDe {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -225060,6 +225115,8 @@ extension on _StringsEs {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -234919,6 +234976,8 @@ extension on _StringsFr {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -244749,6 +244808,8 @@ extension on _StringsId {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -254601,6 +254662,8 @@ extension on _StringsIt {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -264380,6 +264443,8 @@ extension on _StringsJa {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -274163,6 +274228,8 @@ extension on _StringsKo {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -284008,6 +284075,8 @@ extension on _StringsNl {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -293848,6 +293917,8 @@ extension on _StringsPtBr {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -303695,6 +303766,8 @@ extension on _StringsRu {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -313514,6 +313587,8 @@ extension on _StringsTh {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -323348,6 +323423,8 @@ extension on _StringsTr {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -333176,6 +333253,8 @@ extension on _StringsVi {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
@@ -342915,6 +342994,8 @@ extension on _StringsZhCn {
         return '等待识别';
       case 'manga_ocr_boxes_toggle':
         return '显示识别范围';
+      case 'remote_manga_added_to_shelf':
+        return '已加入漫画书架，章节从对端下载';
       default:
         return null;
     }
@@ -352672,6 +352753,8 @@ extension on _StringsZhHk {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'remote_manga_added_to_shelf':
+        return 'Added to the manga shelf; chapters download from the peer';
       default:
         return null;
     }
