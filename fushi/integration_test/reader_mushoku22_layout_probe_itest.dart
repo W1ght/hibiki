@@ -227,9 +227,17 @@ void main() {
                   ReaderFushiPage.debugEvaluateJavascript;
               expect(runJs, isNotNull);
               final String tag = target.replaceAll('.xhtml', '');
-              for (final String phase in <String>['open', 'settled']) {
+              for (final String phase in <String>[
+                'open',
+                'settled',
+                'page2',
+                'page3',
+              ]) {
                 if (phase == 'settled') {
                   await tester.pump(const Duration(seconds: 6));
+                } else if (phase.startsWith('page')) {
+                  await runJs!('window.fushiReader.paginate(1)');
+                  await tester.pump(const Duration(seconds: 2));
                 }
                 final String raw = (await runJs!(_probeJs)) as String;
                 debugPrint('[m22] $tag $phase ${raw.length} chars');
