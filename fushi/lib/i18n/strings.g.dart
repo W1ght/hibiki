@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80682 (4746 per locale)
+/// Strings: 80903 (4759 per locale)
 ///
-/// Built on 2026-09-12 at 06:15 UTC
+/// Built on 2026-09-12 at 06:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6601,6 +6601,38 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Imported ${count} cookies from the browser';
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  String get mihon_extension_update_all => 'Update all';
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -17776,6 +17808,51 @@ class _StringsAr extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -29177,6 +29254,51 @@ class _StringsDe extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -40632,6 +40754,51 @@ class _StringsEs extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -52120,6 +52287,51 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -63412,6 +63624,51 @@ class _StringsId extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -74795,6 +75052,51 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -85560,6 +85862,51 @@ class _StringsJa extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -96335,6 +96682,51 @@ class _StringsKo extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -107676,6 +108068,51 @@ class _StringsNl extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -119070,6 +119507,51 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -130441,6 +130923,51 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -141613,6 +142140,51 @@ class _StringsTh extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -152900,6 +153472,51 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -164157,6 +164774,51 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 // Path: <root>
@@ -174487,6 +175149,48 @@ class _StringsZhCn extends _StringsEn {
       '已从浏览器导入 ${count} 条 cookie';
   @override
   String get mihon_source_login_import_none => '还没收到浏览器送来的会话';
+  @override
+  String get mihon_extension_update_all => '一键更新';
+  @override
+  String get mihon_extension_update_all_nothing => '已安装的扩展都是最新版。';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      '把 ${count} 个已安装扩展更新到仓库里的最新版？';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      '正在更新 ${current}/${total}：${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      '已更新 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
+  @override
+  String get mihon_sources_sort_by_downloads => '按下载量排序';
+  @override
+  String get mihon_sources_sort_by_downloads_done => '已按扩展下载量重排源';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data => '还没有下载量数据，先刷新扩展仓库';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      '识别中 ${chapter}：第 ${done}/${total} 页';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} 章排队中';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      '识别中 ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => '等待识别';
+  @override
+  String get manga_ocr_boxes_toggle => '显示识别范围';
 }
 
 // Path: <root>
@@ -184936,6 +185640,51 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_source_login_import_none =>
       'No session received from the browser yet';
+  @override
+  String get mihon_extension_update_all => 'Update all';
+  @override
+  String get mihon_extension_update_all_nothing =>
+      'Every installed extension is already up to date.';
+  @override
+  String mihon_extension_update_all_confirm({required Object count}) =>
+      'Update ${count} installed extensions to the newest version in their repositories?';
+  @override
+  String mihon_extension_update_all_progress(
+          {required Object current,
+          required Object total,
+          required Object name}) =>
+      'Updating ${current}/${total}: ${name}';
+  @override
+  String mihon_extension_update_all_done(
+          {required Object installed,
+          required Object skipped,
+          required Object failed}) =>
+      'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+  @override
+  String get mihon_sources_sort_by_downloads => 'Sort by downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_done =>
+      'Sources reordered by extension downloads';
+  @override
+  String get mihon_sources_sort_by_downloads_no_data =>
+      'No download counts available yet; refresh the extension repositories first';
+  @override
+  String manga_series_ocr_running(
+          {required Object chapter,
+          required Object done,
+          required Object total}) =>
+      'Recognizing ${chapter}: page ${done}/${total}';
+  @override
+  String manga_series_ocr_queued_count({required Object count}) =>
+      '${count} chapters waiting';
+  @override
+  String manga_chapter_ocr_status_running(
+          {required Object done, required Object total}) =>
+      'Recognizing ${done}/${total}';
+  @override
+  String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
+  @override
+  String get manga_ocr_boxes_toggle => 'Show recognized text regions';
 }
 
 /// Flat map(s) containing all translations.
@@ -194713,6 +195462,46 @@ extension on _StringsEn {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -204485,6 +205274,46 @@ extension on _StringsAr {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -214302,6 +215131,46 @@ extension on _StringsDe {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -224110,6 +224979,46 @@ extension on _StringsEs {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -233927,6 +234836,46 @@ extension on _StringsFr {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -243715,6 +244664,46 @@ extension on _StringsId {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -253525,6 +254514,46 @@ extension on _StringsIt {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -263262,6 +264291,46 @@ extension on _StringsJa {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -273003,6 +274072,46 @@ extension on _StringsKo {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -282806,6 +283915,46 @@ extension on _StringsNl {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -292604,6 +293753,46 @@ extension on _StringsPtBr {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -302409,6 +303598,46 @@ extension on _StringsRu {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -312186,6 +313415,46 @@ extension on _StringsTh {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -321978,6 +323247,46 @@ extension on _StringsTr {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -331764,6 +333073,46 @@ extension on _StringsVi {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
@@ -341462,6 +342811,45 @@ extension on _StringsZhCn {
         return ({required Object count}) => '已从浏览器导入 ${count} 条 cookie';
       case 'mihon_source_login_import_none':
         return '还没收到浏览器送来的会话';
+      case 'mihon_extension_update_all':
+        return '一键更新';
+      case 'mihon_extension_update_all_nothing':
+        return '已安装的扩展都是最新版。';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) => '把 ${count} 个已安装扩展更新到仓库里的最新版？';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            '正在更新 ${current}/${total}：${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            '已更新 ${installed} 个，跳过 ${skipped} 个，失败 ${failed} 个';
+      case 'mihon_sources_sort_by_downloads':
+        return '按下载量排序';
+      case 'mihon_sources_sort_by_downloads_done':
+        return '已按扩展下载量重排源';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return '还没有下载量数据，先刷新扩展仓库';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            '识别中 ${chapter}：第 ${done}/${total} 页';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} 章排队中';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            '识别中 ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return '等待识别';
+      case 'manga_ocr_boxes_toggle':
+        return '显示识别范围';
       default:
         return null;
     }
@@ -351177,6 +352565,46 @@ extension on _StringsZhHk {
             'Imported ${count} cookies from the browser';
       case 'mihon_source_login_import_none':
         return 'No session received from the browser yet';
+      case 'mihon_extension_update_all':
+        return 'Update all';
+      case 'mihon_extension_update_all_nothing':
+        return 'Every installed extension is already up to date.';
+      case 'mihon_extension_update_all_confirm':
+        return ({required Object count}) =>
+            'Update ${count} installed extensions to the newest version in their repositories?';
+      case 'mihon_extension_update_all_progress':
+        return (
+                {required Object current,
+                required Object total,
+                required Object name}) =>
+            'Updating ${current}/${total}: ${name}';
+      case 'mihon_extension_update_all_done':
+        return (
+                {required Object installed,
+                required Object skipped,
+                required Object failed}) =>
+            'Updated ${installed}, skipped ${skipped}, failed ${failed}';
+      case 'mihon_sources_sort_by_downloads':
+        return 'Sort by downloads';
+      case 'mihon_sources_sort_by_downloads_done':
+        return 'Sources reordered by extension downloads';
+      case 'mihon_sources_sort_by_downloads_no_data':
+        return 'No download counts available yet; refresh the extension repositories first';
+      case 'manga_series_ocr_running':
+        return (
+                {required Object chapter,
+                required Object done,
+                required Object total}) =>
+            'Recognizing ${chapter}: page ${done}/${total}';
+      case 'manga_series_ocr_queued_count':
+        return ({required Object count}) => '${count} chapters waiting';
+      case 'manga_chapter_ocr_status_running':
+        return ({required Object done, required Object total}) =>
+            'Recognizing ${done}/${total}';
+      case 'manga_chapter_ocr_status_queued':
+        return 'Waiting for recognition';
+      case 'manga_ocr_boxes_toggle':
+        return 'Show recognized text regions';
       default:
         return null;
     }
