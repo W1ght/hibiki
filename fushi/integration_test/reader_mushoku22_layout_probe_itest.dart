@@ -32,10 +32,50 @@ const String _epubPath = String.fromEnvironment(
   defaultValue: r'C:\Users\Wight\.claude\jobs\181ad860\tmp\mushoku22\book.epub',
 );
 
-const List<String> _targets = <String>[
-  'p-toc-002.xhtml',
-  'p-002.xhtml',
-  'p-titlepage.xhtml',
+typedef _Pass = ({
+  String target,
+  String wm,
+  double fs,
+  double lh,
+  String label,
+});
+
+const List<_Pass> _passes = <_Pass>[
+  (
+    target: 'p-toc-002.xhtml',
+    wm: 'vertical-rl',
+    fs: 22,
+    lh: 1.65,
+    label: 'toc-v22',
+  ),
+  (
+    target: 'p-002.xhtml',
+    wm: 'vertical-rl',
+    fs: 22,
+    lh: 1.65,
+    label: 'ruby-v22',
+  ),
+  (
+    target: 'p-002.xhtml',
+    wm: 'vertical-rl',
+    fs: 22,
+    lh: 1.0,
+    label: 'ruby-v22-lh1',
+  ),
+  (
+    target: 'p-002.xhtml',
+    wm: 'horizontal-tb',
+    fs: 22,
+    lh: 1.65,
+    label: 'ruby-h22',
+  ),
+  (
+    target: 'p-002.xhtml',
+    wm: 'vertical-rl',
+    fs: 46,
+    lh: 1.65,
+    label: 'ruby-v46',
+  ),
 ];
 
 /// 候选 CSS（追加到 head 末尾，压过阅读器样式）：A/B WebKit 行盒规则。
@@ -43,16 +83,12 @@ const Map<String, String> _candidates = <String, String>{
   'current': '',
   'lbc-default':
       'html{-webkit-line-box-contain: block inline replaced !important}',
-  'rt-h0':
-      'html{-webkit-line-box-contain: block inline replaced !important} rt{height:0 !important}',
-  'rt-h0-lh0':
-      'html{-webkit-line-box-contain: block inline replaced !important} rt{height:0 !important;line-height:0 !important}',
-  'rt-mbs':
+  'rt-mbs-05':
       'html{-webkit-line-box-contain: block inline replaced !important} rt{margin-block-start:-0.5em !important}',
-  'ruby-lh0':
-      'html{-webkit-line-box-contain: block inline replaced !important} ruby{line-height:0 !important}',
-  'scoped':
-      'html{-webkit-line-box-contain: block inline replaced !important} p:has(ruby):not(:has(a,br)),div:has(>ruby):not(:has(a,br)){-webkit-line-box-contain: block replaced !important}',
+  'rt-mbs-15':
+      'html{-webkit-line-box-contain: block inline replaced !important} rt{margin-block-start:-1.5em !important}',
+  'rt-mbs-3':
+      'html{-webkit-line-box-contain: block inline replaced !important} rt{margin-block-start:-3em !important}',
 };
 
 const Key _kWebViewKey = ValueKey<String>('fushi_webview');
@@ -391,6 +427,7 @@ void main() {
           final String originalViewMode = source.readerViewMode;
           final bool originalFloating = source.tapEmptyToHideChrome;
           final double originalFontSize = source.readerFontSize;
+          final double originalLineHeight = source.readerLineHeight;
           debugPrint(
             '[m22] original prefs: writing_mode=$originalWritingMode '
             'view_mode=$originalViewMode floating=$originalFloating '
@@ -423,7 +460,12 @@ void main() {
               debugPrint('[m22] chapter $i href=${c['href']}');
             }
 
-            for (final String target in _targets) {
+            for (final _Pass pass in _passes) {
+              final String target = pass.target;
+              await source.setReaderWritingMode(pass.wm);
+              await source.setReaderFontSize(pass.fs);
+              await source.setReaderLineHeight(pass.lh);
+              await _pumpForPref(tester);
               int section = -1;
               for (int i = 0; i < chapters.length; i++) {
                 final String href =
@@ -461,7 +503,7 @@ void main() {
               await runJs('window.fushiReader._resetImageMaxVars()');
               await tester.pump(const Duration(seconds: 2));
 
-              final String tag = target.replaceAll('.xhtml', '');
+              final String tag = pass.label;
               final List<String> phases = <String>[
                 'open',
                 ..._candidates.keys.where((String k) => k != 'current'),
@@ -517,9 +559,7 @@ void main() {
                     debugPrint('[m22] $tag $phase $key ${jsonEncode(v)}');
                   }
                 }
-                if (phase == 'open' ||
-                    phase.startsWith('page') ||
-                    phase == 'lbc-default') {
+                if (phase == 'open' || phase == 'rt-mbs-15') {
                   final ObserveShot web = await captureReaderWebView(
                     'm22-$tag-$phase-webview',
                   );
@@ -532,6 +572,7 @@ void main() {
             await source.setReaderWritingMode(originalWritingMode);
             await source.setReaderViewMode(originalViewMode);
             await source.setReaderFontSize(originalFontSize);
+            await source.setReaderLineHeight(originalLineHeight);
             if (source.tapEmptyToHideChrome != originalFloating) {
               source.toggleTapEmptyToHideChrome();
             }
