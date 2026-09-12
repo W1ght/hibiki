@@ -257,7 +257,7 @@ void main() {
                   );
                   await tester.pump(const Duration(seconds: 1));
                 } else if (phase.startsWith('page')) {
-                  await runJs!('window.fushiReader.paginate(1)');
+                  await runJs!('window.fushiReader.paginate("forward")');
                   await tester.pump(const Duration(seconds: 2));
                 }
                 final String raw = (await runJs!(_probeJs)) as String;
