@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80988 (4764 per locale)
+/// Strings: 81056 (4768 per locale)
 ///
-/// Built on 2026-09-12 at 11:34 UTC
+/// Built on 2026-09-12 at 12:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6640,6 +6640,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get backup_category_games_desc =>
       'Game library, metadata sources and covers';
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -17872,6 +17876,14 @@ class _StringsAr extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -29330,6 +29342,14 @@ class _StringsDe extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -40842,6 +40862,14 @@ class _StringsEs extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -52387,6 +52415,14 @@ class _StringsFr extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -63736,6 +63772,14 @@ class _StringsId extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -75176,6 +75220,14 @@ class _StringsIt extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -85998,6 +86050,14 @@ class _StringsJa extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -96830,6 +96890,14 @@ class _StringsKo extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -108228,6 +108296,14 @@ class _StringsNl extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -119679,6 +119755,14 @@ class _StringsPtBr extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -131107,6 +131191,14 @@ class _StringsRu extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -142336,6 +142428,14 @@ class _StringsTh extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -153680,6 +153780,14 @@ class _StringsTr extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -164994,6 +165102,14 @@ class _StringsVi extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 // Path: <root>
@@ -175376,6 +175492,14 @@ class _StringsZhCn extends _StringsEn {
   String get backup_category_games_desc => '游戏库、元数据来源与封面';
   @override
   String get options_github_sponsors => '通过 GitHub Sponsors 赞助 Fushi';
+  @override
+  String get shortcut_action_global_scroll_line_down => '向下滚动一行';
+  @override
+  String get shortcut_action_global_scroll_line_up => '向上滚动一行';
+  @override
+  String get shortcut_action_global_scroll_to_top => '滚动到顶部';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => '滚动到底部';
 }
 
 // Path: <root>
@@ -185882,6 +186006,14 @@ class _StringsZhHk extends _StringsEn {
       'Game library, metadata sources and covers';
   @override
   String get options_github_sponsors => 'Support Fushi on GitHub Sponsors';
+  @override
+  String get shortcut_action_global_scroll_line_down => 'Scroll down one step';
+  @override
+  String get shortcut_action_global_scroll_line_up => 'Scroll up one step';
+  @override
+  String get shortcut_action_global_scroll_to_top => 'Scroll to top';
+  @override
+  String get shortcut_action_global_scroll_to_bottom => 'Scroll to bottom';
 }
 
 /// Flat map(s) containing all translations.
@@ -195709,6 +195841,14 @@ extension on _StringsEn {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -205531,6 +205671,14 @@ extension on _StringsAr {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -215398,6 +215546,14 @@ extension on _StringsDe {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -225256,6 +225412,14 @@ extension on _StringsEs {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -235123,6 +235287,14 @@ extension on _StringsFr {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -244961,6 +245133,14 @@ extension on _StringsId {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -254821,6 +255001,14 @@ extension on _StringsIt {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -264608,6 +264796,14 @@ extension on _StringsJa {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -274399,6 +274595,14 @@ extension on _StringsKo {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -284252,6 +284456,14 @@ extension on _StringsNl {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -294100,6 +294312,14 @@ extension on _StringsPtBr {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -303955,6 +304175,14 @@ extension on _StringsRu {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -313782,6 +314010,14 @@ extension on _StringsTh {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -323624,6 +323860,14 @@ extension on _StringsTr {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -333460,6 +333704,14 @@ extension on _StringsVi {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
@@ -343207,6 +343459,14 @@ extension on _StringsZhCn {
         return '游戏库、元数据来源与封面';
       case 'options_github_sponsors':
         return '通过 GitHub Sponsors 赞助 Fushi';
+      case 'shortcut_action_global_scroll_line_down':
+        return '向下滚动一行';
+      case 'shortcut_action_global_scroll_line_up':
+        return '向上滚动一行';
+      case 'shortcut_action_global_scroll_to_top':
+        return '滚动到顶部';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return '滚动到底部';
       default:
         return null;
     }
@@ -352972,6 +353232,14 @@ extension on _StringsZhHk {
         return 'Game library, metadata sources and covers';
       case 'options_github_sponsors':
         return 'Support Fushi on GitHub Sponsors';
+      case 'shortcut_action_global_scroll_line_down':
+        return 'Scroll down one step';
+      case 'shortcut_action_global_scroll_line_up':
+        return 'Scroll up one step';
+      case 'shortcut_action_global_scroll_to_top':
+        return 'Scroll to top';
+      case 'shortcut_action_global_scroll_to_bottom':
+        return 'Scroll to bottom';
       default:
         return null;
     }
