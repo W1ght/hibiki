@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80920 (4760 per locale)
+/// Strings: 81345 (4785 per locale)
 ///
-/// Built on 2026-09-12 at 07:33 UTC
+/// Built on 2026-09-12 at 10:53 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6634,6 +6634,44 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Recognizing ${done}/${total}';
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  String get card_source_review_continue => 'Continue reading here';
+  String get card_source_review_return => 'Return';
+  String get card_source_review_changes => 'Choose fields to update';
+  String get card_source_review_save => 'Save selected changes';
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  String get card_source_review_saved => 'Original note updated';
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  String get card_source_review_before => 'Original';
+  String get card_source_review_after => 'Updated';
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  String get card_source_review_draft_resume => 'Resume draft';
+  String get card_source_review_draft_discard => 'Discard draft';
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  String get card_source_review_source => 'Card source';
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -17856,6 +17894,69 @@ class _StringsAr extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -29304,6 +29405,69 @@ class _StringsDe extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -40806,6 +40970,69 @@ class _StringsEs extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -52341,6 +52568,69 @@ class _StringsFr extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -63680,6 +63970,69 @@ class _StringsId extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -75110,6 +75463,69 @@ class _StringsIt extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -85922,6 +86338,69 @@ class _StringsJa extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -96744,6 +97223,69 @@ class _StringsKo extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -108132,6 +108674,69 @@ class _StringsNl extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -119573,6 +120178,69 @@ class _StringsPtBr extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -130991,6 +131659,69 @@ class _StringsRu extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -142210,6 +142941,69 @@ class _StringsTh extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -153544,6 +154338,69 @@ class _StringsTr extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -164848,6 +165705,69 @@ class _StringsVi extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 // Path: <root>
@@ -175222,6 +176142,58 @@ class _StringsZhCn extends _StringsEn {
   String get manga_chapter_ocr_status_queued => '等待识别';
   @override
   String get manga_ocr_boxes_toggle => '显示识别范围';
+  @override
+  String get card_source_review_title => '正在回看卡片来源 · 不影响阅读进度';
+  @override
+  String get card_source_review_continue => '从这里继续阅读';
+  @override
+  String get card_source_review_return => '返回';
+  @override
+  String get card_source_review_changes => '选择要更新的字段';
+  @override
+  String get card_source_review_save => '保存选中修改';
+  @override
+  String get card_source_review_missing => '找不到原卡，请同步 Anki 或连接原卡所在的配对设备。';
+  @override
+  String get card_source_review_failed => '修改尚未保存，原卡可能已被修改或设备不可达。';
+  @override
+  String get card_source_review_saved => '原卡已更新';
+  @override
+  String get card_source_review_no_changes => '未选择要更新的字段';
+  @override
+  String get card_source_review_media_missing => '此设备没有对应来源，请先导入或下载作品。';
+  @override
+  String get card_source_review_invalid => '来源链接无效或版本暂不支持。';
+  @override
+  String get card_source_review_local_required => '请先下载视频，再进行不影响服务器进度的回看。';
+  @override
+  String get card_source_review_before => '原内容';
+  @override
+  String get card_source_review_after => '修改后';
+  @override
+  String get card_source_review_conflict_warning =>
+      '请避免同时在 Anki 和 Fushi 编辑这张卡；发生冲突时，修改会保留为本地草稿。';
+  @override
+  String get card_source_review_draft_saved => '修改已保留为本地草稿，请恢复草稿后重新核对并手动提交。';
+  @override
+  String get card_source_review_draft_resume => '恢复草稿';
+  @override
+  String get card_source_review_draft_discard => '丢弃草稿';
+  @override
+  String get card_source_review_draft_existing => '已有未提交草稿，请先恢复或丢弃草稿，再进行新的修改。';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      '当前文件与卡片来源不一致，请使用对应的原文件。';
+  @override
+  String get card_source_review_source => '卡片来源';
+  @override
+  String get card_source_review_video_title => '正在回看卡片片段 · 不影响观看进度';
+  @override
+  String get card_source_review_video_watching => '正在正常观看 · 会记录观看进度';
+  @override
+  String get card_source_review_video_return => '返回原观看位置';
+  @override
+  String get card_source_review_video_continue => '从这里继续观看';
 }
 
 // Path: <root>
@@ -185718,6 +186690,69 @@ class _StringsZhHk extends _StringsEn {
   String get manga_chapter_ocr_status_queued => 'Waiting for recognition';
   @override
   String get manga_ocr_boxes_toggle => 'Show recognized text regions';
+  @override
+  String get card_source_review_title =>
+      'Reviewing card source · Reading progress is preserved';
+  @override
+  String get card_source_review_continue => 'Continue reading here';
+  @override
+  String get card_source_review_return => 'Return';
+  @override
+  String get card_source_review_changes => 'Choose fields to update';
+  @override
+  String get card_source_review_save => 'Save selected changes';
+  @override
+  String get card_source_review_missing =>
+      'The original note could not be found. Sync Anki or connect its paired device.';
+  @override
+  String get card_source_review_failed =>
+      'Changes were not saved. The note may have changed or the device is unavailable.';
+  @override
+  String get card_source_review_saved => 'Original note updated';
+  @override
+  String get card_source_review_no_changes => 'No fields selected for updating';
+  @override
+  String get card_source_review_media_missing =>
+      'Source media is unavailable on this device. Import or download it first.';
+  @override
+  String get card_source_review_invalid =>
+      'This source link is invalid or uses an unsupported version.';
+  @override
+  String get card_source_review_local_required =>
+      'Download this video before reviewing it without changing server progress.';
+  @override
+  String get card_source_review_before => 'Original';
+  @override
+  String get card_source_review_after => 'Updated';
+  @override
+  String get card_source_review_conflict_warning =>
+      'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+  @override
+  String get card_source_review_draft_saved =>
+      'Changes remain in a local draft. Resume it to review and submit again.';
+  @override
+  String get card_source_review_draft_resume => 'Resume draft';
+  @override
+  String get card_source_review_draft_discard => 'Discard draft';
+  @override
+  String get card_source_review_draft_existing =>
+      'A draft already exists. Resume or discard it before making another edit.';
+  @override
+  String get card_source_review_fingerprint_mismatch =>
+      'This file does not match the card source. Open the matching file to continue.';
+  @override
+  String get card_source_review_source => 'Card source';
+  @override
+  String get card_source_review_video_title =>
+      'Reviewing card clip · Watch progress is preserved';
+  @override
+  String get card_source_review_video_watching =>
+      'Watching normally · Watch progress is being saved';
+  @override
+  String get card_source_review_video_return =>
+      'Return to original watch position';
+  @override
+  String get card_source_review_video_continue => 'Continue watching here';
 }
 
 /// Flat map(s) containing all translations.
@@ -195537,6 +196572,56 @@ extension on _StringsEn {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -205351,6 +206436,56 @@ extension on _StringsAr {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -215210,6 +216345,56 @@ extension on _StringsDe {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -225060,6 +226245,56 @@ extension on _StringsEs {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -234919,6 +236154,56 @@ extension on _StringsFr {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -244749,6 +246034,56 @@ extension on _StringsId {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -254601,6 +255936,56 @@ extension on _StringsIt {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -264380,6 +265765,56 @@ extension on _StringsJa {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -274163,6 +275598,56 @@ extension on _StringsKo {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -284008,6 +285493,56 @@ extension on _StringsNl {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -293848,6 +295383,56 @@ extension on _StringsPtBr {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -303695,6 +305280,56 @@ extension on _StringsRu {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -313514,6 +315149,56 @@ extension on _StringsTh {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -323348,6 +325033,56 @@ extension on _StringsTr {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -333176,6 +334911,56 @@ extension on _StringsVi {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
@@ -342915,6 +344700,56 @@ extension on _StringsZhCn {
         return '等待识别';
       case 'manga_ocr_boxes_toggle':
         return '显示识别范围';
+      case 'card_source_review_title':
+        return '正在回看卡片来源 · 不影响阅读进度';
+      case 'card_source_review_continue':
+        return '从这里继续阅读';
+      case 'card_source_review_return':
+        return '返回';
+      case 'card_source_review_changes':
+        return '选择要更新的字段';
+      case 'card_source_review_save':
+        return '保存选中修改';
+      case 'card_source_review_missing':
+        return '找不到原卡，请同步 Anki 或连接原卡所在的配对设备。';
+      case 'card_source_review_failed':
+        return '修改尚未保存，原卡可能已被修改或设备不可达。';
+      case 'card_source_review_saved':
+        return '原卡已更新';
+      case 'card_source_review_no_changes':
+        return '未选择要更新的字段';
+      case 'card_source_review_media_missing':
+        return '此设备没有对应来源，请先导入或下载作品。';
+      case 'card_source_review_invalid':
+        return '来源链接无效或版本暂不支持。';
+      case 'card_source_review_local_required':
+        return '请先下载视频，再进行不影响服务器进度的回看。';
+      case 'card_source_review_before':
+        return '原内容';
+      case 'card_source_review_after':
+        return '修改后';
+      case 'card_source_review_conflict_warning':
+        return '请避免同时在 Anki 和 Fushi 编辑这张卡；发生冲突时，修改会保留为本地草稿。';
+      case 'card_source_review_draft_saved':
+        return '修改已保留为本地草稿，请恢复草稿后重新核对并手动提交。';
+      case 'card_source_review_draft_resume':
+        return '恢复草稿';
+      case 'card_source_review_draft_discard':
+        return '丢弃草稿';
+      case 'card_source_review_draft_existing':
+        return '已有未提交草稿，请先恢复或丢弃草稿，再进行新的修改。';
+      case 'card_source_review_fingerprint_mismatch':
+        return '当前文件与卡片来源不一致，请使用对应的原文件。';
+      case 'card_source_review_source':
+        return '卡片来源';
+      case 'card_source_review_video_title':
+        return '正在回看卡片片段 · 不影响观看进度';
+      case 'card_source_review_video_watching':
+        return '正在正常观看 · 会记录观看进度';
+      case 'card_source_review_video_return':
+        return '返回原观看位置';
+      case 'card_source_review_video_continue':
+        return '从这里继续观看';
       default:
         return null;
     }
@@ -352672,6 +354507,56 @@ extension on _StringsZhHk {
         return 'Waiting for recognition';
       case 'manga_ocr_boxes_toggle':
         return 'Show recognized text regions';
+      case 'card_source_review_title':
+        return 'Reviewing card source · Reading progress is preserved';
+      case 'card_source_review_continue':
+        return 'Continue reading here';
+      case 'card_source_review_return':
+        return 'Return';
+      case 'card_source_review_changes':
+        return 'Choose fields to update';
+      case 'card_source_review_save':
+        return 'Save selected changes';
+      case 'card_source_review_missing':
+        return 'The original note could not be found. Sync Anki or connect its paired device.';
+      case 'card_source_review_failed':
+        return 'Changes were not saved. The note may have changed or the device is unavailable.';
+      case 'card_source_review_saved':
+        return 'Original note updated';
+      case 'card_source_review_no_changes':
+        return 'No fields selected for updating';
+      case 'card_source_review_media_missing':
+        return 'Source media is unavailable on this device. Import or download it first.';
+      case 'card_source_review_invalid':
+        return 'This source link is invalid or uses an unsupported version.';
+      case 'card_source_review_local_required':
+        return 'Download this video before reviewing it without changing server progress.';
+      case 'card_source_review_before':
+        return 'Original';
+      case 'card_source_review_after':
+        return 'Updated';
+      case 'card_source_review_conflict_warning':
+        return 'Avoid editing this note in Anki and Fushi at the same time. If a conflict occurs, your changes stay in a local draft.';
+      case 'card_source_review_draft_saved':
+        return 'Changes remain in a local draft. Resume it to review and submit again.';
+      case 'card_source_review_draft_resume':
+        return 'Resume draft';
+      case 'card_source_review_draft_discard':
+        return 'Discard draft';
+      case 'card_source_review_draft_existing':
+        return 'A draft already exists. Resume or discard it before making another edit.';
+      case 'card_source_review_fingerprint_mismatch':
+        return 'This file does not match the card source. Open the matching file to continue.';
+      case 'card_source_review_source':
+        return 'Card source';
+      case 'card_source_review_video_title':
+        return 'Reviewing card clip · Watch progress is preserved';
+      case 'card_source_review_video_watching':
+        return 'Watching normally · Watch progress is being saved';
+      case 'card_source_review_video_return':
+        return 'Return to original watch position';
+      case 'card_source_review_video_continue':
+        return 'Continue watching here';
       default:
         return null;
     }
