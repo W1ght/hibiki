@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80512 (4736 per locale)
+/// Strings: 80614 (4742 per locale)
 ///
-/// Built on 2026-09-11 at 23:14 UTC
+/// Built on 2026-09-12 at 04:45 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6586,6 +6586,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_online_select_all => 'Select all';
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  String get manga_chapter_locked_title => 'Chapter locked';
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  String get mihon_sources_search_hint => 'Search sources';
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -17736,6 +17744,20 @@ class _StringsAr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -29112,6 +29134,20 @@ class _StringsDe extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -40542,6 +40578,20 @@ class _StringsEs extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -52005,6 +52055,20 @@ class _StringsFr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -63272,6 +63336,20 @@ class _StringsId extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -74630,6 +74708,20 @@ class _StringsIt extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -85370,6 +85462,20 @@ class _StringsJa extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -96120,6 +96226,20 @@ class _StringsKo extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -107436,6 +107556,20 @@ class _StringsNl extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -118805,6 +118939,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -130151,6 +130299,20 @@ class _StringsRu extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -141298,6 +141460,20 @@ class _StringsTh extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -152560,6 +152736,20 @@ class _StringsTr extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -163792,6 +163982,20 @@ class _StringsVi extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 // Path: <root>
@@ -174099,6 +174303,19 @@ class _StringsZhCn extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '已加入 ${count} 章到下载队列';
+  @override
+  String get manga_chapter_locked_title => '章节已锁定';
+  @override
+  String get manga_chapter_locked_hint => '源站要求登录并购买或租借后才能下载本章。';
+  @override
+  String get manga_chapter_locked_download_anyway => '仍然下载';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      '已跳过 ${count} 个锁定章节';
+  @override
+  String get mihon_sources_search_hint => '搜索漫画源';
+  @override
+  String get mihon_source_login_forward => '前进';
 }
 
 // Path: <root>
@@ -184523,6 +184740,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String manga_series_download_all_queued({required Object count}) =>
       '${count} chapters queued';
+  @override
+  String get manga_chapter_locked_title => 'Chapter locked';
+  @override
+  String get manga_chapter_locked_hint =>
+      'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+  @override
+  String get manga_chapter_locked_download_anyway => 'Download anyway';
+  @override
+  String manga_series_download_all_locked_skipped({required Object count}) =>
+      'Skipped ${count} locked chapters';
+  @override
+  String get mihon_sources_search_hint => 'Search sources';
+  @override
+  String get mihon_source_login_forward => 'Forward';
 }
 
 /// Flat map(s) containing all translations.
@@ -194279,6 +194510,18 @@ extension on _StringsEn {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -204030,6 +204273,18 @@ extension on _StringsAr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -213826,6 +214081,18 @@ extension on _StringsDe {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -223613,6 +223880,18 @@ extension on _StringsEs {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -233409,6 +233688,18 @@ extension on _StringsFr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -243176,6 +243467,18 @@ extension on _StringsId {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -252965,6 +253268,18 @@ extension on _StringsIt {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -262681,6 +262996,18 @@ extension on _StringsJa {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -272401,6 +272728,18 @@ extension on _StringsKo {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -282183,6 +282522,18 @@ extension on _StringsNl {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -291960,6 +292311,18 @@ extension on _StringsPtBr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -301744,6 +302107,18 @@ extension on _StringsRu {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -311500,6 +311875,18 @@ extension on _StringsTh {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -321271,6 +321658,18 @@ extension on _StringsTr {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -331036,6 +331435,18 @@ extension on _StringsVi {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
@@ -340714,6 +341125,18 @@ extension on _StringsZhCn {
         return '全选';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '已加入 ${count} 章到下载队列';
+      case 'manga_chapter_locked_title':
+        return '章节已锁定';
+      case 'manga_chapter_locked_hint':
+        return '源站要求登录并购买或租借后才能下载本章。';
+      case 'manga_chapter_locked_download_anyway':
+        return '仍然下载';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => '已跳过 ${count} 个锁定章节';
+      case 'mihon_sources_search_hint':
+        return '搜索漫画源';
+      case 'mihon_source_login_forward':
+        return '前进';
       default:
         return null;
     }
@@ -350408,6 +350831,18 @@ extension on _StringsZhHk {
         return 'Select all';
       case 'manga_series_download_all_queued':
         return ({required Object count}) => '${count} chapters queued';
+      case 'manga_chapter_locked_title':
+        return 'Chapter locked';
+      case 'manga_chapter_locked_hint':
+        return 'The source requires signing in and purchasing or renting this chapter before it can be downloaded.';
+      case 'manga_chapter_locked_download_anyway':
+        return 'Download anyway';
+      case 'manga_series_download_all_locked_skipped':
+        return ({required Object count}) => 'Skipped ${count} locked chapters';
+      case 'mihon_sources_search_hint':
+        return 'Search sources';
+      case 'mihon_source_login_forward':
+        return 'Forward';
       default:
         return null;
     }
