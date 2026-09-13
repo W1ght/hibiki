@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 81192 (4776 per locale)
+/// Strings: 81209 (4777 per locale)
 ///
-/// Built on 2026-09-12 at 15:46 UTC
+/// Built on 2026-09-13 at 05:05 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6657,6 +6657,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Multilingual — wide coverage, less accurate per language';
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -17918,6 +17919,8 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -29405,6 +29408,8 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -40946,6 +40951,8 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -52520,6 +52527,8 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -63898,6 +63907,8 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -75367,6 +75378,8 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -86218,6 +86231,8 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -97079,6 +97094,8 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -108506,6 +108523,8 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -119986,6 +120005,8 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -131443,6 +131464,8 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -142701,6 +142724,8 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -154074,6 +154099,8 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -165417,6 +165444,8 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -175825,6 +175854,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '总耗时 ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => '从互联对端下载有声书';
 }
 
 // Path: <root>
@@ -186360,6 +186391,8 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 /// Flat map(s) containing all translations.
@@ -196211,6 +196244,8 @@ extension on _StringsEn {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -206057,6 +206092,8 @@ extension on _StringsAr {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -215948,6 +215985,8 @@ extension on _StringsDe {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -225830,6 +225869,8 @@ extension on _StringsEs {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -235721,6 +235762,8 @@ extension on _StringsFr {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -245583,6 +245626,8 @@ extension on _StringsId {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -255467,6 +255512,8 @@ extension on _StringsIt {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -265278,6 +265325,8 @@ extension on _StringsJa {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -275093,6 +275142,8 @@ extension on _StringsKo {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -284970,6 +285021,8 @@ extension on _StringsNl {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -294842,6 +294895,8 @@ extension on _StringsPtBr {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -304721,6 +304776,8 @@ extension on _StringsRu {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -314572,6 +314629,8 @@ extension on _StringsTh {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -324438,6 +324497,8 @@ extension on _StringsTr {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -334298,6 +334359,8 @@ extension on _StringsVi {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -344069,6 +344132,8 @@ extension on _StringsZhCn {
         return '通用模型 · 语言覆盖广，单语言精度不如专用模型';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '总耗时 ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return '从互联对端下载有声书';
       default:
         return null;
     }
@@ -353858,6 +353923,8 @@ extension on _StringsZhHk {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
