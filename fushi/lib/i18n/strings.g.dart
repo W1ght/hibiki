@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 81243 (4779 per locale)
+/// Strings: 81294 (4782 per locale)
 ///
-/// Built on 2026-09-13 at 06:04 UTC
+/// Built on 2026-09-13 at 06:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6661,6 +6661,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_chrome_floating => 'Floating toolbar';
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  String get popup_ctx_edit_start => 'Edit sentence';
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -17929,6 +17932,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -29423,6 +29432,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -40971,6 +40986,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -52552,6 +52573,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -63937,6 +63964,12 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -75413,6 +75446,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -86271,6 +86310,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -97139,6 +97184,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -108573,6 +108624,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -120060,6 +120117,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -131524,6 +131587,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -142789,6 +142858,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -154169,6 +154244,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -165519,6 +165600,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 // Path: <root>
@@ -175934,6 +176021,12 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       '工具栏收起不遮挡页面，点页面中央或鼠标移到顶边唤出；关闭则常驻在页面上方';
+  @override
+  String get popup_ctx_edit_start => '编辑句子';
+  @override
+  String get popup_ctx_edit_confirm => '确认修改';
+  @override
+  String get popup_ctx_edit_cancel => '放弃修改';
 }
 
 // Path: <root>
@@ -186476,6 +186569,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_chrome_floating_subtitle =>
       'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+  @override
+  String get popup_ctx_edit_start => 'Edit sentence';
+  @override
+  String get popup_ctx_edit_confirm => 'Confirm edit';
+  @override
+  String get popup_ctx_edit_cancel => 'Discard edit';
 }
 
 /// Flat map(s) containing all translations.
@@ -196333,6 +196432,12 @@ extension on _StringsEn {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -206185,6 +206290,12 @@ extension on _StringsAr {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -216082,6 +216193,12 @@ extension on _StringsDe {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -225970,6 +226087,12 @@ extension on _StringsEs {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -235867,6 +235990,12 @@ extension on _StringsFr {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -245735,6 +245864,12 @@ extension on _StringsId {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -255625,6 +255760,12 @@ extension on _StringsIt {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -265442,6 +265583,12 @@ extension on _StringsJa {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -275263,6 +275410,12 @@ extension on _StringsKo {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -285146,6 +285299,12 @@ extension on _StringsNl {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -295024,6 +295183,12 @@ extension on _StringsPtBr {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -304909,6 +305074,12 @@ extension on _StringsRu {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -314766,6 +314937,12 @@ extension on _StringsTh {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -324638,6 +324815,12 @@ extension on _StringsTr {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -334504,6 +334687,12 @@ extension on _StringsVi {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
@@ -344281,6 +344470,12 @@ extension on _StringsZhCn {
         return '悬浮工具栏';
       case 'manga_chrome_floating_subtitle':
         return '工具栏收起不遮挡页面，点页面中央或鼠标移到顶边唤出；关闭则常驻在页面上方';
+      case 'popup_ctx_edit_start':
+        return '编辑句子';
+      case 'popup_ctx_edit_confirm':
+        return '确认修改';
+      case 'popup_ctx_edit_cancel':
+        return '放弃修改';
       default:
         return null;
     }
@@ -354076,6 +354271,12 @@ extension on _StringsZhHk {
         return 'Floating toolbar';
       case 'manga_chrome_floating_subtitle':
         return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
+      case 'popup_ctx_edit_start':
+        return 'Edit sentence';
+      case 'popup_ctx_edit_confirm':
+        return 'Confirm edit';
+      case 'popup_ctx_edit_cancel':
+        return 'Discard edit';
       default:
         return null;
     }
