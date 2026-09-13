@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 81736 (4808 per locale)
+/// Strings: 81753 (4809 per locale)
 ///
-/// Built on 2026-09-13 at 06:34 UTC
+/// Built on 2026-09-13 at 06:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6703,6 +6703,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Return to original watch position';
   String get card_source_review_video_continue => 'Continue watching here';
   String get handlebar_source_link => 'Source link';
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -18042,6 +18043,8 @@ class _StringsAr extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -29607,6 +29610,8 @@ class _StringsDe extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -41226,6 +41231,8 @@ class _StringsEs extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -52878,6 +52885,8 @@ class _StringsFr extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -64334,6 +64343,8 @@ class _StringsId extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -75881,6 +75892,8 @@ class _StringsIt extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -86810,6 +86823,8 @@ class _StringsJa extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -97749,6 +97764,8 @@ class _StringsKo extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -109254,6 +109271,8 @@ class _StringsNl extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -120812,6 +120831,8 @@ class _StringsPtBr extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -132347,6 +132368,8 @@ class _StringsRu extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -143683,6 +143706,8 @@ class _StringsTh extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -155134,6 +155159,8 @@ class _StringsTr extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -166555,6 +166582,8 @@ class _StringsVi extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 // Path: <root>
@@ -177030,6 +177059,8 @@ class _StringsZhCn extends _StringsEn {
   String get card_source_review_video_continue => '从这里继续观看';
   @override
   String get handlebar_source_link => '来源链接';
+  @override
+  String get remote_book_audiobook_download => '从互联对端下载有声书';
 }
 
 // Path: <root>
@@ -187643,6 +187674,8 @@ class _StringsZhHk extends _StringsEn {
   String get card_source_review_video_continue => 'Continue watching here';
   @override
   String get handlebar_source_link => 'Source link';
+  @override
+  String get remote_book_audiobook_download => 'Download audiobook from peer';
 }
 
 /// Flat map(s) containing all translations.
@@ -197558,6 +197591,8 @@ extension on _StringsEn {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -207468,6 +207503,8 @@ extension on _StringsAr {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -217423,6 +217460,8 @@ extension on _StringsDe {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -227369,6 +227408,8 @@ extension on _StringsEs {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -237324,6 +237365,8 @@ extension on _StringsFr {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -247250,6 +247293,8 @@ extension on _StringsId {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -257198,6 +257243,8 @@ extension on _StringsIt {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -267073,6 +267120,8 @@ extension on _StringsJa {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -276952,6 +277001,8 @@ extension on _StringsKo {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -286893,6 +286944,8 @@ extension on _StringsNl {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -296829,6 +296882,8 @@ extension on _StringsPtBr {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -306772,6 +306827,8 @@ extension on _StringsRu {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -316687,6 +316744,8 @@ extension on _StringsTh {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -326617,6 +326676,8 @@ extension on _StringsTr {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -336541,6 +336602,8 @@ extension on _StringsVi {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
@@ -346376,6 +346439,8 @@ extension on _StringsZhCn {
         return '从这里继续观看';
       case 'handlebar_source_link':
         return '来源链接';
+      case 'remote_book_audiobook_download':
+        return '从互联对端下载有声书';
       default:
         return null;
     }
@@ -356229,6 +356294,8 @@ extension on _StringsZhHk {
         return 'Continue watching here';
       case 'handlebar_source_link':
         return 'Source link';
+      case 'remote_book_audiobook_download':
+        return 'Download audiobook from peer';
       default:
         return null;
     }
