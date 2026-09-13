@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 81192 (4776 per locale)
+/// Strings: 81243 (4779 per locale)
 ///
-/// Built on 2026-09-12 at 15:46 UTC
+/// Built on 2026-09-13 at 06:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6657,6 +6657,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Multilingual — wide coverage, less accurate per language';
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  String get manga_ocr_settings_open => 'OCR settings';
+  String get manga_chrome_floating => 'Floating toolbar';
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -17918,6 +17922,13 @@ class _StringsAr extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -29405,6 +29416,13 @@ class _StringsDe extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -40946,6 +40964,13 @@ class _StringsEs extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -52520,6 +52545,13 @@ class _StringsFr extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -63898,6 +63930,13 @@ class _StringsId extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -75367,6 +75406,13 @@ class _StringsIt extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -86218,6 +86264,13 @@ class _StringsJa extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -97079,6 +97132,13 @@ class _StringsKo extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -108506,6 +108566,13 @@ class _StringsNl extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -119986,6 +120053,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -131443,6 +131517,13 @@ class _StringsRu extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -142701,6 +142782,13 @@ class _StringsTh extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -154074,6 +154162,13 @@ class _StringsTr extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -165417,6 +165512,13 @@ class _StringsVi extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 // Path: <root>
@@ -175825,6 +175927,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       '总耗时 ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR 设置';
+  @override
+  String get manga_chrome_floating => '悬浮工具栏';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      '工具栏收起不遮挡页面，点页面中央或鼠标移到顶边唤出；关闭则常驻在页面上方';
 }
 
 // Path: <root>
@@ -186360,6 +186469,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String audiobook_transcribe_elapsed_total({required Object elapsed}) =>
       'Total time ${elapsed}';
+  @override
+  String get manga_ocr_settings_open => 'OCR settings';
+  @override
+  String get manga_chrome_floating => 'Floating toolbar';
+  @override
+  String get manga_chrome_floating_subtitle =>
+      'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
 }
 
 /// Flat map(s) containing all translations.
@@ -196211,6 +196327,12 @@ extension on _StringsEn {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -206057,6 +206179,12 @@ extension on _StringsAr {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -215948,6 +216076,12 @@ extension on _StringsDe {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -225830,6 +225964,12 @@ extension on _StringsEs {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -235721,6 +235861,12 @@ extension on _StringsFr {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -245583,6 +245729,12 @@ extension on _StringsId {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -255467,6 +255619,12 @@ extension on _StringsIt {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -265278,6 +265436,12 @@ extension on _StringsJa {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -275093,6 +275257,12 @@ extension on _StringsKo {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -284970,6 +285140,12 @@ extension on _StringsNl {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -294842,6 +295018,12 @@ extension on _StringsPtBr {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -304721,6 +304903,12 @@ extension on _StringsRu {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -314572,6 +314760,12 @@ extension on _StringsTh {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -324438,6 +324632,12 @@ extension on _StringsTr {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -334298,6 +334498,12 @@ extension on _StringsVi {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
@@ -344069,6 +344275,12 @@ extension on _StringsZhCn {
         return '通用模型 · 语言覆盖广，单语言精度不如专用模型';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => '总耗时 ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR 设置';
+      case 'manga_chrome_floating':
+        return '悬浮工具栏';
+      case 'manga_chrome_floating_subtitle':
+        return '工具栏收起不遮挡页面，点页面中央或鼠标移到顶边唤出；关闭则常驻在页面上方';
       default:
         return null;
     }
@@ -353858,6 +354070,12 @@ extension on _StringsZhHk {
         return 'Multilingual — wide coverage, less accurate per language';
       case 'audiobook_transcribe_elapsed_total':
         return ({required Object elapsed}) => 'Total time ${elapsed}';
+      case 'manga_ocr_settings_open':
+        return 'OCR settings';
+      case 'manga_chrome_floating':
+        return 'Floating toolbar';
+      case 'manga_chrome_floating_subtitle':
+        return 'Hide the toolbar over the page; tap the middle of the page or hover at the top edge to reveal it. Off keeps the toolbar pinned above the page.';
       default:
         return null;
     }
