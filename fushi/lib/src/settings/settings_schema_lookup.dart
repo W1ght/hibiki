@@ -287,6 +287,48 @@ SettingsDestination buildLookupDestination() {
               settingsContext.refresh();
             },
           ),
+          // 查词输入框希望输入法切到哪种语言。默认未设置 = 不碰用户的系统输入法
+          // 状态（桌面端切输入法是改系统全局状态，会漏到别的 app，不该默认开）。
+          //
+          // 这**不是**「查词的目标语言」：查词流水线语言无关，`targetLanguage` 那个
+          // 假抽象已删且有守卫钉着（见 preferences_repository 的 lookupImeLanguage）。
+          //
+          // 语言选项复用内容语言那份（`kContentLanguageOptions`）——用户要认的是
+          // 「哪国语言」，和给书/词典指定语言是同一件事，没必要两套清单。
+          SettingsNavigationItem(
+            id: 'lookup.ime_language',
+            title: t.settings_lookup_ime_language_title,
+            // 当前值只能进 titleBuilder（渲染期求值）——塞进 title 会被设置页缓存
+            // 成陈旧文案，`settings_schema_cache_test.dart` 钉着这条。
+            titleBuilder: (SettingsContext settingsContext) {
+              final String current =
+                  settingsContext.appModel.prefsRepo.lookupImeLanguage;
+              final String label = current.isEmpty
+                  ? t.settings_lookup_ime_language_unset
+                  : contentLanguageLabelOf(current);
+              return '${t.settings_lookup_ime_language_title} · $label';
+            },
+            subtitle: t.settings_lookup_ime_language_description,
+            icon: Icons.keyboard_alt_outlined,
+            onTap: (SettingsContext settingsContext) async {
+              final String current =
+                  settingsContext.appModel.prefsRepo.lookupImeLanguage;
+              await showContentLanguagePicker(
+                context: settingsContext.context,
+                title: t.settings_lookup_ime_language_title,
+                description: t.settings_lookup_ime_language_description,
+                current: current.isEmpty ? null : current,
+                autoDetected: '',
+                autoLabel: t.settings_lookup_ime_language_unset,
+                onSelected: (String? tag) async {
+                  await settingsContext.appModel.prefsRepo.setLookupImeLanguage(
+                    tag ?? '',
+                  );
+                  settingsContext.refresh();
+                },
+              );
+            },
+          ),
         ],
       ),
       // 原「查词显示」17 项拆两组：词条内容（词典结果怎么渲染）/ 弹窗窗口

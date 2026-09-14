@@ -396,6 +396,7 @@ class _PopupDictionaryPageState extends ConsumerState<PopupDictionaryPage>
       focusNode: _searchFocusNode,
       onClose: null,
       onSubmit: _onSearchSubmit,
+      hintLocales: appModel.lookupImeHintLocales,
     );
   }
 
@@ -557,6 +558,7 @@ class PopupDictionarySearchBar extends StatelessWidget {
     required this.focusNode,
     required this.onSubmit,
     this.onClose,
+    this.hintLocales,
     super.key,
   });
 
@@ -564,6 +566,9 @@ class PopupDictionarySearchBar extends StatelessWidget {
   final FocusNode focusNode;
   final ValueChanged<String> onSubmit;
   final VoidCallback? onClose;
+
+  /// 输入法语言提示，由页面从偏好算出来传进来（组件自己不读 provider）。
+  final List<Locale>? hintLocales;
 
   @override
   Widget build(BuildContext context) {
@@ -573,6 +578,7 @@ class PopupDictionarySearchBar extends StatelessWidget {
       hintText: t.search,
       onSubmit: onSubmit,
       onClose: onClose,
+      hintLocales: hintLocales,
       closeButtonKey: const ValueKey<String>('popup_dictionary_close_button'),
       fieldKey: const ValueKey<String>('popup_dictionary_search_field'),
       searchButtonKey: const ValueKey<String>('popup_dictionary_search_button'),

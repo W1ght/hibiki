@@ -57,6 +57,7 @@ import 'package:fushi/src/reader/dictionary_style_css.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi/src/lookup/browser_extension_installer.dart';
 import 'package:fushi/src/lookup/effective_lookup_size.dart';
+import 'package:fushi/src/lookup/lookup_ime_language.dart';
 import 'package:fushi/src/models/dictionary_directory.dart';
 import 'package:fushi/src/models/dictionary_repository.dart';
 import 'package:fushi/src/models/media_history_repository.dart';
@@ -7710,6 +7711,19 @@ class AppModel with ChangeNotifier {
   String get asrTranscribeLanguage => prefsRepo.asrTranscribeLanguage;
   Future<void> setAsrTranscribeLanguage(String value) =>
       prefsRepo.setAsrTranscribeLanguage(value);
+
+  String get lookupImeLanguage => prefsRepo.lookupImeLanguage;
+  Future<void> setLookupImeLanguage(String value) =>
+      prefsRepo.setLookupImeLanguage(value);
+
+  /// 查词输入框希望输入法切到哪种语言（Android `EditorInfo.hintLocales`）。
+  ///
+  /// 偏好未就绪时返回 null 而不是抛：弹窗词典与悬浮词典是另外两个 entry point，
+  /// 它们的页面会在偏好加载完成前先 build 一帧（裸读 prefsRepo 会 null check 抛，
+  /// 把整页 build 带崩）。没提示只是少一次输入法切换，不该让页面渲染不出来。
+  List<Locale>? get lookupImeHintLocales => isPreferencesReady
+      ? lookupImeHintLocalesOf(prefsRepo.lookupImeLanguage)
+      : null;
 
   bool get mangaTapToOcr => prefsRepo.mangaTapToOcr;
   Future<void> setMangaTapToOcr(bool value) =>

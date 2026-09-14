@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77027 (4531 per locale)
+/// Strings: 77078 (4534 per locale)
 ///
-/// Built on 2026-09-12 at 03:55 UTC
+/// Built on 2026-09-14 at 13:49 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6360,6 +6360,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   String get study_diag_share_subject => 'Fushi study diagnostics';
   String get reader_furigana_dimmed => 'Dimmed';
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -17074,6 +17078,13 @@ class _StringsAr extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -28024,6 +28035,13 @@ class _StringsDe extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -39024,6 +39042,13 @@ class _StringsEs extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -50057,6 +50082,13 @@ class _StringsFr extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -60890,6 +60922,13 @@ class _StringsId extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -71819,6 +71858,13 @@ class _StringsIt extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -82116,6 +82162,13 @@ class _StringsJa extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -92424,6 +92477,13 @@ class _StringsKo extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -103307,6 +103367,13 @@ class _StringsNl extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -114243,6 +114310,13 @@ class _StringsPtBr extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -125157,6 +125231,13 @@ class _StringsRu extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -135868,6 +135949,13 @@ class _StringsTh extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -146697,6 +146785,13 @@ class _StringsTr extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -157495,6 +157590,13 @@ class _StringsVi extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 // Path: <root>
@@ -167408,6 +167510,13 @@ class _StringsZhCn extends _StringsEn {
   String get study_diag_share_subject => 'Fushi 统计诊断日志';
   @override
   String get reader_furigana_dimmed => '淡显';
+  @override
+  String get settings_lookup_ime_language_title => '查词输入法语言';
+  @override
+  String get settings_lookup_ime_language_description =>
+      '在查词输入框打字时键盘切到哪种语言。需要系统已安装对应输入法。不影响查词结果。';
+  @override
+  String get settings_lookup_ime_language_unset => '未设置';
 }
 
 // Path: <root>
@@ -177390,6 +177499,13 @@ class _StringsZhHk extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get settings_lookup_ime_language_title => 'Lookup input language';
+  @override
+  String get settings_lookup_ime_language_description =>
+      'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+  @override
+  String get settings_lookup_ime_language_unset => 'Not set';
 }
 
 /// Flat map(s) containing all translations.
@@ -186718,6 +186834,12 @@ extension on _StringsEn {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -196041,6 +196163,12 @@ extension on _StringsAr {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -205413,6 +205541,12 @@ extension on _StringsDe {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -214775,6 +214909,12 @@ extension on _StringsEs {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -224145,6 +224285,12 @@ extension on _StringsFr {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -233485,6 +233631,12 @@ extension on _StringsId {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -242848,6 +243000,12 @@ extension on _StringsIt {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -252135,6 +252293,12 @@ extension on _StringsJa {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -261427,6 +261591,12 @@ extension on _StringsKo {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -270785,6 +270955,12 @@ extension on _StringsNl {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -280138,6 +280314,12 @@ extension on _StringsPtBr {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -289497,6 +289679,12 @@ extension on _StringsRu {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -298825,6 +299013,12 @@ extension on _StringsTh {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -308169,6 +308363,12 @@ extension on _StringsTr {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -317507,6 +317707,12 @@ extension on _StringsVi {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }
@@ -326761,6 +326967,12 @@ extension on _StringsZhCn {
         return 'Fushi 统计诊断日志';
       case 'reader_furigana_dimmed':
         return '淡显';
+      case 'settings_lookup_ime_language_title':
+        return '查词输入法语言';
+      case 'settings_lookup_ime_language_description':
+        return '在查词输入框打字时键盘切到哪种语言。需要系统已安装对应输入法。不影响查词结果。';
+      case 'settings_lookup_ime_language_unset':
+        return '未设置';
       default:
         return null;
     }
@@ -336026,6 +336238,12 @@ extension on _StringsZhHk {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'settings_lookup_ime_language_title':
+        return 'Lookup input language';
+      case 'settings_lookup_ime_language_description':
+        return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
+      case 'settings_lookup_ime_language_unset':
+        return 'Not set';
       default:
         return null;
     }

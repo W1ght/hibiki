@@ -183,6 +183,7 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
         focusNode: _searchFocusNode,
         hintText: t.search_ellipsis,
         onSubmit: _doSearch,
+        hintLocales: appModel.lookupImeHintLocales,
       ),
     );
   }
