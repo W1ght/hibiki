@@ -11,14 +11,19 @@ void main() {
 
   const MethodChannel channel = MethodChannel('app.fushi.reader/lookup_ime');
   late List<Object?> sent;
+  late List<Object?> persisted;
 
   setUp(() {
     sent = <Object?>[];
+    persisted = <Object?>[];
     LookupImeChannel.resetForTesting();
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(channel, (MethodCall call) async {
           if (call.method == 'setLanguage') {
             sent.add(call.arguments);
+          }
+          if (call.method == 'persistLanguage') {
+            persisted.add(call.arguments);
           }
           return null;
         });
@@ -90,11 +95,7 @@ void main() {
     await Future<void>.delayed(Duration.zero);
     popup.detach();
     await Future<void>.delayed(Duration.zero);
-    expect(
-      sent,
-      <Object?>['ja'],
-      reason: '主页那份还活着，关掉弹窗不该发出任何还原',
-    );
+    expect(sent, <Object?>['ja'], reason: '主页那份还活着，关掉弹窗不该发出任何还原');
 
     home.detach();
     await Future<void>.delayed(Duration.zero);
@@ -113,11 +114,27 @@ void main() {
 
     popup.detach();
     await Future<void>.delayed(Duration.zero);
-    expect(
-      sent,
-      <Object?>['ja', 'ko', 'ja'],
-      reason: '回落到仍然活跃的那个请求者，而不是无条件还原',
-    );
+    expect(sent, <Object?>['ja', 'ko', 'ja'], reason: '回落到仍然活跃的那个请求者，而不是无条件还原');
+  });
+
+  group('persistForNativeSurfaces（给原生查词输入框的持久化值）', () {
+    test('发的是 persistLanguage，不碰切换通道', () async {
+      await LookupImeChannel.persistForNativeSurfaces('ja');
+      expect(persisted, <Object?>['ja']);
+      expect(sent, isEmpty, reason: '持久化不该顺带切换输入法——桌面上那会在启动时就把用户切走');
+    });
+
+    test('未设置时存空串而不是 null', () async {
+      // Android 侧读的是 String，空串表示「用户没选」；null 过不去 codec 的类型约定。
+      await LookupImeChannel.persistForNativeSurfaces(null);
+      expect(persisted, <Object?>['']);
+    });
+
+    test('不参与 setLanguage 的去重状态', () async {
+      await LookupImeChannel.persistForNativeSurfaces('ja');
+      await LookupImeChannel.setLanguage('ja');
+      expect(sent, <Object?>['ja'], reason: '持久化过不代表切换过，切换仍要发出去');
+    });
   });
 
   test('每次同步都重新取值——用户可能在查词页面开着时改了设置', () async {

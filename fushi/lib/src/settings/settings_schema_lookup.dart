@@ -326,6 +326,9 @@ SettingsDestination buildLookupDestination() {
                   await settingsContext.appModel.prefsRepo.setLookupImeLanguage(
                     tag ?? '',
                   );
+                  // 原生查词界面（Android 悬浮 / 弹窗词典的 EditText）读的是这份
+                  // 持久化值，它们可能在任何 Flutter 查词页面打开之前就被拉起。
+                  await LookupImeChannel.persistForNativeSurfaces(tag);
                   settingsContext.refresh();
                   // 选了系统里没装的输入法时说一声。否则用户设完发现「没反应」，
                   // 而真正的原因（系统里根本没这个输入法）他无从知道——我们又不该

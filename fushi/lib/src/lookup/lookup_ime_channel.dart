@@ -13,13 +13,12 @@ library;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:fushi/src/lookup/lookup_ime_language.dart';
+import 'package:fushi/src/utils/misc/channel_constants.dart';
 
 class LookupImeChannel {
   const LookupImeChannel._();
 
-  static const MethodChannel _channel = MethodChannel(
-    'app.fushi.reader/lookup_ime',
-  );
+  static const MethodChannel _channel = FushiChannels.lookupIme;
 
   /// 上一次真正发出去的值，避免同一页反复重建时刷 channel。
   static String? _lastSent;
@@ -67,6 +66,23 @@ class LookupImeChannel {
     } on PlatformException catch (error) {
       debugPrint('[lookup-ime] setLanguage failed: $error');
       _lastSent = null;
+    }
+  }
+
+  /// 把用户选的语言**存**给原生查词界面用，不切换任何输入法。
+  ///
+  /// Android 的悬浮词典与弹窗词典搜索框是原生 EditText（不是 Flutter TextField，
+  /// 吃不到 hintLocales 参数），而且它们可能在任何 Flutter 查词页面打开之前就被拉
+  /// 起——所以不能等 [request]，必须在偏好变更时和启动时各存一次。
+  ///
+  /// 桌面/iOS 没有实现这个方法（它们靠 [request] 真的切输入法），静默跳过。
+  static Future<void> persistForNativeSurfaces(String? tag) async {
+    try {
+      await _channel.invokeMethod<void>('persistLanguage', tag ?? '');
+    } on MissingPluginException {
+      // 该平台没有原生查词输入框需要这个值。
+    } on PlatformException catch (error) {
+      debugPrint('[lookup-ime] persistLanguage failed: $error');
     }
   }
 

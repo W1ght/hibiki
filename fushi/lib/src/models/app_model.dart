@@ -57,6 +57,7 @@ import 'package:fushi/src/reader/dictionary_style_css.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi/src/lookup/browser_extension_installer.dart';
 import 'package:fushi/src/lookup/effective_lookup_size.dart';
+import 'package:fushi/src/lookup/lookup_ime_channel.dart';
 import 'package:fushi/src/lookup/lookup_ime_language.dart';
 import 'package:fushi/src/models/dictionary_directory.dart';
 import 'package:fushi/src/models/dictionary_repository.dart';
@@ -2774,6 +2775,12 @@ class AppModel with ChangeNotifier {
       // 是 app 外取词**能力**而不是查词页入口。用户拍板「关 lookup 只关页面入口，
       // 查词能力全留」，注销回调会让已开着的悬浮窗查不出词、按钮静默失败。
       _setupFloatingDictHandlers();
+      // 把查词输入法语言同步给原生查词界面：Android 的悬浮词典 / 弹窗词典搜索框是
+      // 原生 EditText，读的是这份持久化值。放这里而不是只在设置页写——用户可能从
+      // 备份恢复、或在别的设备改了同步过来，那些路径都不经设置页。
+      unawaited(
+        LookupImeChannel.persistForNativeSurfaces(effectiveLookupImeLanguage),
+      );
       // 已迁移只读态（Fushi 迁移 P1-4）：不再自启互联服务——两版并存时端口
       // 固定必冲突（SyncServerPortInUseException 会打到用户脸上）；老版只保
       // 留「重新导出」通道。
