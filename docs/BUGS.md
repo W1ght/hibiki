@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2178 条。点号进各自文件。
+> 共 2179 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2543](bugs/BUG-2543-english-posless-yomitan-deinflection.md) | ✅ | ✅ | 英语无词性 Yomitan 词典的变形还原全部失效，且不规则形无还原规则 |
 | [BUG-2493](bugs/BUG-2493-ios-ankimobile-info-return-not-applied.md) | ✅ | ✅ | iOS AnkiMobile 回跳后牌组/笔记类型不刷新：x-success 未送达时无兜底、互联制卡包裹层静默丢弃回调 |
 | [BUG-2474](bugs/BUG-2474-webkit-line-box-contain-zero-height-lines.md) | ✅ | ✅ | WebKit 上 BUG-2459 的 line-box-contain 把嵌套 inline / 空行行盒压成零高：目录列叠印、空行消失 |
 | [BUG-2464](bugs/BUG-2464-reader-reanchor-frozen-when-page-hidden.md) | ✅ | ✅ | 页面隐藏时阅读器重锚旗永不清（rAF 冻结）位置与进度不落库 |
