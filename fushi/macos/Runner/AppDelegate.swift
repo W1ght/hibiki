@@ -7,6 +7,7 @@ import macos_window_utils
 class AppDelegate: FlutterAppDelegate {
   private var activeSecurityScopedURLs: [String: URL] = [:]
   private var challengeBrowser: FushiChallengeBrowser?
+  private var globalLookupOverlay: GlobalLookupOverlayController?
 
   override func applicationDidFinishLaunching(_ notification: Notification) {
     if let windowController =
@@ -35,6 +36,14 @@ class AppDelegate: FlutterAppDelegate {
       foregroundSelectionChannel.setMethodCallHandler { call, result in
         AppDelegate.handleForegroundSelection(call, result: result)
       }
+
+      // App-external global lookup overlay (macOS counterpart of the Windows
+      // GlobalLookupWindow + RegisterGlobalLookupChannel): same
+      // `app.fushi.reader/global_lookup` MethodChannel contract, hosted by a
+      // non-activating NSPanel + WKWebView. See GlobalLookupOverlay.swift.
+      globalLookupOverlay = GlobalLookupOverlayController(
+        binaryMessenger: controller.engine.binaryMessenger
+      ) { [weak self] in self?.mainFlutterWindow }
     } else {
       NSLog("[Fushi] macOS Flutter controller unavailable; custom channels were not registered")
     }
@@ -139,6 +148,12 @@ class AppDelegate: FlutterAppDelegate {
     _ call: FlutterMethodCall, result: @escaping FlutterResult
   ) {
     guard call.method == "captureContext" else {
+      // captureSelection / isAccessibilityTrusted / requestAccessibilityTrust
+      // (the clipboard-style fallback + the settings-page permission action)
+      // live in SelectionCaptureMac.swift on this same channel.
+      if MacSelectionCapture.handle(call, result: result) {
+        return
+      }
       result(FlutterMethodNotImplemented)
       return
     }
@@ -184,12 +199,13 @@ class AppDelegate: FlutterAppDelegate {
 // clipboard capture. Offsets are UTF-16 code units (NSString length), the unit
 // Dart String indexing uses.
 //
-// SANDBOX NOTE: the app ships sandboxed (see Runner/*.entitlements). The App
-// Sandbox blocks cross-process AX reads even after the user grants
-// Accessibility trust, so under the current entitlements this returns nil at
-// runtime (fail-open). Enabling it needs a sandbox decision (drop the sandbox
-// or a non-sandboxed helper) -- tracked separately; the capture logic itself
-// is correct and ready.
+// SANDBOX NOTE (updated 2026-09-14): the app is NOT sandboxed any more (both
+// Runner/*.entitlements dropped com.apple.security.app-sandbox for the
+// all-platform auto-update, docs/specs/2026-06-04-all-platform-auto-update-
+// design.md §5), so cross-process AX reads work as soon as the user grants
+// Accessibility trust in System Settings > Privacy & Security. The settings
+// page offers that grant via `requestAccessibilityTrust` (SelectionCaptureMac
+// .swift); this hotkey-path capture itself still never prompts.
 enum ForegroundSelectionCapture {
   // Mirrors kForegroundContextExpand in foreground_selection.h (Windows): the
   // max characters to grab PAST the selection on EACH side. Bounded for privacy
