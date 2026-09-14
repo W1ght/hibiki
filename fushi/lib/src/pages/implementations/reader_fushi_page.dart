@@ -34,6 +34,7 @@ import 'package:fushi/src/media/audiobook/lyrics_mode_html.dart';
 import 'package:fushi/src/media/audiobook/floating_lyric_lookup_routing.dart';
 import 'package:fushi_audio/fushi_audio.dart';
 import 'package:fushi/src/media/audiobook/highlight_bridge.dart';
+import 'package:fushi/src/media/audiobook/audiobook_floating_ball.dart';
 import 'package:fushi/src/media/audiobook/audiobook_play_bar.dart';
 import 'package:fushi/src/asr_host/asr_host.dart';
 import 'package:fushi/src/media/audiobook/asr_transcribe_sheet.dart';
@@ -3275,6 +3276,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
                       _buildDesktopHeader(),
                       // 桌面端底部状态行：排在词典弹层 / 底栏之前，让它们盖在其上。
                       _buildStatusFooter(),
+                      // 有声书悬浮球：排在词典弹层 / 底栏之前，让它们盖在其上。
+                      _buildAudiobookFloatingBall(),
                       buildDictionary(),
                       // The bottom chrome returns a Positioned; it MUST stay a direct
                       // child of this Stack. The chrome FocusScope is mounted INSIDE

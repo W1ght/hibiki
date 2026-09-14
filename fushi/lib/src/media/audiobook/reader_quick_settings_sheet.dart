@@ -7,6 +7,7 @@ import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:intl/intl.dart';
+import 'package:fushi/src/media/audiobook/audiobook_floating_ball.dart';
 import 'package:fushi/src/epub/epub_book.dart';
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
 import 'package:fushi/src/focus/fushi_focus_scroll.dart';
@@ -1400,6 +1401,70 @@ class _ReaderQuickSettingsSheetState extends State<ReaderQuickSettingsSheet>
             widget.onFloatingLyricClickLookupChanged?.call(value);
             setState(() => _localFloatingLyricClickLookup = value);
           },
+        ),
+        // 悬浮球：纯偏好，setter 内部经 onChromeReloadLive 让阅读器重建一次；
+        // 按钮集合只在开关打开时露出。
+        AdaptiveSettingsSwitchRow(
+          title: t.audiobook_floating_ball,
+          subtitle: t.audiobook_floating_ball_hint,
+          value: _src.audiobookFloatingBall,
+          onChanged: (bool value) async {
+            await _src.setAudiobookFloatingBall(value);
+            if (mounted) setState(() {});
+          },
+        ),
+        if (_src.audiobookFloatingBall) _buildFloatingBallActionsRow(),
+      ],
+    );
+  }
+
+  /// 悬浮球按钮集合：一排 FilterChip，顺序固定为
+  /// [AudiobookFloatingBallAction.values]；至少留一个（最后一个不可取消）。
+  Widget _buildFloatingBallActionsRow() {
+    final List<AudiobookFloatingBallAction> selected =
+        _src.audiobookFloatingBallActions;
+    final int skipSeconds = _src.skipActionSeconds;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        AdaptiveSettingsRow(
+          title: t.audiobook_floating_ball_actions,
+          subtitle: t.audiobook_floating_ball_actions_hint,
+        ),
+        Padding(
+          padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+          child: Wrap(
+            spacing: 8,
+            runSpacing: 4,
+            children: <Widget>[
+              for (final AudiobookFloatingBallAction action
+                  in AudiobookFloatingBallAction.values)
+                FilterChip(
+                  key: ValueKey<String>('floating_ball_action_${action.id}'),
+                  avatar: Icon(audiobookFloatingBallActionIcon(action), size: 18),
+                  label: Text(
+                    audiobookFloatingBallActionLabel(
+                      action,
+                      skipActionSeconds: skipSeconds,
+                    ),
+                  ),
+                  selected: selected.contains(action),
+                  onSelected: (bool on) async {
+                    final Set<AudiobookFloatingBallAction> next =
+                        selected.toSet();
+                    if (on) {
+                      next.add(action);
+                    } else if (next.length > 1) {
+                      next.remove(action);
+                    } else {
+                      return;
+                    }
+                    await _src.setAudiobookFloatingBallActions(next);
+                    if (mounted) setState(() {});
+                  },
+                ),
+            ],
+          ),
         ),
       ],
     );

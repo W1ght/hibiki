@@ -4529,5 +4529,10 @@
   "settings_study_diag_export": "导出统计诊断日志",
   "settings_study_diag_export_hint": "翻页入账、段开封、有声书恢复与跳页流水，用于排查阅读速度异常。保存为文本文件。",
   "study_diag_share_subject": "Fushi 统计诊断日志",
-  "reader_furigana_dimmed": "淡显"
+  "reader_furigana_dimmed": "淡显",
+  "audiobook_floating_ball": "悬浮球",
+  "audiobook_floating_ball_hint": "半透明小球停靠在屏幕边缘。点击展开播放按钮，再点收起；可拖动上下移动或换边。",
+  "audiobook_floating_ball_actions": "悬浮球按钮",
+  "audiobook_floating_ball_actions_hint": "选择悬浮球展开后显示的按钮。",
+  "audiobook_follow_audio": "跟随音频"
 }

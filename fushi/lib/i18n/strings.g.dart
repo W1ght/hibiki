@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77027 (4531 per locale)
+/// Strings: 77112 (4536 per locale)
 ///
-/// Built on 2026-09-12 at 03:55 UTC
+/// Built on 2026-09-14 at 14:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6360,6 +6360,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.';
   String get study_diag_share_subject => 'Fushi study diagnostics';
   String get reader_furigana_dimmed => 'Dimmed';
+  String get audiobook_floating_ball => 'Floating ball';
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -17074,6 +17081,18 @@ class _StringsAr extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -28024,6 +28043,18 @@ class _StringsDe extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -39024,6 +39055,18 @@ class _StringsEs extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -50057,6 +50100,18 @@ class _StringsFr extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -60890,6 +60945,18 @@ class _StringsId extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -71819,6 +71886,18 @@ class _StringsIt extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -82116,6 +82195,18 @@ class _StringsJa extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -92424,6 +92515,18 @@ class _StringsKo extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -103307,6 +103410,18 @@ class _StringsNl extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -114243,6 +114358,18 @@ class _StringsPtBr extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -125157,6 +125284,18 @@ class _StringsRu extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -135868,6 +136007,18 @@ class _StringsTh extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -146697,6 +146848,18 @@ class _StringsTr extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -157495,6 +157658,18 @@ class _StringsVi extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 // Path: <root>
@@ -167408,6 +167583,17 @@ class _StringsZhCn extends _StringsEn {
   String get study_diag_share_subject => 'Fushi 统计诊断日志';
   @override
   String get reader_furigana_dimmed => '淡显';
+  @override
+  String get audiobook_floating_ball => '悬浮球';
+  @override
+  String get audiobook_floating_ball_hint =>
+      '半透明小球停靠在屏幕边缘。点击展开播放按钮，再点收起；可拖动上下移动或换边。';
+  @override
+  String get audiobook_floating_ball_actions => '悬浮球按钮';
+  @override
+  String get audiobook_floating_ball_actions_hint => '选择悬浮球展开后显示的按钮。';
+  @override
+  String get audiobook_follow_audio => '跟随音频';
 }
 
 // Path: <root>
@@ -177390,6 +177576,18 @@ class _StringsZhHk extends _StringsEn {
   String get study_diag_share_subject => 'Fushi study diagnostics';
   @override
   String get reader_furigana_dimmed => 'Dimmed';
+  @override
+  String get audiobook_floating_ball => 'Floating ball';
+  @override
+  String get audiobook_floating_ball_hint =>
+      'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+  @override
+  String get audiobook_floating_ball_actions => 'Floating ball buttons';
+  @override
+  String get audiobook_floating_ball_actions_hint =>
+      'Choose which buttons appear when the ball is expanded.';
+  @override
+  String get audiobook_follow_audio => 'Follow audio';
 }
 
 /// Flat map(s) containing all translations.
@@ -186718,6 +186916,16 @@ extension on _StringsEn {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -196041,6 +196249,16 @@ extension on _StringsAr {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -205413,6 +205631,16 @@ extension on _StringsDe {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -214775,6 +215003,16 @@ extension on _StringsEs {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -224145,6 +224383,16 @@ extension on _StringsFr {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -233485,6 +233733,16 @@ extension on _StringsId {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -242848,6 +243106,16 @@ extension on _StringsIt {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -252135,6 +252403,16 @@ extension on _StringsJa {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -261427,6 +261705,16 @@ extension on _StringsKo {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -270785,6 +271073,16 @@ extension on _StringsNl {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -280138,6 +280436,16 @@ extension on _StringsPtBr {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -289497,6 +289805,16 @@ extension on _StringsRu {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -298825,6 +299143,16 @@ extension on _StringsTh {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -308169,6 +308497,16 @@ extension on _StringsTr {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -317507,6 +317845,16 @@ extension on _StringsVi {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }
@@ -326761,6 +327109,16 @@ extension on _StringsZhCn {
         return 'Fushi 统计诊断日志';
       case 'reader_furigana_dimmed':
         return '淡显';
+      case 'audiobook_floating_ball':
+        return '悬浮球';
+      case 'audiobook_floating_ball_hint':
+        return '半透明小球停靠在屏幕边缘。点击展开播放按钮，再点收起；可拖动上下移动或换边。';
+      case 'audiobook_floating_ball_actions':
+        return '悬浮球按钮';
+      case 'audiobook_floating_ball_actions_hint':
+        return '选择悬浮球展开后显示的按钮。';
+      case 'audiobook_follow_audio':
+        return '跟随音频';
       default:
         return null;
     }
@@ -336026,6 +336384,16 @@ extension on _StringsZhHk {
         return 'Fushi study diagnostics';
       case 'reader_furigana_dimmed':
         return 'Dimmed';
+      case 'audiobook_floating_ball':
+        return 'Floating ball';
+      case 'audiobook_floating_ball_hint':
+        return 'A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.';
+      case 'audiobook_floating_ball_actions':
+        return 'Floating ball buttons';
+      case 'audiobook_floating_ball_actions_hint':
+        return 'Choose which buttons appear when the ball is expanded.';
+      case 'audiobook_follow_audio':
+        return 'Follow audio';
       default:
         return null;
     }

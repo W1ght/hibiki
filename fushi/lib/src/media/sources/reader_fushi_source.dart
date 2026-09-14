@@ -7,6 +7,7 @@ import 'package:path/path.dart' as p;
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:fushi_dictionary/fushi_dictionary.dart';
+import 'package:fushi/src/media/audiobook/audiobook_floating_ball.dart';
 import 'package:fushi/media.dart';
 import 'package:fushi/models.dart';
 import 'package:fushi/pages.dart';
@@ -1307,6 +1308,68 @@ class ReaderFushiSource extends ReaderMediaSource {
   Future<void> setSkipActionSeconds(int value) async {
     await setPreference<int>(key: 'skip_action_seconds', value: value);
     onSettingsChangedLive?.call();
+  }
+
+  /// 有声书悬浮球开关（全局，与 [skipActionSeconds] 同层）。默认关。改动只影响
+  /// 纯 Flutter chrome，经 [onChromeReloadLive] 让阅读器重建一次即可。
+  bool get audiobookFloatingBall =>
+      getPreference<bool>(key: 'audiobook_floating_ball', defaultValue: false);
+
+  Future<void> setAudiobookFloatingBall(bool value) async {
+    await setPreference<bool>(key: 'audiobook_floating_ball', value: value);
+    onChromeReloadLive?.call();
+  }
+
+  /// 悬浮球展开后的按钮集合（逗号拼接的 [AudiobookFloatingBallAction.id]）。
+  /// 默认上一句 / 播放暂停 / 下一句；解码规则见 [AudiobookFloatingBallAction.decode]。
+  List<AudiobookFloatingBallAction> get audiobookFloatingBallActions =>
+      AudiobookFloatingBallAction.decode(
+        getPreference<String>(
+          key: 'audiobook_floating_ball_actions',
+          defaultValue: AudiobookFloatingBallAction.encode(
+            AudiobookFloatingBallAction.defaults,
+          ),
+        ),
+      );
+
+  Future<void> setAudiobookFloatingBallActions(
+    Iterable<AudiobookFloatingBallAction> actions,
+  ) async {
+    await setPreference<String>(
+      key: 'audiobook_floating_ball_actions',
+      value: AudiobookFloatingBallAction.encode(actions),
+    );
+    onChromeReloadLive?.call();
+  }
+
+  /// 悬浮球停靠边 + 球心在视口高度上的比例（拖动松手时落库，跨书记忆）。
+  AudiobookFloatingBallDock get audiobookFloatingBallDock =>
+      AudiobookFloatingBallDock.decode(
+        getPreference<String>(
+          key: 'audiobook_floating_ball_dock',
+          defaultValue: AudiobookFloatingBallDock.right.id,
+        ),
+      );
+
+  double get audiobookFloatingBallVerticalFraction => getPreference<double>(
+        key: 'audiobook_floating_ball_y',
+        defaultValue: 0.6,
+      );
+
+  Future<void> setAudiobookFloatingBallPosition(
+    AudiobookFloatingBallDock dock,
+    double verticalFraction,
+  ) async {
+    await setPreference<String>(
+      key: 'audiobook_floating_ball_dock',
+      value: dock.id,
+    );
+    await setPreference<double>(
+      key: 'audiobook_floating_ball_y',
+      value: verticalFraction.isFinite
+          ? verticalFraction.clamp(0.0, 1.0).toDouble()
+          : 0.6,
+    );
   }
 
   double get dismissSwipeSensitivity => getPreference<double>(
