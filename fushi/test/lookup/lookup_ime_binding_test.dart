@@ -78,6 +78,48 @@ void main() {
     expect(sent, isEmpty);
   });
 
+  test('两个查词入口交叠时，关掉其中一个不该还原另一个还要着的语言', () async {
+    // 桌面实景：词典主页搜索框聚焦着（已切日语），再打开弹窗词典、然后关掉它。
+    // 弹窗那句「我不要了」只能撤回它自己的请求，不能把主页那份一起还原。
+    final LookupImeBinding home = LookupImeBinding(languageOf: () => 'ja');
+    final LookupImeBinding popup = LookupImeBinding(languageOf: () => 'ja');
+
+    home.attach();
+    await Future<void>.delayed(Duration.zero);
+    popup.attach();
+    await Future<void>.delayed(Duration.zero);
+    popup.detach();
+    await Future<void>.delayed(Duration.zero);
+    expect(
+      sent,
+      <Object?>['ja'],
+      reason: '主页那份还活着，关掉弹窗不该发出任何还原',
+    );
+
+    home.detach();
+    await Future<void>.delayed(Duration.zero);
+    expect(sent, <Object?>['ja', null], reason: '最后一个请求者走了才还原');
+  });
+
+  test('后开的入口要别的语言：它走了要回落到先前那个', () async {
+    final LookupImeBinding home = LookupImeBinding(languageOf: () => 'ja');
+    final LookupImeBinding popup = LookupImeBinding(languageOf: () => 'ko');
+
+    home.attach();
+    await Future<void>.delayed(Duration.zero);
+    popup.attach();
+    await Future<void>.delayed(Duration.zero);
+    expect(sent, <Object?>['ja', 'ko'], reason: '后登记的赢');
+
+    popup.detach();
+    await Future<void>.delayed(Duration.zero);
+    expect(
+      sent,
+      <Object?>['ja', 'ko', 'ja'],
+      reason: '回落到仍然活跃的那个请求者，而不是无条件还原',
+    );
+  });
+
   test('每次同步都重新取值——用户可能在查词页面开着时改了设置', () async {
     String? current = 'ja';
     final LookupImeBinding binding = LookupImeBinding(

@@ -24,13 +24,38 @@ class LookupImeChannel {
   /// 上一次真正发出去的值，避免同一页反复重建时刷 channel。
   static String? _lastSent;
 
-  @visibleForTesting
-  static void resetForTesting() => _lastSent = null;
-
-  /// 设置期望语言（BCP-47；null / 空串 = 不表达偏好）。
+  /// 谁还在要哪种语言，按登记顺序排——最后登记的赢。
   ///
-  /// 没有原生实现的平台（目前除 iOS 外全部）会抛 [MissingPluginException]，这里咽掉：
-  /// 少一次输入法提示不该让查词页面开不出来。
+  /// 不能只记「上一次发了什么」：桌面上词典主页的搜索框可能正聚焦着（已经切到日语），
+  /// 这时打开再关掉弹窗词典，弹窗一句 null 就会把还活着的主页那份也还原掉。注销一个
+  /// 请求者之后必须回落到仍然活跃的那个，而不是无条件还原。
+  static final Map<Object, String> _requests = <Object, String>{};
+
+  @visibleForTesting
+  static void resetForTesting() {
+    _lastSent = null;
+    _requests.clear();
+  }
+
+  /// 以 [owner] 的名义要求某种语言；[tag] 为 null / 空串 = 撤回这个请求者的要求。
+  static Future<void> request(Object owner, String? tag) async {
+    // 先移除再放回：Map 按插入顺序排，这样重新表达的请求会排到末尾（最后的赢）。
+    _requests.remove(owner);
+    if (tag != null && tag.isNotEmpty) {
+      _requests[owner] = tag;
+    }
+    await setLanguage(_requests.isEmpty ? null : _requests.values.last);
+  }
+
+  /// 撤回 [owner] 的请求，回落到仍然活跃的那个请求者（没有就还原）。
+  static Future<void> release(Object owner) => request(owner, null);
+
+  /// 直接设置期望语言（BCP-47；null / 空串 = 不表达偏好）。
+  ///
+  /// 常规路径请用 [request]/[release]——它们能处理多个查词入口交叠的情况。
+  ///
+  /// 没有原生实现的平台（目前 Android / Linux）会抛 [MissingPluginException]，这里
+  /// 咽掉：少一次输入法提示不该让查词页面开不出来。
   static Future<void> setLanguage(String? tag) async {
     final String? normalized = (tag == null || tag.isEmpty) ? null : tag;
     if (normalized == _lastSent) return;

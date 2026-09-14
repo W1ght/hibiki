@@ -28,7 +28,7 @@ class LookupImeBinding {
   void attach({FocusNode? focusNode}) {
     _focusNode = focusNode;
     focusNode?.addListener(_syncFromFocus);
-    LookupImeChannel.setLanguage(languageOf());
+    LookupImeChannel.request(this, languageOf());
   }
 
   /// 页面 dispose 时调。**必须**调：桌面端不还原就会把用户的系统输入法留在我们
@@ -36,12 +36,14 @@ class LookupImeBinding {
   void detach() {
     _focusNode?.removeListener(_syncFromFocus);
     _focusNode = null;
-    LookupImeChannel.setLanguage(null);
+    // release 而不是 setLanguage(null)：另一个查词入口可能还开着并且还要着日语
+    // （桌面上词典主页搜索框聚焦时打开再关掉弹窗词典就是这个情形）。
+    LookupImeChannel.release(this);
   }
 
   void _syncFromFocus() {
     final FocusNode? node = _focusNode;
     if (node == null) return;
-    LookupImeChannel.setLanguage(node.hasFocus ? languageOf() : null);
+    LookupImeChannel.request(this, node.hasFocus ? languageOf() : null);
   }
 }
