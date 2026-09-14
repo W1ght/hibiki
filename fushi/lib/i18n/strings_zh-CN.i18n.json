@@ -4532,5 +4532,6 @@
   "reader_furigana_dimmed": "淡显",
   "settings_lookup_ime_language_title": "查词输入法语言",
   "settings_lookup_ime_language_description": "在查词输入框打字时键盘切到哪种语言。需要系统已安装对应输入法。不影响查词结果。",
-  "settings_lookup_ime_language_unset": "未设置"
+  "settings_lookup_ime_language_unset": "未设置",
+  "settings_lookup_ime_language_unavailable": "系统里还没有安装这个输入法。"
 }

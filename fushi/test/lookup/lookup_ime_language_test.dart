@@ -66,6 +66,34 @@ void main() {
     });
   });
 
+  group('lookupImeLanguageMatches', () {
+    // 这条规则必须和三端原生实现一致，否则设置页会说「装了」而原生侧找不到。
+    test('主语言相同就算，地区不挑', () {
+      expect(lookupImeLanguageMatches('ja', 'ja-JP'), isTrue);
+      expect(lookupImeLanguageMatches('en', 'en-GB'), isTrue);
+      expect(lookupImeLanguageMatches('ko', 'ko-KR'), isTrue);
+    });
+
+    test('主语言不同一律不匹配', () {
+      expect(lookupImeLanguageMatches('ja', 'en-US'), isFalse);
+      expect(lookupImeLanguageMatches('ja', ''), isFalse);
+      expect(lookupImeLanguageMatches('', 'ja'), isFalse);
+    });
+
+    test('中文要分简繁——装了拼音打不出繁体', () {
+      expect(lookupImeLanguageMatches('zh-Hans', 'zh-Hans-CN'), isTrue);
+      expect(lookupImeLanguageMatches('zh-Hans', 'zh-CN'), isTrue);
+      expect(lookupImeLanguageMatches('zh-Hans', 'zh-Hant-TW'), isFalse);
+      expect(lookupImeLanguageMatches('zh-Hant', 'zh-TW'), isTrue);
+      expect(lookupImeLanguageMatches('zh-Hant', 'zh-HK'), isTrue);
+    });
+
+    test('裸 zh 不挑简繁', () {
+      expect(lookupImeLanguageMatches('zh', 'zh-Hans-CN'), isTrue);
+      expect(lookupImeLanguageMatches('zh', 'zh-Hant-TW'), isTrue);
+    });
+  });
+
   group('lookupImeHintLocalesOf', () {
     test('有值时是单元素列表', () {
       expect(lookupImeHintLocalesOf('ja'), <Locale>[const Locale('ja')]);

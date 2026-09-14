@@ -7,6 +7,22 @@ import macos_window_utils
 class AppDelegate: FlutterAppDelegate {
   private var activeSecurityScopedURLs: [String: URL] = [:]
   private var challengeBrowser: FushiChallengeBrowser?
+  /// Dart 最后一次表达的查词输入法语言。app 重新回到前台时按它再切回去——否则
+  /// 用户 Cmd-Tab 出去一趟回来，查词页面还开着但输入法已经不是他选的那个了。
+  private var desiredLookupImeTag: String?
+
+  override func applicationDidResignActive(_ notification: Notification) {
+    // 离开前台就把用户的输入法放回去：切的是系统全局输入源，留着会漏到别的 app。
+    LookupImeLanguage.restore()
+    super.applicationDidResignActive(notification)
+  }
+
+  override func applicationDidBecomeActive(_ notification: Notification) {
+    super.applicationDidBecomeActive(notification)
+    if let tag = desiredLookupImeTag {
+      LookupImeLanguage.setLanguage(tag)
+    }
+  }
 
   override func applicationDidFinishLaunching(_ notification: Notification) {
     if let windowController =
@@ -34,6 +50,25 @@ class AppDelegate: FlutterAppDelegate {
         binaryMessenger: controller.engine.binaryMessenger)
       foregroundSelectionChannel.setMethodCallHandler { call, result in
         AppDelegate.handleForegroundSelection(call, result: result)
+      }
+
+      // 查词输入框的输入法语言。macOS 的输入源是系统全局状态，所以除了「切过去」
+      // 还必须「切回来」——页面走掉时 Dart 发 null，app 失去前台时我们自己还原
+      // （见 applicationDidResignActive）。
+      let lookupImeChannel = FlutterMethodChannel(
+        name: "app.fushi.reader/lookup_ime",
+        binaryMessenger: controller.engine.binaryMessenger)
+      lookupImeChannel.setMethodCallHandler { [weak self] call, result in
+        switch call.method {
+        case "setLanguage":
+          let tag = call.arguments as? String
+          self?.desiredLookupImeTag = (tag?.isEmpty ?? true) ? nil : tag
+          result(LookupImeLanguage.setLanguage(tag))
+        case "probe":
+          result(LookupImeLanguage.probeInfo())
+        default:
+          result(FlutterMethodNotImplemented)
+        }
       }
     } else {
       NSLog("[Fushi] macOS Flutter controller unavailable; custom channels were not registered")

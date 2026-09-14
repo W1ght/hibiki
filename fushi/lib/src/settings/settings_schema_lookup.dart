@@ -5,6 +5,7 @@ import 'package:fushi/models.dart';
 import 'package:fushi/pages.dart';
 import 'package:fushi/src/lookup/gal_hook_text_overlay_controller.dart';
 import 'package:fushi/src/lookup/global_lookup_controller.dart';
+import 'package:fushi/src/lookup/lookup_ime_channel.dart';
 import 'package:fushi/src/media/import/real_path_directory_picker.dart';
 import 'package:fushi/src/settings/settings_actions.dart';
 import 'package:fushi/src/settings/settings_context.dart';
@@ -325,6 +326,16 @@ SettingsDestination buildLookupDestination() {
                     tag ?? '',
                   );
                   settingsContext.refresh();
+                  // 选了系统里没装的输入法时说一声。否则用户设完发现「没反应」，
+                  // 而真正的原因（系统里根本没这个输入法）他无从知道——我们又不该
+                  // 替他往系统里装一个。
+                  if (tag == null) return;
+                  if (await LookupImeChannel.isLanguageAvailable(tag)) return;
+                  if (!settingsContext.context.mounted) return;
+                  _showSettingsSnackBar(
+                    settingsContext,
+                    t.settings_lookup_ime_language_unavailable,
+                  );
                 },
               );
             },

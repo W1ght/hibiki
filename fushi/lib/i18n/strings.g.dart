@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77078 (4534 per locale)
+/// Strings: 77095 (4535 per locale)
 ///
-/// Built on 2026-09-14 at 13:49 UTC
+/// Built on 2026-09-14 at 14:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6364,6 +6364,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_lookup_ime_language_description =>
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   String get settings_lookup_ime_language_unset => 'Not set';
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -17085,6 +17087,9 @@ class _StringsAr extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -28042,6 +28047,9 @@ class _StringsDe extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -39049,6 +39057,9 @@ class _StringsEs extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -50089,6 +50100,9 @@ class _StringsFr extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -60929,6 +60943,9 @@ class _StringsId extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -71865,6 +71882,9 @@ class _StringsIt extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -82169,6 +82189,9 @@ class _StringsJa extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -92484,6 +92507,9 @@ class _StringsKo extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -103374,6 +103400,9 @@ class _StringsNl extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -114317,6 +114346,9 @@ class _StringsPtBr extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -125238,6 +125270,9 @@ class _StringsRu extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -135956,6 +135991,9 @@ class _StringsTh extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -146792,6 +146830,9 @@ class _StringsTr extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -157597,6 +157638,9 @@ class _StringsVi extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 // Path: <root>
@@ -167517,6 +167561,8 @@ class _StringsZhCn extends _StringsEn {
       '在查词输入框打字时键盘切到哪种语言。需要系统已安装对应输入法。不影响查词结果。';
   @override
   String get settings_lookup_ime_language_unset => '未设置';
+  @override
+  String get settings_lookup_ime_language_unavailable => '系统里还没有安装这个输入法。';
 }
 
 // Path: <root>
@@ -177506,6 +177552,9 @@ class _StringsZhHk extends _StringsEn {
       'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
   @override
   String get settings_lookup_ime_language_unset => 'Not set';
+  @override
+  String get settings_lookup_ime_language_unavailable =>
+      'That input method is not installed on this system yet.';
 }
 
 /// Flat map(s) containing all translations.
@@ -186840,6 +186889,8 @@ extension on _StringsEn {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -196169,6 +196220,8 @@ extension on _StringsAr {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -205547,6 +205600,8 @@ extension on _StringsDe {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -214915,6 +214970,8 @@ extension on _StringsEs {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -224291,6 +224348,8 @@ extension on _StringsFr {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -233637,6 +233696,8 @@ extension on _StringsId {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -243006,6 +243067,8 @@ extension on _StringsIt {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -252299,6 +252362,8 @@ extension on _StringsJa {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -261597,6 +261662,8 @@ extension on _StringsKo {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -270961,6 +271028,8 @@ extension on _StringsNl {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -280320,6 +280389,8 @@ extension on _StringsPtBr {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -289685,6 +289756,8 @@ extension on _StringsRu {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -299019,6 +299092,8 @@ extension on _StringsTh {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -308369,6 +308444,8 @@ extension on _StringsTr {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -317713,6 +317790,8 @@ extension on _StringsVi {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }
@@ -326973,6 +327052,8 @@ extension on _StringsZhCn {
         return '在查词输入框打字时键盘切到哪种语言。需要系统已安装对应输入法。不影响查词结果。';
       case 'settings_lookup_ime_language_unset':
         return '未设置';
+      case 'settings_lookup_ime_language_unavailable':
+        return '系统里还没有安装这个输入法。';
       default:
         return null;
     }
@@ -336244,6 +336325,8 @@ extension on _StringsZhHk {
         return 'Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.';
       case 'settings_lookup_ime_language_unset':
         return 'Not set';
+      case 'settings_lookup_ime_language_unavailable':
+        return 'That input method is not installed on this system yet.';
       default:
         return null;
     }

@@ -7716,14 +7716,20 @@ class AppModel with ChangeNotifier {
   Future<void> setLookupImeLanguage(String value) =>
       prefsRepo.setLookupImeLanguage(value);
 
-  /// 查词输入框希望输入法切到哪种语言（Android `EditorInfo.hintLocales`）。
+  /// 当前真正生效的查词输入法语言；未设置或偏好还没就绪时为 null。
   ///
   /// 偏好未就绪时返回 null 而不是抛：弹窗词典与悬浮词典是另外两个 entry point，
   /// 它们的页面会在偏好加载完成前先 build 一帧（裸读 prefsRepo 会 null check 抛，
   /// 把整页 build 带崩）。没提示只是少一次输入法切换，不该让页面渲染不出来。
-  List<Locale>? get lookupImeHintLocales => isPreferencesReady
-      ? lookupImeHintLocalesOf(prefsRepo.lookupImeLanguage)
-      : null;
+  String? get effectiveLookupImeLanguage {
+    if (!isPreferencesReady) return null;
+    final String tag = prefsRepo.lookupImeLanguage;
+    return tag.isEmpty ? null : tag;
+  }
+
+  /// 查词输入框希望输入法切到哪种语言（Android `EditorInfo.hintLocales`）。
+  List<Locale>? get lookupImeHintLocales =>
+      lookupImeHintLocalesOf(effectiveLookupImeLanguage);
 
   bool get mangaTapToOcr => prefsRepo.mangaTapToOcr;
   Future<void> setMangaTapToOcr(bool value) =>

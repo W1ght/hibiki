@@ -49,6 +49,39 @@ Locale? lookupImeLocaleOf(String? tag) {
   );
 }
 
+/// 两个语言标签是不是「同一种输入法语言」。
+///
+/// 规则必须和原生侧一致（Windows `LanguageTagMatchesLangId`、macOS
+/// `LookupImeLanguage.matches`、iOS 的 primaryLanguage 前缀匹配），否则设置页会说
+/// 「装了」而原生侧找不到、或者反过来：
+/// - 主语言相同才算；
+/// - 中文要分简繁（装了拼音打不出繁体），标签没说简繁（裸 `zh`）时不挑；
+/// - 其它语言不比地区（en-GB 和 en-US 都能打英文）。
+bool lookupImeLanguageMatches(String tag, String candidate) {
+  final List<String> wanted = tag.trim().toLowerCase().split(RegExp('[-_]'));
+  final List<String> other = candidate.trim().toLowerCase().split(
+    RegExp('[-_]'),
+  );
+  if (wanted.first.isEmpty || wanted.first != other.first) return false;
+  if (wanted.first != 'zh') return true;
+  final int wantedScript = _chineseScript(wanted);
+  if (wantedScript == 0) return true;
+  return wantedScript == _chineseScript(other);
+}
+
+/// 0 = 没说，1 = 简体，2 = 繁体。
+int _chineseScript(List<String> subtags) {
+  for (final String part in subtags.skip(1)) {
+    if (part == 'hans' || part == 'cn' || part == 'sg') {
+      return 1;
+    }
+    if (part == 'hant' || part == 'tw' || part == 'hk' || part == 'mo') {
+      return 2;
+    }
+  }
+  return 0;
+}
+
 /// 给 Flutter `TextField.hintLocales` 用的值（消费方一般用 `AppModel.lookupImeHintLocales`，
 /// 它多带一层偏好就绪判断）。
 ///
