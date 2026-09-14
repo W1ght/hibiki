@@ -62,6 +62,12 @@ $lines = @(
 if ($Ios) {
   $lines += "xcrun simctl boot $IosDevice 2>/dev/null || true"
 }
+# 2026-09-15：先把 Mac 显示器叫醒。显示器空闲熄屏时 WindowServer 把所有窗口判为
+# occluded，WebKit 随之把每个 WKWebView 的 document.visibilityState 置 hidden、冻结
+# requestAnimationFrame——凡是靠 rAF 自测量/显示门的 WebView（阅读器分页、全局查词
+# 覆盖窗 host）在真机上就会「DOM 有内容但不画、不回报尺寸」。caffeinate -u 等价于
+# 一次用户活动 tickle，几秒内显示器亮起、occlusion 恢复。
+$lines += 'caffeinate -u -t 2 || true'
 $lines += "FUSHI_TEST_HIDDEN=1 ${rootEnv}flutter test $Target -d $device --no-pub $defineArgs"
 $b64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes(($lines -join "`n")))
 
