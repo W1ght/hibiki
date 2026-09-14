@@ -14,8 +14,10 @@ import 'package:integration_test/integration_test.dart';
 /// A>0、B=ja 而键盘仍是英文，才是 flutter#53614 说的「返回值被系统忽略」——那条路
 /// 就走不通，只能退回「iOS 上用原生 UITextField 平台视图」的重路子。
 ///
-/// 键盘**看起来**是不是日语，这条测试证明不了（要看真实像素）：跑完用
-/// `xcrun simctl io <udid> screenshot` 抓一张对照。
+/// 键盘**看起来**是不是日语，这条测试自己证明不了（那是像素的事），而这恰恰是
+/// flutter#53614 所说「读了但返回值被忽略」与「真的采纳了」的唯一分界。带
+/// `--dart-define=FUSHI_IME_HOLD_SECONDS=25` 跑，测试会在聚焦后把键盘停在屏幕上，
+/// 期间从外面 `xcrun simctl io <udid> screenshot x.png` 抓一张对照即可。
 void main() {
   IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
@@ -82,5 +84,13 @@ void main() {
       startsWith('ja'),
       reason: 'B 失败：日语键盘装着，我们却没把它返回出去',
     );
+
+    // 给外部抓图留窗口：键盘上写的是「あいう」还是「ABC」，只有像素能回答。
+    const int holdSeconds = int.fromEnvironment('FUSHI_IME_HOLD_SECONDS');
+    if (holdSeconds > 0) {
+      debugPrint('[lookup-ime] holding keyboard on screen for ${holdSeconds}s');
+      await tester.pumpAndSettle();
+      await Future<void>.delayed(Duration(seconds: holdSeconds));
+    }
   });
 }
