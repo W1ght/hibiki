@@ -131,6 +131,7 @@ const Set<String> kKnownPreferenceKeys = <String>{
   'local_audio_db_path',
   'local_audio_dbs',
   'lookup.global_context_capture',
+  'lookup.ime_language',
   'low_memory_mode',
   'manga_external_mokuro_path',
   'manga_ocr_engine_preference',
