@@ -1573,6 +1573,45 @@ extension _ReaderChrome on _ReaderFushiPageState {
     );
   }
 
+  /// 有声书悬浮球（用户开关，默认关）：半透明停靠在正文视口边缘，点开弹出
+  /// 上一句 / 播放暂停 / 下一句等按钮（集合可在有声书设置里挑）。
+  ///
+  /// 只在有声书已挂载且首章已加载后出现；活动范围是扣掉顶栏 / 底栏 / 状态行
+  /// 预留后的正文视口，与焦点环用同一组 inset（[_readerTopOffset] /
+  /// [_readerBottomReserve]），所以永远压不到 chrome。排在底栏之前挂载：悬浮底栏
+  /// 短暂唤出时盖在球上，词典弹层同理。
+  Widget _buildAudiobookFloatingBall() {
+    final AudiobookPlayerController? ctrl = _audiobookController;
+    final ReaderFushiSource src = ReaderFushiSource.instance;
+    if (ctrl == null || !_hasEverLoaded || !src.audiobookFloatingBall) {
+      return const SizedBox.shrink();
+    }
+    final Size window = MediaQuery.sizeOf(context);
+    final EdgeInsets viewPadding = MediaQuery.viewPaddingOf(context);
+    final Rect viewport = Rect.fromLTRB(
+      viewPadding.left,
+      _lyricsMode ? _lyricsTopReserve : _readerTopOffset,
+      window.width - viewPadding.right,
+      window.height - _readerBottomReserve,
+    );
+    return AudiobookFloatingBall(
+      key: const ValueKey<String>('fushi_audiobook_floating_ball'),
+      controller: ctrl,
+      viewport: viewport,
+      actions: src.audiobookFloatingBallActions,
+      dock: src.audiobookFloatingBallDock,
+      verticalFraction: src.audiobookFloatingBallVerticalFraction,
+      skipActionSeconds: src.skipActionSeconds,
+      backgroundColor: _themeBackgroundColor(),
+      foregroundColor: _themeTextColor(),
+      animate: !appModel.einkMode,
+      onDockChanged: (AudiobookFloatingBallDock dock, double fraction) =>
+          unawaited(src.setAudiobookFloatingBallPosition(dock, fraction)),
+      onOpenSettings: () =>
+          unawaited(_showAppearanceSheet(initialSubPage: 'audiobook')),
+    );
+  }
+
   /// 小说页的窗口全屏切换（底栏按钮的执行体）。
   ///
   /// 与漫画页 `_changeMangaFullscreen` 同一范式：**先读 native 真值再取反**，而不是翻
