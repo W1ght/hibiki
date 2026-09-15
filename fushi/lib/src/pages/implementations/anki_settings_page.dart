@@ -8,6 +8,7 @@ import 'package:fushi/utils.dart';
 import 'package:fushi_anki/fushi_anki.dart';
 import 'package:fushi_dictionary/fushi_dictionary.dart'
     show Dictionary, JapaneseLanguage;
+import 'package:fushi/src/ai/ai_feature.dart';
 import 'package:fushi/src/anki/anki_deck_reposition_dialogs.dart';
 import 'package:fushi/src/anki/anki_media_dedup_dialogs.dart';
 import 'package:fushi/src/anki/lapis_backup_retention.dart';
@@ -16,6 +17,7 @@ import 'package:fushi/src/anki/anki_config_controls.dart';
 import 'package:fushi/src/anki/anki_view_model.dart';
 import 'package:fushi/src/anki/ankiconnect_port_repair.dart';
 import 'package:fushi/src/anki/lapis_template_service.dart';
+import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/mining/immersion_mining_request.dart'
     show MiningAnimatedFormat, MiningStillFormat, VideoMiningImageMode;
 import 'package:fushi/src/platform/platform_providers.dart';
@@ -904,6 +906,15 @@ class _AnkiSettingsBodyState extends ConsumerState<AnkiSettingsBody> {
               ? null
               : (String field, String currentValue) =>
                   _pickHandlebar(field, currentValue),
+          // 「让 AI 帮忙」的提供商按功能指派解析；编辑器本身零 Riverpod 依赖，
+          // 所以在这里读偏好再传进去。
+          resolveAiProvider: () {
+            final PreferencesRepository prefs = ref.read(appProvider).prefsRepo;
+            return prefs.aiFeatureAssignments.resolve(
+              AiFeature.lapisStyle,
+              prefs.aiProviders,
+            );
+          },
         ),
       ),
     );
