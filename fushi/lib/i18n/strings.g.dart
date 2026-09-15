@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79322 (4666 per locale)
+/// Strings: 79339 (4667 per locale)
 ///
-/// Built on 2026-09-15 at 06:00 UTC
+/// Built on 2026-09-15 at 06:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6561,6 +6561,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_provider_base_url_invalid =>
       'Enter a valid HTTP or HTTPS endpoint';
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -17611,6 +17613,9 @@ class _StringsAr extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -28897,6 +28902,9 @@ class _StringsDe extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -40233,6 +40241,9 @@ class _StringsEs extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -51602,6 +51613,9 @@ class _StringsFr extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -62771,6 +62785,9 @@ class _StringsId extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -74036,6 +74053,9 @@ class _StringsIt extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -84669,6 +84689,9 @@ class _StringsJa extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -95313,6 +95336,9 @@ class _StringsKo extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -106532,6 +106558,9 @@ class _StringsNl extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -117804,6 +117833,9 @@ class _StringsPtBr extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -129054,6 +129086,9 @@ class _StringsRu extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -140101,6 +140136,9 @@ class _StringsTh extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -151266,6 +151304,9 @@ class _StringsTr extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -162400,6 +162441,9 @@ class _StringsVi extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 // Path: <root>
@@ -172608,6 +172652,9 @@ class _StringsZhCn extends _StringsEn {
   String get ai_provider_base_url_invalid => '请填写有效的 HTTP 或 HTTPS 接口地址';
   @override
   String get ai_provider_protocol_locked => '由内置预设固定，不可更改';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      '仅显示 Profile「${name}」的统计';
 }
 
 // Path: <root>
@@ -182926,6 +182973,9 @@ class _StringsZhHk extends _StringsEn {
       'Enter a valid HTTP or HTTPS endpoint';
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  @override
+  String stat_center_profile_scope({required Object name}) =>
+      'Showing statistics for profile "${name}" only';
 }
 
 /// Flat map(s) containing all translations.
@@ -192528,6 +192578,9 @@ extension on _StringsEn {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -202125,6 +202178,9 @@ extension on _StringsAr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -211771,6 +211827,9 @@ extension on _StringsDe {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -221407,6 +221466,9 @@ extension on _StringsEs {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -231051,6 +231113,9 @@ extension on _StringsFr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -240665,6 +240730,9 @@ extension on _StringsId {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -250302,6 +250370,9 @@ extension on _StringsIt {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -259863,6 +259934,9 @@ extension on _StringsJa {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -269429,6 +269503,9 @@ extension on _StringsKo {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -279061,6 +279138,9 @@ extension on _StringsNl {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -288688,6 +288768,9 @@ extension on _StringsPtBr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -298321,6 +298404,9 @@ extension on _StringsRu {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -307923,6 +308009,9 @@ extension on _StringsTh {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -317541,6 +317630,9 @@ extension on _StringsTr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -327153,6 +327245,9 @@ extension on _StringsVi {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }
@@ -336678,6 +336773,8 @@ extension on _StringsZhCn {
         return '请填写有效的 HTTP 或 HTTPS 接口地址';
       case 'ai_provider_protocol_locked':
         return '由内置预设固定，不可更改';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) => '仅显示 Profile「${name}」的统计';
       default:
         return null;
     }
@@ -346217,6 +346314,9 @@ extension on _StringsZhHk {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'stat_center_profile_scope':
+        return ({required Object name}) =>
+            'Showing statistics for profile "${name}" only';
       default:
         return null;
     }

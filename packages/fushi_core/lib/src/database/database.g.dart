@@ -24758,6 +24758,18 @@ class $GalgameSessionsTable extends GalgameSessions
     type: DriftSqlType.string,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _profileIdMeta = const VerificationMeta(
+    'profileId',
+  );
+  @override
+  late final GeneratedColumn<int> profileId = GeneratedColumn<int>(
+    'profile_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     id,
@@ -24766,6 +24778,7 @@ class $GalgameSessionsTable extends GalgameSessions
     endMs,
     durationSeconds,
     dateKey,
+    profileId,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -24825,6 +24838,12 @@ class $GalgameSessionsTable extends GalgameSessions
     } else if (isInserting) {
       context.missing(_dateKeyMeta);
     }
+    if (data.containsKey('profile_id')) {
+      context.handle(
+        _profileIdMeta,
+        profileId.isAcceptableOrUnknown(data['profile_id']!, _profileIdMeta),
+      );
+    }
     return context;
   }
 
@@ -24858,6 +24877,10 @@ class $GalgameSessionsTable extends GalgameSessions
         DriftSqlType.string,
         data['${effectivePrefix}date_key'],
       )!,
+      profileId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}profile_id'],
+      )!,
     );
   }
 
@@ -24887,6 +24910,11 @@ class GalgameSessionRow extends DataClass
   /// 冗余的按天分组键（'YYYY-MM-DD'，本地时区，取 [endMs] 的日期），
   /// 与其它统计表 dateKey 同源，避免读取端为分组反算。
   final String dateKey;
+
+  /// v105：产生本次游玩时激活的 Profile（`profiles.id`；0 = 库里还没有 Profile
+  /// 时写下的行，只在纯 DB 测试里出现）。统计按 Profile 隔离的分区键，与
+  /// [StudySegments.profileId] 同律；写入时由 DAO 从 `active_profile_id` 偏好盖戳。
+  final int profileId;
   const GalgameSessionRow({
     required this.id,
     required this.gameId,
@@ -24894,6 +24922,7 @@ class GalgameSessionRow extends DataClass
     required this.endMs,
     required this.durationSeconds,
     required this.dateKey,
+    required this.profileId,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -24904,6 +24933,7 @@ class GalgameSessionRow extends DataClass
     map['end_ms'] = Variable<int>(endMs);
     map['duration_seconds'] = Variable<int>(durationSeconds);
     map['date_key'] = Variable<String>(dateKey);
+    map['profile_id'] = Variable<int>(profileId);
     return map;
   }
 
@@ -24915,6 +24945,7 @@ class GalgameSessionRow extends DataClass
       endMs: Value(endMs),
       durationSeconds: Value(durationSeconds),
       dateKey: Value(dateKey),
+      profileId: Value(profileId),
     );
   }
 
@@ -24930,6 +24961,7 @@ class GalgameSessionRow extends DataClass
       endMs: serializer.fromJson<int>(json['endMs']),
       durationSeconds: serializer.fromJson<int>(json['durationSeconds']),
       dateKey: serializer.fromJson<String>(json['dateKey']),
+      profileId: serializer.fromJson<int>(json['profileId']),
     );
   }
   @override
@@ -24942,6 +24974,7 @@ class GalgameSessionRow extends DataClass
       'endMs': serializer.toJson<int>(endMs),
       'durationSeconds': serializer.toJson<int>(durationSeconds),
       'dateKey': serializer.toJson<String>(dateKey),
+      'profileId': serializer.toJson<int>(profileId),
     };
   }
 
@@ -24952,6 +24985,7 @@ class GalgameSessionRow extends DataClass
     int? endMs,
     int? durationSeconds,
     String? dateKey,
+    int? profileId,
   }) => GalgameSessionRow(
     id: id ?? this.id,
     gameId: gameId ?? this.gameId,
@@ -24959,6 +24993,7 @@ class GalgameSessionRow extends DataClass
     endMs: endMs ?? this.endMs,
     durationSeconds: durationSeconds ?? this.durationSeconds,
     dateKey: dateKey ?? this.dateKey,
+    profileId: profileId ?? this.profileId,
   );
   GalgameSessionRow copyWithCompanion(GalgameSessionsCompanion data) {
     return GalgameSessionRow(
@@ -24970,6 +25005,7 @@ class GalgameSessionRow extends DataClass
           ? data.durationSeconds.value
           : this.durationSeconds,
       dateKey: data.dateKey.present ? data.dateKey.value : this.dateKey,
+      profileId: data.profileId.present ? data.profileId.value : this.profileId,
     );
   }
 
@@ -24981,14 +25017,22 @@ class GalgameSessionRow extends DataClass
           ..write('startMs: $startMs, ')
           ..write('endMs: $endMs, ')
           ..write('durationSeconds: $durationSeconds, ')
-          ..write('dateKey: $dateKey')
+          ..write('dateKey: $dateKey, ')
+          ..write('profileId: $profileId')
           ..write(')'))
         .toString();
   }
 
   @override
-  int get hashCode =>
-      Object.hash(id, gameId, startMs, endMs, durationSeconds, dateKey);
+  int get hashCode => Object.hash(
+    id,
+    gameId,
+    startMs,
+    endMs,
+    durationSeconds,
+    dateKey,
+    profileId,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -24998,7 +25042,8 @@ class GalgameSessionRow extends DataClass
           other.startMs == this.startMs &&
           other.endMs == this.endMs &&
           other.durationSeconds == this.durationSeconds &&
-          other.dateKey == this.dateKey);
+          other.dateKey == this.dateKey &&
+          other.profileId == this.profileId);
 }
 
 class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
@@ -25008,6 +25053,7 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
   final Value<int> endMs;
   final Value<int> durationSeconds;
   final Value<String> dateKey;
+  final Value<int> profileId;
   const GalgameSessionsCompanion({
     this.id = const Value.absent(),
     this.gameId = const Value.absent(),
@@ -25015,6 +25061,7 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
     this.endMs = const Value.absent(),
     this.durationSeconds = const Value.absent(),
     this.dateKey = const Value.absent(),
+    this.profileId = const Value.absent(),
   });
   GalgameSessionsCompanion.insert({
     this.id = const Value.absent(),
@@ -25023,6 +25070,7 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
     required int endMs,
     required int durationSeconds,
     required String dateKey,
+    this.profileId = const Value.absent(),
   }) : gameId = Value(gameId),
        startMs = Value(startMs),
        endMs = Value(endMs),
@@ -25035,6 +25083,7 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
     Expression<int>? endMs,
     Expression<int>? durationSeconds,
     Expression<String>? dateKey,
+    Expression<int>? profileId,
   }) {
     return RawValuesInsertable({
       if (id != null) 'id': id,
@@ -25043,6 +25092,7 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
       if (endMs != null) 'end_ms': endMs,
       if (durationSeconds != null) 'duration_seconds': durationSeconds,
       if (dateKey != null) 'date_key': dateKey,
+      if (profileId != null) 'profile_id': profileId,
     });
   }
 
@@ -25053,6 +25103,7 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
     Value<int>? endMs,
     Value<int>? durationSeconds,
     Value<String>? dateKey,
+    Value<int>? profileId,
   }) {
     return GalgameSessionsCompanion(
       id: id ?? this.id,
@@ -25061,6 +25112,7 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
       endMs: endMs ?? this.endMs,
       durationSeconds: durationSeconds ?? this.durationSeconds,
       dateKey: dateKey ?? this.dateKey,
+      profileId: profileId ?? this.profileId,
     );
   }
 
@@ -25085,6 +25137,9 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
     if (dateKey.present) {
       map['date_key'] = Variable<String>(dateKey.value);
     }
+    if (profileId.present) {
+      map['profile_id'] = Variable<int>(profileId.value);
+    }
     return map;
   }
 
@@ -25096,7 +25151,8 @@ class GalgameSessionsCompanion extends UpdateCompanion<GalgameSessionRow> {
           ..write('startMs: $startMs, ')
           ..write('endMs: $endMs, ')
           ..write('durationSeconds: $durationSeconds, ')
-          ..write('dateKey: $dateKey')
+          ..write('dateKey: $dateKey, ')
+          ..write('profileId: $profileId')
           ..write(')'))
         .toString();
   }
@@ -47420,6 +47476,18 @@ class $StudySegmentTombstonesTable extends StudySegmentTombstones
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
   $StudySegmentTombstonesTable(this.attachedDatabase, [this._alias]);
+  static const VerificationMeta _profileIdMeta = const VerificationMeta(
+    'profileId',
+  );
+  @override
+  late final GeneratedColumn<int> profileId = GeneratedColumn<int>(
+    'profile_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   static const VerificationMeta _mediaKindMeta = const VerificationMeta(
     'mediaKind',
   );
@@ -47454,7 +47522,12 @@ class $StudySegmentTombstonesTable extends StudySegmentTombstones
     requiredDuringInsert: true,
   );
   @override
-  List<GeneratedColumn> get $columns => [mediaKind, mediaKey, deletedAt];
+  List<GeneratedColumn> get $columns => [
+    profileId,
+    mediaKind,
+    mediaKey,
+    deletedAt,
+  ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
@@ -47467,6 +47540,12 @@ class $StudySegmentTombstonesTable extends StudySegmentTombstones
   }) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
+    if (data.containsKey('profile_id')) {
+      context.handle(
+        _profileIdMeta,
+        profileId.isAcceptableOrUnknown(data['profile_id']!, _profileIdMeta),
+      );
+    }
     if (data.containsKey('media_kind')) {
       context.handle(
         _mediaKindMeta,
@@ -47495,7 +47574,7 @@ class $StudySegmentTombstonesTable extends StudySegmentTombstones
   }
 
   @override
-  Set<GeneratedColumn> get $primaryKey => {mediaKind, mediaKey};
+  Set<GeneratedColumn> get $primaryKey => {profileId, mediaKind, mediaKey};
   @override
   StudySegmentTombstoneRow map(
     Map<String, dynamic> data, {
@@ -47503,6 +47582,10 @@ class $StudySegmentTombstonesTable extends StudySegmentTombstones
   }) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return StudySegmentTombstoneRow(
+      profileId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}profile_id'],
+      )!,
       mediaKind: attachedDatabase.typeMapping.read(
         DriftSqlType.string,
         data['${effectivePrefix}media_kind'],
@@ -47526,10 +47609,13 @@ class $StudySegmentTombstonesTable extends StudySegmentTombstones
 
 class StudySegmentTombstoneRow extends DataClass
     implements Insertable<StudySegmentTombstoneRow> {
+  /// 立碑时的 Profile（`profiles.id`），语义同 [StudySegments.profileId]。
+  final int profileId;
   final String mediaKind;
   final String mediaKey;
   final int deletedAt;
   const StudySegmentTombstoneRow({
+    required this.profileId,
     required this.mediaKind,
     required this.mediaKey,
     required this.deletedAt,
@@ -47537,6 +47623,7 @@ class StudySegmentTombstoneRow extends DataClass
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
+    map['profile_id'] = Variable<int>(profileId);
     map['media_kind'] = Variable<String>(mediaKind);
     map['media_key'] = Variable<String>(mediaKey);
     map['deleted_at'] = Variable<int>(deletedAt);
@@ -47545,6 +47632,7 @@ class StudySegmentTombstoneRow extends DataClass
 
   StudySegmentTombstonesCompanion toCompanion(bool nullToAbsent) {
     return StudySegmentTombstonesCompanion(
+      profileId: Value(profileId),
       mediaKind: Value(mediaKind),
       mediaKey: Value(mediaKey),
       deletedAt: Value(deletedAt),
@@ -47557,6 +47645,7 @@ class StudySegmentTombstoneRow extends DataClass
   }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return StudySegmentTombstoneRow(
+      profileId: serializer.fromJson<int>(json['profileId']),
       mediaKind: serializer.fromJson<String>(json['mediaKind']),
       mediaKey: serializer.fromJson<String>(json['mediaKey']),
       deletedAt: serializer.fromJson<int>(json['deletedAt']),
@@ -47566,6 +47655,7 @@ class StudySegmentTombstoneRow extends DataClass
   Map<String, dynamic> toJson({ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return <String, dynamic>{
+      'profileId': serializer.toJson<int>(profileId),
       'mediaKind': serializer.toJson<String>(mediaKind),
       'mediaKey': serializer.toJson<String>(mediaKey),
       'deletedAt': serializer.toJson<int>(deletedAt),
@@ -47573,10 +47663,12 @@ class StudySegmentTombstoneRow extends DataClass
   }
 
   StudySegmentTombstoneRow copyWith({
+    int? profileId,
     String? mediaKind,
     String? mediaKey,
     int? deletedAt,
   }) => StudySegmentTombstoneRow(
+    profileId: profileId ?? this.profileId,
     mediaKind: mediaKind ?? this.mediaKind,
     mediaKey: mediaKey ?? this.mediaKey,
     deletedAt: deletedAt ?? this.deletedAt,
@@ -47585,6 +47677,7 @@ class StudySegmentTombstoneRow extends DataClass
     StudySegmentTombstonesCompanion data,
   ) {
     return StudySegmentTombstoneRow(
+      profileId: data.profileId.present ? data.profileId.value : this.profileId,
       mediaKind: data.mediaKind.present ? data.mediaKind.value : this.mediaKind,
       mediaKey: data.mediaKey.present ? data.mediaKey.value : this.mediaKey,
       deletedAt: data.deletedAt.present ? data.deletedAt.value : this.deletedAt,
@@ -47594,6 +47687,7 @@ class StudySegmentTombstoneRow extends DataClass
   @override
   String toString() {
     return (StringBuffer('StudySegmentTombstoneRow(')
+          ..write('profileId: $profileId, ')
           ..write('mediaKind: $mediaKind, ')
           ..write('mediaKey: $mediaKey, ')
           ..write('deletedAt: $deletedAt')
@@ -47602,11 +47696,12 @@ class StudySegmentTombstoneRow extends DataClass
   }
 
   @override
-  int get hashCode => Object.hash(mediaKind, mediaKey, deletedAt);
+  int get hashCode => Object.hash(profileId, mediaKind, mediaKey, deletedAt);
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
       (other is StudySegmentTombstoneRow &&
+          other.profileId == this.profileId &&
           other.mediaKind == this.mediaKind &&
           other.mediaKey == this.mediaKey &&
           other.deletedAt == this.deletedAt);
@@ -47614,17 +47709,20 @@ class StudySegmentTombstoneRow extends DataClass
 
 class StudySegmentTombstonesCompanion
     extends UpdateCompanion<StudySegmentTombstoneRow> {
+  final Value<int> profileId;
   final Value<String> mediaKind;
   final Value<String> mediaKey;
   final Value<int> deletedAt;
   final Value<int> rowid;
   const StudySegmentTombstonesCompanion({
+    this.profileId = const Value.absent(),
     this.mediaKind = const Value.absent(),
     this.mediaKey = const Value.absent(),
     this.deletedAt = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   StudySegmentTombstonesCompanion.insert({
+    this.profileId = const Value.absent(),
     required String mediaKind,
     required String mediaKey,
     required int deletedAt,
@@ -47633,12 +47731,14 @@ class StudySegmentTombstonesCompanion
        mediaKey = Value(mediaKey),
        deletedAt = Value(deletedAt);
   static Insertable<StudySegmentTombstoneRow> custom({
+    Expression<int>? profileId,
     Expression<String>? mediaKind,
     Expression<String>? mediaKey,
     Expression<int>? deletedAt,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
+      if (profileId != null) 'profile_id': profileId,
       if (mediaKind != null) 'media_kind': mediaKind,
       if (mediaKey != null) 'media_key': mediaKey,
       if (deletedAt != null) 'deleted_at': deletedAt,
@@ -47647,12 +47747,14 @@ class StudySegmentTombstonesCompanion
   }
 
   StudySegmentTombstonesCompanion copyWith({
+    Value<int>? profileId,
     Value<String>? mediaKind,
     Value<String>? mediaKey,
     Value<int>? deletedAt,
     Value<int>? rowid,
   }) {
     return StudySegmentTombstonesCompanion(
+      profileId: profileId ?? this.profileId,
       mediaKind: mediaKind ?? this.mediaKind,
       mediaKey: mediaKey ?? this.mediaKey,
       deletedAt: deletedAt ?? this.deletedAt,
@@ -47663,6 +47765,9 @@ class StudySegmentTombstonesCompanion
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
+    if (profileId.present) {
+      map['profile_id'] = Variable<int>(profileId.value);
+    }
     if (mediaKind.present) {
       map['media_kind'] = Variable<String>(mediaKind.value);
     }
@@ -47681,6 +47786,7 @@ class StudySegmentTombstonesCompanion
   @override
   String toString() {
     return (StringBuffer('StudySegmentTombstonesCompanion(')
+          ..write('profileId: $profileId, ')
           ..write('mediaKind: $mediaKind, ')
           ..write('mediaKey: $mediaKey, ')
           ..write('deletedAt: $deletedAt, ')
@@ -47840,6 +47946,18 @@ class $StudySegmentsTable extends StudySegments
     type: DriftSqlType.int,
     requiredDuringInsert: true,
   );
+  static const VerificationMeta _profileIdMeta = const VerificationMeta(
+    'profileId',
+  );
+  @override
+  late final GeneratedColumn<int> profileId = GeneratedColumn<int>(
+    'profile_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   @override
   List<GeneratedColumn> get $columns => [
     uid,
@@ -47856,6 +47974,7 @@ class $StudySegmentsTable extends StudySegments
     chars,
     pages,
     updatedAt,
+    profileId,
   ];
   @override
   String get aliasedName => _alias ?? actualTableName;
@@ -47973,6 +48092,12 @@ class $StudySegmentsTable extends StudySegments
     } else if (isInserting) {
       context.missing(_updatedAtMeta);
     }
+    if (data.containsKey('profile_id')) {
+      context.handle(
+        _profileIdMeta,
+        profileId.isAcceptableOrUnknown(data['profile_id']!, _profileIdMeta),
+      );
+    }
     return context;
   }
 
@@ -48038,6 +48163,10 @@ class $StudySegmentsTable extends StudySegments
         DriftSqlType.int,
         data['${effectivePrefix}updated_at'],
       )!,
+      profileId: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}profile_id'],
+      )!,
     );
   }
 
@@ -48086,6 +48215,21 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
 
   /// 最后写入毫秒戳：同步 v2 同 uid 取大者（LWW），墓碑仲裁用它与 deletedAt 比。
   final int updatedAt;
+
+  /// v105（统计按 Profile 隔离）：开段时激活的 Profile（`profiles.id`）。
+  ///
+  /// 分区键：读取面（`loadStatFacts` / 最近观看 / 删除 / 清空）一律只看当前激活
+  /// Profile 的行，各 Profile 之间互不可见。**只在插入时盖戳、冲突更新不改**——
+  /// 段的归属在它开始那一刻就定了，中途切 Profile 不把已开的段挪走（下一段自然
+  /// 归新 Profile）。写入方（StudyClock / galgame hook）不用知道 Profile：缺席时
+  /// DAO 从 `active_profile_id` 偏好解析（[FushiDatabase.resolveActiveProfileId]）。
+  /// 0 = 库里还没有 Profile（只在纯 DB 测试里出现；app 启动即 ensureDefaultProfile）。
+  ///
+  /// 不做 FK：删 Profile 不 cascade 删历史（同步对端可能还持有这些段，本机静默
+  /// 消失又回灌是最坏形态），行留着、对任何 Profile 都不可见即可。同步 wire 不
+  /// 传本机自增 id，传 Profile **名字**（`profileName`），对端按名字落到自己的
+  /// 同名 Profile。
+  final int profileId;
   const StudySegmentRow({
     required this.uid,
     required this.deviceId,
@@ -48101,6 +48245,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
     required this.chars,
     required this.pages,
     required this.updatedAt,
+    required this.profileId,
   });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
@@ -48119,6 +48264,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
     map['chars'] = Variable<int>(chars);
     map['pages'] = Variable<int>(pages);
     map['updated_at'] = Variable<int>(updatedAt);
+    map['profile_id'] = Variable<int>(profileId);
     return map;
   }
 
@@ -48138,6 +48284,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
       chars: Value(chars),
       pages: Value(pages),
       updatedAt: Value(updatedAt),
+      profileId: Value(profileId),
     );
   }
 
@@ -48161,6 +48308,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
       chars: serializer.fromJson<int>(json['chars']),
       pages: serializer.fromJson<int>(json['pages']),
       updatedAt: serializer.fromJson<int>(json['updatedAt']),
+      profileId: serializer.fromJson<int>(json['profileId']),
     );
   }
   @override
@@ -48181,6 +48329,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
       'chars': serializer.toJson<int>(chars),
       'pages': serializer.toJson<int>(pages),
       'updatedAt': serializer.toJson<int>(updatedAt),
+      'profileId': serializer.toJson<int>(profileId),
     };
   }
 
@@ -48199,6 +48348,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
     int? chars,
     int? pages,
     int? updatedAt,
+    int? profileId,
   }) => StudySegmentRow(
     uid: uid ?? this.uid,
     deviceId: deviceId ?? this.deviceId,
@@ -48214,6 +48364,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
     chars: chars ?? this.chars,
     pages: pages ?? this.pages,
     updatedAt: updatedAt ?? this.updatedAt,
+    profileId: profileId ?? this.profileId,
   );
   StudySegmentRow copyWithCompanion(StudySegmentsCompanion data) {
     return StudySegmentRow(
@@ -48233,6 +48384,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
       chars: data.chars.present ? data.chars.value : this.chars,
       pages: data.pages.present ? data.pages.value : this.pages,
       updatedAt: data.updatedAt.present ? data.updatedAt.value : this.updatedAt,
+      profileId: data.profileId.present ? data.profileId.value : this.profileId,
     );
   }
 
@@ -48252,7 +48404,8 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
           ..write('durationMs: $durationMs, ')
           ..write('chars: $chars, ')
           ..write('pages: $pages, ')
-          ..write('updatedAt: $updatedAt')
+          ..write('updatedAt: $updatedAt, ')
+          ..write('profileId: $profileId')
           ..write(')'))
         .toString();
   }
@@ -48273,6 +48426,7 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
     chars,
     pages,
     updatedAt,
+    profileId,
   );
   @override
   bool operator ==(Object other) =>
@@ -48291,7 +48445,8 @@ class StudySegmentRow extends DataClass implements Insertable<StudySegmentRow> {
           other.durationMs == this.durationMs &&
           other.chars == this.chars &&
           other.pages == this.pages &&
-          other.updatedAt == this.updatedAt);
+          other.updatedAt == this.updatedAt &&
+          other.profileId == this.profileId);
 }
 
 class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
@@ -48309,6 +48464,7 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
   final Value<int> chars;
   final Value<int> pages;
   final Value<int> updatedAt;
+  final Value<int> profileId;
   final Value<int> rowid;
   const StudySegmentsCompanion({
     this.uid = const Value.absent(),
@@ -48325,6 +48481,7 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
     this.chars = const Value.absent(),
     this.pages = const Value.absent(),
     this.updatedAt = const Value.absent(),
+    this.profileId = const Value.absent(),
     this.rowid = const Value.absent(),
   });
   StudySegmentsCompanion.insert({
@@ -48342,6 +48499,7 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
     this.chars = const Value.absent(),
     this.pages = const Value.absent(),
     required int updatedAt,
+    this.profileId = const Value.absent(),
     this.rowid = const Value.absent(),
   }) : uid = Value(uid),
        deviceId = Value(deviceId),
@@ -48368,6 +48526,7 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
     Expression<int>? chars,
     Expression<int>? pages,
     Expression<int>? updatedAt,
+    Expression<int>? profileId,
     Expression<int>? rowid,
   }) {
     return RawValuesInsertable({
@@ -48385,6 +48544,7 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
       if (chars != null) 'chars': chars,
       if (pages != null) 'pages': pages,
       if (updatedAt != null) 'updated_at': updatedAt,
+      if (profileId != null) 'profile_id': profileId,
       if (rowid != null) 'rowid': rowid,
     });
   }
@@ -48404,6 +48564,7 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
     Value<int>? chars,
     Value<int>? pages,
     Value<int>? updatedAt,
+    Value<int>? profileId,
     Value<int>? rowid,
   }) {
     return StudySegmentsCompanion(
@@ -48421,6 +48582,7 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
       chars: chars ?? this.chars,
       pages: pages ?? this.pages,
       updatedAt: updatedAt ?? this.updatedAt,
+      profileId: profileId ?? this.profileId,
       rowid: rowid ?? this.rowid,
     );
   }
@@ -48470,6 +48632,9 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
     if (updatedAt.present) {
       map['updated_at'] = Variable<int>(updatedAt.value);
     }
+    if (profileId.present) {
+      map['profile_id'] = Variable<int>(profileId.value);
+    }
     if (rowid.present) {
       map['rowid'] = Variable<int>(rowid.value);
     }
@@ -48493,6 +48658,7 @@ class StudySegmentsCompanion extends UpdateCompanion<StudySegmentRow> {
           ..write('chars: $chars, ')
           ..write('pages: $pages, ')
           ..write('updatedAt: $updatedAt, ')
+          ..write('profileId: $profileId, ')
           ..write('rowid: $rowid')
           ..write(')'))
         .toString();
@@ -67828,6 +67994,7 @@ typedef $$GalgameSessionsTableCreateCompanionBuilder =
       required int endMs,
       required int durationSeconds,
       required String dateKey,
+      Value<int> profileId,
     });
 typedef $$GalgameSessionsTableUpdateCompanionBuilder =
     GalgameSessionsCompanion Function({
@@ -67837,6 +68004,7 @@ typedef $$GalgameSessionsTableUpdateCompanionBuilder =
       Value<int> endMs,
       Value<int> durationSeconds,
       Value<String> dateKey,
+      Value<int> profileId,
     });
 
 final class $$GalgameSessionsTableReferences
@@ -67904,6 +68072,11 @@ class $$GalgameSessionsTableFilterComposer
     builder: (column) => ColumnFilters(column),
   );
 
+  ColumnFilters<int> get profileId => $composableBuilder(
+    column: $table.profileId,
+    builder: (column) => ColumnFilters(column),
+  );
+
   $$GalgamesTableFilterComposer get gameId {
     final $$GalgamesTableFilterComposer composer = $composerBuilder(
       composer: this,
@@ -67962,6 +68135,11 @@ class $$GalgameSessionsTableOrderingComposer
     builder: (column) => ColumnOrderings(column),
   );
 
+  ColumnOrderings<int> get profileId => $composableBuilder(
+    column: $table.profileId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   $$GalgamesTableOrderingComposer get gameId {
     final $$GalgamesTableOrderingComposer composer = $composerBuilder(
       composer: this,
@@ -68011,6 +68189,9 @@ class $$GalgameSessionsTableAnnotationComposer
 
   GeneratedColumn<String> get dateKey =>
       $composableBuilder(column: $table.dateKey, builder: (column) => column);
+
+  GeneratedColumn<int> get profileId =>
+      $composableBuilder(column: $table.profileId, builder: (column) => column);
 
   $$GalgamesTableAnnotationComposer get gameId {
     final $$GalgamesTableAnnotationComposer composer = $composerBuilder(
@@ -68072,6 +68253,7 @@ class $$GalgameSessionsTableTableManager
                 Value<int> endMs = const Value.absent(),
                 Value<int> durationSeconds = const Value.absent(),
                 Value<String> dateKey = const Value.absent(),
+                Value<int> profileId = const Value.absent(),
               }) => GalgameSessionsCompanion(
                 id: id,
                 gameId: gameId,
@@ -68079,6 +68261,7 @@ class $$GalgameSessionsTableTableManager
                 endMs: endMs,
                 durationSeconds: durationSeconds,
                 dateKey: dateKey,
+                profileId: profileId,
               ),
           createCompanionCallback:
               ({
@@ -68088,6 +68271,7 @@ class $$GalgameSessionsTableTableManager
                 required int endMs,
                 required int durationSeconds,
                 required String dateKey,
+                Value<int> profileId = const Value.absent(),
               }) => GalgameSessionsCompanion.insert(
                 id: id,
                 gameId: gameId,
@@ -68095,6 +68279,7 @@ class $$GalgameSessionsTableTableManager
                 endMs: endMs,
                 durationSeconds: durationSeconds,
                 dateKey: dateKey,
+                profileId: profileId,
               ),
           withReferenceMapper: (p0) => p0
               .map(
@@ -86843,6 +87028,7 @@ typedef $$MangaChapterStatesTableProcessedTableManager =
     >;
 typedef $$StudySegmentTombstonesTableCreateCompanionBuilder =
     StudySegmentTombstonesCompanion Function({
+      Value<int> profileId,
       required String mediaKind,
       required String mediaKey,
       required int deletedAt,
@@ -86850,6 +87036,7 @@ typedef $$StudySegmentTombstonesTableCreateCompanionBuilder =
     });
 typedef $$StudySegmentTombstonesTableUpdateCompanionBuilder =
     StudySegmentTombstonesCompanion Function({
+      Value<int> profileId,
       Value<String> mediaKind,
       Value<String> mediaKey,
       Value<int> deletedAt,
@@ -86865,6 +87052,11 @@ class $$StudySegmentTombstonesTableFilterComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
+  ColumnFilters<int> get profileId => $composableBuilder(
+    column: $table.profileId,
+    builder: (column) => ColumnFilters(column),
+  );
+
   ColumnFilters<String> get mediaKind => $composableBuilder(
     column: $table.mediaKind,
     builder: (column) => ColumnFilters(column),
@@ -86890,6 +87082,11 @@ class $$StudySegmentTombstonesTableOrderingComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
+  ColumnOrderings<int> get profileId => $composableBuilder(
+    column: $table.profileId,
+    builder: (column) => ColumnOrderings(column),
+  );
+
   ColumnOrderings<String> get mediaKind => $composableBuilder(
     column: $table.mediaKind,
     builder: (column) => ColumnOrderings(column),
@@ -86915,6 +87112,9 @@ class $$StudySegmentTombstonesTableAnnotationComposer
     super.$addJoinBuilderToRootComposer,
     super.$removeJoinBuilderFromRootComposer,
   });
+  GeneratedColumn<int> get profileId =>
+      $composableBuilder(column: $table.profileId, builder: (column) => column);
+
   GeneratedColumn<String> get mediaKind =>
       $composableBuilder(column: $table.mediaKind, builder: (column) => column);
 
@@ -86971,11 +87171,13 @@ class $$StudySegmentTombstonesTableTableManager
               ),
           updateCompanionCallback:
               ({
+                Value<int> profileId = const Value.absent(),
                 Value<String> mediaKind = const Value.absent(),
                 Value<String> mediaKey = const Value.absent(),
                 Value<int> deletedAt = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => StudySegmentTombstonesCompanion(
+                profileId: profileId,
                 mediaKind: mediaKind,
                 mediaKey: mediaKey,
                 deletedAt: deletedAt,
@@ -86983,11 +87185,13 @@ class $$StudySegmentTombstonesTableTableManager
               ),
           createCompanionCallback:
               ({
+                Value<int> profileId = const Value.absent(),
                 required String mediaKind,
                 required String mediaKey,
                 required int deletedAt,
                 Value<int> rowid = const Value.absent(),
               }) => StudySegmentTombstonesCompanion.insert(
+                profileId: profileId,
                 mediaKind: mediaKind,
                 mediaKey: mediaKey,
                 deletedAt: deletedAt,
@@ -87038,6 +87242,7 @@ typedef $$StudySegmentsTableCreateCompanionBuilder =
       Value<int> chars,
       Value<int> pages,
       required int updatedAt,
+      Value<int> profileId,
       Value<int> rowid,
     });
 typedef $$StudySegmentsTableUpdateCompanionBuilder =
@@ -87056,6 +87261,7 @@ typedef $$StudySegmentsTableUpdateCompanionBuilder =
       Value<int> chars,
       Value<int> pages,
       Value<int> updatedAt,
+      Value<int> profileId,
       Value<int> rowid,
     });
 
@@ -87135,6 +87341,11 @@ class $$StudySegmentsTableFilterComposer
 
   ColumnFilters<int> get updatedAt => $composableBuilder(
     column: $table.updatedAt,
+    builder: (column) => ColumnFilters(column),
+  );
+
+  ColumnFilters<int> get profileId => $composableBuilder(
+    column: $table.profileId,
     builder: (column) => ColumnFilters(column),
   );
 }
@@ -87217,6 +87428,11 @@ class $$StudySegmentsTableOrderingComposer
     column: $table.updatedAt,
     builder: (column) => ColumnOrderings(column),
   );
+
+  ColumnOrderings<int> get profileId => $composableBuilder(
+    column: $table.profileId,
+    builder: (column) => ColumnOrderings(column),
+  );
 }
 
 class $$StudySegmentsTableAnnotationComposer
@@ -87271,6 +87487,9 @@ class $$StudySegmentsTableAnnotationComposer
 
   GeneratedColumn<int> get updatedAt =>
       $composableBuilder(column: $table.updatedAt, builder: (column) => column);
+
+  GeneratedColumn<int> get profileId =>
+      $composableBuilder(column: $table.profileId, builder: (column) => column);
 }
 
 class $$StudySegmentsTableTableManager
@@ -87324,6 +87543,7 @@ class $$StudySegmentsTableTableManager
                 Value<int> chars = const Value.absent(),
                 Value<int> pages = const Value.absent(),
                 Value<int> updatedAt = const Value.absent(),
+                Value<int> profileId = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => StudySegmentsCompanion(
                 uid: uid,
@@ -87340,6 +87560,7 @@ class $$StudySegmentsTableTableManager
                 chars: chars,
                 pages: pages,
                 updatedAt: updatedAt,
+                profileId: profileId,
                 rowid: rowid,
               ),
           createCompanionCallback:
@@ -87358,6 +87579,7 @@ class $$StudySegmentsTableTableManager
                 Value<int> chars = const Value.absent(),
                 Value<int> pages = const Value.absent(),
                 required int updatedAt,
+                Value<int> profileId = const Value.absent(),
                 Value<int> rowid = const Value.absent(),
               }) => StudySegmentsCompanion.insert(
                 uid: uid,
@@ -87374,6 +87596,7 @@ class $$StudySegmentsTableTableManager
                 chars: chars,
                 pages: pages,
                 updatedAt: updatedAt,
+                profileId: profileId,
                 rowid: rowid,
               ),
           withReferenceMapper: (p0) => p0
