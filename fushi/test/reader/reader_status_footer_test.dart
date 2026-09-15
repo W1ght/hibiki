@@ -160,6 +160,7 @@ void main() {
       int? chapterCurrent,
       int? chapterTotal,
       bool showProgress = true,
+      bool centered = false,
       VoidCallback? onTap,
       VoidCallback? onTapTracker,
       VoidCallback? onTapProgress,
@@ -175,6 +176,7 @@ void main() {
               chapterCurrentChars: chapterCurrent,
               chapterTotalChars: chapterTotal,
               showProgress: showProgress,
+              centered: centered,
               textColor: Colors.white,
               backgroundColor: Colors.black,
               tick: const Duration(milliseconds: 100),
@@ -356,6 +358,35 @@ void main() {
       );
     });
 
+    // BUG-2531：竖屏读数独立成行时它是底栏 Column 的最后一行，上面那排传输键居中，
+    // 读数贴右角会和它们错开成两个重心（用户 2026-09-14「竖屏做到最底部并且居中」）。
+    testWidgets('centered: 读数并进底栏那块遮罩时居中，不再贴右角', (WidgetTester tester) async {
+      await tester.pumpWidget(
+        host(
+          totals: () => (durationMs: 0, chars: 0, active: true),
+          centered: true,
+        ),
+      );
+      final Rect strip = tester.getRect(find.byType(ReaderStatusFooter));
+      final Rect tracker = tester.getRect(
+        find.byKey(const ValueKey<String>('fushi_status_tracker')),
+      );
+      final Rect progress = tester.getRect(
+        find.byKey(const ValueKey<String>('fushi_status_progress')),
+      );
+      // 两段读数合起来的中点落在整条的中点上。左边界量到计时那颗开关键，
+      // 计时文字左边还有按钮 + 间距，拿文字左缘算会偏出去。
+      final Rect clock = tester.getRect(find.byType(ReaderStudyClockButton));
+      expect((clock.left + progress.right) / 2, closeTo(strip.center.dx, 1));
+      expect(clock.left, lessThan(tracker.left));
+      expect(
+        strip.right - progress.right,
+        greaterThan(16),
+        reason: '不再贴右缘 16 的基线——那是它独自在屏底时的形态',
+      );
+      expect(tracker.right, lessThanOrEqualTo(progress.left));
+    });
+
     testWidgets('tracker hit box spans the full strip height', (
       WidgetTester tester,
     ) async {
@@ -456,9 +487,18 @@ void main() {
         '    return Positioned(',
       );
       expect(
-        footerBuild.contains('_statusFooterAbsorbedByBar'),
+        footerBuild.contains('_statusFooterShouldPaint'),
         isTrue,
         reason: '挤压态底栏已并入读数时状态行整条不画（不再叠两行同样的数字）',
+      );
+      // BUG-2531 起「该不该画」收进 _statusFooterShouldPaint 这一个真值（屏底独立
+      // 成行与并进底栏遮罩两条路共用），吸收判据仍是它的一部分。
+      expect(
+        src.contains(
+          '_statusFooterEnabled && _hasEverLoaded && !_statusFooterAbsorbedByBar;',
+        ),
+        isTrue,
+        reason: '吸收判据必须仍在「状态行该不该画」的单一真值里',
       );
       final String barBuild = _slice(
         src,
@@ -532,13 +572,14 @@ void main() {
           isFalse,
           reason: '纯指针面，不进焦点遍历池（TODO-700 不变式）',
         );
-        // 钉「两行相邻且顺序对」，不钉缩进宽度：Stack 外面多包一层 formatter 就会
-        // 把绝对缩进从 20 改成 22，而绘制顺序这个不变式一点没变。
+        // 只钉顺序，不钉相邻、也不钉缩进宽度：中间允许再插别的覆盖层（有声书悬浮球
+        // 就插在这两者之间），而「状态行先画、词典弹层后画」这个不变式一点没变。
+        final int footerAt = src.indexOf('_buildStatusFooter(),');
+        final int dictAt = src.indexOf('buildDictionary(),');
+        expect(footerAt, greaterThan(-1));
         expect(
-          RegExp(
-            r'_buildStatusFooter\(\),\n *buildDictionary\(\),',
-          ).hasMatch(src),
-          isTrue,
+          dictAt,
+          greaterThan(footerAt),
           reason: '状态行必须排在词典弹层 / 底栏之前，让它们盖在其上',
         );
       },
