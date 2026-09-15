@@ -26,9 +26,6 @@ import 'package:fushi/src/utils/misc/platform_utils.dart'
 /// reader_chrome_floating.dart 文件头）。
 const double kReaderDesktopHeaderHeight = 48;
 
-/// 悬浮 chrome 收起时顶边悬停热区高度（逻辑 px）：鼠标移进即唤出工具栏。
-const double kReaderHoverRevealStripHeight = 6;
-
 /// 工具栏书名字号（逻辑 px）。阅读器 chrome 的排版活在**阅读面自己的尺度**上，
 /// 不跟随 app 全局 MD3 排版令牌——它要和顶部进度胶囊
 /// （[kTopProgressFontSize] = 12）、底部状态行（[kReaderStatusFooterFontSize]）
