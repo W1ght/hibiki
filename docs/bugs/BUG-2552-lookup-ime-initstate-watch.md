@@ -14,7 +14,7 @@
   引入于查词输入法语言功能（develop `5a15d25245`，上游 PR #1494）。
 - **[x] ① 已修复** — `languageOf` 改取 `appModelNoUpdate`（`base_page.dart:51`，即 `initState`
   里 `ref.read` 缓存下来的同一个 `AppModel` 实例）。这里本来也不该 watch：输入法语言变了只需
-  下次同步时读到新值，不需要整页重建。提交 `<pending>`。
+  下次同步时读到新值，不需要整页重建。提交 `af3eb7ddb8`。
 - **[x] ② 已加自动化测试** — 无需新建：`fushi/test/pages/home_dictionary_pending_on_mount_test.dart`
   等 **5 个真挂载 `HomeDictionaryPage` 的 suite** 就是天然复现，修前全红、修后 37 条全绿
   （`home_dictionary_{pending_on_mount,pull_preserve_query,pull_to_sync,search_error,standalone_route}_test.dart`）。
