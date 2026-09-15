@@ -4546,5 +4546,19 @@
   "reader_stats_clock_pause": "Pause timer",
   "reader_stats_clock_resume": "Resume timer",
   "video_clip_export_share_unavailable": "Clip saved, but the share sheet didn't open: ${path}",
-  "audiobook_export_clip_share_unavailable": "Clip saved, but the share sheet didn't open"
+  "audiobook_export_clip_share_unavailable": "Clip saved, but the share sheet didn't open",
+  "reader_gallery_relock": "Re-hide this illustration",
+  "reader_gallery_locked_reveal": "View anyway",
+  "reader_gallery_locked_unlock_hint": "Unlocks automatically once you reach $chapter",
+  "reader_gallery_locked_blur_hint": "Image blur is on; reveal to view",
+  "reader_gallery_title": "Illustrations",
+  "reader_gallery_unlocked_count": "Unlocked $unlocked / $total",
+  "reader_gallery_filter_unlocked": "Unlocked",
+  "reader_gallery_filter_all": "All",
+  "reader_gallery_position_jump": "Jump to current reading position",
+  "reader_volume_peek_failed": "Could not read this volume",
+  "reader_gallery_unlocked_empty": "No unlocked illustrations yet",
+  "reader_gallery_position_current": "Current reading position",
+  "reader_gallery_locked_title": "Not reached yet",
+  "reader_gallery_locked_back": "Back to last seen"
 }

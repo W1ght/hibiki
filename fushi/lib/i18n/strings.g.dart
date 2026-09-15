@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77316 (4548 per locale)
+/// Strings: 77554 (4562 per locale)
 ///
-/// Built on 2026-09-15 at 05:44 UTC
+/// Built on 2026-09-15 at 05:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6387,6 +6387,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Clip saved, but the share sheet didn\'t open: ${path}';
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  String get reader_gallery_locked_reveal => 'View anyway';
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  String get reader_gallery_title => 'Illustrations';
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  String get reader_gallery_filter_all => 'All';
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  String get reader_gallery_position_current => 'Current reading position';
+  String get reader_gallery_locked_title => 'Not reached yet';
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -17145,6 +17164,39 @@ class _StringsAr extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -28139,6 +28191,39 @@ class _StringsDe extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -39183,6 +39268,39 @@ class _StringsEs extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -50260,6 +50378,39 @@ class _StringsFr extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -61137,6 +61288,39 @@ class _StringsId extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -72110,6 +72294,39 @@ class _StringsIt extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -82451,6 +82668,39 @@ class _StringsJa extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -92803,6 +93053,39 @@ class _StringsKo extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -103730,6 +104013,39 @@ class _StringsNl extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -114710,6 +115026,39 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -125668,6 +126017,39 @@ class _StringsRu extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -136423,6 +136805,39 @@ class _StringsTh extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -147296,6 +147711,39 @@ class _StringsTr extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -158138,6 +158586,39 @@ class _StringsVi extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 // Path: <root>
@@ -168090,6 +168571,38 @@ class _StringsZhCn extends _StringsEn {
       '片段已保存，但系统分享面板没有打开：${path}';
   @override
   String get audiobook_export_clip_share_unavailable => '片段已保存，但系统分享面板没有打开';
+  @override
+  String get reader_gallery_relock => '恢复遮罩';
+  @override
+  String get reader_gallery_locked_reveal => '仍要查看';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      '读到${chapter}后自动解锁';
+  @override
+  String get reader_gallery_locked_blur_hint => '已开启图片模糊，揭开后可见';
+  @override
+  String get reader_gallery_title => '插图册';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => '已解锁 ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => '已解锁';
+  @override
+  String get reader_gallery_filter_all => '全部';
+  @override
+  String get reader_gallery_position_jump => '跳到当前阅读位置';
+  @override
+  String get reader_volume_peek_failed => '读取本卷失败';
+  @override
+  String get reader_gallery_unlocked_empty => '还没有已解锁的插图';
+  @override
+  String get reader_gallery_position_current => '当前阅读位置';
+  @override
+  String get reader_gallery_locked_title => '这张插图尚未读到';
+  @override
+  String get reader_gallery_locked_back => '回到最近已看';
 }
 
 // Path: <root>
@@ -178116,6 +178629,39 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get audiobook_export_clip_share_unavailable =>
       'Clip saved, but the share sheet didn\'t open';
+  @override
+  String get reader_gallery_relock => 'Re-hide this illustration';
+  @override
+  String get reader_gallery_locked_reveal => 'View anyway';
+  @override
+  String reader_gallery_locked_unlock_hint({required Object chapter}) =>
+      'Unlocks automatically once you reach ${chapter}';
+  @override
+  String get reader_gallery_locked_blur_hint =>
+      'Image blur is on; reveal to view';
+  @override
+  String get reader_gallery_title => 'Illustrations';
+  @override
+  String reader_gallery_unlocked_count({
+    required Object unlocked,
+    required Object total,
+  }) => 'Unlocked ${unlocked} / ${total}';
+  @override
+  String get reader_gallery_filter_unlocked => 'Unlocked';
+  @override
+  String get reader_gallery_filter_all => 'All';
+  @override
+  String get reader_gallery_position_jump => 'Jump to current reading position';
+  @override
+  String get reader_volume_peek_failed => 'Could not read this volume';
+  @override
+  String get reader_gallery_unlocked_empty => 'No unlocked illustrations yet';
+  @override
+  String get reader_gallery_position_current => 'Current reading position';
+  @override
+  String get reader_gallery_locked_title => 'Not reached yet';
+  @override
+  String get reader_gallery_locked_back => 'Back to last seen';
 }
 
 /// Flat map(s) containing all translations.
@@ -187479,6 +188025,36 @@ extension on _StringsEn {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -196837,6 +197413,36 @@ extension on _StringsAr {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -206244,6 +206850,36 @@ extension on _StringsDe {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -215641,6 +216277,36 @@ extension on _StringsEs {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -225046,6 +225712,36 @@ extension on _StringsFr {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -234421,6 +235117,36 @@ extension on _StringsId {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -243819,6 +244545,36 @@ extension on _StringsIt {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -253141,6 +253897,36 @@ extension on _StringsJa {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -262468,6 +263254,36 @@ extension on _StringsKo {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -271861,6 +272677,36 @@ extension on _StringsNl {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -281249,6 +282095,36 @@ extension on _StringsPtBr {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -290643,6 +291519,36 @@ extension on _StringsRu {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -300006,6 +300912,36 @@ extension on _StringsTh {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -309385,6 +310321,36 @@ extension on _StringsTr {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -318758,6 +319724,36 @@ extension on _StringsVi {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }
@@ -328046,6 +329042,35 @@ extension on _StringsZhCn {
         return ({required Object path}) => '片段已保存，但系统分享面板没有打开：${path}';
       case 'audiobook_export_clip_share_unavailable':
         return '片段已保存，但系统分享面板没有打开';
+      case 'reader_gallery_relock':
+        return '恢复遮罩';
+      case 'reader_gallery_locked_reveal':
+        return '仍要查看';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) => '读到${chapter}后自动解锁';
+      case 'reader_gallery_locked_blur_hint':
+        return '已开启图片模糊，揭开后可见';
+      case 'reader_gallery_title':
+        return '插图册';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            '已解锁 ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return '已解锁';
+      case 'reader_gallery_filter_all':
+        return '全部';
+      case 'reader_gallery_position_jump':
+        return '跳到当前阅读位置';
+      case 'reader_volume_peek_failed':
+        return '读取本卷失败';
+      case 'reader_gallery_unlocked_empty':
+        return '还没有已解锁的插图';
+      case 'reader_gallery_position_current':
+        return '当前阅读位置';
+      case 'reader_gallery_locked_title':
+        return '这张插图尚未读到';
+      case 'reader_gallery_locked_back':
+        return '回到最近已看';
       default:
         return null;
     }
@@ -337346,6 +338371,36 @@ extension on _StringsZhHk {
             'Clip saved, but the share sheet didn\'t open: ${path}';
       case 'audiobook_export_clip_share_unavailable':
         return 'Clip saved, but the share sheet didn\'t open';
+      case 'reader_gallery_relock':
+        return 'Re-hide this illustration';
+      case 'reader_gallery_locked_reveal':
+        return 'View anyway';
+      case 'reader_gallery_locked_unlock_hint':
+        return ({required Object chapter}) =>
+            'Unlocks automatically once you reach ${chapter}';
+      case 'reader_gallery_locked_blur_hint':
+        return 'Image blur is on; reveal to view';
+      case 'reader_gallery_title':
+        return 'Illustrations';
+      case 'reader_gallery_unlocked_count':
+        return ({required Object unlocked, required Object total}) =>
+            'Unlocked ${unlocked} / ${total}';
+      case 'reader_gallery_filter_unlocked':
+        return 'Unlocked';
+      case 'reader_gallery_filter_all':
+        return 'All';
+      case 'reader_gallery_position_jump':
+        return 'Jump to current reading position';
+      case 'reader_volume_peek_failed':
+        return 'Could not read this volume';
+      case 'reader_gallery_unlocked_empty':
+        return 'No unlocked illustrations yet';
+      case 'reader_gallery_position_current':
+        return 'Current reading position';
+      case 'reader_gallery_locked_title':
+        return 'Not reached yet';
+      case 'reader_gallery_locked_back':
+        return 'Back to last seen';
       default:
         return null;
     }

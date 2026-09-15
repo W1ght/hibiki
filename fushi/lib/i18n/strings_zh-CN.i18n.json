@@ -4546,5 +4546,19 @@
   "reader_stats_clock_pause": "暂停计时",
   "reader_stats_clock_resume": "继续计时",
   "video_clip_export_share_unavailable": "片段已保存，但系统分享面板没有打开：${path}",
-  "audiobook_export_clip_share_unavailable": "片段已保存，但系统分享面板没有打开"
+  "audiobook_export_clip_share_unavailable": "片段已保存，但系统分享面板没有打开",
+  "reader_gallery_relock": "恢复遮罩",
+  "reader_gallery_locked_reveal": "仍要查看",
+  "reader_gallery_locked_unlock_hint": "读到$chapter后自动解锁",
+  "reader_gallery_locked_blur_hint": "已开启图片模糊，揭开后可见",
+  "reader_gallery_title": "插图册",
+  "reader_gallery_unlocked_count": "已解锁 $unlocked / $total",
+  "reader_gallery_filter_unlocked": "已解锁",
+  "reader_gallery_filter_all": "全部",
+  "reader_gallery_position_jump": "跳到当前阅读位置",
+  "reader_volume_peek_failed": "读取本卷失败",
+  "reader_gallery_unlocked_empty": "还没有已解锁的插图",
+  "reader_gallery_position_current": "当前阅读位置",
+  "reader_gallery_locked_title": "这张插图尚未读到",
+  "reader_gallery_locked_back": "回到最近已看"
 }

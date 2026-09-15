@@ -6,7 +6,6 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/anki/anki_view_model.dart';
 import 'package:fushi/src/anki/ankimobile_mined_ledger.dart';
 import 'package:fushi/src/anki/ankimobile_repository.dart';
-import 'package:fushi/src/anki/auto_reposition_anki_repository.dart';
 import 'package:fushi/src/anki/remote_mining_anki_repository.dart';
 import 'package:fushi/src/pages/implementations/home_page.dart' show HomePage;
 import 'package:fushi_anki/fushi_anki.dart';
@@ -76,7 +75,6 @@ void main() {
             reason:
                 'iOS 默认后端必须解析到 AnkiMobileRepository，实际拿到 '
                 '${repo.runtimeType}'
-                '${repo is AutoRepositionAnkiRepository ? " → ${repo.inner.runtimeType}" : ""}'
                 '${repo is RemoteMiningAnkiRepository ? " → ${repo.local.runtimeType}" : ""}',
           );
 
