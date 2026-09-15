@@ -4665,5 +4665,6 @@
   "game_text_process_ai_failed": "Generation failed: ${reason}",
   "ai_provider_base_url_invalid": "Enter a valid HTTP or HTTPS endpoint",
   "ai_provider_protocol_locked": "Fixed by the built-in preset",
-  "stat_center_profile_scope": "Showing statistics for profile \"$name\" only"
+  "stat_center_profile_scope": "Showing statistics for profile \"$name\" only",
+  "module_toggle_hint": "Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps"
 }

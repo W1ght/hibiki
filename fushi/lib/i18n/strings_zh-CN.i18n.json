@@ -4665,5 +4665,6 @@
   "game_text_process_ai_failed": "生成失败：${reason}",
   "ai_provider_base_url_invalid": "请填写有效的 HTTP 或 HTTPS 接口地址",
   "ai_provider_protocol_locked": "由内置预设固定，不可更改",
-  "stat_center_profile_scope": "仅显示 Profile「$name」的统计"
+  "stat_center_profile_scope": "仅显示 Profile「$name」的统计",
+  "module_toggle_hint": "关掉后该模块的全部入口都关闭——导航、首页、设置与跨页跳转"
 }

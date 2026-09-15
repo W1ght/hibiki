@@ -1064,9 +1064,13 @@ extension _ReaderChrome on _ReaderFushiPageState {
                 final String? bookUid = _bookUid;
                 if (bookUid != null) {
                   unawaited(
-                      appModel.database.unmarkImageRevealed(bookUid, key));
+                    appModel.database.unmarkImageRevealed(bookUid, key),
+                  );
                 }
-                unawaited(_controller?.evaluateJavascript(source: '''
+                unawaited(
+                  _controller?.evaluateJavascript(
+                    source:
+                        '''
                   (function() {
                     var key = ${jsonEncode(key)};
                     if (window.__fushiUnmarkImageRevealed) {
@@ -1077,7 +1081,9 @@ extension _ReaderChrome on _ReaderFushiPageState {
                       if (window.__fushiImageRevealKey(el) === key) el.classList.add('blurred');
                     });
                   })();
-                '''));
+                ''',
+                  ),
+                );
               },
               fileForRef: (EpubImageRef ref) =>
                   _readerImageFileForUrl(ReaderFushiSource.epubUrl(ref.src)),
@@ -2405,6 +2411,15 @@ extension _ReaderChrome on _ReaderFushiPageState {
                 semanticsId: 'hibiki.reader.bottom.fullscreen',
                 onPressed: () => unawaited(_changeReaderWindowFullscreen()),
               ),
+            ReaderHeaderAction(
+              key: const ValueKey<String>('fushi_reader_fullscreen_button'),
+              icon: _isWindowFullscreen
+                  ? Icons.fullscreen_exit_rounded
+                  : Icons.fullscreen_rounded,
+              label: t.shortcut_action_global_toggle_fullscreen,
+              semanticsId: 'hibiki.reader.bottom.fullscreen',
+              onPressed: () => unawaited(_changeReaderWindowFullscreen()),
+            ),
             ReaderHeaderAction(
               key: const ValueKey<String>('fushi_reader_settings_button'),
               icon: Icons.tune_outlined,

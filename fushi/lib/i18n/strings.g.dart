@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79339 (4667 per locale)
+/// Strings: 79356 (4668 per locale)
 ///
-/// Built on 2026-09-15 at 06:10 UTC
+/// Built on 2026-09-15 at 06:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6563,6 +6563,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -17616,6 +17618,9 @@ class _StringsAr extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -28905,6 +28910,9 @@ class _StringsDe extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -40244,6 +40252,9 @@ class _StringsEs extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -51616,6 +51627,9 @@ class _StringsFr extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -62788,6 +62802,9 @@ class _StringsId extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -74056,6 +74073,9 @@ class _StringsIt extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -84692,6 +84712,9 @@ class _StringsJa extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -95339,6 +95362,9 @@ class _StringsKo extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -106561,6 +106587,9 @@ class _StringsNl extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -117836,6 +117865,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -129089,6 +129121,9 @@ class _StringsRu extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -140139,6 +140174,9 @@ class _StringsTh extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -151307,6 +151345,9 @@ class _StringsTr extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -162444,6 +162485,9 @@ class _StringsVi extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 // Path: <root>
@@ -172655,6 +172699,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       '仅显示 Profile「${name}」的统计';
+  @override
+  String get module_toggle_hint => '关掉后该模块的全部入口都关闭——导航、首页、设置与跨页跳转';
 }
 
 // Path: <root>
@@ -182976,6 +183022,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String stat_center_profile_scope({required Object name}) =>
       'Showing statistics for profile "${name}" only';
+  @override
+  String get module_toggle_hint =>
+      'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
 }
 
 /// Flat map(s) containing all translations.
@@ -192581,6 +192630,8 @@ extension on _StringsEn {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -202181,6 +202232,8 @@ extension on _StringsAr {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -211830,6 +211883,8 @@ extension on _StringsDe {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -221469,6 +221524,8 @@ extension on _StringsEs {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -231116,6 +231173,8 @@ extension on _StringsFr {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -240733,6 +240792,8 @@ extension on _StringsId {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -250373,6 +250434,8 @@ extension on _StringsIt {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -259937,6 +260000,8 @@ extension on _StringsJa {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -269506,6 +269571,8 @@ extension on _StringsKo {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -279141,6 +279208,8 @@ extension on _StringsNl {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -288771,6 +288840,8 @@ extension on _StringsPtBr {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -298407,6 +298478,8 @@ extension on _StringsRu {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -308012,6 +308085,8 @@ extension on _StringsTh {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -317633,6 +317708,8 @@ extension on _StringsTr {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -327248,6 +327325,8 @@ extension on _StringsVi {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
@@ -336775,6 +336854,8 @@ extension on _StringsZhCn {
         return '由内置预设固定，不可更改';
       case 'stat_center_profile_scope':
         return ({required Object name}) => '仅显示 Profile「${name}」的统计';
+      case 'module_toggle_hint':
+        return '关掉后该模块的全部入口都关闭——导航、首页、设置与跨页跳转';
       default:
         return null;
     }
@@ -346317,6 +346398,8 @@ extension on _StringsZhHk {
       case 'stat_center_profile_scope':
         return ({required Object name}) =>
             'Showing statistics for profile "${name}" only';
+      case 'module_toggle_hint':
+        return 'Turn off to close every entry point for this module - navigation, home, settings and cross-page jumps';
       default:
         return null;
     }
