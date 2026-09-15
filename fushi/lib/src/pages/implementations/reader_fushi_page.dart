@@ -78,6 +78,7 @@ import 'package:fushi/src/reader/reader_search_navigation.dart';
 import 'package:fushi/src/reader/reader_selection_data.dart';
 import 'package:fushi/src/reader/reader_selection_scripts.dart';
 import 'package:fushi/src/reader/reader_chrome_floating.dart';
+import 'package:fushi/src/reader/reader_control_layout.dart';
 import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi/src/reader/reader_chrome_controller.dart';
 import 'package:fushi/src/reader/reader_desktop_chrome.dart';
@@ -2055,7 +2056,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   double get _bottomChromeReserve => bottomChromeReserve(
     barOccupiesLayout: _hasEverLoaded && _showChrome,
     floating: _bottomBarFloating,
-    chromeHeight: _desktopChromeEnabled && _audiobookController == null
+    // 无有声书播放条且底栏槽位没有按钮时底栏不存在 → 0（默认布局如此）。
+    // _desktopChromeEnabled 恒 true（ッツ 形态五端统一），原式里的这一项是恒真的
+    // 冗余项，槽位化后按上游口径去掉。
+    chromeHeight: _audiobookController == null && !_bottomSlotsHaveButtons
         ? 0
         : _readerChromeHeight,
   );

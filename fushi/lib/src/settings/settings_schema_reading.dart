@@ -3,6 +3,8 @@ import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:fushi/src/media/audiobook/audiobook_floating_ball.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
+import 'package:fushi/src/reader/reader_control_layout.dart';
+import 'package:fushi/src/reader/reader_control_layout_editor.dart';
 import 'package:fushi/src/settings/settings_actions.dart';
 import 'package:fushi/src/settings/settings_context.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
@@ -36,10 +38,7 @@ SettingsDestination buildReadingDestination() {
             controlBelow: true,
             // TODO-725：翻页/滚动从「外观」迁到「布局与显示」组（用户最直指的
             // 「滚动/翻页应放进布局与显示」）。仅改展示分类/排序，onChanged 不变。
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 0,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 0),
             options: <SettingsSegmentOption<String>>[
               SettingsSegmentOption<String>(
                 value: 'paginated',
@@ -70,10 +69,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_writing_direction,
             icon: Icons.text_rotate_vertical,
             controlBelow: true,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 5,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 5),
             options: <SettingsSegmentOption<String>>[
               SettingsSegmentOption<String>(
                 value: 'horizontal-tb',
@@ -97,10 +93,7 @@ SettingsDestination buildReadingDestination() {
             title: t.spread_mode,
             icon: Icons.menu_book_outlined,
             controlBelow: true,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 6,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 6),
             options: <SettingsSegmentOption<String>>[
               SettingsSegmentOption<String>(
                 value: 'off',
@@ -131,10 +124,7 @@ SettingsDestination buildReadingDestination() {
             controlBelow: true,
             visible: (SettingsContext c) =>
                 c.readerSource.readerSpreadMode != 'off',
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 7,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 7),
             // label 用本地化全称（从右到左/从左到右），不再用只有排版从业者
             // 认识的 RTL/LTR 缩写；分段条过宽时 _SegmentedStripHost 自带横向
             // 滚动兜底。
@@ -163,10 +153,7 @@ SettingsDestination buildReadingDestination() {
             icon: Icons.text_rotation_none,
             controlBelow: true,
             visible: isVertical,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 14,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 14),
             options: <SettingsSegmentOption<String>>[
               SettingsSegmentOption<String>(
                 value: 'mixed',
@@ -191,10 +178,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_furigana_mode,
             icon: Icons.translate_outlined,
             controlBelow: true,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 13,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 13),
             // 四态：Off / Toggle / Hidden（对齐 Hoshi Reader iOS）+ Dimmed
             // （2026-09-12 用户追加的「显示但淡」）。
             options: <SettingsSegmentOption<String>>[
@@ -242,10 +226,7 @@ SettingsDestination buildReadingDestination() {
             // 抬到 128 给低视力/大屏用户留足空间（128px 已是任何屏上的超大字）。
             max: 128,
             step: 1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 1,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 1),
             value: (SettingsContext c) => c.readerSource.readerFontSize,
             format: (double v) => '${v.round()}',
             onChanged: (SettingsContext c, double v) {
@@ -263,10 +244,7 @@ SettingsDestination buildReadingDestination() {
             min: 100,
             max: 900,
             step: 100,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 2,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 2),
             value: (SettingsContext c) => c.readerSource.readerFontWeight,
             format: (double v) => '${v.round()}',
             onChanged: (SettingsContext c, double v) {
@@ -281,15 +259,13 @@ SettingsDestination buildReadingDestination() {
             min: 1,
             max: 3,
             step: 0.1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 3,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 3),
             value: (SettingsContext c) => c.readerSource.readerLineHeight,
             format: (double v) => v.toStringAsFixed(2),
             onChanged: (SettingsContext c, double v) {
-              c.readerSource
-                  .setReaderLineHeight((v * 100).roundToDouble() / 100);
+              c.readerSource.setReaderLineHeight(
+                (v * 100).roundToDouble() / 100,
+              );
               notifyReaderSettingsChanged(c);
             },
           ),
@@ -300,10 +276,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 10,
             step: 1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 4,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 4),
             value: (SettingsContext c) => c.readerSource.readerTextIndentation,
             format: (double v) => '${v.round()}',
             onChanged: (SettingsContext c, double v) {
@@ -320,15 +293,13 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 3,
             step: 0.1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 19,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 19),
             value: (SettingsContext c) => c.readerSource.readerParagraphSpacing,
             format: (double v) => '${v.toStringAsFixed(1)}em',
             onChanged: (SettingsContext c, double v) {
-              c.readerSource
-                  .setReaderParagraphSpacing((v * 10).roundToDouble() / 10);
+              c.readerSource.setReaderParagraphSpacing(
+                (v * 10).roundToDouble() / 10,
+              );
               notifyReaderSettingsChanged(c);
             },
           ),
@@ -342,10 +313,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 4,
             step: 1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 8,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 8),
             value: (SettingsContext c) =>
                 c.readerSource.readerPageColumns.toDouble(),
             format: (double v) =>
@@ -365,10 +333,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 50,
             step: 1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 9,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 9),
             value: (SettingsContext c) => c.readerSource.readerMarginTop,
             format: (double v) => '${v.round()}%',
             onChanged: (SettingsContext c, double v) {
@@ -383,10 +348,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 50,
             step: 1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 10,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 10),
             value: (SettingsContext c) => c.readerSource.readerMarginBottom,
             format: (double v) => '${v.round()}%',
             onChanged: (SettingsContext c, double v) {
@@ -401,10 +363,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 50,
             step: 1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 11,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 11),
             value: (SettingsContext c) => c.readerSource.readerMarginLeft,
             format: (double v) => '${v.round()}%',
             onChanged: (SettingsContext c, double v) {
@@ -419,10 +378,7 @@ SettingsDestination buildReadingDestination() {
             min: 0,
             max: 50,
             step: 1,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 12,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 12),
             value: (SettingsContext c) => c.readerSource.readerMarginRight,
             format: (double v) => '${v.round()}%',
             onChanged: (SettingsContext c, double v) {
@@ -499,8 +455,9 @@ SettingsDestination buildReadingDestination() {
                 settingsContext.readerSource.autoHideChromeMillis / 1000.0,
             label: (double value) => '${value.round()}s',
             onChanged: (SettingsContext settingsContext, double value) {
-              settingsContext.readerSource
-                  .setAutoHideChromeMillis((value * 1000).round());
+              settingsContext.readerSource.setAutoHideChromeMillis(
+                (value * 1000).round(),
+              );
               notifyReaderChromeChanged(settingsContext);
             },
           ),
@@ -571,6 +528,35 @@ SettingsDestination buildReadingDestination() {
               },
             ),
           ),
+          // 阅读器顶栏 / 底栏按钮拖拽编辑器（与视频页 video.player.controls_editor
+          // 同一套泛型编辑器，用户 2026-09-13 要求「和视频一样支持可视化调整」）。
+          // 写 appModel.setReaderControlLayout → prefsRepo 通知 → 阅读器页重建，
+          // 开着的书立即换布局，不需要重锚（按钮增删不改预留高）。
+          // order 16/17：14/15 已被悬浮球两项占用，取其后的空号保持分节末尾相邻。
+          SettingsCustomItem(
+            id: 'reading_controls.controls_editor',
+            searchTitle: t.reader_control_editor_title,
+            reader: const ReaderPlacement(
+              group: ReaderGroup.behavior,
+              order: 16,
+            ),
+            builder: buildReaderControlLayoutEditor,
+          ),
+          SettingsActionItem(
+            id: 'reading_controls.reset_control_layout',
+            title: t.reader_control_reset_layout,
+            icon: Icons.restart_alt_outlined,
+            reader: const ReaderPlacement(
+              group: ReaderGroup.behavior,
+              order: 17,
+            ),
+            onTap: (SettingsContext c) async {
+              await c.appModel.setReaderControlLayout(
+                ReaderControlLayout.defaults,
+              );
+              c.refresh();
+            },
+          ),
         ],
       ),
       SettingsSection(
@@ -627,8 +613,9 @@ SettingsDestination buildReadingDestination() {
                 settingsContext.readerSource.wheelPageTurnInterval.toDouble(),
             label: (double value) => value.round().toString(),
             onChanged: (SettingsContext settingsContext, double value) async {
-              await settingsContext.readerSource
-                  .setWheelPageTurnInterval(value.round());
+              await settingsContext.readerSource.setWheelPageTurnInterval(
+                value.round(),
+              );
               notifyReaderSettingsChanged(settingsContext);
             },
           ),
@@ -647,8 +634,9 @@ SettingsDestination buildReadingDestination() {
                 settingsContext.readerSource.swipePageTurnSensitivity,
             label: (double value) => value.toStringAsFixed(1),
             onChanged: (SettingsContext settingsContext, double value) async {
-              await settingsContext.readerSource
-                  .setSwipePageTurnSensitivity(value);
+              await settingsContext.readerSource.setSwipePageTurnSensitivity(
+                value,
+              );
               notifyReaderSettingsChanged(settingsContext);
             },
           ),
@@ -739,10 +727,7 @@ SettingsDestination buildReadingDestination() {
             id: 'reading_display.text_justify',
             title: t.reader_text_justify,
             icon: Icons.format_align_justify,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 15,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 15),
             value: (SettingsContext c) =>
                 c.readerSource.readerEnableTextJustification,
             onChanged: (SettingsContext c, bool value) {
@@ -755,10 +740,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_vert_kerning,
             icon: Icons.space_bar,
             visible: isVertical,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 16,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 16),
             value: (SettingsContext c) =>
                 c.readerSource.readerEnableVerticalFontKerning,
             onChanged: (SettingsContext c, bool value) {
@@ -771,10 +753,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_font_vpal,
             icon: Icons.format_shapes,
             visible: isVertical,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 17,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 17),
             value: (SettingsContext c) => c.readerSource.readerEnableFontVPAL,
             onChanged: (SettingsContext c, bool value) {
               c.readerSource.setReaderEnableFontVPAL(value);
@@ -785,10 +764,7 @@ SettingsDestination buildReadingDestination() {
             id: 'reading_display.prioritize_reader_styles',
             title: t.reader_reader_styles,
             icon: Icons.style_outlined,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 18,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 18),
             value: (SettingsContext c) =>
                 c.readerSource.readerPrioritizeReaderStyles,
             onChanged: (SettingsContext c, bool value) {
@@ -802,10 +778,7 @@ SettingsDestination buildReadingDestination() {
             id: 'reading_display.blur_images',
             title: t.reader_blur_images,
             icon: Icons.blur_on_outlined,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 20,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 20),
             value: (SettingsContext c) => c.readerSource.readerBlurImages,
             onChanged: (SettingsContext c, bool value) {
               c.readerSource.setReaderBlurImages(value);
@@ -822,10 +795,7 @@ SettingsDestination buildReadingDestination() {
             title: t.reader_merge_image_pages,
             subtitle: t.reader_merge_image_pages_subtitle,
             icon: Icons.collections_bookmark_outlined,
-            reader: const ReaderPlacement(
-              group: ReaderGroup.layout,
-              order: 21,
-            ),
+            reader: const ReaderPlacement(group: ReaderGroup.layout, order: 21),
             value: (SettingsContext c) => c.readerSource.readerMergeImagePages,
             onChanged: (SettingsContext c, bool value) {
               c.readerSource.setReaderMergeImagePages(value);
@@ -874,6 +844,31 @@ SettingsDestination buildReadingDestination() {
             },
           ),
         ],
+      ),
+    ],
+  );
+}
+
+/// 阅读器按钮布局编辑器（设置页 / 书内设置抽屉共用）：读 appModel 当前布局，改动
+/// 立刻写穿偏好；桌面按鼠标手感、其余按触屏。
+Widget buildReaderControlLayoutEditor(SettingsContext context) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.stretch,
+    children: <Widget>[
+      Padding(
+        padding: const EdgeInsets.only(bottom: 8),
+        child: Text(
+          t.reader_control_editor_hint,
+          style: Theme.of(context.context).textTheme.bodySmall,
+        ),
+      ),
+      ReaderControlLayoutEditor(
+        layout: context.appModel.readerControlLayout,
+        onLayoutChanged: (ReaderControlLayout layout) async {
+          await context.appModel.setReaderControlLayout(layout);
+          context.refresh();
+        },
+        isTouchControls: !isDesktopPlatform,
       ),
     ],
   );

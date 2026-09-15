@@ -7,53 +7,48 @@ import 'package:fushi/src/reader/reader_desktop_chrome.dart';
 import '../helpers/source_guard.dart';
 
 void main() {
-  test(
-    'compact playback leaves footer and system inset outside its surface',
-    () {
-      final String chrome = File(
-        'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
-      ).readAsStringSync();
-      final String page = File(
-        'lib/src/pages/implementations/reader_fushi_page.dart',
-      ).readAsStringSync();
-      // 读数行画在别处时底栏坐在它**画出来**的带上（悬浮态收起时 0，唤出时 28）。
-      expect(
-        chrome,
-        contains(
-          'bottom: _separatePlaybackStatus && !_statusFooterInBottomBar',
-        ),
-      );
-      expect(chrome, contains('? _statusFooterBand'));
-      expect(
-        chrome,
-        contains('height: _separatePlaybackStatus ? 0 : _stableBottomInset'),
-      );
-      // 读数并进底栏那块遮罩时：它是底栏 Column 的最后一行（居中），底栏整体贴屏底，
-      // 屏底那一层不再另画（否则同一串读数上下两份 / 两块半透明遮罩接缝）。
-      expect(chrome, contains('if (_statusFooterInBottomBar)'));
-      expect(chrome, contains('_buildStatusFooterRow(centered: true)'));
-      expect(
-        chrome,
-        contains('!_statusFooterShouldPaint || _statusFooterInBottomBar'),
-      );
-      expect(
-        page,
-        contains(
-          'bool get _statusFooterInBottomBar =>\n'
-          '      _separatePlaybackStatus &&\n'
-          '      _statusFooterShouldPaint &&\n'
-          '      _bottomBarShouldPaint &&',
-        ),
-      );
-      // 本地底栏只在「有声书播放条在场」时占位（设置栏职能已搬进顶部工具栏）。
-      expect(
-        page,
-        contains(
-          'chromeHeight: _desktopChromeEnabled && _audiobookController == null',
-        ),
-      );
-    },
-  );
+  test('compact playback leaves footer and system inset outside its surface', () {
+    final String chrome = File(
+      'lib/src/pages/implementations/reader_fushi/chrome.part.dart',
+    ).readAsStringSync();
+    final String page = File(
+      'lib/src/pages/implementations/reader_fushi_page.dart',
+    ).readAsStringSync();
+    // 读数行画在别处时底栏坐在它**画出来**的带上（悬浮态收起时 0，唤出时 28）。
+    expect(
+      chrome,
+      contains('bottom: _separatePlaybackStatus && !_statusFooterInBottomBar'),
+    );
+    expect(chrome, contains('? _statusFooterBand'));
+    expect(
+      chrome,
+      contains('height: _separatePlaybackStatus ? 0 : _stableBottomInset'),
+    );
+    // 读数并进底栏那块遮罩时：它是底栏 Column 的最后一行（居中），底栏整体贴屏底，
+    // 屏底那一层不再另画（否则同一串读数上下两份 / 两块半透明遮罩接缝）。
+    expect(chrome, contains('if (_statusFooterInBottomBar)'));
+    expect(chrome, contains('_buildStatusFooterRow(centered: true)'));
+    expect(
+      chrome,
+      contains('!_statusFooterShouldPaint || _statusFooterInBottomBar'),
+    );
+    expect(
+      page,
+      contains(
+        'bool get _statusFooterInBottomBar =>\n'
+        '      _separatePlaybackStatus &&\n'
+        '      _statusFooterShouldPaint &&\n'
+        '      _bottomBarShouldPaint &&',
+      ),
+    );
+    // 本地底栏只在「有声书播放条在场」时占位（设置栏职能已搬进顶部工具栏）。
+    expect(
+      page,
+      contains(
+        'chromeHeight: _audiobookController == null && !_bottomSlotsHaveButtons',
+      ),
+    );
+  });
 
   group('readerHeaderCompactForActions', () {
     test('顶部有空间就不折叠：横屏手机 ~700 逻辑 px 放得下六颗按钮加书名', () {
@@ -393,10 +388,14 @@ void main() {
       isTrue,
       reason: '挤压态工具栏预留高必须并入 _readerTopOffset',
     );
-    // 桌面端不再画底部设置栏（有声书播放条保留）。
-    final int gate = chrome.indexOf('if (_desktopChromeEnabled) {');
-    final int bar = chrome.indexOf('return _buildSettingsBar();');
+    // 底栏（无播放条时）只在布局的底栏槽位有按钮时才画；默认布局底栏为空，
+    // 全部职能在顶部工具栏。桌面端「不画底部设置栏」这条老不变式由它承接。
+    final int gate = chrome.indexOf('if (!_bottomSlotsHaveButtons) {');
     expect(gate, greaterThan(-1));
-    expect(gate, lessThan(bar));
+    expect(
+      chrome.indexOf('return _buildAudiobookBar();'),
+      lessThan(gate),
+      reason: '有播放条时走播放条分支，槽位判据只管无播放条的底栏',
+    );
   });
 }
