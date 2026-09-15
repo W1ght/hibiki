@@ -362,3 +362,64 @@ test('document.defaultView points back at the block window, not the real one', a
   assert.strictEqual(root.getAttribute('defaultViewScoped'), 'true',
     'document.defaultView leaked the real window');
 });
+
+// BUG-2546 (follow-up): `with (window)` routes EVERY bare identifier in a
+// dictionary script through the proxy's get trap. Blanket-binding every
+// function there strips `prototype` and the static members off constructors,
+// so `Object.keys(…)` / `Promise.resolve(…)` become undefined and jQuery dies
+// on its first line. Only non-constructible host methods (setTimeout,
+// getComputedStyle, …) may be bound back to the real window.
+const HOST_GLOBALS_SCRIPT = [
+  "var out = [];",
+  "out.push(typeof window.Object.keys === 'function');",
+  "out.push(typeof window.Promise.resolve === 'function');",
+  "out.push(typeof Object.keys === 'function');",       // bare identifier, via with(window)
+  "out.push(new window.Date(0).getTime() === 0);",
+  "out.push(window.setTimeout === window.setTimeout);", // bound identity must be stable
+  "window.setTimeout(function () {}, 0);",              // must not throw Illegal invocation
+  "document.body.setAttribute('globals', out.join(','));",
+].join('\n');
+
+test('host constructors keep their statics and prototypes through the block window', async () => {
+  const ctx = makeContext();
+  // The hand-rolled stub window has none of these; a real popup window does.
+  ctx.window.Object = Object;
+  ctx.window.Promise = Promise;
+  ctx.window.Date = Date;
+  ctx.window.setTimeout = setTimeout;
+
+  const root = dictRoot('OALD', [{ code: HOST_GLOBALS_SCRIPT }]);
+  await ctx.runDictScripts(root, 'OALD');
+
+  assert.strictEqual(root.getAttribute('globals'), 'true,true,true,true,true',
+    'a host global lost its statics/prototype (or its bound identity) through the proxy');
+});
+
+// The proxy's private table IS the proxy target, so the traps it does not
+// implement (defineProperty / getOwnPropertyDescriptor / ownKeys) land on the
+// same object that get/set read — otherwise a script could `defineProperty` a
+// value onto `window` and read back undefined. Listener accessors are named
+// functions so a script can hold on to a reference and compare it.
+const WINDOW_SHAPE_SCRIPT = [
+  "var out = [];",
+  "Object.defineProperty(window, 'dictDefined', { value: 42, configurable: true });",
+  "out.push(window.dictDefined === 42);",
+  "window.dictAssigned = 7;",
+  "out.push(Object.keys(window).indexOf('dictAssigned') >= 0);",
+  "out.push(window.removeEventListener === window.removeEventListener);",
+  "out.push(window.addEventListener === window.addEventListener);",
+  "document.body.setAttribute('shape', out.join(','));",
+].join('\n');
+
+test('the block window behaves like one object across every trap', async () => {
+  const ctx = makeContext();
+  ctx.window.Object = Object;
+
+  const root = dictRoot('OALD', [{ code: WINDOW_SHAPE_SCRIPT }]);
+  await ctx.runDictScripts(root, 'OALD');
+
+  assert.strictEqual(root.getAttribute('shape'), 'true,true,true,true',
+    'defineProperty/ownKeys and the listener accessors disagree with get/set');
+  assert.strictEqual(ctx.window.dictDefined, undefined,
+    'defineProperty leaked onto the real window');
+});

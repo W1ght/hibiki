@@ -280,6 +280,11 @@ function applyFushiPopupCss(data) {
     window.customDictCSS =
         (data.customDictCSS && typeof data.customDictCSS === 'object')
             ? data.customDictCSS : {};
+    // 词典改名（v95）：popup.js 的 __fushiDictDisplayName 读这张表。缺了不会崩
+    // （回落真名），但改名在扩展里就不生效。
+    window.dictionaryDisplayNames =
+        (data.dictionaryDisplayNames && typeof data.dictionaryDisplayNames === 'object')
+            ? data.dictionaryDisplayNames : {};
 }
 
 /* ---------------------------------------------------------------------------
@@ -310,6 +315,7 @@ const __dictAssetCache = new Map();      // JSON.stringify([dict, path]) -> 源�
 const __dictScriptFnCache = new Map();   // 拼接后的代码串 -> 编译好的 Function
 const __dictScriptsRan = new WeakSet();  // 已经跑过脚本的词典块
 const __scopedWindows = new WeakMap();   // 词典块 root -> 它那份 window 代理
+const __boundHostFns = new WeakMap();    // 宿主方法 -> 绑回真 window 的那一份
 
 function reportDictScriptError(dictName, label, error) {
     try {
@@ -435,9 +441,11 @@ function createScopedDocument(root, dictName) {
    ……）照常可用。旧块随 DOM 一起被丢弃，它挂的监听与标记自然作废，第 N 次查词和第一次
    完全等价。
 
-   target 用空对象而不是真 window：`window` / `top` 这类**不可配置的数据属性**会让「get
-   返回代理自身」撞上 Proxy 不变量检查（TypeError），空对象没有这层约束，回落由 get /
-   has 自己做。 */
+   target 是那张私有表而不是真 window：真 window 上 `window` / `top` 这类**不可配置的数据
+   属性**会让「get 返回代理自身」撞上 Proxy 不变量检查（TypeError）；而拿私有表当 target，
+   没实现的陷阱（`defineProperty` / `getOwnPropertyDescriptor` / `ownKeys`）默认就落在同一
+   张表上，与 get/set 看到的是同一份数据——`Object.defineProperty(window, …)` 写进去之后
+   读得回来。回落真 window 由 get / has 自己做。 */
 function createScopedWindow(root, scopedDocument, dictName) {
     const own = Object.create(null);
 
@@ -465,7 +473,13 @@ function createScopedWindow(root, scopedDocument, dictName) {
         return root.addEventListener(type, handler, options);
     }
 
-    const proxy = new Proxy(Object.create(null), {
+    // 具名而不是每次 get 现造一个箭头函数：脚本存下引用再比对（`window.removeEventListener
+    // === saved`）时身份要稳定。
+    function removeScopedListener(type, handler, options) {
+        return root.removeEventListener(type, handler, options);
+    }
+
+    const proxy = new Proxy(own, {
         get(_target, prop) {
             if (prop === 'document') return scopedDocument;
             // 自指属性全部指回代理，别让脚本经 window.window / self / top 摸回真 window。
@@ -474,12 +488,27 @@ function createScopedWindow(root, scopedDocument, dictName) {
                 return proxy;
             }
             if (prop === 'addEventListener') return addScopedListener;
-            if (prop === 'removeEventListener') {
-                return (type, handler, options) => root.removeEventListener(type, handler, options);
-            }
+            if (prop === 'removeEventListener') return removeScopedListener;
             if (prop in own) return own[prop];
             const value = Reflect.get(window, prop);
-            return typeof value === 'function' ? value.bind(window) : value;
+            if (typeof value !== 'function') return value;
+            // 构造器 / 类（Object、Promise、Date、Node、词典自己的构造函数……）**必须原样
+            // 交出去**：`bind` 出来的函数既没有 `prototype`，也不带 target 的静态成员，
+            // `Object.keys(…)` / `Promise.resolve(…)` / `new Date()` 会当场 TypeError。
+            // 而 `with (window)` 让脚本里**每个裸标识符**都走这条 get——一 bind 就等于把
+            // 整个全局环境换成残废版，jQuery 第一行就炸。
+            //
+            // 真正需要绑回真 window 的只有那些不可 new 的宿主方法（setTimeout /
+            // getComputedStyle / fetch / atob……）：它们以代理为 this 调用会 Illegal
+            // invocation。这类内置方法一律没有 `prototype`，正好拿它当判据。
+            // bind 结果按原函数缓存，`window.setTimeout === window.setTimeout` 仍成立。
+            if (value.prototype !== undefined) return value;
+            let bound = __boundHostFns.get(value);
+            if (bound === undefined) {
+                bound = value.bind(window);
+                __boundHostFns.set(value, bound);
+            }
+            return bound;
         },
         set(_target, prop, value) {
             own[prop] = value;
