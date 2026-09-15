@@ -4542,5 +4542,7 @@
   "settings_lookup_ime_language_title": "Lookup input language",
   "settings_lookup_ime_language_description": "Which language the keyboard switches to when you type in a lookup box. The input method must already be installed on the system. Does not affect search results.",
   "settings_lookup_ime_language_unset": "Not set",
-  "settings_lookup_ime_language_unavailable": "That input method is not installed on this system yet."
+  "settings_lookup_ime_language_unavailable": "That input method is not installed on this system yet.",
+  "reader_stats_clock_pause": "Pause timer",
+  "reader_stats_clock_resume": "Resume timer"
 }

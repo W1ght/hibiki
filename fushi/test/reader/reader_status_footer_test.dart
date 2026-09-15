@@ -196,7 +196,7 @@ void main() {
       );
       expect(find.text('0 / h  0:00'), findsOneWidget);
       expect(find.text('64988 / 123962  52.43%'), findsOneWidget);
-      expect(find.byIcon(Icons.timer_outlined), findsOneWidget);
+      expect(find.byIcon(Icons.pause_rounded), findsOneWidget);
 
       ms = 61000;
       await tester.pump(const Duration(milliseconds: 150));
@@ -214,11 +214,11 @@ void main() {
       await tester.pumpWidget(
         host(totals: () => (durationMs: 0, chars: 0, active: active)),
       );
-      expect(find.byIcon(Icons.timer_outlined), findsOneWidget);
+      expect(find.byIcon(Icons.pause_rounded), findsOneWidget);
       active = false;
       await tester.pump(const Duration(milliseconds: 150));
-      expect(find.byIcon(Icons.timer_off_outlined), findsOneWidget);
-      expect(find.byIcon(Icons.timer_outlined), findsNothing);
+      expect(find.byIcon(Icons.play_arrow_rounded), findsOneWidget);
+      expect(find.byIcon(Icons.pause_rounded), findsNothing);
     });
 
     testWidgets('progress hidden by the switch or when total unknown', (
@@ -375,6 +375,31 @@ void main() {
       await tester.tapAt(Offset(tracker.center.dx, strip.top + 2));
       await tester.tapAt(Offset(tracker.center.dx, strip.bottom - 2));
       expect(trackerTaps, 2, reason: '计时块命中区要撑满整条行高，不是只有那一行文字');
+    });
+
+    // BUG-2533：那枚秒表字形此前是**纯装饰**（一个 [Icon]），点下去没有任何 MD3
+    // 反馈；现在它是一颗真的 [ReaderStudyClockButton]（IconButton：state layer +
+    // ripple + tooltip），点它当场停 / 续表。
+    testWidgets('the clock glyph itself is a real MD3 toggle button', (
+      WidgetTester tester,
+    ) async {
+      int trackerTaps = 0;
+      await tester.pumpWidget(
+        host(
+          totals: () => (durationMs: 0, chars: 0, active: true),
+          onTapTracker: () => trackerTaps++,
+        ),
+      );
+      final Finder button = find.byType(ReaderStudyClockButton);
+      expect(button, findsOneWidget);
+      expect(
+        find.descendant(of: button, matching: find.byType(IconButton)),
+        findsOneWidget,
+        reason: '必须是真 IconButton（有 state layer / ripple / tooltip），不是裸 Icon',
+      );
+      await tester.tap(button);
+      await tester.pump();
+      expect(trackerTaps, 1, reason: '点那颗键当场停 / 续表');
     });
   });
 

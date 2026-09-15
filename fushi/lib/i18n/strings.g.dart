@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77248 (4544 per locale)
+/// Strings: 77282 (4546 per locale)
 ///
-/// Built on 2026-09-14 at 17:57 UTC
+/// Built on 2026-09-15 at 05:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6381,6 +6381,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_lookup_ime_language_unset => 'Not set';
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  String get reader_stats_clock_pause => 'Pause timer';
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -17129,6 +17131,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -28113,6 +28119,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -39147,6 +39157,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -50214,6 +50228,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -61081,6 +61099,10 @@ class _StringsId extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -72044,6 +72066,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -82375,6 +82401,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -92717,6 +92747,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -103634,6 +103668,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -114604,6 +114642,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -125552,6 +125594,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -136297,6 +136343,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -147160,6 +147210,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -157992,6 +158046,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 // Path: <root>
@@ -167935,6 +167993,10 @@ class _StringsZhCn extends _StringsEn {
   String get settings_lookup_ime_language_unset => '未设置';
   @override
   String get settings_lookup_ime_language_unavailable => '系统里还没有安装这个输入法。';
+  @override
+  String get reader_stats_clock_pause => '暂停计时';
+  @override
+  String get reader_stats_clock_resume => '继续计时';
 }
 
 // Path: <root>
@@ -177951,6 +178013,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get settings_lookup_ime_language_unavailable =>
       'That input method is not installed on this system yet.';
+  @override
+  String get reader_stats_clock_pause => 'Pause timer';
+  @override
+  String get reader_stats_clock_resume => 'Resume timer';
 }
 
 /// Flat map(s) containing all translations.
@@ -187305,6 +187371,10 @@ extension on _StringsEn {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -196654,6 +196724,10 @@ extension on _StringsAr {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -206052,6 +206126,10 @@ extension on _StringsDe {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -215440,6 +215518,10 @@ extension on _StringsEs {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -224836,6 +224918,10 @@ extension on _StringsFr {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -234202,6 +234288,10 @@ extension on _StringsId {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -243591,6 +243681,10 @@ extension on _StringsIt {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -252904,6 +252998,10 @@ extension on _StringsJa {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -262222,6 +262320,10 @@ extension on _StringsKo {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -271606,6 +271708,10 @@ extension on _StringsNl {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -280985,6 +281091,10 @@ extension on _StringsPtBr {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -290370,6 +290480,10 @@ extension on _StringsRu {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -299724,6 +299838,10 @@ extension on _StringsTh {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -309094,6 +309212,10 @@ extension on _StringsTr {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -318458,6 +318580,10 @@ extension on _StringsVi {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
@@ -327738,6 +327864,10 @@ extension on _StringsZhCn {
         return '未设置';
       case 'settings_lookup_ime_language_unavailable':
         return '系统里还没有安装这个输入法。';
+      case 'reader_stats_clock_pause':
+        return '暂停计时';
+      case 'reader_stats_clock_resume':
+        return '继续计时';
       default:
         return null;
     }
@@ -337029,6 +337159,10 @@ extension on _StringsZhHk {
         return 'Not set';
       case 'settings_lookup_ime_language_unavailable':
         return 'That input method is not installed on this system yet.';
+      case 'reader_stats_clock_pause':
+        return 'Pause timer';
+      case 'reader_stats_clock_resume':
+        return 'Resume timer';
       default:
         return null;
     }
