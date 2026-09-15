@@ -109,8 +109,8 @@ void main() {
     test('同一 spine 章的多条锚点目录项共用同一解，调用方据此全部标当前', () {
       const List<TtuTocEntry> toc = <TtuTocEntry>[
         TtuTocEntry(index: 0, label: '巻頭'),
-        TtuTocEntry(index: 0, label: '第一節', fragment: 'sec1'),
-        TtuTocEntry(index: 0, label: '第二節', fragment: 'sec2'),
+        TtuTocEntry(index: 0, label: '第一節'),
+        TtuTocEntry(index: 0, label: '第二節'),
         TtuTocEntry(index: 1, label: '第二巻'),
       ];
       expect(resolveCurrentTocChapter(toc, 0), 0);
@@ -143,7 +143,7 @@ void main() {
                 controller: null,
                 toc: _sparseToc,
                 readerProgress: const (4, 15),
-                onJumpSection: (_, __) async {},
+                onJumpSection: (_) async {},
                 onExitReader: () {},
                 webViewController: _FakeInAppWebViewController(),
                 appModel: model,

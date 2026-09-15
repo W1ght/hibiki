@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77554 (4562 per locale)
+/// Strings: 79322 (4666 per locale)
 ///
-/// Built on 2026-09-15 at 05:52 UTC
+/// Built on 2026-09-15 at 06:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6406,6 +6406,161 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_gallery_position_current => 'Current reading position';
   String get reader_gallery_locked_title => 'Not reached yet';
   String get reader_gallery_locked_back => 'Back to last seen';
+  String get ai_settings_title => 'AI';
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  String get ai_providers_section => 'Provider configuration';
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  String get ai_provider_add => 'Add provider';
+  String get ai_provider_empty => 'No providers configured yet';
+  String get ai_provider_name => 'Name';
+  String get ai_provider_api_key => 'API Key';
+  String get ai_provider_base_url => 'Base URL';
+  String get ai_provider_model => 'Model';
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  String get ai_provider_models_fetch => 'Fetch models';
+  String get ai_provider_protocol => 'Protocol';
+  String get ai_provider_reasoning => 'Reasoning';
+  String get ai_provider_reasoning_none => 'Off';
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  String get ai_provider_enabled => 'Enabled';
+  String get ai_provider_delete => 'Delete';
+  String get ai_provider_test => 'Test connection';
+  String get ai_provider_test_ok => 'Connected';
+  String get ai_provider_ready => 'Ready';
+  String get ai_provider_incomplete => 'Not configured';
+  String get ai_features_section => 'Feature providers';
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  String get ai_feature_unset => 'Not set';
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  String get ai_error_unauthorized => 'API key was rejected';
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  String get ai_error_network => 'Network error';
+  String get ai_error_bad_response => 'Unexpected response';
+  String get ai_error_empty_response => 'The model returned nothing';
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  String get game_text_process_title => 'Text processing';
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  String get game_text_process_add_step => 'Add step';
+  String get game_text_process_preview => 'Preview';
+  String get game_text_process_preview_input => 'Sample line';
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  String get game_text_process_preview_result => 'Result';
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  String get game_text_process_preview_step_unchanged => 'No change';
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  String get game_text_process_ai_section => 'Ask AI';
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  String get game_text_process_ai_generate => 'Generate';
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  String get game_text_process_param_repeat => 'Repeat count';
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  String get game_text_process_param_lines => 'Line count';
+  String get game_text_process_param_from_end => 'Take from the end';
+  String get game_text_process_param_pattern => 'Pattern';
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  String get game_text_process_param_replacement => 'Replacement';
+  String get game_text_process_param_regex => 'Regular expression';
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  String get game_text_process_kind_replace => 'Find and replace';
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -17197,6 +17352,265 @@ class _StringsAr extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -28224,6 +28638,265 @@ class _StringsDe extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -39301,6 +39974,265 @@ class _StringsEs extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -50411,6 +51343,265 @@ class _StringsFr extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -61321,6 +62512,265 @@ class _StringsId extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -72327,6 +73777,265 @@ class _StringsIt extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -82701,6 +84410,265 @@ class _StringsJa extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -93086,6 +95054,265 @@ class _StringsKo extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -104046,6 +106273,265 @@ class _StringsNl extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -115059,6 +117545,265 @@ class _StringsPtBr extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -126050,6 +128795,265 @@ class _StringsRu extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -136838,6 +139842,265 @@ class _StringsTh extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -147744,6 +151007,265 @@ class _StringsTr extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -158619,6 +162141,265 @@ class _StringsVi extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 // Path: <root>
@@ -168603,6 +172384,230 @@ class _StringsZhCn extends _StringsEn {
   String get reader_gallery_locked_title => '这张插图尚未读到';
   @override
   String get reader_gallery_locked_back => '回到最近已看';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary => '配置 AI 提供商，并为每个功能指定使用哪一家';
+  @override
+  String get ai_providers_section => '提供商配置';
+  @override
+  String get ai_providers_section_summary =>
+      '添加 Fushi 可以调用的提供商。内置多家预设，也可以添加兼容 Chat Completions 的自定义 API。';
+  @override
+  String get ai_provider_add => '添加提供商';
+  @override
+  String get ai_provider_empty => '还没有配置任何提供商';
+  @override
+  String get ai_provider_name => '名称';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => '模型';
+  @override
+  String get ai_provider_model_hint => '可留空，再点下方拉取列表';
+  @override
+  String get ai_provider_models_fetch => '获取模型列表';
+  @override
+  String get ai_provider_protocol => '协议';
+  @override
+  String get ai_provider_reasoning => '推理';
+  @override
+  String get ai_provider_reasoning_none => '关闭';
+  @override
+  String get ai_provider_allow_http => '允许明文 HTTP';
+  @override
+  String get ai_provider_allow_http_summary => '本地模型服务（http://localhost）需要打开';
+  @override
+  String get ai_provider_enabled => '启用';
+  @override
+  String get ai_provider_delete => '删除';
+  @override
+  String get ai_provider_test => '测试连接';
+  @override
+  String get ai_provider_test_ok => '连接正常';
+  @override
+  String get ai_provider_ready => '已就绪';
+  @override
+  String get ai_provider_incomplete => '尚未配置完整';
+  @override
+  String get ai_features_section => '功能提供商';
+  @override
+  String get ai_features_section_summary => '为每个功能指定使用哪一家提供商';
+  @override
+  String get ai_feature_unset => '未指定';
+  @override
+  String get ai_feature_galgame_text_process => '游戏文本处理';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      '让 AI 为游戏 hook 文本编写清洗规则';
+  @override
+  String get ai_error_unauthorized => 'API Key 被拒绝';
+  @override
+  String get ai_error_rate_limited => '被限流，请稍后重试';
+  @override
+  String get ai_error_network => '网络错误';
+  @override
+  String get ai_error_bad_response => '响应格式异常';
+  @override
+  String get ai_error_empty_response => '模型没有返回内容';
+  @override
+  String get ai_error_not_configured => '这家提供商还没配置完整';
+  @override
+  String get game_text_process_title => '文本处理';
+  @override
+  String get game_text_process_summary => '对所选线程的文本做清洗';
+  @override
+  String get game_text_process_empty => '还没有任何步骤。可在下方添加，或让 AI 生成。';
+  @override
+  String get game_text_process_add_step => '添加步骤';
+  @override
+  String get game_text_process_preview => '预览';
+  @override
+  String get game_text_process_preview_input => '样例文本';
+  @override
+  String get game_text_process_preview_input_hint => '粘贴一行抓到的文本';
+  @override
+  String get game_text_process_preview_use_latest => '使用最近抓到的一行';
+  @override
+  String get game_text_process_preview_result => '结果';
+  @override
+  String get game_text_process_preview_unchanged => '无变化';
+  @override
+  String get game_text_process_preview_emptied => '这一步会把整行清空，该行将被丢弃';
+  @override
+  String get game_text_process_preview_step_unchanged => '未改变';
+  @override
+  String get game_text_process_fold_warning => '自动去重会打断渐进重绘折叠，同一句可能在工作台留下多条';
+  @override
+  String get game_text_process_ruby_warning => '这一步会删掉注音标记，相应的行将没有振假名';
+  @override
+  String get game_text_process_ai_section => '让 AI 生成';
+  @override
+  String get game_text_process_ai_hint => '描述你想清洗掉什么';
+  @override
+  String get game_text_process_ai_generate => '生成';
+  @override
+  String get game_text_process_ai_no_provider => '请先在「设置 › AI」里指定一家提供商';
+  @override
+  String get game_text_process_ai_empty => 'AI 没有给出可用的规则，换个说法再试一次。';
+  @override
+  String get game_text_process_param_repeat => '重复次数';
+  @override
+  String get game_text_process_param_repeat_auto => '自动分析';
+  @override
+  String get game_text_process_param_lines => '行数';
+  @override
+  String get game_text_process_param_from_end => '从末尾截取';
+  @override
+  String get game_text_process_param_pattern => '匹配式';
+  @override
+  String get game_text_process_param_pattern_invalid => '正则表达式无效';
+  @override
+  String get game_text_process_param_replacement => '替换为';
+  @override
+  String get game_text_process_param_regex => '按正则表达式';
+  @override
+  String get game_text_process_param_line_replacement => '换行替换为';
+  @override
+  String get game_text_process_kind_filter_non_japanese => '过滤非日语字符集字符';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      '移除无法用 Shift-JIS 表示的字符';
+  @override
+  String get game_text_process_kind_filter_control_chars => '过滤控制字符';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      '移除 ASCII 控制符；换行与制表符不动';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation => '过滤英文标点';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc => '移除半角标点';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes => '只保留「」内的文本';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      '只留台词、丢掉旁白；没有「」的整行会被丢弃';
+  @override
+  String get game_text_process_kind_strip_curly_braces => '去除花括号注音';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      '带斜杠的花括号保留基字；不带斜杠的整体删除';
+  @override
+  String get game_text_process_kind_normalize_width => '全角半角正规化';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      '全角 ASCII 转半角，半角片假名转全角';
+  @override
+  String get game_text_process_kind_take_lines => '截取指定行数';
+  @override
+  String get game_text_process_kind_take_lines_desc => '只保留开头或末尾的 N 行';
+  @override
+  String get game_text_process_kind_dedupe_chars => '去除重复字符';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc => 'AAAABBBBCCCC → ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed => '去除整块重复';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD → ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto => '去除重复行';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 → S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending => '去除递减重绘';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD → ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending => '去除逐字重绘';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD → ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets => '过滤尖括号标记';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      '移除 ruby、br 之类的标记';
+  @override
+  String get game_text_process_kind_filter_line_breaks => '过滤换行符';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc => '删除换行，或替换成指定内容';
+  @override
+  String get game_text_process_kind_filter_digits => '过滤数字';
+  @override
+  String get game_text_process_kind_filter_digits_desc => '移除半角与全角数字';
+  @override
+  String get game_text_process_kind_filter_latin_letters => '过滤英文字母';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc => '移除半角与全角英文字母';
+  @override
+  String get game_text_process_kind_replace => '字符串替换';
+  @override
+  String get game_text_process_kind_replace_desc => '自定义正则或字面替换';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      '找到 ${count} 个模型';
+  @override
+  String ai_provider_test_failed({required Object reason}) => '测试失败：${reason}';
+  @override
+  String ai_error_http({required Object code}) => '服务返回错误（${code}）';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '已启用 ${count} 个步骤';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      '已添加 ${count} 个步骤';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      '生成失败：${reason}';
+  @override
+  String get ai_provider_base_url_invalid => '请填写有效的 HTTP 或 HTTPS 接口地址';
+  @override
+  String get ai_provider_protocol_locked => '由内置预设固定，不可更改';
 }
 
 // Path: <root>
@@ -178662,6 +182667,265 @@ class _StringsZhHk extends _StringsEn {
   String get reader_gallery_locked_title => 'Not reached yet';
   @override
   String get reader_gallery_locked_back => 'Back to last seen';
+  @override
+  String get ai_settings_title => 'AI';
+  @override
+  String get ai_settings_summary =>
+      'Configure AI providers and choose which one powers each feature';
+  @override
+  String get ai_providers_section => 'Provider configuration';
+  @override
+  String get ai_providers_section_summary =>
+      'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+  @override
+  String get ai_provider_add => 'Add provider';
+  @override
+  String get ai_provider_empty => 'No providers configured yet';
+  @override
+  String get ai_provider_name => 'Name';
+  @override
+  String get ai_provider_api_key => 'API Key';
+  @override
+  String get ai_provider_base_url => 'Base URL';
+  @override
+  String get ai_provider_model => 'Model';
+  @override
+  String get ai_provider_model_hint => 'Leave empty, then fetch the list';
+  @override
+  String get ai_provider_models_fetch => 'Fetch models';
+  @override
+  String get ai_provider_protocol => 'Protocol';
+  @override
+  String get ai_provider_reasoning => 'Reasoning';
+  @override
+  String get ai_provider_reasoning_none => 'Off';
+  @override
+  String get ai_provider_allow_http => 'Allow plain HTTP';
+  @override
+  String get ai_provider_allow_http_summary =>
+      'Required for local servers on http://localhost';
+  @override
+  String get ai_provider_enabled => 'Enabled';
+  @override
+  String get ai_provider_delete => 'Delete';
+  @override
+  String get ai_provider_test => 'Test connection';
+  @override
+  String get ai_provider_test_ok => 'Connected';
+  @override
+  String get ai_provider_ready => 'Ready';
+  @override
+  String get ai_provider_incomplete => 'Not configured';
+  @override
+  String get ai_features_section => 'Feature providers';
+  @override
+  String get ai_features_section_summary =>
+      'Choose which provider each feature uses';
+  @override
+  String get ai_feature_unset => 'Not set';
+  @override
+  String get ai_feature_galgame_text_process => 'Game text processing';
+  @override
+  String get ai_feature_galgame_text_process_summary =>
+      'Let AI write cleanup rules for hooked game text';
+  @override
+  String get ai_error_unauthorized => 'API key was rejected';
+  @override
+  String get ai_error_rate_limited => 'Rate limited, try again later';
+  @override
+  String get ai_error_network => 'Network error';
+  @override
+  String get ai_error_bad_response => 'Unexpected response';
+  @override
+  String get ai_error_empty_response => 'The model returned nothing';
+  @override
+  String get ai_error_not_configured => 'This provider is not fully configured';
+  @override
+  String get game_text_process_title => 'Text processing';
+  @override
+  String get game_text_process_summary =>
+      'Clean up the text of the selected hook thread';
+  @override
+  String get game_text_process_empty =>
+      'No steps yet. Add one below, or ask AI.';
+  @override
+  String get game_text_process_add_step => 'Add step';
+  @override
+  String get game_text_process_preview => 'Preview';
+  @override
+  String get game_text_process_preview_input => 'Sample line';
+  @override
+  String get game_text_process_preview_input_hint => 'Paste a captured line';
+  @override
+  String get game_text_process_preview_use_latest => 'Use latest captured line';
+  @override
+  String get game_text_process_preview_result => 'Result';
+  @override
+  String get game_text_process_preview_unchanged => 'Unchanged';
+  @override
+  String get game_text_process_preview_emptied =>
+      'This step empties the line, so it would be dropped';
+  @override
+  String get game_text_process_preview_step_unchanged => 'No change';
+  @override
+  String get game_text_process_fold_warning =>
+      'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+  @override
+  String get game_text_process_ruby_warning =>
+      'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+  @override
+  String get game_text_process_ai_section => 'Ask AI';
+  @override
+  String get game_text_process_ai_hint => 'Describe what should be cleaned up';
+  @override
+  String get game_text_process_ai_generate => 'Generate';
+  @override
+  String get game_text_process_ai_no_provider =>
+      'Choose an AI provider under Settings and AI first';
+  @override
+  String get game_text_process_ai_empty =>
+      'AI did not return a usable rule. Try describing it differently.';
+  @override
+  String get game_text_process_param_repeat => 'Repeat count';
+  @override
+  String get game_text_process_param_repeat_auto => 'Analyse automatically';
+  @override
+  String get game_text_process_param_lines => 'Line count';
+  @override
+  String get game_text_process_param_from_end => 'Take from the end';
+  @override
+  String get game_text_process_param_pattern => 'Pattern';
+  @override
+  String get game_text_process_param_pattern_invalid =>
+      'Invalid regular expression';
+  @override
+  String get game_text_process_param_replacement => 'Replacement';
+  @override
+  String get game_text_process_param_regex => 'Regular expression';
+  @override
+  String get game_text_process_param_line_replacement =>
+      'Replace line breaks with';
+  @override
+  String get game_text_process_kind_filter_non_japanese =>
+      'Drop non-Japanese charset characters';
+  @override
+  String get game_text_process_kind_filter_non_japanese_desc =>
+      'Removes characters that cannot be encoded in Shift-JIS';
+  @override
+  String get game_text_process_kind_filter_control_chars =>
+      'Drop control characters';
+  @override
+  String get game_text_process_kind_filter_control_chars_desc =>
+      'Removes ASCII control codes; line breaks and tabs are left alone';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation =>
+      'Drop ASCII punctuation';
+  @override
+  String get game_text_process_kind_filter_ascii_punctuation_desc =>
+      'Removes half-width punctuation';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes =>
+      'Keep only quoted text';
+  @override
+  String get game_text_process_kind_keep_japanese_quotes_desc =>
+      'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+  @override
+  String get game_text_process_kind_strip_curly_braces =>
+      'Remove furigana braces';
+  @override
+  String get game_text_process_kind_strip_curly_braces_desc =>
+      'A brace with a slash keeps its base text; one without is removed entirely';
+  @override
+  String get game_text_process_kind_normalize_width =>
+      'Normalise character width';
+  @override
+  String get game_text_process_kind_normalize_width_desc =>
+      'Full-width ASCII to half-width, half-width katakana to full-width';
+  @override
+  String get game_text_process_kind_take_lines => 'Keep N lines';
+  @override
+  String get game_text_process_kind_take_lines_desc =>
+      'Keeps only the first or last N lines';
+  @override
+  String get game_text_process_kind_dedupe_chars =>
+      'Collapse repeated characters';
+  @override
+  String get game_text_process_kind_dedupe_chars_desc =>
+      'AAAABBBBCCCC becomes ABC';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed =>
+      'Collapse a repeated block';
+  @override
+  String get game_text_process_kind_dedupe_block_fixed_desc =>
+      'ABCDABCDABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto =>
+      'Collapse repeated lines';
+  @override
+  String get game_text_process_kind_dedupe_lines_auto_desc =>
+      'S1S1S1S2S2S2 becomes S1S2';
+  @override
+  String get game_text_process_kind_dedupe_descending =>
+      'Collapse a shrinking redraw';
+  @override
+  String get game_text_process_kind_dedupe_descending_desc =>
+      'ABCDBCDCDD becomes ABCD';
+  @override
+  String get game_text_process_kind_dedupe_ascending =>
+      'Collapse a typewriter redraw';
+  @override
+  String get game_text_process_kind_dedupe_ascending_desc =>
+      'AABABCABCD becomes ABCD';
+  @override
+  String get game_text_process_kind_strip_angle_brackets =>
+      'Remove angle-bracket tags';
+  @override
+  String get game_text_process_kind_strip_angle_brackets_desc =>
+      'Removes markup such as ruby and br tags';
+  @override
+  String get game_text_process_kind_filter_line_breaks => 'Drop line breaks';
+  @override
+  String get game_text_process_kind_filter_line_breaks_desc =>
+      'Removes line breaks, or replaces them with text you choose';
+  @override
+  String get game_text_process_kind_filter_digits => 'Drop digits';
+  @override
+  String get game_text_process_kind_filter_digits_desc =>
+      'Removes half-width and full-width digits';
+  @override
+  String get game_text_process_kind_filter_latin_letters =>
+      'Drop Latin letters';
+  @override
+  String get game_text_process_kind_filter_latin_letters_desc =>
+      'Removes half-width and full-width Latin letters';
+  @override
+  String get game_text_process_kind_replace => 'Find and replace';
+  @override
+  String get game_text_process_kind_replace_desc =>
+      'Your own regular expression or literal replacement';
+  @override
+  String ai_provider_models_fetched({required Object count}) =>
+      'Found ${count} models';
+  @override
+  String ai_provider_test_failed({required Object reason}) =>
+      'Test failed: ${reason}';
+  @override
+  String ai_error_http({required Object code}) =>
+      'Service returned an error (${code})';
+  @override
+  String game_text_process_step_count({required Object count}) =>
+      '${count} steps active';
+  @override
+  String game_text_process_ai_added({required Object count}) =>
+      'Added ${count} steps';
+  @override
+  String game_text_process_ai_failed({required Object reason}) =>
+      'Generation failed: ${reason}';
+  @override
+  String get ai_provider_base_url_invalid =>
+      'Enter a valid HTTP or HTTPS endpoint';
+  @override
+  String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
 }
 
 /// Flat map(s) containing all translations.
@@ -188055,6 +192319,215 @@ extension on _StringsEn {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -197443,6 +201916,215 @@ extension on _StringsAr {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -206880,6 +211562,215 @@ extension on _StringsDe {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -216307,6 +221198,215 @@ extension on _StringsEs {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -225742,6 +230842,215 @@ extension on _StringsFr {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -235147,6 +240456,215 @@ extension on _StringsId {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -244575,6 +250093,215 @@ extension on _StringsIt {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -253927,6 +259654,215 @@ extension on _StringsJa {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -263284,6 +269220,215 @@ extension on _StringsKo {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -272707,6 +278852,215 @@ extension on _StringsNl {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -282125,6 +288479,215 @@ extension on _StringsPtBr {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -291549,6 +298112,215 @@ extension on _StringsRu {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -300942,6 +307714,215 @@ extension on _StringsTh {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -310351,6 +317332,215 @@ extension on _StringsTr {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -319754,6 +326944,215 @@ extension on _StringsVi {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
@@ -329071,6 +336470,214 @@ extension on _StringsZhCn {
         return '这张插图尚未读到';
       case 'reader_gallery_locked_back':
         return '回到最近已看';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return '配置 AI 提供商，并为每个功能指定使用哪一家';
+      case 'ai_providers_section':
+        return '提供商配置';
+      case 'ai_providers_section_summary':
+        return '添加 Fushi 可以调用的提供商。内置多家预设，也可以添加兼容 Chat Completions 的自定义 API。';
+      case 'ai_provider_add':
+        return '添加提供商';
+      case 'ai_provider_empty':
+        return '还没有配置任何提供商';
+      case 'ai_provider_name':
+        return '名称';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return '模型';
+      case 'ai_provider_model_hint':
+        return '可留空，再点下方拉取列表';
+      case 'ai_provider_models_fetch':
+        return '获取模型列表';
+      case 'ai_provider_protocol':
+        return '协议';
+      case 'ai_provider_reasoning':
+        return '推理';
+      case 'ai_provider_reasoning_none':
+        return '关闭';
+      case 'ai_provider_allow_http':
+        return '允许明文 HTTP';
+      case 'ai_provider_allow_http_summary':
+        return '本地模型服务（http://localhost）需要打开';
+      case 'ai_provider_enabled':
+        return '启用';
+      case 'ai_provider_delete':
+        return '删除';
+      case 'ai_provider_test':
+        return '测试连接';
+      case 'ai_provider_test_ok':
+        return '连接正常';
+      case 'ai_provider_ready':
+        return '已就绪';
+      case 'ai_provider_incomplete':
+        return '尚未配置完整';
+      case 'ai_features_section':
+        return '功能提供商';
+      case 'ai_features_section_summary':
+        return '为每个功能指定使用哪一家提供商';
+      case 'ai_feature_unset':
+        return '未指定';
+      case 'ai_feature_galgame_text_process':
+        return '游戏文本处理';
+      case 'ai_feature_galgame_text_process_summary':
+        return '让 AI 为游戏 hook 文本编写清洗规则';
+      case 'ai_error_unauthorized':
+        return 'API Key 被拒绝';
+      case 'ai_error_rate_limited':
+        return '被限流，请稍后重试';
+      case 'ai_error_network':
+        return '网络错误';
+      case 'ai_error_bad_response':
+        return '响应格式异常';
+      case 'ai_error_empty_response':
+        return '模型没有返回内容';
+      case 'ai_error_not_configured':
+        return '这家提供商还没配置完整';
+      case 'game_text_process_title':
+        return '文本处理';
+      case 'game_text_process_summary':
+        return '对所选线程的文本做清洗';
+      case 'game_text_process_empty':
+        return '还没有任何步骤。可在下方添加，或让 AI 生成。';
+      case 'game_text_process_add_step':
+        return '添加步骤';
+      case 'game_text_process_preview':
+        return '预览';
+      case 'game_text_process_preview_input':
+        return '样例文本';
+      case 'game_text_process_preview_input_hint':
+        return '粘贴一行抓到的文本';
+      case 'game_text_process_preview_use_latest':
+        return '使用最近抓到的一行';
+      case 'game_text_process_preview_result':
+        return '结果';
+      case 'game_text_process_preview_unchanged':
+        return '无变化';
+      case 'game_text_process_preview_emptied':
+        return '这一步会把整行清空，该行将被丢弃';
+      case 'game_text_process_preview_step_unchanged':
+        return '未改变';
+      case 'game_text_process_fold_warning':
+        return '自动去重会打断渐进重绘折叠，同一句可能在工作台留下多条';
+      case 'game_text_process_ruby_warning':
+        return '这一步会删掉注音标记，相应的行将没有振假名';
+      case 'game_text_process_ai_section':
+        return '让 AI 生成';
+      case 'game_text_process_ai_hint':
+        return '描述你想清洗掉什么';
+      case 'game_text_process_ai_generate':
+        return '生成';
+      case 'game_text_process_ai_no_provider':
+        return '请先在「设置 › AI」里指定一家提供商';
+      case 'game_text_process_ai_empty':
+        return 'AI 没有给出可用的规则，换个说法再试一次。';
+      case 'game_text_process_param_repeat':
+        return '重复次数';
+      case 'game_text_process_param_repeat_auto':
+        return '自动分析';
+      case 'game_text_process_param_lines':
+        return '行数';
+      case 'game_text_process_param_from_end':
+        return '从末尾截取';
+      case 'game_text_process_param_pattern':
+        return '匹配式';
+      case 'game_text_process_param_pattern_invalid':
+        return '正则表达式无效';
+      case 'game_text_process_param_replacement':
+        return '替换为';
+      case 'game_text_process_param_regex':
+        return '按正则表达式';
+      case 'game_text_process_param_line_replacement':
+        return '换行替换为';
+      case 'game_text_process_kind_filter_non_japanese':
+        return '过滤非日语字符集字符';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return '移除无法用 Shift-JIS 表示的字符';
+      case 'game_text_process_kind_filter_control_chars':
+        return '过滤控制字符';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return '移除 ASCII 控制符；换行与制表符不动';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return '过滤英文标点';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return '移除半角标点';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return '只保留「」内的文本';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return '只留台词、丢掉旁白；没有「」的整行会被丢弃';
+      case 'game_text_process_kind_strip_curly_braces':
+        return '去除花括号注音';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return '带斜杠的花括号保留基字；不带斜杠的整体删除';
+      case 'game_text_process_kind_normalize_width':
+        return '全角半角正规化';
+      case 'game_text_process_kind_normalize_width_desc':
+        return '全角 ASCII 转半角，半角片假名转全角';
+      case 'game_text_process_kind_take_lines':
+        return '截取指定行数';
+      case 'game_text_process_kind_take_lines_desc':
+        return '只保留开头或末尾的 N 行';
+      case 'game_text_process_kind_dedupe_chars':
+        return '去除重复字符';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC → ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return '去除整块重复';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD → ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return '去除重复行';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 → S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return '去除递减重绘';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD → ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return '去除逐字重绘';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD → ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return '过滤尖括号标记';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return '移除 ruby、br 之类的标记';
+      case 'game_text_process_kind_filter_line_breaks':
+        return '过滤换行符';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return '删除换行，或替换成指定内容';
+      case 'game_text_process_kind_filter_digits':
+        return '过滤数字';
+      case 'game_text_process_kind_filter_digits_desc':
+        return '移除半角与全角数字';
+      case 'game_text_process_kind_filter_latin_letters':
+        return '过滤英文字母';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return '移除半角与全角英文字母';
+      case 'game_text_process_kind_replace':
+        return '字符串替换';
+      case 'game_text_process_kind_replace_desc':
+        return '自定义正则或字面替换';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => '找到 ${count} 个模型';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => '测试失败：${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) => '服务返回错误（${code}）';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '已启用 ${count} 个步骤';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => '已添加 ${count} 个步骤';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => '生成失败：${reason}';
+      case 'ai_provider_base_url_invalid':
+        return '请填写有效的 HTTP 或 HTTPS 接口地址';
+      case 'ai_provider_protocol_locked':
+        return '由内置预设固定，不可更改';
       default:
         return null;
     }
@@ -338401,6 +346008,215 @@ extension on _StringsZhHk {
         return 'Not reached yet';
       case 'reader_gallery_locked_back':
         return 'Back to last seen';
+      case 'ai_settings_title':
+        return 'AI';
+      case 'ai_settings_summary':
+        return 'Configure AI providers and choose which one powers each feature';
+      case 'ai_providers_section':
+        return 'Provider configuration';
+      case 'ai_providers_section_summary':
+        return 'Add providers Fushi can call. Built-in presets, plus any Chat Completions compatible API.';
+      case 'ai_provider_add':
+        return 'Add provider';
+      case 'ai_provider_empty':
+        return 'No providers configured yet';
+      case 'ai_provider_name':
+        return 'Name';
+      case 'ai_provider_api_key':
+        return 'API Key';
+      case 'ai_provider_base_url':
+        return 'Base URL';
+      case 'ai_provider_model':
+        return 'Model';
+      case 'ai_provider_model_hint':
+        return 'Leave empty, then fetch the list';
+      case 'ai_provider_models_fetch':
+        return 'Fetch models';
+      case 'ai_provider_protocol':
+        return 'Protocol';
+      case 'ai_provider_reasoning':
+        return 'Reasoning';
+      case 'ai_provider_reasoning_none':
+        return 'Off';
+      case 'ai_provider_allow_http':
+        return 'Allow plain HTTP';
+      case 'ai_provider_allow_http_summary':
+        return 'Required for local servers on http://localhost';
+      case 'ai_provider_enabled':
+        return 'Enabled';
+      case 'ai_provider_delete':
+        return 'Delete';
+      case 'ai_provider_test':
+        return 'Test connection';
+      case 'ai_provider_test_ok':
+        return 'Connected';
+      case 'ai_provider_ready':
+        return 'Ready';
+      case 'ai_provider_incomplete':
+        return 'Not configured';
+      case 'ai_features_section':
+        return 'Feature providers';
+      case 'ai_features_section_summary':
+        return 'Choose which provider each feature uses';
+      case 'ai_feature_unset':
+        return 'Not set';
+      case 'ai_feature_galgame_text_process':
+        return 'Game text processing';
+      case 'ai_feature_galgame_text_process_summary':
+        return 'Let AI write cleanup rules for hooked game text';
+      case 'ai_error_unauthorized':
+        return 'API key was rejected';
+      case 'ai_error_rate_limited':
+        return 'Rate limited, try again later';
+      case 'ai_error_network':
+        return 'Network error';
+      case 'ai_error_bad_response':
+        return 'Unexpected response';
+      case 'ai_error_empty_response':
+        return 'The model returned nothing';
+      case 'ai_error_not_configured':
+        return 'This provider is not fully configured';
+      case 'game_text_process_title':
+        return 'Text processing';
+      case 'game_text_process_summary':
+        return 'Clean up the text of the selected hook thread';
+      case 'game_text_process_empty':
+        return 'No steps yet. Add one below, or ask AI.';
+      case 'game_text_process_add_step':
+        return 'Add step';
+      case 'game_text_process_preview':
+        return 'Preview';
+      case 'game_text_process_preview_input':
+        return 'Sample line';
+      case 'game_text_process_preview_input_hint':
+        return 'Paste a captured line';
+      case 'game_text_process_preview_use_latest':
+        return 'Use latest captured line';
+      case 'game_text_process_preview_result':
+        return 'Result';
+      case 'game_text_process_preview_unchanged':
+        return 'Unchanged';
+      case 'game_text_process_preview_emptied':
+        return 'This step empties the line, so it would be dropped';
+      case 'game_text_process_preview_step_unchanged':
+        return 'No change';
+      case 'game_text_process_fold_warning':
+        return 'Automatic dedupe can break progressive-redraw folding, leaving the same line several times in the workbench';
+      case 'game_text_process_ruby_warning':
+        return 'This step removes the markup furigana is parsed from, so those lines lose their ruby';
+      case 'game_text_process_ai_section':
+        return 'Ask AI';
+      case 'game_text_process_ai_hint':
+        return 'Describe what should be cleaned up';
+      case 'game_text_process_ai_generate':
+        return 'Generate';
+      case 'game_text_process_ai_no_provider':
+        return 'Choose an AI provider under Settings and AI first';
+      case 'game_text_process_ai_empty':
+        return 'AI did not return a usable rule. Try describing it differently.';
+      case 'game_text_process_param_repeat':
+        return 'Repeat count';
+      case 'game_text_process_param_repeat_auto':
+        return 'Analyse automatically';
+      case 'game_text_process_param_lines':
+        return 'Line count';
+      case 'game_text_process_param_from_end':
+        return 'Take from the end';
+      case 'game_text_process_param_pattern':
+        return 'Pattern';
+      case 'game_text_process_param_pattern_invalid':
+        return 'Invalid regular expression';
+      case 'game_text_process_param_replacement':
+        return 'Replacement';
+      case 'game_text_process_param_regex':
+        return 'Regular expression';
+      case 'game_text_process_param_line_replacement':
+        return 'Replace line breaks with';
+      case 'game_text_process_kind_filter_non_japanese':
+        return 'Drop non-Japanese charset characters';
+      case 'game_text_process_kind_filter_non_japanese_desc':
+        return 'Removes characters that cannot be encoded in Shift-JIS';
+      case 'game_text_process_kind_filter_control_chars':
+        return 'Drop control characters';
+      case 'game_text_process_kind_filter_control_chars_desc':
+        return 'Removes ASCII control codes; line breaks and tabs are left alone';
+      case 'game_text_process_kind_filter_ascii_punctuation':
+        return 'Drop ASCII punctuation';
+      case 'game_text_process_kind_filter_ascii_punctuation_desc':
+        return 'Removes half-width punctuation';
+      case 'game_text_process_kind_keep_japanese_quotes':
+        return 'Keep only quoted text';
+      case 'game_text_process_kind_keep_japanese_quotes_desc':
+        return 'Keeps dialogue and drops narration; a line without quotes is dropped entirely';
+      case 'game_text_process_kind_strip_curly_braces':
+        return 'Remove furigana braces';
+      case 'game_text_process_kind_strip_curly_braces_desc':
+        return 'A brace with a slash keeps its base text; one without is removed entirely';
+      case 'game_text_process_kind_normalize_width':
+        return 'Normalise character width';
+      case 'game_text_process_kind_normalize_width_desc':
+        return 'Full-width ASCII to half-width, half-width katakana to full-width';
+      case 'game_text_process_kind_take_lines':
+        return 'Keep N lines';
+      case 'game_text_process_kind_take_lines_desc':
+        return 'Keeps only the first or last N lines';
+      case 'game_text_process_kind_dedupe_chars':
+        return 'Collapse repeated characters';
+      case 'game_text_process_kind_dedupe_chars_desc':
+        return 'AAAABBBBCCCC becomes ABC';
+      case 'game_text_process_kind_dedupe_block_fixed':
+        return 'Collapse a repeated block';
+      case 'game_text_process_kind_dedupe_block_fixed_desc':
+        return 'ABCDABCDABCD becomes ABCD';
+      case 'game_text_process_kind_dedupe_lines_auto':
+        return 'Collapse repeated lines';
+      case 'game_text_process_kind_dedupe_lines_auto_desc':
+        return 'S1S1S1S2S2S2 becomes S1S2';
+      case 'game_text_process_kind_dedupe_descending':
+        return 'Collapse a shrinking redraw';
+      case 'game_text_process_kind_dedupe_descending_desc':
+        return 'ABCDBCDCDD becomes ABCD';
+      case 'game_text_process_kind_dedupe_ascending':
+        return 'Collapse a typewriter redraw';
+      case 'game_text_process_kind_dedupe_ascending_desc':
+        return 'AABABCABCD becomes ABCD';
+      case 'game_text_process_kind_strip_angle_brackets':
+        return 'Remove angle-bracket tags';
+      case 'game_text_process_kind_strip_angle_brackets_desc':
+        return 'Removes markup such as ruby and br tags';
+      case 'game_text_process_kind_filter_line_breaks':
+        return 'Drop line breaks';
+      case 'game_text_process_kind_filter_line_breaks_desc':
+        return 'Removes line breaks, or replaces them with text you choose';
+      case 'game_text_process_kind_filter_digits':
+        return 'Drop digits';
+      case 'game_text_process_kind_filter_digits_desc':
+        return 'Removes half-width and full-width digits';
+      case 'game_text_process_kind_filter_latin_letters':
+        return 'Drop Latin letters';
+      case 'game_text_process_kind_filter_latin_letters_desc':
+        return 'Removes half-width and full-width Latin letters';
+      case 'game_text_process_kind_replace':
+        return 'Find and replace';
+      case 'game_text_process_kind_replace_desc':
+        return 'Your own regular expression or literal replacement';
+      case 'ai_provider_models_fetched':
+        return ({required Object count}) => 'Found ${count} models';
+      case 'ai_provider_test_failed':
+        return ({required Object reason}) => 'Test failed: ${reason}';
+      case 'ai_error_http':
+        return ({required Object code}) =>
+            'Service returned an error (${code})';
+      case 'game_text_process_step_count':
+        return ({required Object count}) => '${count} steps active';
+      case 'game_text_process_ai_added':
+        return ({required Object count}) => 'Added ${count} steps';
+      case 'game_text_process_ai_failed':
+        return ({required Object reason}) => 'Generation failed: ${reason}';
+      case 'ai_provider_base_url_invalid':
+        return 'Enter a valid HTTP or HTTPS endpoint';
+      case 'ai_provider_protocol_locked':
+        return 'Fixed by the built-in preset';
       default:
         return null;
     }
