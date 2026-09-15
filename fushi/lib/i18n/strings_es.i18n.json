@@ -4530,9 +4530,9 @@
   "settings_study_diag_export_hint": "Page credits, segment open/close, audiobook resume and jump trace, for troubleshooting reading-speed anomalies. Saved as a text file.",
   "study_diag_share_subject": "Fushi study diagnostics",
   "reader_furigana_dimmed": "Dimmed",
-  "audiobook_floating_ball": "Floating ball",
-  "audiobook_floating_ball_hint": "A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.",
-  "audiobook_floating_ball_actions": "Floating ball buttons",
-  "audiobook_floating_ball_actions_hint": "Choose which buttons appear when the ball is expanded.",
+  "reader_floating_ball": "Floating ball",
+  "reader_floating_ball_hint": "A translucent ball docked at the screen edge. Tap to expand playback buttons, tap again to collapse; drag to move it or switch sides.",
+  "reader_floating_ball_actions": "Floating ball buttons",
+  "reader_floating_ball_actions_hint": "Choose which buttons appear when the ball is expanded.",
   "audiobook_follow_audio": "Follow audio"
 }

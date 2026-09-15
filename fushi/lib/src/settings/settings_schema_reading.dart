@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
+import 'package:fushi/src/media/audiobook/audiobook_floating_ball.dart';
 import 'package:fushi/src/models/preferences_repository.dart';
 import 'package:fushi/src/settings/settings_actions.dart';
 import 'package:fushi/src/settings/settings_context.dart';
@@ -533,6 +534,42 @@ SettingsDestination buildReadingDestination() {
               c.appModel.toggleReverseReaderBottomBar();
               notifyReaderChromeChanged(c);
             },
+          ),
+          // 悬浮球：Fushi 图标小球半透明停靠在正文边缘，点开把下面勾选的按钮以弧形
+          // 环绕展开。纯 Flutter chrome，setter 内部经 onChromeReloadLive 让开着的书
+          // 重建一次；不改预留高，无需重锚。
+          SettingsSwitchItem(
+            id: 'reading_controls.floating_ball',
+            title: t.reader_floating_ball,
+            subtitle: t.reader_floating_ball_hint,
+            icon: Icons.blur_circular_outlined,
+            reader: const ReaderPlacement(
+              group: ReaderGroup.behavior,
+              order: 14,
+            ),
+            value: (SettingsContext c) => c.readerSource.readerFloatingBall,
+            onChanged: (SettingsContext c, bool value) async {
+              await c.readerSource.setReaderFloatingBall(value);
+              c.refresh();
+            },
+          ),
+          // 悬浮球按钮集合（开关打开才露出）：一排 FilterChip，至少留一个。
+          SettingsCustomItem(
+            id: 'reading_controls.floating_ball_actions',
+            searchTitle: t.reader_floating_ball_actions,
+            visible: (SettingsContext c) => c.readerSource.readerFloatingBall,
+            reader: const ReaderPlacement(
+              group: ReaderGroup.behavior,
+              order: 15,
+            ),
+            builder: (SettingsContext c) => AudiobookFloatingBallActionsRow(
+              selected: c.readerSource.readerFloatingBallActions,
+              skipActionSeconds: c.readerSource.skipActionSeconds,
+              onChanged: (Set<AudiobookFloatingBallAction> next) async {
+                await c.readerSource.setReaderFloatingBallActions(next);
+                c.refresh();
+              },
+            ),
           ),
         ],
       ),

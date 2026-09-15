@@ -1573,19 +1573,32 @@ extension _ReaderChrome on _ReaderFushiPageState {
     );
   }
 
-  /// 有声书悬浮球（用户开关，默认关）：半透明停靠在正文视口边缘，点开弹出
-  /// 上一句 / 播放暂停 / 下一句等按钮（集合可在有声书设置里挑）。
+  /// 阅读器悬浮球（用户开关，默认关）：Fushi 图标小球半透明停靠在正文视口边缘，
+  /// 点开把「阅读操作 → 悬浮球按钮」里勾选的键以弧形环绕展开（出厂上一句 /
+  /// 播放暂停 / 下一句）。
   ///
   /// 只在有声书已挂载且首章已加载后出现；活动范围是扣掉顶栏 / 底栏 / 状态行
   /// 预留后的正文视口，与焦点环用同一组 inset（[_readerTopOffset] /
   /// [_readerBottomReserve]），所以永远压不到 chrome。排在底栏之前挂载：悬浮底栏
-  /// 短暂唤出时盖在球上，词典弹层同理。
-  Widget _buildAudiobookFloatingBall() {
+  /// 短暂唤出时盖在球上，词典弹层同理。播放态翻转经 [_syncChromePlaybackListener]
+  /// 重建，播放键图标不撒谎。
+  Widget _buildReaderFloatingBall() {
     final AudiobookPlayerController? ctrl = _audiobookController;
     final ReaderFushiSource src = ReaderFushiSource.instance;
-    if (ctrl == null || !_hasEverLoaded || !src.audiobookFloatingBall) {
+    if (ctrl == null || !_hasEverLoaded || !src.readerFloatingBall) {
       return const SizedBox.shrink();
     }
+    final int skip = src.skipActionSeconds;
+    final List<ReaderHeaderAction> actions = <ReaderHeaderAction>[
+      for (final AudiobookFloatingBallAction a in src.readerFloatingBallActions)
+        audiobookFloatingBallHeaderAction(
+          a,
+          controller: ctrl,
+          skipActionSeconds: skip,
+          onOpenSettings: () =>
+              unawaited(_showAppearanceSheet(initialSubPage: 'audiobook')),
+        ),
+    ];
     final Size window = MediaQuery.sizeOf(context);
     final EdgeInsets viewPadding = MediaQuery.viewPaddingOf(context);
     final Rect viewport = Rect.fromLTRB(
@@ -1594,22 +1607,53 @@ extension _ReaderChrome on _ReaderFushiPageState {
       window.width - viewPadding.right,
       window.height - _readerBottomReserve,
     );
-    return AudiobookFloatingBall(
-      key: const ValueKey<String>('fushi_audiobook_floating_ball'),
-      controller: ctrl,
+    return ReaderFloatingBall(
+      key: const ValueKey<String>('fushi_reader_floating_ball'),
       viewport: viewport,
-      actions: src.audiobookFloatingBallActions,
-      dock: src.audiobookFloatingBallDock,
-      verticalFraction: src.audiobookFloatingBallVerticalFraction,
-      skipActionSeconds: src.skipActionSeconds,
+      actions: actions,
+      dock: src.readerFloatingBallDock,
+      verticalFraction: src.readerFloatingBallVerticalFraction,
       backgroundColor: _themeBackgroundColor(),
       foregroundColor: _themeTextColor(),
       animate: !appModel.einkMode,
-      onDockChanged: (AudiobookFloatingBallDock dock, double fraction) =>
-          unawaited(src.setAudiobookFloatingBallPosition(dock, fraction)),
-      onOpenSettings: () =>
-          unawaited(_showAppearanceSheet(initialSubPage: 'audiobook')),
+      onDockChanged: (ReaderFloatingBallDock dock, double fraction) =>
+          unawaited(src.setReaderFloatingBallPosition(dock, fraction)),
     );
+  }
+
+  // ── 播放态 → chrome 重建 ───────────────────────────────────────────────
+  //
+  // 播放 / 暂停、跟随两颗键的图标取自控制器运行态，而悬浮球拿到的是构建时算好的
+  // [ReaderHeaderAction]；控制器只 notify 自己的监听者，页面不重建图标就会撒谎。
+  // 这里挂一个只在「播放态 / 跟随态翻转」时才重建的监听（位置 tick 不触发），
+  // 控制器换绑 / 解绑时跟着换。三个状态字段在 [_ReaderFushiPageState] 本体
+  // （part 是 extension，放不了字段）。
+  void _syncChromePlaybackListener() {
+    final AudiobookPlayerController? ctrl = _audiobookController;
+    if (identical(ctrl, _chromePlaybackListened)) return;
+    final AudiobookPlayerController? old = _chromePlaybackListened;
+    if (old != null) {
+      old.removeListener(_onChromePlaybackChanged);
+      old.followAudio.removeListener(_onChromePlaybackChanged);
+    }
+    _chromePlaybackListened = ctrl;
+    if (ctrl != null) {
+      ctrl.addListener(_onChromePlaybackChanged);
+      ctrl.followAudio.addListener(_onChromePlaybackChanged);
+      _chromeLastPlaying = ctrl.isPlaying;
+      _chromeLastFollow = ctrl.followAudio.value;
+    }
+  }
+
+  void _onChromePlaybackChanged() {
+    final AudiobookPlayerController? ctrl = _chromePlaybackListened;
+    if (ctrl == null || !mounted) return;
+    final bool playing = ctrl.isPlaying;
+    final bool follow = ctrl.followAudio.value;
+    if (playing == _chromeLastPlaying && follow == _chromeLastFollow) return;
+    _chromeLastPlaying = playing;
+    _chromeLastFollow = follow;
+    _rebuild(() {});
   }
 
   /// 小说页的窗口全屏切换（底栏按钮的执行体）。

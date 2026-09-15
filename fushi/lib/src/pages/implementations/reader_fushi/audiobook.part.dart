@@ -255,6 +255,7 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
       // 旧引用是 session 控制器：先 detach（不 dispose）。reader 字段清掉等下面重接。
       session.detachReader(this);
       _audiobookController = null;
+      _syncChromePlaybackListener();
       _audiobookBookKey = null;
       _srtBookUid = null;
       _srtCueChapterMap = null;
@@ -310,6 +311,7 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     session.attachReader(this);
     _rebuild(() {
       _audiobookController = controller;
+      _syncChromePlaybackListener();
     });
     // 同步一次当前 cue 到 WebView（暂停态也即时高亮）。
     _onCueChanged();
@@ -360,6 +362,7 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     session.attachReader(this);
     _rebuild(() {
       _audiobookController = controller;
+      _syncChromePlaybackListener();
     });
   }
 
