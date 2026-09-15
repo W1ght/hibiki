@@ -29,10 +29,44 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2173 条。点号进各自文件。
+> 共 2208 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2548](bugs/BUG-2548-collection-detail-drops-remote-members.md) | ✅ | ✅ | 合集详情页丢掉全部远端成员：行头 N 项、点进去只剩本地几本 |
+| [BUG-2547](bugs/BUG-2547-shelf-remote-sort-ignored.md) | ✅ | ✅ | 书架排序忽略远端占位卡：host 下发的时刻不用、恒沉底 |
+| [BUG-2546](bugs/BUG-2546-dict-script-window-scope.md) | ✅ | ✅ | 词典自带脚本第二次查词后失效：折叠字段点不开 |
+| [BUG-2545](bugs/BUG-2545-toc-current-chapter-unmarked.md) | ✅ | ✅ | 阅读器导航「章节列表」不标当前章节 |
+| [BUG-2544](bugs/BUG-2544-video-background-pause-no-resume.md) | ✅ | ✅ | 视频切到后台被暂停后回前台不自动续播 |
+| [BUG-2543](bugs/BUG-2543-english-posless-yomitan-deinflection.md) | ✅ | ✅ | 英语无词性 Yomitan 词典的变形还原全部失效，且不规则形无还原规则 |
+| [BUG-2542](bugs/BUG-2542-mobile-clip-export-silent-hang.md) | ✅ | ✅ | 手机端片段导出点了没反应：ffmpeg-kit 无界 await 挂死 + 分享被静默丢弃后仍报成功 |
+| [BUG-2541](bugs/BUG-2541-ass-outline-per-char-overlap.md) | ✅ | ✅ | ASS 描边逐字叠画啃进相邻字填充、细描边被夹下限（字重随窗口变） |
+| [BUG-2540](bugs/BUG-2540-ass-fax-shear-overwrites-rotation.md) | ✅ | ✅ | ASS \fax 切变覆盖 \frz 旋转矩阵项（招牌歪斜） |
+| [BUG-2539](bugs/BUG-2539-ass-layer-zorder.md) | ✅ | ✅ | ASS Layer 不参与绘制 z 序（招牌盖住对白） |
+| [BUG-2538](bugs/BUG-2538-ass-drawing-dropped.md) | ✅ | ✅ | ASS \p 矢量绘图被整条丢弃（招牌白底遮罩不画） |
+| [BUG-2537](bugs/BUG-2537-ass-sign-hover-controls.md) | ✅ | ✅ | ASS 定位字幕落到静止鼠标下即唤出控制条、且随控制条上抬 |
+| [BUG-2536](bugs/BUG-2536-audiobook-chapter-start-image-pause.md) | ✅ | ✅ | 有声书章首插图既不图片等待也不揭防剧透遮罩 |
+| [BUG-2535](bugs/BUG-2535-audiobook-unmatched-cue-chapter-end.md) | ✅ | ✅ | 有声书章尾：最后一句匹配播完、下一句未匹配时不进入下一章 |
+| [BUG-2534](bugs/BUG-2534-ios-gallery-topbar-under-status-bar.md) | ✅ | ✅ | iOS 插图册顶栏被状态栏 / 灵动岛压住，过滤 / 定位 / 关闭点不到 |
+| [BUG-2533](bugs/BUG-2533-reader-status-clock-not-clickable.md) | ✅ | ✅ | 阅读器状态行/播放条的计时图标点不动，改成真正的 MD3 停续键 |
+| [BUG-2532](bugs/BUG-2532-ios-ankimobile-mined-detection.md) | ✅ | ✅ | iOS AnkiMobile 不显示已制卡：加卡回跳的 x-success 被丢弃，isDuplicate 恒 false |
+| [BUG-2531](bugs/BUG-2531-reader-status-row-separate-scrim.md) | ✅ | ✅ | 竖屏读数行自己另画一块遮罩：底栏遮罩看着缺了进度显示那一层高度 |
+| [BUG-2530](bugs/BUG-2530-reader-header-fixed-width-compact-threshold.md) | ✅ | ✅ | 阅读器顶栏/读数按固定窗宽阈值折叠：横屏手机顶部还空着大半条，按钮却已折进 ⋮、读数被踢出播放条 |
+| [BUG-2529](bugs/BUG-2529-audiobook-chapter-transition-stuck-on-nav-abort.md) | ✅ | ✅ | 跨章导航中止不解除跨章守卫，安卓切后台后上下句/高亮跟随永久失效 |
+| [BUG-2528](bugs/BUG-2528-audiobook-panel-short-viewport.md) | ✅ | ✅ | 有声书面板在矮窗（手机横屏）下分段条以下的内容滚不出来 |
+| [BUG-2527](bugs/BUG-2527-reader-stepper-label-truncated.md) | ✅ | ✅ | 阅读设置面板窄窗下 stepper 行标签被压成一个字 |
+| [BUG-2493](bugs/BUG-2493-ios-ankimobile-info-return-not-applied.md) | ✅ | ✅ | iOS AnkiMobile 回跳后牌组/笔记类型不刷新：x-success 未送达时无兜底、互联制卡包裹层静默丢弃回调 |
+| [BUG-2474](bugs/BUG-2474-webkit-line-box-contain-zero-height-lines.md) | ✅ | ✅ | WebKit 上 BUG-2459 的 line-box-contain 把嵌套 inline / 空行行盒压成零高：目录列叠印、空行消失 |
+| [BUG-2464](bugs/BUG-2464-reader-reanchor-frozen-when-page-hidden.md) | ✅ | ✅ | 页面隐藏时阅读器重锚旗永不清（rAF 冻结）位置与进度不落库 |
+| [BUG-2463](bugs/BUG-2463-reader-continuous-reveal-smooth-scroll-inflates-ledger.md) | ✅ | ✅ | 连续模式听书长距离平滑跟随滚动把途中视口计入阅读账本 |
+| [BUG-2462](bugs/BUG-2462-audiobook-resume-text-behind-audio.md) | ✅ | ✅ | 有声书重开书正文恢复点落后于音频位置 |
+| [BUG-2461](bugs/BUG-2461-reader-settings-live-engine-config.md) | ✅ | ✅ | 阅读器边距等设置改完不实时生效 |
+| [BUG-2460](bugs/BUG-2460-reader-status-footer-inside-bottom-safe-area.md) | ✅ | ✅ | 阅读器状态行坐进系统底部安全区 |
+| [BUG-2459](bugs/BUG-2459-webkit-ruby-paragraph-first-line-growth.md) | ✅ | ✅ | WebKit 上首行含振假名的段落被撑高一截 |
+| [BUG-2457](bugs/BUG-2457-reader-paged-bottom-font-size-band.md) | ✅ | ✅ | 分页布局底部多留一个字号的空带 |
+| [BUG-2454](bugs/BUG-2454-reader-image-max-stale-on-chrome-insets.md) | ✅ | ✅ | 分页整页插图在 chrome inset 变化后被切成三段 |
+| [BUG-2453](bugs/BUG-2453-reader-status-footer-duplicated-squeeze.md) | ✅ | ✅ | 挤压态底栏与状态行重复画同一串读数 |
+| [BUG-2440](bugs/BUG-2440-ios-bottom-safearea-gap.md) | ✅ | ✅ | iOS 页面底部安全区留下一条不可用空白，滚动内容被硬切 |
 | [BUG-2420](bugs/BUG-2420-source-url-stale-windows-association.md) | ✅ | ✅ | 来源链接仍启动旧安装版Fushi |
 | [BUG-2419](bugs/BUG-2419-lapis-source-leading-break.md) | ✅ | ✅ | Lapis来源模板更新残留前导空行 |
 | [BUG-2418](bugs/BUG-2418-video-source-review-playback.md) | ✅ | ✅ | 视频来源回看无法继续播放且导航使用阅读文案 |
@@ -40,6 +74,7 @@
 | [BUG-2416](bugs/BUG-2416-card-source-root-url.md) | ✅ | ✅ | Windows 来源链接规范化后被错误判无效 |
 | [BUG-2407](bugs/BUG-2407-integration-drive-uninstalls-app.md) | ✅ | ✅ | 集成测试成功后 flutter drive 清理卸载应用并删除私有数据 |
 | [BUG-2404](bugs/BUG-2404-anki-note-dialog-stacking.md) | ✅ | ✅ | 已制卡候选与卡片查看器重复堆叠弹窗 |
+| [BUG-2396](bugs/BUG-2396-stat-period-grid-phone-single-column.md) | ✅ | ✅ | 统计中心时段汇总卡在手机上只显示一列 |
 | [BUG-2386](bugs/BUG-2386-dictionary-redirect-provenance.md) | ✅ | ✅ | 词典查词把同释义真实词条误判为重定向别名删除 |
 | [BUG-2385](bugs/BUG-2385-dictionary-data-missing-lookup.md) | ✅ | ✅ | 词典登记仍在但资源目录缺失导致完整词查不到 |
 | [BUG-2381](bugs/BUG-2381-aidoku-request-error-unreadable.md) | ✅ | ✅ | Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断 |
