@@ -38,7 +38,10 @@ void main() {
     // 增减都必须经 setState，否则弹窗不会真的移动。
     expect(src.contains('setState(() => _popupHidingDialogDepth++)'), isTrue,
         reason: '$label 计数自增须走 setState');
-    expect(src.contains('setState(() => _popupHidingDialogDepth ='), isTrue,
+    expect(
+        RegExp(r'setState\(\s*\(\)\s*=>\s*_popupHidingDialogDepth\s*=')
+            .hasMatch(src),
+        isTrue,
         reason: '$label 计数复位须走 setState');
     // parkedPopupLayer 的 visible 与「无对话框」相与 → 对话框期间弹窗停靠屏外。
     expect(src.contains(visibleExpr), isTrue,

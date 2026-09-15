@@ -190,12 +190,18 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
   /// 云角标 ☁（[_remoteBookCoverWithCloudBadge]），混排进书架主网格（[_ShelfBookSlot.remote]
   /// → [_buildShelfGroupCard] 散卡路径）。短按/下载按钮复用现有下载→入库链
   /// （[_downloadRemoteBook]），完成后原地变正常卡（下载后 dedup 去重隐藏占位）。
-  Widget _buildRemoteBookCard(RemoteBookInfo book) {
+  ///
+  /// [focusIdPrefix]：合集详情页渲染路径传 'collection-detail-' 隔离焦点 id 命名
+  /// 空间（BUG-1009——详情页 push 在书架之上，两条路由同时存活，同名 focusId 会被
+  /// 焦点注册表按 id 覆盖）；书架路径恒空串（id 不变）。
+  Widget _buildRemoteBookCard(RemoteBookInfo book,
+      {String focusIdPrefix = ''}) {
     final String safeKey = _safeRemoteBookKey(book.title);
     return _bookCardShell(
       slotAspectRatio: kShelfBookCardAspectRatio,
       cardKey: ValueKey<String>('remote_book_card_$safeKey'),
-      focusId: FushiFocusId('reader-shelf-remote-book-$safeKey'),
+      focusId:
+          FushiFocusId('${focusIdPrefix}reader-shelf-remote-book-$safeKey'),
       onTap: () => _downloadRemoteBook(book),
       // 短按仍直接下载（无本地副本不能直接读，下载合理）；长按 / 桌面右键
       // （_bookCardShell.onSecondaryTap 同绑 onLongPress）改弹选项面板，与本地
@@ -851,14 +857,16 @@ extension _ReaderHistoryRemote on _ReaderFushiHistoryPageState {
   /// 纯 SRT 远端有声书占位卡：耳机类型徽章 + 云角标 + 下载按钮/进度。短按/下载按钮
   /// 走 [_downloadRemoteSrtAudiobook]（拉包 → importAudioDatabasePackage 纯 SRT 分支
   /// → 落 SrtBooks 行），完成后原地变本地 SRT 卡（重拉远端列表按 uid dedup 隐藏占位）。
-  Widget _buildRemoteSrtCard(RemoteAudiobookInfo book) {
+  /// [focusIdPrefix]：同 [_buildRemoteBookCard]，合集详情页传前缀隔离焦点 id。
+  Widget _buildRemoteSrtCard(RemoteAudiobookInfo book,
+      {String focusIdPrefix = ''}) {
     final String title = book.title ?? book.identity;
     final String safeKey = _safeRemoteBookKey(title);
     final ColorScheme cs = theme.colorScheme;
     return _bookCardShell(
       slotAspectRatio: kShelfBookCardAspectRatio,
       cardKey: ValueKey<String>('remote_srt_card_$safeKey'),
-      focusId: FushiFocusId('reader-shelf-remote-srt-$safeKey'),
+      focusId: FushiFocusId('${focusIdPrefix}reader-shelf-remote-srt-$safeKey'),
       onTap: () => _downloadRemoteSrtAudiobook(book),
       // 长按 / 右键：弹动作面板，与远端 EPUB 卡（[_showRemoteBookDialog]）一致
       // （巡检 PR-3——旧行为长按直接开始下载，重手势与轻点击等价且不可预览动作）。

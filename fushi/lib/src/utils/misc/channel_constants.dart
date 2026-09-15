@@ -12,10 +12,17 @@ abstract final class FushiChannels {
   static const MethodChannel tts = MethodChannel('$_prefix/tts');
   static const MethodChannel update = MethodChannel('$_prefix/update');
   static const MethodChannel volumeKeys = MethodChannel('$_prefix/volume_keys');
-  static const MethodChannel floatingLyric =
-      MethodChannel('$_prefix/floating_lyric');
-  static const MethodChannel floatingDict =
-      MethodChannel('$_prefix/floating_dict');
+  static const MethodChannel floatingLyric = MethodChannel(
+    '$_prefix/floating_lyric',
+  );
+  static const MethodChannel floatingDict = MethodChannel(
+    '$_prefix/floating_dict',
+  );
+
+  /// 查词输入框的输入法语言。桌面/iOS 上原生侧据此真的切换系统输入法；Android 做
+  /// 不到切换，只把用户选的语言存下来给**原生**查词输入框（悬浮词典 / 弹窗词典
+  /// 那两个 EditText，它们不是 Flutter TextField，吃不到 hintLocales 参数）。
+  static const MethodChannel lookupIme = MethodChannel('$_prefix/lookup_ime');
   static const MethodChannel lifecycle = MethodChannel('$_prefix/lifecycle');
   static const MethodChannel fonts = MethodChannel('$_prefix/fonts');
   static const MethodChannel saf = MethodChannel('$_prefix/saf');
@@ -23,22 +30,29 @@ abstract final class FushiChannels {
   /// Hibiki→Fushi 跨包名迁移（探测/拉起新包、卸载引导、注销系统入口）。
   static const MethodChannel migration = MethodChannel('$_prefix/migration');
   static const MethodChannel iconSwitch = MethodChannel('$_prefix/icon_switch');
-  static const MethodChannel clipboardImage =
-      MethodChannel('$_prefix/clipboard_image');
-  static const MethodChannel screenBrightness =
-      MethodChannel('$_prefix/screen_brightness');
-  static const MethodChannel selectionActions =
-      MethodChannel('$_prefix/selection_actions');
-  static const MethodChannel aidokuRuntime =
-      MethodChannel('$_prefix/aidoku_runtime');
-  static const MethodChannel cloudflareProxyBrowser =
-      MethodChannel('$_prefix/cloudflare_proxy_browser');
+  static const MethodChannel clipboardImage = MethodChannel(
+    '$_prefix/clipboard_image',
+  );
+  static const MethodChannel screenBrightness = MethodChannel(
+    '$_prefix/screen_brightness',
+  );
+  static const MethodChannel selectionActions = MethodChannel(
+    '$_prefix/selection_actions',
+  );
+  static const MethodChannel aidokuRuntime = MethodChannel(
+    '$_prefix/aidoku_runtime',
+  );
+  static const MethodChannel cloudflareProxyBrowser = MethodChannel(
+    '$_prefix/cloudflare_proxy_browser',
+  );
   // TODO-617: drives the desktop global lookup overlay (bare WebView2 window).
-  static const MethodChannel globalLookup =
-      MethodChannel('$_prefix/global_lookup');
+  static const MethodChannel globalLookup = MethodChannel(
+    '$_prefix/global_lookup',
+  );
   // Windows galgame Hook 台词浮窗：独立的 FloatingLyricWindow 实例。
-  static const MethodChannel galHookText =
-      MethodChannel('$_prefix/gal_hook_text');
+  static const MethodChannel galHookText = MethodChannel(
+    '$_prefix/gal_hook_text',
+  );
   // TODO-1232 A3: render-backend experiment toggle (persist "disable Impeller"
   // so MainActivity can force Skia at the next launch; Android-only).
   static const MethodChannel render = MethodChannel('$_prefix/render');

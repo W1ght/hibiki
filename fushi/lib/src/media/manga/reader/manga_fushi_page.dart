@@ -15,6 +15,7 @@ import 'package:path/path.dart' as p;
 import 'package:window_manager/window_manager.dart';
 
 import 'package:fushi_anki/fushi_anki.dart';
+import 'package:fushi/src/anki/source_review_session.dart';
 import 'package:fushi_audio/fushi_audio.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:fushi/src/anki/anki_view_model.dart';
@@ -363,6 +364,7 @@ class MangaFushiPage extends BaseSourcePage {
     required super.item,
     required this.bookKey,
     this.onlineChapter,
+    this.sourceReview,
   });
 
   /// `EpubBooks` 主键（净化后的标题），由 `hoshi://book/<bookKey>` 解析而来。
@@ -371,6 +373,9 @@ class MangaFushiPage extends BaseSourcePage {
   /// A directly selected online chapter. Shelf launches leave this null and
   /// restore the Mihon chapter from the restart descriptor in `sourceMetadata`.
   final OnlineMangaReaderChapter? onlineChapter;
+
+  /// Immutable card locator. Its position is applied only on the initial load.
+  final CardSourceLink? sourceReview;
 
   /// 漫画拦截器专属虚拟域。必须与阅读器的 `fushi.local` 互异。
   static const String kMangaHost = 'manga.local';
@@ -901,6 +906,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   /// 最近一次非空 OCR 选区所在的精确页及其卡图。页码非 null 而路径为 null 表示
   /// 精确页不可用，此时宁可不附图，也不能静默回退到双页 spread 的另一页。
   int? _miningPageIndex;
+  String? _miningChapterId;
   String? _miningPageImagePath;
   int _miningPageGeneration = 0;
 
@@ -967,6 +973,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   /// 位置落定：喂空闲门（翻页 / 页内滚动 = 用户输入）并把当前可见页交给账本。
   /// 与当前单元相同的重复落定（webtoon 页内滚动）在账本里是 no-op。
   void _noteVisiblePages() {
+    if (_sourceReviewActive) return;
     _studyClock?.touch();
     final (int start, int end) = _visiblePageRange();
     _readLedger.arrive(start, end);
@@ -1064,8 +1071,56 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     );
   }
 
+  SourceReviewSession? _sourceReviewSession;
+  bool _reviewContinued = false;
+  bool _sourceLocatorApplied = false;
+  bool _disposedDuringSourceReview = false;
+  bool get _sourceReviewActive =>
+      _disposedDuringSourceReview ||
+      (_sourceReviewSession?.isReview ??
+          (widget.sourceReview != null && !_reviewContinued));
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final SourceReviewSession? session = SourceReviewScope.maybeOf(context);
+    if (identical(session, _sourceReviewSession)) return;
+    _sourceReviewSession?.removeListener(_onSourceReviewChanged);
+    _sourceReviewSession = session;
+    session?.addListener(_onSourceReviewChanged);
+  }
+
+  void _onSourceReviewChanged() {
+    if (!mounted || _sourceReviewActive || _reviewContinued) return;
+    _reviewContinued = true;
+    _progressDebounce?.cancel();
+    _readLedger.reset();
+    if (_bookRow != null && _payload != null) {
+      _ensureStudyClock(appModel.database);
+      _noteVisiblePages();
+    }
+    _lastSavedPage = -1;
+    unawaited(_continueSourceReading());
+    setState(() {});
+  }
+
+  Future<void> _continueSourceReading() async {
+    final OnlineMangaLibraryService? service = _shelfLibraryService;
+    final OnlineMangaLibraryEntry? entry = _shelfEntry;
+    if (service != null && entry != null && _shelfChapterIndex >= 0) {
+      await service.selectChapter(
+        bookKey: widget.bookKey,
+        entry: entry,
+        chapterIndex: _shelfChapterIndex,
+      );
+    }
+    await _flushPosition();
+  }
+
   @override
   void dispose() {
+    _disposedDuringSourceReview = _sourceReviewActive;
+    _sourceReviewSession?.removeListener(_onSourceReviewChanged);
     if (Platform.isWindows || Platform.isLinux) {
       windowManager.removeListener(this);
     }
@@ -1376,6 +1431,16 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
       }
     }
 
+    if (!_sourceLocatorApplied && widget.sourceReview?.pageIndex != null) {
+      restoredPage = widget.sourceReview!.pageIndex!;
+      if (restoredPage >= payload.images.length) {
+        await localPageSession.close();
+        if (mounted) setState(() => _loadFailed = true);
+        return;
+      }
+      restoredFraction = 0;
+      _sourceLocatorApplied = true;
+    }
     _ensureStudyClock(db);
 
     final int restoredSpread = MangaFushiPage.restoreSpreadFromProgress(
@@ -1425,13 +1490,29 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
         _onlineChallengeRuntime = manager.runtime;
       }
       int chapterIndex = OnlineMangaLibraryService.initialChapterIndex(entry);
+      if (!_sourceLocatorApplied &&
+          widget.sourceReview != null &&
+          widget.sourceReview!.chapterId == null) {
+        throw const OnlineMangaUnavailable(
+          OnlineMangaUnavailableReason.runtimeFailure,
+          'The card source has no chapter identity',
+        );
+      }
+      if (!_sourceLocatorApplied && widget.sourceReview?.chapterId != null) {
+        chapterIndex = entry.chapters.indexWhere(
+          (OnlineMangaChapter chapter) =>
+              chapter.key == widget.sourceReview!.chapterId,
+        );
+      }
       if (chapterIndex < 0) {
         throw const OnlineMangaUnavailable(
           OnlineMangaUnavailableReason.runtimeFailure,
           'The manga has no chapters',
         );
       }
-      if (entry.currentChapterIndex == null) {
+      if (_sourceReviewActive) {
+        entry = entry.copyWith(currentChapterIndex: chapterIndex);
+      } else if (entry.currentChapterIndex != chapterIndex) {
         entry = await service.selectChapter(
           bookKey: row.bookKey,
           entry: entry,
@@ -1660,6 +1741,16 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
           );
         }
       }
+    }
+    if (!_sourceLocatorApplied && widget.sourceReview?.pageIndex != null) {
+      restoredPage = widget.sourceReview!.pageIndex!;
+      if (restoredPage >= payload.images.length) {
+        await pageSession.close();
+        if (mounted) setState(() => _loadFailed = true);
+        return;
+      }
+      restoredFraction = 0;
+      _sourceLocatorApplied = true;
     }
     restoredPage = restoredPage.clamp(
       0,
@@ -2317,11 +2408,13 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     try {
       // 换章前把当前章的进度落库，否则「翻到下一章再翻回来」会丢掉刚读的位置。
       await _saveCurrentChapterState();
-      final OnlineMangaLibraryEntry selected = await service.selectChapter(
-        bookKey: row.bookKey,
-        entry: entry,
-        chapterIndex: index,
-      );
+      final OnlineMangaLibraryEntry selected = _sourceReviewActive
+          ? entry.copyWith(currentChapterIndex: index)
+          : await service.selectChapter(
+              bookKey: row.bookKey,
+              entry: entry,
+              chapterIndex: index,
+            );
       await _openShelfChapter(
         row: row,
         service: service,
@@ -2362,6 +2455,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
 
   /// 把当前页码写进 `manga_chapter_states`。
   Future<void> _saveCurrentChapterState({int? readAt}) async {
+    if (_sourceReviewActive) return;
     final EpubBookRow? row = _bookRow;
     final String? chapterKey = _shelfChapterKey;
     if (row == null || chapterKey == null || row.uid.isEmpty) return;
@@ -3633,6 +3727,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   Future<void> _selectPageForMining(int? pageIndex) async {
     final int generation = ++_miningPageGeneration;
     _miningPageIndex = pageIndex;
+    _miningChapterId = _shelfChapterKey;
     _miningPageImagePath = null;
     if (pageIndex == null) return;
 
@@ -3714,6 +3809,23 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   @override
   Future<MinePopupResult> onMineFromPopup(Map<String, String> fields) async {
     final BaseAnkiRepository repo = ref.read(ankiRepositoryProvider);
+    final SourceReviewSession? reviewSession = _sourceReviewSession;
+    final String? bookUid = _bookUid;
+    final String? title = _bookRow?.title;
+    final int sentenceOffset = _lastSentenceOffset;
+    final String rawPayloadJson = jsonEncode(fields);
+    final CardSourceLink? sourceLink = bookUid == null
+        ? null
+        : CardSourceLink(
+            kind: CardSourceKind.manga,
+            uid: bookUid,
+            sourceId:
+                reviewSession?.link.sourceId ?? CardSourceLink.newSourceId(),
+            pageIndex: _miningPageIndex ?? _currentPage,
+            chapterId: _miningPageIndex == null
+                ? _shelfChapterKey
+                : _miningChapterId,
+          );
     try {
       final String sentence = _lastSentence.isNotEmpty
           ? _lastSentence
@@ -3730,12 +3842,13 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
 
       final AnkiMiningContext miningContext = AnkiMiningContext(
         sentence: sentence,
-        documentTitle: _bookRow?.title,
+        documentTitle: title,
         coverPath: coverPath,
-        sentenceOffset: _lastSentenceOffset,
+        sentenceOffset: sentenceOffset,
+        sourceLink: sourceLink,
         source: AnkiMiningSource.book,
         bookTitleTag: appModel.autoAddBookNameToTags
-            ? BaseAnkiRepository.sanitizeTitleTag(_bookRow?.title)
+            ? BaseAnkiRepository.sanitizeTitleTag(title)
             : null,
       );
 
@@ -3743,12 +3856,22 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
         msg: t.card_mining_pending,
         status: MineToastStatus.pending,
       );
-      final MineOutcome outcome = await repo.mineEntry(
-        rawPayloadJson: jsonEncode(fields),
-        context: miningContext,
+      final MineOutcome outcome = reviewSession != null
+          ? await runWithLookupPopupHidden(
+              () => reviewSession.mine(
+                rawPayloadJson: rawPayloadJson,
+                context: miningContext,
+              ),
+            )
+          : await repo.mineEntry(
+              rawPayloadJson: rawPayloadJson,
+              context: miningContext,
+            );
+      final described = describeMineOutcome(
+        outcome,
+        overwrite: reviewSession != null,
       );
-      final described = describeMineOutcome(outcome);
-      if (described.record) {
+      if (described.record && reviewSession == null) {
         unawaited(_recordMinedCount());
       }
       FushiToast.showMine(msg: described.message, status: described.status);
@@ -3778,6 +3901,22 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
     } catch (e, stack) {
       ErrorLogService.instance.log('MangaFushiPage.recordMined', e, stack);
     }
+  }
+
+  @override
+  Future<MinePopupResult> onMinedCardActionFromPopup(
+    Map<String, String> fields,
+  ) => _sourceReviewSession != null
+      ? onMineFromPopup(fields)
+      : super.onMinedCardActionFromPopup(fields);
+
+  @override
+  Future<MinePopupResult> onUpdateFromPopup(
+    int noteId,
+    Map<String, String> fields,
+  ) async {
+    if (_sourceReviewSession != null) return onMineFromPopup(fields);
+    return super.onUpdateFromPopup(noteId, fields);
   }
 
   // ── 阅读模式覆盖 ─────────────────────────────────────────────────────
@@ -3889,6 +4028,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   /// v92：建好并启动本页唯一的阅读时钟（幂等）。空闲门 + 生命周期前台门只对
   /// 阅读面生效（用户拍板：视频以播放态为准）。
   void _ensureStudyClock(FushiDatabase db) {
+    if (_sourceReviewActive) return;
     _studyClock ??= StudyClock(
       database: db,
       mediaKind: kActivityMediaBook,
@@ -3904,6 +4044,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   }
 
   Future<void> _persistPosition(int page, double fraction) async {
+    if (_sourceReviewActive) return;
     _lastSavedPage = page;
     _lastSavedFraction = fraction;
     if (!_persistProgress) return;
@@ -3979,6 +4120,7 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
   /// 三个量纲在同一段同一行、绝对值写回：落库失败由时钟在下个 tick 重写，没有任何
   /// 计数器可清、也没有任何东西能重复累加。页数仍然绝不塞进字数口径。
   Future<void> _flushReadingStats() async {
+    if (_sourceReviewActive) return;
     await _studyClock?.flushNow();
   }
 
@@ -4245,6 +4387,21 @@ class _MangaFushiPageState extends BaseSourcePageState<MangaFushiPage>
                 fit: StackFit.expand,
                 children: <Widget>[
                   Positioned.fill(child: _buildBody()),
+                  if (_sourceReviewSession
+                      case final SourceReviewSession session)
+                    Positioned(
+                      top: _chromeVisible ? kMinInteractiveDimension : 0,
+                      left: 0,
+                      right: 0,
+                      child: SafeArea(
+                        child: SourceReviewBanner(
+                          runHidden: runWithLookupPopupHidden,
+                          session: session,
+                          onReturn: () =>
+                              unawaited(Navigator.of(context).maybePop()),
+                        ),
+                      ),
+                    ),
                   if (_onlinePageChallenge != null &&
                       _onlineChallengeRuntime != null)
                     Positioned(

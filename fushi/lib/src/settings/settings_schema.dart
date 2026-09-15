@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:fushi/i18n/strings.g.dart';
 import 'package:fushi/src/settings/settings_context.dart';
 import 'package:fushi/src/settings/settings_destination.dart';
+import 'package:fushi/src/settings/settings_schema_ai.dart';
 import 'package:fushi/src/settings/settings_schema_appearance.dart';
 import 'package:fushi/src/settings/settings_schema_card_creation.dart';
 import 'package:fushi/src/settings/settings_schema_downloads.dart';
@@ -104,6 +105,8 @@ List<SettingsDestination> _buildDestinations() {
     // 「在线服务」大类：第三方 API / 索引器 / 媒体服务器凭据的唯一的家，紧跟
     // 它们喂养的视频/下载之后（详见 buildServicesDestination）。
     buildServicesDestination(),
+    // AI 提供商配置紧随在线服务：同属「连接」大组、同一个 services 模块开关。
+    buildAiDestination(),
     // 「游戏」大类：游戏库 / 捕获工作台 / 诊断的可搜导航入口（仅 Windows，详见
     // buildGameDestination）。
     buildGameDestination(),

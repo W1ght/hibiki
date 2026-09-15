@@ -1334,6 +1334,7 @@ class BackupService {
     );
   }
 
+
   /// 「这条 `preferences` key 不得离开本设备」的备份侧唯一判据：
   /// [PrefRedactionPolicy]（凭据 + 同步/设备本地配置）**加上**「功能模块」的 11
   /// 个 `module_*_enabled` 开关。

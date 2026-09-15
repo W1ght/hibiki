@@ -327,8 +327,28 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
       controller = await session.start(
         info: req.info,
         audioFiles: req.audioFiles,
-        prefs: req.prefs,
-        persist: req.persist,
+        prefs: _sourceReviewActive
+            ? SessionPrefs(
+                followAudio: false,
+                delayMs: req.prefs.delayMs,
+                speed: req.prefs.speed,
+                positionMs: 0,
+                imagePauseSec: req.prefs.imagePauseSec,
+                volume: req.prefs.volume,
+              )
+            : req.prefs,
+        persist: SessionPersistCallbacks(
+          onPositionWrite: (String key, int positionMs) async {
+            if (!_sourceReviewActive) {
+              await req.persist.onPositionWrite(key, positionMs);
+            }
+          },
+          onDelayPersist: req.persist.onDelayPersist,
+          onSpeedPersist: req.persist.onSpeedPersist,
+          onVolumePersist: req.persist.onVolumePersist,
+          onImagePausePersist: req.persist.onImagePausePersist,
+          onFollowAudioPersist: req.persist.onFollowAudioPersist,
+        ),
         // 灌扁平全书 cue 作初值（_primeAudioCuesForCurrentBook 随后按章节精确覆盖）；
         // 与后台听书路径共用 req.cues，使 attach 前的瞬态也有 cue（TODO-354）。
         cues: req.cues,
@@ -346,7 +366,35 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     }
     if (controller == null) return;
     if (!mounted) {
-      // 页面在 await 期间被弃：会话仍可在后台续播（用户决策①后台继续），不 stop。
+      if (_sourceReviewSession != null &&
+          identical(session.controller, controller)) {
+        await session.stop();
+      }
+      return;
+    }
+    final CardSourceLink? source = _sourceReviewSession?.link;
+    if (source?.startMs != null && source?.audioFileIndex != null) {
+      try {
+        await controller.restoreToFileOffset(
+          fileIndex: source!.audioFileIndex!,
+          positionMs: source.startMs!,
+        );
+      } catch (error, stackTrace) {
+        ErrorLogService.instance.log(
+          'ReaderFushi.restoreCardSource',
+          error,
+          stackTrace,
+        );
+        if (identical(session.controller, controller)) await session.stop();
+        if (mounted) FushiToast.show(msg: t.card_source_review_invalid);
+        return;
+      }
+    }
+    if (!mounted) {
+      if (_sourceReviewSession != null &&
+          identical(session.controller, controller)) {
+        await session.stop();
+      }
       return;
     }
     if (req.info.isSrtBookSource) {
@@ -760,6 +808,7 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
       cue: cue,
       reveal: reveal,
       pauseEnabled: pauseEnabled,
+      fromChapterStart: _consumeAudioChapterArrival(cue),
     );
     // reveal 落定后的进度补刷（B-3 窗吃掉了跟随滚动的 scroll 回传，见方法注释）。
     if (reveal) _scheduleReanchorSettleProgressRefresh();
@@ -820,7 +869,9 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     // TODO-1037：cue 驱动的跨章会一步跳过「独立成章的纯图片页」（无 cue 故从不
     // 被推进看见），图片等待对它彻底失效。跨章落定前先把中间纯图片章逐个导航过去
     // 并停留 imagePauseSec 秒，让用户看见每张整章插图，再继续到目标文本章。
-    await _pauseThroughImageOnlyChapters(newSection);
+    final bool pausedOnTarget = await _pauseThroughImageOnlyChapters(
+      newSection,
+    );
     // BUG-1277：图片章停留会跨越多个 await；期间 route 可能已 dispose。
     // dispose 会 detach reader，但已经在飞的回调仍会从上面的 Future 返回。此时既不能
     // 再进入 _navigateToChapter/setState，也不能把图片序列 finally 持住的跨章守卫
@@ -829,7 +880,27 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
       _audiobookController?.cancelChapterTransition();
       return;
     }
+    // 章首插图：音频是从上一章**连续读过来**的，目标章第一句之前的插图（章扉画 /
+    // 被吸收进宿主顶部的单图片章）已被音频跨过。但新文档里 cue 推进锚点是空的
+    // （载入后 resetImagePauseAnchor 归零），__fushiImageBetween(null, el) 直接判无图
+    // → 章首图既不触发图片等待、也不揭防剧透遮罩。这里记下「本次到达由音频跨章驱动」，
+    // 让落地后第一次真实高亮把文档开头当作上一句锚点（见 _onCueChanged →
+    // AudiobookBridge.highlight(fromChapterStart)）。图片章停留序列若已在目标宿主上
+    // 停留 + 揭遮罩过（被吸收图片章场景），不再二次触发。
+    _audioChapterArrivalSection = pausedOnTarget ? -1 : newSection;
     await _navigateToChapter(newSection, progress: progress ?? 0.0);
+  }
+
+  /// 消费 [_audioChapterArrivalSection]：仅当目标章已经落地（不在恢复中、当前章就是
+  /// 到达章）且本次高亮是一条真实 cue 时返回 true，并清掉标记；其余情况原样保留
+  /// （载入期的瞬态 notify、未匹配 cue 的清高亮都不消费，等第一条匹配 cue 落地）。
+  bool _consumeAudioChapterArrival(AudioCue? cue) {
+    final int section = _audioChapterArrivalSection;
+    if (section < 0) return false;
+    if (cue == null || cue.textFragmentId.isEmpty) return false;
+    if (_restoreInFlight || _currentChapter != section) return false;
+    _audioChapterArrivalSection = -1;
+    return true;
   }
 
   /// TODO-1037：跨章推进若跨过「独立成章的纯图片章」，且图片等待开启
@@ -851,10 +922,14 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
   /// [AudiobookPlayerController.holdChapterTransition] 守卫——否则每个中间章载入完成
   /// 的 `notifySectionRestoreCompleted` 会把 `_chapterTransition` 清回 false，下一
   /// tick 可能重入 `onCrossChapter` 乱跳。
-  Future<void> _pauseThroughImageOnlyChapters(int targetSection) async {
+  ///
+  /// 返回值：序列最后一次停留是否落在 [targetSection] 自己的宿主页上（被吸收单图片章
+  /// 场景，TODO-1128：停留 + 揭遮罩已经在目标章顶部做过）。调用方据此决定落地后是否
+  /// 还要把章首插图当作「音频刚跨过的图」再处理一次。
+  Future<bool> _pauseThroughImageOnlyChapters(int targetSection) async {
     final AudiobookPlayerController? controller = _audiobookController;
     if (controller == null || _book == null || _imageChapterPauseInFlight) {
-      return;
+      return false;
     }
     final List<int> imageChapters = imageOnlyChaptersToPauseBetween(
       fromChapter: _currentChapter,
@@ -864,8 +939,9 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
       isImageOnly: _book!.isImageOnlyChapter,
       isNav: _book!.isChapterNav,
     );
-    if (imageChapters.isEmpty) return;
+    if (imageChapters.isEmpty) return false;
     _imageChapterPauseInFlight = true;
+    bool pausedOnTarget = false;
     // TODO-1037（重入竞态根因修复）：整段序列期间让控制器持住跨章守卫。每个中间章
     // 载入完成会**同步**调 notifySectionRestoreCompleted——它原本无条件清
     // _chapterTransition 并同步 _updateCurrentCue，此刻音频仍在播放（pause 要等本次
@@ -895,6 +971,7 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
           await AudiobookBridge.revealAllBlurred(webCtrl);
         }
         await controller.awaitImageChapterPause();
+        pausedOnTarget = resolved == _resolveNavChapter(targetSection);
       }
     } finally {
       _imageChapterPauseInFlight = false;
@@ -904,6 +981,7 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
       controller.setImageChapterPauseActive(false);
       controller.holdChapterTransition();
     }
+    return pausedOnTarget;
   }
 
   Future<void> _handleBoundarySkip(int delta) async {
@@ -1266,7 +1344,19 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
         // 在上面给诚实文案），此处不再有散装特判。
         // M2-M5：裁音频 → 渲文本图 → H.264 .mp4 合成 → 分享/存盘。异步推进，
         // 先给一个反馈 toast；失败在管线内各自 toast。防重入：导出进行中再点直接忽略。
-        if (_audiobookClipExporting) return;
+        if (_audiobookClipExporting) {
+          // 从前是裸 return：这是整条链路上唯一**完全静默**的用户可达早退——无
+          // toast、无日志、无 debugPrint。一旦上一次导出卡住把标志钉在 true
+          // （见 _runAudiobookClipPipeline 的 try/finally 说明），此后每次点导出
+          // 都撞在这里，用户看到的就是「点了没反应」（BUG-2542）。视频页同性质的
+          // 防重入门一直是会提示的（video_fushi/clip_export.part.dart），这边只是
+          // 漏了。
+          FushiToast.show(
+            msg: t.audiobook_export_clip_in_progress,
+            severity: ToastSeverity.info,
+          );
+          return;
+        }
         // BUG-1321：字幕措辞与 EPUB 选区不一致时禁用逐句高亮（静态精确选区卡，
         // BUG-968 契约不变），但整段音频窗已经通过 sentenceRange 进入 range——静态
         // 回退裁的仍是整段选区音频，不再塌缩成单句。
@@ -1452,18 +1542,6 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     _AudiobookClipDynamicPlan? dynamicPlan,
   }) async {
     _audiobookClipExporting = true;
-    FushiToast.show(
-      msg: t.audiobook_export_clip_in_progress,
-      severity: ToastSeverity.info,
-    );
-
-    // 渲图前先抓阅读主题色 + 写排方向 + 字号（在 await 前读，避免跨 await 用 context）。
-    final ReaderThemeColors themeColors = _readerThemeColors;
-    final bool vertical =
-        _settings?.writingMode.startsWith('vertical') ?? false;
-    final double baseFontSize = _settings?.fontSize ?? 22;
-    final double lineHeight = _settings?.lineHeight ?? 1.65;
-    final OverlayState? overlay = Overlay.maybeOf(context);
 
     File? audioClip;
     File? imageFile;
@@ -1477,7 +1555,26 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
     // 的文件，与更早的 mjpeg/.mov（BUG-809）同型失败。两端统一 .mp4 容器（faststart）。
     // isDesktop 仍用于产物落盘位置与清理策略（桌面存盘 / 移动走系统分享），与编码无关。
     const String videoExt = 'mp4';
+    // 防重入标志与 try/finally **同域**（BUG-2542）：置位曾在 try 之外，而本方法的
+    // 调用点是 `unawaited(...)`。于是「置位」与「try」之间的 `_readerThemeColors` /
+    // `_settings` / `Overlay.maybeOf(context)` 任一抛出，都会变成无人接管的异步
+    // 错误——没有 catch、没有 toast、标志永久为真，此后每次点导出都撞在防重入门上
+    // 「没反应」。这些读取本身仍必须在首个 await 之前（避免跨 await 用 context），
+    // 所以是把它们挪进 try 顶部，而不是把置位推后。
     try {
+      FushiToast.show(
+        msg: t.audiobook_export_clip_in_progress,
+        severity: ToastSeverity.info,
+      );
+
+      // 渲图前先抓阅读主题色 + 写排方向 + 字号（在 await 前读，避免跨 await 用 context）。
+      final ReaderThemeColors themeColors = _readerThemeColors;
+      final bool vertical =
+          _settings?.writingMode.startsWith('vertical') ?? false;
+      final double baseFontSize = _settings?.fontSize ?? 22;
+      final double lineHeight = _settings?.lineHeight ?? 1.65;
+      final OverlayState? overlay = Overlay.maybeOf(context);
+
       final Directory tmpDir = await getTemporaryDirectory();
       final String stamp = DateTime.now().millisecondsSinceEpoch.toString();
       final String base = p.join(tmpDir.path, 'audiobook_clip_$stamp');
@@ -1703,11 +1800,20 @@ extension _ReaderAudiobook on _ReaderFushiPageState {
         // BUG-1243：ffmpeg 合成参数已显式 `-map 0:v:0 -map 1:a:0`，AAC 在 MOV 内。
         // 旧兼容兜底又把临时 .aac 当第二个附件分享，系统分享面板把它显示成一个多余
         // “字幕/音频文件”。产物契约收敛为单个带声视频，不再泄漏中间文件。
-        await FushiShare.shareFiles(sharedFiles, subject: text);
+        //
+        // BUG-2542：移动端产物落 app 私有目录（不进相册），这次分享面板是用户取回
+        // 它的唯一通道。面板没呈现（防重入门丢弃 / 平台不回包）时不能再报「已保存」
+        // ——那是个用户拿不到文件的假成功。
+        final bool shared = await FushiShare.shareFiles(
+          sharedFiles,
+          subject: text,
+        );
         if (mounted) {
           FushiToast.show(
-            msg: t.audiobook_export_clip_saved,
-            severity: ToastSeverity.success,
+            msg: shared
+                ? t.audiobook_export_clip_saved
+                : t.audiobook_export_clip_share_unavailable,
+            severity: shared ? ToastSeverity.success : ToastSeverity.warning,
           );
         }
       }

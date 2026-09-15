@@ -1,5 +1,6 @@
 import 'package:fushi_dictionary/fushi_dictionary.dart';
 import 'dart:async';
+import 'package:fushi/src/anki/source_review_session.dart';
 import 'dart:collection';
 import 'dart:convert';
 import 'dart:io';
@@ -72,6 +73,7 @@ import 'package:fushi/src/reader/reader_resource_sanitizer.dart';
 import 'package:fushi/src/reader/reader_exit_flush.dart';
 import 'package:fushi/src/reader/reader_pagination_scripts.dart';
 import 'package:fushi/src/reader/reader_restore_anchor.dart';
+import 'package:fushi/src/reader/reader_source_locator.dart';
 import 'package:fushi/src/reader/reader_search_navigation.dart';
 import 'package:fushi/src/reader/reader_selection_data.dart';
 import 'package:fushi/src/reader/reader_selection_scripts.dart';
@@ -1468,6 +1470,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   bool _isNavigatingToChapter = false;
   // TODO-1037：跨章推进经过的「纯图片章逐个停留」序列在途时为真，防重入跨章导航。
   bool _imageChapterPauseInFlight = false;
+  // 音频跨章驱动的到达章（-1 = 无）：落地后第一次真实 cue 高亮把文档开头当作上一句
+  // 锚点，让章首插图也走图片等待 + 揭遮罩（见 _handleCueCrossChapter /
+  // _consumeAudioChapterArrival）。
+  int _audioChapterArrivalSection = -1;
   // BUG-782 加固：PopScope 退出链（onWillPop 异步 flush + closeMedia）在途为真，
   // 并发退出触发（ESC 连按/退出按钮后再 ESC）合并为一次，防连退两级。
   bool _popInProgress = false;
@@ -1485,6 +1491,25 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   // 由 widget.initialBookmarkJump.preserveSavedPosition 在开书时置位；普通打开 / 真实
   // 书签跳转恒 false，照常 debounce / 退出 flush 保存。
   bool _suppressPositionPersist = false;
+  SourceReviewSession? _sourceReviewSession;
+  bool _sourceReviewWasActive = false;
+  bool _sourceReviewClosed = false;
+  bool get _sourceReviewActive =>
+      _sourceReviewClosed || (_sourceReviewSession?.isReview ?? false);
+
+  void _onSourceReviewChanged() {
+    if (!mounted) return;
+    if (_sourceReviewWasActive && !_sourceReviewActive) {
+      _saveDebounce?.cancel();
+      _readLedger.reset();
+      _suppressPositionPersist = false;
+      _syncStudyClockRunState();
+      unawaited(_syncAndFlushPosition());
+    }
+    _sourceReviewWasActive = _sourceReviewActive;
+    setState(() {});
+  }
+
   String? _initialFragment;
   // TODO-1309: 跨章「文本搜索跳转」落定目标章后要执行的章内精确定位（scrollToSearchMatch
   // 的 JS）+ 绑定的导航代际。旧两段式（调用方在 restore 完成微任务里抢发 scrollToSearchMatch）
@@ -2046,11 +2071,43 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   /// 在歌词模式翻真）：状态行画的是字数进度 / 阅读追踪，歌词模式不刷新进度，
   /// 并进播放条右端的那一份同样不能画，否则只是把同一批冻住的旧数字换个位置。
   /// 正文模式两个判据恒等（非歌词 ⇒ 状态行启用 ⇒ chrome 启用），行为逐字不变。
-  bool get _playbackStatusInline =>
-      _statusFooterEnabled && !readerHeaderCompact(_readerControlsWidth);
+  bool get _playbackStatusInline => readerPlaybackStatusInline(
+    enabled: _statusFooterEnabled,
+    landscape: _readerIsLandscape,
+    width: _readerControlsWidth,
+  );
+
+  /// 横屏：窗口宽 ≥ 高。桌面的横着的窗口与横屏手机是同一个排版问题，不分平台。
+  bool get _readerIsLandscape {
+    final Size size = MediaQuery.sizeOf(context);
+    return size.width >= size.height;
+  }
 
   bool get _separatePlaybackStatus =>
       _statusFooterEnabled && !_playbackStatusInline;
+
+  /// 读数独立成行时，它是否**并进底栏这块遮罩**（底栏 Column 的最后一行），而不是
+  /// 自己在屏底另画一块背景。
+  ///
+  /// 两块相邻的半透明遮罩在悬浮态下是看得出接缝的：底栏那块罩着正文、读数那块
+  /// 底下已经没有正文，同一个颜色画出来深浅不一，底部看着像缺了一层
+  /// （用户 2026-09-14「底栏遮罩少了进度显示的那层高度」）。并进同一个 Column
+  /// 后底栏的遮罩一路盖到屏底，读数是它最底下的一行（[ReaderStatusFooter.centered]
+  /// 居中），底部只有一块面。
+  ///
+  /// 底栏此刻**真的画着东西**才谈得上并进去：本地这条底栏只在有声书播放条在场时
+  /// 画（设置栏职能已搬进顶部工具栏），播放条不在时 [_buildBottomChrome] 整条不画，
+  /// 读数照旧自己贴屏底右端。
+  bool get _statusFooterInBottomBar =>
+      _separatePlaybackStatus &&
+      _statusFooterShouldPaint &&
+      _bottomBarShouldPaint &&
+      _audiobookController != null;
+
+  /// 状态行此刻是否该画：启用、首屏已就绪、未被底栏吸收。并进底栏遮罩与否是另一
+  /// 个判据（[_statusFooterInBottomBar]），两处共用这一个真值。
+  bool get _statusFooterShouldPaint =>
+      _statusFooterEnabled && _hasEverLoaded && !_statusFooterAbsorbedByBar;
 
   /// 底部带高：状态行坐进系统底部安全区，带高 = max(状态行预留, 系统底 inset)
   /// （单一真相源 [readerStatusFooterBandHeight]，BUG-2460）。状态行不在场时就是
@@ -2122,6 +2179,10 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
   @override
   void initState() {
     super.initState();
+    _sourceReviewSession = SourceReviewScope.read(context);
+    _sourceReviewWasActive = _sourceReviewActive;
+    _suppressPositionPersist = _sourceReviewActive;
+    _sourceReviewSession?.addListener(_onSourceReviewChanged);
     // chrome 状态机的变更（含自动收起计时到点）统一经此重建。
     _chrome.addListener(_onChromeControllerChanged);
     assert(() {
@@ -2335,6 +2396,13 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     debugPrint('[ReaderFushi] chapter hrefs: $hrefs');
     _openTrace.mark('parsed');
 
+    // Source links must resolve exactly. Ordinary stale bookmarks may fall
+    // back to a saved position, which would show unrelated text for this card.
+    final CardSourceLink? sourceLink = _sourceReviewSession?.link;
+    if (sourceLink != null) {
+      validateReaderSourceLocator(_book!, sourceLink);
+    }
+
     if (charsFromDb != null) {
       // TODO-1192: 先立刻用命中的计数（即便是旧口径 v1，先让进度/总字数有值不闪 0）；
       // 若该缓存不是当前口径（[kChapterCharCountCaliber]），后台按新口径重算并回写 DB，
@@ -2410,7 +2478,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
       }
       // BUG-459: 临时浏览跳转（收藏 / 制卡历史）进入后不覆盖该书已保存的阅读进度——
       // 用户点进来看某句不该毁掉真正的阅读位置。普通书签跳转照常持久化。
-      _suppressPositionPersist = bm.preserveSavedPosition;
+      _suppressPositionPersist = _sourceReviewSession != null
+          ? _sourceReviewActive
+          : bm.preserveSavedPosition;
       _lastProgressSection = _currentChapter;
       _lastProgressValue = _initialProgress;
       _lastProgressCharOffset = _initialCharOffset;
@@ -2490,7 +2560,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // 这里把「上次是歌词模式」记成待恢复意图（保留偏好、不再抹除），等 EPUB 内容就绪
     // + 有声书已挂载后（见 _onChapterLoadComplete）再切歌词，等价用户手动切、已知安全。
     _lyricsMode = false;
-    _pendingLyricsRestore = ReaderFushiSource.instance.lyricsMode;
+    _pendingLyricsRestore =
+        _sourceReviewSession == null && ReaderFushiSource.instance.lyricsMode;
 
     _audioSlotResolved = true;
 
@@ -2745,6 +2816,8 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
 
   @override
   void dispose() {
+    _sourceReviewClosed = _sourceReviewActive;
+    _sourceReviewSession?.removeListener(_onSourceReviewChanged);
     // 控制器是会话对象、可能比页面活得久：解绑前把播放态监听摘掉。
     _audiobookController = null;
     _syncChromePlaybackListener();
@@ -2826,7 +2899,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // - 开启（=true）：只 detachReader，控制器留在 [AudiobookSession] 进程级常驻
     //   持有者里继续后台播放（保 TODO-291 阶段2 的后台续播）。
     appModel.audiobookSession.detachReader(this);
-    if (!appModel.audiobookBackgroundPlay) {
+    if ((_sourceReviewSession != null || !appModel.audiobookBackgroundPlay) &&
+        _audiobookController != null &&
+        identical(appModel.audiobookSession.controller, _audiobookController)) {
       // fire-and-forget 必须 catchError：dispose 同步签名无法 await，stop 内
       // stopPlayback 在 await 边界后若抛平台异常（native 解码器半销毁），会逃进
       // 当前 zone 成未捕获异步错误。与本文件其它 unawaited future 惯例对齐。
@@ -2891,7 +2966,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
     // 返回无效，等句子停了那次返回才生效」。会话可见状态由同步首段负责，native 资源
     // 释放与「用户已经离开这一页」无因果关系，改 fire-and-forget（catchError 兜住
     // 平台异常，语义与 dispose 路径一致）。
-    if (!appModel.audiobookBackgroundPlay) {
+    if ((_sourceReviewSession != null || !appModel.audiobookBackgroundPlay) &&
+        _audiobookController != null &&
+        identical(appModel.audiobookSession.controller, _audiobookController)) {
       unawaited(
         appModel.audiobookSession.stop().catchError((Object e, StackTrace s) {
           ErrorLogService.instance.log('ReaderFushi.popStopAudiobook', e, s);
@@ -3188,6 +3265,18 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
                 child: Scaffold(
                   backgroundColor: bgColor,
                   resizeToAvoidBottomInset: false,
+                  appBar: _sourceReviewSession == null
+                      ? null
+                      : PreferredSize(
+                          preferredSize: const Size.fromHeight(100),
+                          child: SourceReviewBanner(
+                            session: _sourceReviewSession!,
+                            runHidden: runWithLookupPopupHidden,
+                            onReturn: () {
+                              Navigator.of(context).maybePop();
+                            },
+                          ),
+                        ),
                   body: Stack(
                     fit: StackFit.expand,
                     children: <Widget>[
@@ -3279,9 +3368,9 @@ class _ReaderFushiPageState extends BaseSourcePageState<ReaderFushiPage>
                       // 桌面端顶部细进度线（ッツ 形态）：纯装饰、穿透指针，排在热区 /
                       // 工具栏之前，工具栏唤出时盖在它上面。
                       _buildProgressLine(),
-                      // 桌面端顶边悬停热区（收起时才存在）+ 顶部工具栏（ッツ 形态）：与底栏
-                      // 同一显隐状态机，排在词典弹层之前。
-                      _buildHoverRevealLayer(),
+                      // 桌面端顶部工具栏（ッツ 形态）：与底栏同一显隐状态机，排在
+                      // 词典弹层之前。用户 2026-09-14 起控制栏只认点击，顶边悬停
+                      // 热区已整层移除。
                       _buildDesktopHeader(),
                       // 桌面端底部状态行：排在词典弹层 / 底栏之前，让它们盖在其上。
                       _buildStatusFooter(),

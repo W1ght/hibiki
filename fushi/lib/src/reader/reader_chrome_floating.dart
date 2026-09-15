@@ -160,9 +160,9 @@ bool bottomBarVisible({
   required bool floating,
   required bool transientVisible,
 }) {
-  if (!hasEverLoaded || !chromeExpanded) return false;
-  if (!floating) return true;
-  return transientVisible;
+  if (!hasEverLoaded) return false;
+  if (floating) return transientVisible;
+  return chromeExpanded;
 }
 
 /// BUG-1195：视觉小说（VN）模式下一次「空白点击」的归宿。

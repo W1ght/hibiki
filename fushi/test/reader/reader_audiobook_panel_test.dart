@@ -8,8 +8,8 @@ import 'package:fushi/src/reader/reader_desktop_chrome.dart';
 import 'package:fushi/utils.dart';
 
 Widget _host(Widget child) => MaterialApp(
-      home: Scaffold(body: SizedBox(height: 700, child: child)),
-    );
+  home: Scaffold(body: SizedBox(height: 700, child: child)),
+);
 
 void main() {
   setUpAll(() {
@@ -19,23 +19,27 @@ void main() {
   testWidgets('无控制器：信息卡给导入按钮；资源页只有可用入口；章节页列目录并标当前章', (tester) async {
     int imports = 0;
     int jumped = -1;
-    await tester.pumpWidget(_host(ReaderAudiobookPanel(
-      controller: null,
-      toc: const <TtuTocEntry>[
-        TtuTocEntry(index: 0, label: '表紙'),
-        TtuTocEntry(index: 3, label: '第一話'),
-        TtuTocEntry(index: 7, label: '第二話'),
-      ],
-      currentSection: 5,
-      onJumpSection: (int i) async => jumped = i,
-      title: '無職転生 20',
-      chapterLabel: '第一話',
-      coverPath: null,
-      settingsBuilder: (_) => const Text('SETTINGS_TAB'),
-      onAudioImport: () => imports++,
-      onPickAlignment: null,
-      onTranscribe: null,
-    )));
+    await tester.pumpWidget(
+      _host(
+        ReaderAudiobookPanel(
+          controller: null,
+          toc: const <TtuTocEntry>[
+            TtuTocEntry(index: 0, label: '表紙'),
+            TtuTocEntry(index: 3, label: '第一話'),
+            TtuTocEntry(index: 7, label: '第二話'),
+          ],
+          currentSection: 5,
+          onJumpSection: (int i) async => jumped = i,
+          title: '無職転生 20',
+          chapterLabel: '第一話',
+          coverPath: null,
+          settingsBuilder: (_) => const Text('SETTINGS_TAB'),
+          onAudioImport: () => imports++,
+          onPickAlignment: null,
+          onTranscribe: null,
+        ),
+      ),
+    );
     await tester.pump();
 
     // 默认章节页：三条目录，「当前章节」标在 index<=5 的最后一条（第一話）。
@@ -46,23 +50,28 @@ void main() {
     expect(jumped, 7);
   });
 
-  testWidgets('资源页：对齐 / 转录入口按回调是否为 null 显隐；设置页走 settingsBuilder',
-      (tester) async {
+  testWidgets('资源页：对齐 / 转录入口按回调是否为 null 显隐；设置页走 settingsBuilder', (
+    tester,
+  ) async {
     int align = 0;
-    await tester.pumpWidget(_host(ReaderAudiobookPanel(
-      controller: null,
-      toc: const <TtuTocEntry>[],
-      currentSection: 0,
-      onJumpSection: (_) async {},
-      title: 'Book',
-      chapterLabel: null,
-      coverPath: null,
-      settingsBuilder: (_) => const Text('SETTINGS_TAB'),
-      onAudioImport: () {},
-      onPickAlignment: () => align++,
-      onTranscribe: null,
-      initialTab: 'files',
-    )));
+    await tester.pumpWidget(
+      _host(
+        ReaderAudiobookPanel(
+          controller: null,
+          toc: const <TtuTocEntry>[],
+          currentSection: 0,
+          onJumpSection: (_) async {},
+          title: 'Book',
+          chapterLabel: null,
+          coverPath: null,
+          settingsBuilder: (_) => const Text('SETTINGS_TAB'),
+          onAudioImport: () {},
+          onPickAlignment: () => align++,
+          onTranscribe: null,
+          initialTab: 'files',
+        ),
+      ),
+    );
     await tester.pump();
     expect(
       find.byKey(const ValueKey<String>('fushi_audiobook_panel_alignment')),
@@ -202,39 +211,155 @@ void main() {
     ];
     expect(
       readerHeaderOverflow(
-          compact: false, leading: leading, trailing: trailing),
+        compact: false,
+        leading: leading,
+        trailing: trailing,
+      ),
       isEmpty,
     );
     expect(
-      readerHeaderOverflow(compact: true, leading: leading, trailing: trailing)
-          .map((a) => a.label),
+      readerHeaderOverflow(
+        compact: true,
+        leading: leading,
+        trailing: trailing,
+      ).map((a) => a.label),
       <String>['gallery'],
     );
 
-    await tester.pumpWidget(MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: SizedBox(
-            width: 600, // < kReaderDesktopHeaderCompactWidth
-            child: ReaderDesktopHeader(
-              title: 'T',
-              leading: leading,
-              trailing: trailing,
-              textColor: Colors.white,
-              backgroundColor: Colors.black,
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: Center(
+            child: SizedBox(
+              // 三颗按钮（48 each）+ 两端 16 内边距之后，留给书名的不足
+              // kReaderDesktopHeaderTitleMinWidth(120) —— 这一栏是真的放不下才折叠，
+              // 不再是撞上一条与内容无关的固定窗宽阈值。
+              width: 260,
+              child: ReaderDesktopHeader(
+                title: 'T',
+                leading: leading,
+                trailing: trailing,
+                textColor: Colors.white,
+                backgroundColor: Colors.black,
+              ),
             ),
           ),
         ),
       ),
-    ));
+    );
     expect(find.byIcon(Icons.collections_outlined), findsNothing);
-    final Finder more =
-        find.byKey(const ValueKey<String>('fushi_desktop_header_overflow'));
+    final Finder more = find.byKey(
+      const ValueKey<String>('fushi_desktop_header_overflow'),
+    );
     expect(more, findsOneWidget);
     await tester.tap(more);
     await tester.pumpAndSettle();
     await tester.tap(find.text('gallery'));
     await tester.pumpAndSettle();
     expect(gallery, 1);
+  });
+
+  // BUG-2528：手机横屏的 bottom sheet 只有 0.9×348≈313dp 高，固定部分（标题行 +
+  // 信息卡 + 分段条）实测就占 312dp。旧版恒为 Column(min)+Flexible，Flexible 在
+  // 高度不够时不报 overflow 而是被压到 ~0：tab 视口只剩 1.2px、maxScrollExtent
+  // 近乎 0，分段条以下的资源 / 章节 / 设置既看不见又滚不出来。
+  testWidgets('矮窗（手机横屏）：整块面板可滚，分段条以下的内容能滚出来', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(768, 348));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final AudiobookPlayerController controller = AudiobookPlayerController();
+    addTearDown(controller.dispose);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: Align(
+            alignment: Alignment.bottomCenter,
+            // showModalBottomSheet 那条路径给面板的高度（chrome.part.dart）。
+            child: SizedBox(
+              height: 348 * 0.9,
+              child: ReaderAudiobookPanel(
+                controller: controller,
+                toc: const <TtuTocEntry>[TtuTocEntry(index: 0, label: '一章')],
+                currentSection: 0,
+                onJumpSection: (_) async {},
+                title: '安達としまむら3',
+                chapterLabel: '一章「私に相応しいチョコを決めてください」',
+                coverPath: 'missing-test-cover.png',
+                settingsBuilder: (_) => const Text('SETTINGS_TAB'),
+                initialTab: 'settings',
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(tester.takeException(), isNull);
+    expect(readerAudiobookPanelPinsHero(348 * 0.9), isFalse);
+
+    final Finder scroll = find.byKey(
+      const ValueKey<String>('fushi_audiobook_scroll_settings'),
+    );
+    final ScrollableState state = tester.state<ScrollableState>(
+      find.descendant(of: scroll, matching: find.byType(Scrollable)),
+    );
+    // 滚动区覆盖整块面板（含信息卡），而不是被压扁的 tab 视口。
+    expect(
+      tester.getRect(scroll).height,
+      greaterThan(tester.getRect(find.byType(ReaderAudiobookPanel)).height / 2),
+    );
+    expect(state.position.maxScrollExtent, greaterThan(0));
+
+    // 滚到底 → 分段条下面的 tab 内容真的露出来且可点。
+    expect(find.text('SETTINGS_TAB').hitTestable(), findsNothing);
+    await tester.drag(scroll, const Offset(0, -400));
+    await tester.pumpAndSettle();
+    expect(find.text('SETTINGS_TAB').hitTestable(), findsOneWidget);
+  });
+
+  testWidgets('高窗：信息卡仍钉住，只有 tab 内容滚', (tester) async {
+    await tester.binding.setSurfaceSize(const Size(420, 800));
+    addTearDown(() => tester.binding.setSurfaceSize(null));
+    final AudiobookPlayerController controller = AudiobookPlayerController();
+    addTearDown(controller.dispose);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: ReaderAudiobookPanel(
+            controller: controller,
+            toc: List<TtuTocEntry>.generate(
+              40,
+              (int i) => TtuTocEntry(index: i, label: 'Chapter $i'),
+            ),
+            currentSection: 0,
+            onJumpSection: (_) async {},
+            title: 'Book',
+            chapterLabel: null,
+            coverPath: 'missing-test-cover.png',
+            settingsBuilder: (_) => const Text('SETTINGS_TAB'),
+          ),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+    expect(readerAudiobookPanelPinsHero(800), isTrue);
+    final Finder cover = find.byKey(
+      const ValueKey<String>('fushi_audiobook_cover'),
+    );
+    final double coverTop = tester.getRect(cover).top;
+    final Finder scroll = find.byKey(
+      const ValueKey<String>('fushi_audiobook_scroll_chapters'),
+    );
+    await tester.drag(scroll, const Offset(0, -300));
+    await tester.pumpAndSettle();
+    expect(
+      tester
+          .state<ScrollableState>(
+            find.descendant(of: scroll, matching: find.byType(Scrollable)),
+          )
+          .position
+          .pixels,
+      greaterThan(0),
+    );
+    expect(tester.getRect(cover).top, coverTop);
   });
 }

@@ -5,6 +5,7 @@ import 'dart:io';
 import 'package:ffmpeg_kit_flutter/ffmpeg_kit.dart';
 import 'package:ffmpeg_kit_flutter/ffprobe_kit.dart';
 import 'package:ffmpeg_kit_flutter/return_code.dart';
+import 'package:ffmpeg_kit_flutter/session.dart';
 import 'package:flutter/foundation.dart';
 
 import 'package:fushi/src/utils/misc/helper_process_registry.dart';
@@ -63,11 +64,12 @@ class FfmpegRunResult {
   }
 }
 
-typedef FfmpegProcessRunner = Future<FfmpegRunResult> Function(
-  String executable,
-  List<String> args,
-  Duration timeout,
-);
+typedef FfmpegProcessRunner =
+    Future<FfmpegRunResult> Function(
+      String executable,
+      List<String> args,
+      Duration timeout,
+    );
 
 const int _windowsStatusInvalidImageFormatSigned = -1073741701;
 const int _windowsStatusInvalidImageFormatUnsigned = 0xC000007B;
@@ -233,9 +235,9 @@ abstract class FfmpegBackend {
 ///    用户自己装 ffmpeg；否则没装 ffmpeg 的电脑会丢内封字幕/cue 动图/制卡音频）；
 /// 3. 回退系统 PATH 上的 `ffmpeg`。
 String resolveFfmpegExecutable() => resolveFfmpegExecutableFrom(
-      override: ffmpegEnvOverride(),
-      bundledPath: _bundledFfmpegPath(),
-    );
+  override: ffmpegEnvOverride(),
+  bundledPath: _bundledFfmpegPath(),
+);
 
 /// BUG-1664：ffmpeg 可执行的环境覆盖——**新名优先，旧名回退**（`HIBIKI_FFMPEG` 是改名
 /// 前公开给用户的变量名，仍须认）。
@@ -244,15 +246,15 @@ String resolveFfmpegExecutable() => resolveFfmpegExecutableFrom(
 /// ——两边同名，注释承诺的旧名回退**从未生效**（改名批次的复制粘贴漏改）。让"回退去问
 /// 哪个名字"只存在一处，这类错误就无处可写。
 String? ffmpegEnvOverride() => resolveEnvOverrideFrom(
-      Platform.environment,
-      const <String>['FUSHI_FFMPEG', 'HIBIKI_FFMPEG'],
-    );
+  Platform.environment,
+  const <String>['FUSHI_FFMPEG', 'HIBIKI_FFMPEG'],
+);
 
 /// ffprobe 版的 [ffmpegEnvOverride]（同样新名优先、旧名回退）。
 String? ffprobeEnvOverride() => resolveEnvOverrideFrom(
-      Platform.environment,
-      const <String>['FUSHI_FFPROBE', 'HIBIKI_FFPROBE'],
-    );
+  Platform.environment,
+  const <String>['FUSHI_FFPROBE', 'HIBIKI_FFPROBE'],
+);
 
 /// 纯函数：在 [env] 里按 [names] 的先后顺序取第一个**非空**值（新名在前、旧名在后）。
 ///
@@ -290,9 +292,9 @@ String? _bundledFfmpegPath() => _bundledExecutablePath('ffmpeg');
 /// 同款优先级：`FUSHI_FFPROBE` 覆盖 > 程序旁捆绑 `ffprobe(.exe)`（打包时与 ffmpeg
 /// 并排塞进各桌面产物）> 系统 PATH 上的 `ffprobe`。
 String resolveFfprobeExecutable() => resolveFfprobeExecutableFrom(
-      override: ffprobeEnvOverride(),
-      bundledPath: _bundledFfprobePath(),
-    );
+  override: ffprobeEnvOverride(),
+  bundledPath: _bundledFfprobePath(),
+);
 
 /// 纯函数：按「覆盖 > 捆绑 > PATH」决定 ffprobe 可执行（镜像
 /// [resolveFfmpegExecutableFrom]，便于单测优先级）。
@@ -334,13 +336,16 @@ Future<FfmpegRunResult> runFfmpegProcess(
   List<String> args,
   Duration timeout,
 ) async {
-  final Process process =
-      await HelperProcessRegistry.instance.start(executable, args);
+  final Process process = await HelperProcessRegistry.instance.start(
+    executable,
+    args,
+  );
   // Drain both pipes: a full OS pipe buffer (ffmpeg writes progress to stderr)
   // would otherwise deadlock the process before it can exit.
   unawaited(process.stdout.drain<void>());
-  final Future<String> stderrText =
-      process.stderr.transform(const Utf8Decoder(allowMalformed: true)).join();
+  final Future<String> stderrText = process.stderr
+      .transform(const Utf8Decoder(allowMalformed: true))
+      .join();
   try {
     final int code = await process.exitCode.timeout(timeout);
     final String output = await stderrText;
@@ -373,10 +378,13 @@ Future<FfmpegRunResult> runFfprobeProcess(
   List<String> args,
   Duration timeout,
 ) async {
-  final Process process =
-      await HelperProcessRegistry.instance.start(executable, args);
-  final Future<String> stdoutText =
-      process.stdout.transform(const Utf8Decoder(allowMalformed: true)).join();
+  final Process process = await HelperProcessRegistry.instance.start(
+    executable,
+    args,
+  );
+  final Future<String> stdoutText = process.stdout
+      .transform(const Utf8Decoder(allowMalformed: true))
+      .join();
   unawaited(process.stderr.drain<void>());
   try {
     final int code = await process.exitCode.timeout(timeout);
@@ -469,14 +477,15 @@ Future<FfmpegRunResult> _runCliFfmpeg({
     try {
       final FfmpegRunResult bundledResult =
           (await runner(bundled, args, timeout)).withExecutionContext(
-        executable: bundled,
-        attemptedExecutables: <String>[bundled],
-      );
+            executable: bundled,
+            attemptedExecutables: <String>[bundled],
+          );
       // 回退条件统一：① Windows STATUS_INVALID_IMAGE_FORMAT 退出码（BUG-275 实证的
       // 损坏 PE）② bundled 跑起来了但完全没产出 ffmpeg 工作输出（DLL 缺失等加载期崩，
       // BUG-283）——两者都意味着 bundled 这个文件无法真正当 ffmpeg 用，回退 PATH。
       // 其余结果（含 `-i` 恒非 0 但 stderr 满是流信息的正常枚举）原样返回。
-      final bool fallBack = _isWindowsInvalidImageFormatExitCode(
+      final bool fallBack =
+          _isWindowsInvalidImageFormatExitCode(
             bundledResult.returnCode,
             isWindows: isWindows,
           ) ||
@@ -501,7 +510,8 @@ Future<FfmpegRunResult> _runCliFfmpeg({
       // 却跑不起来，唯一正确处置就是回退到 PATH 上的 ffmpeg（app 拥有的安全网），
       // 而不是死盯单一错误码——否则字幕枚举 / 制卡音频会把真失败吞成「无字幕」。
       // 显式 FUSHI_FFMPEG 覆盖走上面的分支、不进这里，旧契约不变（如实报错）。
-      fallbackReason = 'bundled ffmpeg launch failed '
+      fallbackReason =
+          'bundled ffmpeg launch failed '
           '(errorCode=${e.errorCode}, message=${e.message})';
       debugPrint(
         '[fushi-ffmpeg] bundled ffmpeg failed to launch '
@@ -541,15 +551,14 @@ Future<FfmpegRunResult> runCliFfmpegForTesting({
   required List<String> args,
   required Duration timeout,
   required FfmpegProcessRunner runner,
-}) =>
-    _runCliFfmpeg(
-      override: override,
-      bundledPath: bundledPath,
-      isWindows: isWindows,
-      args: args,
-      timeout: timeout,
-      runner: runner,
-    );
+}) => _runCliFfmpeg(
+  override: override,
+  bundledPath: bundledPath,
+  isWindows: isWindows,
+  args: args,
+  timeout: timeout,
+  runner: runner,
+);
 
 /// 桌面 ffprobe 执行（`resolveFfprobeExecutable` 解析：覆盖>捆绑>PATH）：先试解析出的
 /// 可执行，若它是捆绑路径且 `Process.start` 抛 [ProcessException]（损坏/权限/架构不匹配），
@@ -566,7 +575,9 @@ Future<FfmpegRunResult> _runCliFfprobe({
   required FfmpegProcessRunner runner,
 }) async {
   final String resolved = resolveFfprobeExecutableFrom(
-      override: override, bundledPath: bundledPath);
+    override: override,
+    bundledPath: bundledPath,
+  );
   try {
     return (await runner(resolved, args, timeout)).withExecutionContext(
       executable: resolved,
@@ -579,7 +590,8 @@ Future<FfmpegRunResult> _runCliFfprobe({
     // 已经就是裸 PATH `ffprobe` 了，无处可退，向上抛。
     if (isOverride || resolved == 'ffprobe') rethrow;
     final List<String> attempted = <String>[resolved, 'ffprobe'];
-    final String reason = 'bundled ffprobe launch failed '
+    final String reason =
+        'bundled ffprobe launch failed '
         '(errorCode=${e.errorCode}, message=${e.message})';
     try {
       return (await runner('ffprobe', args, timeout)).withExecutionContext(
@@ -604,14 +616,13 @@ Future<FfmpegRunResult> runCliFfprobeForTesting({
   required List<String> args,
   required Duration timeout,
   required FfmpegProcessRunner runner,
-}) =>
-    _runCliFfprobe(
-      override: override,
-      bundledPath: bundledPath,
-      args: args,
-      timeout: timeout,
-      runner: runner,
-    );
+}) => _runCliFfprobe(
+  override: override,
+  bundledPath: bundledPath,
+  args: args,
+  timeout: timeout,
+  runner: runner,
+);
 
 /// 系统 ffmpeg（`Process.start`）后端：桌面三端（Windows/macOS/Linux）。
 /// 委托 [runFfmpegProcess]，可执行文件经 [resolveFfmpegExecutable] 解析（覆盖>捆绑>PATH）。
@@ -640,6 +651,32 @@ class CliFfmpegBackend implements FfmpegBackend {
       );
 }
 
+/// 会话收尾（取消 / 读退出码 / 读日志）各自的独立上限。
+///
+/// 这三步都是 method channel 往返，不属于「ffmpeg 跑多久」的预算，但同样可能
+/// 不回包（见 [KitFfmpegBackend] 类注释里的 BUG-2542）。给它们一个**与主预算
+/// 无关的**小上限：拿不到就当拿不到，绝不让收尾把已经判定的结果拖成挂死。
+const Duration _kKitSessionEpilogueTimeout = Duration(seconds: 10);
+
+/// 启动 ffmpeg-kit 会话（init + createSession + asyncExecute 三次往返）的上限。
+///
+/// 与主预算取较小值：跑 8 分钟的合成不该容忍 8 分钟的**启动**。
+const Duration _kKitSessionStartTimeout = Duration(seconds: 30);
+
+/// 无界 await 收敛后的阶段标记，写进 [FfmpegRunResult.output]，让错误日志页能
+/// 区分「启动没回包」/「ffmpeg 真跑超时」/「收尾没回包」——三者在用户眼里都是
+/// 「点了没反应」，但修法完全不同。
+@visibleForTesting
+enum KitSessionPhase {
+  start('start (init/createSession/asyncExecute did not return)'),
+  execute('execute (ffmpeg session did not complete in time)'),
+  epilogue('epilogue (getReturnCode/getOutput did not return)');
+
+  const KitSessionPhase(this.detail);
+
+  final String detail;
+}
+
 /// 移动端（Android/iOS）后端：进程内调用「自编」的 ffmpeg-kit（arthenica 源码 +
 /// NDK r25 重编的最小变体；TODO-2357 起带 `--enable-gpl --enable-x264`，产物许可为
 /// GPLv3，与 Hibiki 自身一致），经其 `package:ffmpeg_kit_flutter` API 跑
@@ -650,84 +687,128 @@ class CliFfmpegBackend implements FfmpegBackend {
 /// 与 [CliFfmpegBackend] **同契约**（args→退出码+合并日志），5 个 extract 函数 +
 /// （替代的崩溃包是第三方预编译 ffmpeg-kit 变体，见 BUG-122）。
 /// 字幕枚举零改动。异步启动 `executeWithArgumentsAsync`（立即返回 session），完成回调喂
-/// [Completer]，`.timeout` 等到会话结束后再读 [FFmpegSession.getReturnCode] /
-/// [FFmpegSession.getOutput]（= 合并日志，喂 `parseSubtitleStreamsFromFfmpegLog`）；
+/// [Completer]，`.timeout` 等到会话结束后再读 [Session.getReturnCode] /
+/// [Session.getOutput]（= 合并日志，喂 `parseSubtitleStreamsFromFfmpegLog`）；
 /// 超时只精确取消**本次** session（`FFmpegKit.cancel(session.getSessionId())`），绝不碰并发
 /// 会话——曾用无参 `FFmpegKit.cancel()` 取消全部会话，误杀并发字幕抽取/制卡任务，表现为
 /// 偶发丢内封字幕（BUG-905）。
+///
+/// **每一次 method channel 往返都在时间预算内（BUG-2542）**：`run` / `runProbe`
+/// 曾把 `.timeout()` 只套在完成回调的 [Completer] 上，而启动（`executeWithArgumentsAsync`
+/// 内含 init/createSession/asyncExecute 三次往返）、超时分支里的 `cancel`、以及
+/// 收尾的 `getReturnCode` / `getOutput` 全是**裸 await**。任一不回包，`run()` 就
+/// 永不返回；调用方（片段导出、制卡、字幕抽取）的「进行中」标志随之永久为真，
+/// 此后每次点击都撞在防重入门上——用户看到的就是「点了没反应，连失败提示都没有」。
+/// 桌面 CLI 后端不受影响（子进程有独立超时），所以这是移动端专属的挂死面。
+/// 收敛后每一步都有上限，超时一律返回 `returnCode: null` 的失败结果，并在
+/// [FfmpegRunResult.output] 里写明卡在哪个阶段。
 class KitFfmpegBackend implements FfmpegBackend {
   const KitFfmpegBackend();
 
   @override
-  Future<FfmpegRunResult> run(List<String> args, Duration timeout) async {
-    // 异步启动：立即拿到本次 session，超时才能精确取消它而不误杀并发会话（BUG-905）。
-    final Completer<void> done = Completer<void>();
-    final session = await FFmpegKit.executeWithArgumentsAsync(
-      args,
-      (_) {
-        if (!done.isCompleted) done.complete();
-      },
-    );
-    try {
-      await done.future.timeout(timeout);
-    } on TimeoutException {
-      final int? sessionId = session.getSessionId();
-      if (sessionId != null) {
-        await FFmpegKit.cancel(sessionId);
-      }
-      return const FfmpegRunResult(
-        returnCode: null,
-        output: '',
-        executable: 'ffmpeg-kit',
-        attemptedExecutables: <String>['ffmpeg-kit'],
-      );
-    }
-    final ReturnCode? rc = await session.getReturnCode();
-    final String output = (await session.getOutput()) ?? '';
-    return FfmpegRunResult(
-      returnCode: rc?.getValue(),
-      output: output,
+  Future<FfmpegRunResult> run(List<String> args, Duration timeout) {
+    return runKitFfmpegSession(
+      timeout: timeout,
       executable: 'ffmpeg-kit',
-      attemptedExecutables: const <String>['ffmpeg-kit'],
+      start: (void Function() onComplete) =>
+          FFmpegKit.executeWithArgumentsAsync(args, (_) => onComplete()),
     );
   }
 
-  /// 移动端 ffprobe：进程内 `FFprobeKit.executeWithArguments`，`session.getOutput()`
-  /// 拿 ffprobe 的 JSON 报告（喂 `parseAudioMetadataFromFfprobeJson`）。与 [run] 同款
-  /// 超时/cancel 语义。TODO-1045：移动端也能读 M4B 容器 tag（方案 A 的关键假设）。
+  /// 移动端 ffprobe：进程内 `FFprobeKit.executeWithArgumentsAsync`，
+  /// `session.getOutput()` 拿 ffprobe 的 JSON 报告（喂
+  /// `parseAudioMetadataFromFfprobeJson`）。与 [run] 同款超时/cancel 语义。
+  /// TODO-1045：移动端也能读 M4B 容器 tag（方案 A 的关键假设）。
   @override
-  Future<FfmpegRunResult> runProbe(List<String> args, Duration timeout) async {
-    // 与 [run] 同款异步启动 + 精确取消语义（BUG-905）。
-    final Completer<void> done = Completer<void>();
-    final session = await FFprobeKit.executeWithArgumentsAsync(
-      args,
-      (_) {
-        if (!done.isCompleted) done.complete();
-      },
+  Future<FfmpegRunResult> runProbe(List<String> args, Duration timeout) {
+    return runKitFfmpegSession(
+      timeout: timeout,
+      executable: 'ffprobe-kit',
+      start: (void Function() onComplete) =>
+          FFprobeKit.executeWithArgumentsAsync(args, (_) => onComplete()),
     );
-    try {
-      await done.future.timeout(timeout);
-    } on TimeoutException {
-      final int? sessionId = session.getSessionId();
-      if (sessionId != null) {
-        await FFmpegKit.cancel(sessionId);
+  }
+}
+
+/// [KitFfmpegBackend.run] 与 [KitFfmpegBackend.runProbe] 的公共会话驱动。
+///
+/// 两者只差「用哪个 Kit 启动」（`FFmpegKit` / `FFprobeKit` 的 complete callback
+/// 类型不同，无法直接共用函数指针），故由调用方传 [start] 闭包；启动、等待、
+/// 取消、读结果四段的超时语义完全一致，收在这里一处，避免两份同构代码再次
+/// 各自漏掉某一步的上限。
+///
+/// [start] / [cancelSession] 是注入点：生产走 `FFmpegKit` / `FFprobeKit` 与
+/// `FFmpegKit.cancel`，测试注入「永不回包」的假件来复现三个挂死阶段——ffmpeg-kit
+/// 的真 method channel 住在 platform-interface 包里，mock 它并不比注入更真实，
+/// 而这一层恰好就是超时语义的所在处。
+@visibleForTesting
+Future<FfmpegRunResult> runKitFfmpegSession({
+  required Future<Session> Function(void Function() onComplete) start,
+  required Duration timeout,
+  required String executable,
+  Future<void> Function(int sessionId) cancelSession = FFmpegKit.cancel,
+  Duration epilogueTimeout = _kKitSessionEpilogueTimeout,
+  Duration startTimeout = _kKitSessionStartTimeout,
+}) async {
+  final Completer<void> done = Completer<void>();
+  final Session session;
+  try {
+    // 启动本身也可能不回包（native loader 卡死 / ABI 不匹配 / 插件未注册）。
+    // 取 min(主预算, 30s)：主预算是给 ffmpeg **跑**的，不该被启动吃掉。
+    session = await start(() {
+      if (!done.isCompleted) done.complete();
+    }).timeout(timeout < startTimeout ? timeout : startTimeout);
+  } on TimeoutException {
+    // 拿不到 session 就没有 sessionId，无法精确取消；宁可让这次会话在 native
+    // 侧自生自灭，也不用无参 cancel() 误杀并发会话（BUG-905）。
+    return _kitTimeoutResult(executable, KitSessionPhase.start);
+  }
+
+  try {
+    await done.future.timeout(timeout);
+  } on TimeoutException {
+    final int? sessionId = session.getSessionId();
+    if (sessionId != null) {
+      try {
+        // 取消也是 method channel 往返：不加上限，超时机制就会被它自己要取消
+        // 的东西挂住。取消失败不改变结论（这次会话已判超时）。
+        await cancelSession(sessionId).timeout(epilogueTimeout);
+      } on TimeoutException {
+        // 落进下面的统一超时结果，阶段仍记 execute：真因是会话没跑完。
       }
-      return const FfmpegRunResult(
-        returnCode: null,
-        output: '',
-        executable: 'ffprobe-kit',
-        attemptedExecutables: <String>['ffprobe-kit'],
-      );
     }
-    final ReturnCode? rc = await session.getReturnCode();
-    final String output = (await session.getOutput()) ?? '';
+    return _kitTimeoutResult(executable, KitSessionPhase.execute);
+  }
+
+  // 会话已完成，读退出码与合并日志。这两步再挂住就只能当结果拿不到——但绝不
+  // 能因此让 run() 永不返回。
+  try {
+    final ReturnCode? rc = await session.getReturnCode().timeout(
+      epilogueTimeout,
+    );
+    final String output =
+        (await session.getOutput().timeout(epilogueTimeout)) ?? '';
     return FfmpegRunResult(
       returnCode: rc?.getValue(),
       output: output,
-      executable: 'ffprobe-kit',
-      attemptedExecutables: const <String>['ffprobe-kit'],
+      executable: executable,
+      attemptedExecutables: <String>[executable],
     );
+  } on TimeoutException {
+    return _kitTimeoutResult(executable, KitSessionPhase.epilogue);
   }
+}
+
+/// 统一的超时失败结果。`returnCode: null` 与既有契约一致（`isSuccess == false`，
+/// `failureSummary` 里显示为 timed out），[FfmpegRunResult.output] 带上阶段标记：
+/// 旧实现恒返回空串，等于把「卡在哪」这唯一有用的线索也抹掉了。
+FfmpegRunResult _kitTimeoutResult(String executable, KitSessionPhase phase) {
+  return FfmpegRunResult(
+    returnCode: null,
+    output: '$executable timed out in ${phase.detail}',
+    executable: executable,
+    attemptedExecutables: <String>[executable],
+  );
 }
 
 FfmpegBackend? _cachedBackend;

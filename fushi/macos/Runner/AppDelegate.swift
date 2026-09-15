@@ -4,14 +4,37 @@ import FlutterMacOS
 import macos_window_utils
 
 @main
-class AppDelegate: FlutterAppDelegate {
+class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
   private var activeSecurityScopedURLs: [String: URL] = [:]
   private var challengeBrowser: FushiChallengeBrowser?
+  private var globalLookupOverlay: GlobalLookupOverlayController?
+  /// Dart 最后一次表达的查词输入法语言。app 重新回到前台时按它再切回去——否则
+  /// 用户 Cmd-Tab 出去一趟回来，查词页面还开着但输入法已经不是他选的那个了。
+  private var desiredLookupImeTag: String?
+
+  override func applicationDidResignActive(_ notification: Notification) {
+    // 离开前台就把用户的输入法放回去：切的是系统全局输入源，留着会漏到别的 app。
+    LookupImeLanguage.restore()
+    super.applicationDidResignActive(notification)
+  }
+
+  override func applicationDidBecomeActive(_ notification: Notification) {
+    super.applicationDidBecomeActive(notification)
+    if let tag = desiredLookupImeTag {
+      LookupImeLanguage.setLanguage(tag)
+    }
+  }
+  private var pendingSourceUrls: [String] = []
+  private var sourceUrlEventSink: FlutterEventSink?
 
   override func applicationDidFinishLaunching(_ notification: Notification) {
     if let windowController =
         mainFlutterWindow?.contentViewController as? MacOSWindowUtilsViewController {
       let controller = windowController.flutterViewController
+      let sourceUrlChannel = FlutterEventChannel(
+        name: "app.fushi.reader/source_urls/stream",
+        binaryMessenger: controller.engine.binaryMessenger)
+      sourceUrlChannel.setStreamHandler(self)
       challengeBrowser = FushiChallengeBrowser(
         binaryMessenger: controller.engine.binaryMessenger
       ) { [weak self] in self?.mainFlutterWindow }
@@ -35,10 +58,75 @@ class AppDelegate: FlutterAppDelegate {
       foregroundSelectionChannel.setMethodCallHandler { call, result in
         AppDelegate.handleForegroundSelection(call, result: result)
       }
+
+      // 查词输入框的输入法语言。macOS 的输入源是系统全局状态，所以除了「切过去」
+      // 还必须「切回来」——页面走掉时 Dart 发 null，app 失去前台时我们自己还原
+      // （见 applicationDidResignActive）。
+      let lookupImeChannel = FlutterMethodChannel(
+        name: "app.fushi.reader/lookup_ime",
+        binaryMessenger: controller.engine.binaryMessenger)
+      lookupImeChannel.setMethodCallHandler { [weak self] call, result in
+        switch call.method {
+        case "setLanguage":
+          let tag = call.arguments as? String
+          self?.desiredLookupImeTag = (tag?.isEmpty ?? true) ? nil : tag
+          result(LookupImeLanguage.setLanguage(tag))
+        case "probe":
+          result(LookupImeLanguage.probeInfo())
+        default:
+          result(FlutterMethodNotImplemented)
+        }
+      }
+      // App-external global lookup overlay (macOS counterpart of the Windows
+      // GlobalLookupWindow + RegisterGlobalLookupChannel): same
+      // `app.fushi.reader/global_lookup` MethodChannel contract, hosted by a
+      // non-activating NSPanel + WKWebView. See GlobalLookupOverlay.swift.
+      globalLookupOverlay = GlobalLookupOverlayController(
+        binaryMessenger: controller.engine.binaryMessenger
+      ) { [weak self] in self?.mainFlutterWindow }
     } else {
       NSLog("[Fushi] macOS Flutter controller unavailable; custom channels were not registered")
     }
     super.applicationDidFinishLaunching(notification)
+  }
+
+  override func application(_ application: NSApplication, open urls: [URL]) {
+    // Launch Services may deliver before the engine/channel exists. Keep source
+    // links until Dart subscribes; other schemes/hosts still reach plugins.
+    var remainingUrls: [URL] = []
+    for url in urls {
+      guard url.scheme?.lowercased() == "fushi",
+        url.host?.lowercased() == "source" else {
+        remainingUrls.append(url)
+        continue
+      }
+      if let sink = sourceUrlEventSink {
+        sink(url.absoluteString)
+      } else {
+        pendingSourceUrls.append(url.absoluteString)
+      }
+    }
+    if !remainingUrls.isEmpty {
+      super.application(application, open: remainingUrls)
+    }
+  }
+
+  func onListen(
+    withArguments arguments: Any?,
+    eventSink events: @escaping FlutterEventSink
+  ) -> FlutterError? {
+    sourceUrlEventSink = events
+    let pending = pendingSourceUrls
+    pendingSourceUrls.removeAll()
+    for url in pending {
+      events(url)
+    }
+    return nil
+  }
+
+  func onCancel(withArguments arguments: Any?) -> FlutterError? {
+    sourceUrlEventSink = nil
+    return nil
   }
 
   override func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
@@ -139,6 +227,12 @@ class AppDelegate: FlutterAppDelegate {
     _ call: FlutterMethodCall, result: @escaping FlutterResult
   ) {
     guard call.method == "captureContext" else {
+      // captureSelection / isAccessibilityTrusted / requestAccessibilityTrust
+      // (the clipboard-style fallback + the settings-page permission action)
+      // live in SelectionCaptureMac.swift on this same channel.
+      if MacSelectionCapture.handle(call, result: result) {
+        return
+      }
       result(FlutterMethodNotImplemented)
       return
     }
@@ -184,12 +278,13 @@ class AppDelegate: FlutterAppDelegate {
 // clipboard capture. Offsets are UTF-16 code units (NSString length), the unit
 // Dart String indexing uses.
 //
-// SANDBOX NOTE: the app ships sandboxed (see Runner/*.entitlements). The App
-// Sandbox blocks cross-process AX reads even after the user grants
-// Accessibility trust, so under the current entitlements this returns nil at
-// runtime (fail-open). Enabling it needs a sandbox decision (drop the sandbox
-// or a non-sandboxed helper) -- tracked separately; the capture logic itself
-// is correct and ready.
+// SANDBOX NOTE (updated 2026-09-14): the app is NOT sandboxed any more (both
+// Runner/*.entitlements dropped com.apple.security.app-sandbox for the
+// all-platform auto-update, docs/specs/2026-06-04-all-platform-auto-update-
+// design.md §5), so cross-process AX reads work as soon as the user grants
+// Accessibility trust in System Settings > Privacy & Security. The settings
+// page offers that grant via `requestAccessibilityTrust` (SelectionCaptureMac
+// .swift); this hotkey-path capture itself still never prompts.
 enum ForegroundSelectionCapture {
   // Mirrors kForegroundContextExpand in foreground_selection.h (Windows): the
   // max characters to grab PAST the selection on EACH side. Bounded for privacy

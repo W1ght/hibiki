@@ -128,6 +128,25 @@ void main() {
         isTrue,
         reason: '悬浮态唤出后绘制',
       );
+      // 挤压态照旧随 chromeExpanded；未冷加载恒不画。
+      expect(
+        bottomBarVisible(
+          hasEverLoaded: true,
+          chromeExpanded: false,
+          floating: false,
+          transientVisible: true,
+        ),
+        isFalse,
+      );
+      expect(
+        bottomBarVisible(
+          hasEverLoaded: false,
+          chromeExpanded: true,
+          floating: true,
+          transientVisible: true,
+        ),
+        isFalse,
+      );
     });
 
     test('autoHide millis: default 3000, clamps to 1000..10000', () {
@@ -276,7 +295,11 @@ void main() {
         '  /// TODO-693:',
       );
       expect(reveal.contains('_chromeTransientVisible'), isTrue);
-      expect(reveal.contains('_armChromeAutoHide'), isTrue);
+      expect(
+        reveal.contains('_armChromeAutoHide'),
+        isFalse,
+        reason: '用户 2026-09-14：点出来的栏不自动收起，只有下一次点击能关掉它',
+      );
       expect(
         reveal.contains('_reanchor') || reveal.contains('_applyChromeInsets'),
         isFalse,
