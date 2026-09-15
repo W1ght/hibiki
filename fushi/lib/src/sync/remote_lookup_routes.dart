@@ -118,14 +118,13 @@ Future<Map<String, dynamic>?> readJsonObjectBody(shelf.Request request) async {
 shelf.Response jsonRawResponse(
   String body, {
   Map<String, String> extraHeaders = const <String, String>{},
-}) =>
-    shelf.Response.ok(
-      body,
-      headers: <String, String>{
-        ...extraHeaders,
-        'Content-Type': 'application/json; charset=utf-8',
-      },
-    );
+}) => shelf.Response.ok(
+  body,
+  headers: <String, String>{
+    ...extraHeaders,
+    'Content-Type': 'application/json; charset=utf-8',
+  },
+);
 
 shelf.Response jsonResponse(Object body) => jsonRawResponse(jsonEncode(body));
 
@@ -139,11 +138,7 @@ shelf.Response jsonResponse(Object body) => jsonRawResponse(jsonEncode(body));
 /// `/api/extension/status`（扩展侧上报扩展版本）、互联独有的 `/api/anki/media/dedup/*`
 /// 与 `/api/media/dictionary`。
 class RemoteLookupRoutes {
-  RemoteLookupRoutes({
-    required this.audioTokens,
-    this.lookup,
-    this.mining,
-  });
+  RemoteLookupRoutes({required this.audioTokens, this.lookup, this.mining});
 
   final RemoteAudioTokenStore audioTokens;
   final FushiRemoteLookupService? lookup;
@@ -180,10 +175,13 @@ class RemoteLookupRoutes {
   }
 
   /// 单词音频②：GET/HEAD `?id=` 取字节（免鉴权，靠不可猜 id）；命中即续期。
-  shelf.Response handleAudioFile(shelf.Request request,
-      {required bool headOnly}) {
-    final RemoteAudioToken? token =
-        audioTokens.take(request.url.queryParameters['id']);
+  shelf.Response handleAudioFile(
+    shelf.Request request, {
+    required bool headOnly,
+  }) {
+    final RemoteAudioToken? token = audioTokens.take(
+      request.url.queryParameters['id'],
+    );
     if (token == null) return shelf.Response.notFound('Not found');
     return shelf.Response.ok(
       headOnly ? null : token.bytes,
@@ -195,10 +193,10 @@ class RemoteLookupRoutes {
   }
 
   shelf.Response _audioMissResponse() => jsonResponse(<String, dynamic>{
-        'type': 'audioResult',
-        'url': null,
-        'contentType': null,
-      });
+    'type': 'audioResult',
+    'url': null,
+    'contentType': null,
+  });
 
   /// 制卡（BUG-530）。未注入挖词 service → 404；fields 缺失/类型错 → 400。
   Future<shelf.Response> handleMine(shelf.Request request) async {
@@ -207,11 +205,13 @@ class RemoteLookupRoutes {
     final Map<String, dynamic>? body = await readJsonObjectBody(request);
     if (body == null) return shelf.Response(400, body: 'Invalid JSON');
     try {
-      return jsonResponse(await buildRemoteMineResponse(
-        body,
-        mining: svc,
-        wordAudio: _resolveMineWordAudio,
-      ));
+      return jsonResponse(
+        await buildRemoteMineResponse(
+          body,
+          mining: svc,
+          wordAudio: _resolveMineWordAudio,
+        ),
+      );
     } on FormatException {
       return shelf.Response(400, body: 'Missing fields');
     }
@@ -228,10 +228,9 @@ class RemoteLookupRoutes {
   }) async {
     final RemoteAudioToken? token = audioTokens.take(tokenId);
     if (token != null) {
-      return remoteAudioLookupToDataUri(RemoteAudioLookup(
-        bytes: token.bytes,
-        contentType: token.contentType,
-      ));
+      return remoteAudioLookupToDataUri(
+        RemoteAudioLookup(bytes: token.bytes, contentType: token.contentType),
+      );
     }
     final FushiRemoteLookupService? service = lookup;
     if (service == null || expression.trim().isEmpty) return null;
@@ -256,6 +255,34 @@ class RemoteLookupRoutes {
     }
   }
 
+  /// Exposed only by the paired-device server, after its authentication gate.
+  Future<shelf.Response> handleSourceNote(
+    shelf.Request request,
+    String path,
+  ) async {
+    final FushiRemoteMiningService? service = mining;
+    if (service is! FushiRemoteSourceNoteService) {
+      return shelf.Response.notFound('Source editing unavailable');
+    }
+    final Map<String, dynamic>? body = await readJsonObjectBody(request);
+    if (body == null) return shelf.Response(400, body: 'Invalid JSON');
+    try {
+      return jsonResponse(
+        await buildSourceNoteResponse(
+          path,
+          body,
+          mining: service as FushiRemoteSourceNoteService,
+        ),
+      );
+    } on FormatException catch (error) {
+      return shelf.Response(400, body: error.message);
+    } catch (error) {
+      // Explicit application failure is a response, never permission to try a
+      // second host's Anki collection with the same note id.
+      return jsonResponse(<String, dynamic>{'ok': false, 'message': '$error'});
+    }
+  }
+
   /// Lapis 客制化：客户端（手机 AnkiDroid 等无模板 API 的平台）读写本机 Anki 的
   /// note type（读定义 / 写 styling / 写卡模板）。未注入挖词 service → 404（旧版主机
   /// 对新客户端返回 404 → 客户端按「后端不支持」降级）；modelName/css/templates
@@ -272,13 +299,16 @@ class RemoteLookupRoutes {
       switch (path) {
         case '/api/anki/note-type/read':
           return jsonResponse(
-              await buildAnkiNoteTypeReadResponse(body, mining: svc));
+            await buildAnkiNoteTypeReadResponse(body, mining: svc),
+          );
         case '/api/anki/note-type/styling':
           return jsonResponse(
-              await buildAnkiNoteTypeStylingResponse(body, mining: svc));
+            await buildAnkiNoteTypeStylingResponse(body, mining: svc),
+          );
         case '/api/anki/note-type/templates':
           return jsonResponse(
-              await buildAnkiNoteTypeTemplatesResponse(body, mining: svc));
+            await buildAnkiNoteTypeTemplatesResponse(body, mining: svc),
+          );
         default:
           return shelf.Response.notFound('Unknown endpoint');
       }

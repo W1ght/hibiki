@@ -1,7 +1,8 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:fushi_anki/fushi_anki.dart' show AnkiMiningSource;
+import 'package:fushi_anki/fushi_anki.dart'
+    show AnkiMiningSource, AnkiMiningContext, CardSourceLink, MineOutcome;
 
 /// 沉浸制卡片段音频的容器扩展名，按平台分（TODO-1217 / BUG-460）：
 /// - iOS：`m4a`——AnkiMobile 只自动下载它识别为媒体的 localhost URL，`.aac` 裸流会被当成
@@ -38,13 +39,13 @@ class VideoMiningHistorySnapshot {
     required int? cueStartMs,
     required int? cueEndMs,
     required this.dateKey,
-  })  : expression = fields['expression'] ?? '',
-        reading = fields['reading'] ?? '',
-        glossary = fields['glossary'] ?? '',
-        normCharOffset = cueStartMs,
-        normCharLength = cueStartMs == null || cueEndMs == null
-            ? null
-            : (cueEndMs - cueStartMs).clamp(0, 1 << 31).toInt();
+  }) : expression = fields['expression'] ?? '',
+       reading = fields['reading'] ?? '',
+       glossary = fields['glossary'] ?? '',
+       normCharOffset = cueStartMs,
+       normCharLength = cueStartMs == null || cueEndMs == null
+           ? null
+           : (cueEndMs - cueStartMs).clamp(0, 1 << 31).toInt();
 
   final String expression;
   final String reading;
@@ -200,8 +201,8 @@ enum MiningAnimatedFormat {
   /// `extractAnimatedClipWithFallback`。
   List<MiningAnimatedFormat> get encodeAttempts =>
       this == MiningAnimatedFormat.gif
-          ? const <MiningAnimatedFormat>[MiningAnimatedFormat.gif]
-          : <MiningAnimatedFormat>[this, MiningAnimatedFormat.gif];
+      ? const <MiningAnimatedFormat>[MiningAnimatedFormat.gif]
+      : <MiningAnimatedFormat>[this, MiningAnimatedFormat.gif];
 
   /// 从偏好字符串解析；未知/null → [avif]（新默认）。
   static MiningAnimatedFormat fromWireName(String? name) {
@@ -282,6 +283,9 @@ class ImmersionMiningRequest {
     this.bookTitleTag,
     this.collectionTag,
     this.updateNoteId,
+    this.sourceLink,
+    this.sourceLinkResolver,
+    this.sourceReviewMine,
     this.stillFallback,
     this.providedCoverBytes,
     this.providedCoverName,
@@ -318,6 +322,15 @@ class ImmersionMiningRequest {
 
   /// 非 null = 覆盖现有卡（走 updateMinedNote，不计统计）。
   final int? updateNoteId;
+  final CardSourceLink? sourceLink;
+
+  /// Computes full-file identity inside the mining queue from frozen inputs.
+  final Future<CardSourceLink?> Function()? sourceLinkResolver;
+  final Future<MineOutcome> Function({
+    required String rawPayloadJson,
+    required AnkiMiningContext context,
+  })?
+  sourceReviewMine;
 
   /// 当前解码帧兜底（本地路径链全失败时）。本地传 `controller.screenshot`。
   final Future<Uint8List?> Function()? stillFallback;
@@ -368,7 +381,8 @@ class ImmersionMiningRequest {
     required int startMs,
     required int endMs,
     required String outputPath,
-  })? remoteAudioClipper;
+  })?
+  remoteAudioClipper;
 
   /// 卡面时间窗非空——**纯几何判据**，只回答「这张卡有没有时间窗可显示」，不回答
   /// 「引擎要不要去裁」。渲染侧 [AnkiHandlebarRenderer.formatClipTimestamp] 用的正是
@@ -396,38 +410,39 @@ class ImmersionMiningRequest {
   /// 入队前冻结所有可变输入。视频页可能在任务真正执行前已经换集或关闭弹窗；队列里的
   /// 卡必须继续使用点击制卡那一刻的字段和外部媒体字节，不能读到调用方后续修改。
   ImmersionMiningRequest frozen() => ImmersionMiningRequest(
-        fields: Map<String, String>.unmodifiable(
-          Map<String, String>.from(fields),
-        ),
-        clipStartMs: clipStartMs,
-        clipEndMs: clipEndMs,
-        sentence: sentence,
-        mediaSource: mediaSource,
-        audioSource: audioSource,
-        cueSentence: cueSentence,
-        documentTitle: documentTitle,
-        audioStreamIndex: audioStreamIndex,
-        audioStreamCount: audioStreamCount,
-        source: source,
-        bookTitleTag: bookTitleTag,
-        collectionTag: collectionTag,
-        updateNoteId: updateNoteId,
-        stillFallback: stillFallback,
-        providedCoverBytes: providedCoverBytes == null
-            ? null
-            : Uint8List.fromList(providedCoverBytes!),
-        providedCoverName: providedCoverName,
-        providedAudioBytes: providedAudioBytes == null
-            ? null
-            : Uint8List.fromList(providedAudioBytes!),
-        providedAudioName: providedAudioName,
-        requireAudio: requireAudio,
-        imageMode: imageMode,
-        animatedFormat: animatedFormat,
-        stillFormat: stillFormat,
-        mediaSourceTlsPinSha256: mediaSourceTlsPinSha256,
-        remoteAudioClipper: remoteAudioClipper,
-      );
+    fields: Map<String, String>.unmodifiable(Map<String, String>.from(fields)),
+    clipStartMs: clipStartMs,
+    clipEndMs: clipEndMs,
+    sentence: sentence,
+    mediaSource: mediaSource,
+    audioSource: audioSource,
+    cueSentence: cueSentence,
+    documentTitle: documentTitle,
+    audioStreamIndex: audioStreamIndex,
+    audioStreamCount: audioStreamCount,
+    source: source,
+    bookTitleTag: bookTitleTag,
+    collectionTag: collectionTag,
+    updateNoteId: updateNoteId,
+    sourceLink: sourceLink,
+    sourceLinkResolver: sourceLinkResolver,
+    sourceReviewMine: sourceReviewMine,
+    stillFallback: stillFallback,
+    providedCoverBytes: providedCoverBytes == null
+        ? null
+        : Uint8List.fromList(providedCoverBytes!),
+    providedCoverName: providedCoverName,
+    providedAudioBytes: providedAudioBytes == null
+        ? null
+        : Uint8List.fromList(providedAudioBytes!),
+    providedAudioName: providedAudioName,
+    requireAudio: requireAudio,
+    imageMode: imageMode,
+    animatedFormat: animatedFormat,
+    stillFormat: stillFormat,
+    mediaSourceTlsPinSha256: mediaSourceTlsPinSha256,
+    remoteAudioClipper: remoteAudioClipper,
+  );
 }
 
 /// 引擎产出。[outcome] 用 Object? 承 MineOutcome，避免此值对象文件依赖 anki_models 全量。

@@ -5790,6 +5790,9 @@ class AppModel with ChangeNotifier {
     bool pushReplacement = false,
     MediaItem? item,
     Bookmark? initialBookmarkJump,
+    bool recordHistory = true,
+    bool waitUntilClosed = true,
+    Widget Function()? launchPageBuilder,
   }) async {
     // 已迁移只读态（Fushi 迁移 P1-4b）：单闸门挡掉全部媒体打开路径——进度/
     // 统计/制卡的所有写点都在媒体页内，媒体不开则写路径整体不可达（好过在
@@ -5832,30 +5835,44 @@ class AppModel with ChangeNotifier {
     }
     await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
-    if (item != null && mediaSource.implementsHistory) {
+    if (recordHistory && item != null && mediaSource.implementsHistory) {
       addMediaItem(item);
     }
 
     final ctx = _ctx;
     if (ctx == null || !ctx.mounted) return;
+    final Future<dynamic> routeDone;
     if (pushReplacement) {
-      await Navigator.pushReplacement(
+      routeDone = Navigator.pushReplacement(
         ctx,
         adaptivePageRoute(
           context: ctx,
-          builder: (context) => mediaSource.buildLaunchPage(
-              item: item, initialBookmarkJump: initialBookmarkJump),
+          builder: (context) =>
+              launchPageBuilder?.call() ??
+              mediaSource.buildLaunchPage(
+                item: item,
+                initialBookmarkJump: initialBookmarkJump,
+              ),
         ),
       );
     } else {
-      await Navigator.push(
+      routeDone = Navigator.push(
         ctx,
         adaptivePageRoute(
           context: ctx,
-          builder: (context) => mediaSource.buildLaunchPage(
-              item: item, initialBookmarkJump: initialBookmarkJump),
+          builder: (context) =>
+              launchPageBuilder?.call() ??
+              mediaSource.buildLaunchPage(
+                item: item,
+                initialBookmarkJump: initialBookmarkJump,
+              ),
         ),
       );
+    }
+    if (waitUntilClosed) {
+      await routeDone;
+    } else {
+      unawaited(routeDone);
     }
   }
 
@@ -7871,6 +7888,7 @@ class _AppModelRemoteLookupService
         FushiRemoteLookupService,
         FushiRemoteTimedPopupLookupService,
         FushiRemoteMiningService,
+        FushiRemoteSourceNoteService,
         FushiRemoteHistoryService {
   const _AppModelRemoteLookupService(this._appModel);
 
@@ -7898,13 +7916,69 @@ class _AppModelRemoteLookupService
 
   @override
   Future<RemoteMineResult> mineForwarded(ForwardedMinePayload payload) async {
+    try {
+      return await _withForwardedMiningContext<RemoteMineResult>(
+        payload,
+        (
+          BaseAnkiRepository repo,
+          String raw,
+          AnkiMiningContext context,
+        ) async => remoteMineResultFromOutcome(
+          await repo.mineEntry(rawPayloadJson: raw, context: context),
+        ),
+      );
+    } catch (e, st) {
+      return remoteMineError(
+        'Anki.mineForwarded',
+        '服务端制卡失败',
+        detail: '$e',
+        error: e,
+        stackTrace: st,
+      );
+    }
+  }
+
+  @override
+  Future<AnkiSourceNote?> readSourceNote(String sourceId) => _appModel
+      .platformServices
+      .createAnkiRepository()
+      .readSourceNote(sourceId);
+
+  @override
+  Future<void> patchSourceNote({
+    required AnkiSourceNote original,
+    required Map<String, String> fields,
+  }) => _appModel.platformServices.createAnkiRepository().patchSourceNote(
+    original: original,
+    fields: fields,
+  );
+
+  @override
+  Future<Map<String, String>> prepareForwardedSourceNote(
+    ForwardedMinePayload payload,
+  ) => _withForwardedMiningContext<Map<String, String>>(
+    payload,
+    (BaseAnkiRepository repo, String raw, AnkiMiningContext context) =>
+        repo.prepareSourceNoteFields(rawPayloadJson: raw, context: context),
+  );
+
+  Future<T> _withForwardedMiningContext<T>(
+    ForwardedMinePayload payload,
+    Future<T> Function(
+      BaseAnkiRepository repo,
+      String raw,
+      AnkiMiningContext context,
+    )
+    action,
+  ) async {
     // 互联「制卡到服务端」：客户端已把未渲染的 rawPayloadJson + context 文本 + 全部本地
     // 媒体字节发来。这里把字节落成本机临时文件 / 词典缓存、重建 AnkiMiningContext，再走
     // 与 app 内本地制卡**完全同一**的 repo.mineEntry 渲染链路（服务端用自己的字段映射/牌组）。
-    final BaseAnkiRepository repo =
-        _appModel.platformServices.createAnkiRepository();
-    final Directory tmp =
-        Directory.systemTemp.createTempSync('fushi_fwd_mine_');
+    final BaseAnkiRepository repo = _appModel.platformServices
+        .createAnkiRepository();
+    final Directory tmp = Directory.systemTemp.createTempSync(
+      'fushi_fwd_mine_',
+    );
     try {
       // ① 封面 → 临时文件 → context.coverPath
       String? coverPath;
@@ -7917,15 +7991,17 @@ class _AppModelRemoteLookupService
       String? sentenceAudioPath;
       if (payload.sentenceAudioBytes != null) {
         final File f = File(
-            '${tmp.path}/sentence_audio.${payload.sentenceAudioExt ?? 'bin'}');
+          '${tmp.path}/sentence_audio.${payload.sentenceAudioExt ?? 'bin'}',
+        );
         await f.writeAsBytes(payload.sentenceAudioBytes!, flush: true);
         sentenceAudioPath = f.path;
       }
       // ③ 单词音频（本地文件）→ 临时文件 → 改写 rawPayloadJson 的 audio 字段为本机路径
       String rawPayloadJson = payload.rawPayloadJson;
       if (payload.wordAudioBytes != null) {
-        final File f =
-            File('${tmp.path}/word_audio.${payload.wordAudioExt ?? 'bin'}');
+        final File f = File(
+          '${tmp.path}/word_audio.${payload.wordAudioExt ?? 'bin'}',
+        );
         await f.writeAsBytes(payload.wordAudioBytes!, flush: true);
         rawPayloadJson = _rewriteForwardedAudioField(rawPayloadJson, f.path);
       }
@@ -7940,7 +8016,9 @@ class _AppModelRemoteLookupService
         sentenceAudioPath: sentenceAudioPath,
         sentenceOffset: payload.sentenceOffset,
         source: _forwardedSourceFromName(payload.source),
+        sourceLink: payload.sourceLink,
         bookTitleTag: payload.bookTitleTag,
+        collectionTag: payload.collectionTag,
         charPositionTag: payload.charPositionTag,
         // 转发 payload 本来就带片段时间窗（Netflix / YouTube 扩展制卡按视频
         // 时间轴填）。原样透传，有效性由 formatClipTimestamp 单点判定——非视频
@@ -7948,19 +8026,7 @@ class _AppModelRemoteLookupService
         clipStartMs: payload.clipStartMs,
         clipEndMs: payload.clipEndMs,
       );
-      final MineOutcome outcome = await repo.mineEntry(
-        rawPayloadJson: rawPayloadJson,
-        context: context,
-      );
-      return remoteMineResultFromOutcome(outcome);
-    } catch (e, st) {
-      return remoteMineError(
-        'Anki.mineForwarded',
-        '服务端制卡失败',
-        detail: '$e',
-        error: e,
-        stackTrace: st,
-      );
+      return await action(repo, rawPayloadJson, context);
     } finally {
       // 临时封面/音频在 mineEntry 落卡（读+storeMedia）完成后回收；词典缓存目录是共享的
       // （与本地 writeDictionaryMediaCache 同址），下次覆盖即可，不在此删。

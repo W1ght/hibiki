@@ -6,6 +6,7 @@ import 'package:fushi_dictionary/fushi_dictionary.dart';
 import 'package:fushi/src/sync/forwarded_mine_payload.dart';
 import 'package:fushi/src/sync/fushi_remote_lookup_service.dart';
 import 'package:fushi/src/sync/immersion_mine_payload.dart';
+import 'package:fushi/src/sync/remote_source_note.dart';
 
 /// TODO-1000（BUG-530）：浏览器扩展 / 外部工具的两个远端 API（查词 `/api/lookup/dictionary`
 /// + 制卡 `/api/mine`）的**共享 handler 逻辑**。FushiSyncServer（互联/同步 host）与
@@ -100,7 +101,8 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
   //   - 字段**缺失** ⇒ 老客户端不认识该契约 ⇒ 一个字节都不发（向后兼容，旧扩展行为不变）；
   //   - 字段在且与当前 revision 不同 ⇒ 全量下发一次，之后一直命中缓存。
   final RemotePopupDictionaryCss? popupCss = popupDictionaryCssProvider?.call();
-  final bool cssStale = popupCss != null &&
+  final bool cssStale =
+      popupCss != null &&
       body.containsKey('stylesRevision') &&
       body['stylesRevision']?.toString() != popupCss.revision;
   final Map<String, Object?> envelope = <String, Object?>{
@@ -139,17 +141,17 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
         lookup as FushiRemotePopupLookupService;
     final RemoteDictionaryPopupLookup? popup =
         popupTiming != null && popupLookup is FushiRemoteTimedPopupLookupService
-            ? await popupLookup.searchDictionaryPopupWithTiming(
-                term: term,
-                wildcards: wildcards,
-                maximumTerms: maximumTerms,
-                timing: popupTiming,
-              )
-            : await popupLookup.searchDictionaryPopup(
-                term: term,
-                wildcards: wildcards,
-                maximumTerms: maximumTerms,
-              );
+        ? await popupLookup.searchDictionaryPopupWithTiming(
+            term: term,
+            wildcards: wildcards,
+            maximumTerms: maximumTerms,
+            timing: popupTiming,
+          )
+        : await popupLookup.searchDictionaryPopup(
+            term: term,
+            wildcards: wildcards,
+            maximumTerms: maximumTerms,
+          );
     return <String, dynamic>{
       'type': 'dictionaryResult',
       'result': popup == null
@@ -172,8 +174,8 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
     'result': result == null
         ? null
         : popupOnly
-            ? <String, dynamic>{'bestLength': result.bestLength}
-            : jsonDecode(result.toJson()),
+        ? <String, dynamic>{'bestLength': result.bestLength}
+        : jsonDecode(result.toJson()),
     'popupJson': result?.popupJson,
     ...envelope,
   };
@@ -196,11 +198,12 @@ Future<Map<String, dynamic>> buildRemoteDictionaryLookupResponse(
 ///
 /// 只处理本机 token 端点的引用（[remoteAudioTokenIdFromRef] 非 null）；其余（外部 http、
 /// data:、本地路径）不是短命的，原样透传。
-typedef RemoteMineWordAudioResolver = Future<String?> Function(
-  String tokenId, {
-  required String expression,
-  required String reading,
-});
+typedef RemoteMineWordAudioResolver =
+    Future<String?> Function(
+      String tokenId, {
+      required String expression,
+      required String reading,
+    });
 
 /// 若 [audioRef] 是本机 server 签发的单词音频 token URL（`/api/lookup/audio/file?id=…`），
 /// 返回其 token id；否则 null。只看路径与 `id` 查询参数，不看 host/port——扩展配的可能是
@@ -256,14 +259,17 @@ Future<Map<String, dynamic>> buildRemoteMineResponse(
   RemoteMineWordAudioResolver? wordAudio,
 }) async {
   final ImmersionMinePayload payload = ImmersionMinePayload.fromJson(
-      await resolveRemoteMineWordAudio(body, wordAudio: wordAudio));
+    await resolveRemoteMineWordAudio(body, wordAudio: wordAudio),
+  );
   // TODO-1303：结果不再是裸字符串——摊开诊断（失败原因 / 音频落空警告）到响应体，
   // 让扩展 content.js 能 toast 显因、区分「真成功」与「卡建了但没音频」。返回类型仍是
   // Map（未改契约），只是多了可选 message/detail 字段（向后兼容：旧扩展忽略即可）。
   final RemoteMineResult r = payload.isImmersion
       ? await mining.mineImmersion(payload)
       : await mining.mineEntry(
-          fields: payload.fields, sentence: payload.sentence);
+          fields: payload.fields,
+          sentence: payload.sentence,
+        );
   return <String, dynamic>{
     'result': r.result,
     if (r.message != null) 'message': r.message,
@@ -277,6 +283,45 @@ Future<Map<String, dynamic>> buildRemoteMineResponse(
 /// 全部本地媒体字节转发来，本机用自己的 Anki 配置落卡。[body] 需含 `rawPayloadJson`（非空
 /// 字符串），缺失/类型错时 [ForwardedMinePayload.fromJson] 抛 [FormatException]，由调用方转
 /// 400。响应形状与 `/api/mine` 一致（`{result, message?, detail?}`）。
+Future<Map<String, dynamic>> buildSourceNoteResponse(
+  String path,
+  Map<String, dynamic> body, {
+  required FushiRemoteSourceNoteService mining,
+}) async {
+  switch (path) {
+    case '/api/anki/source/read':
+      final Object? sourceId = body['sourceId'];
+      if (sourceId is! String) throw const FormatException('Missing source ID');
+      CardSourceLink.markerForSourceId(sourceId);
+      final AnkiSourceNote? note = await mining.readSourceNote(sourceId);
+      return <String, dynamic>{
+        'ok': true,
+        'note': note == null ? null : encodeRemoteSourceNote(note),
+      };
+    case '/api/anki/source/prepare':
+      final ForwardedMinePayload payload = ForwardedMinePayload.fromJson(body);
+      if (payload.sourceLink == null) {
+        throw const FormatException('Missing source link');
+      }
+      if (await mining.readSourceNote(payload.sourceLink!.sourceId) == null) {
+        throw StateError('The original source note no longer exists.');
+      }
+      return <String, dynamic>{
+        'ok': true,
+        'fields': await mining.prepareForwardedSourceNote(payload),
+      };
+    case '/api/anki/source/patch':
+      final AnkiSourceNote original = decodeRemoteSourceNote(body['original']);
+      final Map<String, String> fields = decodeRemoteSourceFields(
+        body['fields'],
+      );
+      await mining.patchSourceNote(original: original, fields: fields);
+      return <String, dynamic>{'ok': true};
+    default:
+      throw const FormatException('Unknown source endpoint');
+  }
+}
+
 Future<Map<String, dynamic>> buildForwardedMineResponse(
   Map<String, dynamic> body, {
   required FushiRemoteMiningService mining,
@@ -305,8 +350,10 @@ Future<Map<String, dynamic>> buildRemoteDuplicateResponse(
   if (expression.trim().isEmpty) {
     return <String, dynamic>{'duplicate': false};
   }
-  final bool duplicate =
-      await mining.isDuplicate(expression: expression, reading: reading);
+  final bool duplicate = await mining.isDuplicate(
+    expression: expression,
+    reading: reading,
+  );
   return <String, dynamic>{'duplicate': duplicate};
 }
 
@@ -319,8 +366,9 @@ Future<Map<String, dynamic>> buildAnkiNoteTypeReadResponse(
   Map<String, dynamic> body, {
   required FushiRemoteMiningService mining,
 }) async {
-  final AnkiNoteTypeDefinition? def =
-      await mining.readNoteTypeDefinition(_requiredModelName(body));
+  final AnkiNoteTypeDefinition? def = await mining.readNoteTypeDefinition(
+    _requiredModelName(body),
+  );
   return <String, dynamic>{'noteType': def?.toJson()};
 }
 
@@ -381,8 +429,9 @@ Future<Map<String, dynamic>> buildAnkiMediaDedupRunResponse(
   if (rawDryRun != null && rawDryRun is! bool) {
     throw const FormatException('Malformed dryRun');
   }
-  final AnkiMediaDedupReport? report =
-      await mining.runMediaDedup(dryRun: (rawDryRun as bool?) ?? true);
+  final AnkiMediaDedupReport? report = await mining.runMediaDedup(
+    dryRun: (rawDryRun as bool?) ?? true,
+  );
   return <String, dynamic>{'report': report?.toJson()};
 }
 
