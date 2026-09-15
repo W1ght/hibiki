@@ -101,8 +101,13 @@ class _HomeDictionaryPageState extends BaseTabPageState<HomeDictionaryPage>
 
   final TextEditingController _controller = TextEditingController();
   final FocusNode _searchFocusNode = FocusNode();
+  /// 语言取 [appModelNoUpdate] 而**不是** `appModel`：后者在 mounted 时是
+  /// `ref.watch`（`base_page.dart`），而 [LookupImeBinding.attach] 在 `initState`
+  /// 里**同步**调一次 `languageOf()`——在 build 之外建立 InheritedWidget 依赖会被
+  /// Flutter 当场抛（debug 下点进查词 tab 直接红屏，BUG-2552）。这里也本来就不该
+  /// watch：输入法语言变了只需下次同步时读到新值，不需要整页重建。
   late final LookupImeBinding _imeBinding = LookupImeBinding(
-    languageOf: () => appModel.effectiveLookupImeLanguage,
+    languageOf: () => appModelNoUpdate.effectiveLookupImeLanguage,
   );
 
   DictionarySearchResult? _result;
