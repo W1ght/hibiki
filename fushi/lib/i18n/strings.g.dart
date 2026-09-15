@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 79781 (4693 per locale)
+/// Strings: 79900 (4700 per locale)
 ///
-/// Built on 2026-09-15 at 06:39 UTC
+/// Built on 2026-09-15 at 10:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6603,6 +6603,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get card_source_review_video_return =>
       'Return to original watch position';
   String get card_source_review_video_continue => 'Continue watching here';
+  String get reader_control_title => 'Book title';
+  String get reader_control_slot_hidden => 'Remove from reader';
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  String get reader_control_editor_title => 'Reader button layout';
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -17722,6 +17733,24 @@ class _StringsAr extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -29077,6 +29106,24 @@ class _StringsDe extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -40482,6 +40529,24 @@ class _StringsEs extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -51920,6 +51985,24 @@ class _StringsFr extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -63158,6 +63241,24 @@ class _StringsId extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -74492,6 +74593,24 @@ class _StringsIt extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -85194,6 +85313,24 @@ class _StringsJa extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -95907,6 +96044,24 @@ class _StringsKo extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -107195,6 +107350,24 @@ class _StringsNl extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -118536,6 +118709,24 @@ class _StringsPtBr extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -129855,6 +130046,24 @@ class _StringsRu extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -140971,6 +141180,24 @@ class _StringsTh extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -152205,6 +152432,24 @@ class _StringsTr extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -163408,6 +163653,24 @@ class _StringsVi extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 // Path: <root>
@@ -173673,6 +173936,20 @@ class _StringsZhCn extends _StringsEn {
   String get card_source_review_video_return => '返回原观看位置';
   @override
   String get card_source_review_video_continue => '从这里继续观看';
+  @override
+  String get reader_control_title => '书名';
+  @override
+  String get reader_control_slot_hidden => '移出阅读器';
+  @override
+  String get reader_control_reject_required => '必选按钮必须保留在阅读器上。';
+  @override
+  String get reader_control_reject_title => '书名只能放在顶栏中间，其它按钮不能放那里。';
+  @override
+  String get reader_control_editor_title => '阅读器按钮布局';
+  @override
+  String get reader_control_editor_hint => '把按钮拖到顶栏或底栏的任意位置，或移出。';
+  @override
+  String get reader_control_reset_layout => '恢复默认阅读器按钮布局';
 }
 
 // Path: <root>
@@ -184060,6 +184337,24 @@ class _StringsZhHk extends _StringsEn {
       'Return to original watch position';
   @override
   String get card_source_review_video_continue => 'Continue watching here';
+  @override
+  String get reader_control_title => 'Book title';
+  @override
+  String get reader_control_slot_hidden => 'Remove from reader';
+  @override
+  String get reader_control_reject_required =>
+      'Required buttons must stay on the reader.';
+  @override
+  String get reader_control_reject_title =>
+      'The book title only fits the top center; nothing else goes there.';
+  @override
+  String get reader_control_editor_title => 'Reader button layout';
+  @override
+  String get reader_control_editor_hint =>
+      'Drag buttons between the top and bottom bars, or remove them.';
+  @override
+  String get reader_control_reset_layout =>
+      'Restore default reader button layout';
 }
 
 /// Flat map(s) containing all translations.
@@ -193717,6 +194012,20 @@ extension on _StringsEn {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -203369,6 +203678,20 @@ extension on _StringsAr {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -213070,6 +213393,20 @@ extension on _StringsDe {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -222761,6 +223098,20 @@ extension on _StringsEs {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -232460,6 +232811,20 @@ extension on _StringsFr {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -242129,6 +242494,20 @@ extension on _StringsId {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -251821,6 +252200,20 @@ extension on _StringsIt {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -261437,6 +261830,20 @@ extension on _StringsJa {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -271058,6 +271465,20 @@ extension on _StringsKo {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -280745,6 +281166,20 @@ extension on _StringsNl {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -290427,6 +290862,20 @@ extension on _StringsPtBr {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -300115,6 +300564,20 @@ extension on _StringsRu {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -309772,6 +310235,20 @@ extension on _StringsTh {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -319445,6 +319922,20 @@ extension on _StringsTr {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -329112,6 +329603,20 @@ extension on _StringsVi {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }
@@ -338691,6 +339196,20 @@ extension on _StringsZhCn {
         return '返回原观看位置';
       case 'card_source_review_video_continue':
         return '从这里继续观看';
+      case 'reader_control_title':
+        return '书名';
+      case 'reader_control_slot_hidden':
+        return '移出阅读器';
+      case 'reader_control_reject_required':
+        return '必选按钮必须保留在阅读器上。';
+      case 'reader_control_reject_title':
+        return '书名只能放在顶栏中间，其它按钮不能放那里。';
+      case 'reader_control_editor_title':
+        return '阅读器按钮布局';
+      case 'reader_control_editor_hint':
+        return '把按钮拖到顶栏或底栏的任意位置，或移出。';
+      case 'reader_control_reset_layout':
+        return '恢复默认阅读器按钮布局';
       default:
         return null;
     }
@@ -348285,6 +348804,20 @@ extension on _StringsZhHk {
         return 'Return to original watch position';
       case 'card_source_review_video_continue':
         return 'Continue watching here';
+      case 'reader_control_title':
+        return 'Book title';
+      case 'reader_control_slot_hidden':
+        return 'Remove from reader';
+      case 'reader_control_reject_required':
+        return 'Required buttons must stay on the reader.';
+      case 'reader_control_reject_title':
+        return 'The book title only fits the top center; nothing else goes there.';
+      case 'reader_control_editor_title':
+        return 'Reader button layout';
+      case 'reader_control_editor_hint':
+        return 'Drag buttons between the top and bottom bars, or remove them.';
+      case 'reader_control_reset_layout':
+        return 'Restore default reader button layout';
       default:
         return null;
     }

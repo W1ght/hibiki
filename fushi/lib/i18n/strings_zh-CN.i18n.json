@@ -4691,5 +4691,12 @@
   "card_source_review_video_title": "正在回看卡片片段 · 不影响观看进度",
   "card_source_review_video_watching": "正在正常观看 · 会记录观看进度",
   "card_source_review_video_return": "返回原观看位置",
-  "card_source_review_video_continue": "从这里继续观看"
+  "card_source_review_video_continue": "从这里继续观看",
+  "reader_control_title": "书名",
+  "reader_control_slot_hidden": "移出阅读器",
+  "reader_control_reject_required": "必选按钮必须保留在阅读器上。",
+  "reader_control_reject_title": "书名只能放在顶栏中间，其它按钮不能放那里。",
+  "reader_control_editor_title": "阅读器按钮布局",
+  "reader_control_editor_hint": "把按钮拖到顶栏或底栏的任意位置，或移出。",
+  "reader_control_reset_layout": "恢复默认阅读器按钮布局"
 }

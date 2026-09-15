@@ -505,9 +505,21 @@ void main() {
         '  Widget _buildAudiobookBar() {',
         '  /// 小说页的窗口全屏切换',
       );
+      // 槽位化后播放条右端 = 底栏槽位按钮 + 状态读数，两者合在
+      // _buildAudiobookBarTrailing 里；读数仍只有这一个落点。
       expect(
-        barBuild.contains(
-          'trailing: _playbackStatusInline ? _buildBarStatusText() : null,',
+        barBuild.contains('trailing: _buildAudiobookBarTrailing(),'),
+        isTrue,
+        reason: '播放条右端由 _buildAudiobookBarTrailing 统一组装',
+      );
+      final String trailing = _slice(
+        src,
+        '  Widget? _buildAudiobookBarTrailing() {',
+        '  /// 小说页的窗口全屏切换',
+      );
+      expect(
+        trailing.contains(
+          '_playbackStatusInline ? _buildBarStatusText() : null',
         ),
         isTrue,
         reason: '底栏右端仍是读数的唯一落点',
@@ -549,8 +561,10 @@ void main() {
         );
         expect(build.contains('RepaintBoundary('), isTrue);
         expect(build.contains('ReaderStatusFooter('), isTrue);
+        // BUG-2531 起绘制门控收进 _statusFooterShouldPaint 这一个真值；
+        // 「同源用 set-once _hasEverLoaded」由上面那条钉它的定义式的断言保证。
         expect(
-          build.contains('!_hasEverLoaded'),
+          build.contains('_statusFooterShouldPaint'),
           isTrue,
           reason: '绘制门控与底栏同源用 set-once _hasEverLoaded（切章不闪烁）',
         );

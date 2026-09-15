@@ -4691,5 +4691,12 @@
   "card_source_review_video_title": "Reviewing card clip · Watch progress is preserved",
   "card_source_review_video_watching": "Watching normally · Watch progress is being saved",
   "card_source_review_video_return": "Return to original watch position",
-  "card_source_review_video_continue": "Continue watching here"
+  "card_source_review_video_continue": "Continue watching here",
+  "reader_control_title": "Book title",
+  "reader_control_slot_hidden": "Remove from reader",
+  "reader_control_reject_required": "Required buttons must stay on the reader.",
+  "reader_control_reject_title": "The book title only fits the top center; nothing else goes there.",
+  "reader_control_editor_title": "Reader button layout",
+  "reader_control_editor_hint": "Drag buttons between the top and bottom bars, or remove them.",
+  "reader_control_reset_layout": "Restore default reader button layout"
 }
