@@ -29,10 +29,13 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2211 条。点号进各自文件。
+> 共 2214 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2555](bugs/BUG-2555-manga-online-lookup-waits-mining-page.md) | ✅ | ✅ | 在线漫画查词前串行等待制卡页物化 |
+| [BUG-2554](bugs/BUG-2554-manga-lookup-no-highlight.md) | ✅ | ✅ | 漫画查词命中字不高亮 |
+| [BUG-2553](bugs/BUG-2553-manga-popup-barrier-blocks-relookup.md) | ✅ | ✅ | 漫画查词弹窗开着时点另一个词只关栈不换词 |
 | [BUG-2552](bugs/BUG-2552-lookup-ime-initstate-watch.md) | ✅ | ✅ | 查词主页 initState 经 LookupImeBinding 触发 ref.watch，debug 下打开查词 tab 崩溃 |
 | [BUG-2550](bugs/BUG-2550-popup-redirect-label-hides-definition.md) | ✅ | ✅ | OALDPE10 短语动词记录带「Redirected from」标签就被当成纯跳转记录藏掉（查 give up 看不到 OALDPE10 释义） |
 | [BUG-2549](bugs/BUG-2549-english-phrasal-verb-deinflection.md) | ✅ | ✅ | 英语短语动词的变形查不到原形（gave up / picked it up 还原不到 give up / pick up） |
