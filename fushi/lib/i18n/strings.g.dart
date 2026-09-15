@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 77282 (4546 per locale)
+/// Strings: 77316 (4548 per locale)
 ///
-/// Built on 2026-09-15 at 05:03 UTC
+/// Built on 2026-09-15 at 05:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6383,6 +6383,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'That input method is not installed on this system yet.';
   String get reader_stats_clock_pause => 'Pause timer';
   String get reader_stats_clock_resume => 'Resume timer';
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -17135,6 +17139,12 @@ class _StringsAr extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -28123,6 +28133,12 @@ class _StringsDe extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -39161,6 +39177,12 @@ class _StringsEs extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -50232,6 +50254,12 @@ class _StringsFr extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -61103,6 +61131,12 @@ class _StringsId extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -72070,6 +72104,12 @@ class _StringsIt extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -82405,6 +82445,12 @@ class _StringsJa extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -92751,6 +92797,12 @@ class _StringsKo extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -103672,6 +103724,12 @@ class _StringsNl extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -114646,6 +114704,12 @@ class _StringsPtBr extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -125598,6 +125662,12 @@ class _StringsRu extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -136347,6 +136417,12 @@ class _StringsTh extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -147214,6 +147290,12 @@ class _StringsTr extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -158050,6 +158132,12 @@ class _StringsVi extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 // Path: <root>
@@ -167997,6 +168085,11 @@ class _StringsZhCn extends _StringsEn {
   String get reader_stats_clock_pause => '暂停计时';
   @override
   String get reader_stats_clock_resume => '继续计时';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      '片段已保存，但系统分享面板没有打开：${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable => '片段已保存，但系统分享面板没有打开';
 }
 
 // Path: <root>
@@ -178017,6 +178110,12 @@ class _StringsZhHk extends _StringsEn {
   String get reader_stats_clock_pause => 'Pause timer';
   @override
   String get reader_stats_clock_resume => 'Resume timer';
+  @override
+  String video_clip_export_share_unavailable({required Object path}) =>
+      'Clip saved, but the share sheet didn\'t open: ${path}';
+  @override
+  String get audiobook_export_clip_share_unavailable =>
+      'Clip saved, but the share sheet didn\'t open';
 }
 
 /// Flat map(s) containing all translations.
@@ -187375,6 +187474,11 @@ extension on _StringsEn {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -196728,6 +196832,11 @@ extension on _StringsAr {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -206130,6 +206239,11 @@ extension on _StringsDe {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -215522,6 +215636,11 @@ extension on _StringsEs {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -224922,6 +225041,11 @@ extension on _StringsFr {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -234292,6 +234416,11 @@ extension on _StringsId {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -243685,6 +243814,11 @@ extension on _StringsIt {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -253002,6 +253136,11 @@ extension on _StringsJa {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -262324,6 +262463,11 @@ extension on _StringsKo {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -271712,6 +271856,11 @@ extension on _StringsNl {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -281095,6 +281244,11 @@ extension on _StringsPtBr {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -290484,6 +290638,11 @@ extension on _StringsRu {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -299842,6 +300001,11 @@ extension on _StringsTh {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -309216,6 +309380,11 @@ extension on _StringsTr {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -318584,6 +318753,11 @@ extension on _StringsVi {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }
@@ -327868,6 +328042,10 @@ extension on _StringsZhCn {
         return '暂停计时';
       case 'reader_stats_clock_resume':
         return '继续计时';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) => '片段已保存，但系统分享面板没有打开：${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return '片段已保存，但系统分享面板没有打开';
       default:
         return null;
     }
@@ -337163,6 +337341,11 @@ extension on _StringsZhHk {
         return 'Pause timer';
       case 'reader_stats_clock_resume':
         return 'Resume timer';
+      case 'video_clip_export_share_unavailable':
+        return ({required Object path}) =>
+            'Clip saved, but the share sheet didn\'t open: ${path}';
+      case 'audiobook_export_clip_share_unavailable':
+        return 'Clip saved, but the share sheet didn\'t open';
       default:
         return null;
     }

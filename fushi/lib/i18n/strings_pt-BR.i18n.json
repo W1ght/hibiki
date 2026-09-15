@@ -4544,5 +4544,7 @@
   "settings_lookup_ime_language_unset": "Not set",
   "settings_lookup_ime_language_unavailable": "That input method is not installed on this system yet.",
   "reader_stats_clock_pause": "Pause timer",
-  "reader_stats_clock_resume": "Resume timer"
+  "reader_stats_clock_resume": "Resume timer",
+  "video_clip_export_share_unavailable": "Clip saved, but the share sheet didn't open: ${path}",
+  "audiobook_export_clip_share_unavailable": "Clip saved, but the share sheet didn't open"
 }

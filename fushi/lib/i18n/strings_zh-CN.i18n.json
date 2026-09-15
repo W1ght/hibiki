@@ -4544,5 +4544,7 @@
   "settings_lookup_ime_language_unset": "未设置",
   "settings_lookup_ime_language_unavailable": "系统里还没有安装这个输入法。",
   "reader_stats_clock_pause": "暂停计时",
-  "reader_stats_clock_resume": "继续计时"
+  "reader_stats_clock_resume": "继续计时",
+  "video_clip_export_share_unavailable": "片段已保存，但系统分享面板没有打开：${path}",
+  "audiobook_export_clip_share_unavailable": "片段已保存，但系统分享面板没有打开"
 }
