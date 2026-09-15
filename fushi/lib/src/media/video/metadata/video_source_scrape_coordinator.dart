@@ -7,6 +7,7 @@ import 'dart:typed_data';
 
 import 'package:drift/drift.dart' show Value;
 import 'package:http/http.dart' as http;
+import 'package:fushi/src/ai/ai_video_identity_assistant.dart';
 import 'package:fushi/src/media/video/metadata/anidb_hash_identity_service.dart';
 import 'package:fushi/src/media/video/metadata/anidb_title_catalog.dart';
 import 'package:fushi/src/media/video/metadata/anidb_udp_file_client.dart';
@@ -29,6 +30,7 @@ import 'package:fushi/src/media/video/metadata/video_nfo_reader.dart';
 import 'package:fushi/src/media/video/metadata/video_sidecar_artifact_store.dart';
 import 'package:fushi/src/media/video/metadata/video_sidecar_target_resolver.dart';
 import 'package:fushi/src/media/video/metadata/video_sidecar_writer.dart';
+import 'package:fushi/src/media/video/metadata/video_scrape_ai_identity_note.dart';
 import 'package:fushi/src/media/video/metadata/video_scrape_operation_gate.dart';
 import 'package:fushi/src/media/video/metadata/video_source_scrape_config.dart';
 import 'package:fushi/src/media/video/metadata/video_source_scrape_task.dart';
@@ -37,6 +39,7 @@ import 'package:fushi/src/media/video/scraper/filename_parser.dart';
 import 'package:fushi/src/media/video/scraper/scrape_identifier_words.dart';
 import 'package:fushi/src/media/video/scraper/scraper_types.dart';
 import 'package:fushi/src/media/video/video_filename_parser.dart';
+import 'package:fushi/src/utils/misc/error_log_service.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:path/path.dart' as p;
 
@@ -59,6 +62,7 @@ class VideoSourceScrapeCoordinator
     VideoMetadataProviderRegistry Function(String locale)?
         localeRegistryFactory,
     this.onWorkScraped,
+    this.aiIdentityDecider,
   })  : primaryProvider = primaryProvider ?? config.primaryProvider,
         _localeRegistryFactory = localeRegistryFactory ??
             ((String locale) => _createRegistry(config, locale: locale)),
@@ -128,6 +132,23 @@ class VideoSourceScrapeCoordinator
   ///
   /// 回调抛出的异常会被吞掉并记进本次 run 的 warnings，绝不让补字幕影响刮削结论。
   final Future<void> Function(VideoScrapedWorkNotice notice)? onWorkScraped;
+
+  /// 歧义候选的 AI 消解器；null = 不启用，歧义直接进人工确认 / 待确认（旧行为）。
+  ///
+  /// 只在 resolver 已经判定 ambiguous、候选已经取回之后被问一次，不新增任何资料
+  /// 源请求；命中且置信度达到 [kAiVideoIdentityAutoAcceptConfidence] 才当作用户
+  /// 选了那条候选，后续绑定 / 写库路径与人工确认完全相同。AI 故障一律吞成
+  /// 「不采用」，绝不把刮削整体标失败。
+  final AiVideoIdentityDecider? aiIdentityDecider;
+
+  /// 同一目录、同一批候选只问一次 AI（键见 [AiVideoIdentityQuery.cacheKey]）；
+  /// 值为 null 表示 AI 明确没给出唯一命中，同样不再重问。
+  final Map<String, AiVideoIdentityDecision?> _aiIdentityCache =
+      <String, AiVideoIdentityDecision?>{};
+
+  /// 本趟 run 里 AI 已经失败过（网络 / 鉴权 / 超时）时记下 run id：同一趟余下的
+  /// 歧义作品跳过 AI，免得每条都等满一次请求超时；下一趟 run 照常再试。
+  int? _aiIdentityFailedRunId;
 
   final Set<int> _interruptedRunIds = <int>{};
   int? _activeRunId;
@@ -1046,20 +1067,40 @@ class VideoSourceScrapeCoordinator
               work: candidate,
             ),
       ];
-      if (onConfirmation == null || options.isEmpty) {
+      if (options.isEmpty) {
         return _ResolvedWork(
           pending: true,
           reason: resolution.reason,
           status: resolution.status,
         );
       }
-      final VideoSourceScrapeConfirmationCandidate? selected =
-          await onConfirmation(VideoSourceScrapeConfirmation(
-        sourceId: source.id,
-        sourceLabel: source.label,
-        localWorkTitle: localWork.title,
-        candidates: options,
-      ));
+      // AI 消解先于人工确认：后台补刮没有确认回调，这里是它唯一能自动收敛
+      // 的机会；有回调的前台批次也先问 AI，高置信直接采用，其余照旧弹给用户。
+      VideoSourceScrapeConfirmationCandidate? selected =
+          await _selectCandidateWithAi(
+        localWork: localWork,
+        localTitles: candidates,
+        seasonNumber: seasonNumber,
+        episodeCount: episodeCount,
+        year: searchYear,
+        options: options,
+        warnings: warnings,
+      );
+      if (selected == null) {
+        if (onConfirmation == null) {
+          return _ResolvedWork(
+            pending: true,
+            reason: resolution.reason,
+            status: resolution.status,
+          );
+        }
+        selected = await onConfirmation(VideoSourceScrapeConfirmation(
+          sourceId: source.id,
+          sourceLabel: source.label,
+          localWorkTitle: localWork.title,
+          candidates: options,
+        ));
+      }
       if (selected == null) {
         return _ResolvedWork(
           pending: true,
@@ -2396,6 +2437,97 @@ class VideoSourceScrapeCoordinator
     }
     return null;
   }
+
+  /// 歧义候选交给 AI 选唯一命中；回 null 表示「不采用」，调用方照旧走人工确认。
+  ///
+  /// 采用条件：注入了 [aiIdentityDecider]、它给出了候选集合内的 key、且置信度
+  /// 达到 [kAiVideoIdentityAutoAcceptConfidence]。采用时往 [warnings] 记一条
+  /// `ai:matched …` 标记（见 `video_scrape_ai_identity_note.dart`），随运行记录
+  /// 落库，UI 据此显示「AI 判定 · 置信度 N%」。任何异常都吞掉并记诊断日志。
+  Future<VideoSourceScrapeConfirmationCandidate?> _selectCandidateWithAi({
+    required VideoSourceScrapeWork localWork,
+    required List<String> localTitles,
+    required int? seasonNumber,
+    required int? episodeCount,
+    required int? year,
+    required List<VideoSourceScrapeConfirmationCandidate> options,
+    required List<SourceScrapeIssue> warnings,
+  }) async {
+    final AiVideoIdentityDecider? decider = aiIdentityDecider;
+    if (decider == null) return null;
+    final int? runId = _activeRunId;
+    if (runId != null && _aiIdentityFailedRunId == runId) return null;
+    final AiVideoIdentityQuery query = AiVideoIdentityQuery(
+      localTitles: localTitles,
+      season: seasonNumber,
+      episodeCount: episodeCount,
+      year: year,
+      sampleFileNames: <String>[
+        for (final VideoBookRow member in localWork.members)
+          p.basename(member.videoPath),
+      ],
+      candidates: <AiVideoIdentityCandidate>[
+        for (final VideoSourceScrapeConfirmationCandidate option in options)
+          AiVideoIdentityCandidate(
+            key: _aiCandidateKey(option),
+            titles: _aiCandidateTitles(option.work),
+            mediaKind: option.lookup.mediaKind,
+            year: option.work.year,
+            episodeCount: option.work.episodeCount,
+            synopsis: option.work.plot,
+          ),
+      ],
+      locale: _locale,
+    );
+    final String cacheKey = query.cacheKey;
+    final AiVideoIdentityDecision? decision;
+    if (_aiIdentityCache.containsKey(cacheKey)) {
+      decision = _aiIdentityCache[cacheKey];
+    } else {
+      AiVideoIdentityDecision? fresh;
+      try {
+        fresh = await decider(query);
+      } catch (error, stack) {
+        // AI 故障只影响「要不要自动收敛」，不影响刮削结论：记诊断、本趟余下
+        // 作品跳过 AI，本条照旧进人工确认 / 待确认。
+        ErrorLogService.instance.logDiagnostic(
+          'VideoSourceScrapeCoordinator.aiIdentity',
+          '${localWork.title}: $error\n$stack',
+        );
+        if (runId != null) _aiIdentityFailedRunId = runId;
+        return null;
+      }
+      // decider 回 null 表示没指派提供商，这种「没问」不缓存：用户随后在设置里
+      // 指派了提供商，同一批候选下次就该真的问一次。
+      if (fresh == null) return null;
+      decision = fresh;
+      _aiIdentityCache[cacheKey] = fresh;
+    }
+    if (decision == null || !decision.isAutoAcceptable) return null;
+    final String key = decision.key!;
+    for (final VideoSourceScrapeConfirmationCandidate option in options) {
+      if (_aiCandidateKey(option) != key) continue;
+      warnings.add(SourceScrapeIssue(
+        workTitle: localWork.title,
+        message: encodeVideoScrapeAiIdentityNote(decision),
+      ));
+      return option;
+    }
+    return null;
+  }
+
+  /// 候选给 AI 的稳定键，与 resolver 合并候选时的去重键同形（provider:externalId）。
+  static String _aiCandidateKey(
+    VideoSourceScrapeConfirmationCandidate candidate,
+  ) =>
+      '${candidate.lookup.provider.name}:${candidate.lookup.externalId}';
+
+  /// 候选的各语言标题：主标题 + 原名 + 别名（去空去重由 [AiVideoIdentityCandidate] 做）。
+  static List<String> _aiCandidateTitles(VideoMetadataWork work) => <String>[
+        work.title,
+        if (work.originalTitle != null) work.originalTitle!,
+        ...work.aliases,
+      ];
 
   static List<String> _titleCandidates(
     VideoSourceScrapeWork work,

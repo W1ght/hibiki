@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart' show RenderParagraph;
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/i18n/strings.g.dart';
+import 'package:fushi/src/ai/ai_provider_config.dart';
 import 'package:fushi/src/media/video/download/video_subtitle_registry.dart';
 import 'package:fushi/src/media/video/subtitle/video_subtitle_provider.dart';
 import 'package:fushi/src/media/video/video_book_repository.dart';
@@ -39,6 +40,8 @@ class _Host implements SubtitleWorkbenchHost {
   String? get defaultContentLanguage => null;
   @override
   Future<void> persistRemoteSubtitle(String bookUid, String path) async {}
+  @override
+  AiProviderConfig? get videoSearchAiProvider => null;
 }
 
 void main() {
