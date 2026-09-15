@@ -29,23 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2179 条。点号进各自文件。
+> 共 2167 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
-| [BUG-2543](bugs/BUG-2543-english-posless-yomitan-deinflection.md) | ✅ | ✅ | 英语无词性 Yomitan 词典的变形还原全部失效，且不规则形无还原规则 |
-| [BUG-2493](bugs/BUG-2493-ios-ankimobile-info-return-not-applied.md) | ✅ | ✅ | iOS AnkiMobile 回跳后牌组/笔记类型不刷新：x-success 未送达时无兜底、互联制卡包裹层静默丢弃回调 |
-| [BUG-2474](bugs/BUG-2474-webkit-line-box-contain-zero-height-lines.md) | ✅ | ✅ | WebKit 上 BUG-2459 的 line-box-contain 把嵌套 inline / 空行行盒压成零高：目录列叠印、空行消失 |
-| [BUG-2464](bugs/BUG-2464-reader-reanchor-frozen-when-page-hidden.md) | ✅ | ✅ | 页面隐藏时阅读器重锚旗永不清（rAF 冻结）位置与进度不落库 |
-| [BUG-2463](bugs/BUG-2463-reader-continuous-reveal-smooth-scroll-inflates-ledger.md) | ✅ | ✅ | 连续模式听书长距离平滑跟随滚动把途中视口计入阅读账本 |
-| [BUG-2462](bugs/BUG-2462-audiobook-resume-text-behind-audio.md) | ✅ | ✅ | 有声书重开书正文恢复点落后于音频位置 |
-| [BUG-2461](bugs/BUG-2461-reader-settings-live-engine-config.md) | ✅ | ✅ | 阅读器边距等设置改完不实时生效 |
-| [BUG-2460](bugs/BUG-2460-reader-status-footer-inside-bottom-safe-area.md) | ✅ | ✅ | 阅读器状态行坐进系统底部安全区 |
-| [BUG-2459](bugs/BUG-2459-webkit-ruby-paragraph-first-line-growth.md) | ✅ | ✅ | WebKit 上首行含振假名的段落被撑高一截 |
-| [BUG-2457](bugs/BUG-2457-reader-paged-bottom-font-size-band.md) | ✅ | ✅ | 分页布局底部多留一个字号的空带 |
-| [BUG-2454](bugs/BUG-2454-reader-image-max-stale-on-chrome-insets.md) | ✅ | ✅ | 分页整页插图在 chrome inset 变化后被切成三段 |
-| [BUG-2453](bugs/BUG-2453-reader-status-footer-duplicated-squeeze.md) | ✅ | ✅ | 挤压态底栏与状态行重复画同一串读数 |
-| [BUG-2440](bugs/BUG-2440-ios-bottom-safearea-gap.md) | ✅ | ✅ | iOS 页面底部安全区留下一条不可用空白，滚动内容被硬切 |
+| [BUG-2396](bugs/BUG-2396-stat-period-grid-phone-single-column.md) | ✅ | ✅ | 统计中心时段汇总卡在手机上只显示一列 |
 | [BUG-2386](bugs/BUG-2386-dictionary-redirect-provenance.md) | ✅ | ✅ | 词典查词把同释义真实词条误判为重定向别名删除 |
 | [BUG-2385](bugs/BUG-2385-dictionary-data-missing-lookup.md) | ✅ | ✅ | 词典登记仍在但资源目录缺失导致完整词查不到 |
 | [BUG-2381](bugs/BUG-2381-aidoku-request-error-unreadable.md) | ✅ | ✅ | Aidoku 源报 error sending request，两层各抹掉一半原因，结构上不可诊断 |
