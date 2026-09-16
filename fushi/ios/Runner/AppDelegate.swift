@@ -77,9 +77,7 @@ import Flutter
           "desired": LookupImeLanguage.desiredLanguage ?? "",
           "resolveCount": LookupImeLanguage.resolveCount,
           "lastResolved": LookupImeLanguage.lastResolved ?? "",
-          // 用户已在查词框里自己换过键盘 → 我们不再强推，让系统按
-          // textInputContextIdentifier 记住的那个来（第三方键盘唯一走得通的路径）。
-          "deferringToUser": LookupImeLanguage.isDeferringToUser,
+          "contextIdentifier": LookupImeLanguage.contextIdentifier,
           "activeInputModes": UITextInputMode.activeInputModes.compactMap {
             $0.primaryLanguage
           },
