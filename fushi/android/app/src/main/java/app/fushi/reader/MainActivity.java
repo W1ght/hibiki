@@ -890,8 +890,20 @@ public class MainActivity extends AudioServiceActivity {
                         result.success(null);
                         return;
                     }
-                    // setLanguage / probe 是桌面与 iOS 的真·切换接口，Android 没有
-                    // 对应能力，让 Dart 侧走 MissingPluginException 的静默分支。
+                    if ("listInputMethods".equals(call.method)) {
+                        result.success(LookupImeCatalog.list(getApplicationContext()));
+                        return;
+                    }
+                    if ("showInputMethodPicker".equals(call.method)) {
+                        // 必须用 Activity 而不是 applicationContext：服务端放行的是
+                        // 「当前 focused window 的 client」。
+                        result.success(LookupImeCatalog.showPicker(MainActivity.this));
+                        return;
+                    }
+                    // setLookupIme / probe 是桌面与 iOS 的真·切换接口。Android 自 9 起
+                    // 应用切输入法在调用方进程里就是 no-op（见 LookupImeCatalog 类注释），
+                    // 语言提示走的是 EditorInfo.hintLocales 那条路，不经这个 channel。
+                    // 让 Dart 侧走 MissingPluginException 的静默分支。
                     result.notImplemented();
                 });
 

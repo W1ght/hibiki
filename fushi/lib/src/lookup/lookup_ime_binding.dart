@@ -14,13 +14,18 @@ library;
 
 import 'package:flutter/widgets.dart';
 import 'package:fushi/src/lookup/lookup_ime_channel.dart';
+import 'package:fushi/src/lookup/lookup_ime_source.dart';
 
 class LookupImeBinding {
-  LookupImeBinding({required this.languageOf});
+  LookupImeBinding({required this.requestOf});
 
-  /// 取当前应该用的语言（BCP-47；null = 未设置）。每次同步都重新取——用户可能在
-  /// 查词页面还开着的时候改了设置。
-  final String? Function() languageOf;
+  /// 取当前应该用的输入法（语言 + 可选的具体输入法 id）。每次同步都重新取——用户
+  /// 可能在查词页面还开着的时候改了设置。
+  ///
+  /// **实现方必须用非 watch 的读法**（页面里用 `appModelNoUpdate`）：[attach] 在
+  /// `initState` 里同步调它，在 build 之外建立 InheritedWidget 依赖会被 Flutter
+  /// 当场抛（BUG-2552）。这里也本来就不需要 watch——值变了下次同步读到即可。
+  final LookupImeRequest Function() requestOf;
 
   FocusNode? _focusNode;
 
@@ -28,7 +33,7 @@ class LookupImeBinding {
   void attach({FocusNode? focusNode}) {
     _focusNode = focusNode;
     focusNode?.addListener(_syncFromFocus);
-    LookupImeChannel.request(this, languageOf());
+    LookupImeChannel.request(this, requestOf());
   }
 
   /// 页面 dispose 时调。**必须**调：桌面端不还原就会把用户的系统输入法留在我们
@@ -44,6 +49,6 @@ class LookupImeBinding {
   void _syncFromFocus() {
     final FocusNode? node = _focusNode;
     if (node == null) return;
-    LookupImeChannel.request(this, node.hasFocus ? languageOf() : null);
+    LookupImeChannel.request(this, node.hasFocus ? requestOf() : null);
   }
 }

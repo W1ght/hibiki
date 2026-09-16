@@ -527,6 +527,43 @@ class PreferencesRepository extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// 用户指定的**具体输入法**标识（平台专属）。空串 = 没指定，退回按
+  /// [lookupImeLanguage] 匹配。
+  ///
+  /// 为什么要连平台一起记（[lookupImeSourcePlatform]）：这个 id 的形态各端完全不同
+  /// （Windows 是 TSF 的 `clsid:guidProfile`，macOS 是 `kTISPropertyInputSourceID`，
+  /// Android 是扁平化 ComponentName），跨端毫无意义。备份合并引擎默认把
+  /// `preferences` 当设备设置**不合并**，所以正常不会串味；但用户从另一台机器
+  /// restore 时仍可能带过来，那时平台对不上就当没设过，免得设置页显示一个本机根本
+  /// 不存在的输入法名。
+  String get lookupImeSourceId =>
+      getPref('lookup.ime_source_id', defaultValue: '') as String;
+
+  /// 上面那个 id 的人类可读名，**只用于设置页显示**。
+  ///
+  /// 存一份而不是每次去问原生侧：设置页的标题在渲染期求值（`titleBuilder`），那里
+  /// 不能做 method channel 往返。
+  String get lookupImeSourceName =>
+      getPref('lookup.ime_source_name', defaultValue: '') as String;
+
+  /// [lookupImeSourceId] 属于哪个平台（`windows` / `macos` / `android`）。
+  String get lookupImeSourcePlatform =>
+      getPref('lookup.ime_source_platform', defaultValue: '') as String;
+
+  /// 三个键一起写：id 和它的显示名、所属平台必须同进同退，否则设置页会显示一个
+  /// 对不上的名字。[id] 为空 = 清除指定，回到按语言匹配。
+  Future<void> setLookupImeSource({
+    required String id,
+    required String name,
+    required String platform,
+  }) async {
+    final bool clearing = id.isEmpty;
+    await setPref('lookup.ime_source_id', id);
+    await setPref('lookup.ime_source_name', clearing ? '' : name);
+    await setPref('lookup.ime_source_platform', clearing ? '' : platform);
+    notifyListeners();
+  }
+
   /// 防截屏（桌面查词浮窗，Windows）—— 覆盖窗设 SetWindowDisplayAffinity
   /// (WDA_EXCLUDEFROMCAPTURE)，对用户可见但从截图 / 录屏 / 屏幕共享排除。
   /// 默认 false（用户要求默认关闭，2026-07）。

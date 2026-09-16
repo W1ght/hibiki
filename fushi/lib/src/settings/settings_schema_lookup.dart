@@ -6,6 +6,8 @@ import 'package:fushi/pages.dart';
 import 'package:fushi/src/lookup/gal_hook_text_overlay_controller.dart';
 import 'package:fushi/src/lookup/global_lookup_controller.dart';
 import 'package:fushi/src/lookup/lookup_ime_channel.dart';
+import 'package:fushi/src/lookup/lookup_ime_source.dart';
+import 'package:fushi/src/lookup/lookup_ime_source_picker.dart';
 import 'package:fushi/src/lookup/selection_capture_ffi.dart';
 import 'package:fushi/src/media/import/real_path_directory_picker.dart';
 import 'package:fushi/src/settings/settings_actions.dart';
@@ -340,6 +342,49 @@ SettingsDestination buildLookupDestination() {
                     settingsContext,
                     t.settings_lookup_ime_language_unavailable,
                   );
+                },
+              );
+            },
+          ),
+          // 指定**具体输入法**。按语言只能说「切到日语」，切到哪个日语输入法由系统
+          // 决定——Windows 上更极端：TSF 输入法根本不注册 HKL，整个语言共用一个键盘
+          // 布局 HKL，所以按语言连「切到系统自带那个」都表达不了。
+          //
+          // 三端形态不同，但 UI 只有这一份：原生侧回来的列表自带 `selectable`，
+          // Windows/macOS 可选、Android 只读（平台不允许应用切）、iOS 空（公开 API
+          // 认不出是哪个键盘）。
+          SettingsNavigationItem(
+            id: 'lookup.ime_source',
+            title: t.settings_lookup_ime_source_title,
+            titleBuilder: (SettingsContext settingsContext) {
+              final String? name =
+                  settingsContext.appModel.effectiveLookupImeSourceName;
+              final String label = name ?? t.settings_lookup_ime_source_auto;
+              return '${t.settings_lookup_ime_source_title} · $label';
+            },
+            subtitle: t.settings_lookup_ime_source_description,
+            icon: Icons.keyboard_outlined,
+            onTap: (SettingsContext settingsContext) async {
+              // 枚举放在 onTap 而不是 titleBuilder：后者在渲染期求值，不能做
+              // method channel 往返。
+              final List<LookupImeSource> sources =
+                  await LookupImeChannel.listSources();
+              if (!settingsContext.context.mounted) return;
+              final AppModel appModel = settingsContext.appModel;
+              await showLookupImeSourcePicker(
+                context: settingsContext.context,
+                sources: sources,
+                currentId: appModel.effectiveLookupImeSourceId,
+                language: appModel.effectiveLookupImeLanguage,
+                onSelected: (LookupImeSource? source) async {
+                  await appModel.prefsRepo.setLookupImeSource(
+                    id: source?.id ?? '',
+                    name: source?.name ?? '',
+                    // 连平台一起记：id 的形态各端完全不同，从别的设备 restore 过来
+                    // 时平台对不上就当没设过。
+                    platform: source == null ? '' : lookupImePlatformKey,
+                  );
+                  settingsContext.refresh();
                 },
               );
             },

@@ -1457,13 +1457,40 @@ void FlutterWindow::RegisterImeGuardChannel() {
       });
 }
 
+// 从 EncodableMap 里取一个可选字符串参数；缺、null、空串一律当成"没表达"。
+static std::wstring OptionalWideArg(const flutter::EncodableMap& args,
+                                    const char* key) {
+  const auto it = args.find(flutter::EncodableValue(key));
+  if (it == args.end()) return std::wstring();
+  const auto* text = std::get_if<std::string>(&it->second);
+  if (text == nullptr || text->empty()) return std::wstring();
+  return Utf8ToWideString(*text);
+}
+
+LookupImeUpdate FlutterWindow::ApplyDesiredLookupIme() {
+  // 基线（进入查词前用户在用哪个）只在状态机第一次真正切换时被采用，所以这里
+  // 每次都老实读一遍当前值；读不到就交一个空 profile 过去——状态机会把它当成
+  // "没有基线"，还原时只清状态而不乱猜一个目标。
+  ImeProfile current;
+  lookup_ime_profiles_.ActiveProfile(&current);
+  return lookup_ime_switcher_.Activate(desired_lookup_ime_source_id_,
+                                       desired_lookup_ime_language_, current,
+                                       lookup_ime_profiles_.EnumerateEnabled());
+}
+
 void FlutterWindow::RegisterLookupImeChannel() {
-  // 查词输入框的输入法语言。Dart 在查词页面 mount 时说「期望日语」，页面走掉时
-  // 说 null；我们在**已安装**的键盘布局里找对应语言切过去，并记住用户原来那个。
-  // 还原是硬要求：Win8 起输入法是 per-user，不还原就会漏到用户的其它应用里。
-  ime_language_switcher_ = ImeLanguageSwitcher(
-      [](HWND hwnd, HKL hkl, void*) { return RequestInputLanguage(hwnd, hkl); },
-      nullptr);
+  // 查词输入框的输入法。Dart 在查词页面 mount 时说「期望这个输入法 / 这个语言」，
+  // 页面走掉时说空；我们在系统**已启用**的 TSF profile 里找到它切过去，并记住用户
+  // 原来那个。
+  //
+  // 为什么走 TSF 而不是 HKL：现代输入法根本不注册 HKL（本机的微信输入法 / 微软拼音
+  // / 日语 MS-IME 的 hkl 全是 0），按 HKL 连「切到哪个中文输入法」都表达不了。
+  // 见 lookup_ime_selection.h。
+  //
+  // 还原是硬要求：实测切过去之后不还原就把前台交给别的窗口，那个进程的输入法会跟着
+  // 变（`TF_IPPMF_FORPROCESS` 并不等于进程隔离）。WM_ACTIVATE 那段负责这件事。
+  lookup_ime_switcher_ = LookupImeSwitcher(
+      &TsfInputProcessorProfiles::ActivateThunk, &lookup_ime_profiles_);
 
   lookup_ime_channel_ =
       std::make_unique<flutter::MethodChannel<flutter::EncodableValue>>(
@@ -1475,75 +1502,102 @@ void FlutterWindow::RegisterLookupImeChannel() {
       [this](const flutter::MethodCall<flutter::EncodableValue>& call,
              std::unique_ptr<flutter::MethodResult<flutter::EncodableValue>>
                  result) {
-        // 键盘焦点在 Flutter view 子窗口上（Win32Window::SetChildContent 做的
-        // SetFocus），输入语言请求要发给它；拆窗期间回退到顶层框架窗口。
-        HWND target = flutter_controller_ && flutter_controller_->view()
-                          ? flutter_controller_->view()->GetNativeWindow()
-                          : nullptr;
-        if (target == nullptr) {
-          target = GetHandle();
-        }
-        const DWORD thread_id = GetWindowThreadProcessId(target, nullptr);
-
-        if (call.method_name() == "setLanguage") {
-          std::wstring tag;
-          if (const auto* value = std::get_if<std::string>(call.arguments())) {
-            tag = Utf8ToWideString(*value);
+        // 这个 handler 跑在 platform 线程 = 窗口线程，正是 ActivateProfile 必须
+        // 待的地方（见 lookup_ime_tsf.h 的线程性说明）。别把它挪到别的线程上。
+        if (call.method_name() == "setLookupIme") {
+          std::wstring source_id;
+          std::wstring language;
+          if (const auto* args =
+                  std::get_if<flutter::EncodableMap>(call.arguments())) {
+            source_id = OptionalWideArg(*args, "sourceId");
+            language = OptionalWideArg(*args, "language");
           }
-          desired_lookup_ime_tag_ = tag;
-          const ImeLanguageUpdate update = ime_language_switcher_.Activate(
-              target, tag, GetKeyboardLayout(thread_id),
-              InstalledKeyboardLayouts());
-          switch (update) {
-            case ImeLanguageUpdate::kFailed:
-              // 让 Dart 清掉乐观缓存，下次还能重试（否则它会以为已经设过了）。
-              result->Error("lookup_ime_failed",
-                            "WM_INPUTLANGCHANGEREQUEST was rejected");
-              return;
-            case ImeLanguageUpdate::kUnavailable:
-              // 用户选的语言系统里没装输入法。这不是错误，是「做不了」——绝不替他
-              // 装一个布局上去。
-              result->Success(flutter::EncodableValue("unavailable"));
-              return;
-            case ImeLanguageUpdate::kUnchanged:
-              result->Success(flutter::EncodableValue("unchanged"));
-              return;
-            case ImeLanguageUpdate::kApplied:
+          desired_lookup_ime_source_id_ = source_id;
+          desired_lookup_ime_language_ = language;
+          switch (ApplyDesiredLookupIme()) {
+            case LookupImeUpdate::kApplied:
               result->Success(flutter::EncodableValue("applied"));
               return;
+            case LookupImeUpdate::kUnchanged:
+              result->Success(flutter::EncodableValue("unchanged"));
+              return;
+            case LookupImeUpdate::kUnavailable:
+              // 用户选的输入法/语言系统里没有。这不是错误，是「做不了」——绝不替他
+              // 注册或启用一个 profile 上去。
+              result->Success(flutter::EncodableValue("unavailable"));
+              return;
+            case LookupImeUpdate::kFailed:
+              result->Success(flutter::EncodableValue("failed"));
+              return;
           }
-          result->Success();
+          result->Success(flutter::EncodableValue("failed"));
+          return;
+        }
+
+        if (call.method_name() == "listInputMethods") {
+          flutter::EncodableList sources;
+          for (const ImeProfile& profile :
+               lookup_ime_profiles_.EnumerateEnabled()) {
+            const std::wstring id = EncodeImeProfileId(profile);
+            if (id.empty() || profile.name.empty()) {
+              // 编不出 id 或没有名字的条目不往上报：Dart 侧 LookupImeSource.fromMap
+              // 本来也会丢掉它，与其让它在两侧各被丢一次，不如这里就不产出。
+              continue;
+            }
+            flutter::EncodableList languages;
+            const std::wstring tag = BcpTagOfLangId(profile.langid);
+            if (!tag.empty()) {
+              languages.push_back(
+                  flutter::EncodableValue(Utf8FromUtf16(tag.c_str())));
+            }
+            sources.push_back(flutter::EncodableValue(flutter::EncodableMap{
+                {flutter::EncodableValue("id"),
+                 flutter::EncodableValue(Utf8FromUtf16(id.c_str()))},
+                {flutter::EncodableValue("name"),
+                 flutter::EncodableValue(Utf8FromUtf16(profile.name.c_str()))},
+                {flutter::EncodableValue("languages"),
+                 flutter::EncodableValue(languages)},
+                // 枚举出来的都是已启用的键盘类 profile，`ActivateProfile` 真能切
+                // 过去（本机四条全部实测切换成功），所以一律 true。
+                {flutter::EncodableValue("selectable"),
+                 flutter::EncodableValue(true)},
+            }));
+          }
+          result->Success(flutter::EncodableValue(sources));
           return;
         }
 
         if (call.method_name() == "probe") {
           // 形状与 macOS 侧一致（语言标签而不是 LANGID），集成测试才能共用一份。
-          const auto locale_name = [](HKL layout) -> std::string {
-            const LANGID langid =
-                static_cast<LANGID>(reinterpret_cast<UINT_PTR>(layout) & 0xffff);
-            wchar_t buffer[LOCALE_NAME_MAX_LENGTH] = {};
-            const int written =
-                LCIDToLocaleName(MAKELCID(langid, SORT_DEFAULT), buffer,
-                                 LOCALE_NAME_MAX_LENGTH, 0);
-            return written > 0 ? Utf8FromUtf16(buffer) : std::string();
-          };
+          // enabledLanguages 来自 TSF 枚举而不是 GetKeyboardLayoutList——后者看不见
+          // 只装了 TSF 输入法的语言，设置页的「这个语言没装」提示会误报。
           flutter::EncodableList enabled;
-          for (const HKL layout : InstalledKeyboardLayouts()) {
-            const std::string name = locale_name(layout);
-            if (!name.empty()) {
-              enabled.push_back(flutter::EncodableValue(name));
+          std::vector<std::string> seen;
+          for (const ImeProfile& profile :
+               lookup_ime_profiles_.EnumerateEnabled()) {
+            const std::wstring tag = BcpTagOfLangId(profile.langid);
+            if (tag.empty()) continue;
+            std::string utf8 = Utf8FromUtf16(tag.c_str());
+            if (std::find(seen.begin(), seen.end(), utf8) != seen.end()) {
+              continue;
             }
+            seen.push_back(utf8);
+            enabled.push_back(flutter::EncodableValue(std::move(utf8)));
           }
           flutter::EncodableList current;
-          const std::string current_name =
-              locale_name(GetKeyboardLayout(thread_id));
-          if (!current_name.empty()) {
-            current.push_back(flutter::EncodableValue(current_name));
+          ImeProfile active;
+          if (lookup_ime_profiles_.ActiveProfile(&active)) {
+            const std::wstring tag = BcpTagOfLangId(active.langid);
+            if (!tag.empty()) {
+              current.push_back(
+                  flutter::EncodableValue(Utf8FromUtf16(tag.c_str())));
+            }
           }
           result->Success(flutter::EncodableValue(flutter::EncodableMap{
-              {flutter::EncodableValue("installed"), flutter::EncodableValue(true)},
+              {flutter::EncodableValue("installed"),
+               flutter::EncodableValue(lookup_ime_profiles_.EnsureAvailable())},
               {flutter::EncodableValue("active"),
-               flutter::EncodableValue(ime_language_switcher_.active())},
+               flutter::EncodableValue(lookup_ime_switcher_.active())},
               {flutter::EncodableValue("currentLanguages"),
                flutter::EncodableValue(current)},
               {flutter::EncodableValue("enabledLanguages"),
@@ -3417,6 +3471,10 @@ void FlutterWindow::OnDestroy() {
   // Attached surface callbacks invoke gal_hook_text_channel_; tear the HWND and
   // its follow timer down while the Flutter messenger is still alive.
   attached_text_surface_window_.reset();
+  // 查词输入法的 TSF 接口必须在 `CoUninitialize()` **之前**放掉。main.cpp 里
+  // `FlutterWindow window` 是 wWinMain 的栈上局部，析构排在 CoUninitialize 后面，
+  // 靠析构兜底会直接段错误（本机已复现，见 lookup_ime_tsf.h）。
+  lookup_ime_profiles_.Shutdown();
   if (icon_big_ != nullptr) {
     DestroyIcon(icon_big_);
     icon_big_ = nullptr;
@@ -3528,22 +3586,27 @@ FlutterWindow::MessageHandler(HWND hwnd, UINT const message,
     NotifyMagpieScalingChanged(wparam, lparam);
   }
 
-  // 查词输入法语言：窗口失去激活就立刻还原用户原来的输入法——Win8 起输入法状态是
-  // per-user，留着不还原，用户 Alt-Tab 去别的应用打字也会变成日语。重新激活时按
-  // Dart 最后表达的期望再切回来（查词页面可能还开着）。不消费消息。
+  // 查词输入法：窗口失去激活就立刻还原用户原来的输入法，重新激活时按 Dart 最后
+  // 表达的期望再切回来（查词页面可能还开着）。不消费消息。
+  //
+  // 换到 TSF + `TF_IPPMF_FORPROCESS` 之后这段**没有**变成可以删掉的东西，尽管那个
+  // flag 名字听起来像进程隔离。本机 A/B 实测（2026-09-16，probe_leak.cpp）：
+  //   - 切到日语后**不还原**就把前台交给别的窗口 → 那个进程线程的 HKL 跟着变成
+  //     0x04110411，用户在别的应用里打字就是日语了；
+  //   - 切到日语后**先还原再**交出前台 → 对方全程停在 0x08040804。
+  // 早先「FORPROCESS 不外泄」的观察只覆盖了「对方一直待在后台」那一种情形。所以
+  // WA_INACTIVE 上的还原是这套东西不坑用户的唯一前提，删不得。
+  //
+  // （还原挡不住的残留：查词框开着时**新启动**的进程会直接落在查词语言上。那取决于
+  // 用户系统的「允许为每个应用窗口使用不同的输入法」开关，不在本进程能控制的范围。）
+  //
+  // 这里跑在窗口线程上，正是 ActivateProfile 必须待的线程（见 lookup_ime_tsf.h）。
   if (message == WM_ACTIVATE) {
-    HWND ime_target = flutter_controller_ && flutter_controller_->view()
-                          ? flutter_controller_->view()->GetNativeWindow()
-                          : GetHandle();
-    if (ime_target != nullptr) {
-      if (LOWORD(wparam) == WA_INACTIVE) {
-        ime_language_switcher_.Restore(ime_target);
-      } else if (!desired_lookup_ime_tag_.empty()) {
-        ime_language_switcher_.Activate(
-            ime_target, desired_lookup_ime_tag_,
-            GetKeyboardLayout(GetWindowThreadProcessId(ime_target, nullptr)),
-            InstalledKeyboardLayouts());
-      }
+    if (LOWORD(wparam) == WA_INACTIVE) {
+      lookup_ime_switcher_.Restore();
+    } else if (!desired_lookup_ime_source_id_.empty() ||
+               !desired_lookup_ime_language_.empty()) {
+      ApplyDesiredLookupIme();
     }
   }
 

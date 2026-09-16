@@ -309,5 +309,14 @@
         <package android:name="com.ichi2.anki.debug" />
         <!-- Hibiki→Fushi 迁移：Android 11+ 包可见性，不声明则 getPackageInfo 查不到新包 -->
         <package android:name="app.hibiki.reader" />
+        <!-- 查词输入法设置页要列出「系统里装了哪些输入法、各自支持什么语言」。
+             Android 11+ 的包可见性下，不声明这条 intent 时
+             InputMethodManager.getEnabledInputMethodList() 只会返回**当前选中的那一个**
+             （IMMS.canCallerAccessInputMethod 对其余项走 filterAppAccess 剔除），
+             设置页就没法告诉用户「你的 Gboard 有没有开日语」。
+             只读枚举，不涉及任何切换能力——Android 自 9 起就不允许应用切输入法。 -->
+        <intent>
+            <action android:name="android.view.InputMethod" />
+        </intent>
     </queries>
 </manifest>

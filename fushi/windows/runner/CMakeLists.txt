@@ -36,8 +36,9 @@ add_executable(${BINARY_NAME} WIN32
   "hdr_video_host_window.cpp"
   "hook_toolbar_window.cpp"
   "ime_association_guard.cpp"
-  "ime_language_switch.cpp"
   "ime_space_dispatch.cpp"
+  "lookup_ime_selection.cpp"
+  "lookup_ime_tsf.cpp"
   "low_level_mouse_hook.cpp"
   "main.cpp"
   "utils.cpp"
@@ -101,6 +102,9 @@ target_link_libraries(${BINARY_NAME} PRIVATE bcrypt)
 # BUG-1450: ImmAssociateContextEx — detach the IME from the window while no text
 # field has focus so CJK IMEs stop swallowing every shortcut key.
 target_link_libraries(${BINARY_NAME} PRIVATE imm32)
+# 查词输入法切换走 TSF（ITfInputProcessorProfileMgr）。CMake 的 MSVC 默认库里已经
+# 有这几个，但显式写出来，免得默认清单某天变了才发现链不上。见 lookup_ime_tsf.cpp。
+target_link_libraries(${BINARY_NAME} PRIVATE ole32 oleaut32 uuid)
 target_include_directories(${BINARY_NAME} PRIVATE "${CMAKE_SOURCE_DIR}")
 add_dependencies(${BINARY_NAME} flutter_assemble)
 
@@ -138,21 +142,26 @@ add_custom_target(fushi_windows_ime_association_gate
 )
 add_dependencies(${BINARY_NAME} fushi_windows_ime_association_gate)
 
-# 查词输入法语言切换：切错语言 / 忘了还原，都会把用户的系统输入法状态留在错的地方
-# （Win8 起输入法是 per-user，会漏到别的应用），所以状态机随每次 Windows runner
-# 构建跑一遍。
-add_executable(fushi_windows_ime_language_test
-  "ime_language_switch.cpp"
-  "tests/ime_language_switch_test.cpp"
+# 查词输入法切换：切错输入法 / 忘了还原，都会把用户的系统输入法状态留在错的地方
+# （实测不还原就把前台交出去，别的应用的输入法会跟着变），所以 id 编解码、回落
+# 决策和还原记账随每次 Windows runner 构建跑一遍。COM 部分在 lookup_ime_tsf.cpp，
+# 单测不到（要真 COM + 真前台 + 会改本机输入法状态），由 tests/probes/ 下的两个
+# 手工探针覆盖：lookup_ime_probe.cpp（枚举 / 按 id 精确切换 / 回落 / 还原）与
+# lookup_ime_leak_probe.cpp（A/B 对照：不还原就把前台交出去时，别的进程会不会
+# 跟着变）。它们**刻意不进 CMake**——编译顺带跑会抢前台并改用户的输入法。
+# 编译与运行方法写在各自文件头。
+add_executable(fushi_windows_lookup_ime_test
+  "lookup_ime_selection.cpp"
+  "tests/lookup_ime_selection_test.cpp"
 )
-apply_standard_settings(fushi_windows_ime_language_test)
-target_compile_definitions(fushi_windows_ime_language_test PRIVATE "NOMINMAX")
-add_custom_target(fushi_windows_ime_language_gate
-  COMMAND "$<TARGET_FILE:fushi_windows_ime_language_test>"
-  DEPENDS fushi_windows_ime_language_test
+apply_standard_settings(fushi_windows_lookup_ime_test)
+target_compile_definitions(fushi_windows_lookup_ime_test PRIVATE "NOMINMAX")
+add_custom_target(fushi_windows_lookup_ime_gate
+  COMMAND "$<TARGET_FILE:fushi_windows_lookup_ime_test>"
+  DEPENDS fushi_windows_lookup_ime_test
   VERBATIM
 )
-add_dependencies(${BINARY_NAME} fushi_windows_ime_language_gate)
+add_dependencies(${BINARY_NAME} fushi_windows_lookup_ime_gate)
 
 # BUG-1455: compile and execute the WM_ACTIVATE focus policy on every Windows
 # runner build. This guards both sides of the contract: popup drag deactivation

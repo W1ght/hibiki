@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi/src/lookup/lookup_ime_binding.dart';
 import 'package:fushi/src/lookup/lookup_ime_channel.dart';
+import 'package:fushi/src/lookup/lookup_ime_source.dart';
 
 /// 输入法语言绑定的行为契约。最要紧的是**还原**：桌面端切的是系统全局输入法，
 /// 漏掉一次还原，用户去别的应用打字就会发现自己在打日语。
@@ -19,8 +20,12 @@ void main() {
     LookupImeChannel.resetForTesting();
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
         .setMockMethodCallHandler(channel, (MethodCall call) async {
-          if (call.method == 'setLanguage') {
-            sent.add(call.arguments);
+          if (call.method == 'setLookupIme') {
+            // 只记 language：这批用例验的是「谁在什么时候被设上/被还原」，
+            // sourceId 的分派另有 lookup_ime_source_test.dart 覆盖。
+            final Map<Object?, Object?> args =
+                call.arguments as Map<Object?, Object?>;
+            sent.add(args['language']);
           }
           if (call.method == 'persistLanguage') {
             persisted.add(call.arguments);
@@ -35,14 +40,14 @@ void main() {
   });
 
   test('attach 立刻告知语言——iOS 要在任何聚焦之前就设好', () async {
-    final LookupImeBinding binding = LookupImeBinding(languageOf: () => 'ja');
+    final LookupImeBinding binding = LookupImeBinding(requestOf: () => const LookupImeRequest(language: 'ja'));
     binding.attach();
     await Future<void>.delayed(Duration.zero);
     expect(sent, <Object?>['ja']);
   });
 
   test('detach 必须还原，否则系统输入法留在我们切过去的语言上', () async {
-    final LookupImeBinding binding = LookupImeBinding(languageOf: () => 'ja');
+    final LookupImeBinding binding = LookupImeBinding(requestOf: () => const LookupImeRequest(language: 'ja'));
     binding.attach();
     await Future<void>.delayed(Duration.zero);
     binding.detach();
@@ -57,7 +62,7 @@ void main() {
       Focus(focusNode: focusNode, child: const SizedBox.shrink()),
     );
 
-    final LookupImeBinding binding = LookupImeBinding(languageOf: () => 'ja');
+    final LookupImeBinding binding = LookupImeBinding(requestOf: () => const LookupImeRequest(language: 'ja'));
     binding.attach(focusNode: focusNode);
     await tester.pump();
     expect(sent, <Object?>['ja'], reason: 'attach 时先设上');
@@ -76,7 +81,7 @@ void main() {
   });
 
   test('未设置语言时发 null，不发空串', () async {
-    final LookupImeBinding binding = LookupImeBinding(languageOf: () => null);
+    final LookupImeBinding binding = LookupImeBinding(requestOf: () => LookupImeRequest.none);
     binding.attach();
     await Future<void>.delayed(Duration.zero);
     // 去重：null 是初始状态，什么都不该发。
@@ -86,8 +91,8 @@ void main() {
   test('两个查词入口交叠时，关掉其中一个不该还原另一个还要着的语言', () async {
     // 桌面实景：词典主页搜索框聚焦着（已切日语），再打开弹窗词典、然后关掉它。
     // 弹窗那句「我不要了」只能撤回它自己的请求，不能把主页那份一起还原。
-    final LookupImeBinding home = LookupImeBinding(languageOf: () => 'ja');
-    final LookupImeBinding popup = LookupImeBinding(languageOf: () => 'ja');
+    final LookupImeBinding home = LookupImeBinding(requestOf: () => const LookupImeRequest(language: 'ja'));
+    final LookupImeBinding popup = LookupImeBinding(requestOf: () => const LookupImeRequest(language: 'ja'));
 
     home.attach();
     await Future<void>.delayed(Duration.zero);
@@ -103,8 +108,8 @@ void main() {
   });
 
   test('后开的入口要别的语言：它走了要回落到先前那个', () async {
-    final LookupImeBinding home = LookupImeBinding(languageOf: () => 'ja');
-    final LookupImeBinding popup = LookupImeBinding(languageOf: () => 'ko');
+    final LookupImeBinding home = LookupImeBinding(requestOf: () => const LookupImeRequest(language: 'ja'));
+    final LookupImeBinding popup = LookupImeBinding(requestOf: () => const LookupImeRequest(language: 'ko'));
 
     home.attach();
     await Future<void>.delayed(Duration.zero);
@@ -140,7 +145,7 @@ void main() {
   test('每次同步都重新取值——用户可能在查词页面开着时改了设置', () async {
     String? current = 'ja';
     final LookupImeBinding binding = LookupImeBinding(
-      languageOf: () => current,
+      requestOf: () => LookupImeRequest(language: current),
     );
     binding.attach();
     await Future<void>.delayed(Duration.zero);
