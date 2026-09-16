@@ -314,6 +314,10 @@
              InputMethodManager.getEnabledInputMethodList() 只会返回**当前选中的那一个**
              （IMMS.canCallerAccessInputMethod 对其余项走 filterAppAccess 剔除），
              设置页就没法告诉用户「你的 Gboard 有没有开日语」。
+             边界（实测）：它只让我们看到把 IME service **导出**的输入法。声明了
+             android:exported="false" 的（targetSdk 31+ 之后是合法且在变多的写法）
+             AppsFilter 做 intent 匹配时会跳过非导出组件，那类仍然只在**被选中时**可见。
+             所以这份清单是「能看到的输入法」，不是「系统里所有输入法」。
              只读枚举，不涉及任何切换能力——Android 自 9 起就不允许应用切输入法。 -->
         <intent>
             <action android:name="android.view.InputMethod" />

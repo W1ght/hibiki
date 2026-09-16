@@ -36,6 +36,16 @@ import java.util.Set;
  * {@code <queries><intent><action android:name="android.view.InputMethod"/>}：Android 11+
  * 没有这条声明时，{@code getEnabledInputMethodList()} 只会返回**当前选中的那一个**
  * （IMMS 的 {@code canCallerAccessInputMethod} 把其余项按包可见性剔掉）。
+ *
+ * <p><b>但有了它也不等于「看得到全部」</b>（2026-09-16 模拟器实测）：AppsFilter 做
+ * {@code <queries><intent>} 匹配时**跳过非导出组件**，所以把 IME service 写成
+ * {@code android:exported="false"} 的输入法（targetSdk 31+ 之后合法且在变多）**看不到**，
+ * 它只在恰好是当前选中项时才被无条件放行。Gboard 这类大厂输入法带 intent-filter、
+ * 默认导出，不受影响。UI 上别把这份清单说成「系统里所有输入法」。
+ *
+ * <p>另：{@code languages} 为空是**常态不是异常**——语音输入法被 mode 过滤掉，
+ * 而有些键盘的基础子类型 locale 与 languageTag 全空（靠 additional subtypes，用户没进
+ * 它的设置页配过语言）。消费端必须能优雅渲染「这条没有语言信息」。
  */
 public final class LookupImeCatalog {
 
