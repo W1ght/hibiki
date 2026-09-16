@@ -4723,5 +4723,13 @@
   "video_search_ai_expanded": "AI 补充了 ${count} 个搜索词",
   "video_search_ai_rank": "AI 排序",
   "video_search_ai_ranked": "结果已由 AI 重新排序",
-  "video_search_ai_recommended": "AI 推荐"
+  "video_search_ai_recommended": "AI 推荐",
+  "settings_lookup_ime_source_title": "指定输入法",
+  "settings_lookup_ime_source_description": "查词框切到系统里的哪一个输入法。「跟随语言」= 由系统自己挑该语言的输入法。",
+  "settings_lookup_ime_source_auto": "跟随语言",
+  "settings_lookup_ime_source_readonly": "Android 不允许应用切换输入法，这份清单仅供参考。要切换请用系统选择器。",
+  "settings_lookup_ime_source_unsupported": "这个平台不提供「是哪一个键盘」的信息，只能表达语言。",
+  "settings_lookup_ime_source_supports": "支持所选语言",
+  "settings_lookup_ime_source_unsupported_language": "未声明所选语言",
+  "settings_lookup_ime_source_open_system_picker": "系统输入法选择器"
 }

@@ -14,7 +14,8 @@
 #include "global_lookup_window.h"
 #include "hdr_video_host_window.h"
 #include "ime_association_guard.h"
-#include "ime_language_switch.h"
+#include "lookup_ime_selection.h"
+#include "lookup_ime_tsf.h"
 #include "win32_window.h"
 
 // A window that does nothing but host a Flutter view.
@@ -76,15 +77,22 @@ class FlutterWindow : public Win32Window {
   // Wires the ime_guard MethodChannel to ime_association_guard_.
   void RegisterImeGuardChannel();
 
-  // 查词输入框的输入法语言：Dart 说「现在期望日语」，我们在已安装的键盘布局里找
-  // 日语那个并切过去，离开查词时切回用户原来的。见 ime_language_switch.h。
+  // 查词输入框的输入法：Dart 说「现在期望哪个输入法 / 哪个语言」，我们在系统已启用
+  // 的 TSF profile 里找到它切过去，离开查词时切回用户原来的。
+  // 见 lookup_ime_selection.h（纯逻辑 + 状态机）与 lookup_ime_tsf.h（COM）。
   std::unique_ptr<flutter::MethodChannel<flutter::EncodableValue>>
       lookup_ime_channel_;
-  ImeLanguageSwitcher ime_language_switcher_;
-  // Dart 最后一次表达的期望语言。窗口失活时我们会还原用户原来的输入法，重新激活
-  // 时按这个值再切回去——否则用户 Alt-Tab 出去一趟回来，查词页面还开着但输入法
-  // 已经不是他选的那个了。
-  std::wstring desired_lookup_ime_tag_;
+  TsfInputProcessorProfiles lookup_ime_profiles_;
+  LookupImeSwitcher lookup_ime_switcher_;
+  // Dart 最后一次表达的期望。窗口失活时我们会还原用户原来的输入法，重新激活时按
+  // 这两个值再切回去——否则用户 Alt-Tab 出去一趟回来，查词页面还开着但输入法已经
+  // 不是他选的那个了。
+  std::wstring desired_lookup_ime_source_id_;
+  std::wstring desired_lookup_ime_language_;
+
+  // 把 Dart 的请求落到 lookup_ime_switcher_ 上（method channel 与 WM_ACTIVATE
+  // 重新激活共用）。必须在**窗口线程**调用，见 lookup_ime_tsf.h 的线程性说明。
+  LookupImeUpdate ApplyDesiredLookupIme();
 
   void RegisterLookupImeChannel();
 

@@ -13,6 +13,7 @@ library;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:fushi/src/lookup/lookup_ime_language.dart';
+import 'package:fushi/src/lookup/lookup_ime_source.dart';
 import 'package:fushi/src/utils/misc/channel_constants.dart';
 
 class LookupImeChannel {
@@ -21,14 +22,15 @@ class LookupImeChannel {
   static const MethodChannel _channel = FushiChannels.lookupIme;
 
   /// 上一次真正发出去的值，避免同一页反复重建时刷 channel。
-  static String? _lastSent;
+  static LookupImeRequest? _lastSent;
 
-  /// 谁还在要哪种语言，按登记顺序排——最后登记的赢。
+  /// 谁还在要什么，按登记顺序排——最后登记的赢。
   ///
   /// 不能只记「上一次发了什么」：桌面上词典主页的搜索框可能正聚焦着（已经切到日语），
   /// 这时打开再关掉弹窗词典，弹窗一句 null 就会把还活着的主页那份也还原掉。注销一个
   /// 请求者之后必须回落到仍然活跃的那个，而不是无条件还原。
-  static final Map<Object, String> _requests = <Object, String>{};
+  static final Map<Object, LookupImeRequest> _requests =
+      <Object, LookupImeRequest>{};
 
   @visibleForTesting
   static void resetForTesting() {
@@ -36,36 +38,97 @@ class LookupImeChannel {
     _requests.clear();
   }
 
-  /// 以 [owner] 的名义要求某种语言；[tag] 为 null / 空串 = 撤回这个请求者的要求。
-  static Future<void> request(Object owner, String? tag) async {
+  /// 以 [owner] 的名义提出要求；[req] 为 null / 空 = 撤回这个请求者的要求。
+  static Future<void> request(Object owner, LookupImeRequest? req) async {
     // 先移除再放回：Map 按插入顺序排，这样重新表达的请求会排到末尾（最后的赢）。
     _requests.remove(owner);
-    if (tag != null && tag.isNotEmpty) {
-      _requests[owner] = tag;
+    final LookupImeRequest? normalized = req?.normalized;
+    if (normalized != null && !normalized.isEmpty) {
+      _requests[owner] = normalized;
     }
-    await setLanguage(_requests.isEmpty ? null : _requests.values.last);
+    await apply(_requests.isEmpty ? null : _requests.values.last);
   }
 
   /// 撤回 [owner] 的请求，回落到仍然活跃的那个请求者（没有就还原）。
   static Future<void> release(Object owner) => request(owner, null);
 
-  /// 直接设置期望语言（BCP-47；null / 空串 = 不表达偏好）。
+  /// 直接下发一个请求（null / 空 = 不表达偏好，原生侧还原）。
   ///
   /// 常规路径请用 [request]/[release]——它们能处理多个查词入口交叠的情况。
   ///
-  /// 没有原生实现的平台（目前 Android / Linux）会抛 [MissingPluginException]，这里
-  /// 咽掉：少一次输入法提示不该让查词页面开不出来。
-  static Future<void> setLanguage(String? tag) async {
-    final String? normalized = (tag == null || tag.isEmpty) ? null : tag;
+  /// [LookupImeRequest.sourceId] 与 [LookupImeRequest.language] 一起发下去，由**原生侧**
+  /// 决定回落：指定的输入法还在就用它，被用户卸载了就退回按语言匹配。回落判断不放在
+  /// Dart——只有原生侧知道此刻系统里装了什么，Dart 再问一次就是多一轮竞态。
+  ///
+  /// 没有原生实现的平台（目前 Linux）会抛 [MissingPluginException]，这里咽掉：少一次
+  /// 输入法切换不该让查词页面开不出来。
+  static Future<void> apply(LookupImeRequest? req) async {
+    final LookupImeRequest? normalized =
+        (req == null || req.normalized.isEmpty) ? null : req.normalized;
     if (normalized == _lastSent) return;
     _lastSent = normalized;
     try {
-      await _channel.invokeMethod<void>('setLanguage', normalized);
+      final String? status = await _channel.invokeMethod<String>(
+        'setLookupIme',
+        (normalized ?? LookupImeRequest.none).toArguments(),
+      );
+      // `"failed"` 是原生侧**正常返回**的一态（不是 PlatformException），所以这里得
+      // 自己把去重缓存清掉——否则同一个请求再发一次会被上面那行合并掉，用户重新
+      // 聚焦查词框也永远不会重试。`"unavailable"` 不清：那是稳定结论（系统里就是
+      // 没装），重试只是白跑。
+      if (status == 'failed') _lastSent = null;
     } on MissingPluginException {
       // 该平台还没接原生侧。
     } on PlatformException catch (error) {
-      debugPrint('[lookup-ime] setLanguage failed: $error');
+      debugPrint('[lookup-ime] setLookupIme failed: $error');
       _lastSent = null;
+    }
+  }
+
+  /// 只表达语言的便捷形式（集成测试与不支持指定输入法的路径用）。
+  static Future<void> setLanguage(String? tag) =>
+      apply(LookupImeRequest(language: tag));
+
+  /// 系统里可枚举到的输入法。
+  ///
+  /// 返回空 list 有两种含义，调用方**不需要**区分：这个平台不支持枚举（iOS——
+  /// `UITextInputMode` 公开面只有 `primaryLanguage`，拿不到名字也认不出是哪一家），
+  /// 或者确实一个都没枚举到。两种情况 UI 都该退回「只能按语言选」。
+  static Future<List<LookupImeSource>> listSources() async {
+    try {
+      final List<Object?>? raw = await _channel.invokeMethod<List<Object?>>(
+        'listInputMethods',
+      );
+      if (raw == null) return const <LookupImeSource>[];
+      return raw
+          .whereType<Map<Object?, Object?>>()
+          .map(LookupImeSource.fromMap)
+          .whereType<LookupImeSource>()
+          .toList(growable: false);
+    } on MissingPluginException {
+      return const <LookupImeSource>[];
+    } on PlatformException catch (error) {
+      debugPrint('[lookup-ime] listInputMethods failed: $error');
+      return const <LookupImeSource>[];
+    }
+  }
+
+  /// 拉起系统的「选择输入法」弹窗（只有 Android 有）。
+  ///
+  /// 这是 Android 上**普通应用唯一合法的切输入法入口**——自 Android 9 起
+  /// `InputMethodManager.setInputMethod` 在调用方进程里直接是 no-op（token registry 是
+  /// 进程内 WeakHashMap，只有输入法服务自己能往里放），不是权限差一点。代价是它**全局
+  /// 生效**且要用户动手，所以只能做成显式动作，不能塞进自动路径。
+  ///
+  /// 返回 false = 这个平台没有这个入口，或系统拒绝了（非前台等）。
+  static Future<bool> showSystemPicker() async {
+    try {
+      return await _channel.invokeMethod<bool>('showInputMethodPicker') ?? false;
+    } on MissingPluginException {
+      return false;
+    } on PlatformException catch (error) {
+      debugPrint('[lookup-ime] showInputMethodPicker failed: $error');
+      return false;
     }
   }
 

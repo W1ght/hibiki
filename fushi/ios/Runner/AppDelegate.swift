@@ -54,10 +54,21 @@ import Flutter
       binaryMessenger: binaryMessenger)
     lookupImeChannel.setMethodCallHandler { (call, result) in
       switch call.method {
-      case "setLanguage":
-        let tag = call.arguments as? String
+      case "setLookupIme":
+        let args = call.arguments as? [String: Any]
+        let tag = args?["language"] as? String
         LookupImeLanguage.desiredLanguage = (tag?.isEmpty ?? true) ? nil : tag
-        result(nil)
+        // `sourceId` 在 iOS 上**收下就扔**：公开 API 里 `UITextInputMode` 只有
+        // `primaryLanguage` 一个属性（运行期 `class_copyPropertyList` 实测确认），
+        // 认不出「这是哪一家的键盘」，自然也没法按 id 选。能识别具体键盘的
+        // `identifier` / `displayName` 是私有 API，碰了会被 2.5.1 拒审。
+        // 第三方键盘用户靠的是 `textInputContextIdentifier` 那条路——系统会记住他
+        // 在查词框里上次用的键盘（含第三方），见 LookupImeLanguage 的类注释。
+        result(LookupImeLanguage.desiredLanguage == nil ? "unchanged" : "applied")
+      case "listInputMethods":
+        // 恒空：见上，iOS 认不出具体是哪个键盘，列出来也只是一串重复的语言名。
+        // Dart 侧据此把「指定输入法」整块隐藏掉。
+        result([Any]())
       case "probe":
         // 探针：分辨「属性压根没被调用」和「被调用了但系统没采纳返回值」——
         // 这两种失败的修法完全不同（见 LookupImeLanguage 的类注释）。
@@ -66,6 +77,9 @@ import Flutter
           "desired": LookupImeLanguage.desiredLanguage ?? "",
           "resolveCount": LookupImeLanguage.resolveCount,
           "lastResolved": LookupImeLanguage.lastResolved ?? "",
+          // 用户已在查词框里自己换过键盘 → 我们不再强推，让系统按
+          // textInputContextIdentifier 记住的那个来（第三方键盘唯一走得通的路径）。
+          "deferringToUser": LookupImeLanguage.isDeferringToUser,
           "activeInputModes": UITextInputMode.activeInputModes.compactMap {
             $0.primaryLanguage
           },

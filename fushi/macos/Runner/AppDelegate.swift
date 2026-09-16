@@ -8,9 +8,12 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
   private var activeSecurityScopedURLs: [String: URL] = [:]
   private var challengeBrowser: FushiChallengeBrowser?
   private var globalLookupOverlay: GlobalLookupOverlayController?
-  /// Dart 最后一次表达的查词输入法语言。app 重新回到前台时按它再切回去——否则
-  /// 用户 Cmd-Tab 出去一趟回来，查词页面还开着但输入法已经不是他选的那个了。
+  /// Dart 最后一次表达的查词输入法请求（指定输入源 + 语言回落）。app 重新回到前台时
+  /// 按它再切回去——否则用户 Cmd-Tab 出去一趟回来，查词页面还开着但输入法已经不是他
+  /// 选的那个了。两项都记：回到前台时指定的输入源可能已经被用户停用，那条回落链路和
+  /// 首次下发时完全一样，交给 LookupImeLanguage 判。
   private var desiredLookupImeTag: String?
+  private var desiredLookupImeSourceId: String?
 
   override func applicationDidResignActive(_ notification: Notification) {
     // 离开前台就把用户的输入法放回去：切的是系统全局输入源，留着会漏到别的 app。
@@ -20,8 +23,9 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
 
   override func applicationDidBecomeActive(_ notification: Notification) {
     super.applicationDidBecomeActive(notification)
-    if let tag = desiredLookupImeTag {
-      LookupImeLanguage.setLanguage(tag)
+    if desiredLookupImeTag != nil || desiredLookupImeSourceId != nil {
+      LookupImeLanguage.apply(
+        language: desiredLookupImeTag, sourceId: desiredLookupImeSourceId)
     }
   }
   private var pendingSourceUrls: [String] = []
@@ -59,18 +63,28 @@ class AppDelegate: FlutterAppDelegate, FlutterStreamHandler {
         AppDelegate.handleForegroundSelection(call, result: result)
       }
 
-      // 查词输入框的输入法语言。macOS 的输入源是系统全局状态，所以除了「切过去」
-      // 还必须「切回来」——页面走掉时 Dart 发 null，app 失去前台时我们自己还原
+      // 查词输入框的输入法。macOS 的输入源是系统全局状态，所以除了「切过去」
+      // 还必须「切回来」——页面走掉时 Dart 发空请求，app 失去前台时我们自己还原
       // （见 applicationDidResignActive）。
+      //
+      // setLookupIme 的参数是 {language, sourceId}：sourceId 指定具体输入源（含第三
+      // 方输入法）作首选，language 只在它已经不在系统里时兜底。回落判断在原生侧做，
+      // 因为只有这里知道此刻系统里启用着什么。
       let lookupImeChannel = FlutterMethodChannel(
         name: "app.fushi.reader/lookup_ime",
         binaryMessenger: controller.engine.binaryMessenger)
       lookupImeChannel.setMethodCallHandler { [weak self] call, result in
         switch call.method {
-        case "setLanguage":
-          let tag = call.arguments as? String
+        case "setLookupIme":
+          let args = call.arguments as? [String: Any]
+          let tag = args?["language"] as? String
+          let sourceId = args?["sourceId"] as? String
           self?.desiredLookupImeTag = (tag?.isEmpty ?? true) ? nil : tag
-          result(LookupImeLanguage.setLanguage(tag))
+          self?.desiredLookupImeSourceId =
+            (sourceId?.isEmpty ?? true) ? nil : sourceId
+          result(LookupImeLanguage.apply(language: tag, sourceId: sourceId))
+        case "listInputMethods":
+          result(LookupImeLanguage.listInputSources())
         case "probe":
           result(LookupImeLanguage.probeInfo())
         default:

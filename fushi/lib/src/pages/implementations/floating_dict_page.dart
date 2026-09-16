@@ -31,7 +31,7 @@ class _FloatingDictPageState extends ConsumerState<FloatingDictPage> {
   final TextEditingController _searchController = TextEditingController();
   final FocusNode _searchFocusNode = FocusNode();
   late final LookupImeBinding _imeBinding = LookupImeBinding(
-    languageOf: () => appModel.effectiveLookupImeLanguage,
+    requestOf: () => appModel.lookupImeRequest,
   );
   DictionarySearchResult? _result;
   bool _isSearching = false;

@@ -73,7 +73,7 @@ class _PopupDictionaryPageState extends ConsumerState<PopupDictionaryPage>
   late final TextEditingController _searchController;
   final FocusNode _searchFocusNode = FocusNode();
   late final LookupImeBinding _imeBinding = LookupImeBinding(
-    languageOf: () => appModel.effectiveLookupImeLanguage,
+    requestOf: () => appModel.lookupImeRequest,
   );
 
   AppModel get appModel => ref.read(appProvider);

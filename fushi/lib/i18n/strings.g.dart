@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80325 (4725 per locale)
+/// Strings: 80461 (4733 per locale)
 ///
-/// Built on 2026-09-15 at 13:26 UTC
+/// Built on 2026-09-16 at 10:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6652,6 +6652,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_search_ai_rank => 'Rank with AI';
   String get video_search_ai_ranked => 'Results reordered by AI';
   String get video_search_ai_recommended => 'AI pick';
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -17852,6 +17866,28 @@ class _StringsAr extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -29288,6 +29324,28 @@ class _StringsDe extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -40774,6 +40832,28 @@ class _StringsEs extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -52293,6 +52373,28 @@ class _StringsFr extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -63612,6 +63714,28 @@ class _StringsId extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -75027,6 +75151,28 @@ class _StringsIt extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -85810,6 +85956,28 @@ class _StringsJa extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -96604,6 +96772,28 @@ class _StringsKo extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -107973,6 +108163,28 @@ class _StringsNl extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -119395,6 +119607,28 @@ class _StringsPtBr extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -130795,6 +131029,28 @@ class _StringsRu extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -141992,6 +142248,28 @@ class _StringsTh extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -153307,6 +153585,28 @@ class _StringsTr extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -164591,6 +164891,28 @@ class _StringsVi extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 // Path: <root>
@@ -174922,6 +175244,25 @@ class _StringsZhCn extends _StringsEn {
   String get video_search_ai_ranked => '结果已由 AI 重新排序';
   @override
   String get video_search_ai_recommended => 'AI 推荐';
+  @override
+  String get settings_lookup_ime_source_title => '指定输入法';
+  @override
+  String get settings_lookup_ime_source_description =>
+      '查词框切到系统里的哪一个输入法。「跟随语言」= 由系统自己挑该语言的输入法。';
+  @override
+  String get settings_lookup_ime_source_auto => '跟随语言';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android 不允许应用切换输入法，这份清单仅供参考。要切换请用系统选择器。';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      '这个平台不提供「是哪一个键盘」的信息，只能表达语言。';
+  @override
+  String get settings_lookup_ime_source_supports => '支持所选语言';
+  @override
+  String get settings_lookup_ime_source_unsupported_language => '未声明所选语言';
+  @override
+  String get settings_lookup_ime_source_open_system_picker => '系统输入法选择器';
 }
 
 // Path: <root>
@@ -185390,6 +185731,28 @@ class _StringsZhHk extends _StringsEn {
   String get video_search_ai_ranked => 'Results reordered by AI';
   @override
   String get video_search_ai_recommended => 'AI pick';
+  @override
+  String get settings_lookup_ime_source_title => 'Specific input method';
+  @override
+  String get settings_lookup_ime_source_description =>
+      'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+  @override
+  String get settings_lookup_ime_source_auto => 'Follow language';
+  @override
+  String get settings_lookup_ime_source_readonly =>
+      'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+  @override
+  String get settings_lookup_ime_source_unsupported =>
+      'This platform does not expose which keyboard is which, so only the language can be requested.';
+  @override
+  String get settings_lookup_ime_source_supports =>
+      'Supports the selected language';
+  @override
+  String get settings_lookup_ime_source_unsupported_language =>
+      'Does not list the selected language';
+  @override
+  String get settings_lookup_ime_source_open_system_picker =>
+      'System input method picker';
 }
 
 /// Flat map(s) containing all translations.
@@ -195112,6 +195475,22 @@ extension on _StringsEn {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -204829,6 +205208,22 @@ extension on _StringsAr {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -214595,6 +214990,22 @@ extension on _StringsDe {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -224351,6 +224762,22 @@ extension on _StringsEs {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -234115,6 +234542,22 @@ extension on _StringsFr {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -243849,6 +244292,22 @@ extension on _StringsId {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -253606,6 +254065,22 @@ extension on _StringsIt {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -263287,6 +263762,22 @@ extension on _StringsJa {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -272973,6 +273464,22 @@ extension on _StringsKo {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -282725,6 +283232,22 @@ extension on _StringsNl {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -292472,6 +292995,22 @@ extension on _StringsPtBr {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -302225,6 +302764,22 @@ extension on _StringsRu {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -311947,6 +312502,22 @@ extension on _StringsTh {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -321685,6 +322256,22 @@ extension on _StringsTr {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -331417,6 +332004,22 @@ extension on _StringsVi {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }
@@ -341060,6 +341663,22 @@ extension on _StringsZhCn {
         return '结果已由 AI 重新排序';
       case 'video_search_ai_recommended':
         return 'AI 推荐';
+      case 'settings_lookup_ime_source_title':
+        return '指定输入法';
+      case 'settings_lookup_ime_source_description':
+        return '查词框切到系统里的哪一个输入法。「跟随语言」= 由系统自己挑该语言的输入法。';
+      case 'settings_lookup_ime_source_auto':
+        return '跟随语言';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android 不允许应用切换输入法，这份清单仅供参考。要切换请用系统选择器。';
+      case 'settings_lookup_ime_source_unsupported':
+        return '这个平台不提供「是哪一个键盘」的信息，只能表达语言。';
+      case 'settings_lookup_ime_source_supports':
+        return '支持所选语言';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return '未声明所选语言';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return '系统输入法选择器';
       default:
         return null;
     }
@@ -350719,6 +351338,22 @@ extension on _StringsZhHk {
         return 'Results reordered by AI';
       case 'video_search_ai_recommended':
         return 'AI pick';
+      case 'settings_lookup_ime_source_title':
+        return 'Specific input method';
+      case 'settings_lookup_ime_source_description':
+        return 'Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.';
+      case 'settings_lookup_ime_source_auto':
+        return 'Follow language';
+      case 'settings_lookup_ime_source_readonly':
+        return 'Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.';
+      case 'settings_lookup_ime_source_unsupported':
+        return 'This platform does not expose which keyboard is which, so only the language can be requested.';
+      case 'settings_lookup_ime_source_supports':
+        return 'Supports the selected language';
+      case 'settings_lookup_ime_source_unsupported_language':
+        return 'Does not list the selected language';
+      case 'settings_lookup_ime_source_open_system_picker':
+        return 'System input method picker';
       default:
         return null;
     }

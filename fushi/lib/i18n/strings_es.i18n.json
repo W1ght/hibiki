@@ -4723,5 +4723,13 @@
   "video_search_ai_expanded": "AI suggested ${count} extra search terms",
   "video_search_ai_rank": "Rank with AI",
   "video_search_ai_ranked": "Results reordered by AI",
-  "video_search_ai_recommended": "AI pick"
+  "video_search_ai_recommended": "AI pick",
+  "settings_lookup_ime_source_title": "Specific input method",
+  "settings_lookup_ime_source_description": "Pick which installed input method the lookup box switches to. Follow language uses whichever one the system picks for that language.",
+  "settings_lookup_ime_source_auto": "Follow language",
+  "settings_lookup_ime_source_readonly": "Android does not let apps switch the input method, so this list is for reference only. Use the system picker to switch.",
+  "settings_lookup_ime_source_unsupported": "This platform does not expose which keyboard is which, so only the language can be requested.",
+  "settings_lookup_ime_source_supports": "Supports the selected language",
+  "settings_lookup_ime_source_unsupported_language": "Does not list the selected language",
+  "settings_lookup_ime_source_open_system_picker": "System input method picker"
 }

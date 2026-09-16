@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Required Reason API 声明。
+
+  `UITextInputMode.activeInputModes`（LookupImeLanguage.swift / AppDelegate.swift 的
+  probe）被 Apple 列为有指纹识别风险的 API：文档原文说它「有被滥用于识别设备或用户
+  的可能」，用了就必须在本文件里声明用途，否则上传会被挡。
+
+  我们的用途是纯本地的：在**用户已启用**的输入模式里挑一个与他选定的查词语言匹配的，
+  作为查词输入框的首选键盘。这份列表不出设备、不入任何日志、不参与任何标识拼装。
+-->
+<plist version="1.0">
+<dict>
+  <key>NSPrivacyTracking</key>
+  <false/>
+  <key>NSPrivacyTrackingDomains</key>
+  <array/>
+  <key>NSPrivacyCollectedDataTypes</key>
+  <array/>
+  <key>NSPrivacyAccessedAPITypes</key>
+  <array>
+    <dict>
+      <key>NSPrivacyAccessedAPIType</key>
+      <string>NSPrivacyAccessedAPICategoryActiveKeyboards</string>
+      <key>NSPrivacyAccessedAPITypeReasons</key>
+      <array>
+        <!-- 1C8F.1：仅供 app 自身在设备上定制键盘，不发送到设备之外。 -->
+        <string>1C8F.1</string>
+      </array>
+    </dict>
+  </array>
+</dict>
+</plist>

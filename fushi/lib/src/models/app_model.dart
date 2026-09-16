@@ -60,6 +60,7 @@ import 'package:fushi/src/reader/reader_settings.dart';
 import 'package:fushi/src/lookup/browser_extension_installer.dart';
 import 'package:fushi/src/lookup/effective_lookup_size.dart';
 import 'package:fushi/src/lookup/lookup_ime_channel.dart';
+import 'package:fushi/src/lookup/lookup_ime_source.dart';
 import 'package:fushi/src/lookup/lookup_ime_language.dart';
 import 'package:fushi/src/models/dictionary_directory.dart';
 import 'package:fushi/src/models/dictionary_repository.dart';
@@ -7772,6 +7773,32 @@ class AppModel with ChangeNotifier {
   /// 查词输入框希望输入法切到哪种语言（Android `EditorInfo.hintLocales`）。
   List<Locale>? get lookupImeHintLocales =>
       lookupImeHintLocalesOf(effectiveLookupImeLanguage);
+
+  /// 用户指定的**具体输入法** id；没指定、偏好未就绪、或那份 id 是**别的平台**存的
+  /// 就返回 null。
+  ///
+  /// 平台不符时当没设过：id 的形态各端完全不同，把 macOS 的 `com.apple.inputmethod.…`
+  /// 发给 Windows 只会白跑一趟回落，设置页还会显示一个本机根本没有的输入法名。备份
+  /// 合并引擎默认不合并 `preferences`，但用户从别的设备 restore 时仍可能带过来。
+  String? get effectiveLookupImeSourceId {
+    if (!isPreferencesReady) return null;
+    if (prefsRepo.lookupImeSourcePlatform != lookupImePlatformKey) return null;
+    final String id = prefsRepo.lookupImeSourceId;
+    return id.isEmpty ? null : id;
+  }
+
+  /// 上面那个 id 的显示名（设置页用）；同样受平台校验约束。
+  String? get effectiveLookupImeSourceName {
+    if (effectiveLookupImeSourceId == null) return null;
+    final String name = prefsRepo.lookupImeSourceName;
+    return name.isEmpty ? null : name;
+  }
+
+  /// 查词框此刻要表达的完整诉求（具体输入法优先，语言兜底）。
+  LookupImeRequest get lookupImeRequest => LookupImeRequest(
+    language: effectiveLookupImeLanguage,
+    sourceId: effectiveLookupImeSourceId,
+  );
 
   bool get mangaTapToOcr => prefsRepo.mangaTapToOcr;
   Future<void> setMangaTapToOcr(bool value) =>
