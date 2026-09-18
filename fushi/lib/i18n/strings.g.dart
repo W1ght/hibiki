@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 86292 (5076 per locale)
 ///
-/// Built on 2026-09-18 at 16:21 UTC
+/// Built on 2026-09-18 at 18:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -187229,7 +187229,7 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize => '查词页按返回键最小化窗口';
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
-      '置顶热键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
+      '置顶快捷键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
 }
 
 // Path: <root>
@@ -365962,7 +365962,7 @@ extension on _StringsZhCn {
       case 'shortcut_lookup_page_escape_minimize':
         return '查词页按返回键最小化窗口';
       case 'shortcut_lookup_page_escape_minimize_hint':
-        return '置顶热键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
+        return '置顶快捷键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
       default:
         return null;
     }
