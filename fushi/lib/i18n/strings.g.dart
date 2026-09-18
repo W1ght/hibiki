@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 85357 (5021 per locale)
+/// Strings: 85765 (5045 per locale)
 ///
-/// Built on 2026-09-18 at 06:22 UTC
+/// Built on 2026-09-18 at 09:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3974,9 +3974,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reading_progress => 'Reading progress';
   String get reading_section_mode => 'Mode & orientation';
   String get reading_statistics => 'Reading statistics';
-  String get reading_stats_day_reset_hour => 'Day starts at';
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   String get reading_stats_idle_timeout => 'Idle timeout';
   String get reading_stats_idle_timeout_hint =>
       'Stop counting reading time after this many minutes without turning a page, scrolling, or looking up a word. Applies to novels, PDFs and manga only; video counts while playing.';
@@ -6939,6 +6939,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_provider_base_url_invalid =>
       'Enter a valid HTTP or HTTPS endpoint';
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  String get manga_background => 'Background';
+  String get manga_background_black => 'Black';
+  String get manga_background_white => 'White';
+  String get manga_background_gray => 'Gray';
+  String get manga_background_theme => 'Follow theme';
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  String get manga_spread_offset => 'Spread offset';
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  String get manga_spread_offset_cover => 'Cover alone';
+  String get manga_spread_offset_none => 'Pair from page 1';
+  String get manga_wide_page_solo => 'Wide pages alone';
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   String get delete_statistics => 'Also delete statistics';
@@ -7016,6 +7035,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_clip_export_video_bitrate_hint =>
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   String get unit_kbps => 'kbps';
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  String get stat_center_day_reset_action => 'Day reset time';
+  String get ai_feature_custom_theme => 'Custom theme';
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -13606,10 +13636,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get reading_statistics => 'إحصائيات القراءة';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'مهلة الخمول';
   @override
@@ -18749,6 +18779,42 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -18879,6 +18945,24 @@ class _StringsAr extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -25607,10 +25691,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get reading_statistics => 'Lesestatistik';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Inaktivitäts-Timeout';
   @override
@@ -30838,6 +30922,42 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -30970,6 +31090,24 @@ class _StringsDe extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -37720,10 +37858,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get reading_statistics => 'Estadísticas de lectura';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Tiempo de inactividad';
   @override
@@ -42983,6 +43121,42 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -43114,6 +43288,24 @@ class _StringsEs extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -49884,10 +50076,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get reading_statistics => 'Statistiques de lecture';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Délai d\'inactivité';
   @override
@@ -55160,6 +55352,42 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -55295,6 +55523,24 @@ class _StringsFr extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -61951,10 +62197,10 @@ class _StringsId extends _StringsEn {
   @override
   String get reading_statistics => 'Statistik Membaca';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Batas waktu idle';
   @override
@@ -67145,6 +67391,42 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -67275,6 +67557,24 @@ class _StringsId extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -73983,10 +74283,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get reading_statistics => 'Statistiche di lettura';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Timeout di inattività';
   @override
@@ -79216,6 +79516,42 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -79347,6 +79683,24 @@ class _StringsIt extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -85693,10 +86047,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get reading_statistics => '読書統計';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'アイドル判定時間';
   @override
@@ -90671,6 +91025,42 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -90799,6 +91189,24 @@ class _StringsJa extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -97150,10 +97558,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get reading_statistics => '독서 통계';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => '유휴 판정 시간';
   @override
@@ -102133,6 +102541,42 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -102261,6 +102705,24 @@ class _StringsKo extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -108945,10 +109407,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get reading_statistics => 'Leesstatistieken';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Inactiviteitstime-out';
   @override
@@ -114160,6 +114622,42 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -114293,6 +114791,24 @@ class _StringsNl extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -121009,10 +121525,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reading_statistics => 'Estatísticas de Leitura';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Tempo de inatividade';
   @override
@@ -126245,6 +126761,42 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -126378,6 +126930,24 @@ class _StringsPtBr extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -133074,10 +133644,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get reading_statistics => 'Статистика чтения';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Тайм-аут бездействия';
   @override
@@ -138307,6 +138877,42 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -138438,6 +139044,24 @@ class _StringsRu extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -145019,10 +145643,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get reading_statistics => 'สถิติการอ่าน';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'เวลาพักการอ่าน';
   @override
@@ -150169,6 +150793,42 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -150299,6 +150959,24 @@ class _StringsTh extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -156957,10 +157635,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get reading_statistics => 'Okuma istatistikleri';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Boşta kalma süresi';
   @override
@@ -162144,6 +162822,42 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -162274,6 +162988,24 @@ class _StringsTr extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -168917,10 +169649,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get reading_statistics => 'Thống kê đọc sách';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => 'Thời gian không hoạt động';
   @override
@@ -174089,6 +174821,42 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -174222,6 +174990,24 @@ class _StringsVi extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -180320,10 +181106,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reading_statistics => '阅读统计';
   @override
-  String get reading_stats_day_reset_hour => '「今日」从几点开始';
+  String get stat_center_day_reset_hour => '「今日」从几点开始';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      '这个整点之前的阅读算作前一天。影响统计里的「今日」与近 N 天；只有改设置之后写入的记录按新边界归日。';
+  String get stat_center_day_reset_hour_hint =>
+      '这个整点之前的阅读、观看与游戏时长都算作前一天。影响统计里的「今日」与近 N 天；只有改设置之后写入的记录按新边界归日。';
   @override
   String get reading_stats_idle_timeout => '空闲判定时长';
   @override
@@ -185052,6 +185838,40 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => '由内置预设固定，不可更改';
   @override
+  String get manga_background => '背景色';
+  @override
+  String get manga_background_black => '黑';
+  @override
+  String get manga_background_white => '白';
+  @override
+  String get manga_background_gray => '灰';
+  @override
+  String get manga_background_theme => '跟随主题';
+  @override
+  String get manga_tap_zone_layout => '点击区域布局';
+  @override
+  String get manga_tap_zone_layout_subtitle => '点击页面哪些位置会翻页';
+  @override
+  String get manga_tap_zone_layout_left_right => '左右';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L 型';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => '上下';
+  @override
+  String get manga_spread_offset => '跨页偏移';
+  @override
+  String get manga_spread_offset_subtitle => '双页配对从第几页开始';
+  @override
+  String get manga_spread_offset_cover => '封面独占';
+  @override
+  String get manga_spread_offset_none => '从第一页起配对';
+  @override
+  String get manga_wide_page_solo => '宽页独占一屏';
+  @override
+  String get manga_wide_page_solo_subtitle => '见开き页单独占一屏显示';
+  @override
   String get shortcut_action_reader_toggle_study_clock => '暂停 / 继续阅读计时';
   @override
   String get delete_statistics => '同时删除统计数据';
@@ -185164,6 +185984,21 @@ class _StringsZhCn extends _StringsEn {
       '0 = 跟随源（能直接复制码流就不重编码）；其它值会把视频重编码到该码率';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      '请把 .torrent 种子文件拖到这里以添加下载任务。其它文件请拖到书架、漫画库或视频页。';
+  @override
+  String get stat_center_day_reset_action => '重置时刻';
+  @override
+  String get ai_feature_custom_theme => '自定义主题';
+  @override
+  String get ai_feature_custom_theme_summary => '让 AI 按描述生成自定义主题配色';
+  @override
+  String get theme_ai_hint => '描述想要的主题，例如：暖色纸张阅读风格，主题色深绿';
+  @override
+  String get theme_ai_applied => 'AI 建议已填进编辑器，看过预览后再应用。';
+  @override
+  String get theme_ai_undo => '撤销 AI 改动';
 }
 
 // Path: <root>
@@ -191308,10 +192143,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reading_statistics => '閱讀統計';
   @override
-  String get reading_stats_day_reset_hour => 'Day starts at';
+  String get stat_center_day_reset_hour => 'Day starts at';
   @override
-  String get reading_stats_day_reset_hour_hint =>
-      'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+  String get stat_center_day_reset_hour_hint =>
+      'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
   @override
   String get reading_stats_idle_timeout => '閒置判定時長';
   @override
@@ -196174,6 +197009,42 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -196300,6 +197171,24 @@ class _StringsZhHk extends _StringsEn {
       '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
   @override
   String get unit_kbps => 'kbps';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
+  String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 /// Flat map(s) containing all translations.
@@ -202047,10 +202936,10 @@ extension on _StringsEn {
         return 'Mode & orientation';
       case 'reading_statistics':
         return 'Reading statistics';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Idle timeout';
       case 'reading_stats_idle_timeout_hint':
@@ -206542,6 +207431,40 @@ extension on _StringsEn {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -206649,6 +207572,20 @@ extension on _StringsEn {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -212394,10 +213331,10 @@ extension on _StringsAr {
         return 'الوضع والاتجاه';
       case 'reading_statistics':
         return 'إحصائيات القراءة';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'مهلة الخمول';
       case 'reading_stats_idle_timeout_hint':
@@ -216886,6 +217823,40 @@ extension on _StringsAr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -216993,6 +217964,20 @@ extension on _StringsAr {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -222769,10 +223754,10 @@ extension on _StringsDe {
         return 'Modus & Ausrichtung';
       case 'reading_statistics':
         return 'Lesestatistik';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Inaktivitäts-Timeout';
       case 'reading_stats_idle_timeout_hint':
@@ -227275,6 +228260,40 @@ extension on _StringsDe {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -227382,6 +228401,20 @@ extension on _StringsDe {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -233151,10 +234184,10 @@ extension on _StringsEs {
         return 'Modo y orientación';
       case 'reading_statistics':
         return 'Estadísticas de lectura';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Tiempo de inactividad';
       case 'reading_stats_idle_timeout_hint':
@@ -237655,6 +238688,40 @@ extension on _StringsEs {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -237762,6 +238829,20 @@ extension on _StringsEs {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -243538,10 +244619,10 @@ extension on _StringsFr {
         return 'Mode et orientation';
       case 'reading_statistics':
         return 'Statistiques de lecture';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Délai d\'inactivité';
       case 'reading_stats_idle_timeout_hint':
@@ -248044,6 +249125,40 @@ extension on _StringsFr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -248151,6 +249266,20 @@ extension on _StringsFr {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -253906,10 +255035,10 @@ extension on _StringsId {
         return 'Mode & orientasi';
       case 'reading_statistics':
         return 'Statistik Membaca';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Batas waktu idle';
       case 'reading_stats_idle_timeout_hint':
@@ -258404,6 +259533,40 @@ extension on _StringsId {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -258511,6 +259674,20 @@ extension on _StringsId {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -264277,10 +265454,10 @@ extension on _StringsIt {
         return 'Modalità e orientamento';
       case 'reading_statistics':
         return 'Statistiche di lettura';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Timeout di inattività';
       case 'reading_stats_idle_timeout_hint':
@@ -268786,6 +269963,40 @@ extension on _StringsIt {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -268893,6 +270104,20 @@ extension on _StringsIt {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -274622,10 +275847,10 @@ extension on _StringsJa {
         return 'モードと表示方向';
       case 'reading_statistics':
         return '読書統計';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'アイドル判定時間';
       case 'reading_stats_idle_timeout_hint':
@@ -279095,6 +280320,40 @@ extension on _StringsJa {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -279202,6 +280461,20 @@ extension on _StringsJa {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -284932,10 +286205,10 @@ extension on _StringsKo {
         return '모드 및 방향';
       case 'reading_statistics':
         return '독서 통계';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return '유휴 판정 시간';
       case 'reading_stats_idle_timeout_hint':
@@ -289408,6 +290681,40 @@ extension on _StringsKo {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -289515,6 +290822,20 @@ extension on _StringsKo {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -295280,10 +296601,10 @@ extension on _StringsNl {
         return 'Modus & oriëntatie';
       case 'reading_statistics':
         return 'Leesstatistieken';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Inactiviteitstime-out';
       case 'reading_stats_idle_timeout_hint':
@@ -299783,6 +301104,40 @@ extension on _StringsNl {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -299890,6 +301245,20 @@ extension on _StringsNl {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -305654,10 +307023,10 @@ extension on _StringsPtBr {
         return 'Modo e orientação';
       case 'reading_statistics':
         return 'Estatísticas de Leitura';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Tempo de inatividade';
       case 'reading_stats_idle_timeout_hint':
@@ -310153,6 +311522,40 @@ extension on _StringsPtBr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -310260,6 +311663,20 @@ extension on _StringsPtBr {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -316031,10 +317448,10 @@ extension on _StringsRu {
         return 'Режим и ориентация';
       case 'reading_statistics':
         return 'Статистика чтения';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Тайм-аут бездействия';
       case 'reading_stats_idle_timeout_hint':
@@ -320530,6 +321947,40 @@ extension on _StringsRu {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -320637,6 +322088,20 @@ extension on _StringsRu {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -326385,10 +327850,10 @@ extension on _StringsTh {
         return 'โหมดและการวางแนว';
       case 'reading_statistics':
         return 'สถิติการอ่าน';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'เวลาพักการอ่าน';
       case 'reading_stats_idle_timeout_hint':
@@ -330879,6 +332344,40 @@ extension on _StringsTh {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -330986,6 +332485,20 @@ extension on _StringsTh {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -336744,10 +338257,10 @@ extension on _StringsTr {
         return 'Mod ve yön';
       case 'reading_statistics':
         return 'Okuma istatistikleri';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Boşta kalma süresi';
       case 'reading_stats_idle_timeout_hint':
@@ -341243,6 +342756,40 @@ extension on _StringsTr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -341350,6 +342897,20 @@ extension on _StringsTr {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -347106,10 +348667,10 @@ extension on _StringsVi {
         return 'Chế độ & hướng';
       case 'reading_statistics':
         return 'Thống kê đọc sách';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return 'Thời gian không hoạt động';
       case 'reading_stats_idle_timeout_hint':
@@ -351601,6 +353162,40 @@ extension on _StringsVi {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -351708,6 +353303,20 @@ extension on _StringsVi {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -357419,10 +359028,10 @@ extension on _StringsZhCn {
         return '模式与排版方向';
       case 'reading_statistics':
         return '阅读统计';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return '「今日」从几点开始';
-      case 'reading_stats_day_reset_hour_hint':
-        return '这个整点之前的阅读算作前一天。影响统计里的「今日」与近 N 天；只有改设置之后写入的记录按新边界归日。';
+      case 'stat_center_day_reset_hour_hint':
+        return '这个整点之前的阅读、观看与游戏时长都算作前一天。影响统计里的「今日」与近 N 天；只有改设置之后写入的记录按新边界归日。';
       case 'reading_stats_idle_timeout':
         return '空闲判定时长';
       case 'reading_stats_idle_timeout_hint':
@@ -361865,6 +363474,40 @@ extension on _StringsZhCn {
         return '请填写有效的 HTTP 或 HTTPS 接口地址';
       case 'ai_provider_protocol_locked':
         return '由内置预设固定，不可更改';
+      case 'manga_background':
+        return '背景色';
+      case 'manga_background_black':
+        return '黑';
+      case 'manga_background_white':
+        return '白';
+      case 'manga_background_gray':
+        return '灰';
+      case 'manga_background_theme':
+        return '跟随主题';
+      case 'manga_tap_zone_layout':
+        return '点击区域布局';
+      case 'manga_tap_zone_layout_subtitle':
+        return '点击页面哪些位置会翻页';
+      case 'manga_tap_zone_layout_left_right':
+        return '左右';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L 型';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return '上下';
+      case 'manga_spread_offset':
+        return '跨页偏移';
+      case 'manga_spread_offset_subtitle':
+        return '双页配对从第几页开始';
+      case 'manga_spread_offset_cover':
+        return '封面独占';
+      case 'manga_spread_offset_none':
+        return '从第一页起配对';
+      case 'manga_wide_page_solo':
+        return '宽页独占一屏';
+      case 'manga_wide_page_solo_subtitle':
+        return '见开き页单独占一屏显示';
       case 'shortcut_action_reader_toggle_study_clock':
         return '暂停 / 继续阅读计时';
       case 'delete_statistics':
@@ -361971,6 +363614,20 @@ extension on _StringsZhCn {
         return '0 = 跟随源（能直接复制码流就不重编码）；其它值会把视频重编码到该码率';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return '请把 .torrent 种子文件拖到这里以添加下载任务。其它文件请拖到书架、漫画库或视频页。';
+      case 'stat_center_day_reset_action':
+        return '重置时刻';
+      case 'ai_feature_custom_theme':
+        return '自定义主题';
+      case 'ai_feature_custom_theme_summary':
+        return '让 AI 按描述生成自定义主题配色';
+      case 'theme_ai_hint':
+        return '描述想要的主题，例如：暖色纸张阅读风格，主题色深绿';
+      case 'theme_ai_applied':
+        return 'AI 建议已填进编辑器，看过预览后再应用。';
+      case 'theme_ai_undo':
+        return '撤销 AI 改动';
       default:
         return null;
     }
@@ -367689,10 +369346,10 @@ extension on _StringsZhHk {
         return '模式與排版方向';
       case 'reading_statistics':
         return '閱讀統計';
-      case 'reading_stats_day_reset_hour':
+      case 'stat_center_day_reset_hour':
         return 'Day starts at';
-      case 'reading_stats_day_reset_hour_hint':
-        return 'Reading before this hour counts toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
+      case 'stat_center_day_reset_hour_hint':
+        return 'Reading, watching and gaming before this hour count toward the previous day. Affects today and the last N days in statistics; only records written after the change use the new boundary.';
       case 'reading_stats_idle_timeout':
         return '閒置判定時長';
       case 'reading_stats_idle_timeout_hint':
@@ -372151,6 +373808,40 @@ extension on _StringsZhHk {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -372258,6 +373949,20 @@ extension on _StringsZhHk {
         return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
       case 'unit_kbps':
         return 'kbps';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+      case 'stat_center_day_reset_action':
+        return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
