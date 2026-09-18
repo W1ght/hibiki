@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 85765 (5045 per locale)
+/// Strings: 85799 (5047 per locale)
 ///
-/// Built on 2026-09-18 at 09:21 UTC
+/// Built on 2026-09-18 at 09:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7030,6 +7030,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_forget_done => 'Mining record cleared';
   String get reader_gallery_cover => 'Cover';
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
   String get video_setting_clip_export_video_bitrate_hint =>
@@ -18937,6 +18941,12 @@ class _StringsAr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
@@ -31082,6 +31092,12 @@ class _StringsDe extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
@@ -43280,6 +43296,12 @@ class _StringsEs extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
@@ -55516,6 +55538,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
+  @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
   @override
@@ -67549,6 +67577,12 @@ class _StringsId extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
@@ -79676,6 +79710,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
+  @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
   @override
@@ -91181,6 +91221,12 @@ class _StringsJa extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
@@ -102697,6 +102743,12 @@ class _StringsKo extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
@@ -114783,6 +114835,12 @@ class _StringsNl extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
@@ -126923,6 +126981,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
+  @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
   @override
@@ -139037,6 +139101,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
+  @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
   @override
@@ -150951,6 +151021,12 @@ class _StringsTh extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
   @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
@@ -162981,6 +163057,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
+  @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
   @override
@@ -174983,6 +175065,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
+  @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
   @override
@@ -185977,6 +186065,11 @@ class _StringsZhCn extends _StringsEn {
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
   String get reader_gallery_cover => '封面';
+  @override
+  String get mining_audio_follow_playback_speed => '句子音频跟随播放倍速';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      '有声书以非 1 倍速播放时，卡片的句子音频按同一倍率变速不变调；仅对有声书制卡生效。';
   @override
   String get video_setting_clip_export_video_bitrate => '片段导出视频码率';
   @override
@@ -197164,6 +197257,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get mining_audio_follow_playback_speed =>
+      'Match sentence audio to playback speed';
+  @override
+  String get mining_audio_follow_playback_speed_hint =>
+      'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
+  @override
   String get video_setting_clip_export_video_bitrate =>
       'Clip export video bitrate';
   @override
@@ -207566,6 +207665,10 @@ extension on _StringsEn {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -217958,6 +218061,10 @@ extension on _StringsAr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -228395,6 +228502,10 @@ extension on _StringsDe {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -238823,6 +238934,10 @@ extension on _StringsEs {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -249260,6 +249375,10 @@ extension on _StringsFr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -259668,6 +259787,10 @@ extension on _StringsId {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -270098,6 +270221,10 @@ extension on _StringsIt {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -280455,6 +280582,10 @@ extension on _StringsJa {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -290816,6 +290947,10 @@ extension on _StringsKo {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -301239,6 +301374,10 @@ extension on _StringsNl {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -311657,6 +311796,10 @@ extension on _StringsPtBr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -322082,6 +322225,10 @@ extension on _StringsRu {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -332479,6 +332626,10 @@ extension on _StringsTh {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -342891,6 +343042,10 @@ extension on _StringsTr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -353297,6 +353452,10 @@ extension on _StringsVi {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -363608,6 +363767,10 @@ extension on _StringsZhCn {
         return '已清除制卡记录';
       case 'reader_gallery_cover':
         return '封面';
+      case 'mining_audio_follow_playback_speed':
+        return '句子音频跟随播放倍速';
+      case 'mining_audio_follow_playback_speed_hint':
+        return '有声书以非 1 倍速播放时，卡片的句子音频按同一倍率变速不变调；仅对有声书制卡生效。';
       case 'video_setting_clip_export_video_bitrate':
         return '片段导出视频码率';
       case 'video_setting_clip_export_video_bitrate_hint':
@@ -373943,6 +374106,10 @@ extension on _StringsZhHk {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'mining_audio_follow_playback_speed':
+        return 'Match sentence audio to playback speed';
+      case 'mining_audio_follow_playback_speed_hint':
+        return 'When the audiobook is playing faster or slower than 1×, the sentence audio on the card is time-stretched to the same speed with pitch preserved. Audiobook mining only.';
       case 'video_setting_clip_export_video_bitrate':
         return 'Clip export video bitrate';
       case 'video_setting_clip_export_video_bitrate_hint':
