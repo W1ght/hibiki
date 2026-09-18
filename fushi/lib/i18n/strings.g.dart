@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 85697 (5041 per locale)
+/// Strings: 85714 (5042 per locale)
 ///
-/// Built on 2026-09-18 at 09:14 UTC
+/// Built on 2026-09-18 at 09:18 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7030,6 +7030,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_forget_done => 'Mining record cleared';
   String get reader_gallery_cover => 'Cover';
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   String get stat_center_day_reset_action => 'Day reset time';
   String get ai_feature_custom_theme => 'Custom theme';
   String get ai_feature_custom_theme_summary =>
@@ -18930,6 +18932,9 @@ class _StringsAr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
@@ -31064,6 +31069,9 @@ class _StringsDe extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
@@ -43251,6 +43259,9 @@ class _StringsEs extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
@@ -55476,6 +55487,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
   String get ai_feature_custom_theme => 'Custom theme';
@@ -67498,6 +67512,9 @@ class _StringsId extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
@@ -79614,6 +79631,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
   String get ai_feature_custom_theme => 'Custom theme';
@@ -91108,6 +91128,9 @@ class _StringsJa extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
@@ -102613,6 +102636,9 @@ class _StringsKo extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
@@ -114688,6 +114714,9 @@ class _StringsNl extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
@@ -126817,6 +126846,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
   String get ai_feature_custom_theme => 'Custom theme';
@@ -138920,6 +138952,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
   String get ai_feature_custom_theme => 'Custom theme';
@@ -150823,6 +150858,9 @@ class _StringsTh extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
@@ -162842,6 +162880,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
   String get ai_feature_custom_theme => 'Custom theme';
@@ -174833,6 +174874,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
   String get ai_feature_custom_theme => 'Custom theme';
@@ -185816,6 +185860,9 @@ class _StringsZhCn extends _StringsEn {
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
   String get reader_gallery_cover => '封面';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      '请把 .torrent 种子文件拖到这里以添加下载任务。其它文件请拖到书架、漫画库或视频页。';
   @override
   String get stat_center_day_reset_action => '重置时刻';
   @override
@@ -196993,6 +197040,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
+  @override
   String get stat_center_day_reset_action => 'Day reset time';
   @override
   String get ai_feature_custom_theme => 'Custom theme';
@@ -207384,6 +207434,8 @@ extension on _StringsEn {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -217768,6 +217820,8 @@ extension on _StringsAr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -228197,6 +228251,8 @@ extension on _StringsDe {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -238617,6 +238673,8 @@ extension on _StringsEs {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -249046,6 +249104,8 @@ extension on _StringsFr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -259446,6 +259506,8 @@ extension on _StringsId {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -269868,6 +269930,8 @@ extension on _StringsIt {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -280217,6 +280281,8 @@ extension on _StringsJa {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -290570,6 +290636,8 @@ extension on _StringsKo {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -300985,6 +301053,8 @@ extension on _StringsNl {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -311395,6 +311465,8 @@ extension on _StringsPtBr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -321812,6 +321884,8 @@ extension on _StringsRu {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -332201,6 +332275,8 @@ extension on _StringsTh {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -342605,6 +342681,8 @@ extension on _StringsTr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -353003,6 +353081,8 @@ extension on _StringsVi {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
@@ -363306,6 +363386,8 @@ extension on _StringsZhCn {
         return '已清除制卡记录';
       case 'reader_gallery_cover':
         return '封面';
+      case 'drag_drop_unsupported_on_downloads':
+        return '请把 .torrent 种子文件拖到这里以添加下载任务。其它文件请拖到书架、漫画库或视频页。';
       case 'stat_center_day_reset_action':
         return '重置时刻';
       case 'ai_feature_custom_theme':
@@ -373633,6 +373715,8 @@ extension on _StringsZhHk {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
       case 'ai_feature_custom_theme':
