@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86088 (5064 per locale)
+/// Strings: 86275 (5075 per locale)
 ///
-/// Built on 2026-09-18 at 11:00 UTC
+/// Built on 2026-09-18 at 12:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7069,6 +7069,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_server_items_load_failed =>
       'Could not load items from the server';
   String get media_server_item_folder => 'Folder';
+  String get video_anidb_login_test => 'Test AniDB login';
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -19028,6 +19049,38 @@ class _StringsAr extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -31215,6 +31268,38 @@ class _StringsDe extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -43455,6 +43540,38 @@ class _StringsEs extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -55732,6 +55849,38 @@ class _StringsFr extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -67808,6 +67957,38 @@ class _StringsId extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -79976,6 +80157,38 @@ class _StringsIt extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -91524,6 +91737,38 @@ class _StringsJa extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -103082,6 +103327,38 @@ class _StringsKo extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -115210,6 +115487,38 @@ class _StringsNl extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -127391,6 +127700,38 @@ class _StringsPtBr extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -139547,6 +139888,38 @@ class _StringsRu extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -151504,6 +151877,38 @@ class _StringsTh extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -163575,6 +163980,38 @@ class _StringsTr extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -175619,6 +176056,38 @@ class _StringsVi extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 // Path: <root>
@@ -186650,6 +187119,36 @@ class _StringsZhCn extends _StringsEn {
   String get media_server_items_load_failed => '无法从服务器加载条目';
   @override
   String get media_server_item_folder => '文件夹';
+  @override
+  String get video_anidb_login_test => '测试 AniDB 登录';
+  @override
+  String get video_anidb_login_test_hint =>
+      '用已保存的账号与客户端发一次 UDP 登录后立即登出，不计算任何文件哈希。';
+  @override
+  String get video_anidb_login_test_running => '正在测试 AniDB 登录…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB 登录成功（客户端 ${client} v${version}）';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB 登录成功，但 AniDB 提示客户端 ${client} 有新版本';
+  @override
+  String get video_anidb_login_test_incomplete => '未测试：请先填写用户名、密码及已注册的客户端名称/版本';
+  @override
+  String get video_anidb_login_test_failed_auth => 'AniDB 拒绝了用户名或密码';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB 拒绝了客户端名称/版本（未注册、已过期或被封禁）';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP 连接失败：请检查 UDP 9000 端口与防火墙；HTTP 代理不能承载 UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB 当前限流或维护，请求已暂停，请稍后再试';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB 登录失败（${reason}）';
 }
 
 // Path: <root>
@@ -197882,6 +198381,38 @@ class _StringsZhHk extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String get video_anidb_login_test => 'Test AniDB login';
+  @override
+  String get video_anidb_login_test_hint =>
+      'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+  @override
+  String get video_anidb_login_test_running => 'Testing AniDB login…';
+  @override
+  String video_anidb_login_test_success(
+          {required Object client, required Object version}) =>
+      'AniDB login succeeded as ${client} v${version}';
+  @override
+  String video_anidb_login_test_client_update({required Object client}) =>
+      'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+  @override
+  String get video_anidb_login_test_incomplete =>
+      'Not tested: fill in the username, password and a registered client name/version first';
+  @override
+  String get video_anidb_login_test_failed_auth =>
+      'AniDB rejected the username or password';
+  @override
+  String get video_anidb_login_test_failed_client =>
+      'AniDB rejected the client name/version (unregistered, outdated or banned)';
+  @override
+  String get video_anidb_login_test_failed_network =>
+      'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+  @override
+  String get video_anidb_login_test_failed_blocked =>
+      'AniDB is rate limiting or under maintenance; requests are paused for now';
+  @override
+  String video_anidb_login_test_failed_other({required Object reason}) =>
+      'AniDB login failed (${reason})';
 }
 
 /// Flat map(s) containing all translations.
@@ -208317,6 +208848,30 @@ extension on _StringsEn {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -218747,6 +219302,30 @@ extension on _StringsAr {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -229222,6 +229801,30 @@ extension on _StringsDe {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -239688,6 +240291,30 @@ extension on _StringsEs {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -250163,6 +250790,30 @@ extension on _StringsFr {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -260609,6 +261260,30 @@ extension on _StringsId {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -271077,6 +271752,30 @@ extension on _StringsIt {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -281472,6 +282171,30 @@ extension on _StringsJa {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -291871,6 +292594,30 @@ extension on _StringsKo {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -302332,6 +303079,30 @@ extension on _StringsNl {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -312788,6 +313559,30 @@ extension on _StringsPtBr {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -323251,6 +324046,30 @@ extension on _StringsRu {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -333686,6 +334505,30 @@ extension on _StringsTh {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -344136,6 +344979,30 @@ extension on _StringsTr {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -354580,6 +355447,30 @@ extension on _StringsVi {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
@@ -364929,6 +365820,30 @@ extension on _StringsZhCn {
         return '无法从服务器加载条目';
       case 'media_server_item_folder':
         return '文件夹';
+      case 'video_anidb_login_test':
+        return '测试 AniDB 登录';
+      case 'video_anidb_login_test_hint':
+        return '用已保存的账号与客户端发一次 UDP 登录后立即登出，不计算任何文件哈希。';
+      case 'video_anidb_login_test_running':
+        return '正在测试 AniDB 登录…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB 登录成功（客户端 ${client} v${version}）';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB 登录成功，但 AniDB 提示客户端 ${client} 有新版本';
+      case 'video_anidb_login_test_incomplete':
+        return '未测试：请先填写用户名、密码及已注册的客户端名称/版本';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB 拒绝了用户名或密码';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB 拒绝了客户端名称/版本（未注册、已过期或被封禁）';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP 连接失败：请检查 UDP 9000 端口与防火墙；HTTP 代理不能承载 UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB 当前限流或维护，请求已暂停，请稍后再试';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB 登录失败（${reason}）';
       default:
         return null;
     }
@@ -375302,6 +376217,30 @@ extension on _StringsZhHk {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'video_anidb_login_test':
+        return 'Test AniDB login';
+      case 'video_anidb_login_test_hint':
+        return 'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
+      case 'video_anidb_login_test_running':
+        return 'Testing AniDB login…';
+      case 'video_anidb_login_test_success':
+        return ({required Object client, required Object version}) =>
+            'AniDB login succeeded as ${client} v${version}';
+      case 'video_anidb_login_test_client_update':
+        return ({required Object client}) =>
+            'AniDB login succeeded, but AniDB reports a newer version of client ${client}';
+      case 'video_anidb_login_test_incomplete':
+        return 'Not tested: fill in the username, password and a registered client name/version first';
+      case 'video_anidb_login_test_failed_auth':
+        return 'AniDB rejected the username or password';
+      case 'video_anidb_login_test_failed_client':
+        return 'AniDB rejected the client name/version (unregistered, outdated or banned)';
+      case 'video_anidb_login_test_failed_network':
+        return 'AniDB UDP connection failed: check UDP port 9000 and the firewall; an HTTP proxy cannot carry UDP';
+      case 'video_anidb_login_test_failed_blocked':
+        return 'AniDB is rate limiting or under maintenance; requests are paused for now';
+      case 'video_anidb_login_test_failed_other':
+        return ({required Object reason}) => 'AniDB login failed (${reason})';
       default:
         return null;
     }
