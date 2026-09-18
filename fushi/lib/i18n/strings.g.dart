@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86326 (5078 per locale)
+/// Strings: 86377 (5081 per locale)
 ///
-/// Built on 2026-09-18 at 15:26 UTC
+/// Built on 2026-09-18 at 16:38 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7097,6 +7097,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Back key on the lookup page minimizes the window';
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -19098,6 +19105,16 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -31327,6 +31344,16 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -43609,6 +43636,16 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -55928,6 +55965,16 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -68046,6 +68093,16 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -80256,6 +80313,16 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -91847,6 +91914,16 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -103448,6 +103525,16 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -115618,6 +115705,16 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -127841,6 +127938,16 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -140039,6 +140146,16 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -152038,6 +152155,16 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -164151,6 +164278,16 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -176237,6 +176374,16 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 // Path: <root>
@@ -187308,6 +187455,16 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       '置顶热键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      '服务器无法抽取该字幕轨，已改由播放器直接渲染（不可逐字查词）：${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      '服务器无法抽取该字幕轨，先由播放器直接渲染，正在后台抽取（完成后可逐字查词）：${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      '字幕已抽取完成，已可逐字查词：${label}';
 }
 
 // Path: <root>
@@ -198583,6 +198740,16 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+  @override
+  String video_subtitle_remote_player_rendered({required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String video_subtitle_remote_player_rendered_extracting(
+          {required Object label}) =>
+      'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+  @override
+  String video_subtitle_remote_extracted({required Object label}) =>
+      'Subtitle extracted, word lookup enabled: ${label}';
 }
 
 /// Flat map(s) containing all translations.
@@ -209049,6 +209216,15 @@ extension on _StringsEn {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -219510,6 +219686,15 @@ extension on _StringsAr {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -230016,6 +230201,15 @@ extension on _StringsDe {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -240513,6 +240707,15 @@ extension on _StringsEs {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -251019,6 +251222,15 @@ extension on _StringsFr {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -261496,6 +261708,15 @@ extension on _StringsId {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -271995,6 +272216,15 @@ extension on _StringsIt {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -282421,6 +282651,15 @@ extension on _StringsJa {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -292851,6 +293090,15 @@ extension on _StringsKo {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -303343,6 +303591,15 @@ extension on _StringsNl {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -313830,6 +314087,15 @@ extension on _StringsPtBr {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -324324,6 +324590,15 @@ extension on _StringsRu {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -334790,6 +335065,15 @@ extension on _StringsTh {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -345271,6 +345555,15 @@ extension on _StringsTr {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -355746,6 +356039,15 @@ extension on _StringsVi {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
@@ -366126,6 +366428,14 @@ extension on _StringsZhCn {
         return '查词页按返回键最小化窗口';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return '置顶热键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            '服务器无法抽取该字幕轨，已改由播放器直接渲染（不可逐字查词）：${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            '服务器无法抽取该字幕轨，先由播放器直接渲染，正在后台抽取（完成后可逐字查词）：${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) => '字幕已抽取完成，已可逐字查词：${label}';
       default:
         return null;
     }
@@ -376530,6 +376840,15 @@ extension on _StringsZhHk {
         return 'Back key on the lookup page minimizes the window';
       case 'shortcut_lookup_page_escape_minimize_hint':
         return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
+      case 'video_subtitle_remote_player_rendered':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_subtitle_remote_player_rendered_extracting':
+        return ({required Object label}) =>
+            'Server cannot extract this subtitle track; the player renders it directly for now, extracting in the background for word lookup: ${label}';
+      case 'video_subtitle_remote_extracted':
+        return ({required Object label}) =>
+            'Subtitle extracted, word lookup enabled: ${label}';
       default:
         return null;
     }
