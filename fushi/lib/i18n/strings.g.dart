@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86258 (5074 per locale)
+/// Strings: 86292 (5076 per locale)
 ///
-/// Built on 2026-09-18 at 13:22 UTC
+/// Built on 2026-09-18 at 14:30 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7067,6 +7067,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_server_items_load_failed =>
       'Could not load items from the server';
   String get media_server_item_folder => 'Folder';
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   String get video_anidb_login_test => 'Test AniDB login';
   String get video_anidb_login_test_hint =>
       'Sends one UDP login with the saved account and client, then logs out. No file is hashed.';
@@ -19044,6 +19049,13 @@ class _StringsAr extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
@@ -31260,6 +31272,13 @@ class _StringsDe extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
@@ -43529,6 +43548,13 @@ class _StringsEs extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
@@ -55836,6 +55862,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_server_item_folder => 'Folder';
   @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
+  @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
   String get video_anidb_login_test_hint =>
@@ -67940,6 +67973,13 @@ class _StringsId extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
@@ -80138,6 +80178,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_server_item_folder => 'Folder';
   @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
+  @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
   String get video_anidb_login_test_hint =>
@@ -91715,6 +91762,13 @@ class _StringsJa extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
@@ -103303,6 +103357,13 @@ class _StringsKo extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
@@ -115460,6 +115521,13 @@ class _StringsNl extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
@@ -127671,6 +127739,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_server_item_folder => 'Folder';
   @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
+  @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
   String get video_anidb_login_test_hint =>
@@ -139856,6 +139931,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_server_item_folder => 'Folder';
   @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
+  @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
   String get video_anidb_login_test_hint =>
@@ -151841,6 +151923,13 @@ class _StringsTh extends _StringsEn {
       'Could not load items from the server';
   @override
   String get media_server_item_folder => 'Folder';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
   @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
@@ -163942,6 +164031,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_server_item_folder => 'Folder';
   @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
+  @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
   String get video_anidb_login_test_hint =>
@@ -176015,6 +176111,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_server_item_folder => 'Folder';
   @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
+  @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
   String get video_anidb_login_test_hint =>
@@ -187075,6 +187178,13 @@ class _StringsZhCn extends _StringsEn {
   String get media_server_items_load_failed => '无法从服务器加载条目';
   @override
   String get media_server_item_folder => '文件夹';
+  @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      '无法连接服务器 ${url}：${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      '本机无法解析这个主机名。Android / iOS 不能解析 .local 或 Windows 计算机名，请改用服务器的 IP 地址（例如 http://192.168.1.10:8096）。';
   @override
   String get video_anidb_login_test => '测试 AniDB 登录';
   @override
@@ -198336,6 +198446,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_server_item_folder => 'Folder';
   @override
+  String jellyfin_server_unreachable(
+          {required Object url, required Object reason}) =>
+      'Could not reach the server at ${url}: ${reason}';
+  @override
+  String get jellyfin_host_lookup_hint =>
+      'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
+  @override
   String get video_anidb_login_test => 'Test AniDB login';
   @override
   String get video_anidb_login_test_hint =>
@@ -208800,6 +208917,11 @@ extension on _StringsEn {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -219252,6 +219374,11 @@ extension on _StringsAr {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -229749,6 +229876,11 @@ extension on _StringsDe {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -240237,6 +240369,11 @@ extension on _StringsEs {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -250734,6 +250871,11 @@ extension on _StringsFr {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -261202,6 +261344,11 @@ extension on _StringsId {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -271692,6 +271839,11 @@ extension on _StringsIt {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -282109,6 +282261,11 @@ extension on _StringsJa {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -292530,6 +292687,11 @@ extension on _StringsKo {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -303013,6 +303175,11 @@ extension on _StringsNl {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -313491,6 +313658,11 @@ extension on _StringsPtBr {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -323976,6 +324148,11 @@ extension on _StringsRu {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -334433,6 +334610,11 @@ extension on _StringsTh {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -344905,6 +345087,11 @@ extension on _StringsTr {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -355371,6 +355558,11 @@ extension on _StringsVi {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
@@ -365742,6 +365934,11 @@ extension on _StringsZhCn {
         return '无法从服务器加载条目';
       case 'media_server_item_folder':
         return '文件夹';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            '无法连接服务器 ${url}：${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return '本机无法解析这个主机名。Android / iOS 不能解析 .local 或 Windows 计算机名，请改用服务器的 IP 地址（例如 http://192.168.1.10:8096）。';
       case 'video_anidb_login_test':
         return '测试 AniDB 登录';
       case 'video_anidb_login_test_hint':
@@ -376137,6 +376334,11 @@ extension on _StringsZhHk {
         return 'Could not load items from the server';
       case 'media_server_item_folder':
         return 'Folder';
+      case 'jellyfin_server_unreachable':
+        return ({required Object url, required Object reason}) =>
+            'Could not reach the server at ${url}: ${reason}';
+      case 'jellyfin_host_lookup_hint':
+        return 'This device could not resolve the host name. Android and iOS cannot resolve .local or Windows computer names; use the server\'s IP address instead (for example http://192.168.1.10:8096).';
       case 'video_anidb_login_test':
         return 'Test AniDB login';
       case 'video_anidb_login_test_hint':
