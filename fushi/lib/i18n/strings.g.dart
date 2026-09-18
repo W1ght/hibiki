@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86275 (5075 per locale)
+/// Strings: 86258 (5074 per locale)
 ///
-/// Built on 2026-09-18 at 12:57 UTC
+/// Built on 2026-09-18 at 13:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -231,8 +231,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get aidoku_repository_sources => 'Repository sources';
   String get aidoku_repository_update => 'Update';
   String get aidoku_repository_url => 'Repository URL';
-  String get aidoku_runtime_unavailable =>
-      'Aidoku extensions are currently available on macOS only.';
   String get aidoku_webview_unsupported =>
       'This source requires Aidoku WebView APIs that are not supported yet.';
   String get anime_download_back => 'Back';
@@ -7191,9 +7189,6 @@ class _StringsAr extends _StringsEn {
   String get aidoku_repository_update => 'تحديث';
   @override
   String get aidoku_repository_url => 'رابط المستودع';
-  @override
-  String get aidoku_runtime_unavailable =>
-      'إضافات Aidoku متاحة حالياً على macOS فقط.';
   @override
   String get aidoku_webview_unsupported =>
       'يتطلب هذا المصدر واجهات Aidoku WebView غير المدعومة بعد.';
@@ -19184,9 +19179,6 @@ class _StringsDe extends _StringsEn {
   String get aidoku_repository_update => 'Aktualisieren';
   @override
   String get aidoku_repository_url => 'Repository-URL';
-  @override
-  String get aidoku_runtime_unavailable =>
-      'Aidoku-Erweiterungen sind derzeit nur auf macOS verfügbar.';
   @override
   String get aidoku_webview_unsupported =>
       'Diese Quelle erfordert Aidoku-WebView-APIs, die noch nicht unterstützt werden.';
@@ -31401,9 +31393,6 @@ class _StringsEs extends _StringsEn {
   String get aidoku_repository_update => 'Actualizar';
   @override
   String get aidoku_repository_url => 'URL del repositorio';
-  @override
-  String get aidoku_runtime_unavailable =>
-      'Las extensiones de Aidoku solo están disponibles en macOS actualmente.';
   @override
   String get aidoku_webview_unsupported =>
       'Esta fuente requiere APIs de WebView de Aidoku que aún no están soportadas.';
@@ -43674,9 +43663,6 @@ class _StringsFr extends _StringsEn {
   String get aidoku_repository_update => 'Mettre à jour';
   @override
   String get aidoku_repository_url => 'URL du dépôt';
-  @override
-  String get aidoku_runtime_unavailable =>
-      'Les extensions Aidoku sont actuellement disponibles uniquement sur macOS.';
   @override
   String get aidoku_webview_unsupported =>
       'Cette source nécessite des API WebView Aidoku pas encore prises en charge.';
@@ -55985,9 +55971,6 @@ class _StringsId extends _StringsEn {
   @override
   String get aidoku_repository_url => 'URL repositori';
   @override
-  String get aidoku_runtime_unavailable =>
-      'Ekstensi Aidoku saat ini hanya tersedia di macOS.';
-  @override
   String get aidoku_webview_unsupported =>
       'Sumber ini memerlukan API WebView Aidoku yang belum didukung.';
   @override
@@ -68091,9 +68074,6 @@ class _StringsIt extends _StringsEn {
   String get aidoku_repository_update => 'Aggiorna';
   @override
   String get aidoku_repository_url => 'URL repository';
-  @override
-  String get aidoku_runtime_unavailable =>
-      'Le estensioni Aidoku sono attualmente disponibili solo su macOS.';
   @override
   String get aidoku_webview_unsupported =>
       'Questa fonte richiede API WebView Aidoku che non sono ancora supportate.';
@@ -80291,8 +80271,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get aidoku_repository_url => 'リポジトリURL';
   @override
-  String get aidoku_runtime_unavailable => 'Aidoku拡張機能は現在macOSでのみ利用可能です。';
-  @override
   String get aidoku_webview_unsupported =>
       'このソースにはまだサポートされていないAidoku WebView APIが必要です。';
   @override
@@ -91870,8 +91848,6 @@ class _StringsKo extends _StringsEn {
   String get aidoku_repository_update => '업데이트';
   @override
   String get aidoku_repository_url => '저장소 URL';
-  @override
-  String get aidoku_runtime_unavailable => 'Aidoku 확장은 현재 macOS에서만 사용할 수 있습니다.';
   @override
   String get aidoku_webview_unsupported =>
       '이 소스는 아직 지원되지 않는 Aidoku WebView API가 필요합니다.';
@@ -103460,9 +103436,6 @@ class _StringsNl extends _StringsEn {
   String get aidoku_repository_update => 'Bijwerken';
   @override
   String get aidoku_repository_url => 'Repository-URL';
-  @override
-  String get aidoku_runtime_unavailable =>
-      'Aidoku-extensies zijn momenteel alleen beschikbaar op macOS.';
   @override
   String get aidoku_webview_unsupported =>
       'Deze bron vereist Aidoku WebView-API\'s die nog niet worden ondersteund.';
@@ -115620,9 +115593,6 @@ class _StringsPtBr extends _StringsEn {
   String get aidoku_repository_update => 'Atualizar';
   @override
   String get aidoku_repository_url => 'URL do repositório';
-  @override
-  String get aidoku_runtime_unavailable =>
-      'Extensões Aidoku estão disponíveis apenas no macOS atualmente.';
   @override
   String get aidoku_webview_unsupported =>
       'Esta fonte requer APIs de WebView do Aidoku que ainda não são suportadas.';
@@ -127834,9 +127804,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get aidoku_repository_url => 'URL репозитория';
   @override
-  String get aidoku_runtime_unavailable =>
-      'Расширения Aidoku в настоящее время доступны только на macOS.';
-  @override
   String get aidoku_webview_unsupported =>
       'Этот источник требует API WebView Aidoku, которые пока не поддерживаются.';
   @override
@@ -140022,9 +139989,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get aidoku_repository_url => 'URL คลังเก็บ';
   @override
-  String get aidoku_runtime_unavailable =>
-      'ส่วนขยาย Aidoku ใช้ได้บน macOS เท่านั้นในขณะนี้';
-  @override
   String get aidoku_webview_unsupported =>
       'แหล่งนี้ต้องการ Aidoku WebView API ที่ยังไม่รองรับ';
   @override
@@ -152010,9 +151974,6 @@ class _StringsTr extends _StringsEn {
   String get aidoku_repository_update => 'Güncelle';
   @override
   String get aidoku_repository_url => 'Depo URL\'si';
-  @override
-  String get aidoku_runtime_unavailable =>
-      'Aidoku eklentileri şu anda yalnızca macOS\'ta kullanılabilir.';
   @override
   String get aidoku_webview_unsupported =>
       'Bu kaynak henüz desteklenmeyen Aidoku WebView API\'leri gerektiriyor.';
@@ -164116,9 +164077,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get aidoku_repository_url => 'URL kho lưu trữ';
   @override
-  String get aidoku_runtime_unavailable =>
-      'Tiện ích mở rộng Aidoku hiện chỉ khả dụng trên macOS.';
-  @override
   String get aidoku_webview_unsupported =>
       'Nguồn này yêu cầu API WebView của Aidoku chưa được hỗ trợ.';
   @override
@@ -176188,8 +176146,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get aidoku_repository_url => '仓库地址';
   @override
-  String get aidoku_runtime_unavailable => 'Aidoku 扩展目前仅支持 macOS。';
-  @override
   String get aidoku_webview_unsupported => '此扩展依赖尚未支持的 Aidoku WebView API。';
   @override
   String get anime_download_back => '返回';
@@ -187249,8 +187205,6 @@ class _StringsZhHk extends _StringsEn {
   String get aidoku_repository_update => '更新';
   @override
   String get aidoku_repository_url => '倉庫地址';
-  @override
-  String get aidoku_runtime_unavailable => 'Aidoku 擴展目前僅支持 macOS。';
   @override
   String get aidoku_webview_unsupported => '此擴展依賴尚未支持的 Aidoku WebView API。';
   @override
@@ -198479,8 +198433,6 @@ extension on _StringsEn {
         return 'Update';
       case 'aidoku_repository_url':
         return 'Repository URL';
-      case 'aidoku_runtime_unavailable':
-        return 'Aidoku extensions are currently available on macOS only.';
       case 'aidoku_webview_unsupported':
         return 'This source requires Aidoku WebView APIs that are not supported yet.';
       case 'anime_download_back':
@@ -208939,8 +208891,6 @@ extension on _StringsAr {
         return 'تحديث';
       case 'aidoku_repository_url':
         return 'رابط المستودع';
-      case 'aidoku_runtime_unavailable':
-        return 'إضافات Aidoku متاحة حالياً على macOS فقط.';
       case 'aidoku_webview_unsupported':
         return 'يتطلب هذا المصدر واجهات Aidoku WebView غير المدعومة بعد.';
       case 'anime_download_back':
@@ -219393,8 +219343,6 @@ extension on _StringsDe {
         return 'Aktualisieren';
       case 'aidoku_repository_url':
         return 'Repository-URL';
-      case 'aidoku_runtime_unavailable':
-        return 'Aidoku-Erweiterungen sind derzeit nur auf macOS verfügbar.';
       case 'aidoku_webview_unsupported':
         return 'Diese Quelle erfordert Aidoku-WebView-APIs, die noch nicht unterstützt werden.';
       case 'anime_download_back':
@@ -229892,8 +229840,6 @@ extension on _StringsEs {
         return 'Actualizar';
       case 'aidoku_repository_url':
         return 'URL del repositorio';
-      case 'aidoku_runtime_unavailable':
-        return 'Las extensiones de Aidoku solo están disponibles en macOS actualmente.';
       case 'aidoku_webview_unsupported':
         return 'Esta fuente requiere APIs de WebView de Aidoku que aún no están soportadas.';
       case 'anime_download_back':
@@ -240382,8 +240328,6 @@ extension on _StringsFr {
         return 'Mettre à jour';
       case 'aidoku_repository_url':
         return 'URL du dépôt';
-      case 'aidoku_runtime_unavailable':
-        return 'Les extensions Aidoku sont actuellement disponibles uniquement sur macOS.';
       case 'aidoku_webview_unsupported':
         return 'Cette source nécessite des API WebView Aidoku pas encore prises en charge.';
       case 'anime_download_back':
@@ -250881,8 +250825,6 @@ extension on _StringsId {
         return 'Perbarui';
       case 'aidoku_repository_url':
         return 'URL repositori';
-      case 'aidoku_runtime_unavailable':
-        return 'Ekstensi Aidoku saat ini hanya tersedia di macOS.';
       case 'aidoku_webview_unsupported':
         return 'Sumber ini memerlukan API WebView Aidoku yang belum didukung.';
       case 'anime_download_back':
@@ -261351,8 +261293,6 @@ extension on _StringsIt {
         return 'Aggiorna';
       case 'aidoku_repository_url':
         return 'URL repository';
-      case 'aidoku_runtime_unavailable':
-        return 'Le estensioni Aidoku sono attualmente disponibili solo su macOS.';
       case 'aidoku_webview_unsupported':
         return 'Questa fonte richiede API WebView Aidoku che non sono ancora supportate.';
       case 'anime_download_back':
@@ -271843,8 +271783,6 @@ extension on _StringsJa {
         return '更新';
       case 'aidoku_repository_url':
         return 'リポジトリURL';
-      case 'aidoku_runtime_unavailable':
-        return 'Aidoku拡張機能は現在macOSでのみ利用可能です。';
       case 'aidoku_webview_unsupported':
         return 'このソースにはまだサポートされていないAidoku WebView APIが必要です。';
       case 'anime_download_back':
@@ -282262,8 +282200,6 @@ extension on _StringsKo {
         return '업데이트';
       case 'aidoku_repository_url':
         return '저장소 URL';
-      case 'aidoku_runtime_unavailable':
-        return 'Aidoku 확장은 현재 macOS에서만 사용할 수 있습니다.';
       case 'aidoku_webview_unsupported':
         return '이 소스는 아직 지원되지 않는 Aidoku WebView API가 필요합니다.';
       case 'anime_download_back':
@@ -292685,8 +292621,6 @@ extension on _StringsNl {
         return 'Bijwerken';
       case 'aidoku_repository_url':
         return 'Repository-URL';
-      case 'aidoku_runtime_unavailable':
-        return 'Aidoku-extensies zijn momenteel alleen beschikbaar op macOS.';
       case 'aidoku_webview_unsupported':
         return 'Deze bron vereist Aidoku WebView-API\'s die nog niet worden ondersteund.';
       case 'anime_download_back':
@@ -303170,8 +303104,6 @@ extension on _StringsPtBr {
         return 'Atualizar';
       case 'aidoku_repository_url':
         return 'URL do repositório';
-      case 'aidoku_runtime_unavailable':
-        return 'Extensões Aidoku estão disponíveis apenas no macOS atualmente.';
       case 'aidoku_webview_unsupported':
         return 'Esta fonte requer APIs de WebView do Aidoku que ainda não são suportadas.';
       case 'anime_download_back':
@@ -313650,8 +313582,6 @@ extension on _StringsRu {
         return 'Обновить';
       case 'aidoku_repository_url':
         return 'URL репозитория';
-      case 'aidoku_runtime_unavailable':
-        return 'Расширения Aidoku в настоящее время доступны только на macOS.';
       case 'aidoku_webview_unsupported':
         return 'Этот источник требует API WebView Aidoku, которые пока не поддерживаются.';
       case 'anime_download_back':
@@ -324137,8 +324067,6 @@ extension on _StringsTh {
         return 'อัปเดต';
       case 'aidoku_repository_url':
         return 'URL คลังเก็บ';
-      case 'aidoku_runtime_unavailable':
-        return 'ส่วนขยาย Aidoku ใช้ได้บน macOS เท่านั้นในขณะนี้';
       case 'aidoku_webview_unsupported':
         return 'แหล่งนี้ต้องการ Aidoku WebView API ที่ยังไม่รองรับ';
       case 'anime_download_back':
@@ -334596,8 +334524,6 @@ extension on _StringsTr {
         return 'Güncelle';
       case 'aidoku_repository_url':
         return 'Depo URL\'si';
-      case 'aidoku_runtime_unavailable':
-        return 'Aidoku eklentileri şu anda yalnızca macOS\'ta kullanılabilir.';
       case 'aidoku_webview_unsupported':
         return 'Bu kaynak henüz desteklenmeyen Aidoku WebView API\'leri gerektiriyor.';
       case 'anime_download_back':
@@ -345070,8 +344996,6 @@ extension on _StringsVi {
         return 'Cập nhật';
       case 'aidoku_repository_url':
         return 'URL kho lưu trữ';
-      case 'aidoku_runtime_unavailable':
-        return 'Tiện ích mở rộng Aidoku hiện chỉ khả dụng trên macOS.';
       case 'aidoku_webview_unsupported':
         return 'Nguồn này yêu cầu API WebView của Aidoku chưa được hỗ trợ.';
       case 'anime_download_back':
@@ -355538,8 +355462,6 @@ extension on _StringsZhCn {
         return '更新';
       case 'aidoku_repository_url':
         return '仓库地址';
-      case 'aidoku_runtime_unavailable':
-        return 'Aidoku 扩展目前仅支持 macOS。';
       case 'aidoku_webview_unsupported':
         return '此扩展依赖尚未支持的 Aidoku WebView API。';
       case 'anime_download_back':
@@ -365911,8 +365833,6 @@ extension on _StringsZhHk {
         return '更新';
       case 'aidoku_repository_url':
         return '倉庫地址';
-      case 'aidoku_runtime_unavailable':
-        return 'Aidoku 擴展目前僅支持 macOS。';
       case 'aidoku_webview_unsupported':
         return '此擴展依賴尚未支持的 Aidoku WebView API。';
       case 'anime_download_back':
