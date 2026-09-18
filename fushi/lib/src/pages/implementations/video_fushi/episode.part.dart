@@ -292,12 +292,22 @@ extension _VideoEpisode on _VideoFushiPageState {
   /// * 看完/在看角标（Jellyfin played 勾）：轨道本就支持，把数据喂上。
   /// 旧单行 playlist 远端模型（`RemoteVideoEpisode`）不下发封面，全部图源皆空 →
   /// 返回 null，面板退回纯序号形态。
+  ///
+  /// 结果按输入身份 memo（见 [_episodePanelEntriesMemo]）：面板常驻在树里、页面
+  /// 每次 setState 都重建它，不 memo 就是每帧对全部 N 集重跑正则 + 重建 provider。
   List<VideoEpisodeEntry> _episodePanelEntries() {
     final RemoteCoverFetcher? fetcher = remoteCoverFetcherFor(
       widget.remoteClient ?? _resolvedStreamClient,
     );
+    final List<VideoEpisodeEntry>? memo = _episodePanelEntriesMemo;
+    if (memo != null &&
+        identical(_episodePanelEntriesEpisodes, _episodes) &&
+        identical(_episodePanelEntriesFetcher, fetcher) &&
+        identical(_episodePanelEntriesImages, _playlistCollectionImages)) {
+      return memo;
+    }
     final ImageProvider? seriesFallback = _playlistSeriesFallbackCover();
-    return <VideoEpisodeEntry>[
+    final List<VideoEpisodeEntry> entries = <VideoEpisodeEntry>[
       for (final _PlaylistEpisodeRef e in _episodes)
         VideoEpisodeEntry(
           title: e.displayTitle ?? e.title,
@@ -319,6 +329,10 @@ extension _VideoEpisode on _VideoFushiPageState {
           started: e.started,
         ),
     ];
+    _episodePanelEntriesEpisodes = _episodes;
+    _episodePanelEntriesFetcher = fetcher;
+    _episodePanelEntriesImages = _playlistCollectionImages;
+    return _episodePanelEntriesMemo = entries;
   }
 
   /// 剧集卡封面回退链的合集段（v68）：合集带字横图 → 无字背景；全缺 → null
