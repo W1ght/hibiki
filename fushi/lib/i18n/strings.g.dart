@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 85306 (5018 per locale)
+/// Strings: 85391 (5023 per locale)
 ///
-/// Built on 2026-09-16 at 10:57 UTC
+/// Built on 2026-09-18 at 04:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7011,6 +7011,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_forget_done => 'Mining record cleared';
   String get reader_gallery_cover => 'Cover';
+  String get ai_feature_custom_theme => 'Custom theme';
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -18866,6 +18874,19 @@ class _StringsAr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -30949,6 +30970,19 @@ class _StringsDe extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -43085,6 +43119,19 @@ class _StringsEs extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -55258,6 +55305,19 @@ class _StringsFr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -67230,6 +67290,19 @@ class _StringsId extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -79294,6 +79367,19 @@ class _StringsIt extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -90738,6 +90824,19 @@ class _StringsJa extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -102192,6 +102291,19 @@ class _StringsKo extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -114216,6 +114328,19 @@ class _StringsNl extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -126293,6 +126418,19 @@ class _StringsPtBr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -138345,6 +138483,19 @@ class _StringsRu extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -150198,6 +150349,19 @@ class _StringsTh extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -162165,6 +162329,19 @@ class _StringsTr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -174105,6 +174282,19 @@ class _StringsVi extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -185040,6 +185230,16 @@ class _StringsZhCn extends _StringsEn {
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
   String get reader_gallery_cover => '封面';
+  @override
+  String get ai_feature_custom_theme => '自定义主题';
+  @override
+  String get ai_feature_custom_theme_summary => '让 AI 按描述生成自定义主题配色';
+  @override
+  String get theme_ai_hint => '描述想要的主题，例如：暖色纸张阅读风格，主题色深绿';
+  @override
+  String get theme_ai_applied => 'AI 建议已填进编辑器，看过预览后再应用。';
+  @override
+  String get theme_ai_undo => '撤销 AI 改动';
 }
 
 // Path: <root>
@@ -196168,6 +196368,19 @@ class _StringsZhHk extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 /// Flat map(s) containing all translations.
@@ -206511,6 +206724,16 @@ extension on _StringsEn {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -216849,6 +217072,16 @@ extension on _StringsAr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -227232,6 +227465,16 @@ extension on _StringsDe {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -237606,6 +237849,16 @@ extension on _StringsEs {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -247989,6 +248242,16 @@ extension on _StringsFr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -258343,6 +258606,16 @@ extension on _StringsId {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -268719,6 +268992,16 @@ extension on _StringsIt {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -279022,6 +279305,16 @@ extension on _StringsJa {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -289329,6 +289622,16 @@ extension on _StringsKo {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -299698,6 +300001,16 @@ extension on _StringsNl {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -310062,6 +310375,16 @@ extension on _StringsPtBr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -320433,6 +320756,16 @@ extension on _StringsRu {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -330776,6 +331109,16 @@ extension on _StringsTh {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -341134,6 +341477,16 @@ extension on _StringsTr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -351486,6 +351839,16 @@ extension on _StringsVi {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -361743,6 +362106,16 @@ extension on _StringsZhCn {
         return '已清除制卡记录';
       case 'reader_gallery_cover':
         return '封面';
+      case 'ai_feature_custom_theme':
+        return '自定义主题';
+      case 'ai_feature_custom_theme_summary':
+        return '让 AI 按描述生成自定义主题配色';
+      case 'theme_ai_hint':
+        return '描述想要的主题，例如：暖色纸张阅读风格，主题色深绿';
+      case 'theme_ai_applied':
+        return 'AI 建议已填进编辑器，看过预览后再应用。';
+      case 'theme_ai_undo':
+        return '撤销 AI 改动';
       default:
         return null;
     }
@@ -372024,6 +372397,16 @@ extension on _StringsZhHk {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
