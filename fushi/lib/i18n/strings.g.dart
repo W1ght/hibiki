@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 85714 (5042 per locale)
+/// Strings: 85765 (5045 per locale)
 ///
-/// Built on 2026-09-18 at 09:18 UTC
+/// Built on 2026-09-18 at 09:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7030,6 +7030,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_forget_done => 'Mining record cleared';
   String get reader_gallery_cover => 'Cover';
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  String get unit_kbps => 'kbps';
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   String get stat_center_day_reset_action => 'Day reset time';
@@ -18932,6 +18937,14 @@ class _StringsAr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
@@ -31069,6 +31082,14 @@ class _StringsDe extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
@@ -43259,6 +43280,14 @@ class _StringsEs extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
@@ -55487,6 +55516,14 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
+  @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
@@ -67512,6 +67549,14 @@ class _StringsId extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
@@ -79631,6 +79676,14 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
+  @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
@@ -91128,6 +91181,14 @@ class _StringsJa extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
@@ -102636,6 +102697,14 @@ class _StringsKo extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
@@ -114714,6 +114783,14 @@ class _StringsNl extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
@@ -126846,6 +126923,14 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
+  @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
@@ -138952,6 +139037,14 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
+  @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
@@ -150858,6 +150951,14 @@ class _StringsTh extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
@@ -162880,6 +162981,14 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
+  @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
@@ -174874,6 +174983,14 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
+  @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
@@ -185860,6 +185977,13 @@ class _StringsZhCn extends _StringsEn {
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
   String get reader_gallery_cover => '封面';
+  @override
+  String get video_setting_clip_export_video_bitrate => '片段导出视频码率';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = 跟随源（能直接复制码流就不重编码）；其它值会把视频重编码到该码率';
+  @override
+  String get unit_kbps => 'kbps';
   @override
   String get drag_drop_unsupported_on_downloads =>
       '请把 .torrent 种子文件拖到这里以添加下载任务。其它文件请拖到书架、漫画库或视频页。';
@@ -197040,6 +197164,14 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_gallery_cover => 'Cover';
   @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
+  @override
   String get drag_drop_unsupported_on_downloads =>
       'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
   @override
@@ -207434,6 +207566,12 @@ extension on _StringsEn {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -217820,6 +217958,12 @@ extension on _StringsAr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -228251,6 +228395,12 @@ extension on _StringsDe {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -238673,6 +238823,12 @@ extension on _StringsEs {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -249104,6 +249260,12 @@ extension on _StringsFr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -259506,6 +259668,12 @@ extension on _StringsId {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -269930,6 +270098,12 @@ extension on _StringsIt {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -280281,6 +280455,12 @@ extension on _StringsJa {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -290636,6 +290816,12 @@ extension on _StringsKo {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -301053,6 +301239,12 @@ extension on _StringsNl {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -311465,6 +311657,12 @@ extension on _StringsPtBr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -321884,6 +322082,12 @@ extension on _StringsRu {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -332275,6 +332479,12 @@ extension on _StringsTh {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -342681,6 +342891,12 @@ extension on _StringsTr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -353081,6 +353297,12 @@ extension on _StringsVi {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
@@ -363386,6 +363608,12 @@ extension on _StringsZhCn {
         return '已清除制卡记录';
       case 'reader_gallery_cover':
         return '封面';
+      case 'video_setting_clip_export_video_bitrate':
+        return '片段导出视频码率';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = 跟随源（能直接复制码流就不重编码）；其它值会把视频重编码到该码率';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return '请把 .torrent 种子文件拖到这里以添加下载任务。其它文件请拖到书架、漫画库或视频页。';
       case 'stat_center_day_reset_action':
@@ -373715,6 +373943,12 @@ extension on _StringsZhHk {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       case 'drag_drop_unsupported_on_downloads':
         return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       case 'stat_center_day_reset_action':
