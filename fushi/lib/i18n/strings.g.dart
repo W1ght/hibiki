@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86258 (5074 per locale)
+/// Strings: 86292 (5076 per locale)
 ///
-/// Built on 2026-09-18 at 13:22 UTC
+/// Built on 2026-09-18 at 14:55 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7088,6 +7088,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'AniDB is rate limiting or under maintenance; requests are paused for now';
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -19076,6 +19080,12 @@ class _StringsAr extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -31292,6 +31302,12 @@ class _StringsDe extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -43561,6 +43577,12 @@ class _StringsEs extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -55867,6 +55889,12 @@ class _StringsFr extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -67972,6 +68000,12 @@ class _StringsId extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -80169,6 +80203,12 @@ class _StringsIt extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -91747,6 +91787,12 @@ class _StringsJa extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -103335,6 +103381,12 @@ class _StringsKo extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -115492,6 +115544,12 @@ class _StringsNl extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -127702,6 +127760,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -139887,6 +139951,12 @@ class _StringsRu extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -151873,6 +151943,12 @@ class _StringsTh extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -163973,6 +164049,12 @@ class _StringsTr extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -176046,6 +176128,12 @@ class _StringsVi extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 // Path: <root>
@@ -187105,6 +187193,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB 登录失败（${reason}）';
+  @override
+  String get shortcut_lookup_page_escape_minimize => '查词页按返回键最小化窗口';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      '置顶热键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
 }
 
 // Path: <root>
@@ -198367,6 +198460,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_anidb_login_test_failed_other({required Object reason}) =>
       'AniDB login failed (${reason})';
+  @override
+  String get shortcut_lookup_page_escape_minimize =>
+      'Back key on the lookup page minimizes the window';
+  @override
+  String get shortcut_lookup_page_escape_minimize_hint =>
+      'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
 }
 
 /// Flat map(s) containing all translations.
@@ -208824,6 +208923,10 @@ extension on _StringsEn {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -219276,6 +219379,10 @@ extension on _StringsAr {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -229773,6 +229880,10 @@ extension on _StringsDe {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -240261,6 +240372,10 @@ extension on _StringsEs {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -250758,6 +250873,10 @@ extension on _StringsFr {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -261226,6 +261345,10 @@ extension on _StringsId {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -271716,6 +271839,10 @@ extension on _StringsIt {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -282133,6 +282260,10 @@ extension on _StringsJa {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -292554,6 +292685,10 @@ extension on _StringsKo {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -303037,6 +303172,10 @@ extension on _StringsNl {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -313515,6 +313654,10 @@ extension on _StringsPtBr {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -324000,6 +324143,10 @@ extension on _StringsRu {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -334457,6 +334604,10 @@ extension on _StringsTh {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -344929,6 +345080,10 @@ extension on _StringsTr {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -355395,6 +355550,10 @@ extension on _StringsVi {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
@@ -365766,6 +365925,10 @@ extension on _StringsZhCn {
         return 'AniDB 当前限流或维护，请求已暂停，请稍后再试';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB 登录失败（${reason}）';
+      case 'shortcut_lookup_page_escape_minimize':
+        return '查词页按返回键最小化窗口';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return '置顶热键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
       default:
         return null;
     }
@@ -376161,6 +376324,10 @@ extension on _StringsZhHk {
         return 'AniDB is rate limiting or under maintenance; requests are paused for now';
       case 'video_anidb_login_test_failed_other':
         return ({required Object reason}) => 'AniDB login failed (${reason})';
+      case 'shortcut_lookup_page_escape_minimize':
+        return 'Back key on the lookup page minimizes the window';
+      case 'shortcut_lookup_page_escape_minimize_hint':
+        return 'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
       default:
         return null;
     }
