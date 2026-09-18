@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 85306 (5018 per locale)
+/// Strings: 85357 (5021 per locale)
 ///
-/// Built on 2026-09-16 at 10:57 UTC
+/// Built on 2026-09-18 at 06:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7011,6 +7011,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_forget_done => 'Mining record cleared';
   String get reader_gallery_cover => 'Cover';
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -18866,6 +18871,14 @@ class _StringsAr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -30949,6 +30962,14 @@ class _StringsDe extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -43085,6 +43106,14 @@ class _StringsEs extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -55258,6 +55287,14 @@ class _StringsFr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -67230,6 +67267,14 @@ class _StringsId extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -79294,6 +79339,14 @@ class _StringsIt extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -90738,6 +90791,14 @@ class _StringsJa extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -102192,6 +102253,14 @@ class _StringsKo extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -114216,6 +114285,14 @@ class _StringsNl extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -126293,6 +126370,14 @@ class _StringsPtBr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -138345,6 +138430,14 @@ class _StringsRu extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -150198,6 +150291,14 @@ class _StringsTh extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -162165,6 +162266,14 @@ class _StringsTr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -174105,6 +174214,14 @@ class _StringsVi extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -185040,6 +185157,13 @@ class _StringsZhCn extends _StringsEn {
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
   String get reader_gallery_cover => '封面';
+  @override
+  String get video_setting_clip_export_video_bitrate => '片段导出视频码率';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = 跟随源（能直接复制码流就不重编码）；其它值会把视频重编码到该码率';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 // Path: <root>
@@ -196168,6 +196292,14 @@ class _StringsZhHk extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get video_setting_clip_export_video_bitrate =>
+      'Clip export video bitrate';
+  @override
+  String get video_setting_clip_export_video_bitrate_hint =>
+      '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+  @override
+  String get unit_kbps => 'kbps';
 }
 
 /// Flat map(s) containing all translations.
@@ -206511,6 +206643,12 @@ extension on _StringsEn {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -216849,6 +216987,12 @@ extension on _StringsAr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -227232,6 +227376,12 @@ extension on _StringsDe {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -237606,6 +237756,12 @@ extension on _StringsEs {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -247989,6 +248145,12 @@ extension on _StringsFr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -258343,6 +258505,12 @@ extension on _StringsId {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -268719,6 +268887,12 @@ extension on _StringsIt {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -279022,6 +279196,12 @@ extension on _StringsJa {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -289329,6 +289509,12 @@ extension on _StringsKo {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -299698,6 +299884,12 @@ extension on _StringsNl {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -310062,6 +310254,12 @@ extension on _StringsPtBr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -320433,6 +320631,12 @@ extension on _StringsRu {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -330776,6 +330980,12 @@ extension on _StringsTh {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -341134,6 +341344,12 @@ extension on _StringsTr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -351486,6 +351702,12 @@ extension on _StringsVi {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -361743,6 +361965,12 @@ extension on _StringsZhCn {
         return '已清除制卡记录';
       case 'reader_gallery_cover':
         return '封面';
+      case 'video_setting_clip_export_video_bitrate':
+        return '片段导出视频码率';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = 跟随源（能直接复制码流就不重编码）；其它值会把视频重编码到该码率';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
@@ -372024,6 +372252,12 @@ extension on _StringsZhHk {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'video_setting_clip_export_video_bitrate':
+        return 'Clip export video bitrate';
+      case 'video_setting_clip_export_video_bitrate_hint':
+        return '0 = follow the source (the stream is copied when possible); any other value re-encodes the video at that bitrate';
+      case 'unit_kbps':
+        return 'kbps';
       default:
         return null;
     }
