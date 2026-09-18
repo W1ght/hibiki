@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 85306 (5018 per locale)
+/// Strings: 85323 (5019 per locale)
 ///
-/// Built on 2026-09-16 at 10:57 UTC
+/// Built on 2026-09-18 at 04:28 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7011,6 +7011,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_action_forget => 'I deleted it in Anki';
   String get anki_mined_forget_done => 'Mining record cleared';
   String get reader_gallery_cover => 'Cover';
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -18866,6 +18868,9 @@ class _StringsAr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -30949,6 +30954,9 @@ class _StringsDe extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -43085,6 +43093,9 @@ class _StringsEs extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -55258,6 +55269,9 @@ class _StringsFr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -67230,6 +67244,9 @@ class _StringsId extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -79294,6 +79311,9 @@ class _StringsIt extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -90738,6 +90758,9 @@ class _StringsJa extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -102192,6 +102215,9 @@ class _StringsKo extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -114216,6 +114242,9 @@ class _StringsNl extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -126293,6 +126322,9 @@ class _StringsPtBr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -138345,6 +138377,9 @@ class _StringsRu extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -150198,6 +150233,9 @@ class _StringsTh extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -162165,6 +162203,9 @@ class _StringsTr extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -174105,6 +174146,9 @@ class _StringsVi extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 // Path: <root>
@@ -185040,6 +185084,9 @@ class _StringsZhCn extends _StringsEn {
   String get anki_mined_forget_done => '已清除制卡记录';
   @override
   String get reader_gallery_cover => '封面';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      '请把 .torrent 种子文件拖到这里以添加下载任务。其它文件请拖到书架、漫画库或视频页。';
 }
 
 // Path: <root>
@@ -196168,6 +196215,9 @@ class _StringsZhHk extends _StringsEn {
   String get anki_mined_forget_done => 'Mining record cleared';
   @override
   String get reader_gallery_cover => 'Cover';
+  @override
+  String get drag_drop_unsupported_on_downloads =>
+      'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
 }
 
 /// Flat map(s) containing all translations.
@@ -206511,6 +206561,8 @@ extension on _StringsEn {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -216849,6 +216901,8 @@ extension on _StringsAr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -227232,6 +227286,8 @@ extension on _StringsDe {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -237606,6 +237662,8 @@ extension on _StringsEs {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -247989,6 +248047,8 @@ extension on _StringsFr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -258343,6 +258403,8 @@ extension on _StringsId {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -268719,6 +268781,8 @@ extension on _StringsIt {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -279022,6 +279086,8 @@ extension on _StringsJa {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -289329,6 +289395,8 @@ extension on _StringsKo {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -299698,6 +299766,8 @@ extension on _StringsNl {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -310062,6 +310132,8 @@ extension on _StringsPtBr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -320433,6 +320505,8 @@ extension on _StringsRu {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -330776,6 +330850,8 @@ extension on _StringsTh {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -341134,6 +341210,8 @@ extension on _StringsTr {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -351486,6 +351564,8 @@ extension on _StringsVi {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
@@ -361743,6 +361823,8 @@ extension on _StringsZhCn {
         return '已清除制卡记录';
       case 'reader_gallery_cover':
         return '封面';
+      case 'drag_drop_unsupported_on_downloads':
+        return '请把 .torrent 种子文件拖到这里以添加下载任务。其它文件请拖到书架、漫画库或视频页。';
       default:
         return null;
     }
@@ -372024,6 +372106,8 @@ extension on _StringsZhHk {
         return 'Mining record cleared';
       case 'reader_gallery_cover':
         return 'Cover';
+      case 'drag_drop_unsupported_on_downloads':
+        return 'Drop .torrent files here to add a download task. Other files belong to the Books, Manga, or Video pages.';
       default:
         return null;
     }
