@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86377 (5081 per locale)
+/// Strings: 86343 (5079 per locale)
 ///
-/// Built on 2026-09-18 at 16:38 UTC
+/// Built on 2026-09-18 at 17:56 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -2712,8 +2712,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get icon_shortcut_unsupported =>
       'Shortcuts are not supported on this device.';
   String get icon_switch_success => 'App icon changed successfully.';
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
   String get image_pause => 'Pause on image';
   String get image_pause_hint =>
       'Auto-pause when an image appears during playback.';
@@ -3479,7 +3477,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get no_audio_file => 'No audio file to save.';
   String get no_collections => 'No bookmarks or saved sentences';
   String get no_debug_logs => 'No debug logs.';
-  String get no_illustrations_found => 'No illustrations found';
   String get no_results_found => 'No results found.';
   String get no_search_results => 'No search results found.';
   String get no_sentence_selected => 'No sentence selected';
@@ -11511,9 +11508,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get icon_switch_success => 'تم تغيير أيقونة التطبيق بنجاح.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'إيقاف عند الصورة';
   @override
   String get image_pause_hint =>
@@ -12837,8 +12831,6 @@ class _StringsAr extends _StringsEn {
   String get no_collections => 'لا توجد علامات مرجعية أو جمل محفوظة';
   @override
   String get no_debug_logs => 'لا توجد سجلات تصحيح.';
-  @override
-  String get no_illustrations_found => 'لم يتم العثور على رسوم توضيحية';
   @override
   String get no_results_found => 'لم يتم العثور على نتائج.';
   @override
@@ -23617,9 +23609,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get icon_switch_success => 'App-Symbol erfolgreich geändert.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Bei Bild pausieren';
   @override
   String get image_pause_hint =>
@@ -24968,8 +24957,6 @@ class _StringsDe extends _StringsEn {
   String get no_collections => 'Keine Lesezeichen oder gespeicherten Sätze';
   @override
   String get no_debug_logs => 'Keine Debug-Logs.';
-  @override
-  String get no_illustrations_found => 'Keine Illustrationen gefunden';
   @override
   String get no_results_found => 'Keine Ergebnisse gefunden.';
   @override
@@ -35877,9 +35864,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get icon_switch_success => 'Icono de la app cambiado correctamente.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Pausar en imagen';
   @override
   String get image_pause_hint =>
@@ -37230,8 +37214,6 @@ class _StringsEs extends _StringsEn {
   String get no_collections => 'No hay marcadores ni oraciones guardadas';
   @override
   String get no_debug_logs => 'Sin registros de depuración.';
-  @override
-  String get no_illustrations_found => 'No se encontraron ilustraciones';
   @override
   String get no_results_found => 'No se encontraron resultados.';
   @override
@@ -48178,9 +48160,6 @@ class _StringsFr extends _StringsEn {
   String get icon_switch_success =>
       'Icône de l\'application modifiée avec succès.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Pause sur image';
   @override
   String get image_pause_hint =>
@@ -49536,8 +49515,6 @@ class _StringsFr extends _StringsEn {
   String get no_collections => 'Aucun signet ou phrase enregistrée';
   @override
   String get no_debug_logs => 'Aucun journal de débogage.';
-  @override
-  String get no_illustrations_found => 'Aucune illustration trouvée';
   @override
   String get no_results_found => 'Aucun résultat trouvé.';
   @override
@@ -60427,9 +60404,6 @@ class _StringsId extends _StringsEn {
   @override
   String get icon_switch_success => 'Ikon aplikasi berhasil diubah.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Jeda pada Gambar';
   @override
   String get image_pause_hint =>
@@ -61770,8 +61744,6 @@ class _StringsId extends _StringsEn {
   String get no_collections => 'Tidak ada bookmark atau kalimat tersimpan';
   @override
   String get no_debug_logs => 'Tidak ada log debug.';
-  @override
-  String get no_illustrations_found => 'Tidak ada ilustrasi ditemukan';
   @override
   String get no_results_found => 'Tidak ada hasil ditemukan.';
   @override
@@ -72590,9 +72562,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get icon_switch_success => 'Icona dell\'app cambiata con successo.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Pausa su immagine';
   @override
   String get image_pause_hint =>
@@ -73941,8 +73910,6 @@ class _StringsIt extends _StringsEn {
   String get no_collections => 'Nessun segnalibro o frase salvata';
   @override
   String get no_debug_logs => 'Nessun log di debug.';
-  @override
-  String get no_illustrations_found => 'Nessuna illustrazione trovata';
   @override
   String get no_results_found => 'Nessun risultato trovato.';
   @override
@@ -84578,9 +84545,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get icon_switch_success => 'アプリアイコンを変更しました。';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => '画像で一時停止';
   @override
   String get image_pause_hint => '再生中に画像が表示されたら自動で一時停止します。';
@@ -85844,8 +85808,6 @@ class _StringsJa extends _StringsEn {
   String get no_collections => 'ブックマークや保存した文がありません';
   @override
   String get no_debug_logs => 'デバッグログがありません。';
-  @override
-  String get no_illustrations_found => 'イラストが見つかりません';
   @override
   String get no_results_found => '結果が見つかりません。';
   @override
@@ -96172,9 +96134,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get icon_switch_success => '앱 아이콘이 변경되었습니다.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => '이미지에서 일시정지';
   @override
   String get image_pause_hint => '재생 중 이미지가 표시되면 자동으로 일시정지합니다.';
@@ -97449,8 +97408,6 @@ class _StringsKo extends _StringsEn {
   String get no_collections => '북마크나 저장된 문장이 없습니다';
   @override
   String get no_debug_logs => '디버그 로그가 없습니다.';
-  @override
-  String get no_illustrations_found => '삽화를 찾을 수 없습니다';
   @override
   String get no_results_found => '결과를 찾을 수 없습니다.';
   @override
@@ -108004,9 +107961,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get icon_switch_success => 'App-icoon succesvol gewijzigd.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Pauzeren bij afbeelding';
   @override
   String get image_pause_hint =>
@@ -109349,8 +109303,6 @@ class _StringsNl extends _StringsEn {
   String get no_collections => 'Geen bladwijzers of opgeslagen zinnen';
   @override
   String get no_debug_logs => 'Geen debug-logboeken.';
-  @override
-  String get no_illustrations_found => 'Geen illustraties gevonden';
   @override
   String get no_results_found => 'Geen resultaten gevonden.';
   @override
@@ -120210,9 +120162,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get icon_switch_success => 'Ícone do app alterado com sucesso.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Pausar na Imagem';
   @override
   String get image_pause_hint =>
@@ -121560,8 +121509,6 @@ class _StringsPtBr extends _StringsEn {
   String get no_collections => 'Nenhum marcador ou frase salva';
   @override
   String get no_debug_logs => 'Sem logs de depuração.';
-  @override
-  String get no_illustrations_found => 'Nenhuma ilustração encontrada';
   @override
   String get no_results_found => 'Nenhum resultado encontrado.';
   @override
@@ -132419,9 +132366,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get icon_switch_success => 'Иконка приложения успешно изменена.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Пауза на изображении';
   @override
   String get image_pause_hint =>
@@ -133768,8 +133712,6 @@ class _StringsRu extends _StringsEn {
   String get no_collections => 'Нет закладок или сохранённых предложений';
   @override
   String get no_debug_logs => 'Нет записей отладки.';
-  @override
-  String get no_illustrations_found => 'Иллюстрации не найдены';
   @override
   String get no_results_found => 'Результатов не найдено.';
   @override
@@ -144553,9 +144495,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get icon_switch_success => 'เปลี่ยนไอคอนแอปสำเร็จ';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'หยุดเมื่อพบรูปภาพ';
   @override
   String get image_pause_hint =>
@@ -145881,8 +145820,6 @@ class _StringsTh extends _StringsEn {
   String get no_collections => 'ไม่มีบุ๊กมาร์กหรือประโยคที่บันทึกไว้';
   @override
   String get no_debug_logs => 'ไม่มีบันทึกดีบัก';
-  @override
-  String get no_illustrations_found => 'ไม่พบภาพประกอบ';
   @override
   String get no_results_found => 'ไม่พบผลลัพธ์';
   @override
@@ -156621,9 +156558,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get icon_switch_success => 'Uygulama simgesi başarıyla değiştirildi.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Resimde duraklat';
   @override
   String get image_pause_hint =>
@@ -157960,8 +157894,6 @@ class _StringsTr extends _StringsEn {
   String get no_collections => 'Yer imi veya kaydedilmiş cümle yok';
   @override
   String get no_debug_logs => 'Hata ayıklama günlüğü yok.';
-  @override
-  String get no_illustrations_found => 'Resim bulunamadı';
   @override
   String get no_results_found => 'Sonuç bulunamadı.';
   @override
@@ -168738,9 +168670,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get icon_switch_success => 'Đã đổi biểu tượng ứng dụng.';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => 'Tạm dừng khi có hình ảnh';
   @override
   String get image_pause_hint =>
@@ -170073,8 +170002,6 @@ class _StringsVi extends _StringsEn {
   String get no_collections => 'Chưa có đánh dấu hoặc câu đã lưu';
   @override
   String get no_debug_logs => 'Không có nhật ký gỡ lỗi.';
-  @override
-  String get no_illustrations_found => 'Không tìm thấy minh họa';
   @override
   String get no_results_found => 'Không tìm thấy kết quả.';
   @override
@@ -180481,9 +180408,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get icon_switch_success => '应用图标已更改。';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => '图片暂停';
   @override
   String get image_pause_hint => '播放时遇到图片自动暂停。';
@@ -181695,8 +181619,6 @@ class _StringsZhCn extends _StringsEn {
   String get no_collections => '没有书签或保存的句子';
   @override
   String get no_debug_logs => '无调试日志。';
-  @override
-  String get no_illustrations_found => '未找到插画';
   @override
   String get no_results_found => '未找到结果。';
   @override
@@ -191587,9 +191509,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get icon_switch_success => '應用程式圖示已變更。';
   @override
-  String image_page_counter({required Object current, required Object total}) =>
-      '${current} / ${total}';
-  @override
   String get image_pause => '圖片暫停';
   @override
   String get image_pause_hint => '播放時遇到圖片自動暫停。';
@@ -192813,8 +192732,6 @@ class _StringsZhHk extends _StringsEn {
   String get no_collections => '沒有書籤或保存的句子';
   @override
   String get no_debug_logs => '無偵錯日誌。';
-  @override
-  String get no_illustrations_found => '未找到插圖';
   @override
   String get no_results_found => '未找到結果。';
   @override
@@ -202610,9 +202527,6 @@ extension on _StringsEn {
         return 'Shortcuts are not supported on this device.';
       case 'icon_switch_success':
         return 'App icon changed successfully.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Pause on image';
       case 'image_pause_hint':
@@ -203769,8 +203683,6 @@ extension on _StringsEn {
         return 'No bookmarks or saved sentences';
       case 'no_debug_logs':
         return 'No debug logs.';
-      case 'no_illustrations_found':
-        return 'No illustrations found';
       case 'no_results_found':
         return 'No results found.';
       case 'no_search_results':
@@ -213083,9 +212995,6 @@ extension on _StringsAr {
         return 'الاختصارات غير مدعومة على هذا الجهاز.';
       case 'icon_switch_success':
         return 'تم تغيير أيقونة التطبيق بنجاح.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'إيقاف عند الصورة';
       case 'image_pause_hint':
@@ -214241,8 +214150,6 @@ extension on _StringsAr {
         return 'لا توجد علامات مرجعية أو جمل محفوظة';
       case 'no_debug_logs':
         return 'لا توجد سجلات تصحيح.';
-      case 'no_illustrations_found':
-        return 'لم يتم العثور على رسوم توضيحية';
       case 'no_results_found':
         return 'لم يتم العثور على نتائج.';
       case 'no_search_results':
@@ -223572,9 +223479,6 @@ extension on _StringsDe {
         return 'Verknüpfungen werden auf diesem Gerät nicht unterstützt.';
       case 'icon_switch_success':
         return 'App-Symbol erfolgreich geändert.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Bei Bild pausieren';
       case 'image_pause_hint':
@@ -224738,8 +224642,6 @@ extension on _StringsDe {
         return 'Keine Lesezeichen oder gespeicherten Sätze';
       case 'no_debug_logs':
         return 'Keine Debug-Logs.';
-      case 'no_illustrations_found':
-        return 'Keine Illustrationen gefunden';
       case 'no_results_found':
         return 'Keine Ergebnisse gefunden.';
       case 'no_search_results':
@@ -234081,9 +233983,6 @@ extension on _StringsEs {
         return 'Los accesos directos no son compatibles con este dispositivo.';
       case 'icon_switch_success':
         return 'Icono de la app cambiado correctamente.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Pausar en imagen';
       case 'image_pause_hint':
@@ -235246,8 +235145,6 @@ extension on _StringsEs {
         return 'No hay marcadores ni oraciones guardadas';
       case 'no_debug_logs':
         return 'Sin registros de depuración.';
-      case 'no_illustrations_found':
-        return 'No se encontraron ilustraciones';
       case 'no_results_found':
         return 'No se encontraron resultados.';
       case 'no_search_results':
@@ -244593,9 +244490,6 @@ extension on _StringsFr {
         return 'Les raccourcis ne sont pas pris en charge sur cet appareil.';
       case 'icon_switch_success':
         return 'Icône de l\'application modifiée avec succès.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Pause sur image';
       case 'image_pause_hint':
@@ -245758,8 +245652,6 @@ extension on _StringsFr {
         return 'Aucun signet ou phrase enregistrée';
       case 'no_debug_logs':
         return 'Aucun journal de débogage.';
-      case 'no_illustrations_found':
-        return 'Aucune illustration trouvée';
       case 'no_results_found':
         return 'Aucun résultat trouvé.';
       case 'no_search_results':
@@ -255098,9 +254990,6 @@ extension on _StringsId {
         return 'Pintasan tidak didukung di perangkat ini.';
       case 'icon_switch_success':
         return 'Ikon aplikasi berhasil diubah.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Jeda pada Gambar';
       case 'image_pause_hint':
@@ -256258,8 +256147,6 @@ extension on _StringsId {
         return 'Tidak ada bookmark atau kalimat tersimpan';
       case 'no_debug_logs':
         return 'Tidak ada log debug.';
-      case 'no_illustrations_found':
-        return 'Tidak ada ilustrasi ditemukan';
       case 'no_results_found':
         return 'Tidak ada hasil ditemukan.';
       case 'no_search_results':
@@ -265588,9 +265475,6 @@ extension on _StringsIt {
         return 'I collegamenti non sono supportati su questo dispositivo.';
       case 'icon_switch_success':
         return 'Icona dell\'app cambiata con successo.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Pausa su immagine';
       case 'image_pause_hint':
@@ -266752,8 +266636,6 @@ extension on _StringsIt {
         return 'Nessun segnalibro o frase salvata';
       case 'no_debug_logs':
         return 'Nessun log di debug.';
-      case 'no_illustrations_found':
-        return 'Nessuna illustrazione trovata';
       case 'no_results_found':
         return 'Nessun risultato trovato.';
       case 'no_search_results':
@@ -276072,9 +275954,6 @@ extension on _StringsJa {
         return 'このデバイスではショートカットがサポートされていません。';
       case 'icon_switch_success':
         return 'アプリアイコンを変更しました。';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return '画像で一時停止';
       case 'image_pause_hint':
@@ -277226,8 +277105,6 @@ extension on _StringsJa {
         return 'ブックマークや保存した文がありません';
       case 'no_debug_logs':
         return 'デバッグログがありません。';
-      case 'no_illustrations_found':
-        return 'イラストが見つかりません';
       case 'no_results_found':
         return '結果が見つかりません。';
       case 'no_search_results':
@@ -286507,9 +286384,6 @@ extension on _StringsKo {
         return '이 기기에서는 바로가기가 지원되지 않습니다.';
       case 'icon_switch_success':
         return '앱 아이콘이 변경되었습니다.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return '이미지에서 일시정지';
       case 'image_pause_hint':
@@ -287662,8 +287536,6 @@ extension on _StringsKo {
         return '북마크나 저장된 문장이 없습니다';
       case 'no_debug_logs':
         return '디버그 로그가 없습니다.';
-      case 'no_illustrations_found':
-        return '삽화를 찾을 수 없습니다';
       case 'no_results_found':
         return '결과를 찾을 수 없습니다.';
       case 'no_search_results':
@@ -296968,9 +296840,6 @@ extension on _StringsNl {
         return 'Snelkoppelingen worden niet ondersteund op dit apparaat.';
       case 'icon_switch_success':
         return 'App-icoon succesvol gewijzigd.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Pauzeren bij afbeelding';
       case 'image_pause_hint':
@@ -298133,8 +298002,6 @@ extension on _StringsNl {
         return 'Geen bladwijzers of opgeslagen zinnen';
       case 'no_debug_logs':
         return 'Geen debug-logboeken.';
-      case 'no_illustrations_found':
-        return 'Geen illustraties gevonden';
       case 'no_results_found':
         return 'Geen resultaten gevonden.';
       case 'no_search_results':
@@ -307469,9 +307336,6 @@ extension on _StringsPtBr {
         return 'Atalhos não são suportados neste dispositivo.';
       case 'icon_switch_success':
         return 'Ícone do app alterado com sucesso.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Pausar na Imagem';
       case 'image_pause_hint':
@@ -308633,8 +308497,6 @@ extension on _StringsPtBr {
         return 'Nenhum marcador ou frase salva';
       case 'no_debug_logs':
         return 'Sem logs de depuração.';
-      case 'no_illustrations_found':
-        return 'Nenhuma ilustração encontrada';
       case 'no_results_found':
         return 'Nenhum resultado encontrado.';
       case 'no_search_results':
@@ -317972,9 +317834,6 @@ extension on _StringsRu {
         return 'Ярлыки не поддерживаются на этом устройстве.';
       case 'icon_switch_success':
         return 'Иконка приложения успешно изменена.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Пауза на изображении';
       case 'image_pause_hint':
@@ -319136,8 +318995,6 @@ extension on _StringsRu {
         return 'Нет закладок или сохранённых предложений';
       case 'no_debug_logs':
         return 'Нет записей отладки.';
-      case 'no_illustrations_found':
-        return 'Иллюстрации не найдены';
       case 'no_results_found':
         return 'Результатов не найдено.';
       case 'no_search_results':
@@ -328460,9 +328317,6 @@ extension on _StringsTh {
         return 'อุปกรณ์นี้ไม่รองรับทางลัด';
       case 'icon_switch_success':
         return 'เปลี่ยนไอคอนแอปสำเร็จ';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'หยุดเมื่อพบรูปภาพ';
       case 'image_pause_hint':
@@ -329619,8 +329473,6 @@ extension on _StringsTh {
         return 'ไม่มีบุ๊กมาร์กหรือประโยคที่บันทึกไว้';
       case 'no_debug_logs':
         return 'ไม่มีบันทึกดีบัก';
-      case 'no_illustrations_found':
-        return 'ไม่พบภาพประกอบ';
       case 'no_results_found':
         return 'ไม่พบผลลัพธ์';
       case 'no_search_results':
@@ -338943,9 +338795,6 @@ extension on _StringsTr {
         return 'Bu cihazda kısayollar desteklenmiyor.';
       case 'icon_switch_success':
         return 'Uygulama simgesi başarıyla değiştirildi.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Resimde duraklat';
       case 'image_pause_hint':
@@ -340104,8 +339953,6 @@ extension on _StringsTr {
         return 'Yer imi veya kaydedilmiş cümle yok';
       case 'no_debug_logs':
         return 'Hata ayıklama günlüğü yok.';
-      case 'no_illustrations_found':
-        return 'Resim bulunamadı';
       case 'no_results_found':
         return 'Sonuç bulunamadı.';
       case 'no_search_results':
@@ -349430,9 +349277,6 @@ extension on _StringsVi {
         return 'Thiết bị không hỗ trợ lối tắt.';
       case 'icon_switch_success':
         return 'Đã đổi biểu tượng ứng dụng.';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return 'Tạm dừng khi có hình ảnh';
       case 'image_pause_hint':
@@ -350589,8 +350433,6 @@ extension on _StringsVi {
         return 'Chưa có đánh dấu hoặc câu đã lưu';
       case 'no_debug_logs':
         return 'Không có nhật ký gỡ lỗi.';
-      case 'no_illustrations_found':
-        return 'Không tìm thấy minh họa';
       case 'no_results_found':
         return 'Không tìm thấy kết quả.';
       case 'no_search_results':
@@ -359880,9 +359722,6 @@ extension on _StringsZhCn {
         return '此设备不支持快捷方式。';
       case 'icon_switch_success':
         return '应用图标已更改。';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return '图片暂停';
       case 'image_pause_hint':
@@ -361032,8 +360871,6 @@ extension on _StringsZhCn {
         return '没有书签或保存的句子';
       case 'no_debug_logs':
         return '无调试日志。';
-      case 'no_illustrations_found':
-        return '未找到插画';
       case 'no_results_found':
         return '未找到结果。';
       case 'no_search_results':
@@ -370273,9 +370110,6 @@ extension on _StringsZhHk {
         return '此裝置不支援捷徑。';
       case 'icon_switch_success':
         return '應用程式圖示已變更。';
-      case 'image_page_counter':
-        return ({required Object current, required Object total}) =>
-            '${current} / ${total}';
       case 'image_pause':
         return '圖片暫停';
       case 'image_pause_hint':
@@ -371426,8 +371260,6 @@ extension on _StringsZhHk {
         return '沒有書籤或保存的句子';
       case 'no_debug_logs':
         return '無偵錯日誌。';
-      case 'no_illustrations_found':
-        return '未找到插圖';
       case 'no_results_found':
         return '未找到結果。';
       case 'no_search_results':
