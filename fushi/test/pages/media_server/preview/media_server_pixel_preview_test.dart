@@ -73,6 +73,40 @@ Future<Uint8List> _renderCover(String label, {required bool wide}) async {
   final ui.Paragraph paragraph = builder.build()
     ..layout(ui.ParagraphConstraints(width: w.toDouble()));
   canvas.drawParagraph(paragraph, Offset(0, h / 2 - paragraph.height / 2));
+  return _encodePng(recorder, w, h);
+}
+
+/// 生成一张标题 logo：透明底、粗体白字带阴影（Jellyfin `Logo` 图就是这形态）。
+Future<Uint8List> _renderLogo(String label) async {
+  const int w = 800;
+  const int h = 220;
+  final ui.PictureRecorder recorder = ui.PictureRecorder();
+  final Canvas canvas = Canvas(recorder);
+  final ui.ParagraphBuilder builder =
+      ui.ParagraphBuilder(
+          ui.ParagraphStyle(
+            fontSize: 120,
+            fontFamily: _fontFamily,
+            fontWeight: FontWeight.w900,
+            textAlign: TextAlign.left,
+          ),
+        )
+        ..pushStyle(
+          ui.TextStyle(
+            color: Colors.white,
+            shadows: const <Shadow>[
+              Shadow(color: Color(0xCC000000), blurRadius: 18),
+            ],
+          ),
+        )
+        ..addText(label);
+  final ui.Paragraph paragraph = builder.build()
+    ..layout(ui.ParagraphConstraints(width: w.toDouble()));
+  canvas.drawParagraph(paragraph, Offset(0, h / 2 - paragraph.height / 2));
+  return _encodePng(recorder, w, h);
+}
+
+Future<Uint8List> _encodePng(ui.PictureRecorder recorder, int w, int h) async {
   final ui.Image image = await recorder.endRecording().toImage(w, h);
   final ByteData? bytes = await image.toByteData(
     format: ui.ImageByteFormat.png,
@@ -95,7 +129,7 @@ class _PreviewBrowser extends FakeMediaServerBrowser {
     if (!item.hasCover) return null;
     if (kind == MediaServerImageKind.thumb && !item.hasThumb) return null;
     if (kind == MediaServerImageKind.backdrop && !item.hasBackdrop) return null;
-    if (kind == MediaServerImageKind.logo) return null;
+    if (kind == MediaServerImageKind.logo && !item.hasLogo) return null;
     return 'cover|${item.name}|${kind.name}';
   }
 
@@ -108,6 +142,9 @@ class _PreviewBrowser extends FakeMediaServerBrowser {
   @override
   Future<Uint8List> fetchRemoteCover(String coverUrl) async {
     final List<String> parts = coverUrl.split('|');
+    if (parts[2] == MediaServerImageKind.logo.name) {
+      return _covers[coverUrl] ??= await _renderLogo(parts[1]);
+    }
     final bool wide = parts[2] != 'primary';
     return _covers[coverUrl] ??= await _renderCover(parts[1], wide: wide);
   }
@@ -148,6 +185,7 @@ MediaServerItem _series(
   double? rating,
   String? overview,
   List<String> genres = const <String>[],
+  bool hasLogo = false,
 }) => MediaServerItem(
   id: id,
   name: name,
@@ -158,6 +196,7 @@ MediaServerItem _series(
   episodeCount: episodeCount,
   hasCover: true,
   hasBackdrop: true,
+  hasLogo: hasLogo,
   communityRating: rating,
   overview: overview,
   genres: genres,
@@ -183,6 +222,8 @@ List<MediaServerItem> _episodes({
       seasonNumber: season,
       episodeNumber: i,
       durationMs: 24 * 60 * 1000,
+      // 奇数集带集简介、偶数集不带：集卡「有简介两行 / 无简介」两态都进预览。
+      overview: i.isOdd ? '執事はこの日、主人の命を受けて屋敷の外へ。第 $i 話の出来事。' : null,
       hasCover: true,
       hasThumb: true,
       played: i <= playedUpTo,
@@ -327,7 +368,8 @@ _PreviewBrowser _emby() {
   b.children['lib-variety'] = <MediaServerItem>[
     for (int i = 0; i < 6; i++) _movie('va-$i', '综艺 ${i + 1}', year: 2024),
   ];
-  // 黑执事：3 季，第 1 季 12 集，看到第 4 集，第 5 集看了一半。
+  // 黑执事：3 季，第 1 季 12 集，看到第 4 集，第 5 集看了一半；有标题 logo
+  // （hero 走 logo 路径），电影详情无 logo（走文字大标题路径），两条都能看到。
   b.details['sr-0'] = _series(
     'sr-0',
     '黑执事',
@@ -335,6 +377,7 @@ _PreviewBrowser _emby() {
     childCount: 3,
     episodeCount: 36,
     rating: 7.4,
+    hasLogo: true,
     overview:
         '时值19世纪，在英国名门贵族凡多姆海伍家，有一位神秘、优雅、十全十美的执事，他就是"黑执事"塞巴斯蒂安。'
         '虽然塞巴斯蒂安总是淡淡地说："我只是一名执事罢了"，但举止、知识、品味、料理、武术等等没有任何事能难得倒他！'
@@ -511,6 +554,13 @@ void main() {
   setUpAll(() async {
     LocaleSettings.setLocale(AppLocale.zhCn);
     coverDir = Directory.systemTemp.createTempSync('fushi-preview-covers');
+  });
+
+  // 每条测试重新注入：[RemoteCoverCache] 把目录 Future 记忆在首次调用的测试
+  // FakeAsync zone 里，后面的测试 `await` 它时微任务排进已结束的 zone、永远不回
+  // ——第二条起所有未进内存缓存的封面都卡在读盘前，画面只剩上一条测试加载过的
+  // 那几张。debugSetDirResolver 顺带清掉记忆，目录本身仍共用（读盘缓存照常命中）。
+  setUp(() {
     RemoteCoverCache.debugSetDirResolver(() async => coverDir);
   });
 
@@ -609,6 +659,14 @@ void main() {
       );
       await _settleWithImages(tester);
       await _capture(tester, key, '04_series_detail_$tag');
+      // hero 就占满首屏的六成，集卡网格在折叠线以下：再滚一屏单独抓一张，
+      // 集卡的缩略图 / 序号 / 时长 / 已看勾 / 续播高亮才看得见。
+      await tester.drag(
+        find.byType(CustomScrollView),
+        Offset(0, -(size.height * 0.85)),
+      );
+      await _settleWithImages(tester);
+      await _capture(tester, key, '04_series_detail_${tag}_episodes');
     }, skip: skip);
 
     testWidgets('05 电影详情 · $tag', (WidgetTester tester) async {

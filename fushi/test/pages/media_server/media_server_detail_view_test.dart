@@ -7,8 +7,8 @@ import 'package:fushi/utils.dart';
 
 import 'fake_media_server_browser.dart';
 
-/// 剧详情：季标签切换重拉集；点集时播放请求的 members 是当前季**已加载的全部集**、
-/// index 是点中的下标；单季不显示季标签；电影简版详情「播放」直接播。
+/// 剧详情：季 tab 切换重拉集；点集时播放请求的 members 是当前季**已加载的全部集**、
+/// index 是点中的下标；单季不显示季 tab；电影详情「播放」直接播。
 void main() {
   late FakeMediaServerBrowser browser;
   late List<MediaServerPlayRequest> played;
@@ -63,7 +63,21 @@ void main() {
   Iterable<FakePageRequest> episodeRequests() =>
       browser.requests.where((FakePageRequest r) => r.kind == 'episodes');
 
-  testWidgets('双季：季标签切换重拉该季集清单', (WidgetTester tester) async {
+  /// 共享布局的 hero 就占 460+ 高，默认 800×600 视口里季 tab / 集卡全在屏外
+  /// （sliver 只在 cache extent 里构建、对 finder 算 offstage），统一用高视口。
+  void useTallView(WidgetTester tester) {
+    tester.view.physicalSize = const Size(1000, 1600);
+    tester.view.devicePixelRatio = 1.0;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+  }
+
+  final Finder seasonTabs = find.byKey(
+    const ValueKey<String>('collection-season-tabs'),
+  );
+
+  testWidgets('双季：季 tab 切换重拉该季集清单', (WidgetTester tester) async {
+    useTallView(tester);
     browser.seasons['s1'] = <MediaServerItem>[seasonOne, seasonTwo];
     browser.episodes['s1|sea1'] = fakeEpisodes(
       seriesId: 's1',
@@ -80,6 +94,7 @@ void main() {
 
     await tester.pumpWidget(harness(series));
     await tester.pumpAndSettle();
+    expect(seasonTabs, findsOneWidget);
     // 「全 N 话」必须是集数，不是季数。
     expect(
       find.textContaining(t.collection_hero_total_episodes(count: 26)),
@@ -131,11 +146,7 @@ void main() {
       count: 3,
     );
 
-    // 详情头 + 季标签之下的第三集在 600 高视口里会落到屏外，tap 不到。
-    tester.view.physicalSize = const Size(1000, 1600);
-    tester.view.devicePixelRatio = 1.0;
-    addTearDown(tester.view.resetPhysicalSize);
-    addTearDown(tester.view.resetDevicePixelRatio);
+    useTallView(tester);
     await tester.pumpWidget(harness(series, initialSeasonId: 'sea2'));
     await tester.pumpAndSettle();
     expect(
@@ -161,7 +172,8 @@ void main() {
     expect(request.hasCollection, isTrue);
   });
 
-  testWidgets('单季不显示季标签；详情失败回退清单条目', (WidgetTester tester) async {
+  testWidgets('单季不显示季 tab；详情失败回退清单条目', (WidgetTester tester) async {
+    useTallView(tester);
     browser.seasons['s1'] = <MediaServerItem>[seasonOne];
     browser.episodes['s1|sea1'] = fakeEpisodes(
       seriesId: 's1',
@@ -173,7 +185,7 @@ void main() {
     await tester.pumpWidget(harness(series));
     await tester.pumpAndSettle();
 
-    expect(find.byType(ChoiceChip), findsNothing);
+    expect(seasonTabs, findsNothing);
     expect(browser.itemDetailCalls, 1);
     expect(
       find.text('Series s1'),
@@ -182,7 +194,8 @@ void main() {
     );
   });
 
-  testWidgets('电影简版详情：简介 + 播放，播放直接出请求且不带同伴', (WidgetTester tester) async {
+  testWidgets('电影详情：简介 + 播放，播放直接出请求且不带同伴', (WidgetTester tester) async {
+    useTallView(tester);
     const MediaServerItem movie = MediaServerItem(
       id: 'm1',
       name: 'Movie m1',
@@ -202,7 +215,8 @@ void main() {
     await tester.pumpAndSettle();
 
     expect(find.text('一段简介'), findsOneWidget);
-    expect(find.byType(ChoiceChip), findsNothing);
+    expect(seasonTabs, findsNothing);
+    expect(find.text(t.video_episode_list), findsNothing, reason: '电影无选集区');
     expect(episodeRequests(), isEmpty, reason: '电影不拉集');
 
     await tester.tap(

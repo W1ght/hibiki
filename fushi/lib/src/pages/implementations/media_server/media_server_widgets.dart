@@ -30,6 +30,40 @@ ImageProvider? mediaServerCoverImage(
   );
 }
 
+/// 详情页 hero 用的大图（横版背景 / 标题 logo）：请求宽度与解码宽度都比网格卡大
+/// ——背景要铺满 1600+ 逻辑像素宽的 hero，720 像素放大后一片糊；logo 在 hero 里
+/// 最大 460×110 逻辑像素 × dpr。缓存键带上请求宽度，与网格卡的 720 版本互不串。
+/// 其它 [kind] 退回 [mediaServerCoverImage] 的常规尺寸。无图返回 null。
+ImageProvider? mediaServerHeroImage(
+  MediaServerBrowser browser,
+  MediaServerItem item, {
+  required MediaServerImageKind kind,
+}) {
+  final (int requestWidth, int decodeWidth) = switch (kind) {
+    MediaServerImageKind.backdrop => (1920, 2560),
+    MediaServerImageKind.logo => (800, 800),
+    MediaServerImageKind.primary || MediaServerImageKind.thumb => (
+      kMediaServerCoverMaxWidth,
+      kLocalCoverDecodePixelWidth,
+    ),
+  };
+  final String? url = browser.coverUrl(
+    item,
+    kind: kind,
+    maxWidth: requestWidth,
+  );
+  if (url == null || url.isEmpty) return null;
+  return ResizeImage(
+    RemoteCoverImage(
+      url,
+      browser,
+      cacheKey: '${item.id}:${kind.name}:$requestWidth',
+    ),
+    width: decodeWidth,
+    allowUpscaling: false,
+  );
+}
+
 ImageProvider? mediaServerLibraryCoverImage(
   MediaServerBrowser browser,
   MediaServerLibrary library,

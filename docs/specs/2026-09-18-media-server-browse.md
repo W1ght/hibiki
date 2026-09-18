@@ -71,6 +71,39 @@ Movie/Episode 叶子清单一次性拉进 60 秒内存缓存，再混排进本�
 - 该账号 `UserData.UnplayedItemCount` 恒空（无观看记录），未看数角标不显示，非缺陷。
 - 本机到该服务器偶发 TCP 连接超时（20–45 秒后重试成功）；app 侧表现为主干错误 + 重试。
 
+## 详情页与本地「系列」详情页同一套布局（2026-09-18 用户要求）
+
+用户拍板「详情页要和系列里的一样，复用系列的布局样式」——不是照着画一份，是同一份
+widget。把 `media_collection_detail_page.dart` 里的纯视觉部分抽成
+`fushi/lib/src/media/collections/collection_detail_layout.dart`：
+
+| 共享 widget | 内容 |
+|---|---|
+| `CollectionDetailHero` | 横版背景（`AnimatedSwitcher` 轮换）+ 2:3 海报卡 + logo / 文字标题 + 徽标 + 题材 + 人物 + 简介 + 续播行 + 播放按钮 |
+| `CollectionWorkDetailsSection` | 全宽「作品资料」卡：简介 + 事实行 + 「资料待补」态 |
+| `CollectionSectionTitle` / `CollectionSeasonTabBar` | 「选集」标题 + 季 tab（`TabController` 由页面持有） |
+| `CollectionEpisodeCard` + `collectionEpisodeThumb` | hayase 式宽集卡：16:9 缩略图（`PortraitCoverImage(landscapeSlot: true)`）+ 序号标题 + 简介 + 已看 / 看到 mm:ss / 续播高亮 |
+
+两个消费方：本地系列页只算数据（`_heroBadgeParts` / `_episodeCover` / 续播下标 /
+`FushiReorderableGrid` 拖拽排序全留在页面），改后 8 张像素预览与改前逐像素 0 差异
+（`fushi/test/pages/collection_preview/collection_detail_pixel_preview_test.dart`，
+`FUSHI_PREVIEW=1`）；媒体服务器详情（`media_server_detail_view.dart`）hero 大图走
+`mediaServerHeroImage`（backdrop 请求 1920 / 解码 2560，logo 800，缓存键带尺寸与网格卡
+720 版互不串），续播口径「有断点的未看集 → 首个未看集」（服务器条目没有本地的
+`lastPlayedAt`，用不了 `continueMemberIndex`），hero 续播行 / 集卡高亮 / 播放按钮三处同源。
+
+顺手修的一处共有缺陷：`AnimatedSwitcher` 缺省 `layoutBuilder` 是宽松 `Stack`，backdrop
+`Image(fit: cover)` 拿到宽松约束只按原图尺寸居中画，小于 hero 的图（服务器缩略图、高 dpr
+大屏、本地 960 宽 backdrop 贴 1600 宽 hero）不会铺满；现在 `SizedBox.expand` 给紧约束。
+
+源码守卫随视觉迁移改锚点：`collection_hero_cover_orientation_test`、
+`continue_cover_portrait_guard_test`、`unified_collections_architecture_guard_test`
+改为「页面必须调共享 widget」+「共享 widget 必须走 PortraitCoverImage / 占位」两段各锁一半；
+`md3_design_system_static_test` 的豁免项随视觉代码从页面搬到共享文件；
+`video_library_series_structure_guard_test` 的两处锚点（`forcedOrientation:` 字段、
+`_buildAllVideoListRow(book)`）在本分支「系列墙 SliverGrid.builder / 列表档 itemBuilder」
+提交时就已过期，本轮一并改为锁「墙 sliver 以 portrait 建格」与「列表档两条路径都在」。
+
 ## 未验证
 
 - 飞牛影视（fnOS）Jellyfin 兼容层未测：`/Shows/*` 有回退到通用 `/Items` 树，装饰行失败即空。

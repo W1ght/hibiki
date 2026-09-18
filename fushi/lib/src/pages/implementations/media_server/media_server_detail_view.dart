@@ -1,19 +1,23 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart' show SliverConstraints;
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
-import 'package:fushi/src/media/video/cover_ui/portrait_cover_image.dart';
+import 'package:fushi/src/focus/fushi_focus_target.dart';
+import 'package:fushi/src/media/collections/collection_detail_layout.dart';
 import 'package:fushi/src/media/video/media_server/media_server_browser.dart';
 import 'package:fushi/src/pages/implementations/media_server/media_server_session.dart';
 import 'package:fushi/src/pages/implementations/media_server/media_server_widgets.dart';
 import 'package:fushi/utils.dart';
 
-/// 剧 / 电影详情：封面 + 标题 + 类型 / 年份 / 时长 / 评分 + 播放 + 简介；剧再加
-/// 季标签（单季不显示）与当前季的集列表（分页，一页 100）。
+/// 剧 / 电影详情：与本地「系列」详情页**同一套布局**（`collection_detail_layout.dart`）
+/// ——hero（横版背景 + 2:3 海报卡 + logo / 标题 + 徽标 + 题材 + 续播 + 播放）、
+/// 全宽作品资料区、「选集」标题 + 季 tab + hayase 式宽集卡网格。
 ///
 /// 数据分三档：[MediaServerBrowser.itemDetail] 失败就拿清单里那条 best-effort
 /// 回退（与 `RemoteVideoDetailFetch` 同款口径）；[MediaServerBrowser.listSeasons]
-/// 失败当单季（整部剧一列）；集清单失败显示错误 + 重试。
+/// 失败当单季（整部剧一列）；集清单失败显示错误 + 重试。集清单分页（一页 100），
+/// 触底追加。
 class MediaServerDetailView extends StatefulWidget {
   const MediaServerDetailView({
     required this.session,
@@ -34,12 +38,16 @@ class MediaServerDetailView extends StatefulWidget {
   State<MediaServerDetailView> createState() => _MediaServerDetailViewState();
 }
 
-class _MediaServerDetailViewState extends State<MediaServerDetailView> {
+class _MediaServerDetailViewState extends State<MediaServerDetailView>
+    with SingleTickerProviderStateMixin {
   final ScrollController _scrollController = ScrollController();
 
   late MediaServerItem _detail = widget.item;
   List<MediaServerItem> _seasons = const <MediaServerItem>[];
   String? _seasonId;
+
+  /// 多季时的 tab 控制器（单季 null）；季列表变化时重建。
+  TabController? _seasonTabs;
 
   List<MediaServerItem> _episodes = const <MediaServerItem>[];
   int _nextStartIndex = 0;
@@ -68,6 +76,8 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView> {
     _scrollController
       ..removeListener(_onScroll)
       ..dispose();
+    _seasonTabs?.removeListener(_onSeasonTabChanged);
+    _seasonTabs?.dispose();
     super.dispose();
   }
 
@@ -107,8 +117,41 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView> {
     setState(() {
       _seasons = seasons;
       _seasonId = initial;
+      _syncSeasonTabs();
     });
     unawaited(_reloadEpisodes());
+  }
+
+  /// 季列表 / 选中季变化后让 tab 控制器跟上：季数变了重建（长度是构造期定死的），
+  /// 没变只对齐下标。单季不建——tab 条本身也不渲染。
+  void _syncSeasonTabs() {
+    final int count = _seasons.length;
+    final int selected = _seasons.indexWhere(
+      (MediaServerItem s) => s.id == _seasonId,
+    );
+    final int index = selected < 0 ? 0 : selected;
+    if (count < 2) {
+      _seasonTabs?.removeListener(_onSeasonTabChanged);
+      _seasonTabs?.dispose();
+      _seasonTabs = null;
+      return;
+    }
+    if (_seasonTabs?.length == count) {
+      if (_seasonTabs!.index != index) _seasonTabs!.index = index;
+      return;
+    }
+    _seasonTabs?.removeListener(_onSeasonTabChanged);
+    _seasonTabs?.dispose();
+    _seasonTabs = TabController(length: count, initialIndex: index, vsync: this)
+      ..addListener(_onSeasonTabChanged);
+  }
+
+  void _onSeasonTabChanged() {
+    final TabController? tabs = _seasonTabs;
+    // indexIsChanging 期间是动画中间态；只认落定值，避免滑动过程中反复重拉集。
+    if (tabs == null || tabs.indexIsChanging) return;
+    if (tabs.index < 0 || tabs.index >= _seasons.length) return;
+    _selectSeason(_seasons[tabs.index].id);
   }
 
   Future<void> _reloadEpisodes() async {
@@ -175,7 +218,10 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView> {
 
   void _selectSeason(String seasonId) {
     if (seasonId == _seasonId) return;
-    setState(() => _seasonId = seasonId);
+    setState(() {
+      _seasonId = seasonId;
+      _syncSeasonTabs();
+    });
     unawaited(_reloadEpisodes());
   }
 
@@ -183,190 +229,152 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView> {
     widget.session.playItem(context, episode, siblings: _episodes);
   }
 
-  /// 「播放」：电影直接播；剧播当前季第一个没看完的集（都看完就第一集）。
+  /// 续播那一集在当前季**已加载集**里的下标：优先有断点的未看完集，其次第一个
+  /// 未看的；都看完 -1。hero 续播行、集卡高亮、「播放」按钮三处同一口径——
+  /// 文案说「继续看第 5 集」而按钮播第 1 集就是自相矛盾。
+  int get _continueIndex {
+    if (_episodes.isEmpty) return -1;
+    final int inProgress = _episodes.indexWhere(
+      (MediaServerItem e) => !e.played && e.positionMs > 0,
+    );
+    if (inProgress >= 0) return inProgress;
+    return _episodes.indexWhere((MediaServerItem e) => !e.played);
+  }
+
+  /// 「播放」：电影直接播；剧播续播那集（都看完就第一集）。
   void _playPrimary() {
     if (!_isSeries) {
       widget.session.playItem(context, _detail);
       return;
     }
     if (_episodes.isEmpty) return;
-    final MediaServerItem target = _episodes.firstWhere(
-      (MediaServerItem e) => !e.played,
-      orElse: () => _episodes.first,
-    );
-    _playEpisode(target);
+    final int index = _continueIndex;
+    _playEpisode(index >= 0 ? _episodes[index] : _episodes.first);
+  }
+
+  /// 徽标行（与本地 `_heroBadgeParts` 同口径）：年份 / 全 N 话（剧）/ ★ 评分 /
+  /// 时长（电影）。逐项存在才出。
+  List<String> _heroBadgeParts() {
+    final List<String> parts = <String>[];
+    final int? year = _detail.productionYear;
+    if (year != null) parts.add('$year');
+    final int? episodeCount = _detail.episodeCount;
+    if (_isSeries && episodeCount != null && episodeCount > 0) {
+      parts.add(t.collection_hero_total_episodes(count: episodeCount));
+    }
+    final double? rating = _detail.communityRating;
+    if (rating != null && rating > 0) {
+      parts.add('★ ${rating.toStringAsFixed(1)}');
+    }
+    if (!_isSeries) {
+      final String duration = formatMediaServerDuration(_detail.durationMs);
+      if (duration.isNotEmpty) parts.add(duration);
+    }
+    return parts;
+  }
+
+  /// hero 续播行文案（剧且当前季有未看集才出）。
+  String? _continueLabel() {
+    if (!_isSeries) return null;
+    final int index = _continueIndex;
+    if (index < 0) return null;
+    final MediaServerItem episode = _episodes[index];
+    return '${t.collection_continue_progress(n: index + 1)}  ·  ${episode.name}';
   }
 
   @override
   Widget build(BuildContext context) {
     final FushiDesignTokens tokens = FushiDesignTokens.of(context);
+    final bool canPlay = !_isSeries || _episodes.isNotEmpty;
+    final List<String> genres = _detail.genres;
     // 本视图是嵌套 Navigator 里的一条路由：没有 Scaffold 就没有 Material 祖先。
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          FushiPageHeader(
-            title: _detail.name,
-            compact: true,
-            leading: BackButton(
-              onPressed: () => Navigator.of(context).maybePop(),
+      appBar: AppBar(
+        title: Text(
+          t.video_work_details,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        ),
+        leading: BackButton(onPressed: () => Navigator.of(context).maybePop()),
+        surfaceTintColor: Colors.transparent,
+        elevation: 0,
+      ),
+      body: CustomScrollView(
+        key: PageStorageKey<String>(
+          '${widget.session.serverId}-detail-${widget.item.id}',
+        ),
+        controller: _scrollController,
+        slivers: <Widget>[
+          SliverToBoxAdapter(
+            child: CollectionDetailHero(
+              backdrop: mediaServerHeroImage(
+                _browser,
+                _detail,
+                kind: MediaServerImageKind.backdrop,
+              ),
+              cover: mediaServerCoverImage(_browser, _detail),
+              logo: mediaServerHeroImage(
+                _browser,
+                _detail,
+                kind: MediaServerImageKind.logo,
+              ),
+              title: _detail.name,
+              badgeParts: _heroBadgeParts(),
+              tagNames: genres.take(6).toList(),
+              // 简介放下面的全宽资料区（与本地规范作品路径一致），hero 内不重复。
+              continueLabel: _continueLabel(),
+              playButtonKey: const ValueKey<String>('media-server-detail-play'),
+              onPlay: canPlay ? _playPrimary : null,
             ),
           ),
-          Expanded(
-            child: CustomScrollView(
-              key: PageStorageKey<String>(
-                '${widget.session.serverId}-detail-${widget.item.id}',
-              ),
-              controller: _scrollController,
-              slivers: <Widget>[
-                SliverToBoxAdapter(child: _buildHeader(tokens)),
-                if (_isSeries) ...<Widget>[
-                  if (_seasons.length > 1)
-                    SliverToBoxAdapter(child: _buildSeasonChips(tokens)),
-                  SliverToBoxAdapter(
-                    child: Padding(
-                      padding: EdgeInsets.fromLTRB(
-                        tokens.spacing.page,
-                        tokens.spacing.card,
-                        tokens.spacing.page,
-                        tokens.spacing.gap,
-                      ),
-                      child: Text(
-                        t.video_episode_list,
-                        style: Theme.of(context).textTheme.titleLarge,
-                      ),
-                    ),
-                  ),
-                  ..._buildEpisodeSlivers(tokens),
-                ],
-                SliverToBoxAdapter(
-                  child: SizedBox(height: tokens.spacing.section),
-                ),
+          SliverToBoxAdapter(
+            child: CollectionWorkDetailsSection(
+              overview: _detail.overview,
+              facts: <(String, String)>[
+                if (genres.isNotEmpty)
+                  (t.video_work_genres, genres.join(' · ')),
               ],
             ),
           ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildHeader(FushiDesignTokens tokens) {
-    final ImageProvider? image = mediaServerCoverImage(_browser, _detail);
-    final TextTheme textTheme = Theme.of(context).textTheme;
-    final List<String> meta = <String>[
-      if (_detail.productionYear != null) '${_detail.productionYear}',
-      _isSeries ? t.series : t.collection_relation_movie,
-      if (!_isSeries &&
-          formatMediaServerDuration(_detail.durationMs).isNotEmpty)
-        formatMediaServerDuration(_detail.durationMs),
-      if (_isSeries && _detail.episodeCount != null)
-        t.collection_hero_total_episodes(count: _detail.episodeCount!),
-      if (_detail.communityRating != null)
-        '★ ${_detail.communityRating!.toStringAsFixed(1)}',
-    ];
-    final String? overview = _detail.overview?.trim();
-    final bool canPlay = !_isSeries || _episodes.isNotEmpty;
-    return Padding(
-      padding: EdgeInsets.fromLTRB(
-        tokens.spacing.page,
-        tokens.spacing.gap,
-        tokens.spacing.page,
-        0,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(
-                width: 140,
-                child: ClipRRect(
-                  borderRadius: FushiBorderRadius.card,
-                  child: AspectRatio(
-                    aspectRatio: 2 / 3,
-                    child: image == null
-                        ? ShelfCoverPlaceholder(
-                            icon: _isSeries
-                                ? Icons.tv_outlined
-                                : Icons.movie_outlined,
-                          )
-                        : PortraitCoverImage(
-                            image: image,
-                            errorBuilder: (_) => const ShelfCoverPlaceholder(
-                              icon: Icons.broken_image_outlined,
-                            ),
-                          ),
-                  ),
-                ),
-              ),
-              SizedBox(width: tokens.spacing.card),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      _detail.name,
-                      style: textTheme.headlineSmall,
-                      maxLines: 3,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                    SizedBox(height: tokens.spacing.gap / 2),
-                    Text(meta.join(' · '), style: tokens.type.metadata),
-                    if (_detail.genres.isNotEmpty) ...<Widget>[
-                      SizedBox(height: tokens.spacing.gap),
-                      Wrap(
-                        spacing: 6,
-                        runSpacing: 6,
-                        children: <Widget>[
-                          for (final String genre in _detail.genres)
-                            FushiTagChip(label: genre),
-                        ],
-                      ),
-                    ],
-                    SizedBox(height: tokens.spacing.card),
-                    FilledButton.icon(
-                      key: const ValueKey<String>('media-server-detail-play'),
-                      onPressed: canPlay ? _playPrimary : null,
-                      icon: const Icon(Icons.play_arrow_rounded),
-                      label: Text(t.play),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          if (overview != null && overview.isNotEmpty) ...<Widget>[
-            SizedBox(height: tokens.spacing.card),
-            Text(overview, style: textTheme.bodyMedium),
+          if (_isSeries) ...<Widget>[
+            SliverToBoxAdapter(child: _buildEpisodeSectionHeader(tokens)),
+            ..._buildEpisodeSlivers(tokens),
           ],
+          SliverSafeArea(
+            top: false,
+            sliver: SliverToBoxAdapter(
+              child: SizedBox(height: tokens.spacing.section),
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildSeasonChips(FushiDesignTokens tokens) {
+  /// 「选集」标题 + 多季时的季 tab 条 + 与集网格之间的间距。
+  Widget _buildEpisodeSectionHeader(FushiDesignTokens tokens) {
+    final TabController? tabs = _seasonTabs;
     return Padding(
-      padding: EdgeInsets.fromLTRB(
-        tokens.spacing.page,
-        tokens.spacing.card,
-        tokens.spacing.page,
-        0,
-      ),
-      child: Wrap(
-        spacing: tokens.spacing.gap,
-        runSpacing: tokens.spacing.gap,
+      padding: EdgeInsets.only(top: tokens.spacing.section),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          for (final MediaServerItem season in _seasons)
-            ChoiceChip(
-              key: ValueKey<String>('media-server-season-${season.id}'),
-              label: Text(
-                season.seasonNumber != null
-                    ? t.collection_group_season(n: season.seasonNumber!)
-                    : season.name,
-              ),
-              selected: season.id == _seasonId,
-              onSelected: (_) => _selectSeason(season.id),
+          CollectionSectionTitle(t.video_episode_list),
+          if (tabs != null && _seasons.length > 1)
+            CollectionSeasonTabBar(
+              controller: tabs,
+              labels: <String>[
+                for (final MediaServerItem season in _seasons)
+                  season.seasonNumber != null
+                      ? t.collection_group_season(n: season.seasonNumber!)
+                      : season.name,
+              ],
+              tabKeys: <Key>[
+                for (final MediaServerItem season in _seasons)
+                  ValueKey<String>('media-server-season-${season.id}'),
+              ],
             ),
+          SizedBox(height: tokens.spacing.rowVertical),
         ],
       ),
     );
@@ -410,20 +418,35 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView> {
         ),
       ];
     }
-    final String prefix = widget.session.serverId;
+    final int continueIndex = _continueIndex;
     return <Widget>[
-      SliverList.builder(
-        itemCount: _episodes.length,
-        itemBuilder: (BuildContext context, int index) {
-          final MediaServerItem episode = _episodes[index];
-          return _EpisodeRow(
-            key: ValueKey<String>('media-server-episode-${episode.id}'),
-            browser: _browser,
-            episode: episode,
-            focusId: FushiFocusId('$prefix-episode-${episode.id}'),
-            onTap: () => _playEpisode(episode),
-          );
-        },
+      SliverPadding(
+        padding: EdgeInsets.symmetric(horizontal: tokens.spacing.page),
+        // 列数按网格**实际**可用宽度算（页边距已扣掉），与本地页同一条规则。
+        sliver: SliverLayoutBuilder(
+          builder: (BuildContext context, SliverConstraints constraints) {
+            const double spacing = 12;
+            return SliverGrid(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: collectionEpisodeColumns(
+                  constraints.crossAxisExtent,
+                ),
+                mainAxisExtent: kCollectionEpisodeCardHeight,
+                crossAxisSpacing: spacing,
+                mainAxisSpacing: spacing,
+              ),
+              delegate: SliverChildBuilderDelegate(
+                (BuildContext context, int index) => _buildEpisodeTile(
+                  context,
+                  _episodes[index],
+                  index,
+                  isContinue: index == continueIndex,
+                ),
+                childCount: _episodes.length,
+              ),
+            );
+          },
+        ),
       ),
       if (_episodesLoadingMore)
         SliverToBoxAdapter(
@@ -434,90 +457,68 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView> {
         ),
     ];
   }
-}
 
-/// 一集：横版缩略图（有 thumb 用 thumb，否则主图）+ `S01E02 · 集名` + 时长 +
-/// 已看勾 / 断点进度条。
-class _EpisodeRow extends StatelessWidget {
-  const _EpisodeRow({
-    required this.browser,
-    required this.episode,
-    required this.onTap,
-    this.focusId,
-    super.key,
-  });
-
-  final MediaServerBrowser browser;
-  final MediaServerItem episode;
-  final VoidCallback onTap;
-  final FushiFocusId? focusId;
-
-  @override
-  Widget build(BuildContext context) {
+  /// 一格集卡：[CollectionEpisodeCard] 是纯视觉（整卡 IgnorePointer），点击 /
+  /// Enter / 手柄 A 都在这一层接：外层手势 + [Actions] + [FushiFocusTarget]。
+  /// 测试与 itest 按 `media-server-episode-<id>` 定位，key 放最外层。
+  Widget _buildEpisodeTile(
+    BuildContext context,
+    MediaServerItem episode,
+    int index, {
+    required bool isContinue,
+  }) {
+    final ColorScheme cs = Theme.of(context).colorScheme;
     final ImageProvider? image = mediaServerCoverImage(
-      browser,
+      _browser,
       episode,
       kind: episode.hasThumb
           ? MediaServerImageKind.thumb
           : MediaServerImageKind.primary,
     );
-    final double? progress = mediaServerProgress(episode);
-    final String code = episode.episodeCode;
     final String duration = formatMediaServerDuration(episode.durationMs);
-    return FushiListItem(
-      focusId: focusId,
-      onTap: onTap,
-      titleMaxLines: 2,
-      leading: SizedBox(
-        width: 96,
-        child: ClipRRect(
-          borderRadius: FushiBorderRadius.chip,
-          child: AspectRatio(
-            aspectRatio: 16 / 9,
-            child: Stack(
-              fit: StackFit.expand,
-              children: <Widget>[
-                if (image == null)
-                  const ShelfCoverPlaceholder(
-                    icon: Icons.tv_outlined,
-                    iconSize: 20,
-                  )
-                else
-                  PortraitCoverImage(
-                    image: image,
-                    landscapeSlot: true,
-                    errorBuilder: (_) => const ShelfCoverPlaceholder(
-                      icon: Icons.broken_image_outlined,
-                      iconSize: 20,
-                    ),
-                  ),
-                if (progress != null)
-                  Positioned(
-                    left: 0,
-                    right: 0,
-                    bottom: 0,
-                    child: IgnorePointer(
-                      child: LinearProgressIndicator(
-                        value: progress,
-                        minHeight: 3,
-                        backgroundColor: Colors.black.withValues(alpha: 0.35),
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
-                    ),
-                  ),
-              ],
+    final Widget card = CollectionEpisodeCard(
+      thumb: collectionEpisodeThumb(context, image),
+      number: '${episode.episodeNumber ?? index + 1}',
+      title: episode.name,
+      summary: episode.overview,
+      completed: episode.played,
+      positionMs: episode.positionMs,
+      isContinue: isContinue,
+      trailingStatus: duration.isEmpty
+          ? null
+          : Text(
+              duration,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: Theme.of(
+                context,
+              ).textTheme.labelSmall?.copyWith(color: cs.onSurfaceVariant),
             ),
+    );
+    // 卡内是 IgnorePointer，手势层必须 opaque 才能靠自己命中。
+    return GestureDetector(
+      key: ValueKey<String>('media-server-episode-${episode.id}'),
+      behavior: HitTestBehavior.opaque,
+      onTap: () => _playEpisode(episode),
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        child: Actions(
+          actions: <Type, Action<Intent>>{
+            ActivateIntent: CallbackAction<ActivateIntent>(
+              onInvoke: (_) {
+                _playEpisode(episode);
+                return null;
+              },
+            ),
+          },
+          child: FushiFocusTarget(
+            id: FushiFocusId(
+              '${widget.session.serverId}-episode-${episode.id}',
+            ),
+            child: card,
           ),
         ),
       ),
-      title: Text(code.isEmpty ? episode.name : '$code · ${episode.name}'),
-      subtitle: duration.isEmpty ? null : Text(duration),
-      trailing: episode.played
-          ? Icon(
-              Icons.check_circle_rounded,
-              color: Theme.of(context).colorScheme.primary,
-            )
-          : const Icon(Icons.play_arrow_rounded),
     );
   }
 }
