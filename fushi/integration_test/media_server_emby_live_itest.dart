@@ -8,6 +8,7 @@
 // 全程焦点驱动（Tab / 方向键 / Enter），不做坐标点击。证据是 observe-*.png。
 
 import 'dart:async';
+import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show LogicalKeyboardKey;
@@ -19,6 +20,7 @@ import 'package:fushi/src/pages/implementations/video_fushi_page.dart';
 import 'package:fushi/src/sync/jellyfin_video_client.dart';
 import 'package:fushi/src/sync/sync_repository.dart';
 import 'package:fushi/src/utils/components/settings_shared.dart';
+import 'package:http/http.dart' as http;
 import 'package:integration_test/integration_test.dart';
 
 import 'helpers/focus_driver.dart';
@@ -259,6 +261,21 @@ void main() {
             .where((String s) => s.isNotEmpty);
         debugPrint('[ms-live] player texts: ${texts.take(40).toList()}');
 
+        // ── 服务器眼里的会话（BUG-2591 取证）：播放 20s 后 /Sessions 里应有本客户端
+        // （Client=Hibiki）且 NowPlayingItem 非空——这是 Bangumi / 豆瓣等依赖 Emby
+        // 播放事件的插件能动的前提。断言在真 app 路径（页面 _startRemotePlaybackSession
+        // → 客户端 startRemoteVideoPlayback）上成立，不只是客户端层。
+        final Map<String, dynamic> nowPlaying = await _hibikiSessionOn(
+          url,
+          auth.accessToken,
+        );
+        debugPrint('[ms-live] server session: ${jsonEncode(nowPlaying)}');
+        expect(
+          nowPlaying['NowPlayingItem'],
+          isNotNull,
+          reason: '播放 20s 后服务器应知道本客户端正在播（/Sessions NowPlayingItem）',
+        );
+
         // ── 返回：Escape 关播放页，再退到网格 ──
         await driver.back();
         expect(
@@ -294,6 +311,32 @@ void main() {
       },
     );
   });
+}
+
+/// GET /Sessions，挑出 Client=Hibiki 且正在播的那条（多条时取有 NowPlayingItem 的）；
+/// 一条都没有返回空 map（断言在调用方，附完整清单便于诊断）。
+Future<Map<String, dynamic>> _hibikiSessionOn(
+  String serverUrl,
+  String accessToken,
+) async {
+  final http.Response res = await http.get(
+    Uri.parse('$serverUrl/Sessions'),
+    headers: <String, String>{'X-Emby-Token': accessToken},
+  );
+  final Object? decoded = jsonDecode(res.body);
+  if (decoded is! List<dynamic>) return <String, dynamic>{};
+  Map<String, dynamic> best = <String, dynamic>{};
+  for (final dynamic raw in decoded) {
+    final Map<String, dynamic> s = raw as Map<String, dynamic>;
+    if (s['Client'] != 'Hibiki') continue;
+    final Map<String, dynamic> slim = <String, dynamic>{
+      'DeviceId': s['DeviceId'],
+      'NowPlayingItem': (s['NowPlayingItem'] as Map<String, dynamic>?)?['Name'],
+      'PlayState': s['PlayState'],
+    };
+    if (slim['NowPlayingItem'] != null || best.isEmpty) best = slim;
+  }
+  return best;
 }
 
 Finder _keyPrefix(String prefix) => find.byWidgetPredicate(

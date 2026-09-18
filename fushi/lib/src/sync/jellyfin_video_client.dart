@@ -29,6 +29,7 @@
 
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math' show Random;
 import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart' show sha1;
@@ -424,6 +425,21 @@ class JellyfinPlaybackSession {
   final String playMethod;
 
   bool get isTranscoding => playMethod == 'Transcode';
+
+  /// 客户端自造的 PlaySessionId（32 位十六进制，与服务器签发的同形）。
+  ///
+  /// 协商拿不到服务器签发的会话时用它（见 `JellyfinVideoClient._fallbackSession`）。
+  /// 真 Emby 4.10 实测：`/Sessions/Playing` / `Progress` 缺 PlaySessionId 直接 400
+  /// 「Value cannot be null (Parameter 'key')」；带任意客户端自造 id 即 204，仪表盘
+  /// 随即出现 NowPlayingItem（Emby for Kodi 的直播放就是这么签的）。
+  static String newClientPlaySessionId([Random? random]) {
+    final Random r = random ?? Random.secure();
+    final StringBuffer out = StringBuffer();
+    for (int i = 0; i < 16; i++) {
+      out.write(r.nextInt(256).toRadixString(16).padLeft(2, '0'));
+    }
+    return out.toString();
+  }
 }
 
 /// Jellyfin HTTP 异常：状态码 + 端点，供 UI 按连接失败呈现。
@@ -1298,7 +1314,9 @@ class JellyfinApi {
       <String, Object?>{
         'ItemId': itemId,
         if (session != null) ...<String, Object?>{
-          'MediaSourceId': session.mediaSourceId,
+          // 回落会话（BUG-2591）可能没有媒体源 id（详情没给流表）：不发空串。
+          if (session.mediaSourceId.isNotEmpty)
+            'MediaSourceId': session.mediaSourceId,
           'PlaySessionId': session.playSessionId,
           'PlayMethod': session.playMethod,
         },
@@ -2297,7 +2315,8 @@ class JellyfinVideoClient
   /// - 服务器判定必须转码（码率超上限 / 用户策略）→ 用它签发的 `TranscodingUrl`（HLS）；
   /// - **兼容层回落**：飞牛影视等 Jellyfin 兼容层可能没有 PlaybackInfo 端点（404 /
   ///   回 SPA HTML）。那是外部系统缺功能，不是本端错误：记日志后退回此前的手拼直出
-  ///   URL（无会话）。影响范围只限该服务器（无码率协商、Progress 无会话身份），
+  ///   URL，会话改由客户端自造 PlaySessionId（[_fallbackSession]，BUG-2591）——服务器
+  ///   仍能看到 Start / Progress / Stopped。影响范围只限该服务器（无码率协商），
   ///   服务器补上端点即自动恢复，不需要本端改动。网络类异常照常抛出（详情请求
   ///   同样会失败，不该只吞这一个）。
   Future<({String streamUrl, JellyfinPlaybackSession? session})>
@@ -2322,13 +2341,13 @@ class JellyfinVideoClient
       }
       return (
         streamUrl: api.streamUrl(id, mediaSourceId: item.mediaSourceId),
-        session: null,
+        session: _fallbackSession(id, item),
       );
     } on FormatException catch (e) {
       debugPrint('[jellyfin] PlaybackInfo not JSON ($e); direct stream');
       return (
         streamUrl: api.streamUrl(id, mediaSourceId: item.mediaSourceId),
-        session: null,
+        session: _fallbackSession(id, item),
       );
     }
     final String? playSessionId = info.playSessionId;
@@ -2349,7 +2368,7 @@ class JellyfinVideoClient
       );
       return (
         streamUrl: api.streamUrl(id, mediaSourceId: item.mediaSourceId),
-        session: null,
+        session: _fallbackSession(id, item),
       );
     }
     final String? transcodingUrl = source.transcodingUrl;
@@ -2379,6 +2398,26 @@ class JellyfinVideoClient
     }
     (_sessions[id] ??= <JellyfinPlaybackSession>[]).add(session);
     return (streamUrl: streamUrl, session: session);
+  }
+
+  /// 协商拿不到服务器签发的会话（端点缺失 / 拒绝 / 没给可播源）时的回落会话：
+  /// 客户端自造 PlaySessionId，按直播放登记（BUG-2591）。
+  ///
+  /// 此前回落 = 无会话：[startRemoteVideoPlayback] 整个不发、[putRemoteVideoPosition]
+  /// 的 Progress 每 10s 吃一个 400（Emby 对缺 PlaySessionId 的 Start / Progress 直接
+  /// 拒绝）、只有退出时的 Stopped 能到——服务器全程不知道本客户端在播，仪表盘看不
+  /// 到，Bangumi / 豆瓣等靠 Emby 播放事件打格子的插件跟着失灵。直出 URL 本身不变
+  /// （飞牛只认带 MediaSourceId 的裸流地址，BUG-2254 ③）；不是转码会话，Stopped 后
+  /// 不去 DELETE ActiveEncodings。
+  JellyfinPlaybackSession _fallbackSession(String id, JellyfinItem item) {
+    final JellyfinPlaybackSession session = JellyfinPlaybackSession(
+      itemId: id,
+      mediaSourceId: item.mediaSourceId ?? '',
+      playSessionId: JellyfinPlaybackSession.newClientPlaySessionId(),
+      playMethod: 'DirectPlay',
+    );
+    (_sessions[id] ??= <JellyfinPlaybackSession>[]).add(session);
+    return session;
   }
 
   @override
@@ -2533,7 +2572,8 @@ class JellyfinVideoClient
   @override
   Future<void> startRemoteVideoPlayback(String id, int positionMs) async {
     final JellyfinPlaybackSession? session = _latestSession(id);
-    // 兼容层没签会话：没有可开始的东西，服务器也不认无会话的 Start。
+    // 还没协商过（起播前就被调）：没有可开始的东西，服务器也不认无会话的 Start
+    // （Emby 实测 400）。协商回落也有客户端自造会话（[_fallbackSession]）。
     if (session == null) return;
     // 起播即重开心跳窗口：新会话第一条 Progress 不该被上一次播放的节流吃掉。
     _lastReportAtMs = 0;

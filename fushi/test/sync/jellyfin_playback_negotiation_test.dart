@@ -8,6 +8,7 @@
 
 import 'dart:convert';
 import 'dart:io';
+import 'dart:math' show Random;
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:http/http.dart' as http;
@@ -160,10 +161,13 @@ void main() {
       await c.remoteVideoStreamUrls('ep1');
     });
 
-    test('兼容层没有 PlaybackInfo（404 / 回 HTML）：回落手拼直出 URL，无会话', () async {
+    test(
+        '兼容层没有 PlaybackInfo（404 / 回 HTML / 400）：回落手拼直出 URL，'
+        '会话由客户端自造 PlaySessionId（BUG-2591）', () async {
       for (final http.Response reply in <http.Response>[
         http.Response('', 404),
         http.Response('<!doctype html><html></html>', 200),
+        http.Response('bad profile', 400),
       ]) {
         final JellyfinVideoClient c = clientWith((http.Request req) async {
           if (req.url.path == '/Users/u1/Items/ep1') {
@@ -173,19 +177,80 @@ void main() {
           return http.Response('', 204);
         });
         final RemoteVideoStreamUrls urls = await c.remoteVideoStreamUrls('ep1');
+        // 直出 URL 不变（飞牛只认带 MediaSourceId 的裸流地址，不带会话参数）。
         expect(
           urls.streamUrl,
           'http://nas:8096/Videos/ep1/stream?static=true&MediaSourceId=src1'
           '&api_key=tok',
         );
-        expect(c.debugActiveSession('ep1'), isNull);
-        // 无会话时 Start 什么都不发（服务器不认无会话的 Start），Progress 照旧。
+        final JellyfinPlaybackSession? session = c.debugActiveSession('ep1');
+        expect(session, isNotNull, reason: '回落也要有会话，否则服务器不知道在播');
+        expect(session!.playSessionId, matches(RegExp(r'^[0-9a-f]{32}$')));
+        expect(session.isTranscoding, isFalse);
+        // Start / Progress / Stopped 都带这个自造 id（Emby 缺它直接 400）。
         await c.startRemoteVideoPlayback('ep1', 0);
+        final http.Request start = seen
+            .lastWhere((http.Request r) => r.url.path == '/Sessions/Playing');
+        final Map<String, Object?> startBody =
+            (jsonDecode(start.body) as Map<String, dynamic>)
+                .cast<String, Object?>();
+        expect(startBody['PlaySessionId'], session.playSessionId);
+        expect(startBody['MediaSourceId'], 'src1');
+        expect(startBody['PlayMethod'], 'DirectPlay');
+        await c.putRemoteVideoPosition('ep1', 5000, 1);
+        final http.Request progress = seen.lastWhere(
+            (http.Request r) => r.url.path == '/Sessions/Playing/Progress');
         expect(
-          seen.where((http.Request r) => r.url.path == '/Sessions/Playing'),
+          (jsonDecode(progress.body) as Map<String, dynamic>)['PlaySessionId'],
+          session.playSessionId,
+        );
+        await c.stopRemoteVideoPlayback('ep1', 6000);
+        final http.Request stop = seen.lastWhere(
+            (http.Request r) => r.url.path == '/Sessions/Playing/Stopped');
+        expect(
+          (jsonDecode(stop.body) as Map<String, dynamic>)['PlaySessionId'],
+          session.playSessionId,
+        );
+        expect(
+          seen.where(
+              (http.Request r) => r.url.path == '/Videos/ActiveEncodings'),
           isEmpty,
+          reason: '回落会话不是转码，不去删 ActiveEncodings',
         );
       }
+    });
+
+    test('回落会话：详情没给媒体源时 Start 不发空串 MediaSourceId', () async {
+      final JellyfinVideoClient c = clientWith((http.Request req) async {
+        if (req.url.path == '/Users/u1/Items/ep1') {
+          return json(<String, Object?>{
+            'Id': 'ep1',
+            'Name': 'The Pilot',
+            'Type': 'Episode',
+          });
+        }
+        if (req.url.path == '/Items/ep1/PlaybackInfo') {
+          return http.Response('', 404);
+        }
+        return http.Response('', 204);
+      });
+      await c.remoteVideoStreamUrls('ep1');
+      await c.startRemoteVideoPlayback('ep1', 0);
+      final http.Request start =
+          seen.lastWhere((http.Request r) => r.url.path == '/Sessions/Playing');
+      final Map<String, dynamic> body =
+          jsonDecode(start.body) as Map<String, dynamic>;
+      expect(body.containsKey('MediaSourceId'), isFalse);
+      expect(body['PlaySessionId'], isNotEmpty);
+    });
+
+    test('newClientPlaySessionId：32 位小写十六进制、逐次不同', () {
+      final Random r = Random(7);
+      final String a = JellyfinPlaybackSession.newClientPlaySessionId(r);
+      final String b = JellyfinPlaybackSession.newClientPlaySessionId(r);
+      expect(a, matches(RegExp(r'^[0-9a-f]{32}$')));
+      expect(b, matches(RegExp(r'^[0-9a-f]{32}$')));
+      expect(a, isNot(b));
     });
   });
 

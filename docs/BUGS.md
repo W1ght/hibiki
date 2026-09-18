@@ -29,10 +29,11 @@
 
 <!-- BUGS-INDEX:BEGIN（自动生成，勿手改；改完跑 `dart run tool/bug.dart reindex`）-->
 
-> 共 2393 条。点号进各自文件。
+> 共 2394 条。点号进各自文件。
 
 | BUG | 修复 | 测试 | 标题 |
 |---|:--:|:--:|---|
+| [BUG-2591](bugs/BUG-2591-media-server-session-fallback.md) | ✅ | ✅ | Emby 服务端看不到 Fushi 在播：协商回落无会话即不发 Start |
 | [BUG-2587](bugs/BUG-2587-media-server-study-stats.md) | ✅ | ✅ | 媒体服务器（Jellyfin / Emby）与互联远端视频不进学习统计 |
 | [BUG-2585](bugs/BUG-2585-media-server-embedded-subtitle-wrong-episode.md) | ✅ | ✅ | 媒体服务器内嵌字幕轨：连播切集后下载错集且失败静默 |
 | [BUG-2584](bugs/BUG-2584-media-server-connect-diagnostics-mobile.md) | ✅ | ✅ | Android 连不上媒体服务器：失败原因被原生 toast 截断、无连通性探测、scheme 大小写 |
