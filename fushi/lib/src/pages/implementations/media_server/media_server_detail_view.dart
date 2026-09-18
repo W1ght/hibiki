@@ -258,8 +258,8 @@ class _MediaServerDetailViewState extends State<MediaServerDetailView> {
       if (!_isSeries &&
           formatMediaServerDuration(_detail.durationMs).isNotEmpty)
         formatMediaServerDuration(_detail.durationMs),
-      if (_isSeries && _detail.childCount != null)
-        t.collection_hero_total_episodes(count: _detail.childCount!),
+      if (_isSeries && _detail.episodeCount != null)
+        t.collection_hero_total_episodes(count: _detail.episodeCount!),
       if (_detail.communityRating != null)
         '★ ${_detail.communityRating!.toStringAsFixed(1)}',
     ];

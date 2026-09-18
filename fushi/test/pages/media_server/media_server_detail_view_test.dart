@@ -17,6 +17,9 @@ void main() {
     id: 's1',
     name: 'Series s1',
     type: MediaServerItemType.series,
+    // Emby 4.9 真机：ChildCount 是季数（2）、RecursiveItemCount 才是集数（26）。
+    childCount: 2,
+    episodeCount: 26,
   );
   const MediaServerItem seasonOne = MediaServerItem(
     id: 'sea1',
@@ -77,6 +80,15 @@ void main() {
 
     await tester.pumpWidget(harness(series));
     await tester.pumpAndSettle();
+    // 「全 N 话」必须是集数，不是季数。
+    expect(
+      find.textContaining(t.collection_hero_total_episodes(count: 26)),
+      findsOneWidget,
+    );
+    expect(
+      find.textContaining(t.collection_hero_total_episodes(count: 2)),
+      findsNothing,
+    );
 
     expect(episodeRequests().single.seasonId, 'sea1', reason: '缺省第一季');
     expect(

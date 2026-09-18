@@ -224,7 +224,7 @@ void main() {
         expect(q['ParentId'], 'lib-tv');
         expect(q['StartIndex'], '120');
         expect(q['Limit'], '60');
-        expect(q['Fields'], 'ChildCount,ProductionYear');
+        expect(q['Fields'], 'ChildCount,RecursiveItemCount,ProductionYear');
         expect(
           q['Fields'],
           isNot(contains('MediaSources')),
@@ -272,7 +272,9 @@ void main() {
             'Series',
             isFolder: true,
             extra: <String, Object?>{
+              // Emby 4.9 真机：ChildCount 是季数、RecursiveItemCount 才是集数。
               'ChildCount': 3,
+              'RecursiveItemCount': 36,
               'UserData': <String, Object?>{'UnplayedItemCount': 2},
             },
           ),
@@ -307,6 +309,7 @@ void main() {
       expect(page.items[0].type, MediaServerItemType.movie);
       expect(page.items[1].type, MediaServerItemType.series);
       expect(page.items[1].childCount, 3);
+      expect(page.items[1].episodeCount, 36);
       expect(page.items[1].unplayedChildCount, 2);
       expect(page.items[2].type, MediaServerItemType.folder);
       expect(

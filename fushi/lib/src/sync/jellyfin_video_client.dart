@@ -215,6 +215,7 @@ class JellyfinItem {
     this.sizeBytes,
     this.lastPlayedAtMs = 0,
     this.childCount,
+    this.recursiveItemCount,
     this.productionYear,
     this.seriesId,
     this.seasonId,
@@ -288,6 +289,11 @@ class JellyfinItem {
   /// 本地恒胜——服务器断点永远读不回来。
   final int lastPlayedAtMs;
   final int? childCount;
+
+  /// 递归子项数（`RecursiveItemCount`）。对剧 = 集数——[childCount] 对剧是**季数**
+  /// （Emby 4.9 真机：ChildCount=1 / RecursiveItemCount=26），拿它当集数显示会得到
+  /// 「全 1 话」。Emby 缺省就返回，Jellyfin 要在 Fields 里点名。
+  final int? recursiveItemCount;
   final int? productionYear;
 
   /// 可直接播放的叶子条目（电影/单集）。
@@ -545,7 +551,7 @@ class JellyfinApi {
         parentId: parentId,
         startIndex: startIndex,
         limit: limit,
-        fields: 'ChildCount,ProductionYear',
+        fields: 'ChildCount,RecursiveItemCount,ProductionYear',
         sortBy: sortBy,
         sortOrder: sortOrder,
       );
@@ -905,7 +911,10 @@ class JellyfinApi {
     return JellyfinAuthResult(
       accessToken: (json['AccessToken'] as String?) ?? '',
       userId: (user['Id'] as String?) ?? '',
-      serverName: json['ServerName'] as String?,
+      // Emby 4.9 把服务器名放在 User.ServerName 下，顶层没有 ServerName（真机实测
+      // v1.uhdnow.com：顶层只有 ServerId），Jellyfin 两处都给。
+      serverName:
+          (json['ServerName'] as String?) ?? (user['ServerName'] as String?),
     );
   }
 
@@ -1007,6 +1016,7 @@ class JellyfinApi {
                   ?.millisecondsSinceEpoch ??
               0,
       childCount: (json['ChildCount'] as num?)?.toInt(),
+      recursiveItemCount: (json['RecursiveItemCount'] as num?)?.toInt(),
       productionYear: (json['ProductionYear'] as num?)?.toInt(),
       seriesId: json['SeriesId'] as String?,
       seasonId: json['SeasonId'] as String?,
@@ -1209,6 +1219,7 @@ class JellyfinVideoClient
         played: item.played,
         playedPercentage: item.playedPercentage,
         childCount: item.childCount,
+        episodeCount: item.recursiveItemCount,
         unplayedChildCount: item.unplayedChildCount,
         hasCover: item.hasPrimaryImage,
         hasBackdrop: item.hasBackdrop,
@@ -1349,7 +1360,7 @@ class JellyfinVideoClient
         parentId: seriesId,
         includeItemType: 'Season',
         limit: 200,
-        fields: 'ChildCount,ProductionYear',
+        fields: 'ChildCount,RecursiveItemCount,ProductionYear',
       );
     }
     final List<MediaServerItem> seasons = <MediaServerItem>[

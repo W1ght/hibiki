@@ -144,6 +144,7 @@ MediaServerItem _series(
   int? year,
   int? unplayed,
   int? childCount,
+  int? episodeCount,
   double? rating,
   String? overview,
   List<String> genres = const <String>[],
@@ -154,6 +155,7 @@ MediaServerItem _series(
   productionYear: year,
   unplayedChildCount: unplayed,
   childCount: childCount,
+  episodeCount: episodeCount,
   hasCover: true,
   hasBackdrop: true,
   communityRating: rating,
@@ -330,7 +332,8 @@ _PreviewBrowser _emby() {
     'sr-0',
     '黑执事',
     year: 2008,
-    childCount: 36,
+    childCount: 3,
+    episodeCount: 36,
     rating: 7.4,
     overview:
         '时值19世纪，在英国名门贵族凡多姆海伍家，有一位神秘、优雅、十全十美的执事，他就是"黑执事"塞巴斯蒂安。'

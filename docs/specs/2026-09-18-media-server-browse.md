@@ -51,13 +51,33 @@ Movie/Episode 叶子清单一次性拉进 60 秒内存缓存，再混排进本�
 - 旧的「按剧名折成 playlist 合集」逻辑保留在混排路径，独立栏目不用它——那边剧的身份是
   Series GUID，不再靠字符串匹配。
 
+## 真服务器验证（2026-09-18，Emby 4.9.3.0，Cloudflare 前置，16 个库 / 单库最多 7188 条）
+
+端点探针（`Dart/x.y (dart:io)` UA）与真 app 离屏 itest
+`fushi/integration_test/media_server_emby_live_itest.dart`（登录 → 分区 → 首页 → 库网格 →
+剧详情 → 点集播放 → Escape 逐层返回）全部通过，证据 `fushi/.codex-test/windows-itest/ms-emby-live-*/`。
+
+在这台服务器上确认的事实：
+- Cloudflare 浏览器完整性检查按 UA 拦：`Python-urllib` 403，`Dart/…`、`libmpv`、`curl`
+  全放行。app 的 JSON 路径与 mpv 拉流都不受影响。
+- `/Users/{uid}/Views`、`/Items?ParentId=`（四种 SortBy）、`/Shows/{id}/Seasons`、
+  `/Shows/{id}/Episodes`、`/Items/Resume`、`/Shows/NextUp`、`/Items/Latest`（裸数组，含
+  Series 容器）、`SearchTerm`、`Fields=ChildCount,RecursiveItemCount,ProductionYear` 逗号多值、
+  `/Images/{Primary|Backdrop}?maxWidth=&quality=`、`/Videos/{id}/stream?static=true` 全部 200。
+- **剧的 `ChildCount` 是季数，集数在 `RecursiveItemCount`**（ChildCount=1 / RecursiveItemCount=26）。
+  详情页「全 N 话」改用 `MediaServerItem.episodeCount`。Emby 缺省返回该字段，Jellyfin 要
+  在 Fields 点名，已加。
+- 认证响应顶层没有 `ServerName`，只有 `User.ServerName`；`parseAuthResult` 回落取它。
+- 该账号 `UserData.UnplayedItemCount` 恒空（无观看记录），未看数角标不显示，非缺陷。
+- 本机到该服务器偶发 TCP 连接超时（20–45 秒后重试成功）；app 侧表现为主干错误 + 重试。
+
 ## 未验证
 
-- 没有对着真 Jellyfin / Emby / 飞牛服务器复测；`/Shows/*`、`SearchTerm`、`SortBy=DateCreated`
-  等在飞牛上是否可用未知（有回退 / 即空兜底）。
+- 飞牛影视（fnOS）Jellyfin 兼容层未测：`/Shows/*` 有回退到通用 `/Items` 树，装饰行失败即空。
 - iOS 真机内存曲线未测；止血四项（封面缩放、预读分档、面板 memo、清单不再全量）按代码路径
   推断能显著降低 jetsam 风险，量级需真机 profile。
-- 设置页与新栏目未看像素，只有 widget 行为测试。
+- 设置页多服务器 UI 未看像素，只有 widget 行为测试；新分区像素预览见
+  `fushi/test/pages/media_server/preview/`（`FUSHI_PREVIEW=1` 才跑）。
 
 ## 后续
 

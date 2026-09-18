@@ -204,6 +204,7 @@ class MediaServerItem {
     this.played = false,
     this.playedPercentage,
     this.childCount,
+    this.episodeCount,
     this.unplayedChildCount,
     this.hasCover = false,
     this.hasBackdrop = false,
@@ -246,6 +247,10 @@ class MediaServerItem {
 
   /// 容器的子项数（剧的集数 / 季数、文件夹的条目数）。
   final int? childCount;
+
+  /// 剧的总集数（Jellyfin `RecursiveItemCount`）。[childCount] 对剧是季数，
+  /// 显示「全 N 话」必须用这个。
+  final int? episodeCount;
 
   /// 容器的未看子项数（`UserData.UnplayedItemCount`）。
   final int? unplayedChildCount;
@@ -291,10 +296,10 @@ class MediaServerPage {
   }) : _nextStartIndex = nextStartIndex;
 
   const MediaServerPage.empty()
-      : items = const <MediaServerItem>[],
-        totalCount = 0,
-        startIndex = 0,
-        _nextStartIndex = null;
+    : items = const <MediaServerItem>[],
+      totalCount = 0,
+      startIndex = 0,
+      _nextStartIndex = null;
 
   final List<MediaServerItem> items;
   final int totalCount;

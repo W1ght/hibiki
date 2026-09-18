@@ -70,6 +70,16 @@ void main() {
       expect(r.serverName, 'NAS');
     });
 
+    test('parseAuthResult：Emby 只在 User.ServerName 给服务器名时回落', () {
+      final JellyfinAuthResult r =
+          JellyfinApi.parseAuthResult(<String, Object?>{
+        'AccessToken': 'tok',
+        'ServerId': 'UHD',
+        'User': <String, Object?>{'Id': 'u1', 'ServerName': 'UHD'},
+      });
+      expect(r.serverName, 'UHD');
+    });
+
     test('parseViews 保留 collectionType；isVideoish 滤掉音乐/图书', () {
       final List<JellyfinLibraryView> views =
           JellyfinApi.parseViews(<String, Object?>{
