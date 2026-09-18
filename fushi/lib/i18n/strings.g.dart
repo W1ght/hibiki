@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80461 (4733 per locale)
+/// Strings: 80512 (4736 per locale)
 ///
-/// Built on 2026-09-16 at 10:30 UTC
+/// Built on 2026-09-18 at 07:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6666,6 +6666,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Does not list the selected language';
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -17888,6 +17891,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -29346,6 +29355,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -40854,6 +40869,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -52395,6 +52416,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -63736,6 +63763,12 @@ class _StringsId extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -75173,6 +75206,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -85978,6 +86017,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -96794,6 +96839,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -108185,6 +108236,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -119629,6 +119686,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -131051,6 +131114,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -142270,6 +142339,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -153607,6 +153682,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -164913,6 +164994,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 // Path: <root>
@@ -175263,6 +175350,12 @@ class _StringsZhCn extends _StringsEn {
   String get settings_lookup_ime_source_unsupported_language => '未声明所选语言';
   @override
   String get settings_lookup_ime_source_open_system_picker => '系统输入法选择器';
+  @override
+  String get jellyfin_servers_signed_in_title => '已登录的服务器';
+  @override
+  String get jellyfin_servers_empty_hint => '尚未登录任何服务器';
+  @override
+  String get jellyfin_servers_add_title => '添加服务器';
 }
 
 // Path: <root>
@@ -185753,6 +185846,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get settings_lookup_ime_source_open_system_picker =>
       'System input method picker';
+  @override
+  String get jellyfin_servers_signed_in_title => 'Signed-in servers';
+  @override
+  String get jellyfin_servers_empty_hint => 'No server signed in yet';
+  @override
+  String get jellyfin_servers_add_title => 'Add a server';
 }
 
 /// Flat map(s) containing all translations.
@@ -195491,6 +195590,12 @@ extension on _StringsEn {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -205224,6 +205329,12 @@ extension on _StringsAr {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -215006,6 +215117,12 @@ extension on _StringsDe {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -224778,6 +224895,12 @@ extension on _StringsEs {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -234558,6 +234681,12 @@ extension on _StringsFr {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -244308,6 +244437,12 @@ extension on _StringsId {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -254081,6 +254216,12 @@ extension on _StringsIt {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -263778,6 +263919,12 @@ extension on _StringsJa {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -273480,6 +273627,12 @@ extension on _StringsKo {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -283248,6 +283401,12 @@ extension on _StringsNl {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -293011,6 +293170,12 @@ extension on _StringsPtBr {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -302780,6 +302945,12 @@ extension on _StringsRu {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -312518,6 +312689,12 @@ extension on _StringsTh {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -322272,6 +322449,12 @@ extension on _StringsTr {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -332020,6 +332203,12 @@ extension on _StringsVi {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }
@@ -341679,6 +341868,12 @@ extension on _StringsZhCn {
         return '未声明所选语言';
       case 'settings_lookup_ime_source_open_system_picker':
         return '系统输入法选择器';
+      case 'jellyfin_servers_signed_in_title':
+        return '已登录的服务器';
+      case 'jellyfin_servers_empty_hint':
+        return '尚未登录任何服务器';
+      case 'jellyfin_servers_add_title':
+        return '添加服务器';
       default:
         return null;
     }
@@ -351354,6 +351549,12 @@ extension on _StringsZhHk {
         return 'Does not list the selected language';
       case 'settings_lookup_ime_source_open_system_picker':
         return 'System input method picker';
+      case 'jellyfin_servers_signed_in_title':
+        return 'Signed-in servers';
+      case 'jellyfin_servers_empty_hint':
+        return 'No server signed in yet';
+      case 'jellyfin_servers_add_title':
+        return 'Add a server';
       default:
         return null;
     }

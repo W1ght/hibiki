@@ -4731,5 +4731,8 @@
   "settings_lookup_ime_source_unsupported": "这个平台不提供「是哪一个键盘」的信息，只能表达语言。",
   "settings_lookup_ime_source_supports": "支持所选语言",
   "settings_lookup_ime_source_unsupported_language": "未声明所选语言",
-  "settings_lookup_ime_source_open_system_picker": "系统输入法选择器"
+  "settings_lookup_ime_source_open_system_picker": "系统输入法选择器",
+  "jellyfin_servers_signed_in_title": "已登录的服务器",
+  "jellyfin_servers_empty_hint": "尚未登录任何服务器",
+  "jellyfin_servers_add_title": "添加服务器"
 }

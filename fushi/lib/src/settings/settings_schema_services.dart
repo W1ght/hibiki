@@ -196,7 +196,7 @@ SettingsDestination buildServicesDestination() {
       // ── 媒体服务器（Jellyfin / Emby）───────────────────────────────────
       // 登录后服务器条目混排进视频库网格（home_video_page 远端源解析链），
       // 点击直连串流播放；配置读写全在 JellyfinConfigWidget（SyncRepository
-      // `sync_jellyfin_server`，设备本地键，不随备份跨设备）。
+      // `sync_jellyfin_servers` 多服务器列表，设备本地键，不随备份跨设备）。
       SettingsSection(
         title: t.jellyfin_settings_title,
         collapsedByDefault: true,

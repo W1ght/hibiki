@@ -4731,5 +4731,8 @@
   "settings_lookup_ime_source_unsupported": "This platform does not expose which keyboard is which, so only the language can be requested.",
   "settings_lookup_ime_source_supports": "Supports the selected language",
   "settings_lookup_ime_source_unsupported_language": "Does not list the selected language",
-  "settings_lookup_ime_source_open_system_picker": "System input method picker"
+  "settings_lookup_ime_source_open_system_picker": "System input method picker",
+  "jellyfin_servers_signed_in_title": "Signed-in servers",
+  "jellyfin_servers_empty_hint": "No server signed in yet",
+  "jellyfin_servers_add_title": "Add a server"
 }

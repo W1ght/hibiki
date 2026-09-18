@@ -285,8 +285,13 @@ void main() {
       expect(info.durationMs, 90 * 60 * 1000);
       expect(info.positionMs, 60000);
       expect(info.hasCover, isTrue);
-      expect(info.coverUrl,
-          'http://nas:8096/Items/ep1/Images/Primary?api_key=tok');
+      // 清单封面走服务器侧缩放（maxWidth=720）：iOS 上解几十张原图海报是
+      // 内存闪退候选之一；api_key 仍在 URL 里自带认证。
+      expect(
+        info.coverUrl,
+        'http://nas:8096/Items/ep1/Images/Primary'
+        '?maxWidth=720&quality=90&api_key=tok',
+      );
       // 「显示视频库」结构表达：单集按剧名折叠成 playlist 合集卡。
       expect(info.collection?.collectionName, 'Show A');
       expect(info.collection?.collectionType, 'playlist');
