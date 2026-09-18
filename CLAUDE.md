@@ -26,7 +26,8 @@
 
 - 仓库根：`D:\APP\vs_claude_code\hibiki`（Melos workspace，名 `fushi_workspace`）。Flutter app：`fushi/`；Android 工程：`fushi/android/`。
 - 阅读器页面：`fushi/lib/src/pages/implementations/reader_fushi_page.dart`（`ReaderFushiPage`，3242 行主体 + `reader_fushi/` 下 8 个域 part 共 9583 行：WebView 拦截 + JS 分页 + 有声书同步）。
-- 视频页面：`fushi/lib/src/pages/implementations/video_fushi_page.dart`（6358 行主体 + `video_fushi/` 下 18 个 part 共 6966 行）；视频首页 `home_video_page.dart`（3080 行）。
+- 视频页面：`fushi/lib/src/pages/implementations/video_fushi_page.dart`（6358 行主体 + `video_fushi/` 下 18 个 part 共 6966 行）；视频首页 `home_video_page.dart`（约 7100 行）。
+- 媒体服务器（Jellyfin/Emby）：契约 `fushi/lib/src/media/video/media_server/media_server_browser.dart`（`MediaServerBrowser`，按服务器树分页浏览，`client is MediaServerBrowser` 判能力）；实现 `fushi/lib/src/sync/jellyfin_video_client.dart`（一套双吃 Jellyfin/Emby/飞牛）；分区页面 `fushi/lib/src/pages/implementations/media_server/`；多服务器配置 `SyncRepository.getJellyfinServers()`。混排进本地库是显式 opt-in（`jellyfin_show_in_library`），设计见 `docs/specs/2026-09-18-media-server-browse.md`。
 - 书架页面：`fushi/lib/src/pages/implementations/reader_fushi_history_page.dart`；首页 dashboard：`pages/implementations/home_dashboard_page.dart`。
 - reader source：`fushi/lib/src/media/sources/reader_fushi_source.dart`（`ReaderFushiSource`）。
 - 阅读器 JS/CSS：`fushi/lib/src/reader/`（17 个 JS/CSS 注入封装，`reader_pagination_scripts.dart` 等）；JS 桥接全局是 `window.fushiReader`（2026-08 终局清算已改名；`hoshiCaret`/`__hoshi*` 等其余 hoshi 前缀运行时符号待后续批次）。

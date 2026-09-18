@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart' show SliverConstraints;
 import 'package:fushi/src/focus/fushi_focus_controller.dart';
 import 'package:fushi/src/media/video/media_server/media_server_browser.dart';
 import 'package:fushi/src/pages/implementations/media_server/media_server_routes.dart';
@@ -297,36 +298,33 @@ class _MediaServerGridViewState extends State<MediaServerGridView> {
       slivers: <Widget>[
         SliverPadding(
           padding: EdgeInsets.symmetric(horizontal: tokens.spacing.page),
-          sliver: SliverGrid(
-            gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: readerShelfGridExtentForWidth(
+          sliver: SliverLayoutBuilder(
+            builder: (BuildContext context, SliverConstraints constraints) {
+              // 行高按「实际列宽 × 3/2（2:3 海报）+ 文字块」精确给：发现页那种
+              // `childAspectRatio: 0.50` 是把文字区按列宽的一半留，桌面 210 列宽下
+              // 文字块只要 ~60，卡片底部空出一截（像素预览实测）。列数与
+              // [SliverGridDelegateWithMaxCrossAxisExtent] 同一算法（ceil）。
+              final double gap = tokens.spacing.gap;
+              final double maxExtent = readerShelfGridExtentForWidth(
                 MediaQuery.sizeOf(context).width,
-              ),
-              mainAxisSpacing: tokens.spacing.gap,
-              crossAxisSpacing: tokens.spacing.gap,
-              // 与发现页同款：2:3 海报 + 一行名称 + 一行元数据在 0.50 下有稳定余量。
-              childAspectRatio: 0.50,
-            ),
-            delegate: SliverChildBuilderDelegate((
-              BuildContext context,
-              int index,
-            ) {
-              final MediaServerItem item = _items[index];
-              return MediaServerItemCard(
-                key: ValueKey<String>('media-server-grid-card-${item.id}'),
-                browser: _browser,
-                item: item,
-                focusId: FushiFocusId('$prefix-grid-card-${item.id}'),
-                onTap: () => openMediaServerItem(
-                  context,
-                  widget.session,
-                  item,
-                  siblings: _items,
-                ),
-                onLongPress: () =>
-                    openMediaServerItemDetail(context, widget.session, item),
               );
-            }, childCount: _items.length),
+              final double width = constraints.crossAxisExtent;
+              final int columns = ((width + gap) / (maxExtent + gap))
+                  .ceil()
+                  .clamp(1, 1 << 16)
+                  .toInt();
+              final double cardWidth = (width - gap * (columns - 1)) / columns;
+              return SliverGrid(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: columns,
+                  mainAxisSpacing: gap,
+                  crossAxisSpacing: gap,
+                  mainAxisExtent:
+                      cardWidth * 3 / 2 + mediaServerCardTextBlock(context),
+                ),
+                delegate: _cardDelegate(context, prefix),
+              );
+            },
           ),
         ),
         if (_loadingMore)
@@ -355,4 +353,21 @@ class _MediaServerGridViewState extends State<MediaServerGridView> {
       ],
     );
   }
+
+  SliverChildBuilderDelegate _cardDelegate(
+    BuildContext context,
+    String prefix,
+  ) => SliverChildBuilderDelegate((BuildContext context, int index) {
+    final MediaServerItem item = _items[index];
+    return MediaServerItemCard(
+      key: ValueKey<String>('media-server-grid-card-${item.id}'),
+      browser: _browser,
+      item: item,
+      focusId: FushiFocusId('$prefix-grid-card-${item.id}'),
+      onTap: () =>
+          openMediaServerItem(context, widget.session, item, siblings: _items),
+      onLongPress: () =>
+          openMediaServerItemDetail(context, widget.session, item),
+    );
+  }, childCount: _items.length);
 }
