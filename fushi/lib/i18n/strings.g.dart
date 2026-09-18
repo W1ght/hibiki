@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 85629 (5037 per locale)
 ///
-/// Built on 2026-09-18 at 07:17 UTC
+/// Built on 2026-09-18 at 07:37 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -185689,7 +185689,7 @@ class _StringsZhCn extends _StringsEn {
   String get mining_audio_follow_playback_speed => '句子音频跟随播放倍速';
   @override
   String get mining_audio_follow_playback_speed_hint =>
-      '有声书以非 1× 倍速播放时，卡片的句子音频按同一倍率变速不变调；仅对有声书制卡生效。';
+      '有声书以非 1 倍速播放时，卡片的句子音频按同一倍率变速不变调；仅对有声书制卡生效。';
 }
 
 // Path: <root>
@@ -363042,7 +363042,7 @@ extension on _StringsZhCn {
       case 'mining_audio_follow_playback_speed':
         return '句子音频跟随播放倍速';
       case 'mining_audio_follow_playback_speed_hint':
-        return '有声书以非 1× 倍速播放时，卡片的句子音频按同一倍率变速不变调；仅对有声书制卡生效。';
+        return '有声书以非 1 倍速播放时，卡片的句子音频按同一倍率变速不变调；仅对有声书制卡生效。';
       default:
         return null;
     }
