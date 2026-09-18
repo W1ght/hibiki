@@ -164,8 +164,16 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
     }
   }
 
+  /// 「在视频库中混排显示」（B4，全局偏好，默认关）：开了才把服务器条目拍平混进
+  /// 首页 / 系列 / 全部视频；关着时条目只在「媒体服务器」分区按服务器自己的树浏览。
+  Future<void> _setShowInLibrary(bool value) async {
+    await widget.settingsContext.appModel.prefsRepo
+        .setJellyfinShowInLibrary(value);
+    if (mounted) setState(() {});
+  }
+
   /// 「进入视频页时自动列出条目」（全局偏好，非每服务器——它是用户对枚举行为的
-  /// 取舍，换服务器重登也该保持）。
+  /// 取舍，换服务器重登也该保持）。只在混排开着时才有意义。
   Future<void> _setAutoList(bool value) async {
     await widget.settingsContext.appModel.prefsRepo
         .setJellyfinAutoListVideos(value);
@@ -232,6 +240,8 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
         final List<JellyfinServerConfig> servers =
             snapshot.data ?? const <JellyfinServerConfig>[];
         final TextTheme textTheme = Theme.of(context).textTheme;
+        final bool showInLibrary =
+            widget.settingsContext.appModel.prefsRepo.jellyfinShowInLibrary;
         return Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           child: Column(
@@ -240,6 +250,16 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
             children: <Widget>[
               Text(t.jellyfin_settings_hint, style: textTheme.bodySmall),
               const SizedBox(height: 8),
+              // B4：混排是显式 opt-in（默认关）。关着时下面的「自动列出」没有意义
+              // ——库页根本不会去问服务器要拍平清单——所以一并禁用而不是藏起来，
+              // 用户能看出两者的从属关系。
+              AdaptiveSettingsSwitchRow(
+                title: t.jellyfin_show_in_library_title,
+                subtitle: t.jellyfin_show_in_library_hint,
+                horizontalPadding: 0,
+                value: showInLibrary,
+                onChanged: _busy ? null : _setShowInLibrary,
+              ),
               // BUG-1891 止血阀 ①：进页面自动枚举的总开关（默认开，小库无感）。
               // 全局偏好，一处、放列表上方，不随服务器条目重复。
               AdaptiveSettingsSwitchRow(
@@ -248,7 +268,7 @@ class _JellyfinConfigWidgetState extends State<JellyfinConfigWidget> {
                 horizontalPadding: 0,
                 value: widget
                     .settingsContext.appModel.prefsRepo.jellyfinAutoListVideos,
-                onChanged: _busy ? null : _setAutoList,
+                onChanged: (_busy || !showInLibrary) ? null : _setAutoList,
               ),
               const SizedBox(height: 8),
               Text(

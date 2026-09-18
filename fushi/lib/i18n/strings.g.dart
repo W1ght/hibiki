@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 80512 (4736 per locale)
+/// Strings: 80750 (4750 per locale)
 ///
-/// Built on 2026-09-18 at 07:35 UTC
+/// Built on 2026-09-18 at 08:02 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6669,6 +6669,22 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get jellyfin_servers_signed_in_title => 'Signed-in servers';
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   String get jellyfin_servers_add_title => 'Add a server';
+  String get video_library_media_servers => 'Media servers';
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  String get media_server_servers_title => 'Choose a server';
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  String get media_server_libraries_title => 'Libraries';
+  String get media_server_row_view_all => 'View all';
+  String get media_server_sort_name => 'Name';
+  String get media_server_sort_date_added => 'Date added';
+  String get media_server_search_hint => 'Search this server';
+  String get media_server_items_empty => 'No items';
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -17897,6 +17913,36 @@ class _StringsAr extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -29361,6 +29407,36 @@ class _StringsDe extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -40875,6 +40951,36 @@ class _StringsEs extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -52422,6 +52528,36 @@ class _StringsFr extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -63769,6 +63905,36 @@ class _StringsId extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -75212,6 +75378,36 @@ class _StringsIt extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -86023,6 +86219,36 @@ class _StringsJa extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -96845,6 +97071,36 @@ class _StringsKo extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -108242,6 +108498,36 @@ class _StringsNl extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -119692,6 +119978,36 @@ class _StringsPtBr extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -131120,6 +131436,36 @@ class _StringsRu extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -142345,6 +142691,36 @@ class _StringsTh extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -153688,6 +154064,36 @@ class _StringsTr extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -165000,6 +165406,36 @@ class _StringsVi extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 // Path: <root>
@@ -175356,6 +175792,35 @@ class _StringsZhCn extends _StringsEn {
   String get jellyfin_servers_empty_hint => '尚未登录任何服务器';
   @override
   String get jellyfin_servers_add_title => '添加服务器';
+  @override
+  String get video_library_media_servers => '媒体服务器';
+  @override
+  String get jellyfin_show_in_library_title => '在视频库中混排显示';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      '把媒体服务器条目混排进首页、系列与全部视频。关闭后只在「媒体服务器」分区浏览。';
+  @override
+  String get media_server_servers_title => '选择服务器';
+  @override
+  String get media_server_servers_empty_hint => '还没有登录任何媒体服务器';
+  @override
+  String get media_server_servers_go_settings => '去设置添加服务器';
+  @override
+  String get media_server_libraries_title => '媒体库';
+  @override
+  String get media_server_row_view_all => '查看全部';
+  @override
+  String get media_server_sort_name => '名称';
+  @override
+  String get media_server_sort_date_added => '添加时间';
+  @override
+  String get media_server_search_hint => '搜索此服务器';
+  @override
+  String get media_server_items_empty => '没有条目';
+  @override
+  String get media_server_items_load_failed => '无法从服务器加载条目';
+  @override
+  String get media_server_item_folder => '文件夹';
 }
 
 // Path: <root>
@@ -185852,6 +186317,36 @@ class _StringsZhHk extends _StringsEn {
   String get jellyfin_servers_empty_hint => 'No server signed in yet';
   @override
   String get jellyfin_servers_add_title => 'Add a server';
+  @override
+  String get video_library_media_servers => 'Media servers';
+  @override
+  String get jellyfin_show_in_library_title => 'Show in video library';
+  @override
+  String get jellyfin_show_in_library_hint =>
+      'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+  @override
+  String get media_server_servers_title => 'Choose a server';
+  @override
+  String get media_server_servers_empty_hint => 'No media server signed in yet';
+  @override
+  String get media_server_servers_go_settings => 'Add a server in settings';
+  @override
+  String get media_server_libraries_title => 'Libraries';
+  @override
+  String get media_server_row_view_all => 'View all';
+  @override
+  String get media_server_sort_name => 'Name';
+  @override
+  String get media_server_sort_date_added => 'Date added';
+  @override
+  String get media_server_search_hint => 'Search this server';
+  @override
+  String get media_server_items_empty => 'No items';
+  @override
+  String get media_server_items_load_failed =>
+      'Could not load items from the server';
+  @override
+  String get media_server_item_folder => 'Folder';
 }
 
 /// Flat map(s) containing all translations.
@@ -195596,6 +196091,34 @@ extension on _StringsEn {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -205335,6 +205858,34 @@ extension on _StringsAr {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -215123,6 +215674,34 @@ extension on _StringsDe {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -224901,6 +225480,34 @@ extension on _StringsEs {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -234687,6 +235294,34 @@ extension on _StringsFr {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -244443,6 +245078,34 @@ extension on _StringsId {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -254222,6 +254885,34 @@ extension on _StringsIt {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -263925,6 +264616,34 @@ extension on _StringsJa {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -273633,6 +274352,34 @@ extension on _StringsKo {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -283407,6 +284154,34 @@ extension on _StringsNl {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -293176,6 +293951,34 @@ extension on _StringsPtBr {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -302951,6 +303754,34 @@ extension on _StringsRu {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -312695,6 +313526,34 @@ extension on _StringsTh {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -322455,6 +323314,34 @@ extension on _StringsTr {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -332209,6 +333096,34 @@ extension on _StringsVi {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }
@@ -341874,6 +342789,34 @@ extension on _StringsZhCn {
         return '尚未登录任何服务器';
       case 'jellyfin_servers_add_title':
         return '添加服务器';
+      case 'video_library_media_servers':
+        return '媒体服务器';
+      case 'jellyfin_show_in_library_title':
+        return '在视频库中混排显示';
+      case 'jellyfin_show_in_library_hint':
+        return '把媒体服务器条目混排进首页、系列与全部视频。关闭后只在「媒体服务器」分区浏览。';
+      case 'media_server_servers_title':
+        return '选择服务器';
+      case 'media_server_servers_empty_hint':
+        return '还没有登录任何媒体服务器';
+      case 'media_server_servers_go_settings':
+        return '去设置添加服务器';
+      case 'media_server_libraries_title':
+        return '媒体库';
+      case 'media_server_row_view_all':
+        return '查看全部';
+      case 'media_server_sort_name':
+        return '名称';
+      case 'media_server_sort_date_added':
+        return '添加时间';
+      case 'media_server_search_hint':
+        return '搜索此服务器';
+      case 'media_server_items_empty':
+        return '没有条目';
+      case 'media_server_items_load_failed':
+        return '无法从服务器加载条目';
+      case 'media_server_item_folder':
+        return '文件夹';
       default:
         return null;
     }
@@ -351555,6 +352498,34 @@ extension on _StringsZhHk {
         return 'No server signed in yet';
       case 'jellyfin_servers_add_title':
         return 'Add a server';
+      case 'video_library_media_servers':
+        return 'Media servers';
+      case 'jellyfin_show_in_library_title':
+        return 'Show in video library';
+      case 'jellyfin_show_in_library_hint':
+        return 'Mix media server items into Home, Series and All videos. Off: browse them only in the Media servers section.';
+      case 'media_server_servers_title':
+        return 'Choose a server';
+      case 'media_server_servers_empty_hint':
+        return 'No media server signed in yet';
+      case 'media_server_servers_go_settings':
+        return 'Add a server in settings';
+      case 'media_server_libraries_title':
+        return 'Libraries';
+      case 'media_server_row_view_all':
+        return 'View all';
+      case 'media_server_sort_name':
+        return 'Name';
+      case 'media_server_sort_date_added':
+        return 'Date added';
+      case 'media_server_search_hint':
+        return 'Search this server';
+      case 'media_server_items_empty':
+        return 'No items';
+      case 'media_server_items_load_failed':
+        return 'Could not load items from the server';
+      case 'media_server_item_folder':
+        return 'Folder';
       default:
         return null;
     }

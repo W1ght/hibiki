@@ -166,6 +166,7 @@ class HomeVideoPage extends BaseModuleTabPage {
     this.onOpenSources,
     this.remoteVideoClientLoader,
     this.cloudRemoteVideoClientLoader,
+    this.jellyfinVideoClientLoader,
     this.remoteVideoDownloadDestination,
     super.key,
   });
@@ -199,6 +200,11 @@ class HomeVideoPage extends BaseModuleTabPage {
   /// 生产路径经 [_resolveCloudRemoteVideoClient]（resolveSyncBackend 产物包进 client）。
   final Future<CloudRemoteVideoClient?> Function()?
       cloudRemoteVideoClientLoader;
+
+  /// 测试钩子：注入 Jellyfin/Emby client。混排闸门（`jellyfin_show_in_library`）
+  /// 在 [_resolveJellyfinVideoClient] 里先于本钩子判定，关着时注入的 client 也不会
+  /// 被问到——这正是闸门测试要断言的东西。缺省时生产路径从 SyncRepository 读配置。
+  final Future<JellyfinVideoClient?> Function()? jellyfinVideoClientLoader;
   final Future<File> Function(RemoteVideoInfo video)?
       remoteVideoDownloadDestination;
 
@@ -1103,7 +1109,17 @@ class _HomeVideoPageState extends BaseModuleTabPageState<HomeVideoPage> {
   /// `sync_jellyfin_server`）即可出 client——它具备完整 [RemoteVideoClient] 能力
   /// （直连流播/字幕/服务器端断点），与互联 live 库同级；每次取数新建实例，
   /// 缓存身份按服务器细分（`jellyfin:<serverUrl>`，BUG-1202 口径）。
+  ///
+  /// B4：混排是显式 opt-in（`jellyfin_show_in_library`，默认关）。关着时这里直接
+  /// 返 null，`??` 链落到云盘分支，服务器条目只在视频页「媒体服务器」分区按服务器
+  /// 自己的树浏览——一进视频页就整库拍平枚举（BUG-1891 的根源）从此不再是默认行为。
+  /// 闸门放在注入点之前：测试注入的 client 同样过闸，测的才是真判据。
   Future<JellyfinVideoClient?> _resolveJellyfinVideoClient() async {
+    if (!appModelNoUpdate.prefsRepo.jellyfinShowInLibrary) return null;
+    final Future<JellyfinVideoClient?> Function()? injected =
+        widget.jellyfinVideoClientLoader;
+    if (injected != null) return injected();
+
     final AppModel appModel = ref.read(appProvider);
     final SyncRepository syncRepo = SyncRepository(appModel.database);
     final JellyfinServerConfig? config = await syncRepo.getJellyfinServer();

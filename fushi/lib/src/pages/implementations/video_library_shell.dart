@@ -9,6 +9,7 @@ import 'package:fushi/src/media/video/metadata/video_source_scrape_task.dart';
 import 'package:fushi/src/media/video/video_book_repository.dart';
 import 'package:fushi/src/media/video/video_library_section.dart';
 import 'package:fushi/src/pages/implementations/home_video_page.dart';
+import 'package:fushi/src/pages/implementations/media_server/media_server_browse_page.dart';
 import 'package:fushi/src/pages/implementations/media_sources_page.dart';
 import 'package:fushi/src/pages/implementations/module_settings_view.dart';
 import 'package:fushi/src/pages/implementations/video_discovery_detail_page.dart';
@@ -36,6 +37,8 @@ class VideoLibraryShell extends StatefulWidget {
     this.discoveryActions = const VideoDiscoveryActions(),
     this.localLibraryPageBuilder,
     this.discoveryPageBuilder,
+    this.mediaServerServersLoader,
+    this.mediaServerPageBuilder,
     super.key,
   });
 
@@ -73,6 +76,14 @@ class VideoLibraryShell extends StatefulWidget {
   final Widget Function(BuildContext context, Widget navigation)?
       discoveryPageBuilder;
 
+  /// 「媒体服务器」分区的已登录服务器清单（生产由 HomePage 从 SyncRepository
+  /// 装配）。null = 未接线（宿主测试），分区呈现空态。
+  final Future<List<MediaServerEntry>> Function()? mediaServerServersLoader;
+
+  /// 仅供宿主定制或 widget 测试注入媒体服务器页，不改变惰性构建/保活语义。
+  final Widget Function(BuildContext context, Widget navigation)?
+      mediaServerPageBuilder;
+
   @override
   State<VideoLibraryShell> createState() => _VideoLibraryShellState();
 }
@@ -81,6 +92,7 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
   VideoLibrarySection _section = VideoLibrarySection.home;
   VideoLibrarySection _localSection = VideoLibrarySection.home;
   bool _discoverVisited = false;
+  bool _mediaServersVisited = false;
   bool _sourcesVisited = false;
   bool _settingsVisited = false;
 
@@ -94,6 +106,9 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
         _localSection = value;
       }
       if (value == VideoLibrarySection.discover) _discoverVisited = true;
+      if (value == VideoLibrarySection.mediaServers) {
+        _mediaServersVisited = true;
+      }
       if (value == VideoLibrarySection.sources) _sourcesVisited = true;
       if (value == VideoLibrarySection.settings) _settingsVisited = true;
     });
@@ -105,6 +120,7 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
         VideoLibrarySection.allVideos =>
           true,
         VideoLibrarySection.discover ||
+        VideoLibrarySection.mediaServers ||
         VideoLibrarySection.sources ||
         VideoLibrarySection.settings =>
           false,
@@ -144,6 +160,11 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
         LibrarySectionTab<VideoLibrarySection>(
           value: VideoLibrarySection.allVideos,
           label: t.video_library_all_videos,
+        ),
+        // 媒体服务器是用户自己的库（只是远端的），排在本地库视图之后、在线发现之前。
+        LibrarySectionTab<VideoLibrarySection>(
+          value: VideoLibrarySection.mediaServers,
+          label: t.video_library_media_servers,
         ),
         // 与书 / 漫画 / 游戏的发现视图同 key（同概念一词,原 video_discovery_tab 已删），
         // **也同位**：本地库的各视图排完才是在线发现，最后才是管理类分区。此前发现夹在
@@ -233,6 +254,35 @@ class _VideoLibraryShellState extends State<VideoLibraryShell> {
                         ),
                         controller: widget.discoveryController,
                         actions: widget.discoveryActions,
+                      ),
+                ),
+              ),
+            ),
+          ),
+        if (_mediaServersVisited)
+          Offstage(
+            offstage: _section != VideoLibrarySection.mediaServers,
+            child: ExcludeFocus(
+              excluding: _section != VideoLibrarySection.mediaServers,
+              child: TickerMode(
+                enabled: _section == VideoLibrarySection.mediaServers,
+                child: _dropScoped(
+                  () => _section == VideoLibrarySection.mediaServers,
+                  widget.mediaServerPageBuilder?.call(
+                        context,
+                        _navigationFor(
+                          _section == VideoLibrarySection.mediaServers,
+                          navigation,
+                        ),
+                      ) ??
+                      MediaServerBrowsePage(
+                        navigation: _navigationFor(
+                          _section == VideoLibrarySection.mediaServers,
+                          navigation,
+                        ),
+                        repo: widget.repository,
+                        loadServers: widget.mediaServerServersLoader ??
+                            () async => const <MediaServerEntry>[],
                       ),
                 ),
               ),
