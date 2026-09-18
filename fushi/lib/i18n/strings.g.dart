@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 85323 (5019 per locale)
+/// Strings: 85697 (5041 per locale)
 ///
-/// Built on 2026-09-18 at 04:24 UTC
+/// Built on 2026-09-18 at 09:14 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6939,6 +6939,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get ai_provider_base_url_invalid =>
       'Enter a valid HTTP or HTTPS endpoint';
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
+  String get manga_background => 'Background';
+  String get manga_background_black => 'Black';
+  String get manga_background_white => 'White';
+  String get manga_background_gray => 'Gray';
+  String get manga_background_theme => 'Follow theme';
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  String get manga_spread_offset => 'Spread offset';
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  String get manga_spread_offset_cover => 'Cover alone';
+  String get manga_spread_offset_none => 'Pair from page 1';
+  String get manga_wide_page_solo => 'Wide pages alone';
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   String get delete_statistics => 'Also delete statistics';
@@ -7012,6 +7031,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get anki_mined_forget_done => 'Mining record cleared';
   String get reader_gallery_cover => 'Cover';
   String get stat_center_day_reset_action => 'Day reset time';
+  String get ai_feature_custom_theme => 'Custom theme';
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -18745,6 +18772,42 @@ class _StringsAr extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -18869,6 +18932,19 @@ class _StringsAr extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -30828,6 +30904,42 @@ class _StringsDe extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -30954,6 +31066,19 @@ class _StringsDe extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -42967,6 +43092,42 @@ class _StringsEs extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -43092,6 +43253,19 @@ class _StringsEs extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -55138,6 +55312,42 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -55267,6 +55477,19 @@ class _StringsFr extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -67117,6 +67340,42 @@ class _StringsId extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -67241,6 +67500,19 @@ class _StringsId extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -79182,6 +79454,42 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -79307,6 +79615,19 @@ class _StringsIt extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -90631,6 +90952,42 @@ class _StringsJa extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -90753,6 +91110,19 @@ class _StringsJa extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -102087,6 +102457,42 @@ class _StringsKo extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -102209,6 +102615,19 @@ class _StringsKo extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -114108,6 +114527,42 @@ class _StringsNl extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -114235,6 +114690,19 @@ class _StringsNl extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -126187,6 +126655,42 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -126314,6 +126818,19 @@ class _StringsPtBr extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -138243,6 +138760,42 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -138368,6 +138921,19 @@ class _StringsRu extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -150099,6 +150665,42 @@ class _StringsTh extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -150223,6 +150825,19 @@ class _StringsTh extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -162068,6 +162683,42 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -162192,6 +162843,19 @@ class _StringsTr extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -174007,6 +174671,42 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -174134,6 +174834,19 @@ class _StringsVi extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 // Path: <root>
@@ -184964,6 +185677,40 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => '由内置预设固定，不可更改';
   @override
+  String get manga_background => '背景色';
+  @override
+  String get manga_background_black => '黑';
+  @override
+  String get manga_background_white => '白';
+  @override
+  String get manga_background_gray => '灰';
+  @override
+  String get manga_background_theme => '跟随主题';
+  @override
+  String get manga_tap_zone_layout => '点击区域布局';
+  @override
+  String get manga_tap_zone_layout_subtitle => '点击页面哪些位置会翻页';
+  @override
+  String get manga_tap_zone_layout_left_right => '左右';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L 型';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => '上下';
+  @override
+  String get manga_spread_offset => '跨页偏移';
+  @override
+  String get manga_spread_offset_subtitle => '双页配对从第几页开始';
+  @override
+  String get manga_spread_offset_cover => '封面独占';
+  @override
+  String get manga_spread_offset_none => '从第一页起配对';
+  @override
+  String get manga_wide_page_solo => '宽页独占一屏';
+  @override
+  String get manga_wide_page_solo_subtitle => '见开き页单独占一屏显示';
+  @override
   String get shortcut_action_reader_toggle_study_clock => '暂停 / 继续阅读计时';
   @override
   String get delete_statistics => '同时删除统计数据';
@@ -185071,6 +185818,16 @@ class _StringsZhCn extends _StringsEn {
   String get reader_gallery_cover => '封面';
   @override
   String get stat_center_day_reset_action => '重置时刻';
+  @override
+  String get ai_feature_custom_theme => '自定义主题';
+  @override
+  String get ai_feature_custom_theme_summary => '让 AI 按描述生成自定义主题配色';
+  @override
+  String get theme_ai_hint => '描述想要的主题，例如：暖色纸张阅读风格，主题色深绿';
+  @override
+  String get theme_ai_applied => 'AI 建议已填进编辑器，看过预览后再应用。';
+  @override
+  String get theme_ai_undo => '撤销 AI 改动';
 }
 
 // Path: <root>
@@ -196081,6 +196838,42 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_provider_protocol_locked => 'Fixed by the built-in preset';
   @override
+  String get manga_background => 'Background';
+  @override
+  String get manga_background_black => 'Black';
+  @override
+  String get manga_background_white => 'White';
+  @override
+  String get manga_background_gray => 'Gray';
+  @override
+  String get manga_background_theme => 'Follow theme';
+  @override
+  String get manga_tap_zone_layout => 'Tap zone layout';
+  @override
+  String get manga_tap_zone_layout_subtitle => 'Where a tap turns the page';
+  @override
+  String get manga_tap_zone_layout_left_right => 'Left and right';
+  @override
+  String get manga_tap_zone_layout_l_shaped => 'L-shaped';
+  @override
+  String get manga_tap_zone_layout_kindle => 'Kindle';
+  @override
+  String get manga_tap_zone_layout_top_bottom => 'Top and bottom';
+  @override
+  String get manga_spread_offset => 'Spread offset';
+  @override
+  String get manga_spread_offset_subtitle =>
+      'Which page the two-page pairing starts from';
+  @override
+  String get manga_spread_offset_cover => 'Cover alone';
+  @override
+  String get manga_spread_offset_none => 'Pair from page 1';
+  @override
+  String get manga_wide_page_solo => 'Wide pages alone';
+  @override
+  String get manga_wide_page_solo_subtitle =>
+      'Show a double-width spread page on its own';
+  @override
   String get shortcut_action_reader_toggle_study_clock =>
       'Pause / resume reading timer';
   @override
@@ -196201,6 +196994,19 @@ class _StringsZhHk extends _StringsEn {
   String get reader_gallery_cover => 'Cover';
   @override
   String get stat_center_day_reset_action => 'Day reset time';
+  @override
+  String get ai_feature_custom_theme => 'Custom theme';
+  @override
+  String get ai_feature_custom_theme_summary =>
+      'Let AI pick theme colors from a description';
+  @override
+  String get theme_ai_hint =>
+      'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+  @override
+  String get theme_ai_applied =>
+      'AI suggestion loaded into the editor. Check the preview, then apply.';
+  @override
+  String get theme_ai_undo => 'Undo AI changes';
 }
 
 /// Flat map(s) containing all translations.
@@ -206443,6 +207249,40 @@ extension on _StringsEn {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -206546,6 +207386,16 @@ extension on _StringsEn {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -216783,6 +217633,40 @@ extension on _StringsAr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -216886,6 +217770,16 @@ extension on _StringsAr {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -227168,6 +228062,40 @@ extension on _StringsDe {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -227271,6 +228199,16 @@ extension on _StringsDe {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -237544,6 +238482,40 @@ extension on _StringsEs {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -237647,6 +238619,16 @@ extension on _StringsEs {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -247929,6 +248911,40 @@ extension on _StringsFr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -248032,6 +249048,16 @@ extension on _StringsFr {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -258285,6 +259311,40 @@ extension on _StringsId {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -258388,6 +259448,16 @@ extension on _StringsId {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -268663,6 +269733,40 @@ extension on _StringsIt {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -268766,6 +269870,16 @@ extension on _StringsIt {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -278968,6 +280082,40 @@ extension on _StringsJa {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -279071,6 +280219,16 @@ extension on _StringsJa {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -289277,6 +290435,40 @@ extension on _StringsKo {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -289380,6 +290572,16 @@ extension on _StringsKo {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -299648,6 +300850,40 @@ extension on _StringsNl {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -299751,6 +300987,16 @@ extension on _StringsNl {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -310014,6 +311260,40 @@ extension on _StringsPtBr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -310117,6 +311397,16 @@ extension on _StringsPtBr {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -320387,6 +321677,40 @@ extension on _StringsRu {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -320490,6 +321814,16 @@ extension on _StringsRu {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -330732,6 +332066,40 @@ extension on _StringsTh {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -330835,6 +332203,16 @@ extension on _StringsTh {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -341092,6 +342470,40 @@ extension on _StringsTr {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -341195,6 +342607,16 @@ extension on _StringsTr {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -351446,6 +352868,40 @@ extension on _StringsVi {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -351549,6 +353005,16 @@ extension on _StringsVi {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
@@ -361706,6 +363172,40 @@ extension on _StringsZhCn {
         return '请填写有效的 HTTP 或 HTTPS 接口地址';
       case 'ai_provider_protocol_locked':
         return '由内置预设固定，不可更改';
+      case 'manga_background':
+        return '背景色';
+      case 'manga_background_black':
+        return '黑';
+      case 'manga_background_white':
+        return '白';
+      case 'manga_background_gray':
+        return '灰';
+      case 'manga_background_theme':
+        return '跟随主题';
+      case 'manga_tap_zone_layout':
+        return '点击区域布局';
+      case 'manga_tap_zone_layout_subtitle':
+        return '点击页面哪些位置会翻页';
+      case 'manga_tap_zone_layout_left_right':
+        return '左右';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L 型';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return '上下';
+      case 'manga_spread_offset':
+        return '跨页偏移';
+      case 'manga_spread_offset_subtitle':
+        return '双页配对从第几页开始';
+      case 'manga_spread_offset_cover':
+        return '封面独占';
+      case 'manga_spread_offset_none':
+        return '从第一页起配对';
+      case 'manga_wide_page_solo':
+        return '宽页独占一屏';
+      case 'manga_wide_page_solo_subtitle':
+        return '见开き页单独占一屏显示';
       case 'shortcut_action_reader_toggle_study_clock':
         return '暂停 / 继续阅读计时';
       case 'delete_statistics':
@@ -361808,6 +363308,16 @@ extension on _StringsZhCn {
         return '封面';
       case 'stat_center_day_reset_action':
         return '重置时刻';
+      case 'ai_feature_custom_theme':
+        return '自定义主题';
+      case 'ai_feature_custom_theme_summary':
+        return '让 AI 按描述生成自定义主题配色';
+      case 'theme_ai_hint':
+        return '描述想要的主题，例如：暖色纸张阅读风格，主题色深绿';
+      case 'theme_ai_applied':
+        return 'AI 建议已填进编辑器，看过预览后再应用。';
+      case 'theme_ai_undo':
+        return '撤销 AI 改动';
       default:
         return null;
     }
@@ -371988,6 +373498,40 @@ extension on _StringsZhHk {
         return 'Enter a valid HTTP or HTTPS endpoint';
       case 'ai_provider_protocol_locked':
         return 'Fixed by the built-in preset';
+      case 'manga_background':
+        return 'Background';
+      case 'manga_background_black':
+        return 'Black';
+      case 'manga_background_white':
+        return 'White';
+      case 'manga_background_gray':
+        return 'Gray';
+      case 'manga_background_theme':
+        return 'Follow theme';
+      case 'manga_tap_zone_layout':
+        return 'Tap zone layout';
+      case 'manga_tap_zone_layout_subtitle':
+        return 'Where a tap turns the page';
+      case 'manga_tap_zone_layout_left_right':
+        return 'Left and right';
+      case 'manga_tap_zone_layout_l_shaped':
+        return 'L-shaped';
+      case 'manga_tap_zone_layout_kindle':
+        return 'Kindle';
+      case 'manga_tap_zone_layout_top_bottom':
+        return 'Top and bottom';
+      case 'manga_spread_offset':
+        return 'Spread offset';
+      case 'manga_spread_offset_subtitle':
+        return 'Which page the two-page pairing starts from';
+      case 'manga_spread_offset_cover':
+        return 'Cover alone';
+      case 'manga_spread_offset_none':
+        return 'Pair from page 1';
+      case 'manga_wide_page_solo':
+        return 'Wide pages alone';
+      case 'manga_wide_page_solo_subtitle':
+        return 'Show a double-width spread page on its own';
       case 'shortcut_action_reader_toggle_study_clock':
         return 'Pause / resume reading timer';
       case 'delete_statistics':
@@ -372091,6 +373635,16 @@ extension on _StringsZhHk {
         return 'Cover';
       case 'stat_center_day_reset_action':
         return 'Day reset time';
+      case 'ai_feature_custom_theme':
+        return 'Custom theme';
+      case 'ai_feature_custom_theme_summary':
+        return 'Let AI pick theme colors from a description';
+      case 'theme_ai_hint':
+        return 'Describe the theme you want, e.g. warm paper reading theme with a dark green accent';
+      case 'theme_ai_applied':
+        return 'AI suggestion loaded into the editor. Check the preview, then apply.';
+      case 'theme_ai_undo':
+        return 'Undo AI changes';
       default:
         return null;
     }
