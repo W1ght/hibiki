@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86989 (5117 per locale)
+/// Strings: 87023 (5119 per locale)
 ///
-/// Built on 2026-09-19 at 11:21 UTC
+/// Built on 2026-09-19 at 12:10 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7115,6 +7115,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_move_down => 'Move down';
   String get mihon_source_pin => 'Pin to top';
   String get mihon_source_unpin => 'Unpin';
+  String get mihon_source_website_open => 'Open on website';
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   String get discovery_alist_settings_hint =>
       'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
@@ -19184,6 +19187,11 @@ class _StringsAr extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
@@ -31506,6 +31514,11 @@ class _StringsDe extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
@@ -43881,6 +43894,11 @@ class _StringsEs extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
@@ -56294,6 +56312,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get mihon_source_unpin => 'Unpin';
   @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
   String get discovery_alist_settings_hint =>
@@ -68504,6 +68527,11 @@ class _StringsId extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
@@ -80808,6 +80836,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get mihon_source_unpin => 'Unpin';
   @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
   String get discovery_alist_settings_hint =>
@@ -92491,6 +92524,11 @@ class _StringsJa extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
@@ -104185,6 +104223,11 @@ class _StringsKo extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
@@ -116448,6 +116491,11 @@ class _StringsNl extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
@@ -128765,6 +128813,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get mihon_source_unpin => 'Unpin';
   @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
   String get discovery_alist_settings_hint =>
@@ -141056,6 +141109,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get mihon_source_unpin => 'Unpin';
   @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
   String get discovery_alist_settings_hint =>
@@ -153147,6 +153205,11 @@ class _StringsTh extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
@@ -165354,6 +165417,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get mihon_source_unpin => 'Unpin';
   @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
   String get discovery_alist_settings_hint =>
@@ -177533,6 +177601,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get mihon_source_unpin => 'Unpin';
   @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
   String get discovery_alist_settings_hint =>
@@ -188693,6 +188766,10 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_source_pin => '置顶';
   @override
   String get mihon_source_unpin => '取消置顶';
+  @override
+  String get mihon_source_website_open => '在网站打开';
+  @override
+  String get mihon_source_website_unavailable => '该源没有这部作品的网页';
   @override
   String get discovery_alist_settings_title => 'AList / OpenList 站点';
   @override
@@ -200054,6 +200131,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get mihon_source_unpin => 'Unpin';
   @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
   String get discovery_alist_settings_title => 'AList / OpenList sites';
   @override
   String get discovery_alist_settings_hint =>
@@ -210608,6 +210690,10 @@ extension on _StringsEn {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -221148,6 +221234,10 @@ extension on _StringsAr {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -231733,6 +231823,10 @@ extension on _StringsDe {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -242309,6 +242403,10 @@ extension on _StringsEs {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -252894,6 +252992,10 @@ extension on _StringsFr {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -263450,6 +263552,10 @@ extension on _StringsId {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -274028,6 +274134,10 @@ extension on _StringsIt {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -284533,6 +284643,10 @@ extension on _StringsJa {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -295042,6 +295156,10 @@ extension on _StringsKo {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -305613,6 +305731,10 @@ extension on _StringsNl {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -316179,6 +316301,10 @@ extension on _StringsPtBr {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -326752,6 +326878,10 @@ extension on _StringsRu {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -337297,6 +337427,10 @@ extension on _StringsTh {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -347857,6 +347991,10 @@ extension on _StringsTr {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -358411,6 +358549,10 @@ extension on _StringsVi {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
@@ -368870,6 +369012,10 @@ extension on _StringsZhCn {
         return '置顶';
       case 'mihon_source_unpin':
         return '取消置顶';
+      case 'mihon_source_website_open':
+        return '在网站打开';
+      case 'mihon_source_website_unavailable':
+        return '该源没有这部作品的网页';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList 站点';
       case 'discovery_alist_settings_hint':
@@ -379352,6 +379498,10 @@ extension on _StringsZhHk {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
       case 'discovery_alist_settings_title':
         return 'AList / OpenList sites';
       case 'discovery_alist_settings_hint':
