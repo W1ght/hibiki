@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86564 (5092 per locale)
+/// Strings: 86989 (5117 per locale)
 ///
-/// Built on 2026-09-19 at 07:26 UTC
+/// Built on 2026-09-19 at 11:21 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7115,6 +7115,42 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_move_down => 'Move down';
   String get mihon_source_pin => 'Pin to top';
   String get mihon_source_unpin => 'Unpin';
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  String get discovery_alist_add => 'Add site';
+  String get discovery_alist_enabled => 'Enabled';
+  String get discovery_alist_remove => 'Remove';
+  String get discovery_alist_name => 'Display name';
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  String get discovery_alist_url => 'Site URL';
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  String get discovery_alist_username => 'Username';
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  String get discovery_alist_password => 'Password';
+  String get discovery_alist_kinds => 'Show in';
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  String get discovery_alist_test => 'Test connection';
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  String get media_source_alist_url => 'Site URL';
+  String get media_source_alist_folder => 'Folder on the site';
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -19148,6 +19184,67 @@ class _StringsAr extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -31409,6 +31506,67 @@ class _StringsDe extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -43723,6 +43881,67 @@ class _StringsEs extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -56074,6 +56293,67 @@ class _StringsFr extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -68224,6 +68504,67 @@ class _StringsId extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -80466,6 +80807,67 @@ class _StringsIt extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -92089,6 +92491,67 @@ class _StringsJa extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -103722,6 +104185,67 @@ class _StringsKo extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -115924,6 +116448,67 @@ class _StringsNl extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -128179,6 +128764,67 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -140409,6 +141055,67 @@ class _StringsRu extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -152440,6 +153147,67 @@ class _StringsTh extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -164585,6 +165353,67 @@ class _StringsTr extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -176703,6 +177532,67 @@ class _StringsVi extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 // Path: <root>
@@ -187803,6 +188693,59 @@ class _StringsZhCn extends _StringsEn {
   String get mihon_source_pin => '置顶';
   @override
   String get mihon_source_unpin => '取消置顶';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList 站点';
+  @override
+  String get discovery_alist_settings_hint =>
+      '浏览并下载 AList 或 OpenList 站点上的文件；账号留空即以游客访问';
+  @override
+  String get discovery_alist_add => '添加站点';
+  @override
+  String get discovery_alist_enabled => '启用';
+  @override
+  String get discovery_alist_remove => '移除';
+  @override
+  String get discovery_alist_name => '显示名称';
+  @override
+  String get discovery_alist_name_hint => '留空则使用主机名';
+  @override
+  String get discovery_alist_url => '站点地址';
+  @override
+  String get discovery_alist_url_hint => '站点根地址，例如 https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid => '请输入有效的 HTTP 或 HTTPS 站点地址';
+  @override
+  String get discovery_alist_url_needs_http_optin => '明文 HTTP 需要先打开下方开关';
+  @override
+  String get discovery_alist_username => '用户名';
+  @override
+  String get discovery_alist_username_hint => '留空则以游客访问';
+  @override
+  String get discovery_alist_password => '密码';
+  @override
+  String get discovery_alist_kinds => '显示在';
+  @override
+  String get discovery_alist_kinds_hint => '至少选择一个要显示此站点的库';
+  @override
+  String get discovery_alist_allow_http => '允许明文 HTTP';
+  @override
+  String get discovery_alist_allow_http_hint => '局域网自建站点需要';
+  @override
+  String get discovery_alist_test => '测试连接';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      '已连接，根目录有 ${count} 个条目';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      '连接失败：${reason}';
+  @override
+  String get media_source_alist_url => '站点地址';
+  @override
+  String get media_source_alist_folder => '站内目录';
+  @override
+  String get media_source_alist_account_hint => '账号留空即以游客访问';
+  @override
+  String get media_source_alist_missing_fields => '请填写站点地址（http 或 https）';
 }
 
 // Path: <root>
@@ -199110,6 +200053,67 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_source_pin => 'Pin to top';
   @override
   String get mihon_source_unpin => 'Unpin';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
 }
 
 /// Flat map(s) containing all translations.
@@ -209604,6 +210608,57 @@ extension on _StringsEn {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -220093,6 +221148,57 @@ extension on _StringsAr {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -230627,6 +231733,57 @@ extension on _StringsDe {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -241152,6 +242309,57 @@ extension on _StringsEs {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -251686,6 +252894,57 @@ extension on _StringsFr {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -262191,6 +263450,57 @@ extension on _StringsId {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -272718,6 +274028,57 @@ extension on _StringsIt {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -283172,6 +284533,57 @@ extension on _StringsJa {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -293630,6 +295042,57 @@ extension on _StringsKo {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -304150,6 +305613,57 @@ extension on _StringsNl {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -314665,6 +316179,57 @@ extension on _StringsPtBr {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -325187,6 +326752,57 @@ extension on _StringsRu {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -335681,6 +337297,57 @@ extension on _StringsTh {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -346190,6 +347857,57 @@ extension on _StringsTr {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -356693,6 +358411,57 @@ extension on _StringsVi {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
@@ -367101,6 +368870,56 @@ extension on _StringsZhCn {
         return '置顶';
       case 'mihon_source_unpin':
         return '取消置顶';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList 站点';
+      case 'discovery_alist_settings_hint':
+        return '浏览并下载 AList 或 OpenList 站点上的文件；账号留空即以游客访问';
+      case 'discovery_alist_add':
+        return '添加站点';
+      case 'discovery_alist_enabled':
+        return '启用';
+      case 'discovery_alist_remove':
+        return '移除';
+      case 'discovery_alist_name':
+        return '显示名称';
+      case 'discovery_alist_name_hint':
+        return '留空则使用主机名';
+      case 'discovery_alist_url':
+        return '站点地址';
+      case 'discovery_alist_url_hint':
+        return '站点根地址，例如 https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return '请输入有效的 HTTP 或 HTTPS 站点地址';
+      case 'discovery_alist_url_needs_http_optin':
+        return '明文 HTTP 需要先打开下方开关';
+      case 'discovery_alist_username':
+        return '用户名';
+      case 'discovery_alist_username_hint':
+        return '留空则以游客访问';
+      case 'discovery_alist_password':
+        return '密码';
+      case 'discovery_alist_kinds':
+        return '显示在';
+      case 'discovery_alist_kinds_hint':
+        return '至少选择一个要显示此站点的库';
+      case 'discovery_alist_allow_http':
+        return '允许明文 HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return '局域网自建站点需要';
+      case 'discovery_alist_test':
+        return '测试连接';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) => '已连接，根目录有 ${count} 个条目';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => '连接失败：${reason}';
+      case 'media_source_alist_url':
+        return '站点地址';
+      case 'media_source_alist_folder':
+        return '站内目录';
+      case 'media_source_alist_account_hint':
+        return '账号留空即以游客访问';
+      case 'media_source_alist_missing_fields':
+        return '请填写站点地址（http 或 https）';
       default:
         return null;
     }
@@ -377533,6 +379352,57 @@ extension on _StringsZhHk {
         return 'Pin to top';
       case 'mihon_source_unpin':
         return 'Unpin';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
       default:
         return null;
     }
