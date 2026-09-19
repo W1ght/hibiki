@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86462 (5086 per locale)
+/// Strings: 86564 (5092 per locale)
 ///
-/// Built on 2026-09-19 at 05:08 UTC
+/// Built on 2026-09-19 at 07:26 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3402,7 +3402,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_popular => 'Popular';
   String get mihon_source_preferences => 'Source preferences';
   String get mihon_source_search => 'Search manga';
-  String get mihon_sources_title => 'Manga sources';
   String get mihon_store_add => 'Add extension store';
   String get mihon_store_edit => 'Edit repository URL';
   String get mihon_store_empty =>
@@ -7099,7 +7098,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   String get video_extensions_title => 'Video source extensions';
-  String get video_online_sources_title => 'Video sources';
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   String get video_online_sources_empty =>
@@ -7109,6 +7107,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_online_stream_choose => 'Choose a stream';
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  String get media_import_segment_local => 'Local';
+  String get media_import_segment_stores => 'Stores';
+  String get media_import_segment_extensions => 'Extensions';
+  String get media_import_segment_sources => 'Sources';
+  String get mihon_source_move_up => 'Move up';
+  String get mihon_source_move_down => 'Move down';
+  String get mihon_source_pin => 'Pin to top';
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -12703,8 +12709,6 @@ class _StringsAr extends _StringsEn {
   String get mihon_source_preferences => 'تفضيلات المصدر';
   @override
   String get mihon_source_search => 'بحث عن مانغا';
-  @override
-  String get mihon_sources_title => 'مصادر المانغا';
   @override
   String get mihon_store_add => 'إضافة متجر إضافات';
   @override
@@ -19114,8 +19118,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -19130,6 +19132,22 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -24843,8 +24861,6 @@ class _StringsDe extends _StringsEn {
   String get mihon_source_preferences => 'Quelleneinstellungen';
   @override
   String get mihon_source_search => 'Manga suchen';
-  @override
-  String get mihon_sources_title => 'Manga-Quellen';
   @override
   String get mihon_store_add => 'Erweiterungsshop hinzufügen';
   @override
@@ -31363,8 +31379,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -31379,6 +31393,22 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -37115,8 +37145,6 @@ class _StringsEs extends _StringsEn {
   String get mihon_source_preferences => 'Preferencias de fuente';
   @override
   String get mihon_source_search => 'Buscar manga';
-  @override
-  String get mihon_sources_title => 'Fuentes de manga';
   @override
   String get mihon_store_add => 'Añadir tienda de extensiones';
   @override
@@ -43665,8 +43693,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -43681,6 +43707,22 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -49430,8 +49472,6 @@ class _StringsFr extends _StringsEn {
   String get mihon_source_preferences => 'Préférences de la source';
   @override
   String get mihon_source_search => 'Rechercher un manga';
-  @override
-  String get mihon_sources_title => 'Sources de manga';
   @override
   String get mihon_store_add => 'Ajouter une boutique d\'extensions';
   @override
@@ -56004,8 +56044,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -56020,6 +56058,22 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -61675,8 +61729,6 @@ class _StringsId extends _StringsEn {
   String get mihon_source_preferences => 'Preferensi sumber';
   @override
   String get mihon_source_search => 'Cari manga';
-  @override
-  String get mihon_sources_title => 'Sumber manga';
   @override
   String get mihon_store_add => 'Tambah toko ekstensi';
   @override
@@ -68142,8 +68194,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -68158,6 +68208,22 @@ class _StringsId extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -73856,8 +73922,6 @@ class _StringsIt extends _StringsEn {
   String get mihon_source_preferences => 'Preferenze fonte';
   @override
   String get mihon_source_search => 'Cerca manga';
-  @override
-  String get mihon_sources_title => 'Fonti manga';
   @override
   String get mihon_store_add => 'Aggiungi store estensioni';
   @override
@@ -80372,8 +80436,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -80388,6 +80450,22 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -85775,8 +85853,6 @@ class _StringsJa extends _StringsEn {
   String get mihon_source_preferences => 'ソース設定';
   @override
   String get mihon_source_search => 'マンガを検索';
-  @override
-  String get mihon_sources_title => 'マンガソース';
   @override
   String get mihon_store_add => '拡張機能ストアを追加';
   @override
@@ -91983,8 +92059,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -91999,6 +92073,22 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -97390,8 +97480,6 @@ class _StringsKo extends _StringsEn {
   String get mihon_source_preferences => '소스 환경설정';
   @override
   String get mihon_source_search => '만화 검색';
-  @override
-  String get mihon_sources_title => '만화 소스';
   @override
   String get mihon_store_add => '확장 프로그램 스토어 추가';
   @override
@@ -103604,8 +103692,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -103620,6 +103706,22 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -109294,8 +109396,6 @@ class _StringsNl extends _StringsEn {
   String get mihon_source_preferences => 'Bronvoorkeuren';
   @override
   String get mihon_source_search => 'Manga zoeken';
-  @override
-  String get mihon_sources_title => 'Mangabronnen';
   @override
   String get mihon_store_add => 'Extensiewinkel toevoegen';
   @override
@@ -115794,8 +115894,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -115810,6 +115908,22 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -121515,8 +121629,6 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_source_preferences => 'Preferências da fonte';
   @override
   String get mihon_source_search => 'Buscar mangá';
-  @override
-  String get mihon_sources_title => 'Fontes de mangá';
   @override
   String get mihon_store_add => 'Adicionar loja de extensões';
   @override
@@ -128037,8 +128149,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -128053,6 +128163,22 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -133731,8 +133857,6 @@ class _StringsRu extends _StringsEn {
   String get mihon_source_preferences => 'Настройки источника';
   @override
   String get mihon_source_search => 'Поиск манги';
-  @override
-  String get mihon_sources_title => 'Источники манги';
   @override
   String get mihon_store_add => 'Добавить магазин расширений';
   @override
@@ -140255,8 +140379,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -140271,6 +140393,22 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -145857,8 +145995,6 @@ class _StringsTh extends _StringsEn {
   String get mihon_source_preferences => 'การตั้งค่าแหล่ง';
   @override
   String get mihon_source_search => 'ค้นหามังงะ';
-  @override
-  String get mihon_sources_title => 'แหล่งมังงะ';
   @override
   String get mihon_store_add => 'เพิ่มร้านส่วนขยาย';
   @override
@@ -152274,8 +152410,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -152290,6 +152424,22 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -157945,8 +158095,6 @@ class _StringsTr extends _StringsEn {
   String get mihon_source_preferences => 'Kaynak tercihleri';
   @override
   String get mihon_source_search => 'Manga ara';
-  @override
-  String get mihon_sources_title => 'Manga kaynakları';
   @override
   String get mihon_store_add => 'Eklenti mağazası ekle';
   @override
@@ -164407,8 +164555,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -164423,6 +164569,22 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -170068,8 +170230,6 @@ class _StringsVi extends _StringsEn {
   String get mihon_source_preferences => 'Cài đặt nguồn';
   @override
   String get mihon_source_search => 'Tìm kiếm truyện tranh';
-  @override
-  String get mihon_sources_title => 'Nguồn truyện tranh';
   @override
   String get mihon_store_add => 'Thêm cửa hàng tiện ích';
   @override
@@ -176513,8 +176673,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -176529,6 +176687,22 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 // Path: <root>
@@ -181711,8 +181885,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mihon_source_search => '搜索漫画';
   @override
-  String get mihon_sources_title => '漫画源';
-  @override
   String get mihon_store_add => '添加扩展仓库';
   @override
   String get mihon_store_edit => '编辑仓库地址';
@@ -186828,7 +187000,7 @@ class _StringsZhCn extends _StringsEn {
   String manga_series_download_all_locked_skipped({required Object count}) =>
       '已跳过 ${count} 个锁定章节';
   @override
-  String get mihon_sources_search_hint => '搜索漫画源';
+  String get mihon_sources_search_hint => '搜索在线源';
   @override
   String get mihon_source_login_forward => '前进';
   @override
@@ -187603,8 +187775,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_extensions_title => '视频源扩展';
   @override
-  String get video_online_sources_title => '视频源';
-  @override
   String get video_online_sources_hint =>
       '第三方 Aniyomi 扩展（extensions-lib 14）。内容来自各扩展对应的站点，在内置播放器中播放。';
   @override
@@ -187617,6 +187787,22 @@ class _StringsZhCn extends _StringsEn {
   String get video_online_stream_choose => '选择线路';
   @override
   String get video_online_stream_none => '该集没有可播放的流。';
+  @override
+  String get media_import_segment_local => '本地';
+  @override
+  String get media_import_segment_stores => '仓库';
+  @override
+  String get media_import_segment_extensions => '扩展';
+  @override
+  String get media_import_segment_sources => '在线源';
+  @override
+  String get mihon_source_move_up => '上移';
+  @override
+  String get mihon_source_move_down => '下移';
+  @override
+  String get mihon_source_pin => '置顶';
+  @override
+  String get mihon_source_unpin => '取消置顶';
 }
 
 // Path: <root>
@@ -192834,8 +193020,6 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_source_preferences => '來源偏好';
   @override
   String get mihon_source_search => '搜索漫畫';
-  @override
-  String get mihon_sources_title => '漫畫源';
   @override
   String get mihon_store_add => '添加擴展倉庫';
   @override
@@ -198896,8 +199080,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -198912,6 +199094,22 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
 }
 
 /// Flat map(s) containing all translations.
@@ -203806,8 +204004,6 @@ extension on _StringsEn {
         return 'Source preferences';
       case 'mihon_source_search':
         return 'Search manga';
-      case 'mihon_sources_title':
-        return 'Manga sources';
       case 'mihon_store_add':
         return 'Add extension store';
       case 'mihon_store_edit':
@@ -209380,8 +209576,6 @@ extension on _StringsEn {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -209394,6 +209588,22 @@ extension on _StringsEn {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -214285,8 +214495,6 @@ extension on _StringsAr {
         return 'تفضيلات المصدر';
       case 'mihon_source_search':
         return 'بحث عن مانغا';
-      case 'mihon_sources_title':
-        return 'مصادر المانغا';
       case 'mihon_store_add':
         return 'إضافة متجر إضافات';
       case 'mihon_store_edit':
@@ -219857,8 +220065,6 @@ extension on _StringsAr {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -219871,6 +220077,22 @@ extension on _StringsAr {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -224789,8 +225011,6 @@ extension on _StringsDe {
         return 'Quelleneinstellungen';
       case 'mihon_source_search':
         return 'Manga suchen';
-      case 'mihon_sources_title':
-        return 'Manga-Quellen';
       case 'mihon_store_add':
         return 'Erweiterungsshop hinzufügen';
       case 'mihon_store_edit':
@@ -230379,8 +230599,6 @@ extension on _StringsDe {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -230393,6 +230611,22 @@ extension on _StringsDe {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -235304,8 +235538,6 @@ extension on _StringsEs {
         return 'Preferencias de fuente';
       case 'mihon_source_search':
         return 'Buscar manga';
-      case 'mihon_sources_title':
-        return 'Fuentes de manga';
       case 'mihon_store_add':
         return 'Añadir tienda de extensiones';
       case 'mihon_store_edit':
@@ -240892,8 +241124,6 @@ extension on _StringsEs {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -240906,6 +241136,22 @@ extension on _StringsEs {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -245823,8 +246069,6 @@ extension on _StringsFr {
         return 'Préférences de la source';
       case 'mihon_source_search':
         return 'Rechercher un manga';
-      case 'mihon_sources_title':
-        return 'Sources de manga';
       case 'mihon_store_add':
         return 'Ajouter une boutique d\'extensions';
       case 'mihon_store_edit':
@@ -251414,8 +251658,6 @@ extension on _StringsFr {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -251428,6 +251670,22 @@ extension on _StringsFr {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -256330,8 +256588,6 @@ extension on _StringsId {
         return 'Preferensi sumber';
       case 'mihon_source_search':
         return 'Cari manga';
-      case 'mihon_sources_title':
-        return 'Sumber manga';
       case 'mihon_store_add':
         return 'Tambah toko ekstensi';
       case 'mihon_store_edit':
@@ -261907,8 +262163,6 @@ extension on _StringsId {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -261921,6 +262175,22 @@ extension on _StringsId {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -266831,8 +267101,6 @@ extension on _StringsIt {
         return 'Preferenze fonte';
       case 'mihon_source_search':
         return 'Cerca manga';
-      case 'mihon_sources_title':
-        return 'Fonti manga';
       case 'mihon_store_add':
         return 'Aggiungi store estensioni';
       case 'mihon_store_edit':
@@ -272422,8 +272690,6 @@ extension on _StringsIt {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -272436,6 +272702,22 @@ extension on _StringsIt {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -277312,8 +277594,6 @@ extension on _StringsJa {
         return 'ソース設定';
       case 'mihon_source_search':
         return 'マンガを検索';
-      case 'mihon_sources_title':
-        return 'マンガソース';
       case 'mihon_store_add':
         return '拡張機能ストアを追加';
       case 'mihon_store_edit':
@@ -282864,8 +283144,6 @@ extension on _StringsJa {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -282878,6 +283156,22 @@ extension on _StringsJa {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -287755,8 +288049,6 @@ extension on _StringsKo {
         return '소스 환경설정';
       case 'mihon_source_search':
         return '만화 검색';
-      case 'mihon_sources_title':
-        return '만화 소스';
       case 'mihon_store_add':
         return '확장 프로그램 스토어 추가';
       case 'mihon_store_edit':
@@ -293310,8 +293602,6 @@ extension on _StringsKo {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -293324,6 +293614,22 @@ extension on _StringsKo {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -298233,8 +298539,6 @@ extension on _StringsNl {
         return 'Bronvoorkeuren';
       case 'mihon_source_search':
         return 'Manga zoeken';
-      case 'mihon_sources_title':
-        return 'Mangabronnen';
       case 'mihon_store_add':
         return 'Extensiewinkel toevoegen';
       case 'mihon_store_edit':
@@ -303818,8 +304122,6 @@ extension on _StringsNl {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -303832,6 +304134,22 @@ extension on _StringsNl {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -308740,8 +309058,6 @@ extension on _StringsPtBr {
         return 'Preferências da fonte';
       case 'mihon_source_search':
         return 'Buscar mangá';
-      case 'mihon_sources_title':
-        return 'Fontes de mangá';
       case 'mihon_store_add':
         return 'Adicionar loja de extensões';
       case 'mihon_store_edit':
@@ -314321,8 +314637,6 @@ extension on _StringsPtBr {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -314335,6 +314649,22 @@ extension on _StringsPtBr {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -319250,8 +319580,6 @@ extension on _StringsRu {
         return 'Настройки источника';
       case 'mihon_source_search':
         return 'Поиск манги';
-      case 'mihon_sources_title':
-        return 'Источники манги';
       case 'mihon_store_add':
         return 'Добавить магазин расширений';
       case 'mihon_store_edit':
@@ -324831,8 +325159,6 @@ extension on _StringsRu {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -324845,6 +325171,22 @@ extension on _StringsRu {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -329740,8 +330082,6 @@ extension on _StringsTh {
         return 'การตั้งค่าแหล่ง';
       case 'mihon_source_search':
         return 'ค้นหามังงะ';
-      case 'mihon_sources_title':
-        return 'แหล่งมังงะ';
       case 'mihon_store_add':
         return 'เพิ่มร้านส่วนขยาย';
       case 'mihon_store_edit':
@@ -335313,8 +335653,6 @@ extension on _StringsTh {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -335327,6 +335665,22 @@ extension on _StringsTh {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -340232,8 +340586,6 @@ extension on _StringsTr {
         return 'Kaynak tercihleri';
       case 'mihon_source_search':
         return 'Manga ara';
-      case 'mihon_sources_title':
-        return 'Manga kaynakları';
       case 'mihon_store_add':
         return 'Eklenti mağazası ekle';
       case 'mihon_store_edit':
@@ -345810,8 +346162,6 @@ extension on _StringsTr {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -345824,6 +346174,22 @@ extension on _StringsTr {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -350724,8 +351090,6 @@ extension on _StringsVi {
         return 'Cài đặt nguồn';
       case 'mihon_source_search':
         return 'Tìm kiếm truyện tranh';
-      case 'mihon_sources_title':
-        return 'Nguồn truyện tranh';
       case 'mihon_store_add':
         return 'Thêm cửa hàng tiện ích';
       case 'mihon_store_edit':
@@ -356301,8 +356665,6 @@ extension on _StringsVi {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -356315,6 +356677,22 @@ extension on _StringsVi {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
@@ -361174,8 +361552,6 @@ extension on _StringsZhCn {
         return '来源偏好';
       case 'mihon_source_search':
         return '搜索漫画';
-      case 'mihon_sources_title':
-        return '漫画源';
       case 'mihon_store_add':
         return '添加扩展仓库';
       case 'mihon_store_edit':
@@ -365983,7 +366359,7 @@ extension on _StringsZhCn {
       case 'manga_series_download_all_locked_skipped':
         return ({required Object count}) => '已跳过 ${count} 个锁定章节';
       case 'mihon_sources_search_hint':
-        return '搜索漫画源';
+        return '搜索在线源';
       case 'mihon_source_login_forward':
         return '前进';
       case 'reader_furigana_dimmed':
@@ -366697,8 +367073,6 @@ extension on _StringsZhCn {
         return 'AniDB 连续无应答，正在退避，请稍后再试';
       case 'video_extensions_title':
         return '视频源扩展';
-      case 'video_online_sources_title':
-        return '视频源';
       case 'video_online_sources_hint':
         return '第三方 Aniyomi 扩展（extensions-lib 14）。内容来自各扩展对应的站点，在内置播放器中播放。';
       case 'video_online_sources_empty':
@@ -366711,6 +367085,22 @@ extension on _StringsZhCn {
         return '选择线路';
       case 'video_online_stream_none':
         return '该集没有可播放的流。';
+      case 'media_import_segment_local':
+        return '本地';
+      case 'media_import_segment_stores':
+        return '仓库';
+      case 'media_import_segment_extensions':
+        return '扩展';
+      case 'media_import_segment_sources':
+        return '在线源';
+      case 'mihon_source_move_up':
+        return '上移';
+      case 'mihon_source_move_down':
+        return '下移';
+      case 'mihon_source_pin':
+        return '置顶';
+      case 'mihon_source_unpin':
+        return '取消置顶';
       default:
         return null;
     }
@@ -371576,8 +371966,6 @@ extension on _StringsZhHk {
         return '來源偏好';
       case 'mihon_source_search':
         return '搜索漫畫';
-      case 'mihon_sources_title':
-        return '漫畫源';
       case 'mihon_store_add':
         return '添加擴展倉庫';
       case 'mihon_store_edit':
@@ -377117,8 +377505,6 @@ extension on _StringsZhHk {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -377131,6 +377517,22 @@ extension on _StringsZhHk {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
       default:
         return null;
     }
