@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 86309 (5077 per locale)
 ///
-/// Built on 2026-09-18 at 18:09 UTC
+/// Built on 2026-09-19 at 02:48 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -187273,7 +187273,7 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_lookup_page_escape_minimize => '查词页按返回键最小化窗口';
   @override
   String get shortcut_lookup_page_escape_minimize_hint =>
-      '置顶热键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
+      '置顶快捷键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       '服务器无法抽取该字幕轨，已改由播放器直接渲染（不可逐字查词）：${label}';
@@ -366057,7 +366057,7 @@ extension on _StringsZhCn {
       case 'shortcut_lookup_page_escape_minimize':
         return '查词页按返回键最小化窗口';
       case 'shortcut_lookup_page_escape_minimize_hint':
-        return '置顶热键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
+        return '置顶快捷键唤出查词页后，在查词页按返回键（默认 Esc）把窗口收回去，直接回到之前的程序；查询和结果原样保留。';
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             '服务器无法抽取该字幕轨，已改由播放器直接渲染（不可逐字查词）：${label}';
