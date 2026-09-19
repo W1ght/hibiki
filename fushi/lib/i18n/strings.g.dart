@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86309 (5077 per locale)
+/// Strings: 86326 (5078 per locale)
 ///
-/// Built on 2026-09-19 at 02:48 UTC
+/// Built on 2026-09-19 at 04:08 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7096,6 +7096,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'After the bring-to-front hotkey, press the back key (Esc by default) on the lookup page to send the window away and return to what you were doing. The query and results are kept.';
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -19095,6 +19097,9 @@ class _StringsAr extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -31322,6 +31327,9 @@ class _StringsDe extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -43602,6 +43610,9 @@ class _StringsEs extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -55919,6 +55930,9 @@ class _StringsFr extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -68035,6 +68049,9 @@ class _StringsId extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -80243,6 +80260,9 @@ class _StringsIt extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -91832,6 +91852,9 @@ class _StringsJa extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -103431,6 +103454,9 @@ class _StringsKo extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -115599,6 +115625,9 @@ class _StringsNl extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -127820,6 +127849,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -140016,6 +140048,9 @@ class _StringsRu extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -152013,6 +152048,9 @@ class _StringsTh extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -164124,6 +164162,9 @@ class _StringsTr extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -176208,6 +176249,9 @@ class _StringsVi extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 // Path: <root>
@@ -187277,6 +187321,8 @@ class _StringsZhCn extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       '服务器无法抽取该字幕轨，已改由播放器直接渲染（不可逐字查词）：${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff => 'AniDB 连续无应答，正在退避，请稍后再试';
 }
 
 // Path: <root>
@@ -198550,6 +198596,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String video_subtitle_remote_player_rendered({required Object label}) =>
       'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+  @override
+  String get video_anidb_login_test_failed_backoff =>
+      'AniDB has not answered several requests in a row; backing off, try again shortly';
 }
 
 /// Flat map(s) containing all translations.
@@ -209014,6 +209063,8 @@ extension on _StringsEn {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -219473,6 +219524,8 @@ extension on _StringsAr {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -229977,6 +230030,8 @@ extension on _StringsDe {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -240472,6 +240527,8 @@ extension on _StringsEs {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -250976,6 +251033,8 @@ extension on _StringsFr {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -261451,6 +261510,8 @@ extension on _StringsId {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -271948,6 +272009,8 @@ extension on _StringsIt {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -282372,6 +282435,8 @@ extension on _StringsJa {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -292800,6 +292865,8 @@ extension on _StringsKo {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -303290,6 +303357,8 @@ extension on _StringsNl {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -313775,6 +313844,8 @@ extension on _StringsPtBr {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -324267,6 +324338,8 @@ extension on _StringsRu {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -334731,6 +334804,8 @@ extension on _StringsTh {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -345210,6 +345285,8 @@ extension on _StringsTr {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -355683,6 +355760,8 @@ extension on _StringsVi {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
@@ -366061,6 +366140,8 @@ extension on _StringsZhCn {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             '服务器无法抽取该字幕轨，已改由播放器直接渲染（不可逐字查词）：${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB 连续无应答，正在退避，请稍后再试';
       default:
         return null;
     }
@@ -376463,6 +376544,8 @@ extension on _StringsZhHk {
       case 'video_subtitle_remote_player_rendered':
         return ({required Object label}) =>
             'Server cannot extract this subtitle track; the player renders it directly (no word lookup): ${label}';
+      case 'video_anidb_login_test_failed_backoff':
+        return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       default:
         return null;
     }
