@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86462 (5086 per locale)
+/// Strings: 86445 (5085 per locale)
 ///
-/// Built on 2026-09-19 at 03:29 UTC
+/// Built on 2026-09-19 at 04:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7107,7 +7107,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_online_stream_choose => 'Choose a stream';
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -19126,8 +19125,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -31374,8 +31371,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -43675,8 +43670,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -56013,8 +56006,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -68150,8 +68141,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -80379,8 +80368,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -91989,8 +91976,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -103609,8 +103594,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -115798,8 +115781,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -128040,8 +128021,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -140257,8 +140236,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -152275,8 +152252,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -164407,8 +164382,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -176512,8 +176485,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 // Path: <root>
@@ -187600,8 +187571,6 @@ class _StringsZhCn extends _StringsEn {
   String get video_online_stream_choose => '选择线路';
   @override
   String get video_online_stream_none => '该集没有可播放的流。';
-  @override
-  String get video_online_stream_resolving => '正在解析流…';
 }
 
 // Path: <root>
@@ -198894,8 +198863,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
-  @override
-  String get video_online_stream_resolving => 'Resolving stream…';
 }
 
 /// Flat map(s) containing all translations.
@@ -209376,8 +209343,6 @@ extension on _StringsEn {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -219853,8 +219818,6 @@ extension on _StringsAr {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -230375,8 +230338,6 @@ extension on _StringsDe {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -240888,8 +240849,6 @@ extension on _StringsEs {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -251410,8 +251369,6 @@ extension on _StringsFr {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -261903,8 +261860,6 @@ extension on _StringsId {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -272418,8 +272373,6 @@ extension on _StringsIt {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -282860,8 +282813,6 @@ extension on _StringsJa {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -293306,8 +293257,6 @@ extension on _StringsKo {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -303814,8 +303763,6 @@ extension on _StringsNl {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -314317,8 +314264,6 @@ extension on _StringsPtBr {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -324827,8 +324772,6 @@ extension on _StringsRu {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -335309,8 +335252,6 @@ extension on _StringsTh {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -345806,8 +345747,6 @@ extension on _StringsTr {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -356297,8 +356236,6 @@ extension on _StringsVi {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
@@ -366693,8 +366630,6 @@ extension on _StringsZhCn {
         return '选择线路';
       case 'video_online_stream_none':
         return '该集没有可播放的流。';
-      case 'video_online_stream_resolving':
-        return '正在解析流…';
       default:
         return null;
     }
@@ -377113,8 +377048,6 @@ extension on _StringsZhHk {
         return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
-      case 'video_online_stream_resolving':
-        return 'Resolving stream…';
       default:
         return null;
     }
