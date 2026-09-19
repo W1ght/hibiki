@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87023 (5119 per locale)
+/// Strings: 87125 (5125 per locale)
 ///
-/// Built on 2026-09-19 at 12:10 UTC
+/// Built on 2026-09-19 at 16:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7154,6 +7154,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Leave the account empty to browse as a guest';
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  String get video_watch_progress_clear => 'Clear watch progress';
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -19253,6 +19261,20 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -31580,6 +31602,20 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -43960,6 +43996,20 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -56377,6 +56427,20 @@ class _StringsFr extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -68593,6 +68657,20 @@ class _StringsId extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -80901,6 +80979,20 @@ class _StringsIt extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -92590,6 +92682,20 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -104289,6 +104395,20 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -116557,6 +116677,20 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -128878,6 +129012,20 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -141174,6 +141322,20 @@ class _StringsRu extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -153271,6 +153433,20 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -165482,6 +165658,20 @@ class _StringsTr extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -177666,6 +177856,20 @@ class _StringsVi extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 // Path: <root>
@@ -188823,6 +189027,19 @@ class _StringsZhCn extends _StringsEn {
   String get media_source_alist_account_hint => '账号留空即以游客访问';
   @override
   String get media_source_alist_missing_fields => '请填写站点地址（http 或 https）';
+  @override
+  String get video_watch_progress_clear => '清除观看进度';
+  @override
+  String get video_watch_progress_cleared => '已清除观看进度';
+  @override
+  String get popup_instant_scroll_wheel_step => '瞬时滚动滚轮步长';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      '滚轮每格让弹窗跳动的距离，占弹窗高度的比例（再乘以弹窗滚动速度）。';
+  @override
+  String get popup_instant_scroll_touch_step => '瞬时滚动触摸步长';
+  @override
+  String get popup_instant_scroll_touch_step_hint => '手指滑过弹窗高度的这一比例后，弹窗跳动一步。';
 }
 
 // Path: <root>
@@ -200196,6 +200413,20 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
 }
 
 /// Flat map(s) containing all translations.
@@ -210745,6 +210976,18 @@ extension on _StringsEn {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -221289,6 +221532,18 @@ extension on _StringsAr {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -231878,6 +232133,18 @@ extension on _StringsDe {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -242458,6 +242725,18 @@ extension on _StringsEs {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -253047,6 +253326,18 @@ extension on _StringsFr {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -263607,6 +263898,18 @@ extension on _StringsId {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -274189,6 +274492,18 @@ extension on _StringsIt {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -284698,6 +285013,18 @@ extension on _StringsJa {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -295211,6 +295538,18 @@ extension on _StringsKo {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -305786,6 +306125,18 @@ extension on _StringsNl {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -316356,6 +316707,18 @@ extension on _StringsPtBr {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -326933,6 +327296,18 @@ extension on _StringsRu {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -337482,6 +337857,18 @@ extension on _StringsTh {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -348046,6 +348433,18 @@ extension on _StringsTr {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -358604,6 +359003,18 @@ extension on _StringsVi {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
@@ -369066,6 +369477,18 @@ extension on _StringsZhCn {
         return '账号留空即以游客访问';
       case 'media_source_alist_missing_fields':
         return '请填写站点地址（http 或 https）';
+      case 'video_watch_progress_clear':
+        return '清除观看进度';
+      case 'video_watch_progress_cleared':
+        return '已清除观看进度';
+      case 'popup_instant_scroll_wheel_step':
+        return '瞬时滚动滚轮步长';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return '滚轮每格让弹窗跳动的距离，占弹窗高度的比例（再乘以弹窗滚动速度）。';
+      case 'popup_instant_scroll_touch_step':
+        return '瞬时滚动触摸步长';
+      case 'popup_instant_scroll_touch_step_hint':
+        return '手指滑过弹窗高度的这一比例后，弹窗跳动一步。';
       default:
         return null;
     }
@@ -379553,6 +379976,18 @@ extension on _StringsZhHk {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
       default:
         return null;
     }
