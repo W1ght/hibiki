@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87091 (5123 per locale)
+/// Strings: 87125 (5125 per locale)
 ///
-/// Built on 2026-09-19 at 14:37 UTC
+/// Built on 2026-09-19 at 16:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7154,6 +7154,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Leave the account empty to browse as a guest';
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  String get video_watch_progress_clear => 'Clear watch progress';
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   String get popup_instant_scroll_wheel_step_hint =>
       'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
@@ -19259,6 +19261,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
@@ -31596,6 +31602,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
@@ -43986,6 +43996,10 @@ class _StringsEs extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
@@ -56414,6 +56428,10 @@ class _StringsFr extends _StringsEn {
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
   @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
   String get popup_instant_scroll_wheel_step_hint =>
@@ -68639,6 +68657,10 @@ class _StringsId extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
@@ -80958,6 +80980,10 @@ class _StringsIt extends _StringsEn {
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
   @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
   String get popup_instant_scroll_wheel_step_hint =>
@@ -92656,6 +92682,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
@@ -104365,6 +104395,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
@@ -116643,6 +116677,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
@@ -128975,6 +129013,10 @@ class _StringsPtBr extends _StringsEn {
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
   @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
   String get popup_instant_scroll_wheel_step_hint =>
@@ -141281,6 +141323,10 @@ class _StringsRu extends _StringsEn {
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
   @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
   String get popup_instant_scroll_wheel_step_hint =>
@@ -153387,6 +153433,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
   @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
@@ -165609,6 +165659,10 @@ class _StringsTr extends _StringsEn {
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
   @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
   String get popup_instant_scroll_wheel_step_hint =>
@@ -177803,6 +177857,10 @@ class _StringsVi extends _StringsEn {
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
   @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
   String get popup_instant_scroll_wheel_step_hint =>
@@ -188969,6 +189027,10 @@ class _StringsZhCn extends _StringsEn {
   String get media_source_alist_account_hint => '账号留空即以游客访问';
   @override
   String get media_source_alist_missing_fields => '请填写站点地址（http 或 https）';
+  @override
+  String get video_watch_progress_clear => '清除观看进度';
+  @override
+  String get video_watch_progress_cleared => '已清除观看进度';
   @override
   String get popup_instant_scroll_wheel_step => '瞬时滚动滚轮步长';
   @override
@@ -200352,6 +200414,10 @@ class _StringsZhHk extends _StringsEn {
   String get media_source_alist_missing_fields =>
       'Enter the site URL (http or https)';
   @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
   String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
   @override
   String get popup_instant_scroll_wheel_step_hint =>
@@ -210910,6 +210976,10 @@ extension on _StringsEn {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -221462,6 +221532,10 @@ extension on _StringsAr {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -232059,6 +232133,10 @@ extension on _StringsDe {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -242647,6 +242725,10 @@ extension on _StringsEs {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -253244,6 +253326,10 @@ extension on _StringsFr {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -263812,6 +263898,10 @@ extension on _StringsId {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -274402,6 +274492,10 @@ extension on _StringsIt {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -284919,6 +285013,10 @@ extension on _StringsJa {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -295440,6 +295538,10 @@ extension on _StringsKo {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -306023,6 +306125,10 @@ extension on _StringsNl {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -316601,6 +316707,10 @@ extension on _StringsPtBr {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -327186,6 +327296,10 @@ extension on _StringsRu {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -337743,6 +337857,10 @@ extension on _StringsTh {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -348315,6 +348433,10 @@ extension on _StringsTr {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -358881,6 +359003,10 @@ extension on _StringsVi {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -369351,6 +369477,10 @@ extension on _StringsZhCn {
         return '账号留空即以游客访问';
       case 'media_source_alist_missing_fields':
         return '请填写站点地址（http 或 https）';
+      case 'video_watch_progress_clear':
+        return '清除观看进度';
+      case 'video_watch_progress_cleared':
+        return '已清除观看进度';
       case 'popup_instant_scroll_wheel_step':
         return '瞬时滚动滚轮步长';
       case 'popup_instant_scroll_wheel_step_hint':
@@ -379846,6 +379976,10 @@ extension on _StringsZhHk {
         return 'Leave the account empty to browse as a guest';
       case 'media_source_alist_missing_fields':
         return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
       case 'popup_instant_scroll_wheel_step':
         return 'Instant scroll wheel step';
       case 'popup_instant_scroll_wheel_step_hint':
