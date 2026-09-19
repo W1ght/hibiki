@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87125 (5125 per locale)
+/// Strings: 87193 (5129 per locale)
 ///
-/// Built on 2026-09-19 at 16:40 UTC
+/// Built on 2026-09-19 at 17:31 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7162,6 +7162,14 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -19275,6 +19283,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -31616,6 +31636,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -44010,6 +44042,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -56441,6 +56485,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -68671,6 +68727,18 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -80993,6 +81061,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -92696,6 +92776,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -104409,6 +104501,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -116691,6 +116795,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -129026,6 +129142,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -141336,6 +141464,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -153447,6 +153587,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -165672,6 +165824,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -177870,6 +178034,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 // Path: <root>
@@ -189040,6 +189216,16 @@ class _StringsZhCn extends _StringsEn {
   String get popup_instant_scroll_touch_step => '瞬时滚动触摸步长';
   @override
   String get popup_instant_scroll_touch_step_hint => '手指滑过弹窗高度的这一比例后，弹窗跳动一步。';
+  @override
+  String get video_subdl_settings_hint =>
+      '为电影与剧集提供英文及多语种字幕，按 IMDb / TMDB id 匹配。需要免费 API key；下载按 IP 计匿名每日额度。';
+  @override
+  String get video_subdl_enabled_hint => '关闭后即使已填 API key 也不再搜索 SubDL。';
+  @override
+  String get video_subdl_api_key_hint => '在 subdl.com/panel/api 免费获取 API key';
+  @override
+  String get onboarding_online_services_subdl =>
+      '用于查找电影与剧集的英文及多语种字幕。注册免费 SubDL 账号后在面板生成 API 密钥，填入设置并开启字幕来源。';
 }
 
 // Path: <root>
@@ -200427,6 +200613,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_instant_scroll_touch_step_hint =>
       'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
 }
 
 /// Flat map(s) containing all translations.
@@ -210988,6 +211186,14 @@ extension on _StringsEn {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -221544,6 +221750,14 @@ extension on _StringsAr {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -232145,6 +232359,14 @@ extension on _StringsDe {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -242737,6 +242959,14 @@ extension on _StringsEs {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -253338,6 +253568,14 @@ extension on _StringsFr {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -263910,6 +264148,14 @@ extension on _StringsId {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -274504,6 +274750,14 @@ extension on _StringsIt {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -285025,6 +285279,14 @@ extension on _StringsJa {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -295550,6 +295812,14 @@ extension on _StringsKo {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -306137,6 +306407,14 @@ extension on _StringsNl {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -316719,6 +316997,14 @@ extension on _StringsPtBr {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -327308,6 +327594,14 @@ extension on _StringsRu {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -337869,6 +338163,14 @@ extension on _StringsTh {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -348445,6 +348747,14 @@ extension on _StringsTr {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -359015,6 +359325,14 @@ extension on _StringsVi {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
@@ -369489,6 +369807,14 @@ extension on _StringsZhCn {
         return '瞬时滚动触摸步长';
       case 'popup_instant_scroll_touch_step_hint':
         return '手指滑过弹窗高度的这一比例后，弹窗跳动一步。';
+      case 'video_subdl_settings_hint':
+        return '为电影与剧集提供英文及多语种字幕，按 IMDb / TMDB id 匹配。需要免费 API key；下载按 IP 计匿名每日额度。';
+      case 'video_subdl_enabled_hint':
+        return '关闭后即使已填 API key 也不再搜索 SubDL。';
+      case 'video_subdl_api_key_hint':
+        return '在 subdl.com/panel/api 免费获取 API key';
+      case 'onboarding_online_services_subdl':
+        return '用于查找电影与剧集的英文及多语种字幕。注册免费 SubDL 账号后在面板生成 API 密钥，填入设置并开启字幕来源。';
       default:
         return null;
     }
@@ -379988,6 +380314,14 @@ extension on _StringsZhHk {
         return 'Instant scroll touch step';
       case 'popup_instant_scroll_touch_step_hint':
         return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
       default:
         return null;
     }
