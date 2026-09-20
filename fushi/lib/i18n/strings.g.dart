@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87176 (5128 per locale)
+/// Strings: 87380 (5140 per locale)
 ///
-/// Built on 2026-09-19 at 19:43 UTC
+/// Built on 2026-09-20 at 03:03 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7169,6 +7169,21 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Get a free API key at subdl.com/panel/api';
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  String get jellyfin_routes_title => 'Routes';
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  String get jellyfin_route_active_label => 'In use';
+  String get jellyfin_route_url => 'Route URL';
+  String get jellyfin_route_add => 'Add route';
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  String get jellyfin_route_exists => 'This route is already in the list';
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  String get jellyfin_route_remove => 'Remove route';
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -19292,6 +19307,33 @@ class _StringsAr extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -31643,6 +31685,33 @@ class _StringsDe extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -44047,6 +44116,33 @@ class _StringsEs extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -56488,6 +56584,33 @@ class _StringsFr extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -68728,6 +68851,33 @@ class _StringsId extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -81060,6 +81210,33 @@ class _StringsIt extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -92773,6 +92950,33 @@ class _StringsJa extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -104496,6 +104700,33 @@ class _StringsKo extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -116788,6 +117019,33 @@ class _StringsNl extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -129133,6 +129391,33 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -141453,6 +141738,33 @@ class _StringsRu extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -153574,6 +153886,33 @@ class _StringsTh extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -165809,6 +166148,33 @@ class _StringsTr extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -178017,6 +178383,33 @@ class _StringsVi extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 // Path: <root>
@@ -189195,6 +189588,33 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       '用于查找电影与剧集的英文及多语种字幕。注册免费 SubDL 账号后在面板生成 API 密钥，填入设置并开启字幕来源。';
+  @override
+  String get jellyfin_routes_title => '线路';
+  @override
+  String get jellyfin_routes_hint =>
+      '为这台服务器添加其它访问地址（局域网 / 公网 / 反代），随时切换；登录状态在每条线路上通用。';
+  @override
+  String get jellyfin_route_primary_label => '登录地址';
+  @override
+  String get jellyfin_route_active_label => '使用中';
+  @override
+  String get jellyfin_route_url => '线路地址';
+  @override
+  String get jellyfin_route_add => '添加线路';
+  @override
+  String get jellyfin_route_add_failed => '添加线路失败';
+  @override
+  String get jellyfin_route_exists => '这条线路已经在列表里';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      '${url} 上的服务器不接受当前登录，可能不是同一台服务器，或登录已过期：${reason}';
+  @override
+  String get jellyfin_route_remove => '删除线路';
+  @override
+  String jellyfin_route_switched({required Object url}) => '已切换到 ${url}';
+  @override
+  String get media_server_route_switch => '切换线路';
 }
 
 // Path: <root>
@@ -200592,6 +201012,33 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get onboarding_online_services_subdl =>
       'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
 }
 
 /// Flat map(s) containing all translations.
@@ -211159,6 +211606,31 @@ extension on _StringsEn {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -221721,6 +222193,31 @@ extension on _StringsAr {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -232328,6 +232825,31 @@ extension on _StringsDe {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -242926,6 +243448,31 @@ extension on _StringsEs {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -253533,6 +254080,31 @@ extension on _StringsFr {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -264111,6 +264683,31 @@ extension on _StringsId {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -274711,6 +275308,31 @@ extension on _StringsIt {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -285238,6 +285860,31 @@ extension on _StringsJa {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -295769,6 +296416,31 @@ extension on _StringsKo {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -306362,6 +307034,31 @@ extension on _StringsNl {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -316950,6 +317647,31 @@ extension on _StringsPtBr {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -327545,6 +328267,31 @@ extension on _StringsRu {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -338112,6 +338859,31 @@ extension on _StringsTh {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -348694,6 +349466,31 @@ extension on _StringsTr {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -359270,6 +360067,31 @@ extension on _StringsVi {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
@@ -369750,6 +370572,31 @@ extension on _StringsZhCn {
         return '在 subdl.com/panel/api 免费获取 API key';
       case 'onboarding_online_services_subdl':
         return '用于查找电影与剧集的英文及多语种字幕。注册免费 SubDL 账号后在面板生成 API 密钥，填入设置并开启字幕来源。';
+      case 'jellyfin_routes_title':
+        return '线路';
+      case 'jellyfin_routes_hint':
+        return '为这台服务器添加其它访问地址（局域网 / 公网 / 反代），随时切换；登录状态在每条线路上通用。';
+      case 'jellyfin_route_primary_label':
+        return '登录地址';
+      case 'jellyfin_route_active_label':
+        return '使用中';
+      case 'jellyfin_route_url':
+        return '线路地址';
+      case 'jellyfin_route_add':
+        return '添加线路';
+      case 'jellyfin_route_add_failed':
+        return '添加线路失败';
+      case 'jellyfin_route_exists':
+        return '这条线路已经在列表里';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            '${url} 上的服务器不接受当前登录，可能不是同一台服务器，或登录已过期：${reason}';
+      case 'jellyfin_route_remove':
+        return '删除线路';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => '已切换到 ${url}';
+      case 'media_server_route_switch':
+        return '切换线路';
       default:
         return null;
     }
@@ -380255,6 +381102,31 @@ extension on _StringsZhHk {
         return 'Get a free API key at subdl.com/panel/api';
       case 'onboarding_online_services_subdl':
         return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
       default:
         return null;
     }
