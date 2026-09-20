@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87397 (5141 per locale)
+/// Strings: 87533 (5149 per locale)
 ///
-/// Built on 2026-09-20 at 09:53 UTC
+/// Built on 2026-09-20 at 11:47 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7276,6 +7276,20 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get media_server_route_switch => 'Switch route';
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -19514,6 +19528,28 @@ class _StringsAr extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -31989,6 +32025,28 @@ class _StringsDe extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -44514,6 +44572,28 @@ class _StringsEs extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -57075,6 +57155,28 @@ class _StringsFr extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -69432,6 +69534,28 @@ class _StringsId extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -81886,6 +82010,28 @@ class _StringsIt extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -93708,6 +93854,28 @@ class _StringsJa extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -105540,6 +105708,28 @@ class _StringsKo extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -117950,6 +118140,28 @@ class _StringsNl extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -130414,6 +130626,28 @@ class _StringsPtBr extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -142853,6 +143087,28 @@ class _StringsRu extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -155090,6 +155346,28 @@ class _StringsTh extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -167443,6 +167721,28 @@ class _StringsTr extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -179767,6 +180067,28 @@ class _StringsVi extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 // Path: <root>
@@ -191046,6 +191368,26 @@ class _StringsZhCn extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB 第 ${number} 集';
+  @override
+  String get collection_tmdb_ordering => 'TMDB 集编排…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB 默认排序';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      '选定这部剧按 TMDB 哪一套排序划分季集；AniDB 集级链接随之按该排序重算。';
+  @override
+  String get collection_tmdb_ordering_none => 'TMDB 上这部剧没有备选排序';
+  @override
+  String get collection_tmdb_ordering_unavailable => '作品还没有 TMDB 身份，先刮削';
+  @override
+  String get collection_tmdb_ordering_saved => '已选定排序，正在重刮…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} 组 · ${episodes} 集';
+  @override
+  String get video_work_field_episode_group => 'TMDB 集编排';
 }
 
 // Path: <root>
@@ -202549,6 +202891,28 @@ class _StringsZhHk extends _StringsEn {
   @override
   String collection_episode_anidb_number({required Object number}) =>
       'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts({
+    required Object groups,
+    required Object episodes,
+  }) => '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
 }
 
 /// Flat map(s) containing all translations.
@@ -213149,6 +213513,23 @@ extension on _StringsEn {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -223744,6 +224125,23 @@ extension on _StringsAr {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -234388,6 +234786,23 @@ extension on _StringsDe {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -245022,6 +245437,23 @@ extension on _StringsEs {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -255664,6 +256096,23 @@ extension on _StringsFr {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -266276,6 +266725,23 @@ extension on _StringsId {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -276911,6 +277377,23 @@ extension on _StringsIt {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -287470,6 +287953,23 @@ extension on _StringsJa {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -298034,6 +298534,23 @@ extension on _StringsKo {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -308664,6 +309181,23 @@ extension on _StringsNl {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -319289,6 +319823,23 @@ extension on _StringsPtBr {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -329920,6 +330471,23 @@ extension on _StringsRu {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -340520,6 +341088,23 @@ extension on _StringsTh {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -351136,6 +351721,23 @@ extension on _StringsTr {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -361746,6 +362348,23 @@ extension on _StringsVi {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
@@ -372257,6 +372876,23 @@ extension on _StringsZhCn {
         return '切换线路';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB 第 ${number} 集';
+      case 'collection_tmdb_ordering':
+        return 'TMDB 集编排…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB 默认排序';
+      case 'collection_tmdb_ordering_hint':
+        return '选定这部剧按 TMDB 哪一套排序划分季集；AniDB 集级链接随之按该排序重算。';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB 上这部剧没有备选排序';
+      case 'collection_tmdb_ordering_unavailable':
+        return '作品还没有 TMDB 身份，先刮削';
+      case 'collection_tmdb_ordering_saved':
+        return '已选定排序，正在重刮…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} 组 · ${episodes} 集';
+      case 'video_work_field_episode_group':
+        return 'TMDB 集编排';
       default:
         return null;
     }
@@ -382794,6 +383430,23 @@ extension on _StringsZhHk {
         return 'Switch route';
       case 'collection_episode_anidb_number':
         return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
       default:
         return null;
     }
