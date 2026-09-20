@@ -6,15 +6,15 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:fushi_core/fushi_core.dart';
 import 'package:sqlite3/sqlite3.dart' as sqlite;
 
-/// v108（AniDB 对齐 Shoko）：`anidb_file_identities` 加 `miss_attempts`——
-/// AniDB FILE 回 320「未收录」的连续复查次数（对齐 Shoko
-/// `MaxAutoScanAttemptsPerFile`），识别成功时归零。存量行默认 0 即「尚未计数」。
+/// v109（AniDB 对齐 Shoko，集级）：`anidb_file_identities` 加
+/// `episode_aired_at`——UDP `EPISODE` 返回的集播出日（UTC 零点毫秒），供
+/// AniDB 集 → TMDB 集按「播出日 + 标题」逐集链接。存量行 null，sweep 时补问回填。
 void main() {
   test(
-    'v107 → v108 adds miss_attempts with 0 as default and keeps existing rows',
+    'v108 → v109 adds nullable episode_aired_at and keeps existing rows',
     () async {
       final Directory directory = Directory.systemTemp.createTempSync(
-        'anidbmiss108',
+        'anidbaired109',
       );
       addTearDown(() => directory.deleteSync(recursive: true));
       final String path = '${directory.path}/test.db';
@@ -26,24 +26,19 @@ void main() {
       expect(await original.getCollectionBookAliases(), isEmpty);
       await original.close();
 
-      // 把表退回 v107 形态（没有 miss_attempts 列）并塞两行存量数据：
-      // 一行已识别、一行 320 未收录。
+      // 把表退回 v108 形态（没有 episode_aired_at 列）并塞一行已识别的存量数据。
       final sqlite.Database raw = sqlite.sqlite3.open(path);
       raw.execute(
-        'ALTER TABLE anidb_file_identities DROP COLUMN miss_attempts',
+        'ALTER TABLE anidb_file_identities DROP COLUMN episode_aired_at',
       );
       raw.execute(
         'INSERT INTO anidb_file_identities (ed2k, file_size, anidb_file_id, '
-        'anidb_anime_id, anidb_episode_id, file_path, file_modified_at, '
-        "resolved_at, updated_at) VALUES ('0123456789abcdef0123456789abcdef', "
-        "1, 200, 100, 300, '/v/Show.mkv', 1000, 2000, 2000)",
+        'anidb_anime_id, anidb_episode_id, episode_number, file_path, '
+        'file_modified_at, miss_attempts, resolved_at, updated_at) VALUES '
+        "('7f4b11b73f63e7500b8cb0e15a249951', 1, 4213890, 19079, 313835, '04', "
+        "'/v/Bleach S17E44.mkv', 1000, 0, 2000, 2000)",
       );
-      raw.execute(
-        'INSERT INTO anidb_file_identities (ed2k, file_size, file_path, '
-        "resolved_at, updated_at) VALUES ('ffffffffffffffffffffffffffffffff', "
-        "2, '/v/Unknown.mkv', 3000, 3000)",
-      );
-      raw.execute('PRAGMA user_version = 107');
+      raw.execute('PRAGMA user_version = 108');
       raw.dispose();
 
       final FushiDatabase migrated = FushiDatabase.atFile(
@@ -52,32 +47,29 @@ void main() {
       );
       expect(migrated.schemaVersion, 109);
 
-      // 存量行保留，新列默认 0。
+      // 存量行保留，新列为 null（= 尚未取到播出日）。
       final AnidbFileIdentityRow? hit = await migrated.anidbFileIdentityByHash(
-        ed2k: '0123456789abcdef0123456789abcdef',
+        ed2k: '7f4b11b73f63e7500b8cb0e15a249951',
         fileSize: 1,
       );
       expect(hit, isNotNull);
-      expect(hit!.anidbFileId, 200);
-      expect(hit.filePath, '/v/Show.mkv');
-      expect(hit.missAttempts, 0);
-      final AnidbFileIdentityRow? miss = await migrated.anidbFileIdentityByHash(
-        ed2k: 'ffffffffffffffffffffffffffffffff',
-        fileSize: 2,
-      );
-      expect(miss, isNotNull);
-      expect(miss!.anidbFileId, isNull);
-      expect(miss.missAttempts, 0);
+      expect(hit!.anidbEpisodeId, 313835);
+      expect(hit.episodeNumber, '04');
+      expect(hit.episodeAiredAt, isNull);
 
-      // 新列写得进、读得出（未收录行计一次复查）。
+      // 回填写得进、读得出（其余列原样）。
       await migrated.upsertAnidbFileIdentity(
-        const AnidbFileIdentitiesCompanion(
-          ed2k: Value('ffffffffffffffffffffffffffffffff'),
-          fileSize: Value(2),
-          filePath: Value('/v/Unknown.mkv'),
-          missAttempts: Value(1),
-          resolvedAt: Value(4000),
-          updatedAt: Value(4000),
+        AnidbFileIdentitiesCompanion(
+          ed2k: const Value('7f4b11b73f63e7500b8cb0e15a249951'),
+          fileSize: const Value(1),
+          anidbFileId: const Value(4213890),
+          anidbAnimeId: const Value(19079),
+          anidbEpisodeId: const Value(313835),
+          episodeNumber: const Value('04'),
+          episodeAiredAt: Value(DateTime.utc(2026, 4, 25).millisecondsSinceEpoch),
+          filePath: const Value('/v/Bleach S17E44.mkv'),
+          resolvedAt: const Value(2000),
+          updatedAt: const Value(4000),
         ),
       );
       await migrated.close();
@@ -95,31 +87,26 @@ void main() {
             .select('PRAGMA table_info(anidb_file_identities)')
             .map((row) => row['name'])
             .toList(),
-        contains('miss_attempts'),
+        contains('episode_aired_at'),
       );
-      final AnidbFileIdentityRow? counted = await reopened
+      final AnidbFileIdentityRow? filled = await reopened
           .anidbFileIdentityByHash(
-            ed2k: 'ffffffffffffffffffffffffffffffff',
-            fileSize: 2,
+            ed2k: '7f4b11b73f63e7500b8cb0e15a249951',
+            fileSize: 1,
           );
-      expect(counted?.missAttempts, 1);
-      expect(counted?.resolvedAt, 4000);
       expect(
-        (await reopened.anidbFileIdentityByHash(
-          ed2k: '0123456789abcdef0123456789abcdef',
-          fileSize: 1,
-        ))?.missAttempts,
-        0,
-        reason: '已识别行不受影响',
+        filled?.episodeAiredAt,
+        DateTime.utc(2026, 4, 25).millisecondsSinceEpoch,
       );
+      expect(filled?.anidbEpisodeId, 313835, reason: '身份列不受回填影响');
     },
   );
 
   test(
-    're-running the v108 step on an already-migrated file is idempotent',
+    're-running the v109 step on an already-migrated file is idempotent',
     () async {
       final Directory directory = Directory.systemTemp.createTempSync(
-        'anidbmiss108b',
+        'anidbaired109b',
       );
       addTearDown(() => directory.deleteSync(recursive: true));
       final String path = '${directory.path}/test.db';
@@ -130,15 +117,17 @@ void main() {
       expect(await original.getCollectionBookAliases(), isEmpty);
       await original.close();
 
-      // 列已在（v108 形态），只把版本号倒回 107：升级步必须被 _columnExists
+      // 列已在（v109 形态），只把版本号倒回 108：升级步必须被 _columnExists
       // 短路，不能因为 duplicate column 炸掉。
       final sqlite.Database raw = sqlite.sqlite3.open(path);
       raw.execute(
-        'INSERT INTO anidb_file_identities (ed2k, file_size, file_path, '
-        'miss_attempts, resolved_at, updated_at) VALUES '
-        "('ffffffffffffffffffffffffffffffff', 2, '/v/Unknown.mkv', 3, 3000, 3000)",
+        'INSERT INTO anidb_file_identities (ed2k, file_size, anidb_file_id, '
+        'anidb_anime_id, anidb_episode_id, episode_aired_at, file_path, '
+        'resolved_at, updated_at) VALUES '
+        "('7f4b11b73f63e7500b8cb0e15a249951', 1, 4213890, 19079, 313835, "
+        "1777075200000, '/v/Bleach S17E44.mkv', 3000, 3000)",
       );
-      raw.execute('PRAGMA user_version = 107');
+      raw.execute('PRAGMA user_version = 108');
       raw.dispose();
 
       final FushiDatabase migrated = FushiDatabase.atFile(
@@ -147,24 +136,24 @@ void main() {
       );
       addTearDown(migrated.close);
       final AnidbFileIdentityRow? row = await migrated.anidbFileIdentityByHash(
-        ed2k: 'ffffffffffffffffffffffffffffffff',
-        fileSize: 2,
+        ed2k: '7f4b11b73f63e7500b8cb0e15a249951',
+        fileSize: 1,
       );
-      expect(row?.missAttempts, 3, reason: '既有计数原样保留');
+      expect(row?.episodeAiredAt, 1777075200000, reason: '既有播出日原样保留');
       final sqlite.Database probe = sqlite.sqlite3.open(path);
       addTearDown(probe.dispose);
       expect(probe.select('PRAGMA user_version').first.values.first, 109);
       expect(
         probe
             .select('PRAGMA table_info(anidb_file_identities)')
-            .where((row) => row['name'] == 'miss_attempts')
+            .where((row) => row['name'] == 'episode_aired_at')
             .length,
         1,
       );
     },
   );
 
-  test('a fresh database creates the column with default 0', () async {
+  test('a fresh database creates the column as nullable', () async {
     final FushiDatabase fresh = FushiDatabase.forTesting(
       NativeDatabase.memory(),
     );
@@ -173,7 +162,10 @@ void main() {
       const AnidbFileIdentitiesCompanion(
         ed2k: Value('0123456789abcdef0123456789abcdef'),
         fileSize: Value(1),
-        filePath: Value('/v/Unknown.mkv'),
+        anidbFileId: Value(200),
+        anidbAnimeId: Value(100),
+        anidbEpisodeId: Value(300),
+        filePath: Value('/v/Show.mkv'),
         resolvedAt: Value(1),
         updatedAt: Value(1),
       ),
@@ -182,6 +174,7 @@ void main() {
       ed2k: '0123456789abcdef0123456789abcdef',
       fileSize: 1,
     );
-    expect(row?.missAttempts, 0);
+    expect(row?.anidbEpisodeId, 300);
+    expect(row?.episodeAiredAt, isNull);
   });
 }
