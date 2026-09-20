@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87669 (5157 per locale)
+/// Strings: 87771 (5163 per locale)
 ///
-/// Built on 2026-09-20 at 13:04 UTC
+/// Built on 2026-09-20 at 13:36 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7303,6 +7303,15 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_episode_link_cleared =>
       'Manual pin cleared; the next scrape links automatically';
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  String get video_metadata_max_logos => 'Logos kept per work';
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -19584,6 +19593,21 @@ class _StringsAr extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -32102,6 +32126,21 @@ class _StringsDe extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -44670,6 +44709,21 @@ class _StringsEs extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -57274,6 +57328,21 @@ class _StringsFr extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -69674,6 +69743,21 @@ class _StringsId extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -82171,6 +82255,21 @@ class _StringsIt extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -94036,6 +94135,21 @@ class _StringsJa extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -105911,6 +106025,21 @@ class _StringsKo extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -118364,6 +118493,21 @@ class _StringsNl extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -130871,6 +131015,21 @@ class _StringsPtBr extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -143353,6 +143512,21 @@ class _StringsRu extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -155633,6 +155807,21 @@ class _StringsTh extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -168029,6 +168218,21 @@ class _StringsTr extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -180396,6 +180600,21 @@ class _StringsVi extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 // Path: <root>
@@ -191714,6 +191933,20 @@ class _StringsZhCn extends _StringsEn {
   String get collection_episode_link_cleared => '已清除手动指定，下次刮削回到自动链接';
   @override
   String get collection_episode_link_unavailable => '先刮出作品资料再指定';
+  @override
+  String get video_metadata_max_posters => '每部作品保留的海报数';
+  @override
+  String get video_metadata_max_backdrops => '每部作品保留的背景图数';
+  @override
+  String get video_metadata_max_logos => '每部作品保留的 Logo 数';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = 不限。按资料语言 → 原语 → 英文 → 无字图的顺序保留评分最高的几张。';
+  @override
+  String get video_metadata_download_staff_images => '下载演职员头像';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      '刮削时把演职员头像存到本地（每部作品最多 10 张）；关闭时按需从 TMDB 加载。';
 }
 
 // Path: <root>
@@ -203260,6 +203493,21 @@ class _StringsZhHk extends _StringsEn {
       'Manual pin cleared; the next scrape links automatically';
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_posters => 'Posters kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
 }
 
 /// Flat map(s) containing all translations.
@@ -213893,6 +214141,18 @@ extension on _StringsEn {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -224521,6 +224781,18 @@ extension on _StringsAr {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -235198,6 +235470,18 @@ extension on _StringsDe {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -245865,6 +246149,18 @@ extension on _StringsEs {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -256540,6 +256836,18 @@ extension on _StringsFr {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -267185,6 +267493,18 @@ extension on _StringsId {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -277853,6 +278173,18 @@ extension on _StringsIt {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -288445,6 +288777,18 @@ extension on _StringsJa {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -299042,6 +299386,18 @@ extension on _StringsKo {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -309705,6 +310061,18 @@ extension on _StringsNl {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -320363,6 +320731,18 @@ extension on _StringsPtBr {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -331027,6 +331407,18 @@ extension on _StringsRu {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -341660,6 +342052,18 @@ extension on _StringsTh {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -352309,6 +352713,18 @@ extension on _StringsTr {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -362952,6 +363368,18 @@ extension on _StringsVi {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
@@ -373496,6 +373924,18 @@ extension on _StringsZhCn {
         return '已清除手动指定，下次刮削回到自动链接';
       case 'collection_episode_link_unavailable':
         return '先刮出作品资料再指定';
+      case 'video_metadata_max_posters':
+        return '每部作品保留的海报数';
+      case 'video_metadata_max_backdrops':
+        return '每部作品保留的背景图数';
+      case 'video_metadata_max_logos':
+        return '每部作品保留的 Logo 数';
+      case 'video_metadata_image_limit_hint':
+        return '0 = 不限。按资料语言 → 原语 → 英文 → 无字图的顺序保留评分最高的几张。';
+      case 'video_metadata_download_staff_images':
+        return '下载演职员头像';
+      case 'video_metadata_download_staff_images_hint':
+        return '刮削时把演职员头像存到本地（每部作品最多 10 张）；关闭时按需从 TMDB 加载。';
       default:
         return null;
     }
@@ -384066,6 +384506,18 @@ extension on _StringsZhHk {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
+      case 'video_metadata_max_posters':
+        return 'Posters kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       default:
         return null;
     }
