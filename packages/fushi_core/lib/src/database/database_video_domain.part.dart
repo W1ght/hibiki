@@ -504,13 +504,21 @@ mixin _FushiDbVideoDomain
             ]))
           .get();
 
-  Future<VideoMetadataEpisodeRow?> getVideoMetadataEpisodeByBook(
+  /// 绑到同一个文件的全部分集行（v110 起一文件可绑多集：AniDB FILE 的 other
+  /// episodes），按季、集排序。
+  Future<List<VideoMetadataEpisodeRow>> getVideoMetadataEpisodesByBook(
     String bookUid,
   ) =>
       (select(videoMetadataEpisodes)
             ..where(
-                ($VideoMetadataEpisodesTable t) => t.bookUid.equals(bookUid)))
-          .getSingleOrNull();
+                ($VideoMetadataEpisodesTable t) => t.bookUid.equals(bookUid))
+            ..orderBy(<OrderingTerm Function($VideoMetadataEpisodesTable)>[
+              ($VideoMetadataEpisodesTable t) =>
+                  OrderingTerm(expression: t.seasonId),
+              ($VideoMetadataEpisodesTable t) =>
+                  OrderingTerm(expression: t.episodeNumber),
+            ]))
+          .get();
 
   Future<void> upsertVideoMetadataPeople(
     List<VideoMetadataPeopleCompanion> people,
