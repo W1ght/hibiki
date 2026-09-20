@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87788 (5164 per locale)
+/// Strings: 87805 (5165 per locale)
 ///
-/// Built on 2026-09-20 at 14:00 UTC
+/// Built on 2026-09-20 at 15:00 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7314,6 +7314,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -19613,6 +19615,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -32149,6 +32154,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -44735,6 +44743,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -57357,6 +57368,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -69775,6 +69789,9 @@ class _StringsId extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -82290,6 +82307,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -94173,6 +94193,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -106066,6 +106089,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -118537,6 +118563,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -131062,6 +131091,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -143562,6 +143594,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -155860,6 +155895,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -168274,6 +168312,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -180659,6 +180700,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -191993,6 +192037,8 @@ class _StringsZhCn extends _StringsEn {
       '刮削时把演职员头像存到本地（每部作品最多 10 张）；关闭时按需从 TMDB 加载。';
   @override
   String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
+  @override
+  String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
 }
 
 // Path: <root>
@@ -203557,6 +203603,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get remote_collection_tmdb_ordering_on_host =>
       'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 /// Flat map(s) containing all translations.
@@ -214204,6 +214253,8 @@ extension on _StringsEn {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -224846,6 +224897,8 @@ extension on _StringsAr {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -235537,6 +235590,8 @@ extension on _StringsDe {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -246218,6 +246273,8 @@ extension on _StringsEs {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -256907,6 +256964,8 @@ extension on _StringsFr {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -267566,6 +267625,8 @@ extension on _StringsId {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -278248,6 +278309,8 @@ extension on _StringsIt {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -288854,6 +288917,8 @@ extension on _StringsJa {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -299465,6 +299530,8 @@ extension on _StringsKo {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -310142,6 +310209,8 @@ extension on _StringsNl {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -320814,6 +320883,8 @@ extension on _StringsPtBr {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -331492,6 +331563,8 @@ extension on _StringsRu {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -342139,6 +342212,8 @@ extension on _StringsTh {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -352802,6 +352877,8 @@ extension on _StringsTr {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -363459,6 +363536,8 @@ extension on _StringsVi {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -374017,6 +374096,8 @@ extension on _StringsZhCn {
         return '刮削时把演职员头像存到本地（每部作品最多 10 张）；关闭时按需从 TMDB 加载。';
       case 'remote_collection_tmdb_ordering_on_host':
         return '在 host 上选择 TMDB 集编排…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB（哈希身份 + 作品 XML）';
       default:
         return null;
     }
@@ -384601,6 +384682,8 @@ extension on _StringsZhHk {
         return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
       case 'remote_collection_tmdb_ordering_on_host':
         return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
