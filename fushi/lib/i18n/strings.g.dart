@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87533 (5149 per locale)
+/// Strings: 87669 (5157 per locale)
 ///
-/// Built on 2026-09-20 at 11:47 UTC
+/// Built on 2026-09-20 at 13:04 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7290,6 +7290,19 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
     required Object episodes,
   }) => '${groups} groups · ${episodes} episodes';
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  String get collection_episode_link_clear => 'Clear manual pin';
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -19550,6 +19563,27 @@ class _StringsAr extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -32047,6 +32081,27 @@ class _StringsDe extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -44594,6 +44649,27 @@ class _StringsEs extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -57177,6 +57253,27 @@ class _StringsFr extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -69556,6 +69653,27 @@ class _StringsId extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -82032,6 +82150,27 @@ class _StringsIt extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -93876,6 +94015,27 @@ class _StringsJa extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -105730,6 +105890,27 @@ class _StringsKo extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -118162,6 +118343,27 @@ class _StringsNl extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -130648,6 +130850,27 @@ class _StringsPtBr extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -143109,6 +143332,27 @@ class _StringsRu extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -155368,6 +155612,27 @@ class _StringsTh extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -167743,6 +168008,27 @@ class _StringsTr extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -180089,6 +180375,27 @@ class _StringsVi extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 // Path: <root>
@@ -191388,6 +191695,25 @@ class _StringsZhCn extends _StringsEn {
   }) => '${groups} 组 · ${episodes} 集';
   @override
   String get video_work_field_episode_group => 'TMDB 集编排';
+  @override
+  String get collection_episode_link_manual => '手动指定季集…';
+  @override
+  String get collection_episode_link_hint =>
+      '钉死这个文件对应的季集，之后每次刮削都保留（Shoko UserVerified）。';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      '第 ${number} 季';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      '第 ${number} 集';
+  @override
+  String get collection_episode_link_saved => '已手动指定季集，刮削时保留';
+  @override
+  String get collection_episode_link_clear => '清除手动指定';
+  @override
+  String get collection_episode_link_cleared => '已清除手动指定，下次刮削回到自动链接';
+  @override
+  String get collection_episode_link_unavailable => '先刮出作品资料再指定';
 }
 
 // Path: <root>
@@ -202913,6 +203239,27 @@ class _StringsZhHk extends _StringsEn {
   }) => '${groups} groups · ${episodes} episodes';
   @override
   String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
 }
 
 /// Flat map(s) containing all translations.
@@ -213530,6 +213877,22 @@ extension on _StringsEn {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -224142,6 +224505,22 @@ extension on _StringsAr {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -234803,6 +235182,22 @@ extension on _StringsDe {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -245454,6 +245849,22 @@ extension on _StringsEs {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -256113,6 +256524,22 @@ extension on _StringsFr {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -266742,6 +267169,22 @@ extension on _StringsId {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -277394,6 +277837,22 @@ extension on _StringsIt {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -287970,6 +288429,22 @@ extension on _StringsJa {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -298551,6 +299026,22 @@ extension on _StringsKo {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -309198,6 +309689,22 @@ extension on _StringsNl {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -319840,6 +320347,22 @@ extension on _StringsPtBr {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -330488,6 +331011,22 @@ extension on _StringsRu {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -341105,6 +341644,22 @@ extension on _StringsTh {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -351738,6 +352293,22 @@ extension on _StringsTr {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -362365,6 +362936,22 @@ extension on _StringsVi {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
@@ -372893,6 +373480,22 @@ extension on _StringsZhCn {
             '${groups} 组 · ${episodes} 集';
       case 'video_work_field_episode_group':
         return 'TMDB 集编排';
+      case 'collection_episode_link_manual':
+        return '手动指定季集…';
+      case 'collection_episode_link_hint':
+        return '钉死这个文件对应的季集，之后每次刮削都保留（Shoko UserVerified）。';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => '第 ${number} 季';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => '第 ${number} 集';
+      case 'collection_episode_link_saved':
+        return '已手动指定季集，刮削时保留';
+      case 'collection_episode_link_clear':
+        return '清除手动指定';
+      case 'collection_episode_link_cleared':
+        return '已清除手动指定，下次刮削回到自动链接';
+      case 'collection_episode_link_unavailable':
+        return '先刮出作品资料再指定';
       default:
         return null;
     }
@@ -383447,6 +384050,22 @@ extension on _StringsZhHk {
             '${groups} groups · ${episodes} episodes';
       case 'video_work_field_episode_group':
         return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
       default:
         return null;
     }
