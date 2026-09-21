@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 86462 (5086 per locale)
+/// Strings: 87805 (5165 per locale)
 ///
-/// Built on 2026-09-19 at 05:08 UTC
+/// Built on 2026-09-21 at 05:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3402,7 +3402,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get mihon_source_popular => 'Popular';
   String get mihon_source_preferences => 'Source preferences';
   String get mihon_source_search => 'Search manga';
-  String get mihon_sources_title => 'Manga sources';
   String get mihon_store_add => 'Add extension store';
   String get mihon_store_edit => 'Edit repository URL';
   String get mihon_store_empty =>
@@ -7099,16 +7098,133 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_anidb_login_test_failed_backoff =>
       'AniDB has not answered several requests in a row; backing off, try again shortly';
   String get video_extensions_title => 'Video source extensions';
-  String get video_online_sources_title => 'Video sources';
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   String get video_online_sources_empty =>
       'No enabled video sources. Install and enable an extension first.';
   String get video_online_episodes_title => 'Episodes';
   String get video_online_episodes_empty => 'No episodes found.';
-  String get video_online_stream_choose => 'Choose a stream';
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  String get media_import_segment_local => 'Local';
+  String get media_import_segment_stores => 'Stores';
+  String get media_import_segment_extensions => 'Extensions';
+  String get media_import_segment_sources => 'Sources';
+  String get mihon_source_move_up => 'Move up';
+  String get mihon_source_move_down => 'Move down';
+  String get mihon_source_pin => 'Pin to top';
+  String get mihon_source_unpin => 'Unpin';
+  String get mihon_source_website_open => 'Open on website';
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  String get discovery_alist_add => 'Add site';
+  String get discovery_alist_enabled => 'Enabled';
+  String get discovery_alist_remove => 'Remove';
+  String get discovery_alist_name => 'Display name';
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  String get discovery_alist_url => 'Site URL';
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  String get discovery_alist_username => 'Username';
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  String get discovery_alist_password => 'Password';
+  String get discovery_alist_kinds => 'Show in';
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  String get discovery_alist_test => 'Test connection';
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  String get media_source_alist_url => 'Site URL';
+  String get media_source_alist_folder => 'Folder on the site';
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  String get video_watch_progress_clear => 'Clear watch progress';
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  String get jellyfin_routes_title => 'Routes';
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  String get jellyfin_route_active_label => 'In use';
+  String get jellyfin_route_url => 'Route URL';
+  String get jellyfin_route_add => 'Add route';
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  String get jellyfin_route_exists => 'This route is already in the list';
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  String get jellyfin_route_remove => 'Remove route';
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  String get media_server_route_switch => 'Switch route';
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  String get collection_episode_link_clear => 'Clear manual pin';
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  String get video_metadata_max_covers => 'Covers kept per work';
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  String get video_metadata_max_logos => 'Logos kept per work';
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -12703,8 +12819,6 @@ class _StringsAr extends _StringsEn {
   String get mihon_source_preferences => 'تفضيلات المصدر';
   @override
   String get mihon_source_search => 'بحث عن مانغا';
-  @override
-  String get mihon_sources_title => 'مصادر المانغا';
   @override
   String get mihon_store_add => 'إضافة متجر إضافات';
   @override
@@ -19114,8 +19228,6 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -19126,10 +19238,209 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -24843,8 +25154,6 @@ class _StringsDe extends _StringsEn {
   String get mihon_source_preferences => 'Quelleneinstellungen';
   @override
   String get mihon_source_search => 'Manga suchen';
-  @override
-  String get mihon_sources_title => 'Manga-Quellen';
   @override
   String get mihon_store_add => 'Erweiterungsshop hinzufügen';
   @override
@@ -31363,8 +31672,6 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -31375,10 +31682,209 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -37115,8 +37621,6 @@ class _StringsEs extends _StringsEn {
   String get mihon_source_preferences => 'Preferencias de fuente';
   @override
   String get mihon_source_search => 'Buscar manga';
-  @override
-  String get mihon_sources_title => 'Fuentes de manga';
   @override
   String get mihon_store_add => 'Añadir tienda de extensiones';
   @override
@@ -43665,8 +44169,6 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -43677,10 +44179,209 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -49430,8 +50131,6 @@ class _StringsFr extends _StringsEn {
   String get mihon_source_preferences => 'Préférences de la source';
   @override
   String get mihon_source_search => 'Rechercher un manga';
-  @override
-  String get mihon_sources_title => 'Sources de manga';
   @override
   String get mihon_store_add => 'Ajouter une boutique d\'extensions';
   @override
@@ -56004,8 +56703,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -56016,10 +56713,209 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -61675,8 +62571,6 @@ class _StringsId extends _StringsEn {
   String get mihon_source_preferences => 'Preferensi sumber';
   @override
   String get mihon_source_search => 'Cari manga';
-  @override
-  String get mihon_sources_title => 'Sumber manga';
   @override
   String get mihon_store_add => 'Tambah toko ekstensi';
   @override
@@ -68142,8 +69036,6 @@ class _StringsId extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -68154,10 +69046,209 @@ class _StringsId extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -73856,8 +74947,6 @@ class _StringsIt extends _StringsEn {
   String get mihon_source_preferences => 'Preferenze fonte';
   @override
   String get mihon_source_search => 'Cerca manga';
-  @override
-  String get mihon_sources_title => 'Fonti manga';
   @override
   String get mihon_store_add => 'Aggiungi store estensioni';
   @override
@@ -80372,8 +81461,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -80384,10 +81471,209 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -85775,8 +87061,6 @@ class _StringsJa extends _StringsEn {
   String get mihon_source_preferences => 'ソース設定';
   @override
   String get mihon_source_search => 'マンガを検索';
-  @override
-  String get mihon_sources_title => 'マンガソース';
   @override
   String get mihon_store_add => '拡張機能ストアを追加';
   @override
@@ -91983,8 +93267,6 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -91995,10 +93277,209 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -97390,8 +98871,6 @@ class _StringsKo extends _StringsEn {
   String get mihon_source_preferences => '소스 환경설정';
   @override
   String get mihon_source_search => '만화 검색';
-  @override
-  String get mihon_sources_title => '만화 소스';
   @override
   String get mihon_store_add => '확장 프로그램 스토어 추가';
   @override
@@ -103604,8 +105083,6 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -103616,10 +105093,209 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -109294,8 +110970,6 @@ class _StringsNl extends _StringsEn {
   String get mihon_source_preferences => 'Bronvoorkeuren';
   @override
   String get mihon_source_search => 'Manga zoeken';
-  @override
-  String get mihon_sources_title => 'Mangabronnen';
   @override
   String get mihon_store_add => 'Extensiewinkel toevoegen';
   @override
@@ -115794,8 +117468,6 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -115806,10 +117478,209 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -121515,8 +123386,6 @@ class _StringsPtBr extends _StringsEn {
   String get mihon_source_preferences => 'Preferências da fonte';
   @override
   String get mihon_source_search => 'Buscar mangá';
-  @override
-  String get mihon_sources_title => 'Fontes de mangá';
   @override
   String get mihon_store_add => 'Adicionar loja de extensões';
   @override
@@ -128037,8 +129906,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -128049,10 +129916,209 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -133731,8 +135797,6 @@ class _StringsRu extends _StringsEn {
   String get mihon_source_preferences => 'Настройки источника';
   @override
   String get mihon_source_search => 'Поиск манги';
-  @override
-  String get mihon_sources_title => 'Источники манги';
   @override
   String get mihon_store_add => 'Добавить магазин расширений';
   @override
@@ -140255,8 +142319,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -140267,10 +142329,209 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -145857,8 +148118,6 @@ class _StringsTh extends _StringsEn {
   String get mihon_source_preferences => 'การตั้งค่าแหล่ง';
   @override
   String get mihon_source_search => 'ค้นหามังงะ';
-  @override
-  String get mihon_sources_title => 'แหล่งมังงะ';
   @override
   String get mihon_store_add => 'เพิ่มร้านส่วนขยาย';
   @override
@@ -152274,8 +154533,6 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -152286,10 +154543,209 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -157945,8 +160401,6 @@ class _StringsTr extends _StringsEn {
   String get mihon_source_preferences => 'Kaynak tercihleri';
   @override
   String get mihon_source_search => 'Manga ara';
-  @override
-  String get mihon_sources_title => 'Manga kaynakları';
   @override
   String get mihon_store_add => 'Eklenti mağazası ekle';
   @override
@@ -164407,8 +166861,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -164419,10 +166871,209 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -170068,8 +172719,6 @@ class _StringsVi extends _StringsEn {
   String get mihon_source_preferences => 'Cài đặt nguồn';
   @override
   String get mihon_source_search => 'Tìm kiếm truyện tranh';
-  @override
-  String get mihon_sources_title => 'Nguồn truyện tranh';
   @override
   String get mihon_store_add => 'Thêm cửa hàng tiện ích';
   @override
@@ -176513,8 +179162,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -176525,10 +179172,209 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 // Path: <root>
@@ -181711,8 +184557,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get mihon_source_search => '搜索漫画';
   @override
-  String get mihon_sources_title => '漫画源';
-  @override
   String get mihon_store_add => '添加扩展仓库';
   @override
   String get mihon_store_edit => '编辑仓库地址';
@@ -186828,7 +189672,7 @@ class _StringsZhCn extends _StringsEn {
   String manga_series_download_all_locked_skipped({required Object count}) =>
       '已跳过 ${count} 个锁定章节';
   @override
-  String get mihon_sources_search_hint => '搜索漫画源';
+  String get mihon_sources_search_hint => '搜索在线源';
   @override
   String get mihon_source_login_forward => '前进';
   @override
@@ -187603,8 +190447,6 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_extensions_title => '视频源扩展';
   @override
-  String get video_online_sources_title => '视频源';
-  @override
   String get video_online_sources_hint =>
       '第三方 Aniyomi 扩展（extensions-lib 14）。内容来自各扩展对应的站点，在内置播放器中播放。';
   @override
@@ -187614,9 +190456,189 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get video_online_episodes_empty => '没有找到剧集。';
   @override
-  String get video_online_stream_choose => '选择线路';
-  @override
   String get video_online_stream_none => '该集没有可播放的流。';
+  @override
+  String get media_import_segment_local => '本地';
+  @override
+  String get media_import_segment_stores => '仓库';
+  @override
+  String get media_import_segment_extensions => '扩展';
+  @override
+  String get media_import_segment_sources => '在线源';
+  @override
+  String get mihon_source_move_up => '上移';
+  @override
+  String get mihon_source_move_down => '下移';
+  @override
+  String get mihon_source_pin => '置顶';
+  @override
+  String get mihon_source_unpin => '取消置顶';
+  @override
+  String get mihon_source_website_open => '在网站打开';
+  @override
+  String get mihon_source_website_unavailable => '该源没有这部作品的网页';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList 站点';
+  @override
+  String get discovery_alist_settings_hint =>
+      '浏览并下载 AList 或 OpenList 站点上的文件；账号留空即以游客访问';
+  @override
+  String get discovery_alist_add => '添加站点';
+  @override
+  String get discovery_alist_enabled => '启用';
+  @override
+  String get discovery_alist_remove => '移除';
+  @override
+  String get discovery_alist_name => '显示名称';
+  @override
+  String get discovery_alist_name_hint => '留空则使用主机名';
+  @override
+  String get discovery_alist_url => '站点地址';
+  @override
+  String get discovery_alist_url_hint => '站点根地址，例如 https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid => '请输入有效的 HTTP 或 HTTPS 站点地址';
+  @override
+  String get discovery_alist_url_needs_http_optin => '明文 HTTP 需要先打开下方开关';
+  @override
+  String get discovery_alist_username => '用户名';
+  @override
+  String get discovery_alist_username_hint => '留空则以游客访问';
+  @override
+  String get discovery_alist_password => '密码';
+  @override
+  String get discovery_alist_kinds => '显示在';
+  @override
+  String get discovery_alist_kinds_hint => '至少选择一个要显示此站点的库';
+  @override
+  String get discovery_alist_allow_http => '允许明文 HTTP';
+  @override
+  String get discovery_alist_allow_http_hint => '局域网自建站点需要';
+  @override
+  String get discovery_alist_test => '测试连接';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      '已连接，根目录有 ${count} 个条目';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      '连接失败：${reason}';
+  @override
+  String get media_source_alist_url => '站点地址';
+  @override
+  String get media_source_alist_folder => '站内目录';
+  @override
+  String get media_source_alist_account_hint => '账号留空即以游客访问';
+  @override
+  String get media_source_alist_missing_fields => '请填写站点地址（http 或 https）';
+  @override
+  String get video_watch_progress_clear => '清除观看进度';
+  @override
+  String get video_watch_progress_cleared => '已清除观看进度';
+  @override
+  String get popup_instant_scroll_wheel_step => '瞬时滚动滚轮步长';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      '滚轮每格让弹窗跳动的距离，占弹窗高度的比例（再乘以弹窗滚动速度）。';
+  @override
+  String get popup_instant_scroll_touch_step => '瞬时滚动触摸步长';
+  @override
+  String get popup_instant_scroll_touch_step_hint => '手指滑过弹窗高度的这一比例后，弹窗跳动一步。';
+  @override
+  String get video_subdl_settings_hint =>
+      '为电影与剧集提供英文及多语种字幕，按 IMDb / TMDB id 匹配。需要免费 API key；下载按 IP 计匿名每日额度。';
+  @override
+  String get video_subdl_enabled_hint => '关闭后即使已填 API key 也不再搜索 SubDL。';
+  @override
+  String get video_subdl_api_key_hint => '在 subdl.com/panel/api 免费获取 API key';
+  @override
+  String get onboarding_online_services_subdl =>
+      '用于查找电影与剧集的英文及多语种字幕。注册免费 SubDL 账号后在面板生成 API 密钥，填入设置并开启字幕来源。';
+  @override
+  String get jellyfin_routes_title => '线路';
+  @override
+  String get jellyfin_routes_hint =>
+      '为这台服务器添加其它访问地址（局域网 / 公网 / 反代），随时切换；登录状态在每条线路上通用。';
+  @override
+  String get jellyfin_route_primary_label => '登录地址';
+  @override
+  String get jellyfin_route_active_label => '使用中';
+  @override
+  String get jellyfin_route_url => '线路地址';
+  @override
+  String get jellyfin_route_add => '添加线路';
+  @override
+  String get jellyfin_route_add_failed => '添加线路失败';
+  @override
+  String get jellyfin_route_exists => '这条线路已经在列表里';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      '${url} 上的服务器不接受当前登录，可能不是同一台服务器，或登录已过期：${reason}';
+  @override
+  String get jellyfin_route_remove => '删除线路';
+  @override
+  String jellyfin_route_switched({required Object url}) => '已切换到 ${url}';
+  @override
+  String get media_server_route_switch => '切换线路';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB 第 ${number} 集';
+  @override
+  String get collection_tmdb_ordering => 'TMDB 集编排…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB 默认排序';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      '选定这部剧按 TMDB 哪一套排序划分季集；AniDB 集级链接随之按该排序重算。';
+  @override
+  String get collection_tmdb_ordering_none => 'TMDB 上这部剧没有备选排序';
+  @override
+  String get collection_tmdb_ordering_unavailable => '作品还没有 TMDB 身份，先刮削';
+  @override
+  String get collection_tmdb_ordering_saved => '已选定排序，正在重刮…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} 组 · ${episodes} 集';
+  @override
+  String get video_work_field_episode_group => 'TMDB 集编排';
+  @override
+  String get collection_episode_link_manual => '手动指定季集…';
+  @override
+  String get collection_episode_link_hint =>
+      '钉死这个文件对应的季集，之后每次刮削都保留（Shoko UserVerified）。';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      '第 ${number} 季';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      '第 ${number} 集';
+  @override
+  String get collection_episode_link_saved => '已手动指定季集，刮削时保留';
+  @override
+  String get collection_episode_link_clear => '清除手动指定';
+  @override
+  String get collection_episode_link_cleared => '已清除手动指定，下次刮削回到自动链接';
+  @override
+  String get collection_episode_link_unavailable => '先刮出作品资料再指定';
+  @override
+  String get video_metadata_max_covers => '每部作品保留的封面数';
+  @override
+  String get video_metadata_max_backdrops => '每部作品保留的背景图数';
+  @override
+  String get video_metadata_max_logos => '每部作品保留的 Logo 数';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = 不限。按资料语言 → 原语 → 英文 → 无字图的顺序保留评分最高的几张。';
+  @override
+  String get video_metadata_download_staff_images => '下载演职员头像';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      '刮削时把演职员头像存到本地（每部作品最多 10 张）；关闭时按需从 TMDB 加载。';
+  @override
+  String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
+  @override
+  String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
 }
 
 // Path: <root>
@@ -192834,8 +195856,6 @@ class _StringsZhHk extends _StringsEn {
   String get mihon_source_preferences => '來源偏好';
   @override
   String get mihon_source_search => '搜索漫畫';
-  @override
-  String get mihon_sources_title => '漫畫源';
   @override
   String get mihon_store_add => '添加擴展倉庫';
   @override
@@ -198896,8 +201916,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_extensions_title => 'Video source extensions';
   @override
-  String get video_online_sources_title => 'Video sources';
-  @override
   String get video_online_sources_hint =>
       'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
   @override
@@ -198908,10 +201926,209 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_online_episodes_empty => 'No episodes found.';
   @override
-  String get video_online_stream_choose => 'Choose a stream';
-  @override
   String get video_online_stream_none =>
       'This episode returned no playable stream.';
+  @override
+  String get media_import_segment_local => 'Local';
+  @override
+  String get media_import_segment_stores => 'Stores';
+  @override
+  String get media_import_segment_extensions => 'Extensions';
+  @override
+  String get media_import_segment_sources => 'Sources';
+  @override
+  String get mihon_source_move_up => 'Move up';
+  @override
+  String get mihon_source_move_down => 'Move down';
+  @override
+  String get mihon_source_pin => 'Pin to top';
+  @override
+  String get mihon_source_unpin => 'Unpin';
+  @override
+  String get mihon_source_website_open => 'Open on website';
+  @override
+  String get mihon_source_website_unavailable =>
+      'This source has no web page for this title';
+  @override
+  String get discovery_alist_settings_title => 'AList / OpenList sites';
+  @override
+  String get discovery_alist_settings_hint =>
+      'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+  @override
+  String get discovery_alist_add => 'Add site';
+  @override
+  String get discovery_alist_enabled => 'Enabled';
+  @override
+  String get discovery_alist_remove => 'Remove';
+  @override
+  String get discovery_alist_name => 'Display name';
+  @override
+  String get discovery_alist_name_hint => 'Leave empty to use the host name';
+  @override
+  String get discovery_alist_url => 'Site URL';
+  @override
+  String get discovery_alist_url_hint =>
+      'The site root, for example https://od.example.com';
+  @override
+  String get discovery_alist_url_invalid =>
+      'Enter a valid HTTP or HTTPS site URL';
+  @override
+  String get discovery_alist_url_needs_http_optin =>
+      'Plain HTTP needs the switch below';
+  @override
+  String get discovery_alist_username => 'Username';
+  @override
+  String get discovery_alist_username_hint =>
+      'Leave empty to browse as a guest';
+  @override
+  String get discovery_alist_password => 'Password';
+  @override
+  String get discovery_alist_kinds => 'Show in';
+  @override
+  String get discovery_alist_kinds_hint =>
+      'Pick at least one library to list this site in';
+  @override
+  String get discovery_alist_allow_http => 'Allow plain HTTP';
+  @override
+  String get discovery_alist_allow_http_hint =>
+      'Needed for a self-hosted site on your local network';
+  @override
+  String get discovery_alist_test => 'Test connection';
+  @override
+  String discovery_alist_test_ok({required Object count}) =>
+      'Connected. Root folder has ${count} entries';
+  @override
+  String discovery_alist_test_failed({required Object reason}) =>
+      'Connection failed: ${reason}';
+  @override
+  String get media_source_alist_url => 'Site URL';
+  @override
+  String get media_source_alist_folder => 'Folder on the site';
+  @override
+  String get media_source_alist_account_hint =>
+      'Leave the account empty to browse as a guest';
+  @override
+  String get media_source_alist_missing_fields =>
+      'Enter the site URL (http or https)';
+  @override
+  String get video_watch_progress_clear => 'Clear watch progress';
+  @override
+  String get video_watch_progress_cleared => 'Watch progress cleared';
+  @override
+  String get popup_instant_scroll_wheel_step => 'Instant scroll wheel step';
+  @override
+  String get popup_instant_scroll_wheel_step_hint =>
+      'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+  @override
+  String get popup_instant_scroll_touch_step => 'Instant scroll touch step';
+  @override
+  String get popup_instant_scroll_touch_step_hint =>
+      'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+  @override
+  String get video_subdl_settings_hint =>
+      'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+  @override
+  String get video_subdl_enabled_hint =>
+      'Off means SubDL is skipped even when an API key is saved.';
+  @override
+  String get video_subdl_api_key_hint =>
+      'Get a free API key at subdl.com/panel/api';
+  @override
+  String get onboarding_online_services_subdl =>
+      'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+  @override
+  String get jellyfin_routes_title => 'Routes';
+  @override
+  String get jellyfin_routes_hint =>
+      'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+  @override
+  String get jellyfin_route_primary_label => 'Sign-in address';
+  @override
+  String get jellyfin_route_active_label => 'In use';
+  @override
+  String get jellyfin_route_url => 'Route URL';
+  @override
+  String get jellyfin_route_add => 'Add route';
+  @override
+  String get jellyfin_route_add_failed => 'Could not add the route';
+  @override
+  String get jellyfin_route_exists => 'This route is already in the list';
+  @override
+  String jellyfin_route_verify_failed(
+          {required Object url, required Object reason}) =>
+      'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+  @override
+  String get jellyfin_route_remove => 'Remove route';
+  @override
+  String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
+  @override
+  String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
 }
 
 /// Flat map(s) containing all translations.
@@ -203806,8 +207023,6 @@ extension on _StringsEn {
         return 'Source preferences';
       case 'mihon_source_search':
         return 'Search manga';
-      case 'mihon_sources_title':
-        return 'Manga sources';
       case 'mihon_store_add':
         return 'Add extension store';
       case 'mihon_store_edit':
@@ -209380,8 +212595,6 @@ extension on _StringsEn {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -209390,10 +212603,175 @@ extension on _StringsEn {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -214285,8 +217663,6 @@ extension on _StringsAr {
         return 'تفضيلات المصدر';
       case 'mihon_source_search':
         return 'بحث عن مانغا';
-      case 'mihon_sources_title':
-        return 'مصادر المانغا';
       case 'mihon_store_add':
         return 'إضافة متجر إضافات';
       case 'mihon_store_edit':
@@ -219857,8 +223233,6 @@ extension on _StringsAr {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -219867,10 +223241,175 @@ extension on _StringsAr {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -224789,8 +228328,6 @@ extension on _StringsDe {
         return 'Quelleneinstellungen';
       case 'mihon_source_search':
         return 'Manga suchen';
-      case 'mihon_sources_title':
-        return 'Manga-Quellen';
       case 'mihon_store_add':
         return 'Erweiterungsshop hinzufügen';
       case 'mihon_store_edit':
@@ -230379,8 +233916,6 @@ extension on _StringsDe {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -230389,10 +233924,175 @@ extension on _StringsDe {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -235304,8 +239004,6 @@ extension on _StringsEs {
         return 'Preferencias de fuente';
       case 'mihon_source_search':
         return 'Buscar manga';
-      case 'mihon_sources_title':
-        return 'Fuentes de manga';
       case 'mihon_store_add':
         return 'Añadir tienda de extensiones';
       case 'mihon_store_edit':
@@ -240892,8 +244590,6 @@ extension on _StringsEs {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -240902,10 +244598,175 @@ extension on _StringsEs {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -245823,8 +249684,6 @@ extension on _StringsFr {
         return 'Préférences de la source';
       case 'mihon_source_search':
         return 'Rechercher un manga';
-      case 'mihon_sources_title':
-        return 'Sources de manga';
       case 'mihon_store_add':
         return 'Ajouter une boutique d\'extensions';
       case 'mihon_store_edit':
@@ -251414,8 +255273,6 @@ extension on _StringsFr {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -251424,10 +255281,175 @@ extension on _StringsFr {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -256330,8 +260352,6 @@ extension on _StringsId {
         return 'Preferensi sumber';
       case 'mihon_source_search':
         return 'Cari manga';
-      case 'mihon_sources_title':
-        return 'Sumber manga';
       case 'mihon_store_add':
         return 'Tambah toko ekstensi';
       case 'mihon_store_edit':
@@ -261907,8 +265927,6 @@ extension on _StringsId {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -261917,10 +265935,175 @@ extension on _StringsId {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -266831,8 +271014,6 @@ extension on _StringsIt {
         return 'Preferenze fonte';
       case 'mihon_source_search':
         return 'Cerca manga';
-      case 'mihon_sources_title':
-        return 'Fonti manga';
       case 'mihon_store_add':
         return 'Aggiungi store estensioni';
       case 'mihon_store_edit':
@@ -272422,8 +276603,6 @@ extension on _StringsIt {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -272432,10 +276611,175 @@ extension on _StringsIt {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -277312,8 +281656,6 @@ extension on _StringsJa {
         return 'ソース設定';
       case 'mihon_source_search':
         return 'マンガを検索';
-      case 'mihon_sources_title':
-        return 'マンガソース';
       case 'mihon_store_add':
         return '拡張機能ストアを追加';
       case 'mihon_store_edit':
@@ -282864,8 +287206,6 @@ extension on _StringsJa {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -282874,10 +287214,175 @@ extension on _StringsJa {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -287755,8 +292260,6 @@ extension on _StringsKo {
         return '소스 환경설정';
       case 'mihon_source_search':
         return '만화 검색';
-      case 'mihon_sources_title':
-        return '만화 소스';
       case 'mihon_store_add':
         return '확장 프로그램 스토어 추가';
       case 'mihon_store_edit':
@@ -293310,8 +297813,6 @@ extension on _StringsKo {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -293320,10 +297821,175 @@ extension on _StringsKo {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -298233,8 +302899,6 @@ extension on _StringsNl {
         return 'Bronvoorkeuren';
       case 'mihon_source_search':
         return 'Manga zoeken';
-      case 'mihon_sources_title':
-        return 'Mangabronnen';
       case 'mihon_store_add':
         return 'Extensiewinkel toevoegen';
       case 'mihon_store_edit':
@@ -303818,8 +308482,6 @@ extension on _StringsNl {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -303828,10 +308490,175 @@ extension on _StringsNl {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -308740,8 +313567,6 @@ extension on _StringsPtBr {
         return 'Preferências da fonte';
       case 'mihon_source_search':
         return 'Buscar mangá';
-      case 'mihon_sources_title':
-        return 'Fontes de mangá';
       case 'mihon_store_add':
         return 'Adicionar loja de extensões';
       case 'mihon_store_edit':
@@ -314321,8 +319146,6 @@ extension on _StringsPtBr {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -314331,10 +319154,175 @@ extension on _StringsPtBr {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -319250,8 +324238,6 @@ extension on _StringsRu {
         return 'Настройки источника';
       case 'mihon_source_search':
         return 'Поиск манги';
-      case 'mihon_sources_title':
-        return 'Источники манги';
       case 'mihon_store_add':
         return 'Добавить магазин расширений';
       case 'mihon_store_edit':
@@ -324831,8 +329817,6 @@ extension on _StringsRu {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -324841,10 +329825,175 @@ extension on _StringsRu {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -329740,8 +334889,6 @@ extension on _StringsTh {
         return 'การตั้งค่าแหล่ง';
       case 'mihon_source_search':
         return 'ค้นหามังงะ';
-      case 'mihon_sources_title':
-        return 'แหล่งมังงะ';
       case 'mihon_store_add':
         return 'เพิ่มร้านส่วนขยาย';
       case 'mihon_store_edit':
@@ -335313,8 +340460,6 @@ extension on _StringsTh {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -335323,10 +340468,175 @@ extension on _StringsTh {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -340232,8 +345542,6 @@ extension on _StringsTr {
         return 'Kaynak tercihleri';
       case 'mihon_source_search':
         return 'Manga ara';
-      case 'mihon_sources_title':
-        return 'Manga kaynakları';
       case 'mihon_store_add':
         return 'Eklenti mağazası ekle';
       case 'mihon_store_edit':
@@ -345810,8 +351118,6 @@ extension on _StringsTr {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -345820,10 +351126,175 @@ extension on _StringsTr {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -350724,8 +356195,6 @@ extension on _StringsVi {
         return 'Cài đặt nguồn';
       case 'mihon_source_search':
         return 'Tìm kiếm truyện tranh';
-      case 'mihon_sources_title':
-        return 'Nguồn truyện tranh';
       case 'mihon_store_add':
         return 'Thêm cửa hàng tiện ích';
       case 'mihon_store_edit':
@@ -356301,8 +361770,6 @@ extension on _StringsVi {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -356311,10 +361778,175 @@ extension on _StringsVi {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
@@ -361174,8 +366806,6 @@ extension on _StringsZhCn {
         return '来源偏好';
       case 'mihon_source_search':
         return '搜索漫画';
-      case 'mihon_sources_title':
-        return '漫画源';
       case 'mihon_store_add':
         return '添加扩展仓库';
       case 'mihon_store_edit':
@@ -365983,7 +371613,7 @@ extension on _StringsZhCn {
       case 'manga_series_download_all_locked_skipped':
         return ({required Object count}) => '已跳过 ${count} 个锁定章节';
       case 'mihon_sources_search_hint':
-        return '搜索漫画源';
+        return '搜索在线源';
       case 'mihon_source_login_forward':
         return '前进';
       case 'reader_furigana_dimmed':
@@ -366697,8 +372327,6 @@ extension on _StringsZhCn {
         return 'AniDB 连续无应答，正在退避，请稍后再试';
       case 'video_extensions_title':
         return '视频源扩展';
-      case 'video_online_sources_title':
-        return '视频源';
       case 'video_online_sources_hint':
         return '第三方 Aniyomi 扩展（extensions-lib 14）。内容来自各扩展对应的站点，在内置播放器中播放。';
       case 'video_online_sources_empty':
@@ -366707,10 +372335,174 @@ extension on _StringsZhCn {
         return '剧集';
       case 'video_online_episodes_empty':
         return '没有找到剧集。';
-      case 'video_online_stream_choose':
-        return '选择线路';
       case 'video_online_stream_none':
         return '该集没有可播放的流。';
+      case 'media_import_segment_local':
+        return '本地';
+      case 'media_import_segment_stores':
+        return '仓库';
+      case 'media_import_segment_extensions':
+        return '扩展';
+      case 'media_import_segment_sources':
+        return '在线源';
+      case 'mihon_source_move_up':
+        return '上移';
+      case 'mihon_source_move_down':
+        return '下移';
+      case 'mihon_source_pin':
+        return '置顶';
+      case 'mihon_source_unpin':
+        return '取消置顶';
+      case 'mihon_source_website_open':
+        return '在网站打开';
+      case 'mihon_source_website_unavailable':
+        return '该源没有这部作品的网页';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList 站点';
+      case 'discovery_alist_settings_hint':
+        return '浏览并下载 AList 或 OpenList 站点上的文件；账号留空即以游客访问';
+      case 'discovery_alist_add':
+        return '添加站点';
+      case 'discovery_alist_enabled':
+        return '启用';
+      case 'discovery_alist_remove':
+        return '移除';
+      case 'discovery_alist_name':
+        return '显示名称';
+      case 'discovery_alist_name_hint':
+        return '留空则使用主机名';
+      case 'discovery_alist_url':
+        return '站点地址';
+      case 'discovery_alist_url_hint':
+        return '站点根地址，例如 https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return '请输入有效的 HTTP 或 HTTPS 站点地址';
+      case 'discovery_alist_url_needs_http_optin':
+        return '明文 HTTP 需要先打开下方开关';
+      case 'discovery_alist_username':
+        return '用户名';
+      case 'discovery_alist_username_hint':
+        return '留空则以游客访问';
+      case 'discovery_alist_password':
+        return '密码';
+      case 'discovery_alist_kinds':
+        return '显示在';
+      case 'discovery_alist_kinds_hint':
+        return '至少选择一个要显示此站点的库';
+      case 'discovery_alist_allow_http':
+        return '允许明文 HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return '局域网自建站点需要';
+      case 'discovery_alist_test':
+        return '测试连接';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) => '已连接，根目录有 ${count} 个条目';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => '连接失败：${reason}';
+      case 'media_source_alist_url':
+        return '站点地址';
+      case 'media_source_alist_folder':
+        return '站内目录';
+      case 'media_source_alist_account_hint':
+        return '账号留空即以游客访问';
+      case 'media_source_alist_missing_fields':
+        return '请填写站点地址（http 或 https）';
+      case 'video_watch_progress_clear':
+        return '清除观看进度';
+      case 'video_watch_progress_cleared':
+        return '已清除观看进度';
+      case 'popup_instant_scroll_wheel_step':
+        return '瞬时滚动滚轮步长';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return '滚轮每格让弹窗跳动的距离，占弹窗高度的比例（再乘以弹窗滚动速度）。';
+      case 'popup_instant_scroll_touch_step':
+        return '瞬时滚动触摸步长';
+      case 'popup_instant_scroll_touch_step_hint':
+        return '手指滑过弹窗高度的这一比例后，弹窗跳动一步。';
+      case 'video_subdl_settings_hint':
+        return '为电影与剧集提供英文及多语种字幕，按 IMDb / TMDB id 匹配。需要免费 API key；下载按 IP 计匿名每日额度。';
+      case 'video_subdl_enabled_hint':
+        return '关闭后即使已填 API key 也不再搜索 SubDL。';
+      case 'video_subdl_api_key_hint':
+        return '在 subdl.com/panel/api 免费获取 API key';
+      case 'onboarding_online_services_subdl':
+        return '用于查找电影与剧集的英文及多语种字幕。注册免费 SubDL 账号后在面板生成 API 密钥，填入设置并开启字幕来源。';
+      case 'jellyfin_routes_title':
+        return '线路';
+      case 'jellyfin_routes_hint':
+        return '为这台服务器添加其它访问地址（局域网 / 公网 / 反代），随时切换；登录状态在每条线路上通用。';
+      case 'jellyfin_route_primary_label':
+        return '登录地址';
+      case 'jellyfin_route_active_label':
+        return '使用中';
+      case 'jellyfin_route_url':
+        return '线路地址';
+      case 'jellyfin_route_add':
+        return '添加线路';
+      case 'jellyfin_route_add_failed':
+        return '添加线路失败';
+      case 'jellyfin_route_exists':
+        return '这条线路已经在列表里';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            '${url} 上的服务器不接受当前登录，可能不是同一台服务器，或登录已过期：${reason}';
+      case 'jellyfin_route_remove':
+        return '删除线路';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => '已切换到 ${url}';
+      case 'media_server_route_switch':
+        return '切换线路';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB 第 ${number} 集';
+      case 'collection_tmdb_ordering':
+        return 'TMDB 集编排…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB 默认排序';
+      case 'collection_tmdb_ordering_hint':
+        return '选定这部剧按 TMDB 哪一套排序划分季集；AniDB 集级链接随之按该排序重算。';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB 上这部剧没有备选排序';
+      case 'collection_tmdb_ordering_unavailable':
+        return '作品还没有 TMDB 身份，先刮削';
+      case 'collection_tmdb_ordering_saved':
+        return '已选定排序，正在重刮…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} 组 · ${episodes} 集';
+      case 'video_work_field_episode_group':
+        return 'TMDB 集编排';
+      case 'collection_episode_link_manual':
+        return '手动指定季集…';
+      case 'collection_episode_link_hint':
+        return '钉死这个文件对应的季集，之后每次刮削都保留（Shoko UserVerified）。';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => '第 ${number} 季';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => '第 ${number} 集';
+      case 'collection_episode_link_saved':
+        return '已手动指定季集，刮削时保留';
+      case 'collection_episode_link_clear':
+        return '清除手动指定';
+      case 'collection_episode_link_cleared':
+        return '已清除手动指定，下次刮削回到自动链接';
+      case 'collection_episode_link_unavailable':
+        return '先刮出作品资料再指定';
+      case 'video_metadata_max_covers':
+        return '每部作品保留的封面数';
+      case 'video_metadata_max_backdrops':
+        return '每部作品保留的背景图数';
+      case 'video_metadata_max_logos':
+        return '每部作品保留的 Logo 数';
+      case 'video_metadata_image_limit_hint':
+        return '0 = 不限。按资料语言 → 原语 → 英文 → 无字图的顺序保留评分最高的几张。';
+      case 'video_metadata_download_staff_images':
+        return '下载演职员头像';
+      case 'video_metadata_download_staff_images_hint':
+        return '刮削时把演职员头像存到本地（每部作品最多 10 张）；关闭时按需从 TMDB 加载。';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return '在 host 上选择 TMDB 集编排…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB（哈希身份 + 作品 XML）';
       default:
         return null;
     }
@@ -371576,8 +377368,6 @@ extension on _StringsZhHk {
         return '來源偏好';
       case 'mihon_source_search':
         return '搜索漫畫';
-      case 'mihon_sources_title':
-        return '漫畫源';
       case 'mihon_store_add':
         return '添加擴展倉庫';
       case 'mihon_store_edit':
@@ -377117,8 +382907,6 @@ extension on _StringsZhHk {
         return 'AniDB has not answered several requests in a row; backing off, try again shortly';
       case 'video_extensions_title':
         return 'Video source extensions';
-      case 'video_online_sources_title':
-        return 'Video sources';
       case 'video_online_sources_hint':
         return 'Third-party Aniyomi extensions (extensions-lib 14). Content comes from each extension\'s website and plays in the built-in player.';
       case 'video_online_sources_empty':
@@ -377127,10 +382915,175 @@ extension on _StringsZhHk {
         return 'Episodes';
       case 'video_online_episodes_empty':
         return 'No episodes found.';
-      case 'video_online_stream_choose':
-        return 'Choose a stream';
       case 'video_online_stream_none':
         return 'This episode returned no playable stream.';
+      case 'media_import_segment_local':
+        return 'Local';
+      case 'media_import_segment_stores':
+        return 'Stores';
+      case 'media_import_segment_extensions':
+        return 'Extensions';
+      case 'media_import_segment_sources':
+        return 'Sources';
+      case 'mihon_source_move_up':
+        return 'Move up';
+      case 'mihon_source_move_down':
+        return 'Move down';
+      case 'mihon_source_pin':
+        return 'Pin to top';
+      case 'mihon_source_unpin':
+        return 'Unpin';
+      case 'mihon_source_website_open':
+        return 'Open on website';
+      case 'mihon_source_website_unavailable':
+        return 'This source has no web page for this title';
+      case 'discovery_alist_settings_title':
+        return 'AList / OpenList sites';
+      case 'discovery_alist_settings_hint':
+        return 'Browse and download files from your own AList or OpenList site. Leave the account empty to browse as a guest';
+      case 'discovery_alist_add':
+        return 'Add site';
+      case 'discovery_alist_enabled':
+        return 'Enabled';
+      case 'discovery_alist_remove':
+        return 'Remove';
+      case 'discovery_alist_name':
+        return 'Display name';
+      case 'discovery_alist_name_hint':
+        return 'Leave empty to use the host name';
+      case 'discovery_alist_url':
+        return 'Site URL';
+      case 'discovery_alist_url_hint':
+        return 'The site root, for example https://od.example.com';
+      case 'discovery_alist_url_invalid':
+        return 'Enter a valid HTTP or HTTPS site URL';
+      case 'discovery_alist_url_needs_http_optin':
+        return 'Plain HTTP needs the switch below';
+      case 'discovery_alist_username':
+        return 'Username';
+      case 'discovery_alist_username_hint':
+        return 'Leave empty to browse as a guest';
+      case 'discovery_alist_password':
+        return 'Password';
+      case 'discovery_alist_kinds':
+        return 'Show in';
+      case 'discovery_alist_kinds_hint':
+        return 'Pick at least one library to list this site in';
+      case 'discovery_alist_allow_http':
+        return 'Allow plain HTTP';
+      case 'discovery_alist_allow_http_hint':
+        return 'Needed for a self-hosted site on your local network';
+      case 'discovery_alist_test':
+        return 'Test connection';
+      case 'discovery_alist_test_ok':
+        return ({required Object count}) =>
+            'Connected. Root folder has ${count} entries';
+      case 'discovery_alist_test_failed':
+        return ({required Object reason}) => 'Connection failed: ${reason}';
+      case 'media_source_alist_url':
+        return 'Site URL';
+      case 'media_source_alist_folder':
+        return 'Folder on the site';
+      case 'media_source_alist_account_hint':
+        return 'Leave the account empty to browse as a guest';
+      case 'media_source_alist_missing_fields':
+        return 'Enter the site URL (http or https)';
+      case 'video_watch_progress_clear':
+        return 'Clear watch progress';
+      case 'video_watch_progress_cleared':
+        return 'Watch progress cleared';
+      case 'popup_instant_scroll_wheel_step':
+        return 'Instant scroll wheel step';
+      case 'popup_instant_scroll_wheel_step_hint':
+        return 'How far one mouse-wheel notch jumps the popup, as a share of its height (also scaled by popup scroll speed).';
+      case 'popup_instant_scroll_touch_step':
+        return 'Instant scroll touch step';
+      case 'popup_instant_scroll_touch_step_hint':
+        return 'How far a finger must swipe before the popup jumps one step, as a share of its height.';
+      case 'video_subdl_settings_hint':
+        return 'Subtitles in English and many other languages for movies and TV, matched by IMDb / TMDB id. A free API key is required; downloads count toward an anonymous daily limit per IP.';
+      case 'video_subdl_enabled_hint':
+        return 'Off means SubDL is skipped even when an API key is saved.';
+      case 'video_subdl_api_key_hint':
+        return 'Get a free API key at subdl.com/panel/api';
+      case 'onboarding_online_services_subdl':
+        return 'Find English and multilingual subtitles for movies and TV. Register a free SubDL account, generate an API key in the panel, then enter it in settings and enable this subtitle source.';
+      case 'jellyfin_routes_title':
+        return 'Routes';
+      case 'jellyfin_routes_hint':
+        return 'Add this server\'s other addresses (LAN, public, reverse proxy) and switch between them at any time. Your sign-in works on every route.';
+      case 'jellyfin_route_primary_label':
+        return 'Sign-in address';
+      case 'jellyfin_route_active_label':
+        return 'In use';
+      case 'jellyfin_route_url':
+        return 'Route URL';
+      case 'jellyfin_route_add':
+        return 'Add route';
+      case 'jellyfin_route_add_failed':
+        return 'Could not add the route';
+      case 'jellyfin_route_exists':
+        return 'This route is already in the list';
+      case 'jellyfin_route_verify_failed':
+        return ({required Object url, required Object reason}) =>
+            'The server at ${url} did not accept the current sign-in. It may be a different server, or the sign-in has expired: ${reason}';
+      case 'jellyfin_route_remove':
+        return 'Remove route';
+      case 'jellyfin_route_switched':
+        return ({required Object url}) => 'Switched to ${url}';
+      case 'media_server_route_switch':
+        return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
       default:
         return null;
     }
