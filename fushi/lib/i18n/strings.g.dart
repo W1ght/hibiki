@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87805 (5165 per locale)
+/// Strings: 88638 (5214 per locale)
 ///
-/// Built on 2026-09-21 at 05:32 UTC
+/// Built on 2026-09-21 at 15:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7225,6 +7225,56 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'TMDB episode ordering on host…';
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  String get manga_reader_settings => 'Reader settings';
+  String get manga_reader_defaults => 'Default reader behavior';
+  String get manga_reader_global => 'Use global default';
+  String get manga_reader_override => 'This title';
+  String get manga_reader_restore => 'Restore all global defaults';
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  String get manga_reading_mode_auto => 'Automatic';
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  String get manga_reader_scale => 'Image scaling';
+  String get manga_scale_fit_screen => 'Fit screen';
+  String get manga_scale_stretch => 'Stretch';
+  String get manga_scale_fit_width => 'Fit width';
+  String get manga_scale_fit_height => 'Fit height';
+  String get manga_scale_original => 'Original size';
+  String get manga_scale_smart => 'Smart fit';
+  String get manga_reader_padding => 'Webtoon side padding';
+  String get manga_reader_page_number => 'Show page number';
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  String get manga_reader_tap_default => 'Default';
+  String get manga_reader_tap_edge => 'Edge';
+  String get manga_reader_tap_disabled => 'Disabled';
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  String get manga_reader_tap_hint => 'Show tap zones';
+  String get manga_reader_skip_read => 'Skip read chapters';
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  String get manga_reader_transition => 'Always show chapter transition';
+  String get manga_reader_fullscreen => 'Full screen';
+  String get manga_reader_keep_screen => 'Keep screen on';
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  String get manga_page_actions => 'Page actions';
+  String get manga_page_set_cover => 'Set as cover';
+  String get manga_page_copy => 'Copy image';
+  String get manga_page_share => 'Share image';
+  String get manga_page_save => 'Save image';
+  String get manga_chapter_transition => 'Next chapter';
+  String get manga_reader_save_directory => 'Saved image folders';
+  String get manga_reader_save_flat => 'One folder';
+  String get manga_reader_save_book => 'By title';
+  String get manga_reader_save_chapter => 'By title and chapter';
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  String get manga_reader_tap_kindle => 'Kindle';
+  String get manga_reader_tap_right_left => 'Right and left';
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -19441,6 +19491,105 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -31885,6 +32034,105 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -44382,6 +44630,105 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -56916,6 +57263,105 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -69249,6 +69695,105 @@ class _StringsId extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -81674,6 +82219,105 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -93480,6 +94124,105 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -105296,6 +106039,105 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -117681,6 +118523,105 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -130119,6 +131060,105 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -142532,6 +143572,105 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -154746,6 +155885,105 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -167074,6 +168312,105 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -179375,6 +180712,105 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 // Path: <root>
@@ -190639,6 +192075,104 @@ class _StringsZhCn extends _StringsEn {
   String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
   @override
   String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
+  @override
+  String get manga_reader_settings => '阅读设置';
+  @override
+  String get manga_reader_defaults => '默认阅读行为';
+  @override
+  String get manga_reader_global => '使用全局默认';
+  @override
+  String get manga_reader_override => '当前作品';
+  @override
+  String get manga_reader_restore => '恢复全部全局默认';
+  @override
+  String get manga_reader_save_failed => '无法保存阅读设置';
+  @override
+  String get manga_reading_mode_auto => '自动';
+  @override
+  String get manga_reading_mode_vertical => '纵向分页';
+  @override
+  String get manga_reading_mode_gaps => '带间距长条漫';
+  @override
+  String get manga_reader_scale => '图片缩放';
+  @override
+  String get manga_scale_fit_screen => '适应屏幕';
+  @override
+  String get manga_scale_stretch => '拉伸';
+  @override
+  String get manga_scale_fit_width => '适应宽度';
+  @override
+  String get manga_scale_fit_height => '适应高度';
+  @override
+  String get manga_scale_original => '原始大小';
+  @override
+  String get manga_scale_smart => '智能适应';
+  @override
+  String get manga_reader_padding => '长条漫左右留白';
+  @override
+  String get manga_reader_page_number => '显示页码';
+  @override
+  String get manga_reader_double_tap_animation => '双击缩放动画';
+  @override
+  String get manga_reader_disable_zoom_out => '禁止缩小至适应大小以下';
+  @override
+  String get manga_reader_invert_horizontal => '水平反转点击区';
+  @override
+  String get manga_reader_invert_vertical => '垂直反转点击区';
+  @override
+  String get manga_reader_invert_both => '双向反转点击区';
+  @override
+  String get manga_reader_tap_default => '默认';
+  @override
+  String get manga_reader_tap_edge => '边缘';
+  @override
+  String get manga_reader_tap_disabled => '关闭';
+  @override
+  String get manga_reader_mode_hint => '进入时显示阅读模式';
+  @override
+  String get manga_reader_tap_hint => '显示点击区提示';
+  @override
+  String get manga_reader_skip_read => '跳过已读章节';
+  @override
+  String get manga_reader_skip_filtered => '跳过已过滤章节';
+  @override
+  String get manga_reader_skip_duplicate => '跳过重复章节';
+  @override
+  String get manga_reader_transition => '始终显示章节过渡';
+  @override
+  String get manga_reader_fullscreen => '全屏';
+  @override
+  String get manga_reader_keep_screen => '保持亮屏';
+  @override
+  String get manga_reader_invert_volume => '反转音量键翻页方向';
+  @override
+  String get manga_page_actions => '页面操作';
+  @override
+  String get manga_page_set_cover => '设为封面';
+  @override
+  String get manga_page_copy => '复制图片';
+  @override
+  String get manga_page_share => '分享图片';
+  @override
+  String get manga_page_save => '保存图片';
+  @override
+  String get manga_chapter_transition => '进入下一章';
+  @override
+  String get manga_reader_save_directory => '图片保存目录';
+  @override
+  String get manga_reader_save_flat => '统一目录';
+  @override
+  String get manga_reader_save_book => '按作品';
+  @override
+  String get manga_reader_save_chapter => '按作品及章节';
+  @override
+  String get manga_reader_tap_l_shaped => 'L形';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => '左右';
+  @override
+  String get manga_reading_mode => '阅读模式';
 }
 
 // Path: <root>
@@ -202129,6 +203663,105 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get manga_reader_settings => 'Reader settings';
+  @override
+  String get manga_reader_defaults => 'Default reader behavior';
+  @override
+  String get manga_reader_global => 'Use global default';
+  @override
+  String get manga_reader_override => 'This title';
+  @override
+  String get manga_reader_restore => 'Restore all global defaults';
+  @override
+  String get manga_reader_save_failed => 'Could not save reader settings';
+  @override
+  String get manga_reading_mode_auto => 'Automatic';
+  @override
+  String get manga_reading_mode_vertical => 'Vertical pages';
+  @override
+  String get manga_reading_mode_gaps => 'Webtoon with gaps';
+  @override
+  String get manga_reader_scale => 'Image scaling';
+  @override
+  String get manga_scale_fit_screen => 'Fit screen';
+  @override
+  String get manga_scale_stretch => 'Stretch';
+  @override
+  String get manga_scale_fit_width => 'Fit width';
+  @override
+  String get manga_scale_fit_height => 'Fit height';
+  @override
+  String get manga_scale_original => 'Original size';
+  @override
+  String get manga_scale_smart => 'Smart fit';
+  @override
+  String get manga_reader_padding => 'Webtoon side padding';
+  @override
+  String get manga_reader_page_number => 'Show page number';
+  @override
+  String get manga_reader_double_tap_animation => 'Animate double-tap zoom';
+  @override
+  String get manga_reader_disable_zoom_out =>
+      'Prevent zooming below fitted size';
+  @override
+  String get manga_reader_invert_horizontal => 'Invert horizontal tap zones';
+  @override
+  String get manga_reader_invert_vertical => 'Invert vertical tap zones';
+  @override
+  String get manga_reader_invert_both => 'Invert both tap-zone axes';
+  @override
+  String get manga_reader_tap_default => 'Default';
+  @override
+  String get manga_reader_tap_edge => 'Edge';
+  @override
+  String get manga_reader_tap_disabled => 'Disabled';
+  @override
+  String get manga_reader_mode_hint => 'Show reading mode on entry';
+  @override
+  String get manga_reader_tap_hint => 'Show tap zones';
+  @override
+  String get manga_reader_skip_read => 'Skip read chapters';
+  @override
+  String get manga_reader_skip_filtered => 'Skip filtered chapters';
+  @override
+  String get manga_reader_skip_duplicate => 'Skip duplicate chapters';
+  @override
+  String get manga_reader_transition => 'Always show chapter transition';
+  @override
+  String get manga_reader_fullscreen => 'Full screen';
+  @override
+  String get manga_reader_keep_screen => 'Keep screen on';
+  @override
+  String get manga_reader_invert_volume => 'Invert volume key direction';
+  @override
+  String get manga_page_actions => 'Page actions';
+  @override
+  String get manga_page_set_cover => 'Set as cover';
+  @override
+  String get manga_page_copy => 'Copy image';
+  @override
+  String get manga_page_share => 'Share image';
+  @override
+  String get manga_page_save => 'Save image';
+  @override
+  String get manga_chapter_transition => 'Next chapter';
+  @override
+  String get manga_reader_save_directory => 'Saved image folders';
+  @override
+  String get manga_reader_save_flat => 'One folder';
+  @override
+  String get manga_reader_save_book => 'By title';
+  @override
+  String get manga_reader_save_chapter => 'By title and chapter';
+  @override
+  String get manga_reader_tap_l_shaped => 'L-shaped';
+  @override
+  String get manga_reader_tap_kindle => 'Kindle';
+  @override
+  String get manga_reader_tap_right_left => 'Right and left';
+  @override
+  String get manga_reading_mode => 'Reading mode';
 }
 
 /// Flat map(s) containing all translations.
@@ -212772,6 +214405,104 @@ extension on _StringsEn {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -223410,6 +225141,104 @@ extension on _StringsAr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -234093,6 +235922,104 @@ extension on _StringsDe {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -244767,6 +246694,104 @@ extension on _StringsEs {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -255450,6 +257475,104 @@ extension on _StringsFr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -266104,6 +268227,104 @@ extension on _StringsId {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -276780,6 +279001,104 @@ extension on _StringsIt {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -287383,6 +289702,104 @@ extension on _StringsJa {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -297990,6 +300407,104 @@ extension on _StringsKo {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -308659,6 +311174,104 @@ extension on _StringsNl {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -319323,6 +321936,104 @@ extension on _StringsPtBr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -329994,6 +332705,104 @@ extension on _StringsRu {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -340637,6 +343446,104 @@ extension on _StringsTh {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -351295,6 +354202,104 @@ extension on _StringsTr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -361947,6 +364952,104 @@ extension on _StringsVi {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
@@ -372503,6 +375606,104 @@ extension on _StringsZhCn {
         return '在 host 上选择 TMDB 集编排…';
       case 'video_metadata_provider_anidb':
         return 'AniDB（哈希身份 + 作品 XML）';
+      case 'manga_reader_settings':
+        return '阅读设置';
+      case 'manga_reader_defaults':
+        return '默认阅读行为';
+      case 'manga_reader_global':
+        return '使用全局默认';
+      case 'manga_reader_override':
+        return '当前作品';
+      case 'manga_reader_restore':
+        return '恢复全部全局默认';
+      case 'manga_reader_save_failed':
+        return '无法保存阅读设置';
+      case 'manga_reading_mode_auto':
+        return '自动';
+      case 'manga_reading_mode_vertical':
+        return '纵向分页';
+      case 'manga_reading_mode_gaps':
+        return '带间距长条漫';
+      case 'manga_reader_scale':
+        return '图片缩放';
+      case 'manga_scale_fit_screen':
+        return '适应屏幕';
+      case 'manga_scale_stretch':
+        return '拉伸';
+      case 'manga_scale_fit_width':
+        return '适应宽度';
+      case 'manga_scale_fit_height':
+        return '适应高度';
+      case 'manga_scale_original':
+        return '原始大小';
+      case 'manga_scale_smart':
+        return '智能适应';
+      case 'manga_reader_padding':
+        return '长条漫左右留白';
+      case 'manga_reader_page_number':
+        return '显示页码';
+      case 'manga_reader_double_tap_animation':
+        return '双击缩放动画';
+      case 'manga_reader_disable_zoom_out':
+        return '禁止缩小至适应大小以下';
+      case 'manga_reader_invert_horizontal':
+        return '水平反转点击区';
+      case 'manga_reader_invert_vertical':
+        return '垂直反转点击区';
+      case 'manga_reader_invert_both':
+        return '双向反转点击区';
+      case 'manga_reader_tap_default':
+        return '默认';
+      case 'manga_reader_tap_edge':
+        return '边缘';
+      case 'manga_reader_tap_disabled':
+        return '关闭';
+      case 'manga_reader_mode_hint':
+        return '进入时显示阅读模式';
+      case 'manga_reader_tap_hint':
+        return '显示点击区提示';
+      case 'manga_reader_skip_read':
+        return '跳过已读章节';
+      case 'manga_reader_skip_filtered':
+        return '跳过已过滤章节';
+      case 'manga_reader_skip_duplicate':
+        return '跳过重复章节';
+      case 'manga_reader_transition':
+        return '始终显示章节过渡';
+      case 'manga_reader_fullscreen':
+        return '全屏';
+      case 'manga_reader_keep_screen':
+        return '保持亮屏';
+      case 'manga_reader_invert_volume':
+        return '反转音量键翻页方向';
+      case 'manga_page_actions':
+        return '页面操作';
+      case 'manga_page_set_cover':
+        return '设为封面';
+      case 'manga_page_copy':
+        return '复制图片';
+      case 'manga_page_share':
+        return '分享图片';
+      case 'manga_page_save':
+        return '保存图片';
+      case 'manga_chapter_transition':
+        return '进入下一章';
+      case 'manga_reader_save_directory':
+        return '图片保存目录';
+      case 'manga_reader_save_flat':
+        return '统一目录';
+      case 'manga_reader_save_book':
+        return '按作品';
+      case 'manga_reader_save_chapter':
+        return '按作品及章节';
+      case 'manga_reader_tap_l_shaped':
+        return 'L形';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return '左右';
+      case 'manga_reading_mode':
+        return '阅读模式';
       default:
         return null;
     }
@@ -383084,6 +386285,104 @@ extension on _StringsZhHk {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'manga_reader_settings':
+        return 'Reader settings';
+      case 'manga_reader_defaults':
+        return 'Default reader behavior';
+      case 'manga_reader_global':
+        return 'Use global default';
+      case 'manga_reader_override':
+        return 'This title';
+      case 'manga_reader_restore':
+        return 'Restore all global defaults';
+      case 'manga_reader_save_failed':
+        return 'Could not save reader settings';
+      case 'manga_reading_mode_auto':
+        return 'Automatic';
+      case 'manga_reading_mode_vertical':
+        return 'Vertical pages';
+      case 'manga_reading_mode_gaps':
+        return 'Webtoon with gaps';
+      case 'manga_reader_scale':
+        return 'Image scaling';
+      case 'manga_scale_fit_screen':
+        return 'Fit screen';
+      case 'manga_scale_stretch':
+        return 'Stretch';
+      case 'manga_scale_fit_width':
+        return 'Fit width';
+      case 'manga_scale_fit_height':
+        return 'Fit height';
+      case 'manga_scale_original':
+        return 'Original size';
+      case 'manga_scale_smart':
+        return 'Smart fit';
+      case 'manga_reader_padding':
+        return 'Webtoon side padding';
+      case 'manga_reader_page_number':
+        return 'Show page number';
+      case 'manga_reader_double_tap_animation':
+        return 'Animate double-tap zoom';
+      case 'manga_reader_disable_zoom_out':
+        return 'Prevent zooming below fitted size';
+      case 'manga_reader_invert_horizontal':
+        return 'Invert horizontal tap zones';
+      case 'manga_reader_invert_vertical':
+        return 'Invert vertical tap zones';
+      case 'manga_reader_invert_both':
+        return 'Invert both tap-zone axes';
+      case 'manga_reader_tap_default':
+        return 'Default';
+      case 'manga_reader_tap_edge':
+        return 'Edge';
+      case 'manga_reader_tap_disabled':
+        return 'Disabled';
+      case 'manga_reader_mode_hint':
+        return 'Show reading mode on entry';
+      case 'manga_reader_tap_hint':
+        return 'Show tap zones';
+      case 'manga_reader_skip_read':
+        return 'Skip read chapters';
+      case 'manga_reader_skip_filtered':
+        return 'Skip filtered chapters';
+      case 'manga_reader_skip_duplicate':
+        return 'Skip duplicate chapters';
+      case 'manga_reader_transition':
+        return 'Always show chapter transition';
+      case 'manga_reader_fullscreen':
+        return 'Full screen';
+      case 'manga_reader_keep_screen':
+        return 'Keep screen on';
+      case 'manga_reader_invert_volume':
+        return 'Invert volume key direction';
+      case 'manga_page_actions':
+        return 'Page actions';
+      case 'manga_page_set_cover':
+        return 'Set as cover';
+      case 'manga_page_copy':
+        return 'Copy image';
+      case 'manga_page_share':
+        return 'Share image';
+      case 'manga_page_save':
+        return 'Save image';
+      case 'manga_chapter_transition':
+        return 'Next chapter';
+      case 'manga_reader_save_directory':
+        return 'Saved image folders';
+      case 'manga_reader_save_flat':
+        return 'One folder';
+      case 'manga_reader_save_book':
+        return 'By title';
+      case 'manga_reader_save_chapter':
+        return 'By title and chapter';
+      case 'manga_reader_tap_l_shaped':
+        return 'L-shaped';
+      case 'manga_reader_tap_kindle':
+        return 'Kindle';
+      case 'manga_reader_tap_right_left':
+        return 'Right and left';
+      case 'manga_reading_mode':
+        return 'Reading mode';
       default:
         return null;
     }
