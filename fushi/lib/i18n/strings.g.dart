@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87873 (5169 per locale)
+/// Strings: 87907 (5171 per locale)
 ///
-/// Built on 2026-09-21 at 14:27 UTC
+/// Built on 2026-09-21 at 17:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7232,6 +7232,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get interconnect_transcode_host_toggle => 'Transcode video for peers';
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -19459,6 +19462,11 @@ class _StringsAr extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -31914,6 +31922,11 @@ class _StringsDe extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -44422,6 +44435,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -56967,6 +56985,11 @@ class _StringsFr extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -69311,6 +69334,11 @@ class _StringsId extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -81747,6 +81775,11 @@ class _StringsIt extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -93564,6 +93597,11 @@ class _StringsJa extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -105391,6 +105429,11 @@ class _StringsKo extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -117787,6 +117830,11 @@ class _StringsNl extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -130236,6 +130284,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -142660,6 +142713,11 @@ class _StringsRu extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -154885,6 +154943,11 @@ class _StringsTh extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -167224,6 +167287,11 @@ class _StringsTr extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -179536,6 +179604,11 @@ class _StringsVi extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -190811,6 +190884,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+  @override
+  String get lookup_hover_leave_resume => '离开查词即继续播放';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
 }
 
 // Path: <root>
@@ -202312,6 +202390,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get interconnect_transcode_host_toggle_desc =>
       'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 /// Flat map(s) containing all translations.
@@ -212965,6 +213048,10 @@ extension on _StringsEn {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -223613,6 +223700,10 @@ extension on _StringsAr {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -234306,6 +234397,10 @@ extension on _StringsDe {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -244990,6 +245085,10 @@ extension on _StringsEs {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -255683,6 +255782,10 @@ extension on _StringsFr {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -266347,6 +266450,10 @@ extension on _StringsId {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -277033,6 +277140,10 @@ extension on _StringsIt {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -287646,6 +287757,10 @@ extension on _StringsJa {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -298263,6 +298378,10 @@ extension on _StringsKo {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -308942,6 +309061,10 @@ extension on _StringsNl {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -319616,6 +319739,10 @@ extension on _StringsPtBr {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -330297,6 +330424,10 @@ extension on _StringsRu {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -340950,6 +341081,10 @@ extension on _StringsTh {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -351618,6 +351753,10 @@ extension on _StringsTr {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -362280,6 +362419,10 @@ extension on _StringsVi {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -372844,6 +372987,10 @@ extension on _StringsZhCn {
         return '为对端转码视频';
       case 'interconnect_transcode_host_toggle_desc':
         return '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+      case 'lookup_hover_leave_resume':
+        return '离开查词即继续播放';
+      case 'lookup_hover_leave_resume_hint':
+        return '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
       default:
         return null;
     }
@@ -383435,6 +383582,10 @@ extension on _StringsZhHk {
         return 'Transcode video for peers';
       case 'interconnect_transcode_host_toggle_desc':
         return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
