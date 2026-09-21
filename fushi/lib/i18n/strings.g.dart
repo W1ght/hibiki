@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87805 (5165 per locale)
+/// Strings: 88060 (5180 per locale)
 ///
-/// Built on 2026-09-21 at 05:32 UTC
+/// Built on 2026-09-21 at 18:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7225,6 +7225,33 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'TMDB episode ordering on host…';
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  String get download_execution_host_title => 'Download on device';
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -19441,6 +19468,48 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -31885,6 +31954,48 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -44382,6 +44493,48 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -56916,6 +57069,48 @@ class _StringsFr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -69249,6 +69444,48 @@ class _StringsId extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -81674,6 +81911,48 @@ class _StringsIt extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -93480,6 +93759,48 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -105296,6 +105617,48 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -117681,6 +118044,48 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -130119,6 +130524,48 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -142532,6 +142979,48 @@ class _StringsRu extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -154746,6 +155235,48 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -167074,6 +167605,48 @@ class _StringsTr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -179375,6 +179948,48 @@ class _StringsVi extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -190639,6 +191254,44 @@ class _StringsZhCn extends _StringsEn {
   String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
   @override
   String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
+  @override
+  String get download_execution_host_title => '下载执行设备';
+  @override
+  String get download_execution_host_hint =>
+      '新下载任务交给这台设备执行，下到它自己的库里。先在「互联」里配对设备。';
+  @override
+  String get download_execution_remote_queued => '已交给下载执行设备';
+  @override
+  String get download_execution_host_unreachable => '下载设置里指定的执行设备连不上，没有开始下载。';
+  @override
+  String get download_execution_remote_kind_unsupported => '下载执行设备不支持导入这类内容';
+  @override
+  String get download_execution_remote_magnet_only => '下载执行设备只接受磁力链接';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      '一次性下载 ${group} · ${resolution} 整包。合集没有可追的下一集。';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      '追更订阅只处理新发布的单集。如果这部作品已完结，或你是从合集资源建的订阅，请改用一次性下载整包。';
+  @override
+  String get ai_provider_model_pick => '从已获取的模型里挑';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      '网络较慢，画质已降到 ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      '网络变好，画质已提到 ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => '为对端转码视频';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+  @override
+  String get lookup_hover_leave_resume => '离开查词即继续播放';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
 }
 
 // Path: <root>
@@ -202129,6 +202782,48 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => '從已獲取的模型裡挑';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 /// Flat map(s) containing all translations.
@@ -212772,6 +213467,39 @@ extension on _StringsEn {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -223410,6 +224138,39 @@ extension on _StringsAr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -234093,6 +234854,39 @@ extension on _StringsDe {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -244767,6 +245561,39 @@ extension on _StringsEs {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -255450,6 +256277,39 @@ extension on _StringsFr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -266104,6 +266964,39 @@ extension on _StringsId {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -276780,6 +277673,39 @@ extension on _StringsIt {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -287383,6 +288309,39 @@ extension on _StringsJa {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -297990,6 +298949,39 @@ extension on _StringsKo {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -308659,6 +309651,39 @@ extension on _StringsNl {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -319323,6 +320348,39 @@ extension on _StringsPtBr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -329994,6 +331052,39 @@ extension on _StringsRu {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -340637,6 +341728,39 @@ extension on _StringsTh {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -351295,6 +352419,39 @@ extension on _StringsTr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -361947,6 +363104,39 @@ extension on _StringsVi {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -372503,6 +373693,37 @@ extension on _StringsZhCn {
         return '在 host 上选择 TMDB 集编排…';
       case 'video_metadata_provider_anidb':
         return 'AniDB（哈希身份 + 作品 XML）';
+      case 'download_execution_host_title':
+        return '下载执行设备';
+      case 'download_execution_host_hint':
+        return '新下载任务交给这台设备执行，下到它自己的库里。先在「互联」里配对设备。';
+      case 'download_execution_remote_queued':
+        return '已交给下载执行设备';
+      case 'download_execution_host_unreachable':
+        return '下载设置里指定的执行设备连不上，没有开始下载。';
+      case 'download_execution_remote_kind_unsupported':
+        return '下载执行设备不支持导入这类内容';
+      case 'download_execution_remote_magnet_only':
+        return '下载执行设备只接受磁力链接';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            '一次性下载 ${group} · ${resolution} 整包。合集没有可追的下一集。';
+      case 'subscription_items_empty_ongoing_hint':
+        return '追更订阅只处理新发布的单集。如果这部作品已完结，或你是从合集资源建的订阅，请改用一次性下载整包。';
+      case 'ai_provider_model_pick':
+        return '从已获取的模型里挑';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) => '网络较慢，画质已降到 ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) => '网络变好，画质已提到 ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return '为对端转码视频';
+      case 'interconnect_transcode_host_toggle_desc':
+        return '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+      case 'lookup_hover_leave_resume':
+        return '离开查词即继续播放';
+      case 'lookup_hover_leave_resume_hint':
+        return '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
       default:
         return null;
     }
@@ -383084,6 +384305,39 @@ extension on _StringsZhHk {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return '從已獲取的模型裡挑';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
