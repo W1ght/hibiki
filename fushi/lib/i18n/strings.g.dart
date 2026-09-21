@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87839 (5167 per locale)
+/// Strings: 87907 (5171 per locale)
 ///
-/// Built on 2026-09-21 at 13:25 UTC
+/// Built on 2026-09-21 at 17:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7225,6 +7225,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'TMDB episode ordering on host…';
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
@@ -19444,6 +19451,17 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
@@ -31893,6 +31911,17 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
@@ -44395,6 +44424,17 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
@@ -56935,6 +56975,17 @@ class _StringsFr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
   String get lookup_hover_leave_resume_hint =>
@@ -69272,6 +69323,17 @@ class _StringsId extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
@@ -81703,6 +81765,17 @@ class _StringsIt extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
   String get lookup_hover_leave_resume_hint =>
@@ -93513,6 +93586,17 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
@@ -105334,6 +105418,17 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
@@ -117724,6 +117819,17 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
@@ -130168,6 +130274,17 @@ class _StringsPtBr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
   String get lookup_hover_leave_resume_hint =>
@@ -142586,6 +142703,17 @@ class _StringsRu extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
   String get lookup_hover_leave_resume_hint =>
@@ -154804,6 +154932,17 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
   @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
@@ -167138,6 +167277,17 @@ class _StringsTr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
   String get lookup_hover_leave_resume_hint =>
@@ -179444,6 +179594,17 @@ class _StringsVi extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
   String get lookup_hover_leave_resume_hint =>
@@ -190712,6 +190873,17 @@ class _StringsZhCn extends _StringsEn {
   String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
   @override
   String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      '网络较慢，画质已降到 ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      '网络变好，画质已提到 ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => '为对端转码视频';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
   @override
   String get lookup_hover_leave_resume => '离开查词即继续播放';
   @override
@@ -202208,6 +202380,17 @@ class _StringsZhHk extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   @override
   String get lookup_hover_leave_resume_hint =>
@@ -212855,6 +213038,16 @@ extension on _StringsEn {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -223497,6 +223690,16 @@ extension on _StringsAr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -234184,6 +234387,16 @@ extension on _StringsDe {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -244862,6 +245075,16 @@ extension on _StringsEs {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -255549,6 +255772,16 @@ extension on _StringsFr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -266207,6 +266440,16 @@ extension on _StringsId {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -276887,6 +277130,16 @@ extension on _StringsIt {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -287494,6 +287747,16 @@ extension on _StringsJa {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -298105,6 +298368,16 @@ extension on _StringsKo {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -308778,6 +309051,16 @@ extension on _StringsNl {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -319446,6 +319729,16 @@ extension on _StringsPtBr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -330121,6 +330414,16 @@ extension on _StringsRu {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -340768,6 +341071,16 @@ extension on _StringsTh {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -351430,6 +351743,16 @@ extension on _StringsTr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -362086,6 +362409,16 @@ extension on _StringsVi {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
@@ -372646,6 +372979,14 @@ extension on _StringsZhCn {
         return '在 host 上选择 TMDB 集编排…';
       case 'video_metadata_provider_anidb':
         return 'AniDB（哈希身份 + 作品 XML）';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) => '网络较慢，画质已降到 ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) => '网络变好，画质已提到 ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return '为对端转码视频';
+      case 'interconnect_transcode_host_toggle_desc':
+        return '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
       case 'lookup_hover_leave_resume':
         return '离开查词即继续播放';
       case 'lookup_hover_leave_resume_hint':
@@ -383231,6 +383572,16 @@ extension on _StringsZhHk {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
       case 'lookup_hover_leave_resume':
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
