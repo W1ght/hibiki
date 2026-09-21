@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87924 (5172 per locale)
+/// Strings: 87958 (5174 per locale)
 ///
-/// Built on 2026-09-21 at 18:16 UTC
+/// Built on 2026-09-21 at 18:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7225,6 +7225,11 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'TMDB episode ordering on host…';
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   String get ai_provider_model_pick => 'Pick from fetched models';
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -19452,6 +19457,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
@@ -31914,6 +31926,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
@@ -44429,6 +44448,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
@@ -56982,6 +57008,13 @@ class _StringsFr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
@@ -69332,6 +69365,13 @@ class _StringsId extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
@@ -81776,6 +81816,13 @@ class _StringsIt extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
@@ -93599,6 +93646,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
@@ -105433,6 +105487,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
@@ -117836,6 +117897,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
@@ -130293,6 +130361,13 @@ class _StringsPtBr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
@@ -142724,6 +142799,13 @@ class _StringsRu extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
@@ -154955,6 +155037,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
@@ -167302,6 +167391,13 @@ class _StringsTr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
@@ -179621,6 +179717,13 @@ class _StringsVi extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
   String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
@@ -190902,6 +191005,13 @@ class _StringsZhCn extends _StringsEn {
   String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
   @override
   String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
+  @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      '一次性下载 ${group} · ${resolution} 整包。合集没有可追的下一集。';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      '追更订阅只处理新发布的单集。如果这部作品已完结，或你是从合集资源建的订阅，请改用一次性下载整包。';
   @override
   String get ai_provider_model_pick => '从已获取的模型里挑';
   @override
@@ -202411,6 +202521,13 @@ class _StringsZhHk extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String download_subscription_choice_hint_batch(
+          {required Object group, required Object resolution}) =>
+      'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+  @override
+  String get subscription_items_empty_ongoing_hint =>
+      'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
   String get ai_provider_model_pick => '從已獲取的模型裡挑';
   @override
   String video_quality_auto_lowered({required Object label}) =>
@@ -213071,6 +213188,11 @@ extension on _StringsEn {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -223725,6 +223847,11 @@ extension on _StringsAr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -234424,6 +234551,11 @@ extension on _StringsDe {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -245114,6 +245246,11 @@ extension on _StringsEs {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -255813,6 +255950,11 @@ extension on _StringsFr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -266483,6 +266625,11 @@ extension on _StringsId {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -277175,6 +277322,11 @@ extension on _StringsIt {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -287794,6 +287946,11 @@ extension on _StringsJa {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -298417,6 +298574,11 @@ extension on _StringsKo {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -309102,6 +309264,11 @@ extension on _StringsNl {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -319782,6 +319949,11 @@ extension on _StringsPtBr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -330469,6 +330641,11 @@ extension on _StringsRu {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -341128,6 +341305,11 @@ extension on _StringsTh {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -351802,6 +351984,11 @@ extension on _StringsTr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -362470,6 +362657,11 @@ extension on _StringsVi {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
@@ -373042,6 +373234,11 @@ extension on _StringsZhCn {
         return '在 host 上选择 TMDB 集编排…';
       case 'video_metadata_provider_anidb':
         return 'AniDB（哈希身份 + 作品 XML）';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            '一次性下载 ${group} · ${resolution} 整包。合集没有可追的下一集。';
+      case 'subscription_items_empty_ongoing_hint':
+        return '追更订阅只处理新发布的单集。如果这部作品已完结，或你是从合集资源建的订阅，请改用一次性下载整包。';
       case 'ai_provider_model_pick':
         return '从已获取的模型里挑';
       case 'video_quality_auto_lowered':
@@ -383637,6 +383834,11 @@ extension on _StringsZhHk {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_subscription_choice_hint_batch':
+        return ({required Object group, required Object resolution}) =>
+            'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
+      case 'subscription_items_empty_ongoing_hint':
+        return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
       case 'ai_provider_model_pick':
         return '從已獲取的模型裡挑';
       case 'video_quality_auto_lowered':
