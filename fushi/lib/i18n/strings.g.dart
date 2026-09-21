@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87380 (5140 per locale)
+/// Strings: 87924 (5172 per locale)
 ///
-/// Built on 2026-09-20 at 03:03 UTC
+/// Built on 2026-09-21 at 18:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7184,6 +7184,58 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get jellyfin_route_remove => 'Remove route';
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   String get media_server_route_switch => 'Switch route';
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  String get collection_episode_link_clear => 'Clear manual pin';
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  String get video_metadata_max_covers => 'Covers kept per work';
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  String get video_metadata_max_logos => 'Logos kept per work';
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -19334,6 +19386,90 @@ class _StringsAr extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -31712,6 +31848,90 @@ class _StringsDe extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -44143,6 +44363,90 @@ class _StringsEs extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -56611,6 +56915,90 @@ class _StringsFr extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -68878,6 +69266,90 @@ class _StringsId extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -81237,6 +81709,90 @@ class _StringsIt extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -92977,6 +93533,90 @@ class _StringsJa extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -104727,6 +105367,90 @@ class _StringsKo extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -117046,6 +117770,90 @@ class _StringsNl extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -129418,6 +130226,90 @@ class _StringsPtBr extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -141765,6 +142657,90 @@ class _StringsRu extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -153913,6 +154889,90 @@ class _StringsTh extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -166175,6 +167235,90 @@ class _StringsTr extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -178410,6 +179554,90 @@ class _StringsVi extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -189615,6 +190843,83 @@ class _StringsZhCn extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => '已切换到 ${url}';
   @override
   String get media_server_route_switch => '切换线路';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB 第 ${number} 集';
+  @override
+  String get collection_tmdb_ordering => 'TMDB 集编排…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB 默认排序';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      '选定这部剧按 TMDB 哪一套排序划分季集；AniDB 集级链接随之按该排序重算。';
+  @override
+  String get collection_tmdb_ordering_none => 'TMDB 上这部剧没有备选排序';
+  @override
+  String get collection_tmdb_ordering_unavailable => '作品还没有 TMDB 身份，先刮削';
+  @override
+  String get collection_tmdb_ordering_saved => '已选定排序，正在重刮…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} 组 · ${episodes} 集';
+  @override
+  String get video_work_field_episode_group => 'TMDB 集编排';
+  @override
+  String get collection_episode_link_manual => '手动指定季集…';
+  @override
+  String get collection_episode_link_hint =>
+      '钉死这个文件对应的季集，之后每次刮削都保留（Shoko UserVerified）。';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      '第 ${number} 季';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      '第 ${number} 集';
+  @override
+  String get collection_episode_link_saved => '已手动指定季集，刮削时保留';
+  @override
+  String get collection_episode_link_clear => '清除手动指定';
+  @override
+  String get collection_episode_link_cleared => '已清除手动指定，下次刮削回到自动链接';
+  @override
+  String get collection_episode_link_unavailable => '先刮出作品资料再指定';
+  @override
+  String get video_metadata_max_covers => '每部作品保留的封面数';
+  @override
+  String get video_metadata_max_backdrops => '每部作品保留的背景图数';
+  @override
+  String get video_metadata_max_logos => '每部作品保留的 Logo 数';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = 不限。按资料语言 → 原语 → 英文 → 无字图的顺序保留评分最高的几张。';
+  @override
+  String get video_metadata_download_staff_images => '下载演职员头像';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      '刮削时把演职员头像存到本地（每部作品最多 10 张）；关闭时按需从 TMDB 加载。';
+  @override
+  String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
+  @override
+  String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
+  @override
+  String get ai_provider_model_pick => '从已获取的模型里挑';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      '网络较慢，画质已降到 ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      '网络变好，画质已提到 ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => '为对端转码视频';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+  @override
+  String get lookup_hover_leave_resume => '离开查词即继续播放';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
 }
 
 // Path: <root>
@@ -201039,6 +202344,90 @@ class _StringsZhHk extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String collection_episode_anidb_number({required Object number}) =>
+      'AniDB ep ${number}';
+  @override
+  String get collection_tmdb_ordering => 'TMDB episode ordering…';
+  @override
+  String get collection_tmdb_ordering_default => 'TMDB default ordering';
+  @override
+  String get collection_tmdb_ordering_hint =>
+      'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+  @override
+  String get collection_tmdb_ordering_none =>
+      'TMDB has no alternate orderings for this show';
+  @override
+  String get collection_tmdb_ordering_unavailable =>
+      'No TMDB identity yet; scrape the show first';
+  @override
+  String get collection_tmdb_ordering_saved => 'Ordering saved, rescraping…';
+  @override
+  String collection_tmdb_ordering_counts(
+          {required Object groups, required Object episodes}) =>
+      '${groups} groups · ${episodes} episodes';
+  @override
+  String get video_work_field_episode_group => 'TMDB episode ordering';
+  @override
+  String get collection_episode_link_manual => 'Pin to season/episode…';
+  @override
+  String get collection_episode_link_hint =>
+      'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+  @override
+  String collection_episode_link_season({required Object number}) =>
+      'Season ${number}';
+  @override
+  String collection_episode_link_episode({required Object number}) =>
+      'Episode ${number}';
+  @override
+  String get collection_episode_link_saved =>
+      'Episode pinned; kept on rescrape';
+  @override
+  String get collection_episode_link_clear => 'Clear manual pin';
+  @override
+  String get collection_episode_link_cleared =>
+      'Manual pin cleared; the next scrape links automatically';
+  @override
+  String get collection_episode_link_unavailable => 'Scrape the show first';
+  @override
+  String get video_metadata_max_covers => 'Covers kept per work';
+  @override
+  String get video_metadata_max_backdrops => 'Backdrops kept per work';
+  @override
+  String get video_metadata_max_logos => 'Logos kept per work';
+  @override
+  String get video_metadata_image_limit_hint =>
+      '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+  @override
+  String get video_metadata_download_staff_images =>
+      'Download cast & staff photos';
+  @override
+  String get video_metadata_download_staff_images_hint =>
+      'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+  @override
+  String get remote_collection_tmdb_ordering_on_host =>
+      'TMDB episode ordering on host…';
+  @override
+  String get video_metadata_provider_anidb =>
+      'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => '從已獲取的模型裡挑';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 /// Flat map(s) containing all translations.
@@ -211631,6 +213020,73 @@ extension on _StringsEn {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -222218,6 +223674,73 @@ extension on _StringsAr {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -232850,6 +234373,73 @@ extension on _StringsDe {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -243473,6 +245063,73 @@ extension on _StringsEs {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -254105,6 +255762,73 @@ extension on _StringsFr {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -264708,6 +266432,73 @@ extension on _StringsId {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -275333,6 +277124,73 @@ extension on _StringsIt {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -285885,6 +287743,73 @@ extension on _StringsJa {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -296441,6 +298366,73 @@ extension on _StringsKo {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -307059,6 +309051,73 @@ extension on _StringsNl {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -317672,6 +319731,73 @@ extension on _StringsPtBr {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -328292,6 +330418,73 @@ extension on _StringsRu {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -338884,6 +341077,73 @@ extension on _StringsTh {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -349491,6 +351751,73 @@ extension on _StringsTr {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -360092,6 +362419,73 @@ extension on _StringsVi {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -370597,6 +372991,71 @@ extension on _StringsZhCn {
         return ({required Object url}) => '已切换到 ${url}';
       case 'media_server_route_switch':
         return '切换线路';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB 第 ${number} 集';
+      case 'collection_tmdb_ordering':
+        return 'TMDB 集编排…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB 默认排序';
+      case 'collection_tmdb_ordering_hint':
+        return '选定这部剧按 TMDB 哪一套排序划分季集；AniDB 集级链接随之按该排序重算。';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB 上这部剧没有备选排序';
+      case 'collection_tmdb_ordering_unavailable':
+        return '作品还没有 TMDB 身份，先刮削';
+      case 'collection_tmdb_ordering_saved':
+        return '已选定排序，正在重刮…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} 组 · ${episodes} 集';
+      case 'video_work_field_episode_group':
+        return 'TMDB 集编排';
+      case 'collection_episode_link_manual':
+        return '手动指定季集…';
+      case 'collection_episode_link_hint':
+        return '钉死这个文件对应的季集，之后每次刮削都保留（Shoko UserVerified）。';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => '第 ${number} 季';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => '第 ${number} 集';
+      case 'collection_episode_link_saved':
+        return '已手动指定季集，刮削时保留';
+      case 'collection_episode_link_clear':
+        return '清除手动指定';
+      case 'collection_episode_link_cleared':
+        return '已清除手动指定，下次刮削回到自动链接';
+      case 'collection_episode_link_unavailable':
+        return '先刮出作品资料再指定';
+      case 'video_metadata_max_covers':
+        return '每部作品保留的封面数';
+      case 'video_metadata_max_backdrops':
+        return '每部作品保留的背景图数';
+      case 'video_metadata_max_logos':
+        return '每部作品保留的 Logo 数';
+      case 'video_metadata_image_limit_hint':
+        return '0 = 不限。按资料语言 → 原语 → 英文 → 无字图的顺序保留评分最高的几张。';
+      case 'video_metadata_download_staff_images':
+        return '下载演职员头像';
+      case 'video_metadata_download_staff_images_hint':
+        return '刮削时把演职员头像存到本地（每部作品最多 10 张）；关闭时按需从 TMDB 加载。';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return '在 host 上选择 TMDB 集编排…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB（哈希身份 + 作品 XML）';
+      case 'ai_provider_model_pick':
+        return '从已获取的模型里挑';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) => '网络较慢，画质已降到 ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) => '网络变好，画质已提到 ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return '为对端转码视频';
+      case 'interconnect_transcode_host_toggle_desc':
+        return '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+      case 'lookup_hover_leave_resume':
+        return '离开查词即继续播放';
+      case 'lookup_hover_leave_resume_hint':
+        return '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
       default:
         return null;
     }
@@ -381127,6 +383586,73 @@ extension on _StringsZhHk {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'collection_episode_anidb_number':
+        return ({required Object number}) => 'AniDB ep ${number}';
+      case 'collection_tmdb_ordering':
+        return 'TMDB episode ordering…';
+      case 'collection_tmdb_ordering_default':
+        return 'TMDB default ordering';
+      case 'collection_tmdb_ordering_hint':
+        return 'Pick which TMDB ordering decides seasons and episodes for this show. AniDB episode links are recomputed against it.';
+      case 'collection_tmdb_ordering_none':
+        return 'TMDB has no alternate orderings for this show';
+      case 'collection_tmdb_ordering_unavailable':
+        return 'No TMDB identity yet; scrape the show first';
+      case 'collection_tmdb_ordering_saved':
+        return 'Ordering saved, rescraping…';
+      case 'collection_tmdb_ordering_counts':
+        return ({required Object groups, required Object episodes}) =>
+            '${groups} groups · ${episodes} episodes';
+      case 'video_work_field_episode_group':
+        return 'TMDB episode ordering';
+      case 'collection_episode_link_manual':
+        return 'Pin to season/episode…';
+      case 'collection_episode_link_hint':
+        return 'Pin which episode this file is. Kept on every rescrape (Shoko UserVerified).';
+      case 'collection_episode_link_season':
+        return ({required Object number}) => 'Season ${number}';
+      case 'collection_episode_link_episode':
+        return ({required Object number}) => 'Episode ${number}';
+      case 'collection_episode_link_saved':
+        return 'Episode pinned; kept on rescrape';
+      case 'collection_episode_link_clear':
+        return 'Clear manual pin';
+      case 'collection_episode_link_cleared':
+        return 'Manual pin cleared; the next scrape links automatically';
+      case 'collection_episode_link_unavailable':
+        return 'Scrape the show first';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
+      case 'video_metadata_max_backdrops':
+        return 'Backdrops kept per work';
+      case 'video_metadata_max_logos':
+        return 'Logos kept per work';
+      case 'video_metadata_image_limit_hint':
+        return '0 = unlimited. Best-rated images are kept in the order: metadata language, original language, English, textless.';
+      case 'video_metadata_download_staff_images':
+        return 'Download cast & staff photos';
+      case 'video_metadata_download_staff_images_hint':
+        return 'Save cast/staff profile photos locally while scraping (up to 10 per work). Off: photos load from TMDB on demand.';
+      case 'remote_collection_tmdb_ordering_on_host':
+        return 'TMDB episode ordering on host…';
+      case 'video_metadata_provider_anidb':
+        return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return '從已獲取的模型裡挑';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
