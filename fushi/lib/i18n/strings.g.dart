@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87907 (5171 per locale)
+/// Strings: 87924 (5172 per locale)
 ///
-/// Built on 2026-09-21 at 17:22 UTC
+/// Built on 2026-09-21 at 18:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7225,6 +7225,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'TMDB episode ordering on host…';
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  String get ai_provider_model_pick => 'Pick from fetched models';
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
   String video_quality_auto_raised({required Object label}) =>
@@ -19451,6 +19452,8 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -31911,6 +31914,8 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -44424,6 +44429,8 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -56975,6 +56982,8 @@ class _StringsFr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
   @override
@@ -69323,6 +69332,8 @@ class _StringsId extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -81765,6 +81776,8 @@ class _StringsIt extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
   @override
@@ -93586,6 +93599,8 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -105418,6 +105433,8 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -117819,6 +117836,8 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -130274,6 +130293,8 @@ class _StringsPtBr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
   @override
@@ -142703,6 +142724,8 @@ class _StringsRu extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
   @override
@@ -154932,6 +154955,8 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
@@ -167277,6 +167302,8 @@ class _StringsTr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
   @override
@@ -179594,6 +179621,8 @@ class _StringsVi extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
   @override
@@ -190873,6 +190902,8 @@ class _StringsZhCn extends _StringsEn {
   String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
   @override
   String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
+  @override
+  String get ai_provider_model_pick => '从已获取的模型里挑';
   @override
   String video_quality_auto_lowered({required Object label}) =>
       '网络较慢，画质已降到 ${label}';
@@ -202380,6 +202411,8 @@ class _StringsZhHk extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get ai_provider_model_pick => '從已獲取的模型裡挑';
+  @override
   String video_quality_auto_lowered({required Object label}) =>
       'Network is slow — quality lowered to ${label}';
   @override
@@ -213038,6 +213071,8 @@ extension on _StringsEn {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -223690,6 +223725,8 @@ extension on _StringsAr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -234387,6 +234424,8 @@ extension on _StringsDe {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -245075,6 +245114,8 @@ extension on _StringsEs {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -255772,6 +255813,8 @@ extension on _StringsFr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -266440,6 +266483,8 @@ extension on _StringsId {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -277130,6 +277175,8 @@ extension on _StringsIt {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -287747,6 +287794,8 @@ extension on _StringsJa {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -298368,6 +298417,8 @@ extension on _StringsKo {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -309051,6 +309102,8 @@ extension on _StringsNl {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -319729,6 +319782,8 @@ extension on _StringsPtBr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -330414,6 +330469,8 @@ extension on _StringsRu {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -341071,6 +341128,8 @@ extension on _StringsTh {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -351743,6 +351802,8 @@ extension on _StringsTr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -362409,6 +362470,8 @@ extension on _StringsVi {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
@@ -372979,6 +373042,8 @@ extension on _StringsZhCn {
         return '在 host 上选择 TMDB 集编排…';
       case 'video_metadata_provider_anidb':
         return 'AniDB（哈希身份 + 作品 XML）';
+      case 'ai_provider_model_pick':
+        return '从已获取的模型里挑';
       case 'video_quality_auto_lowered':
         return ({required Object label}) => '网络较慢，画质已降到 ${label}';
       case 'video_quality_auto_raised':
@@ -383572,6 +383637,8 @@ extension on _StringsZhHk {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'ai_provider_model_pick':
+        return '從已獲取的模型裡挑';
       case 'video_quality_auto_lowered':
         return ({required Object label}) =>
             'Network is slow — quality lowered to ${label}';
