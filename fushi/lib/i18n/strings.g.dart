@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87839 (5167 per locale)
+/// Strings: 87958 (5174 per locale)
 ///
-/// Built on 2026-09-21 at 18:04 UTC
+/// Built on 2026-09-21 at 18:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7230,6 +7230,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -19453,6 +19464,24 @@ class _StringsAr extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -31904,6 +31933,24 @@ class _StringsDe extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -44408,6 +44455,24 @@ class _StringsEs extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -56949,6 +57014,24 @@ class _StringsFr extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -69289,6 +69372,24 @@ class _StringsId extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -81721,6 +81822,24 @@ class _StringsIt extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -93534,6 +93653,24 @@ class _StringsJa extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -105357,6 +105494,24 @@ class _StringsKo extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -117749,6 +117904,24 @@ class _StringsNl extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -130194,6 +130367,24 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -142614,6 +142805,24 @@ class _StringsRu extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -154835,6 +155044,24 @@ class _StringsTh extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -167170,6 +167397,24 @@ class _StringsTr extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -179478,6 +179723,24 @@ class _StringsVi extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -190749,6 +191012,24 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       '追更订阅只处理新发布的单集。如果这部作品已完结，或你是从合集资源建的订阅，请改用一次性下载整包。';
+  @override
+  String get ai_provider_model_pick => '从已获取的模型里挑';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      '网络较慢，画质已降到 ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      '网络变好，画质已提到 ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => '为对端转码视频';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+  @override
+  String get lookup_hover_leave_resume => '离开查词即继续播放';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
 }
 
 // Path: <root>
@@ -202246,6 +202527,24 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get subscription_items_empty_ongoing_hint =>
       'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+  @override
+  String get ai_provider_model_pick => '從已獲取的模型裡挑';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 /// Flat map(s) containing all translations.
@@ -212894,6 +213193,22 @@ extension on _StringsEn {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -223537,6 +223852,22 @@ extension on _StringsAr {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -234225,6 +234556,22 @@ extension on _StringsDe {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -244904,6 +245251,22 @@ extension on _StringsEs {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -255592,6 +255955,22 @@ extension on _StringsFr {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -266251,6 +266630,22 @@ extension on _StringsId {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -276932,6 +277327,22 @@ extension on _StringsIt {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -287540,6 +287951,22 @@ extension on _StringsJa {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -298152,6 +298579,22 @@ extension on _StringsKo {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -308826,6 +309269,22 @@ extension on _StringsNl {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -319495,6 +319954,22 @@ extension on _StringsPtBr {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -330171,6 +330646,22 @@ extension on _StringsRu {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -340819,6 +341310,22 @@ extension on _StringsTh {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -351482,6 +351989,22 @@ extension on _StringsTr {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -362139,6 +362662,22 @@ extension on _StringsVi {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -372700,6 +373239,20 @@ extension on _StringsZhCn {
             '一次性下载 ${group} · ${resolution} 整包。合集没有可追的下一集。';
       case 'subscription_items_empty_ongoing_hint':
         return '追更订阅只处理新发布的单集。如果这部作品已完结，或你是从合集资源建的订阅，请改用一次性下载整包。';
+      case 'ai_provider_model_pick':
+        return '从已获取的模型里挑';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) => '网络较慢，画质已降到 ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) => '网络变好，画质已提到 ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return '为对端转码视频';
+      case 'interconnect_transcode_host_toggle_desc':
+        return '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+      case 'lookup_hover_leave_resume':
+        return '离开查词即继续播放';
+      case 'lookup_hover_leave_resume_hint':
+        return '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
       default:
         return null;
     }
@@ -383286,6 +383839,22 @@ extension on _StringsZhHk {
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
       case 'subscription_items_empty_ongoing_hint':
         return 'Ongoing subscriptions only queue new single-episode releases. If this title has finished airing, or you subscribed from a batch release, download the batch once instead.';
+      case 'ai_provider_model_pick':
+        return '從已獲取的模型裡挑';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
