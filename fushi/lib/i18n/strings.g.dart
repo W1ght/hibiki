@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87822 (5166 per locale)
+/// Strings: 87924 (5172 per locale)
 ///
-/// Built on 2026-09-21 at 15:48 UTC
+/// Built on 2026-09-21 at 18:16 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7226,6 +7226,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   String get ai_provider_model_pick => 'Pick from fetched models';
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -19444,6 +19454,22 @@ class _StringsAr extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -31890,6 +31916,22 @@ class _StringsDe extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -44389,6 +44431,22 @@ class _StringsEs extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -56925,6 +56983,22 @@ class _StringsFr extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -69260,6 +69334,22 @@ class _StringsId extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -81687,6 +81777,22 @@ class _StringsIt extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -93495,6 +93601,22 @@ class _StringsJa extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -105313,6 +105435,22 @@ class _StringsKo extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -117700,6 +117838,22 @@ class _StringsNl extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -130140,6 +130294,22 @@ class _StringsPtBr extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -142555,6 +142725,22 @@ class _StringsRu extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -154771,6 +154957,22 @@ class _StringsTh extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -167101,6 +167303,22 @@ class _StringsTr extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -179404,6 +179622,22 @@ class _StringsVi extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => 'Pick from fetched models';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 // Path: <root>
@@ -190670,6 +190904,22 @@ class _StringsZhCn extends _StringsEn {
   String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
   @override
   String get ai_provider_model_pick => '从已获取的模型里挑';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      '网络较慢，画质已降到 ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      '网络变好，画质已提到 ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => '为对端转码视频';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+  @override
+  String get lookup_hover_leave_resume => '离开查词即继续播放';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
 }
 
 // Path: <root>
@@ -202162,6 +202412,22 @@ class _StringsZhHk extends _StringsEn {
       'AniDB (hash identity + anime XML)';
   @override
   String get ai_provider_model_pick => '從已獲取的模型裡挑';
+  @override
+  String video_quality_auto_lowered({required Object label}) =>
+      'Network is slow — quality lowered to ${label}';
+  @override
+  String video_quality_auto_raised({required Object label}) =>
+      'Network improved — quality raised to ${label}';
+  @override
+  String get interconnect_transcode_host_toggle => 'Transcode video for peers';
+  @override
+  String get interconnect_transcode_host_toggle_desc =>
+      'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+  @override
+  String get lookup_hover_leave_resume => 'Resume when leaving lookup';
+  @override
+  String get lookup_hover_leave_resume_hint =>
+      'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
 }
 
 /// Flat map(s) containing all translations.
@@ -212807,6 +213073,20 @@ extension on _StringsEn {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -223447,6 +223727,20 @@ extension on _StringsAr {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -234132,6 +234426,20 @@ extension on _StringsDe {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -244808,6 +245116,20 @@ extension on _StringsEs {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -255493,6 +255815,20 @@ extension on _StringsFr {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -266149,6 +266485,20 @@ extension on _StringsId {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -276827,6 +277177,20 @@ extension on _StringsIt {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -287432,6 +287796,20 @@ extension on _StringsJa {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -298041,6 +298419,20 @@ extension on _StringsKo {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -308712,6 +309104,20 @@ extension on _StringsNl {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -319378,6 +319784,20 @@ extension on _StringsPtBr {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -330051,6 +330471,20 @@ extension on _StringsRu {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -340696,6 +341130,20 @@ extension on _StringsTh {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -351356,6 +351804,20 @@ extension on _StringsTr {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -362010,6 +362472,20 @@ extension on _StringsVi {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return 'Pick from fetched models';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
@@ -372568,6 +373044,18 @@ extension on _StringsZhCn {
         return 'AniDB（哈希身份 + 作品 XML）';
       case 'ai_provider_model_pick':
         return '从已获取的模型里挑';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) => '网络较慢，画质已降到 ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) => '网络变好，画质已提到 ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return '为对端转码视频';
+      case 'interconnect_transcode_host_toggle_desc':
+        return '配对设备在弱网下播放本机视频时，实时转码成更低码率。需要 ffmpeg，会占用本机 CPU。';
+      case 'lookup_hover_leave_resume':
+        return '离开查词即继续播放';
+      case 'lookup_hover_leave_resume_hint':
+        return '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
       default:
         return null;
     }
@@ -383151,6 +383639,20 @@ extension on _StringsZhHk {
         return 'AniDB (hash identity + anime XML)';
       case 'ai_provider_model_pick':
         return '從已獲取的模型裡挑';
+      case 'video_quality_auto_lowered':
+        return ({required Object label}) =>
+            'Network is slow — quality lowered to ${label}';
+      case 'video_quality_auto_raised':
+        return ({required Object label}) =>
+            'Network improved — quality raised to ${label}';
+      case 'interconnect_transcode_host_toggle':
+        return 'Transcode video for peers';
+      case 'interconnect_transcode_host_toggle_desc':
+        return 'When a paired device plays a video from this host over a slow network, re-encode it to a lower bitrate on the fly. Needs ffmpeg; costs CPU on this device.';
+      case 'lookup_hover_leave_resume':
+        return 'Resume when leaving lookup';
+      case 'lookup_hover_leave_resume_hint':
+        return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
       default:
         return null;
     }
