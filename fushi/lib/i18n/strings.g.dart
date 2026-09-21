@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 88893 (5229 per locale)
+/// Strings: 89148 (5244 per locale)
 ///
-/// Built on 2026-09-21 at 19:05 UTC
+/// Built on 2026-09-21 at 20:12 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7302,6 +7302,25 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get lookup_hover_leave_resume => 'Resume when leaving lookup';
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  String get manga_panel_navigation => 'AI panel navigation';
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  String get manga_panel_model => 'AI panel model';
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  String get manga_panel_model_ready => 'Ready';
+  String get manga_panel_model_missing => 'Not downloaded';
+  String get manga_panel_model_delete => 'Remove model';
+  String get manga_panel_model_downloading => 'Downloading';
+  String get manga_panel_model_download => 'Download';
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  String get manga_panel_none => 'No panels detected';
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -19659,6 +19678,40 @@ class _StringsAr extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -32244,6 +32297,40 @@ class _StringsDe extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -44882,6 +44969,40 @@ class _StringsEs extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -57557,6 +57678,40 @@ class _StringsFr extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -70031,6 +70186,40 @@ class _StringsId extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -82597,6 +82786,40 @@ class _StringsIt extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -94544,6 +94767,40 @@ class _StringsJa extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -106501,6 +106758,40 @@ class _StringsKo extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -119027,6 +119318,40 @@ class _StringsNl extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -131606,6 +131931,40 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -144160,6 +144519,40 @@ class _StringsRu extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -156515,6 +156908,40 @@ class _StringsTh extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -168984,6 +169411,40 @@ class _StringsTr extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -181426,6 +181887,40 @@ class _StringsVi extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 // Path: <root>
@@ -192826,6 +193321,38 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
+  @override
+  String get manga_panel_navigation => 'AI 分镜逐格导航';
+  @override
+  String get manga_panel_navigation_subtitle => '翻页前先聚焦检测到的分镜';
+  @override
+  String get manga_panel_model => 'AI 分镜模型';
+  @override
+  String get manga_panel_model_desc => '下载、校验或删除分镜检测模型';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      '分镜模型下载失败：${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      '下载中 ${bytes} 字节';
+  @override
+  String get manga_panel_model_ready => '已就绪';
+  @override
+  String get manga_panel_model_missing => '未下载';
+  @override
+  String get manga_panel_model_delete => '删除模型';
+  @override
+  String get manga_panel_model_downloading => '下载中';
+  @override
+  String get manga_panel_model_download => '下载';
+  @override
+  String manga_panel_index({required Object index}) => '分镜 ${index}';
+  @override
+  String get manga_panel_none => '未检测到分镜';
+  @override
+  String get manga_panel_model_unavailable => '分镜模型不可用';
+  @override
+  String get manga_panel_detect_failed => '分镜检测失败';
 }
 
 // Path: <root>
@@ -204457,6 +204984,40 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get lookup_hover_leave_resume_hint =>
       'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+  @override
+  String get manga_panel_navigation => 'AI panel navigation';
+  @override
+  String get manga_panel_navigation_subtitle =>
+      'Focus detected panels before turning the page';
+  @override
+  String get manga_panel_model => 'AI panel model';
+  @override
+  String get manga_panel_model_desc =>
+      'Download, verify or remove the panel detection model';
+  @override
+  String manga_panel_model_download_failed({required Object error}) =>
+      'Panel model download failed: ${error}';
+  @override
+  String manga_panel_model_downloading_bytes({required Object bytes}) =>
+      'Downloading ${bytes} bytes';
+  @override
+  String get manga_panel_model_ready => 'Ready';
+  @override
+  String get manga_panel_model_missing => 'Not downloaded';
+  @override
+  String get manga_panel_model_delete => 'Remove model';
+  @override
+  String get manga_panel_model_downloading => 'Downloading';
+  @override
+  String get manga_panel_model_download => 'Download';
+  @override
+  String manga_panel_index({required Object index}) => 'Panel ${index}';
+  @override
+  String get manga_panel_none => 'No panels detected';
+  @override
+  String get manga_panel_model_unavailable => 'Panel model unavailable';
+  @override
+  String get manga_panel_detect_failed => 'Panel detection failed';
 }
 
 /// Flat map(s) containing all translations.
@@ -215231,6 +215792,37 @@ extension on _StringsEn {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -226000,6 +226592,37 @@ extension on _StringsAr {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -236814,6 +237437,37 @@ extension on _StringsDe {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -247619,6 +248273,37 @@ extension on _StringsEs {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -258433,6 +259118,37 @@ extension on _StringsFr {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -269218,6 +269934,37 @@ extension on _StringsId {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -280025,6 +280772,37 @@ extension on _StringsIt {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -290759,6 +291537,37 @@ extension on _StringsJa {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -301497,6 +302306,37 @@ extension on _StringsKo {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -312297,6 +313137,37 @@ extension on _StringsNl {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -323092,6 +323963,37 @@ extension on _StringsPtBr {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -333894,6 +334796,37 @@ extension on _StringsRu {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -344668,6 +345601,37 @@ extension on _StringsTh {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -355457,6 +356421,37 @@ extension on _StringsTr {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -366240,6 +367235,37 @@ extension on _StringsVi {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
@@ -376925,6 +377951,36 @@ extension on _StringsZhCn {
         return '离开查词即继续播放';
       case 'lookup_hover_leave_resume_hint':
         return '悬停查词后，鼠标离开字幕与查词窗即自动关闭查词窗并继续播放，不必再点一下';
+      case 'manga_panel_navigation':
+        return 'AI 分镜逐格导航';
+      case 'manga_panel_navigation_subtitle':
+        return '翻页前先聚焦检测到的分镜';
+      case 'manga_panel_model':
+        return 'AI 分镜模型';
+      case 'manga_panel_model_desc':
+        return '下载、校验或删除分镜检测模型';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) => '分镜模型下载失败：${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => '下载中 ${bytes} 字节';
+      case 'manga_panel_model_ready':
+        return '已就绪';
+      case 'manga_panel_model_missing':
+        return '未下载';
+      case 'manga_panel_model_delete':
+        return '删除模型';
+      case 'manga_panel_model_downloading':
+        return '下载中';
+      case 'manga_panel_model_download':
+        return '下载';
+      case 'manga_panel_index':
+        return ({required Object index}) => '分镜 ${index}';
+      case 'manga_panel_none':
+        return '未检测到分镜';
+      case 'manga_panel_model_unavailable':
+        return '分镜模型不可用';
+      case 'manga_panel_detect_failed':
+        return '分镜检测失败';
       default:
         return null;
     }
@@ -387637,6 +388693,37 @@ extension on _StringsZhHk {
         return 'Resume when leaving lookup';
       case 'lookup_hover_leave_resume_hint':
         return 'After a hover lookup, moving the pointer away from the subtitle and the lookup window closes it and resumes playback';
+      case 'manga_panel_navigation':
+        return 'AI panel navigation';
+      case 'manga_panel_navigation_subtitle':
+        return 'Focus detected panels before turning the page';
+      case 'manga_panel_model':
+        return 'AI panel model';
+      case 'manga_panel_model_desc':
+        return 'Download, verify or remove the panel detection model';
+      case 'manga_panel_model_download_failed':
+        return ({required Object error}) =>
+            'Panel model download failed: ${error}';
+      case 'manga_panel_model_downloading_bytes':
+        return ({required Object bytes}) => 'Downloading ${bytes} bytes';
+      case 'manga_panel_model_ready':
+        return 'Ready';
+      case 'manga_panel_model_missing':
+        return 'Not downloaded';
+      case 'manga_panel_model_delete':
+        return 'Remove model';
+      case 'manga_panel_model_downloading':
+        return 'Downloading';
+      case 'manga_panel_model_download':
+        return 'Download';
+      case 'manga_panel_index':
+        return ({required Object index}) => 'Panel ${index}';
+      case 'manga_panel_none':
+        return 'No panels detected';
+      case 'manga_panel_model_unavailable':
+        return 'Panel model unavailable';
+      case 'manga_panel_detect_failed':
+        return 'Panel detection failed';
       default:
         return null;
     }
