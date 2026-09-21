@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87958 (5174 per locale)
+/// Strings: 88060 (5180 per locale)
 ///
-/// Built on 2026-09-21 at 18:29 UTC
+/// Built on 2026-09-21 at 18:40 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7225,6 +7225,17 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'TMDB episode ordering on host…';
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  String get download_execution_host_title => 'Download on device';
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -19457,6 +19468,23 @@ class _StringsAr extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -31926,6 +31954,23 @@ class _StringsDe extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -44448,6 +44493,23 @@ class _StringsEs extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -57008,6 +57070,23 @@ class _StringsFr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -69365,6 +69444,23 @@ class _StringsId extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -81816,6 +81912,23 @@ class _StringsIt extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -93646,6 +93759,23 @@ class _StringsJa extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -105487,6 +105617,23 @@ class _StringsKo extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -117897,6 +118044,23 @@ class _StringsNl extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -130361,6 +130525,23 @@ class _StringsPtBr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -142799,6 +142980,23 @@ class _StringsRu extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -155037,6 +155235,23 @@ class _StringsTh extends _StringsEn {
   @override
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
+  @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -167391,6 +167606,23 @@ class _StringsTr extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -179717,6 +179949,23 @@ class _StringsVi extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -191005,6 +191254,19 @@ class _StringsZhCn extends _StringsEn {
   String get remote_collection_tmdb_ordering_on_host => '在 host 上选择 TMDB 集编排…';
   @override
   String get video_metadata_provider_anidb => 'AniDB（哈希身份 + 作品 XML）';
+  @override
+  String get download_execution_host_title => '下载执行设备';
+  @override
+  String get download_execution_host_hint =>
+      '新下载任务交给这台设备执行，下到它自己的库里。先在「互联」里配对设备。';
+  @override
+  String get download_execution_remote_queued => '已交给下载执行设备';
+  @override
+  String get download_execution_host_unreachable => '下载设置里指定的执行设备连不上，没有开始下载。';
+  @override
+  String get download_execution_remote_kind_unsupported => '下载执行设备不支持导入这类内容';
+  @override
+  String get download_execution_remote_magnet_only => '下载执行设备只接受磁力链接';
   @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
@@ -202521,6 +202783,23 @@ class _StringsZhHk extends _StringsEn {
   String get video_metadata_provider_anidb =>
       'AniDB (hash identity + anime XML)';
   @override
+  String get download_execution_host_title => 'Download on device';
+  @override
+  String get download_execution_host_hint =>
+      'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+  @override
+  String get download_execution_remote_queued =>
+      'Handed to the download device';
+  @override
+  String get download_execution_host_unreachable =>
+      'The download device set in Downloads settings is not reachable. Nothing was started.';
+  @override
+  String get download_execution_remote_kind_unsupported =>
+      'The download device does not import this content kind';
+  @override
+  String get download_execution_remote_magnet_only =>
+      'The download device only accepts magnet links';
+  @override
   String download_subscription_choice_hint_batch(
           {required Object group, required Object resolution}) =>
       'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -213188,6 +213467,18 @@ extension on _StringsEn {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -223847,6 +224138,18 @@ extension on _StringsAr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -234551,6 +234854,18 @@ extension on _StringsDe {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -245246,6 +245561,18 @@ extension on _StringsEs {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -255950,6 +256277,18 @@ extension on _StringsFr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -266625,6 +266964,18 @@ extension on _StringsId {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -277322,6 +277673,18 @@ extension on _StringsIt {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -287946,6 +288309,18 @@ extension on _StringsJa {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -298574,6 +298949,18 @@ extension on _StringsKo {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -309264,6 +309651,18 @@ extension on _StringsNl {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -319949,6 +320348,18 @@ extension on _StringsPtBr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -330641,6 +331052,18 @@ extension on _StringsRu {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -341305,6 +341728,18 @@ extension on _StringsTh {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -351984,6 +352419,18 @@ extension on _StringsTr {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -362657,6 +363104,18 @@ extension on _StringsVi {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
@@ -373234,6 +373693,18 @@ extension on _StringsZhCn {
         return '在 host 上选择 TMDB 集编排…';
       case 'video_metadata_provider_anidb':
         return 'AniDB（哈希身份 + 作品 XML）';
+      case 'download_execution_host_title':
+        return '下载执行设备';
+      case 'download_execution_host_hint':
+        return '新下载任务交给这台设备执行，下到它自己的库里。先在「互联」里配对设备。';
+      case 'download_execution_remote_queued':
+        return '已交给下载执行设备';
+      case 'download_execution_host_unreachable':
+        return '下载设置里指定的执行设备连不上，没有开始下载。';
+      case 'download_execution_remote_kind_unsupported':
+        return '下载执行设备不支持导入这类内容';
+      case 'download_execution_remote_magnet_only':
+        return '下载执行设备只接受磁力链接';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             '一次性下载 ${group} · ${resolution} 整包。合集没有可追的下一集。';
@@ -383834,6 +384305,18 @@ extension on _StringsZhHk {
         return 'TMDB episode ordering on host…';
       case 'video_metadata_provider_anidb':
         return 'AniDB (hash identity + anime XML)';
+      case 'download_execution_host_title':
+        return 'Download on device';
+      case 'download_execution_host_hint':
+        return 'New download tasks are handed to this device and saved into its library. Pair a device under Interconnect first.';
+      case 'download_execution_remote_queued':
+        return 'Handed to the download device';
+      case 'download_execution_host_unreachable':
+        return 'The download device set in Downloads settings is not reachable. Nothing was started.';
+      case 'download_execution_remote_kind_unsupported':
+        return 'The download device does not import this content kind';
+      case 'download_execution_remote_magnet_only':
+        return 'The download device only accepts magnet links';
       case 'download_subscription_choice_hint_batch':
         return ({required Object group, required Object resolution}) =>
             'Download the whole ${group} · ${resolution} batch once. A batch has no next episode to follow.';
