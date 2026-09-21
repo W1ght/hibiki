@@ -3,7 +3,7 @@
 /// Locales: 17
 /// Strings: 87805 (5165 per locale)
 ///
-/// Built on 2026-09-20 at 17:13 UTC
+/// Built on 2026-09-21 at 05:32 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7212,7 +7212,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get collection_episode_link_cleared =>
       'Manual pin cleared; the next scrape links automatically';
   String get collection_episode_link_unavailable => 'Scrape the show first';
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   String get video_metadata_max_logos => 'Logos kept per work';
   String get video_metadata_image_limit_hint =>
@@ -19421,7 +19421,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -31865,7 +31865,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -44362,7 +44362,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -56896,7 +56896,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -69229,7 +69229,7 @@ class _StringsId extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -81654,7 +81654,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -93460,7 +93460,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -105276,7 +105276,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -117661,7 +117661,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -130099,7 +130099,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -142512,7 +142512,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -154726,7 +154726,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -167054,7 +167054,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -179355,7 +179355,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -190622,7 +190622,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => '先刮出作品资料再指定';
   @override
-  String get video_metadata_max_posters => '每部作品保留的海报数';
+  String get video_metadata_max_covers => '每部作品保留的封面数';
   @override
   String get video_metadata_max_backdrops => '每部作品保留的背景图数';
   @override
@@ -202109,7 +202109,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get collection_episode_link_unavailable => 'Scrape the show first';
   @override
-  String get video_metadata_max_posters => 'Posters kept per work';
+  String get video_metadata_max_covers => 'Covers kept per work';
   @override
   String get video_metadata_max_backdrops => 'Backdrops kept per work';
   @override
@@ -212756,8 +212756,8 @@ extension on _StringsEn {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -223394,8 +223394,8 @@ extension on _StringsAr {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -234077,8 +234077,8 @@ extension on _StringsDe {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -244751,8 +244751,8 @@ extension on _StringsEs {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -255434,8 +255434,8 @@ extension on _StringsFr {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -266088,8 +266088,8 @@ extension on _StringsId {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -276764,8 +276764,8 @@ extension on _StringsIt {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -287367,8 +287367,8 @@ extension on _StringsJa {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -297974,8 +297974,8 @@ extension on _StringsKo {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -308643,8 +308643,8 @@ extension on _StringsNl {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -319307,8 +319307,8 @@ extension on _StringsPtBr {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -329978,8 +329978,8 @@ extension on _StringsRu {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -340621,8 +340621,8 @@ extension on _StringsTh {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -351279,8 +351279,8 @@ extension on _StringsTr {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -361931,8 +361931,8 @@ extension on _StringsVi {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
@@ -372487,8 +372487,8 @@ extension on _StringsZhCn {
         return '已清除手动指定，下次刮削回到自动链接';
       case 'collection_episode_link_unavailable':
         return '先刮出作品资料再指定';
-      case 'video_metadata_max_posters':
-        return '每部作品保留的海报数';
+      case 'video_metadata_max_covers':
+        return '每部作品保留的封面数';
       case 'video_metadata_max_backdrops':
         return '每部作品保留的背景图数';
       case 'video_metadata_max_logos':
@@ -383068,8 +383068,8 @@ extension on _StringsZhHk {
         return 'Manual pin cleared; the next scrape links automatically';
       case 'collection_episode_link_unavailable':
         return 'Scrape the show first';
-      case 'video_metadata_max_posters':
-        return 'Posters kept per work';
+      case 'video_metadata_max_covers':
+        return 'Covers kept per work';
       case 'video_metadata_max_backdrops':
         return 'Backdrops kept per work';
       case 'video_metadata_max_logos':
