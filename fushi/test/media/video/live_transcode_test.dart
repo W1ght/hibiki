@@ -290,7 +290,7 @@ void main() {
       );
       expect(
         args[args.indexOf('-movflags') + 1],
-        'frag_keyframe+empty_moov+default_base_moof',
+        'frag_keyframe+empty_moov+default_base_moof+skip_trailer',
       );
       expect(args[args.indexOf('-f') + 1], 'mp4');
       expect(args.last, 'pipe:1');
@@ -316,6 +316,41 @@ void main() {
       final Uint8List partial = _box('ftyp', <int>[1, 2, 3, 4]);
       expect(stripInitSegment(partial), partial);
       expect(extractInitSegment(partial), isNull);
+    });
+
+    test('BUG-2630：分段尾部的 mfra 随机访问索引整个剥掉，只留 moof/mdat', () {
+      final Uint8List moof = _box('moof', <int>[9, 9, 9, 9]);
+      final Uint8List mdat = _box('mdat', <int>[1, 2, 3]);
+      final Uint8List mfra = _box('mfra', <int>[
+        ..._box('tfra', <int>[0, 0, 0, 0, 0, 0, 0, 1]),
+        ..._box('mfro', <int>[0, 0, 0, 24]),
+      ]);
+      final Uint8List segment = Uint8List.fromList(<int>[
+        ...moof,
+        ...mdat,
+        ...mfra,
+      ]);
+      final Uint8List stripped = stripTrailingIndex(segment);
+      expect(stripped, Uint8List.fromList(<int>[...moof, ...mdat]));
+      // 没有 mfra 的输入一个字节不动（同一对象直接返回）。
+      final Uint8List clean = Uint8List.fromList(<int>[...moof, ...mdat]);
+      expect(identical(stripTrailingIndex(clean), clean), isTrue);
+    });
+
+    test('BUG-2630：mfra 之后的截断尾巴原样带上，不吞字节', () {
+      final Uint8List moof = _box('moof', <int>[9]);
+      final Uint8List mfra = _box('mfra', <int>[0, 0, 0, 0]);
+      // 尾巴是半个 box 头（size 字段说 100 字节，实际只剩 6 字节）。
+      const List<int> tail = <int>[0, 0, 0, 100, 0x6d, 0x64];
+      final Uint8List segment = Uint8List.fromList(<int>[
+        ...moof,
+        ...mfra,
+        ...tail,
+      ]);
+      expect(
+        stripTrailingIndex(segment),
+        Uint8List.fromList(<int>[...moof, ...tail]),
+      );
     });
 
     test('按 track 各自的 timescale 读取', () {

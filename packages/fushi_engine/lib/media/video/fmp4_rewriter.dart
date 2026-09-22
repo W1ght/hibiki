@@ -82,6 +82,34 @@ Uint8List stripInitSegment(Uint8List data) {
   return Uint8List.sublistView(data, length);
 }
 
+/// 丢掉分段尾部的随机访问索引 `mfra`（内含 `tfra` / `mfro`），只留 `moof`+`mdat`。
+///
+/// ffmpeg 的 fragmented 输出默认在文件尾写一张 `mfra`，`tfra` 里每条是「时间 → moof
+/// 在**本文件**里的绝对偏移」（实测每段都是 1277 = 被剥掉的 ftyp+moov 长度）。分段拼
+/// 进 HLS 流后这些偏移全部失真；mov demuxer 在 seek 时若按它定位 moof，整条流从
+/// 第一个样本起就错位（BUG-2630 第二段：seek / 恢复断点后 `Invalid NAL unit size`
+/// → 瞬间 EOF）。HLS 的 fMP4 媒体段本就不该带 `mfra`。转码参数已加 `skip_trailer`
+/// 不写它，这里是对不认该 flag 的 ffmpeg 的兜底；截断输入原样返回。
+Uint8List stripTrailingIndex(Uint8List data) {
+  bool dropped = false;
+  int parsed = 0;
+  final BytesBuilder out = BytesBuilder(copy: false);
+  for (final _Box box in _boxes(data, 0, data.length)) {
+    parsed = box.end;
+    if (box.type == 'mfra') {
+      dropped = true;
+      continue;
+    }
+    out.add(Uint8List.sublistView(data, box.offset, box.end));
+  }
+  if (!dropped) return data;
+  // 顶层扫描停在了半个 box 上（截断产物）：尾巴原样带上，不吞字节。
+  if (parsed < data.length) {
+    out.add(Uint8List.sublistView(data, parsed));
+  }
+  return out.takeBytes();
+}
+
 /// 从初始化段读出每条 track 的 `trackId -> timescale`（`trak/tkhd` + `trak/mdia/mdhd`）。
 ///
 /// 视频与音频的 timescale 通常不同（实测 15360 / 44100），所以偏移必须**按 track 各

@@ -165,7 +165,12 @@ List<String> buildTranscodeSegmentArgs({
     // 默认 0.7s 的 muxer 预读窗口会让首包晚到，起播观感差一截。
     '-muxdelay', '0',
     '-muxpreload', '0',
-    '-movflags', 'frag_keyframe+empty_moov+default_base_moof',
+    // `skip_trailer`：不写文件尾的 `mfra/tfra/mfro` 随机访问索引（BUG-2630 第二段）。
+    // 那张索引记的是 moof 在**原始单文件**里的绝对偏移（含即将被剥掉的 ftyp+moov），
+    // 分段拼进 HLS 流后全部失真；mov demuxer 一旦在 seek 时按它定位，整条流从第一个
+    // 样本起就错位（`Invalid NAL unit size` → 解码器吐不出帧 → 瞬间 EOF）。
+    // [stripTrailingIndex] 再兜一道，防老 ffmpeg 不认这个 flag。
+    '-movflags', 'frag_keyframe+empty_moov+default_base_moof+skip_trailer',
     '-f', 'mp4',
     'pipe:1',
   ];
@@ -352,7 +357,7 @@ Future<Uint8List> transcodeSegment({
     range: range,
     audioStreamIndex: audioStreamIndex,
   );
-  final Uint8List body = stripInitSegment(raw);
+  final Uint8List body = stripTrailingIndex(stripInitSegment(raw));
   final Uint8List? init = extractInitSegment(raw);
   if (init == null) return body;
   return shiftFragmentDecodeTimes(
