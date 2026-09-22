@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90151 (5303 per locale)
+/// Strings: 90168 (5304 per locale)
 ///
-/// Built on 2026-09-22 at 06:24 UTC
+/// Built on 2026-09-22 at 07:11 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7419,6 +7419,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_slim_progress_bar_hint =>
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -19967,6 +19969,9 @@ class _StringsAr extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -32743,6 +32748,9 @@ class _StringsDe extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -45572,6 +45580,9 @@ class _StringsEs extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -58438,6 +58449,9 @@ class _StringsFr extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -71103,6 +71117,9 @@ class _StringsId extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -83860,6 +83877,9 @@ class _StringsIt extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -95998,6 +96018,9 @@ class _StringsJa extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -108146,6 +108169,9 @@ class _StringsKo extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -120863,6 +120889,9 @@ class _StringsNl extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -133633,6 +133662,9 @@ class _StringsPtBr extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -146378,6 +146410,9 @@ class _StringsRu extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -158924,6 +158959,9 @@ class _StringsTh extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -171584,6 +171622,9 @@ class _StringsTr extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -184217,6 +184258,9 @@ class _StringsVi extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -195791,6 +195835,8 @@ class _StringsZhCn extends _StringsEn {
       '控制条淡出后，在视频最下方保留一条主题色细进度条。小窗模式下它恒常显示——那里完整进度条已被收起。';
   @override
   String get shortcut_action_video_toggle_mini_window => '切换小窗';
+  @override
+  String get popup_ctx_confirm_failed => '制卡没能开始——回点制卡按钮时查词弹窗已经关掉了。请重试。';
 }
 
 // Path: <root>
@@ -207613,6 +207659,9 @@ class _StringsZhHk extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -218549,6 +218598,8 @@ extension on _StringsEn {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -229480,6 +229531,8 @@ extension on _StringsAr {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -240456,6 +240509,8 @@ extension on _StringsDe {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -251423,6 +251478,8 @@ extension on _StringsEs {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -262399,6 +262456,8 @@ extension on _StringsFr {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -273346,6 +273405,8 @@ extension on _StringsId {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -284315,6 +284376,8 @@ extension on _StringsIt {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -295211,6 +295274,8 @@ extension on _StringsJa {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -306111,6 +306176,8 @@ extension on _StringsKo {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -317073,6 +317140,8 @@ extension on _StringsNl {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -328030,6 +328099,8 @@ extension on _StringsPtBr {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -338994,6 +339065,8 @@ extension on _StringsRu {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -349930,6 +350003,8 @@ extension on _StringsTh {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -360881,6 +360956,8 @@ extension on _StringsTr {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -371826,6 +371903,8 @@ extension on _StringsVi {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -382667,6 +382746,8 @@ extension on _StringsZhCn {
         return '控制条淡出后，在视频最下方保留一条主题色细进度条。小窗模式下它恒常显示——那里完整进度条已被收起。';
       case 'shortcut_action_video_toggle_mini_window':
         return '切换小窗';
+      case 'popup_ctx_confirm_failed':
+        return '制卡没能开始——回点制卡按钮时查词弹窗已经关掉了。请重试。';
       default:
         return null;
     }
@@ -393541,6 +393622,8 @@ extension on _StringsZhHk {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
