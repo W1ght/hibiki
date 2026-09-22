@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90185 (5305 per locale)
+/// Strings: 90270 (5310 per locale)
 ///
-/// Built on 2026-09-22 at 09:42 UTC
+/// Built on 2026-09-22 at 10:39 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7423,6 +7423,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -19977,6 +19984,18 @@ class _StringsAr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -32759,6 +32778,18 @@ class _StringsDe extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -45594,6 +45625,18 @@ class _StringsEs extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -58466,6 +58509,18 @@ class _StringsFr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -71137,6 +71192,18 @@ class _StringsId extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -83900,6 +83967,18 @@ class _StringsIt extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -96044,6 +96123,18 @@ class _StringsJa extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -108198,6 +108289,18 @@ class _StringsKo extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -120921,6 +121024,18 @@ class _StringsNl extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -133697,6 +133812,18 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -146448,6 +146575,18 @@ class _StringsRu extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -159000,6 +159139,18 @@ class _StringsTh extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -171666,6 +171817,18 @@ class _StringsTr extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -184305,6 +184468,18 @@ class _StringsVi extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -195883,6 +196058,17 @@ class _StringsZhCn extends _StringsEn {
   String get popup_ctx_confirm_failed => '制卡没能开始——回点制卡按钮时查词弹窗已经关掉了。请重试。';
   @override
   String get shortcut_action_video_toggle_mini_chrome => '切换小窗控件';
+  @override
+  String get settings_video_diag_toggle => '视频 / 查词诊断日志';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      '记录帧耗时、libmpv 播放统计与查词各阶段耗时。默认关闭；打开后复现卡顿或查词慢，再导出。';
+  @override
+  String get settings_video_diag_export => '导出视频诊断日志';
+  @override
+  String get settings_video_diag_export_hint => '统一时间轴 + libmpv 自身的详细日志';
+  @override
+  String get video_diag_share_subject => 'Fushi 视频诊断日志';
 }
 
 // Path: <root>
@@ -207711,6 +207897,18 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get shortcut_action_video_toggle_mini_chrome =>
       'Toggle mini window controls';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 /// Flat map(s) containing all translations.
@@ -218651,6 +218849,16 @@ extension on _StringsEn {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -229586,6 +229794,16 @@ extension on _StringsAr {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -240566,6 +240784,16 @@ extension on _StringsDe {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -251537,6 +251765,16 @@ extension on _StringsEs {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -262517,6 +262755,16 @@ extension on _StringsFr {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -273468,6 +273716,16 @@ extension on _StringsId {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -284441,6 +284699,16 @@ extension on _StringsIt {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -295341,6 +295609,16 @@ extension on _StringsJa {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -306245,6 +306523,16 @@ extension on _StringsKo {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -317211,6 +317499,16 @@ extension on _StringsNl {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -328172,6 +328470,16 @@ extension on _StringsPtBr {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -339140,6 +339448,16 @@ extension on _StringsRu {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -350080,6 +350398,16 @@ extension on _StringsTh {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -361035,6 +361363,16 @@ extension on _StringsTr {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -371984,6 +372322,16 @@ extension on _StringsVi {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -382829,6 +383177,16 @@ extension on _StringsZhCn {
         return '制卡没能开始——回点制卡按钮时查词弹窗已经关掉了。请重试。';
       case 'shortcut_action_video_toggle_mini_chrome':
         return '切换小窗控件';
+      case 'settings_video_diag_toggle':
+        return '视频 / 查词诊断日志';
+      case 'settings_video_diag_toggle_hint':
+        return '记录帧耗时、libmpv 播放统计与查词各阶段耗时。默认关闭；打开后复现卡顿或查词慢，再导出。';
+      case 'settings_video_diag_export':
+        return '导出视频诊断日志';
+      case 'settings_video_diag_export_hint':
+        return '统一时间轴 + libmpv 自身的详细日志';
+      case 'video_diag_share_subject':
+        return 'Fushi 视频诊断日志';
       default:
         return null;
     }
@@ -393707,6 +394065,16 @@ extension on _StringsZhHk {
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       case 'shortcut_action_video_toggle_mini_chrome':
         return 'Toggle mini window controls';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
