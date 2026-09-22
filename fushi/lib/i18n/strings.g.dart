@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87516 (5148 per locale)
+/// Strings: 87805 (5165 per locale)
 ///
-/// Built on 2026-09-22 at 10:35 UTC
+/// Built on 2026-09-22 at 10:44 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7194,6 +7194,27 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Start a game with an active Hook session first.';
   String get game_stream_failed => 'Could not update the stream';
   String get game_stream_connected => 'Connected device';
+  String get game_stream_mine_success => 'Card created on the host';
+  String get game_stream_mine_failed => 'Host card creation failed';
+  String get game_stream_disconnected => 'Stream disconnected';
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  String get game_stream_video_waiting => 'Waiting for game video';
+  String get game_stream_line => 'Current line';
+  String get game_stream_line_empty => 'No Hook text yet';
+  String get game_stream_lookup_hint => 'Select text to look up';
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  String get game_stream_unreachable => 'Could not connect to host';
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  String get game_stream_join_failed => 'Could not join the stream';
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  String get game_stream_available => 'Game stream available';
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -19362,6 +19383,44 @@ class _StringsAr extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -31758,6 +31817,44 @@ class _StringsDe extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -44207,6 +44304,44 @@ class _StringsEs extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -56693,6 +56828,44 @@ class _StringsFr extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -68978,6 +69151,44 @@ class _StringsId extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -81355,6 +81566,44 @@ class _StringsIt extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -93113,6 +93362,44 @@ class _StringsJa extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -104881,6 +105168,44 @@ class _StringsKo extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -117218,6 +117543,44 @@ class _StringsNl extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -129608,6 +129971,44 @@ class _StringsPtBr extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -141973,6 +142374,44 @@ class _StringsRu extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -154139,6 +154578,44 @@ class _StringsTh extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -166419,6 +166896,44 @@ class _StringsTr extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -178672,6 +179187,44 @@ class _StringsVi extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 // Path: <root>
@@ -189893,6 +190446,40 @@ class _StringsZhCn extends _StringsEn {
   String get game_stream_failed => '串流操作失败';
   @override
   String get game_stream_connected => '当前连接设备';
+  @override
+  String get game_stream_mine_success => '主机已创建卡片';
+  @override
+  String get game_stream_mine_failed => '主机制卡失败';
+  @override
+  String get game_stream_disconnected => '串流连接中断';
+  @override
+  String get game_stream_input_rejected => '输入未送达。请在主机将游戏窗口切换到前台。';
+  @override
+  String get game_stream_lookup_toggle => '展开或收起查词面板';
+  @override
+  String get game_stream_controls_toggle => '显示或隐藏手柄';
+  @override
+  String get game_stream_video_waiting => '正在等待游戏画面';
+  @override
+  String get game_stream_line => '当前台词';
+  @override
+  String get game_stream_line_empty => '尚无 Hook 台词';
+  @override
+  String get game_stream_lookup_hint => '选中台词或释义中的文字查词';
+  @override
+  String get game_stream_android_only => '游戏串流接收端仅支持 Android。';
+  @override
+  String get game_stream_unreachable => '无法连接主机';
+  @override
+  String get game_stream_none => '没有已开启串流的已配对主机。请先在 Windows 游戏页开始串流。';
+  @override
+  String get game_stream_join_failed => '无法加入串流';
+  @override
+  String get game_stream_leave_failed => '未能通知主机结束串流';
+  @override
+  String get game_stream_available => '可加入游戏串流';
+  @override
+  String get game_stream_join_action => '加入';
 }
 
 // Path: <root>
@@ -201335,6 +201922,44 @@ class _StringsZhHk extends _StringsEn {
   String get game_stream_failed => 'Could not update the stream';
   @override
   String get game_stream_connected => 'Connected device';
+  @override
+  String get game_stream_mine_success => 'Card created on the host';
+  @override
+  String get game_stream_mine_failed => 'Host card creation failed';
+  @override
+  String get game_stream_disconnected => 'Stream disconnected';
+  @override
+  String get game_stream_input_rejected =>
+      'Input was rejected. Bring the game window to the foreground on the host.';
+  @override
+  String get game_stream_lookup_toggle => 'Show or hide dictionary';
+  @override
+  String get game_stream_controls_toggle => 'Show or hide controls';
+  @override
+  String get game_stream_video_waiting => 'Waiting for game video';
+  @override
+  String get game_stream_line => 'Current line';
+  @override
+  String get game_stream_line_empty => 'No Hook text yet';
+  @override
+  String get game_stream_lookup_hint => 'Select text to look up';
+  @override
+  String get game_stream_android_only =>
+      'Game stream receiving is available on Android only.';
+  @override
+  String get game_stream_unreachable => 'Could not connect to host';
+  @override
+  String get game_stream_none =>
+      'No paired host is streaming. Start streaming from the Windows game page first.';
+  @override
+  String get game_stream_join_failed => 'Could not join the stream';
+  @override
+  String get game_stream_leave_failed =>
+      'Could not notify the host that streaming has ended';
+  @override
+  String get game_stream_available => 'Game stream available';
+  @override
+  String get game_stream_join_action => 'Join';
 }
 
 /// Flat map(s) containing all translations.
@@ -211943,6 +212568,40 @@ extension on _StringsEn {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -222546,6 +223205,40 @@ extension on _StringsAr {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -233194,6 +233887,40 @@ extension on _StringsDe {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -243833,6 +244560,40 @@ extension on _StringsEs {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -254481,6 +255242,40 @@ extension on _StringsFr {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -265100,6 +265895,40 @@ extension on _StringsId {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -275741,6 +276570,40 @@ extension on _StringsIt {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -286309,6 +287172,40 @@ extension on _StringsJa {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -296881,6 +297778,40 @@ extension on _StringsKo {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -307515,6 +308446,40 @@ extension on _StringsNl {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -318144,6 +319109,40 @@ extension on _StringsPtBr {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -328780,6 +329779,40 @@ extension on _StringsRu {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -339388,6 +340421,40 @@ extension on _StringsTh {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -350011,6 +351078,40 @@ extension on _StringsTr {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -360628,6 +361729,40 @@ extension on _StringsVi {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
@@ -371149,6 +372284,40 @@ extension on _StringsZhCn {
         return '串流操作失败';
       case 'game_stream_connected':
         return '当前连接设备';
+      case 'game_stream_mine_success':
+        return '主机已创建卡片';
+      case 'game_stream_mine_failed':
+        return '主机制卡失败';
+      case 'game_stream_disconnected':
+        return '串流连接中断';
+      case 'game_stream_input_rejected':
+        return '输入未送达。请在主机将游戏窗口切换到前台。';
+      case 'game_stream_lookup_toggle':
+        return '展开或收起查词面板';
+      case 'game_stream_controls_toggle':
+        return '显示或隐藏手柄';
+      case 'game_stream_video_waiting':
+        return '正在等待游戏画面';
+      case 'game_stream_line':
+        return '当前台词';
+      case 'game_stream_line_empty':
+        return '尚无 Hook 台词';
+      case 'game_stream_lookup_hint':
+        return '选中台词或释义中的文字查词';
+      case 'game_stream_android_only':
+        return '游戏串流接收端仅支持 Android。';
+      case 'game_stream_unreachable':
+        return '无法连接主机';
+      case 'game_stream_none':
+        return '没有已开启串流的已配对主机。请先在 Windows 游戏页开始串流。';
+      case 'game_stream_join_failed':
+        return '无法加入串流';
+      case 'game_stream_leave_failed':
+        return '未能通知主机结束串流';
+      case 'game_stream_available':
+        return '可加入游戏串流';
+      case 'game_stream_join_action':
+        return '加入';
       default:
         return null;
     }
@@ -381695,6 +382864,40 @@ extension on _StringsZhHk {
         return 'Could not update the stream';
       case 'game_stream_connected':
         return 'Connected device';
+      case 'game_stream_mine_success':
+        return 'Card created on the host';
+      case 'game_stream_mine_failed':
+        return 'Host card creation failed';
+      case 'game_stream_disconnected':
+        return 'Stream disconnected';
+      case 'game_stream_input_rejected':
+        return 'Input was rejected. Bring the game window to the foreground on the host.';
+      case 'game_stream_lookup_toggle':
+        return 'Show or hide dictionary';
+      case 'game_stream_controls_toggle':
+        return 'Show or hide controls';
+      case 'game_stream_video_waiting':
+        return 'Waiting for game video';
+      case 'game_stream_line':
+        return 'Current line';
+      case 'game_stream_line_empty':
+        return 'No Hook text yet';
+      case 'game_stream_lookup_hint':
+        return 'Select text to look up';
+      case 'game_stream_android_only':
+        return 'Game stream receiving is available on Android only.';
+      case 'game_stream_unreachable':
+        return 'Could not connect to host';
+      case 'game_stream_none':
+        return 'No paired host is streaming. Start streaming from the Windows game page first.';
+      case 'game_stream_join_failed':
+        return 'Could not join the stream';
+      case 'game_stream_leave_failed':
+        return 'Could not notify the host that streaming has ended';
+      case 'game_stream_available':
+        return 'Game stream available';
+      case 'game_stream_join_action':
+        return 'Join';
       default:
         return null;
     }
