@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90151 (5303 per locale)
+/// Strings: 90236 (5308 per locale)
 ///
-/// Built on 2026-09-22 at 06:24 UTC
+/// Built on 2026-09-22 at 08:34 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7419,6 +7419,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_setting_slim_progress_bar_hint =>
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -19967,6 +19974,18 @@ class _StringsAr extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -32743,6 +32762,18 @@ class _StringsDe extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -45572,6 +45603,18 @@ class _StringsEs extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -58438,6 +58481,18 @@ class _StringsFr extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -71103,6 +71158,18 @@ class _StringsId extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -83860,6 +83927,18 @@ class _StringsIt extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -95998,6 +96077,18 @@ class _StringsJa extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -108146,6 +108237,18 @@ class _StringsKo extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -120863,6 +120966,18 @@ class _StringsNl extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -133633,6 +133748,18 @@ class _StringsPtBr extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -146378,6 +146505,18 @@ class _StringsRu extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -158924,6 +159063,18 @@ class _StringsTh extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -171584,6 +171735,18 @@ class _StringsTr extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -184217,6 +184380,18 @@ class _StringsVi extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 // Path: <root>
@@ -195791,6 +195966,17 @@ class _StringsZhCn extends _StringsEn {
       '控制条淡出后，在视频最下方保留一条主题色细进度条。小窗模式下它恒常显示——那里完整进度条已被收起。';
   @override
   String get shortcut_action_video_toggle_mini_window => '切换小窗';
+  @override
+  String get settings_video_diag_toggle => '视频 / 查词诊断日志';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      '记录帧耗时、libmpv 播放统计与查词各阶段耗时。默认关闭；打开后复现卡顿或查词慢，再导出。';
+  @override
+  String get settings_video_diag_export => '导出视频诊断日志';
+  @override
+  String get settings_video_diag_export_hint => '统一时间轴 + libmpv 自身的详细日志';
+  @override
+  String get video_diag_share_subject => 'Fushi 视频诊断日志';
 }
 
 // Path: <root>
@@ -207613,6 +207799,18 @@ class _StringsZhHk extends _StringsEn {
       'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
   @override
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
+  @override
+  String get settings_video_diag_toggle => 'Video & lookup diagnostics log';
+  @override
+  String get settings_video_diag_toggle_hint =>
+      'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+  @override
+  String get settings_video_diag_export => 'Export video diagnostics log';
+  @override
+  String get settings_video_diag_export_hint =>
+      'Timeline plus libmpv\'s own verbose log';
+  @override
+  String get video_diag_share_subject => 'Fushi video diagnostics log';
 }
 
 /// Flat map(s) containing all translations.
@@ -218549,6 +218747,16 @@ extension on _StringsEn {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -229480,6 +229688,16 @@ extension on _StringsAr {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -240456,6 +240674,16 @@ extension on _StringsDe {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -251423,6 +251651,16 @@ extension on _StringsEs {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -262399,6 +262637,16 @@ extension on _StringsFr {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -273346,6 +273594,16 @@ extension on _StringsId {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -284315,6 +284573,16 @@ extension on _StringsIt {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -295211,6 +295479,16 @@ extension on _StringsJa {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -306111,6 +306389,16 @@ extension on _StringsKo {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -317073,6 +317361,16 @@ extension on _StringsNl {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -328030,6 +328328,16 @@ extension on _StringsPtBr {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -338994,6 +339302,16 @@ extension on _StringsRu {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -349930,6 +350248,16 @@ extension on _StringsTh {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -360881,6 +361209,16 @@ extension on _StringsTr {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -371826,6 +372164,16 @@ extension on _StringsVi {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
@@ -382667,6 +383015,16 @@ extension on _StringsZhCn {
         return '控制条淡出后，在视频最下方保留一条主题色细进度条。小窗模式下它恒常显示——那里完整进度条已被收起。';
       case 'shortcut_action_video_toggle_mini_window':
         return '切换小窗';
+      case 'settings_video_diag_toggle':
+        return '视频 / 查词诊断日志';
+      case 'settings_video_diag_toggle_hint':
+        return '记录帧耗时、libmpv 播放统计与查词各阶段耗时。默认关闭；打开后复现卡顿或查词慢，再导出。';
+      case 'settings_video_diag_export':
+        return '导出视频诊断日志';
+      case 'settings_video_diag_export_hint':
+        return '统一时间轴 + libmpv 自身的详细日志';
+      case 'video_diag_share_subject':
+        return 'Fushi 视频诊断日志';
       default:
         return null;
     }
@@ -393541,6 +393899,16 @@ extension on _StringsZhHk {
         return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
       case 'shortcut_action_video_toggle_mini_window':
         return 'Toggle mini window';
+      case 'settings_video_diag_toggle':
+        return 'Video & lookup diagnostics log';
+      case 'settings_video_diag_toggle_hint':
+        return 'Records frame timings, libmpv playback stats and per-stage lookup timings. Off by default; turn it on, reproduce the stutter or slow lookup, then export.';
+      case 'settings_video_diag_export':
+        return 'Export video diagnostics log';
+      case 'settings_video_diag_export_hint':
+        return 'Timeline plus libmpv\'s own verbose log';
+      case 'video_diag_share_subject':
+        return 'Fushi video diagnostics log';
       default:
         return null;
     }
