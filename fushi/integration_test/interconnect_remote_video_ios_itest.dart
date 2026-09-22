@@ -202,10 +202,15 @@ void main() {
               isTrue,
               reason: '远端流控制器应就绪（load 后 debugPositionMs 非 null）',
             );
+            // 降级形态：同 host、显式端口、scheme 换成 http（中继按 (host, port)
+            // 查指纹升回 https）。外部 host 模式下 host 是局域网地址而非回环。
+            final Uri hostUri = Uri.parse(baseUrl);
+            final String downgraded =
+                'uri=http://${hostUri.host}:${hostUri.port}/';
             expect(
-              loadLog.any((String l) => l.contains('http://127.0.0.1:')),
+              loadLog.any((String l) => l.contains(downgraded)),
               isTrue,
-              reason: '交给 native 的必须是降级后的明文中继形态：$loadLog',
+              reason: '交给 native 的必须是降级后的明文中继形态 $downgraded：$loadLog',
             );
 
             final VideoFushiTestHooks hooks = readHooks()!;
