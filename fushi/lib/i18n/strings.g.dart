@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90168 (5304 per locale)
+/// Strings: 90151 (5303 per locale)
 ///
-/// Built on 2026-09-22 at 05:58 UTC
+/// Built on 2026-09-22 at 06:24 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7413,7 +7413,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'the work\'s original language';
   String get ai_video_acquire_evidence_countries => 'country of origin';
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  String get video_mini_window_enter => 'Mini window';
   String get video_mini_window_exit => 'Exit mini window';
   String get video_setting_slim_progress_bar =>
       'Slim progress bar at the bottom';
@@ -19958,8 +19957,6 @@ class _StringsAr extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  @override
-  String get video_mini_window_enter => 'Mini window';
   @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
@@ -32736,8 +32733,6 @@ class _StringsDe extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  @override
-  String get video_mini_window_enter => 'Mini window';
   @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
@@ -45567,8 +45562,6 @@ class _StringsEs extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  @override
-  String get video_mini_window_enter => 'Mini window';
   @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
@@ -58436,8 +58429,6 @@ class _StringsFr extends _StringsEn {
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
   @override
-  String get video_mini_window_enter => 'Mini window';
-  @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
   String get video_setting_slim_progress_bar =>
@@ -71102,8 +71093,6 @@ class _StringsId extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  @override
-  String get video_mini_window_enter => 'Mini window';
   @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
@@ -83862,8 +83851,6 @@ class _StringsIt extends _StringsEn {
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
   @override
-  String get video_mini_window_enter => 'Mini window';
-  @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
   String get video_setting_slim_progress_bar =>
@@ -96001,8 +95988,6 @@ class _StringsJa extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  @override
-  String get video_mini_window_enter => 'Mini window';
   @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
@@ -108151,8 +108136,6 @@ class _StringsKo extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  @override
-  String get video_mini_window_enter => 'Mini window';
   @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
@@ -120870,8 +120853,6 @@ class _StringsNl extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  @override
-  String get video_mini_window_enter => 'Mini window';
   @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
@@ -133643,8 +133624,6 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
   @override
-  String get video_mini_window_enter => 'Mini window';
-  @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
   String get video_setting_slim_progress_bar =>
@@ -146390,8 +146369,6 @@ class _StringsRu extends _StringsEn {
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
   @override
-  String get video_mini_window_enter => 'Mini window';
-  @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
   String get video_setting_slim_progress_bar =>
@@ -158937,8 +158914,6 @@ class _StringsTh extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
-  @override
-  String get video_mini_window_enter => 'Mini window';
   @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
@@ -171600,8 +171575,6 @@ class _StringsTr extends _StringsEn {
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
   @override
-  String get video_mini_window_enter => 'Mini window';
-  @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
   String get video_setting_slim_progress_bar =>
@@ -184235,8 +184208,6 @@ class _StringsVi extends _StringsEn {
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
   @override
-  String get video_mini_window_enter => 'Mini window';
-  @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
   String get video_setting_slim_progress_bar =>
@@ -195811,8 +195782,6 @@ class _StringsZhCn extends _StringsEn {
   String get ai_video_acquire_evidence_countries => '制作国';
   @override
   String get ai_video_acquire_evidence_title_script => '标题文字';
-  @override
-  String get video_mini_window_enter => '小窗';
   @override
   String get video_mini_window_exit => '退出小窗';
   @override
@@ -207635,8 +207604,6 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
   @override
-  String get video_mini_window_enter => 'Mini window';
-  @override
   String get video_mini_window_exit => 'Exit mini window';
   @override
   String get video_setting_slim_progress_bar =>
@@ -218574,8 +218541,6 @@ extension on _StringsEn {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -229507,8 +229472,6 @@ extension on _StringsAr {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -240485,8 +240448,6 @@ extension on _StringsDe {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -251454,8 +251415,6 @@ extension on _StringsEs {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -262432,8 +262391,6 @@ extension on _StringsFr {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -273381,8 +273338,6 @@ extension on _StringsId {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -284352,8 +284307,6 @@ extension on _StringsIt {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -295250,8 +295203,6 @@ extension on _StringsJa {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -306152,8 +306103,6 @@ extension on _StringsKo {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -317116,8 +317065,6 @@ extension on _StringsNl {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -328075,8 +328022,6 @@ extension on _StringsPtBr {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -339041,8 +338986,6 @@ extension on _StringsRu {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -349979,8 +349922,6 @@ extension on _StringsTh {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -360932,8 +360873,6 @@ extension on _StringsTr {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -371879,8 +371818,6 @@ extension on _StringsVi {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
@@ -382722,8 +382659,6 @@ extension on _StringsZhCn {
         return '制作国';
       case 'ai_video_acquire_evidence_title_script':
         return '标题文字';
-      case 'video_mini_window_enter':
-        return '小窗';
       case 'video_mini_window_exit':
         return '退出小窗';
       case 'video_setting_slim_progress_bar':
@@ -393598,8 +393533,6 @@ extension on _StringsZhHk {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
-      case 'video_mini_window_enter':
-        return 'Mini window';
       case 'video_mini_window_exit':
         return 'Exit mini window';
       case 'video_setting_slim_progress_bar':
