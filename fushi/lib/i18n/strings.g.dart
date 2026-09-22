@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90304 (5312 per locale)
+/// Strings: 90338 (5314 per locale)
 ///
-/// Built on 2026-09-22 at 11:44 UTC
+/// Built on 2026-09-22 at 17:17 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3913,7 +3913,7 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get reader_font_size => 'Font size';
   String get reader_font_vpal => 'VPAL (vertical alt)';
   String get reader_font_weight => 'Font weight';
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Hide furigana';
   String get reader_furigana_mode_hint => '';
   String get reader_gallery_empty => 'No illustrations in this book';
   String get reader_gallery_jump => 'Jump to this illustration';
@@ -7434,6 +7434,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'The server answered with a web page instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -13909,7 +13912,7 @@ class _StringsAr extends _StringsEn {
   @override
   String get reader_font_weight => 'وزن الخط';
   @override
-  String get reader_furigana_mode => 'فوريغانا';
+  String get reader_furigana_mode => 'إخفاء الفوريغانا';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -20006,6 +20009,11 @@ class _StringsAr extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -26619,7 +26627,7 @@ class _StringsDe extends _StringsEn {
   @override
   String get reader_font_weight => 'Schriftstärke';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana ausblenden';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -32806,6 +32814,11 @@ class _StringsDe extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -39439,7 +39452,7 @@ class _StringsEs extends _StringsEn {
   @override
   String get reader_font_weight => 'Grosor de fuente';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Ocultar furigana';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -45659,6 +45672,11 @@ class _StringsEs extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -52312,7 +52330,7 @@ class _StringsFr extends _StringsEn {
   @override
   String get reader_font_weight => 'Graisse de police';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Masquer les furigana';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -58549,6 +58567,11 @@ class _StringsFr extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -65089,7 +65112,7 @@ class _StringsId extends _StringsEn {
   @override
   String get reader_font_weight => 'Ketebalan font';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Sembunyikan furigana';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -71238,6 +71261,11 @@ class _StringsId extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -77829,7 +77857,7 @@ class _StringsIt extends _StringsEn {
   @override
   String get reader_font_weight => 'Spessore carattere';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Nascondi furigana';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -84019,6 +84047,11 @@ class _StringsIt extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -90253,7 +90286,7 @@ class _StringsJa extends _StringsEn {
   @override
   String get reader_font_weight => 'フォントの太さ';
   @override
-  String get reader_furigana_mode => 'ふりがな';
+  String get reader_furigana_mode => 'ふりがなを隠す';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -96181,6 +96214,11 @@ class _StringsJa extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'スクロールでポップアップを閉じる';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'スクロールモードで、検索後に本文をスクロールし続けると（横書き・縦書きとも）辞書ポップアップを閉じます';
 }
 
 // Path: <root>
@@ -102419,7 +102457,7 @@ class _StringsKo extends _StringsEn {
   @override
   String get reader_font_weight => '글꼴 굵기';
   @override
-  String get reader_furigana_mode => '후리가나';
+  String get reader_furigana_mode => '후리가나 숨기기';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -108353,6 +108391,11 @@ class _StringsKo extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -114920,7 +114963,7 @@ class _StringsNl extends _StringsEn {
   @override
   String get reader_font_weight => 'Letterdikte';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furigana verbergen';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -121094,6 +121137,11 @@ class _StringsNl extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -127693,7 +127741,7 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get reader_font_weight => 'Espessura da fonte';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Ocultar furigana';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -133888,6 +133936,11 @@ class _StringsPtBr extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -140468,7 +140521,7 @@ class _StringsRu extends _StringsEn {
   @override
   String get reader_font_weight => 'Насыщенность шрифта';
   @override
-  String get reader_furigana_mode => 'Фуригана';
+  String get reader_furigana_mode => 'Скрыть фуригану';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -146657,6 +146710,11 @@ class _StringsRu extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -153123,7 +153181,7 @@ class _StringsTh extends _StringsEn {
   @override
   String get reader_font_weight => 'น้ำหนักฟอนต์';
   @override
-  String get reader_furigana_mode => 'ฟุริงานะ';
+  String get reader_furigana_mode => 'ซ่อนฟุริงานะ';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -159227,6 +159285,11 @@ class _StringsTh extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -165769,7 +165832,7 @@ class _StringsTr extends _StringsEn {
   @override
   String get reader_font_weight => 'Yazı tipi kalınlığı';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Furiganayı gizle';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -171911,6 +171974,11 @@ class _StringsTr extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -178439,7 +178507,7 @@ class _StringsVi extends _StringsEn {
   @override
   String get reader_font_weight => 'Độ đậm phông chữ';
   @override
-  String get reader_furigana_mode => 'Furigana';
+  String get reader_furigana_mode => 'Ẩn furigana';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -184568,6 +184636,11 @@ class _StringsVi extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => 'Close popup when scrolling';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
 }
 
 // Path: <root>
@@ -190555,7 +190628,7 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get reader_font_weight => '字体粗细';
   @override
-  String get reader_furigana_mode => '振假名';
+  String get reader_furigana_mode => '隐藏振假名';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -196163,6 +196236,11 @@ class _StringsZhCn extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       '服务器返回的是网页（「${title}」）而不是同步响应。请确认地址指向的是 WebDAV 或 Fushi 互联端点，而不是网站。';
+  @override
+  String get reader_popup_scroll_dismiss => '滚动时关闭查词弹窗';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      '滚动模式下，查词后继续滚动正文（横排竖排均可）即关闭查词弹窗';
 }
 
 // Path: <root>
@@ -202196,7 +202274,7 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get reader_font_weight => '字型粗細';
   @override
-  String get reader_furigana_mode => '振假名';
+  String get reader_furigana_mode => '隱藏振假名';
   @override
   String get reader_furigana_mode_hint => '';
   @override
@@ -208009,6 +208087,11 @@ class _StringsZhHk extends _StringsEn {
   @override
   String sync_err_html_page_detail({required Object title}) =>
       'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+  @override
+  String get reader_popup_scroll_dismiss => '捲動時關閉查詞彈窗';
+  @override
+  String get reader_popup_scroll_dismiss_hint =>
+      '捲動模式下，查詞後繼續捲動正文（橫排直排均可）即關閉查詞彈窗';
 }
 
 /// Flat map(s) containing all translations.
@@ -213648,7 +213731,7 @@ extension on _StringsEn {
       case 'reader_font_weight':
         return 'Font weight';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Hide furigana';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -218964,6 +219047,10 @@ extension on _StringsEn {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -224601,7 +224688,7 @@ extension on _StringsAr {
       case 'reader_font_weight':
         return 'وزن الخط';
       case 'reader_furigana_mode':
-        return 'فوريغانا';
+        return 'إخفاء الفوريغانا';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -229914,6 +230001,10 @@ extension on _StringsAr {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -235580,7 +235671,7 @@ extension on _StringsDe {
       case 'reader_font_weight':
         return 'Schriftstärke';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Furigana ausblenden';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -240909,6 +241000,10 @@ extension on _StringsDe {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -246568,7 +246663,7 @@ extension on _StringsEs {
       case 'reader_font_weight':
         return 'Grosor de fuente';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Ocultar furigana';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -251895,6 +251990,10 @@ extension on _StringsEs {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -257561,7 +257660,7 @@ extension on _StringsFr {
       case 'reader_font_weight':
         return 'Graisse de police';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Masquer les furigana';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -262890,6 +262989,10 @@ extension on _StringsFr {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -268537,7 +268640,7 @@ extension on _StringsId {
       case 'reader_font_weight':
         return 'Ketebalan font';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Sembunyikan furigana';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -273856,6 +273959,10 @@ extension on _StringsId {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -279512,7 +279619,7 @@ extension on _StringsIt {
       case 'reader_font_weight':
         return 'Spessore carattere';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Nascondi furigana';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -284844,6 +284951,10 @@ extension on _StringsIt {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -290465,7 +290576,7 @@ extension on _StringsJa {
       case 'reader_font_weight':
         return 'フォントの太さ';
       case 'reader_furigana_mode':
-        return 'ふりがな';
+        return 'ふりがなを隠す';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -295759,6 +295870,10 @@ extension on _StringsJa {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'スクロールでポップアップを閉じる';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'スクロールモードで、検索後に本文をスクロールし続けると（横書き・縦書きとも）辞書ポップアップを閉じます';
       default:
         return null;
     }
@@ -301381,7 +301496,7 @@ extension on _StringsKo {
       case 'reader_font_weight':
         return '글꼴 굵기';
       case 'reader_furigana_mode':
-        return '후리가나';
+        return '후리가나 숨기기';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -306678,6 +306793,10 @@ extension on _StringsKo {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -312333,7 +312452,7 @@ extension on _StringsNl {
       case 'reader_font_weight':
         return 'Letterdikte';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Furigana verbergen';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -317659,6 +317778,10 @@ extension on _StringsNl {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -323313,7 +323436,7 @@ extension on _StringsPtBr {
       case 'reader_font_weight':
         return 'Espessura da fonte';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Ocultar furigana';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -328635,6 +328758,10 @@ extension on _StringsPtBr {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -334296,7 +334423,7 @@ extension on _StringsRu {
       case 'reader_font_weight':
         return 'Насыщенность шрифта';
       case 'reader_furigana_mode':
-        return 'Фуригана';
+        return 'Скрыть фуригану';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -339618,6 +339745,10 @@ extension on _StringsRu {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -345258,7 +345389,7 @@ extension on _StringsTh {
       case 'reader_font_weight':
         return 'น้ำหนักฟอนต์';
       case 'reader_furigana_mode':
-        return 'ฟุริงานะ';
+        return 'ซ่อนฟุริงานะ';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -350573,6 +350704,10 @@ extension on _StringsTh {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -356223,7 +356358,7 @@ extension on _StringsTr {
       case 'reader_font_weight':
         return 'Yazı tipi kalınlığı';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Furiganayı gizle';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -361543,6 +361678,10 @@ extension on _StringsTr {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -367189,7 +367328,7 @@ extension on _StringsVi {
       case 'reader_font_weight':
         return 'Độ đậm phông chữ';
       case 'reader_furigana_mode':
-        return 'Furigana';
+        return 'Ẩn furigana';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -372507,6 +372646,10 @@ extension on _StringsVi {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return 'Close popup when scrolling';
+      case 'reader_popup_scroll_dismiss_hint':
+        return 'In scroll mode, keep scrolling the page (horizontal or vertical text) to close the lookup popup';
       default:
         return null;
     }
@@ -378110,7 +378253,7 @@ extension on _StringsZhCn {
       case 'reader_font_weight':
         return '字体粗细';
       case 'reader_furigana_mode':
-        return '振假名';
+        return '隐藏振假名';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -383367,6 +383510,10 @@ extension on _StringsZhCn {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             '服务器返回的是网页（「${title}」）而不是同步响应。请确认地址指向的是 WebDAV 或 Fushi 互联端点，而不是网站。';
+      case 'reader_popup_scroll_dismiss':
+        return '滚动时关闭查词弹窗';
+      case 'reader_popup_scroll_dismiss_hint':
+        return '滚动模式下，查词后继续滚动正文（横排竖排均可）即关闭查词弹窗';
       default:
         return null;
     }
@@ -388977,7 +389124,7 @@ extension on _StringsZhHk {
       case 'reader_font_weight':
         return '字型粗細';
       case 'reader_furigana_mode':
-        return '振假名';
+        return '隱藏振假名';
       case 'reader_furigana_mode_hint':
         return '';
       case 'reader_gallery_empty':
@@ -394260,6 +394407,10 @@ extension on _StringsZhHk {
       case 'sync_err_html_page_detail':
         return ({required Object title}) =>
             'The server answered with a web page ("${title}") instead of a sync response. Check that the URL points at a WebDAV or Fushi Interconnect endpoint, not a website.';
+      case 'reader_popup_scroll_dismiss':
+        return '捲動時關閉查詞彈窗';
+      case 'reader_popup_scroll_dismiss_hint':
+        return '捲動模式下，查詞後繼續捲動正文（橫排直排均可）即關閉查詞彈窗';
       default:
         return null;
     }
