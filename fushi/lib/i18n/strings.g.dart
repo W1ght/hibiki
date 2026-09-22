@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90899 (5347 per locale)
+/// Strings: 91460 (5380 per locale)
 ///
-/// Built on 2026-09-22 at 18:00 UTC
+/// Built on 2026-09-22 at 19:43 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7478,6 +7478,41 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_stream_keys_hint =>
       'These key mappings apply only to this streaming session.';
   String get game_stream_key_default => 'Default';
+  String get manga_reader_general => 'General';
+  String get manga_reader_filters => 'Custom filter';
+  String get manga_reader_crop_borders => 'Crop borders';
+  String get manga_reader_split_wide_pages => 'Split wide pages';
+  String get manga_reader_rotate_wide_pages => 'Rotate to fit';
+  String get manga_reader_automatic_background => 'Automatic background';
+  String get manga_reader_webtoon_double_tap_zoom => 'Webtoon double-tap zoom';
+  String get manga_reader_show_page_gaps => 'Show page gaps';
+  String get manga_reader_auto_scroll => 'Auto scroll';
+  String get manga_reader_auto_scroll_speed => 'Auto scroll speed (px/s)';
+  String get manga_reader_hide_threshold => 'Reader hide threshold (px)';
+  String get manga_reader_eink_mode => 'E-Ink mode';
+  String get manga_reader_invert_colors => 'Invert colors';
+  String get manga_reader_grayscale => 'Grayscale';
+  String get manga_reader_brightness => 'Brightness';
+  String get manga_reader_contrast => 'Contrast';
+  String get manga_reader_saturation => 'Saturation';
+  String get manga_reader_custom_color_filter => 'Custom color filter';
+  String get manga_reader_color_filter_color => 'Filter color';
+  String get manga_reader_color_filter_opacity => 'Filter opacity';
+  String get manga_reader_flash_on_page_change => 'Flash on page change';
+  String get manga_reader_animate_transitions => 'Animate page transitions';
+  String get manga_reader_lookup_on_hover => 'Lookup OCR text on hover';
+  String get manga_reader_ocr_trigger => 'OCR trigger';
+  String get manga_reader_ocr_automatic => 'While reading';
+  String get manga_reader_ocr_manual => 'Manual';
+  String get manga_reader_parallel_ocr_tasks => 'Parallel OCR tasks';
+  String get manga_reader_ocr_current => 'Recognize visible pages';
+  String get manga_reader_back_to_start => 'Back to the beginning';
+  String get reader_settings_panel_move_left => 'Move settings to the left';
+  String get reader_settings_panel_move_right => 'Move settings to the right';
+  String get manga_reader_ocr_engine_note =>
+      'While reading supports local ONNX, Google Lens and system OCR. Local ONNX runs one task at a time; external Mokuro and paired hosts use explicit batch OCR.';
+  String get manga_reader_ocr_unavailable =>
+      'No OCR engine is ready. Download the local model or pick another engine in OCR settings.';
 }
 
 // Path: <root>
@@ -20129,6 +20164,76 @@ class _StringsAr extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'عام';
+  @override
+  String get manga_reader_filters => 'مرشح مخصص';
+  @override
+  String get manga_reader_crop_borders => 'قص الحواف';
+  @override
+  String get manga_reader_split_wide_pages => 'تقسيم الصفحات العريضة';
+  @override
+  String get manga_reader_rotate_wide_pages => 'التدوير للملاءمة';
+  @override
+  String get manga_reader_automatic_background => 'خلفية تلقائية';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'التكبير بالنقر المزدوج في وضع Webtoon';
+  @override
+  String get manga_reader_show_page_gaps => 'إظهار الفواصل بين الصفحات';
+  @override
+  String get manga_reader_auto_scroll => 'التمرير التلقائي';
+  @override
+  String get manga_reader_auto_scroll_speed => 'سرعة التمرير التلقائي (بكسل/ث)';
+  @override
+  String get manga_reader_hide_threshold =>
+      'حد إخفاء الشريط عند التمرير (بكسل)';
+  @override
+  String get manga_reader_eink_mode => 'وضع E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'عكس الألوان';
+  @override
+  String get manga_reader_grayscale => 'تدرج الرمادي';
+  @override
+  String get manga_reader_brightness => 'السطوع';
+  @override
+  String get manga_reader_contrast => 'التباين';
+  @override
+  String get manga_reader_saturation => 'التشبع';
+  @override
+  String get manga_reader_custom_color_filter => 'مرشح لون مخصص';
+  @override
+  String get manga_reader_color_filter_color => 'لون المرشح';
+  @override
+  String get manga_reader_color_filter_opacity => 'عتامة المرشح';
+  @override
+  String get manga_reader_flash_on_page_change => 'وميض عند تغيير الصفحة';
+  @override
+  String get manga_reader_animate_transitions => 'تحريك انتقالات الصفحات';
+  @override
+  String get manga_reader_lookup_on_hover => 'البحث عن نص OCR عند التمرير فوقه';
+  @override
+  String get manga_reader_ocr_trigger => 'تشغيل OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'أثناء القراءة';
+  @override
+  String get manga_reader_ocr_manual => 'يدوي';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'مهام OCR المتوازية';
+  @override
+  String get manga_reader_ocr_current => 'التعرف على الصفحات المرئية';
+  @override
+  String get manga_reader_back_to_start => 'العودة إلى البداية';
+  @override
+  String get reader_settings_panel_move_left => 'نقل الإعدادات إلى اليسار';
+  @override
+  String get reader_settings_panel_move_right => 'نقل الإعدادات إلى اليمين';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      'يدعم وضع «أثناء القراءة» نموذج ONNX المحلي وGoogle Lens وOCR النظام. ينفّذ ONNX المحلي مهمة واحدة في كل مرة؛ ويستخدم Mokuro الخارجي والمضيفون المقترنون OCR على دفعات يدويًا.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'لا يوجد محرك OCR جاهز. نزّل النموذج المحلي أو اختر محركًا آخر في إعدادات OCR.';
 }
 
 // Path: <root>
@@ -33008,6 +33113,80 @@ class _StringsDe extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Allgemein';
+  @override
+  String get manga_reader_filters => 'Benutzerdefinierter Filter';
+  @override
+  String get manga_reader_crop_borders => 'Ränder zuschneiden';
+  @override
+  String get manga_reader_split_wide_pages => 'Breite Seiten teilen';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Zum Anpassen drehen';
+  @override
+  String get manga_reader_automatic_background => 'Automatischer Hintergrund';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Doppeltippen zum Zoomen (Webtoon)';
+  @override
+  String get manga_reader_show_page_gaps => 'Seitenabstände anzeigen';
+  @override
+  String get manga_reader_auto_scroll => 'Automatisch scrollen';
+  @override
+  String get manga_reader_auto_scroll_speed => 'Scrollgeschwindigkeit (px/s)';
+  @override
+  String get manga_reader_hide_threshold =>
+      'Schwelle zum Ausblenden der Leiste (px)';
+  @override
+  String get manga_reader_eink_mode => 'E-Ink-Modus';
+  @override
+  String get manga_reader_invert_colors => 'Farben invertieren';
+  @override
+  String get manga_reader_grayscale => 'Graustufen';
+  @override
+  String get manga_reader_brightness => 'Helligkeit';
+  @override
+  String get manga_reader_contrast => 'Kontrast';
+  @override
+  String get manga_reader_saturation => 'Sättigung';
+  @override
+  String get manga_reader_custom_color_filter =>
+      'Benutzerdefinierter Farbfilter';
+  @override
+  String get manga_reader_color_filter_color => 'Filterfarbe';
+  @override
+  String get manga_reader_color_filter_opacity => 'Filterdeckkraft';
+  @override
+  String get manga_reader_flash_on_page_change => 'Beim Umblättern aufblitzen';
+  @override
+  String get manga_reader_animate_transitions => 'Seitenübergänge animieren';
+  @override
+  String get manga_reader_lookup_on_hover =>
+      'OCR-Text beim Überfahren nachschlagen';
+  @override
+  String get manga_reader_ocr_trigger => 'OCR-Auslöser';
+  @override
+  String get manga_reader_ocr_automatic => 'Beim Lesen';
+  @override
+  String get manga_reader_ocr_manual => 'Manuell';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Parallele OCR-Aufgaben';
+  @override
+  String get manga_reader_ocr_current => 'Sichtbare Seiten erkennen';
+  @override
+  String get manga_reader_back_to_start => 'Zurück zum Anfang';
+  @override
+  String get reader_settings_panel_move_left =>
+      'Einstellungen nach links verschieben';
+  @override
+  String get reader_settings_panel_move_right =>
+      'Einstellungen nach rechts verschieben';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '„Beim Lesen“ unterstützt lokales ONNX, Google Lens und System-OCR. Lokales ONNX verarbeitet jeweils eine Aufgabe; externes Mokuro und gekoppelte Hosts verwenden explizite Stapel-OCR.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Keine OCR-Engine bereit. Laden Sie das lokale Modell herunter oder wählen Sie in den OCR-Einstellungen eine andere Engine.';
 }
 
 // Path: <root>
@@ -45940,6 +46119,80 @@ class _StringsEs extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'General';
+  @override
+  String get manga_reader_filters => 'Filtro personalizado';
+  @override
+  String get manga_reader_crop_borders => 'Recortar bordes';
+  @override
+  String get manga_reader_split_wide_pages => 'Dividir páginas anchas';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Girar para ajustar';
+  @override
+  String get manga_reader_automatic_background => 'Fondo automático';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Zoom con doble toque en Webtoon';
+  @override
+  String get manga_reader_show_page_gaps => 'Mostrar separación entre páginas';
+  @override
+  String get manga_reader_auto_scroll => 'Desplazamiento automático';
+  @override
+  String get manga_reader_auto_scroll_speed =>
+      'Velocidad de desplazamiento automático (px/s)';
+  @override
+  String get manga_reader_hide_threshold => 'Umbral para ocultar la barra (px)';
+  @override
+  String get manga_reader_eink_mode => 'Modo E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'Invertir colores';
+  @override
+  String get manga_reader_grayscale => 'Escala de grises';
+  @override
+  String get manga_reader_brightness => 'Brillo';
+  @override
+  String get manga_reader_contrast => 'Contraste';
+  @override
+  String get manga_reader_saturation => 'Saturación';
+  @override
+  String get manga_reader_custom_color_filter =>
+      'Filtro de color personalizado';
+  @override
+  String get manga_reader_color_filter_color => 'Color del filtro';
+  @override
+  String get manga_reader_color_filter_opacity => 'Opacidad del filtro';
+  @override
+  String get manga_reader_flash_on_page_change =>
+      'Destello al cambiar de página';
+  @override
+  String get manga_reader_animate_transitions =>
+      'Animar transiciones de página';
+  @override
+  String get manga_reader_lookup_on_hover =>
+      'Buscar texto OCR al pasar el cursor';
+  @override
+  String get manga_reader_ocr_trigger => 'Activación de OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'Durante la lectura';
+  @override
+  String get manga_reader_ocr_manual => 'Manual';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Tareas de OCR en paralelo';
+  @override
+  String get manga_reader_ocr_current => 'Reconocer páginas visibles';
+  @override
+  String get manga_reader_back_to_start => 'Volver al principio';
+  @override
+  String get reader_settings_panel_move_left => 'Mover ajustes a la izquierda';
+  @override
+  String get reader_settings_panel_move_right => 'Mover ajustes a la derecha';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '«Durante la lectura» admite ONNX local, Google Lens y el OCR del sistema. ONNX local ejecuta una tarea a la vez; Mokuro externo y los hosts vinculados usan OCR por lotes explícito.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'No hay ningún motor de OCR disponible. Descarga el modelo local o elige otro motor en los ajustes de OCR.';
 }
 
 // Path: <root>
@@ -58909,6 +59162,83 @@ class _StringsFr extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Général';
+  @override
+  String get manga_reader_filters => 'Filtre personnalisé';
+  @override
+  String get manga_reader_crop_borders => 'Rogner les marges';
+  @override
+  String get manga_reader_split_wide_pages => 'Diviser les pages larges';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Pivoter pour ajuster';
+  @override
+  String get manga_reader_automatic_background => 'Arrière-plan automatique';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Zoom par double appui (Webtoon)';
+  @override
+  String get manga_reader_show_page_gaps =>
+      'Afficher l\'espace entre les pages';
+  @override
+  String get manga_reader_auto_scroll => 'Défilement automatique';
+  @override
+  String get manga_reader_auto_scroll_speed =>
+      'Vitesse de défilement automatique (px/s)';
+  @override
+  String get manga_reader_hide_threshold =>
+      'Seuil de masquage de la barre (px)';
+  @override
+  String get manga_reader_eink_mode => 'Mode E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'Inverser les couleurs';
+  @override
+  String get manga_reader_grayscale => 'Niveaux de gris';
+  @override
+  String get manga_reader_brightness => 'Luminosité';
+  @override
+  String get manga_reader_contrast => 'Contraste';
+  @override
+  String get manga_reader_saturation => 'Saturation';
+  @override
+  String get manga_reader_custom_color_filter =>
+      'Filtre de couleur personnalisé';
+  @override
+  String get manga_reader_color_filter_color => 'Couleur du filtre';
+  @override
+  String get manga_reader_color_filter_opacity => 'Opacité du filtre';
+  @override
+  String get manga_reader_flash_on_page_change => 'Flash au changement de page';
+  @override
+  String get manga_reader_animate_transitions =>
+      'Animer les transitions de page';
+  @override
+  String get manga_reader_lookup_on_hover =>
+      'Rechercher le texte OCR au survol';
+  @override
+  String get manga_reader_ocr_trigger => 'Déclenchement de l\'OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'Pendant la lecture';
+  @override
+  String get manga_reader_ocr_manual => 'Manuel';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Tâches OCR parallèles';
+  @override
+  String get manga_reader_ocr_current => 'Reconnaître les pages visibles';
+  @override
+  String get manga_reader_back_to_start => 'Revenir au début';
+  @override
+  String get reader_settings_panel_move_left =>
+      'Déplacer les paramètres à gauche';
+  @override
+  String get reader_settings_panel_move_right =>
+      'Déplacer les paramètres à droite';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      'Le mode « Pendant la lecture » prend en charge ONNX local, Google Lens et l\'OCR système. ONNX local traite une tâche à la fois ; Mokuro externe et les hôtes appairés utilisent l\'OCR par lots explicite.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Aucun moteur OCR n\'est prêt. Téléchargez le modèle local ou choisissez un autre moteur dans les paramètres OCR.';
 }
 
 // Path: <root>
@@ -71677,6 +72007,77 @@ class _StringsId extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Umum';
+  @override
+  String get manga_reader_filters => 'Filter khusus';
+  @override
+  String get manga_reader_crop_borders => 'Pangkas tepi';
+  @override
+  String get manga_reader_split_wide_pages => 'Pisahkan halaman lebar';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Putar agar pas';
+  @override
+  String get manga_reader_automatic_background => 'Latar belakang otomatis';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Ketuk dua kali untuk zoom (Webtoon)';
+  @override
+  String get manga_reader_show_page_gaps => 'Tampilkan jarak antarhalaman';
+  @override
+  String get manga_reader_auto_scroll => 'Gulir otomatis';
+  @override
+  String get manga_reader_auto_scroll_speed =>
+      'Kecepatan gulir otomatis (px/dtk)';
+  @override
+  String get manga_reader_hide_threshold => 'Ambang sembunyikan bilah (px)';
+  @override
+  String get manga_reader_eink_mode => 'Mode E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'Balik warna';
+  @override
+  String get manga_reader_grayscale => 'Skala abu-abu';
+  @override
+  String get manga_reader_brightness => 'Kecerahan';
+  @override
+  String get manga_reader_contrast => 'Kontras';
+  @override
+  String get manga_reader_saturation => 'Saturasi';
+  @override
+  String get manga_reader_custom_color_filter => 'Filter warna khusus';
+  @override
+  String get manga_reader_color_filter_color => 'Warna filter';
+  @override
+  String get manga_reader_color_filter_opacity => 'Opasitas filter';
+  @override
+  String get manga_reader_flash_on_page_change => 'Kilatan saat ganti halaman';
+  @override
+  String get manga_reader_animate_transitions => 'Animasikan transisi halaman';
+  @override
+  String get manga_reader_lookup_on_hover => 'Cari teks OCR saat diarahkan';
+  @override
+  String get manga_reader_ocr_trigger => 'Pemicu OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'Saat membaca';
+  @override
+  String get manga_reader_ocr_manual => 'Manual';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Tugas OCR paralel';
+  @override
+  String get manga_reader_ocr_current => 'Kenali halaman yang terlihat';
+  @override
+  String get manga_reader_back_to_start => 'Kembali ke awal';
+  @override
+  String get reader_settings_panel_move_left => 'Pindahkan pengaturan ke kiri';
+  @override
+  String get reader_settings_panel_move_right =>
+      'Pindahkan pengaturan ke kanan';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      'Mode “Saat membaca” mendukung ONNX lokal, Google Lens, dan OCR sistem. ONNX lokal menjalankan satu tugas dalam satu waktu; Mokuro eksternal dan host yang dipasangkan menggunakan OCR batch eksplisit.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Tidak ada mesin OCR yang siap. Unduh model lokal atau pilih mesin lain di pengaturan OCR.';
 }
 
 // Path: <root>
@@ -84537,6 +84938,81 @@ class _StringsIt extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Generale';
+  @override
+  String get manga_reader_filters => 'Filtro personalizzato';
+  @override
+  String get manga_reader_crop_borders => 'Ritaglia i bordi';
+  @override
+  String get manga_reader_split_wide_pages => 'Dividi le pagine larghe';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Ruota per adattare';
+  @override
+  String get manga_reader_automatic_background => 'Sfondo automatico';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Zoom con doppio tocco (Webtoon)';
+  @override
+  String get manga_reader_show_page_gaps => 'Mostra spazi tra le pagine';
+  @override
+  String get manga_reader_auto_scroll => 'Scorrimento automatico';
+  @override
+  String get manga_reader_auto_scroll_speed =>
+      'Velocità di scorrimento automatico (px/s)';
+  @override
+  String get manga_reader_hide_threshold =>
+      'Soglia per nascondere la barra (px)';
+  @override
+  String get manga_reader_eink_mode => 'Modalità E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'Inverti i colori';
+  @override
+  String get manga_reader_grayscale => 'Scala di grigi';
+  @override
+  String get manga_reader_brightness => 'Luminosità';
+  @override
+  String get manga_reader_contrast => 'Contrasto';
+  @override
+  String get manga_reader_saturation => 'Saturazione';
+  @override
+  String get manga_reader_custom_color_filter => 'Filtro colore personalizzato';
+  @override
+  String get manga_reader_color_filter_color => 'Colore del filtro';
+  @override
+  String get manga_reader_color_filter_opacity => 'Opacità del filtro';
+  @override
+  String get manga_reader_flash_on_page_change => 'Lampeggia al cambio pagina';
+  @override
+  String get manga_reader_animate_transitions =>
+      'Anima le transizioni di pagina';
+  @override
+  String get manga_reader_lookup_on_hover =>
+      'Cerca il testo OCR al passaggio del mouse';
+  @override
+  String get manga_reader_ocr_trigger => 'Attivazione OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'Durante la lettura';
+  @override
+  String get manga_reader_ocr_manual => 'Manuale';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Attività OCR parallele';
+  @override
+  String get manga_reader_ocr_current => 'Riconosci le pagine visibili';
+  @override
+  String get manga_reader_back_to_start => 'Torna all\'inizio';
+  @override
+  String get reader_settings_panel_move_left =>
+      'Sposta le impostazioni a sinistra';
+  @override
+  String get reader_settings_panel_move_right =>
+      'Sposta le impostazioni a destra';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '«Durante la lettura» supporta ONNX locale, Google Lens e l\'OCR di sistema. ONNX locale esegue un\'attività alla volta; Mokuro esterno e gli host associati usano l\'OCR in batch esplicito.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Nessun motore OCR disponibile. Scarica il modello locale o scegli un altro motore nelle impostazioni OCR.';
 }
 
 // Path: <root>
@@ -96778,6 +97254,74 @@ class _StringsJa extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => '一般';
+  @override
+  String get manga_reader_filters => 'カスタムフィルター';
+  @override
+  String get manga_reader_crop_borders => '余白をトリミング';
+  @override
+  String get manga_reader_split_wide_pages => '横長ページを分割';
+  @override
+  String get manga_reader_rotate_wide_pages => '回転して画面に合わせる';
+  @override
+  String get manga_reader_automatic_background => '背景を自動設定';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom => 'Webtoon モードでダブルタップズーム';
+  @override
+  String get manga_reader_show_page_gaps => 'ページ間の余白を表示';
+  @override
+  String get manga_reader_auto_scroll => '自動スクロール';
+  @override
+  String get manga_reader_auto_scroll_speed => '自動スクロール速度（px/秒）';
+  @override
+  String get manga_reader_hide_threshold => 'スクロールでツールバーを隠すしきい値（px）';
+  @override
+  String get manga_reader_eink_mode => 'E-Ink モード';
+  @override
+  String get manga_reader_invert_colors => '色を反転';
+  @override
+  String get manga_reader_grayscale => 'グレースケール';
+  @override
+  String get manga_reader_brightness => '明るさ';
+  @override
+  String get manga_reader_contrast => 'コントラスト';
+  @override
+  String get manga_reader_saturation => '彩度';
+  @override
+  String get manga_reader_custom_color_filter => 'カスタムカラーフィルター';
+  @override
+  String get manga_reader_color_filter_color => 'フィルターの色';
+  @override
+  String get manga_reader_color_filter_opacity => 'フィルターの不透明度';
+  @override
+  String get manga_reader_flash_on_page_change => 'ページ切り替え時にフラッシュ';
+  @override
+  String get manga_reader_animate_transitions => 'ページ切り替えアニメーション';
+  @override
+  String get manga_reader_lookup_on_hover => 'ホバーで OCR テキストを検索';
+  @override
+  String get manga_reader_ocr_trigger => 'OCR の実行タイミング';
+  @override
+  String get manga_reader_ocr_automatic => '読みながら';
+  @override
+  String get manga_reader_ocr_manual => '手動';
+  @override
+  String get manga_reader_parallel_ocr_tasks => '並列 OCR タスク数';
+  @override
+  String get manga_reader_ocr_current => '表示中のページを認識';
+  @override
+  String get manga_reader_back_to_start => '最初に戻る';
+  @override
+  String get reader_settings_panel_move_left => '設定を左側に移動';
+  @override
+  String get reader_settings_panel_move_right => '設定を右側に移動';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '「読みながら」はローカル ONNX、Google Lens、システム OCR に対応しています。ローカル ONNX は一度に 1 件ずつ処理します。外部 Mokuro とペアリング済みホストは手動の一括 OCR を使用します。';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      '使用できる OCR エンジンがありません。OCR 設定でローカルモデルをダウンロードするか、別のエンジンを選択してください。';
 }
 
 // Path: <root>
@@ -109029,6 +109573,74 @@ class _StringsKo extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => '일반';
+  @override
+  String get manga_reader_filters => '사용자 지정 필터';
+  @override
+  String get manga_reader_crop_borders => '여백 자르기';
+  @override
+  String get manga_reader_split_wide_pages => '넓은 페이지 분할';
+  @override
+  String get manga_reader_rotate_wide_pages => '화면에 맞게 회전';
+  @override
+  String get manga_reader_automatic_background => '자동 배경';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom => '웹툰 모드 더블 탭 확대';
+  @override
+  String get manga_reader_show_page_gaps => '페이지 간격 표시';
+  @override
+  String get manga_reader_auto_scroll => '자동 스크롤';
+  @override
+  String get manga_reader_auto_scroll_speed => '자동 스크롤 속도(px/초)';
+  @override
+  String get manga_reader_hide_threshold => '스크롤 시 도구 모음 숨김 임계값(px)';
+  @override
+  String get manga_reader_eink_mode => 'E-Ink 모드';
+  @override
+  String get manga_reader_invert_colors => '색상 반전';
+  @override
+  String get manga_reader_grayscale => '흑백';
+  @override
+  String get manga_reader_brightness => '밝기';
+  @override
+  String get manga_reader_contrast => '대비';
+  @override
+  String get manga_reader_saturation => '채도';
+  @override
+  String get manga_reader_custom_color_filter => '사용자 지정 색상 필터';
+  @override
+  String get manga_reader_color_filter_color => '필터 색상';
+  @override
+  String get manga_reader_color_filter_opacity => '필터 불투명도';
+  @override
+  String get manga_reader_flash_on_page_change => '페이지 넘김 시 깜박임';
+  @override
+  String get manga_reader_animate_transitions => '페이지 전환 애니메이션';
+  @override
+  String get manga_reader_lookup_on_hover => '마우스를 올려 OCR 텍스트 검색';
+  @override
+  String get manga_reader_ocr_trigger => 'OCR 실행 방식';
+  @override
+  String get manga_reader_ocr_automatic => '읽는 중 자동';
+  @override
+  String get manga_reader_ocr_manual => '수동';
+  @override
+  String get manga_reader_parallel_ocr_tasks => '병렬 OCR 작업 수';
+  @override
+  String get manga_reader_ocr_current => '보이는 페이지 인식';
+  @override
+  String get manga_reader_back_to_start => '처음으로 돌아가기';
+  @override
+  String get reader_settings_panel_move_left => '설정을 왼쪽으로 이동';
+  @override
+  String get reader_settings_panel_move_right => '설정을 오른쪽으로 이동';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '\'읽는 중 자동\'은 로컬 ONNX, Google Lens, 시스템 OCR을 지원합니다. 로컬 ONNX는 한 번에 하나씩 처리하며, 외부 Mokuro와 페어링된 호스트는 수동 일괄 OCR을 사용합니다.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      '사용 가능한 OCR 엔진이 없습니다. OCR 설정에서 로컬 모델을 다운로드하거나 다른 엔진을 선택하세요.';
 }
 
 // Path: <root>
@@ -121849,6 +122461,79 @@ class _StringsNl extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Algemeen';
+  @override
+  String get manga_reader_filters => 'Aangepast filter';
+  @override
+  String get manga_reader_crop_borders => 'Randen bijsnijden';
+  @override
+  String get manga_reader_split_wide_pages => 'Brede pagina\'s splitsen';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Draaien om passend te maken';
+  @override
+  String get manga_reader_automatic_background => 'Automatische achtergrond';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Dubbeltikken om te zoomen (Webtoon)';
+  @override
+  String get manga_reader_show_page_gaps => 'Paginatussenruimte tonen';
+  @override
+  String get manga_reader_auto_scroll => 'Automatisch scrollen';
+  @override
+  String get manga_reader_auto_scroll_speed =>
+      'Snelheid automatisch scrollen (px/s)';
+  @override
+  String get manga_reader_hide_threshold =>
+      'Drempel voor verbergen van balk (px)';
+  @override
+  String get manga_reader_eink_mode => 'E-Ink-modus';
+  @override
+  String get manga_reader_invert_colors => 'Kleuren omkeren';
+  @override
+  String get manga_reader_grayscale => 'Grijstinten';
+  @override
+  String get manga_reader_brightness => 'Helderheid';
+  @override
+  String get manga_reader_contrast => 'Contrast';
+  @override
+  String get manga_reader_saturation => 'Verzadiging';
+  @override
+  String get manga_reader_custom_color_filter => 'Aangepast kleurfilter';
+  @override
+  String get manga_reader_color_filter_color => 'Filterkleur';
+  @override
+  String get manga_reader_color_filter_opacity => 'Filterdekking';
+  @override
+  String get manga_reader_flash_on_page_change => 'Flitsen bij paginawissel';
+  @override
+  String get manga_reader_animate_transitions => 'Paginaovergangen animeren';
+  @override
+  String get manga_reader_lookup_on_hover => 'OCR-tekst opzoeken bij aanwijzen';
+  @override
+  String get manga_reader_ocr_trigger => 'OCR-activering';
+  @override
+  String get manga_reader_ocr_automatic => 'Tijdens het lezen';
+  @override
+  String get manga_reader_ocr_manual => 'Handmatig';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Parallelle OCR-taken';
+  @override
+  String get manga_reader_ocr_current => 'Zichtbare pagina\'s herkennen';
+  @override
+  String get manga_reader_back_to_start => 'Terug naar het begin';
+  @override
+  String get reader_settings_panel_move_left =>
+      'Instellingen naar links verplaatsen';
+  @override
+  String get reader_settings_panel_move_right =>
+      'Instellingen naar rechts verplaatsen';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '\'Tijdens het lezen\' ondersteunt lokale ONNX, Google Lens en systeem-OCR. Lokale ONNX voert één taak tegelijk uit; externe Mokuro en gekoppelde hosts gebruiken expliciete batch-OCR.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Er is geen OCR-engine gereed. Download het lokale model of kies een andere engine in de OCR-instellingen.';
 }
 
 // Path: <root>
@@ -134722,6 +135407,79 @@ class _StringsPtBr extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Geral';
+  @override
+  String get manga_reader_filters => 'Filtro personalizado';
+  @override
+  String get manga_reader_crop_borders => 'Cortar bordas';
+  @override
+  String get manga_reader_split_wide_pages => 'Dividir páginas largas';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Girar para ajustar';
+  @override
+  String get manga_reader_automatic_background => 'Fundo automático';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Zoom com toque duplo (Webtoon)';
+  @override
+  String get manga_reader_show_page_gaps => 'Mostrar espaço entre páginas';
+  @override
+  String get manga_reader_auto_scroll => 'Rolagem automática';
+  @override
+  String get manga_reader_auto_scroll_speed =>
+      'Velocidade da rolagem automática (px/s)';
+  @override
+  String get manga_reader_hide_threshold => 'Limite para ocultar a barra (px)';
+  @override
+  String get manga_reader_eink_mode => 'Modo E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'Inverter cores';
+  @override
+  String get manga_reader_grayscale => 'Escala de cinza';
+  @override
+  String get manga_reader_brightness => 'Brilho';
+  @override
+  String get manga_reader_contrast => 'Contraste';
+  @override
+  String get manga_reader_saturation => 'Saturação';
+  @override
+  String get manga_reader_custom_color_filter => 'Filtro de cor personalizado';
+  @override
+  String get manga_reader_color_filter_color => 'Cor do filtro';
+  @override
+  String get manga_reader_color_filter_opacity => 'Opacidade do filtro';
+  @override
+  String get manga_reader_flash_on_page_change => 'Piscar ao mudar de página';
+  @override
+  String get manga_reader_animate_transitions => 'Animar transições de página';
+  @override
+  String get manga_reader_lookup_on_hover =>
+      'Consultar texto OCR ao passar o mouse';
+  @override
+  String get manga_reader_ocr_trigger => 'Acionamento do OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'Durante a leitura';
+  @override
+  String get manga_reader_ocr_manual => 'Manual';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Tarefas de OCR em paralelo';
+  @override
+  String get manga_reader_ocr_current => 'Reconhecer páginas visíveis';
+  @override
+  String get manga_reader_back_to_start => 'Voltar ao início';
+  @override
+  String get reader_settings_panel_move_left =>
+      'Mover configurações para a esquerda';
+  @override
+  String get reader_settings_panel_move_right =>
+      'Mover configurações para a direita';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '“Durante a leitura” oferece suporte a ONNX local, Google Lens e OCR do sistema. O ONNX local executa uma tarefa por vez; o Mokuro externo e os hosts pareados usam OCR em lote explícito.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Nenhum mecanismo de OCR está pronto. Baixe o modelo local ou escolha outro mecanismo nas configurações de OCR.';
 }
 
 // Path: <root>
@@ -147570,6 +148328,78 @@ class _StringsRu extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Общие';
+  @override
+  String get manga_reader_filters => 'Пользовательский фильтр';
+  @override
+  String get manga_reader_crop_borders => 'Обрезать поля';
+  @override
+  String get manga_reader_split_wide_pages => 'Разделять широкие страницы';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Поворачивать по размеру экрана';
+  @override
+  String get manga_reader_automatic_background => 'Автоматический фон';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Масштаб двойным касанием (Webtoon)';
+  @override
+  String get manga_reader_show_page_gaps =>
+      'Показывать промежутки между страницами';
+  @override
+  String get manga_reader_auto_scroll => 'Автопрокрутка';
+  @override
+  String get manga_reader_auto_scroll_speed =>
+      'Скорость автопрокрутки (пикс./с)';
+  @override
+  String get manga_reader_hide_threshold => 'Порог скрытия панели (пикс.)';
+  @override
+  String get manga_reader_eink_mode => 'Режим E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'Инвертировать цвета';
+  @override
+  String get manga_reader_grayscale => 'Оттенки серого';
+  @override
+  String get manga_reader_brightness => 'Яркость';
+  @override
+  String get manga_reader_contrast => 'Контрастность';
+  @override
+  String get manga_reader_saturation => 'Насыщенность';
+  @override
+  String get manga_reader_custom_color_filter =>
+      'Пользовательский цветовой фильтр';
+  @override
+  String get manga_reader_color_filter_color => 'Цвет фильтра';
+  @override
+  String get manga_reader_color_filter_opacity => 'Непрозрачность фильтра';
+  @override
+  String get manga_reader_flash_on_page_change => 'Вспышка при смене страницы';
+  @override
+  String get manga_reader_animate_transitions => 'Анимация перелистывания';
+  @override
+  String get manga_reader_lookup_on_hover => 'Поиск текста OCR при наведении';
+  @override
+  String get manga_reader_ocr_trigger => 'Запуск OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'Во время чтения';
+  @override
+  String get manga_reader_ocr_manual => 'Вручную';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Параллельных задач OCR';
+  @override
+  String get manga_reader_ocr_current => 'Распознать видимые страницы';
+  @override
+  String get manga_reader_back_to_start => 'Вернуться в начало';
+  @override
+  String get reader_settings_panel_move_left => 'Переместить настройки влево';
+  @override
+  String get reader_settings_panel_move_right => 'Переместить настройки вправо';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      'Режим «Во время чтения» поддерживает локальный ONNX, Google Lens и системный OCR. Локальный ONNX выполняет задачи по одной; внешний Mokuro и сопряжённые хосты используют явное пакетное распознавание.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Нет готового движка OCR. Скачайте локальную модель или выберите другой движок в настройках OCR.';
 }
 
 // Path: <root>
@@ -160219,6 +161049,76 @@ class _StringsTh extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'ทั่วไป';
+  @override
+  String get manga_reader_filters => 'ฟิลเตอร์กำหนดเอง';
+  @override
+  String get manga_reader_crop_borders => 'ครอปขอบ';
+  @override
+  String get manga_reader_split_wide_pages => 'แยกหน้ากว้าง';
+  @override
+  String get manga_reader_rotate_wide_pages => 'หมุนให้พอดีหน้าจอ';
+  @override
+  String get manga_reader_automatic_background => 'พื้นหลังอัตโนมัติ';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'แตะสองครั้งเพื่อซูมในโหมด Webtoon';
+  @override
+  String get manga_reader_show_page_gaps => 'แสดงช่องว่างระหว่างหน้า';
+  @override
+  String get manga_reader_auto_scroll => 'เลื่อนอัตโนมัติ';
+  @override
+  String get manga_reader_auto_scroll_speed =>
+      'ความเร็วเลื่อนอัตโนมัติ (px/วินาที)';
+  @override
+  String get manga_reader_hide_threshold => 'เกณฑ์การซ่อนแถบเครื่องมือ (px)';
+  @override
+  String get manga_reader_eink_mode => 'โหมด E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'กลับสี';
+  @override
+  String get manga_reader_grayscale => 'ขาวดำ';
+  @override
+  String get manga_reader_brightness => 'ความสว่าง';
+  @override
+  String get manga_reader_contrast => 'คอนทราสต์';
+  @override
+  String get manga_reader_saturation => 'ความอิ่มตัวของสี';
+  @override
+  String get manga_reader_custom_color_filter => 'ฟิลเตอร์สีกำหนดเอง';
+  @override
+  String get manga_reader_color_filter_color => 'สีฟิลเตอร์';
+  @override
+  String get manga_reader_color_filter_opacity => 'ความทึบของฟิลเตอร์';
+  @override
+  String get manga_reader_flash_on_page_change => 'กะพริบเมื่อเปลี่ยนหน้า';
+  @override
+  String get manga_reader_animate_transitions => 'แอนิเมชันเปลี่ยนหน้า';
+  @override
+  String get manga_reader_lookup_on_hover => 'ค้นหาข้อความ OCR เมื่อวางเมาส์';
+  @override
+  String get manga_reader_ocr_trigger => 'การเรียกใช้ OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'ระหว่างอ่าน';
+  @override
+  String get manga_reader_ocr_manual => 'ด้วยตนเอง';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'จำนวนงาน OCR พร้อมกัน';
+  @override
+  String get manga_reader_ocr_current => 'รู้จำหน้าที่มองเห็น';
+  @override
+  String get manga_reader_back_to_start => 'กลับไปที่จุดเริ่มต้น';
+  @override
+  String get reader_settings_panel_move_left => 'ย้ายการตั้งค่าไปทางซ้าย';
+  @override
+  String get reader_settings_panel_move_right => 'ย้ายการตั้งค่าไปทางขวา';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      'โหมด “ระหว่างอ่าน” รองรับ ONNX ในเครื่อง, Google Lens และ OCR ของระบบ ONNX ในเครื่องทำงานทีละงาน ส่วน Mokuro ภายนอกและโฮสต์ที่จับคู่ไว้ใช้ OCR แบบกลุ่มที่สั่งเอง';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'ไม่มีเอนจิน OCR ที่พร้อมใช้งาน ดาวน์โหลดโมเดลในเครื่องหรือเลือกเอนจินอื่นในการตั้งค่า OCR';
 }
 
 // Path: <root>
@@ -172982,6 +173882,75 @@ class _StringsTr extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Genel';
+  @override
+  String get manga_reader_filters => 'Özel filtre';
+  @override
+  String get manga_reader_crop_borders => 'Kenarları kırp';
+  @override
+  String get manga_reader_split_wide_pages => 'Geniş sayfaları böl';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Sığdırmak için döndür';
+  @override
+  String get manga_reader_automatic_background => 'Otomatik arka plan';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Webtoon\'da çift dokunarak yakınlaştır';
+  @override
+  String get manga_reader_show_page_gaps => 'Sayfa aralıklarını göster';
+  @override
+  String get manga_reader_auto_scroll => 'Otomatik kaydırma';
+  @override
+  String get manga_reader_auto_scroll_speed => 'Otomatik kaydırma hızı (px/sn)';
+  @override
+  String get manga_reader_hide_threshold => 'Çubuğu gizleme eşiği (px)';
+  @override
+  String get manga_reader_eink_mode => 'E-Ink modu';
+  @override
+  String get manga_reader_invert_colors => 'Renkleri ters çevir';
+  @override
+  String get manga_reader_grayscale => 'Gri tonlama';
+  @override
+  String get manga_reader_brightness => 'Parlaklık';
+  @override
+  String get manga_reader_contrast => 'Kontrast';
+  @override
+  String get manga_reader_saturation => 'Doygunluk';
+  @override
+  String get manga_reader_custom_color_filter => 'Özel renk filtresi';
+  @override
+  String get manga_reader_color_filter_color => 'Filtre rengi';
+  @override
+  String get manga_reader_color_filter_opacity => 'Filtre opaklığı';
+  @override
+  String get manga_reader_flash_on_page_change => 'Sayfa değişiminde yanıp sön';
+  @override
+  String get manga_reader_animate_transitions => 'Sayfa geçişlerini canlandır';
+  @override
+  String get manga_reader_lookup_on_hover => 'Üzerine gelince OCR metnini ara';
+  @override
+  String get manga_reader_ocr_trigger => 'OCR tetikleyicisi';
+  @override
+  String get manga_reader_ocr_automatic => 'Okurken';
+  @override
+  String get manga_reader_ocr_manual => 'Manuel';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Paralel OCR görevleri';
+  @override
+  String get manga_reader_ocr_current => 'Görünen sayfaları tanı';
+  @override
+  String get manga_reader_back_to_start => 'Başa dön';
+  @override
+  String get reader_settings_panel_move_left => 'Ayarları sola taşı';
+  @override
+  String get reader_settings_panel_move_right => 'Ayarları sağa taşı';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '“Okurken” modu yerel ONNX, Google Lens ve sistem OCR\'ını destekler. Yerel ONNX görevleri tek tek çalıştırır; harici Mokuro ve eşlenmiş ana makineler açık toplu OCR kullanır.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Hazır OCR motoru yok. Yerel modeli indirin veya OCR ayarlarından başka bir motor seçin.';
 }
 
 // Path: <root>
@@ -185718,6 +186687,75 @@ class _StringsVi extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => 'Chung';
+  @override
+  String get manga_reader_filters => 'Bộ lọc tùy chỉnh';
+  @override
+  String get manga_reader_crop_borders => 'Cắt viền';
+  @override
+  String get manga_reader_split_wide_pages => 'Tách trang rộng';
+  @override
+  String get manga_reader_rotate_wide_pages => 'Xoay cho vừa màn hình';
+  @override
+  String get manga_reader_automatic_background => 'Nền tự động';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom =>
+      'Nhấn đúp để thu phóng (Webtoon)';
+  @override
+  String get manga_reader_show_page_gaps => 'Hiện khoảng cách giữa các trang';
+  @override
+  String get manga_reader_auto_scroll => 'Tự động cuộn';
+  @override
+  String get manga_reader_auto_scroll_speed => 'Tốc độ tự động cuộn (px/giây)';
+  @override
+  String get manga_reader_hide_threshold => 'Ngưỡng ẩn thanh công cụ (px)';
+  @override
+  String get manga_reader_eink_mode => 'Chế độ E-Ink';
+  @override
+  String get manga_reader_invert_colors => 'Đảo màu';
+  @override
+  String get manga_reader_grayscale => 'Thang độ xám';
+  @override
+  String get manga_reader_brightness => 'Độ sáng';
+  @override
+  String get manga_reader_contrast => 'Độ tương phản';
+  @override
+  String get manga_reader_saturation => 'Độ bão hòa';
+  @override
+  String get manga_reader_custom_color_filter => 'Bộ lọc màu tùy chỉnh';
+  @override
+  String get manga_reader_color_filter_color => 'Màu bộ lọc';
+  @override
+  String get manga_reader_color_filter_opacity => 'Độ mờ đục của bộ lọc';
+  @override
+  String get manga_reader_flash_on_page_change => 'Nháy khi chuyển trang';
+  @override
+  String get manga_reader_animate_transitions => 'Hiệu ứng chuyển trang';
+  @override
+  String get manga_reader_lookup_on_hover => 'Tra văn bản OCR khi di chuột';
+  @override
+  String get manga_reader_ocr_trigger => 'Cách kích hoạt OCR';
+  @override
+  String get manga_reader_ocr_automatic => 'Trong khi đọc';
+  @override
+  String get manga_reader_ocr_manual => 'Thủ công';
+  @override
+  String get manga_reader_parallel_ocr_tasks => 'Số tác vụ OCR song song';
+  @override
+  String get manga_reader_ocr_current => 'Nhận dạng các trang đang hiển thị';
+  @override
+  String get manga_reader_back_to_start => 'Quay lại đầu';
+  @override
+  String get reader_settings_panel_move_left => 'Chuyển cài đặt sang trái';
+  @override
+  String get reader_settings_panel_move_right => 'Chuyển cài đặt sang phải';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      'Chế độ “Trong khi đọc” hỗ trợ ONNX cục bộ, Google Lens và OCR hệ thống. ONNX cục bộ chạy từng tác vụ một; Mokuro bên ngoài và máy chủ đã ghép nối dùng OCR hàng loạt thủ công.';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      'Không có công cụ OCR nào sẵn sàng. Hãy tải mô hình cục bộ hoặc chọn công cụ khác trong cài đặt OCR.';
 }
 
 // Path: <root>
@@ -197385,6 +198423,74 @@ class _StringsZhCn extends _StringsEn {
   String get game_stream_keys_hint => '按键映射仅用于本次串流会话。';
   @override
   String get game_stream_key_default => '默认';
+  @override
+  String get manga_reader_general => '常规';
+  @override
+  String get manga_reader_filters => '自定义滤镜';
+  @override
+  String get manga_reader_crop_borders => '裁剪白边';
+  @override
+  String get manga_reader_split_wide_pages => '拆分宽页';
+  @override
+  String get manga_reader_rotate_wide_pages => '旋转以适应屏幕';
+  @override
+  String get manga_reader_automatic_background => '自动背景';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom => '长条模式双击缩放';
+  @override
+  String get manga_reader_show_page_gaps => '显示页间距';
+  @override
+  String get manga_reader_auto_scroll => '自动滚动';
+  @override
+  String get manga_reader_auto_scroll_speed => '自动滚动速度（像素/秒）';
+  @override
+  String get manga_reader_hide_threshold => '滚动隐藏工具栏阈值（像素）';
+  @override
+  String get manga_reader_eink_mode => '墨水屏模式';
+  @override
+  String get manga_reader_invert_colors => '反色';
+  @override
+  String get manga_reader_grayscale => '灰度';
+  @override
+  String get manga_reader_brightness => '亮度';
+  @override
+  String get manga_reader_contrast => '对比度';
+  @override
+  String get manga_reader_saturation => '饱和度';
+  @override
+  String get manga_reader_custom_color_filter => '自定义颜色滤镜';
+  @override
+  String get manga_reader_color_filter_color => '滤镜颜色';
+  @override
+  String get manga_reader_color_filter_opacity => '滤镜不透明度';
+  @override
+  String get manga_reader_flash_on_page_change => '翻页闪屏';
+  @override
+  String get manga_reader_animate_transitions => '翻页动画';
+  @override
+  String get manga_reader_lookup_on_hover => '悬停查词';
+  @override
+  String get manga_reader_ocr_trigger => 'OCR 触发方式';
+  @override
+  String get manga_reader_ocr_automatic => '边看边识别';
+  @override
+  String get manga_reader_ocr_manual => '手动';
+  @override
+  String get manga_reader_parallel_ocr_tasks => '并行 OCR 任务数';
+  @override
+  String get manga_reader_ocr_current => '识别当前可见页';
+  @override
+  String get manga_reader_back_to_start => '回到开头';
+  @override
+  String get reader_settings_panel_move_left => '将设置移到左侧';
+  @override
+  String get reader_settings_panel_move_right => '将设置移到右侧';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '边看边识别支持本地 ONNX、Google Lens 和系统 OCR。本地 ONNX 串行执行；外部 Mokuro 和配对主机使用手动批量识别。';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      '没有可用的 OCR 引擎：请在 OCR 设置中下载本地模型或换用其他引擎。';
 }
 
 // Path: <root>
@@ -209310,6 +210416,74 @@ class _StringsZhHk extends _StringsEn {
       'These key mappings apply only to this streaming session.';
   @override
   String get game_stream_key_default => 'Default';
+  @override
+  String get manga_reader_general => '一般';
+  @override
+  String get manga_reader_filters => '自訂濾鏡';
+  @override
+  String get manga_reader_crop_borders => '裁剪白邊';
+  @override
+  String get manga_reader_split_wide_pages => '拆分闊頁';
+  @override
+  String get manga_reader_rotate_wide_pages => '旋轉以配合螢幕';
+  @override
+  String get manga_reader_automatic_background => '自動背景';
+  @override
+  String get manga_reader_webtoon_double_tap_zoom => '長條模式雙擊縮放';
+  @override
+  String get manga_reader_show_page_gaps => '顯示頁間距';
+  @override
+  String get manga_reader_auto_scroll => '自動捲動';
+  @override
+  String get manga_reader_auto_scroll_speed => '自動捲動速度（像素/秒）';
+  @override
+  String get manga_reader_hide_threshold => '捲動隱藏工具列閾值（像素）';
+  @override
+  String get manga_reader_eink_mode => '電子墨水屏模式';
+  @override
+  String get manga_reader_invert_colors => '反色';
+  @override
+  String get manga_reader_grayscale => '灰階';
+  @override
+  String get manga_reader_brightness => '亮度';
+  @override
+  String get manga_reader_contrast => '對比度';
+  @override
+  String get manga_reader_saturation => '飽和度';
+  @override
+  String get manga_reader_custom_color_filter => '自訂顏色濾鏡';
+  @override
+  String get manga_reader_color_filter_color => '濾鏡顏色';
+  @override
+  String get manga_reader_color_filter_opacity => '濾鏡不透明度';
+  @override
+  String get manga_reader_flash_on_page_change => '翻頁閃屏';
+  @override
+  String get manga_reader_animate_transitions => '翻頁動畫';
+  @override
+  String get manga_reader_lookup_on_hover => '懸停查詞';
+  @override
+  String get manga_reader_ocr_trigger => 'OCR 觸發方式';
+  @override
+  String get manga_reader_ocr_automatic => '邊看邊識別';
+  @override
+  String get manga_reader_ocr_manual => '手動';
+  @override
+  String get manga_reader_parallel_ocr_tasks => '並行 OCR 任務數';
+  @override
+  String get manga_reader_ocr_current => '識別目前可見頁面';
+  @override
+  String get manga_reader_back_to_start => '返回開頭';
+  @override
+  String get reader_settings_panel_move_left => '將設定移到左側';
+  @override
+  String get reader_settings_panel_move_right => '將設定移到右側';
+  @override
+  String get manga_reader_ocr_engine_note =>
+      '邊看邊識別支援本機 ONNX、Google Lens 和系統 OCR。本機 ONNX 逐一執行；外部 Mokuro 和已配對主機使用手動批次識別。';
+  @override
+  String get manga_reader_ocr_unavailable =>
+      '沒有可用的 OCR 引擎：請在 OCR 設定中下載本機模型或改用其他引擎。';
 }
 
 /// Flat map(s) containing all translations.
@@ -220336,6 +221510,72 @@ extension on _StringsEn {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'General';
+      case 'manga_reader_filters':
+        return 'Custom filter';
+      case 'manga_reader_crop_borders':
+        return 'Crop borders';
+      case 'manga_reader_split_wide_pages':
+        return 'Split wide pages';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Rotate to fit';
+      case 'manga_reader_automatic_background':
+        return 'Automatic background';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Webtoon double-tap zoom';
+      case 'manga_reader_show_page_gaps':
+        return 'Show page gaps';
+      case 'manga_reader_auto_scroll':
+        return 'Auto scroll';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Auto scroll speed (px/s)';
+      case 'manga_reader_hide_threshold':
+        return 'Reader hide threshold (px)';
+      case 'manga_reader_eink_mode':
+        return 'E-Ink mode';
+      case 'manga_reader_invert_colors':
+        return 'Invert colors';
+      case 'manga_reader_grayscale':
+        return 'Grayscale';
+      case 'manga_reader_brightness':
+        return 'Brightness';
+      case 'manga_reader_contrast':
+        return 'Contrast';
+      case 'manga_reader_saturation':
+        return 'Saturation';
+      case 'manga_reader_custom_color_filter':
+        return 'Custom color filter';
+      case 'manga_reader_color_filter_color':
+        return 'Filter color';
+      case 'manga_reader_color_filter_opacity':
+        return 'Filter opacity';
+      case 'manga_reader_flash_on_page_change':
+        return 'Flash on page change';
+      case 'manga_reader_animate_transitions':
+        return 'Animate page transitions';
+      case 'manga_reader_lookup_on_hover':
+        return 'Lookup OCR text on hover';
+      case 'manga_reader_ocr_trigger':
+        return 'OCR trigger';
+      case 'manga_reader_ocr_automatic':
+        return 'While reading';
+      case 'manga_reader_ocr_manual':
+        return 'Manual';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_reader_ocr_current':
+        return 'Recognize visible pages';
+      case 'manga_reader_back_to_start':
+        return 'Back to the beginning';
+      case 'reader_settings_panel_move_left':
+        return 'Move settings to the left';
+      case 'reader_settings_panel_move_right':
+        return 'Move settings to the right';
+      case 'manga_reader_ocr_engine_note':
+        return 'While reading supports local ONNX, Google Lens and system OCR. Local ONNX runs one task at a time; external Mokuro and paired hosts use explicit batch OCR.';
+      case 'manga_reader_ocr_unavailable':
+        return 'No OCR engine is ready. Download the local model or pick another engine in OCR settings.';
       default:
         return null;
     }
@@ -231357,6 +232597,72 @@ extension on _StringsAr {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'عام';
+      case 'manga_reader_filters':
+        return 'مرشح مخصص';
+      case 'manga_reader_crop_borders':
+        return 'قص الحواف';
+      case 'manga_reader_split_wide_pages':
+        return 'تقسيم الصفحات العريضة';
+      case 'manga_reader_rotate_wide_pages':
+        return 'التدوير للملاءمة';
+      case 'manga_reader_automatic_background':
+        return 'خلفية تلقائية';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'التكبير بالنقر المزدوج في وضع Webtoon';
+      case 'manga_reader_show_page_gaps':
+        return 'إظهار الفواصل بين الصفحات';
+      case 'manga_reader_auto_scroll':
+        return 'التمرير التلقائي';
+      case 'manga_reader_auto_scroll_speed':
+        return 'سرعة التمرير التلقائي (بكسل/ث)';
+      case 'manga_reader_hide_threshold':
+        return 'حد إخفاء الشريط عند التمرير (بكسل)';
+      case 'manga_reader_eink_mode':
+        return 'وضع E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'عكس الألوان';
+      case 'manga_reader_grayscale':
+        return 'تدرج الرمادي';
+      case 'manga_reader_brightness':
+        return 'السطوع';
+      case 'manga_reader_contrast':
+        return 'التباين';
+      case 'manga_reader_saturation':
+        return 'التشبع';
+      case 'manga_reader_custom_color_filter':
+        return 'مرشح لون مخصص';
+      case 'manga_reader_color_filter_color':
+        return 'لون المرشح';
+      case 'manga_reader_color_filter_opacity':
+        return 'عتامة المرشح';
+      case 'manga_reader_flash_on_page_change':
+        return 'وميض عند تغيير الصفحة';
+      case 'manga_reader_animate_transitions':
+        return 'تحريك انتقالات الصفحات';
+      case 'manga_reader_lookup_on_hover':
+        return 'البحث عن نص OCR عند التمرير فوقه';
+      case 'manga_reader_ocr_trigger':
+        return 'تشغيل OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'أثناء القراءة';
+      case 'manga_reader_ocr_manual':
+        return 'يدوي';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'مهام OCR المتوازية';
+      case 'manga_reader_ocr_current':
+        return 'التعرف على الصفحات المرئية';
+      case 'manga_reader_back_to_start':
+        return 'العودة إلى البداية';
+      case 'reader_settings_panel_move_left':
+        return 'نقل الإعدادات إلى اليسار';
+      case 'reader_settings_panel_move_right':
+        return 'نقل الإعدادات إلى اليمين';
+      case 'manga_reader_ocr_engine_note':
+        return 'يدعم وضع «أثناء القراءة» نموذج ONNX المحلي وGoogle Lens وOCR النظام. ينفّذ ONNX المحلي مهمة واحدة في كل مرة؛ ويستخدم Mokuro الخارجي والمضيفون المقترنون OCR على دفعات يدويًا.';
+      case 'manga_reader_ocr_unavailable':
+        return 'لا يوجد محرك OCR جاهز. نزّل النموذج المحلي أو اختر محركًا آخر في إعدادات OCR.';
       default:
         return null;
     }
@@ -242423,6 +243729,72 @@ extension on _StringsDe {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Allgemein';
+      case 'manga_reader_filters':
+        return 'Benutzerdefinierter Filter';
+      case 'manga_reader_crop_borders':
+        return 'Ränder zuschneiden';
+      case 'manga_reader_split_wide_pages':
+        return 'Breite Seiten teilen';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Zum Anpassen drehen';
+      case 'manga_reader_automatic_background':
+        return 'Automatischer Hintergrund';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Doppeltippen zum Zoomen (Webtoon)';
+      case 'manga_reader_show_page_gaps':
+        return 'Seitenabstände anzeigen';
+      case 'manga_reader_auto_scroll':
+        return 'Automatisch scrollen';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Scrollgeschwindigkeit (px/s)';
+      case 'manga_reader_hide_threshold':
+        return 'Schwelle zum Ausblenden der Leiste (px)';
+      case 'manga_reader_eink_mode':
+        return 'E-Ink-Modus';
+      case 'manga_reader_invert_colors':
+        return 'Farben invertieren';
+      case 'manga_reader_grayscale':
+        return 'Graustufen';
+      case 'manga_reader_brightness':
+        return 'Helligkeit';
+      case 'manga_reader_contrast':
+        return 'Kontrast';
+      case 'manga_reader_saturation':
+        return 'Sättigung';
+      case 'manga_reader_custom_color_filter':
+        return 'Benutzerdefinierter Farbfilter';
+      case 'manga_reader_color_filter_color':
+        return 'Filterfarbe';
+      case 'manga_reader_color_filter_opacity':
+        return 'Filterdeckkraft';
+      case 'manga_reader_flash_on_page_change':
+        return 'Beim Umblättern aufblitzen';
+      case 'manga_reader_animate_transitions':
+        return 'Seitenübergänge animieren';
+      case 'manga_reader_lookup_on_hover':
+        return 'OCR-Text beim Überfahren nachschlagen';
+      case 'manga_reader_ocr_trigger':
+        return 'OCR-Auslöser';
+      case 'manga_reader_ocr_automatic':
+        return 'Beim Lesen';
+      case 'manga_reader_ocr_manual':
+        return 'Manuell';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Parallele OCR-Aufgaben';
+      case 'manga_reader_ocr_current':
+        return 'Sichtbare Seiten erkennen';
+      case 'manga_reader_back_to_start':
+        return 'Zurück zum Anfang';
+      case 'reader_settings_panel_move_left':
+        return 'Einstellungen nach links verschieben';
+      case 'reader_settings_panel_move_right':
+        return 'Einstellungen nach rechts verschieben';
+      case 'manga_reader_ocr_engine_note':
+        return '„Beim Lesen“ unterstützt lokales ONNX, Google Lens und System-OCR. Lokales ONNX verarbeitet jeweils eine Aufgabe; externes Mokuro und gekoppelte Hosts verwenden explizite Stapel-OCR.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Keine OCR-Engine bereit. Laden Sie das lokale Modell herunter oder wählen Sie in den OCR-Einstellungen eine andere Engine.';
       default:
         return null;
     }
@@ -253480,6 +254852,72 @@ extension on _StringsEs {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'General';
+      case 'manga_reader_filters':
+        return 'Filtro personalizado';
+      case 'manga_reader_crop_borders':
+        return 'Recortar bordes';
+      case 'manga_reader_split_wide_pages':
+        return 'Dividir páginas anchas';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Girar para ajustar';
+      case 'manga_reader_automatic_background':
+        return 'Fondo automático';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Zoom con doble toque en Webtoon';
+      case 'manga_reader_show_page_gaps':
+        return 'Mostrar separación entre páginas';
+      case 'manga_reader_auto_scroll':
+        return 'Desplazamiento automático';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Velocidad de desplazamiento automático (px/s)';
+      case 'manga_reader_hide_threshold':
+        return 'Umbral para ocultar la barra (px)';
+      case 'manga_reader_eink_mode':
+        return 'Modo E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'Invertir colores';
+      case 'manga_reader_grayscale':
+        return 'Escala de grises';
+      case 'manga_reader_brightness':
+        return 'Brillo';
+      case 'manga_reader_contrast':
+        return 'Contraste';
+      case 'manga_reader_saturation':
+        return 'Saturación';
+      case 'manga_reader_custom_color_filter':
+        return 'Filtro de color personalizado';
+      case 'manga_reader_color_filter_color':
+        return 'Color del filtro';
+      case 'manga_reader_color_filter_opacity':
+        return 'Opacidad del filtro';
+      case 'manga_reader_flash_on_page_change':
+        return 'Destello al cambiar de página';
+      case 'manga_reader_animate_transitions':
+        return 'Animar transiciones de página';
+      case 'manga_reader_lookup_on_hover':
+        return 'Buscar texto OCR al pasar el cursor';
+      case 'manga_reader_ocr_trigger':
+        return 'Activación de OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'Durante la lectura';
+      case 'manga_reader_ocr_manual':
+        return 'Manual';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Tareas de OCR en paralelo';
+      case 'manga_reader_ocr_current':
+        return 'Reconocer páginas visibles';
+      case 'manga_reader_back_to_start':
+        return 'Volver al principio';
+      case 'reader_settings_panel_move_left':
+        return 'Mover ajustes a la izquierda';
+      case 'reader_settings_panel_move_right':
+        return 'Mover ajustes a la derecha';
+      case 'manga_reader_ocr_engine_note':
+        return '«Durante la lectura» admite ONNX local, Google Lens y el OCR del sistema. ONNX local ejecuta una tarea a la vez; Mokuro externo y los hosts vinculados usan OCR por lotes explícito.';
+      case 'manga_reader_ocr_unavailable':
+        return 'No hay ningún motor de OCR disponible. Descarga el modelo local o elige otro motor en los ajustes de OCR.';
       default:
         return null;
     }
@@ -264546,6 +265984,72 @@ extension on _StringsFr {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Général';
+      case 'manga_reader_filters':
+        return 'Filtre personnalisé';
+      case 'manga_reader_crop_borders':
+        return 'Rogner les marges';
+      case 'manga_reader_split_wide_pages':
+        return 'Diviser les pages larges';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Pivoter pour ajuster';
+      case 'manga_reader_automatic_background':
+        return 'Arrière-plan automatique';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Zoom par double appui (Webtoon)';
+      case 'manga_reader_show_page_gaps':
+        return 'Afficher l\'espace entre les pages';
+      case 'manga_reader_auto_scroll':
+        return 'Défilement automatique';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Vitesse de défilement automatique (px/s)';
+      case 'manga_reader_hide_threshold':
+        return 'Seuil de masquage de la barre (px)';
+      case 'manga_reader_eink_mode':
+        return 'Mode E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'Inverser les couleurs';
+      case 'manga_reader_grayscale':
+        return 'Niveaux de gris';
+      case 'manga_reader_brightness':
+        return 'Luminosité';
+      case 'manga_reader_contrast':
+        return 'Contraste';
+      case 'manga_reader_saturation':
+        return 'Saturation';
+      case 'manga_reader_custom_color_filter':
+        return 'Filtre de couleur personnalisé';
+      case 'manga_reader_color_filter_color':
+        return 'Couleur du filtre';
+      case 'manga_reader_color_filter_opacity':
+        return 'Opacité du filtre';
+      case 'manga_reader_flash_on_page_change':
+        return 'Flash au changement de page';
+      case 'manga_reader_animate_transitions':
+        return 'Animer les transitions de page';
+      case 'manga_reader_lookup_on_hover':
+        return 'Rechercher le texte OCR au survol';
+      case 'manga_reader_ocr_trigger':
+        return 'Déclenchement de l\'OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'Pendant la lecture';
+      case 'manga_reader_ocr_manual':
+        return 'Manuel';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Tâches OCR parallèles';
+      case 'manga_reader_ocr_current':
+        return 'Reconnaître les pages visibles';
+      case 'manga_reader_back_to_start':
+        return 'Revenir au début';
+      case 'reader_settings_panel_move_left':
+        return 'Déplacer les paramètres à gauche';
+      case 'reader_settings_panel_move_right':
+        return 'Déplacer les paramètres à droite';
+      case 'manga_reader_ocr_engine_note':
+        return 'Le mode « Pendant la lecture » prend en charge ONNX local, Google Lens et l\'OCR système. ONNX local traite une tâche à la fois ; Mokuro externe et les hôtes appairés utilisent l\'OCR par lots explicite.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Aucun moteur OCR n\'est prêt. Téléchargez le modèle local ou choisissez un autre moteur dans les paramètres OCR.';
       default:
         return null;
     }
@@ -275583,6 +277087,72 @@ extension on _StringsId {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Umum';
+      case 'manga_reader_filters':
+        return 'Filter khusus';
+      case 'manga_reader_crop_borders':
+        return 'Pangkas tepi';
+      case 'manga_reader_split_wide_pages':
+        return 'Pisahkan halaman lebar';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Putar agar pas';
+      case 'manga_reader_automatic_background':
+        return 'Latar belakang otomatis';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Ketuk dua kali untuk zoom (Webtoon)';
+      case 'manga_reader_show_page_gaps':
+        return 'Tampilkan jarak antarhalaman';
+      case 'manga_reader_auto_scroll':
+        return 'Gulir otomatis';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Kecepatan gulir otomatis (px/dtk)';
+      case 'manga_reader_hide_threshold':
+        return 'Ambang sembunyikan bilah (px)';
+      case 'manga_reader_eink_mode':
+        return 'Mode E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'Balik warna';
+      case 'manga_reader_grayscale':
+        return 'Skala abu-abu';
+      case 'manga_reader_brightness':
+        return 'Kecerahan';
+      case 'manga_reader_contrast':
+        return 'Kontras';
+      case 'manga_reader_saturation':
+        return 'Saturasi';
+      case 'manga_reader_custom_color_filter':
+        return 'Filter warna khusus';
+      case 'manga_reader_color_filter_color':
+        return 'Warna filter';
+      case 'manga_reader_color_filter_opacity':
+        return 'Opasitas filter';
+      case 'manga_reader_flash_on_page_change':
+        return 'Kilatan saat ganti halaman';
+      case 'manga_reader_animate_transitions':
+        return 'Animasikan transisi halaman';
+      case 'manga_reader_lookup_on_hover':
+        return 'Cari teks OCR saat diarahkan';
+      case 'manga_reader_ocr_trigger':
+        return 'Pemicu OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'Saat membaca';
+      case 'manga_reader_ocr_manual':
+        return 'Manual';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Tugas OCR paralel';
+      case 'manga_reader_ocr_current':
+        return 'Kenali halaman yang terlihat';
+      case 'manga_reader_back_to_start':
+        return 'Kembali ke awal';
+      case 'reader_settings_panel_move_left':
+        return 'Pindahkan pengaturan ke kiri';
+      case 'reader_settings_panel_move_right':
+        return 'Pindahkan pengaturan ke kanan';
+      case 'manga_reader_ocr_engine_note':
+        return 'Mode “Saat membaca” mendukung ONNX lokal, Google Lens, dan OCR sistem. ONNX lokal menjalankan satu tugas dalam satu waktu; Mokuro eksternal dan host yang dipasangkan menggunakan OCR batch eksplisit.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Tidak ada mesin OCR yang siap. Unduh model lokal atau pilih mesin lain di pengaturan OCR.';
       default:
         return null;
     }
@@ -286642,6 +288212,72 @@ extension on _StringsIt {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Generale';
+      case 'manga_reader_filters':
+        return 'Filtro personalizzato';
+      case 'manga_reader_crop_borders':
+        return 'Ritaglia i bordi';
+      case 'manga_reader_split_wide_pages':
+        return 'Dividi le pagine larghe';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Ruota per adattare';
+      case 'manga_reader_automatic_background':
+        return 'Sfondo automatico';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Zoom con doppio tocco (Webtoon)';
+      case 'manga_reader_show_page_gaps':
+        return 'Mostra spazi tra le pagine';
+      case 'manga_reader_auto_scroll':
+        return 'Scorrimento automatico';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Velocità di scorrimento automatico (px/s)';
+      case 'manga_reader_hide_threshold':
+        return 'Soglia per nascondere la barra (px)';
+      case 'manga_reader_eink_mode':
+        return 'Modalità E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'Inverti i colori';
+      case 'manga_reader_grayscale':
+        return 'Scala di grigi';
+      case 'manga_reader_brightness':
+        return 'Luminosità';
+      case 'manga_reader_contrast':
+        return 'Contrasto';
+      case 'manga_reader_saturation':
+        return 'Saturazione';
+      case 'manga_reader_custom_color_filter':
+        return 'Filtro colore personalizzato';
+      case 'manga_reader_color_filter_color':
+        return 'Colore del filtro';
+      case 'manga_reader_color_filter_opacity':
+        return 'Opacità del filtro';
+      case 'manga_reader_flash_on_page_change':
+        return 'Lampeggia al cambio pagina';
+      case 'manga_reader_animate_transitions':
+        return 'Anima le transizioni di pagina';
+      case 'manga_reader_lookup_on_hover':
+        return 'Cerca il testo OCR al passaggio del mouse';
+      case 'manga_reader_ocr_trigger':
+        return 'Attivazione OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'Durante la lettura';
+      case 'manga_reader_ocr_manual':
+        return 'Manuale';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Attività OCR parallele';
+      case 'manga_reader_ocr_current':
+        return 'Riconosci le pagine visibili';
+      case 'manga_reader_back_to_start':
+        return 'Torna all\'inizio';
+      case 'reader_settings_panel_move_left':
+        return 'Sposta le impostazioni a sinistra';
+      case 'reader_settings_panel_move_right':
+        return 'Sposta le impostazioni a destra';
+      case 'manga_reader_ocr_engine_note':
+        return '«Durante la lettura» supporta ONNX locale, Google Lens e l\'OCR di sistema. ONNX locale esegue un\'attività alla volta; Mokuro esterno e gli host associati usano l\'OCR in batch esplicito.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Nessun motore OCR disponibile. Scarica il modello locale o scegli un altro motore nelle impostazioni OCR.';
       default:
         return null;
     }
@@ -297628,6 +299264,72 @@ extension on _StringsJa {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return '一般';
+      case 'manga_reader_filters':
+        return 'カスタムフィルター';
+      case 'manga_reader_crop_borders':
+        return '余白をトリミング';
+      case 'manga_reader_split_wide_pages':
+        return '横長ページを分割';
+      case 'manga_reader_rotate_wide_pages':
+        return '回転して画面に合わせる';
+      case 'manga_reader_automatic_background':
+        return '背景を自動設定';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Webtoon モードでダブルタップズーム';
+      case 'manga_reader_show_page_gaps':
+        return 'ページ間の余白を表示';
+      case 'manga_reader_auto_scroll':
+        return '自動スクロール';
+      case 'manga_reader_auto_scroll_speed':
+        return '自動スクロール速度（px/秒）';
+      case 'manga_reader_hide_threshold':
+        return 'スクロールでツールバーを隠すしきい値（px）';
+      case 'manga_reader_eink_mode':
+        return 'E-Ink モード';
+      case 'manga_reader_invert_colors':
+        return '色を反転';
+      case 'manga_reader_grayscale':
+        return 'グレースケール';
+      case 'manga_reader_brightness':
+        return '明るさ';
+      case 'manga_reader_contrast':
+        return 'コントラスト';
+      case 'manga_reader_saturation':
+        return '彩度';
+      case 'manga_reader_custom_color_filter':
+        return 'カスタムカラーフィルター';
+      case 'manga_reader_color_filter_color':
+        return 'フィルターの色';
+      case 'manga_reader_color_filter_opacity':
+        return 'フィルターの不透明度';
+      case 'manga_reader_flash_on_page_change':
+        return 'ページ切り替え時にフラッシュ';
+      case 'manga_reader_animate_transitions':
+        return 'ページ切り替えアニメーション';
+      case 'manga_reader_lookup_on_hover':
+        return 'ホバーで OCR テキストを検索';
+      case 'manga_reader_ocr_trigger':
+        return 'OCR の実行タイミング';
+      case 'manga_reader_ocr_automatic':
+        return '読みながら';
+      case 'manga_reader_ocr_manual':
+        return '手動';
+      case 'manga_reader_parallel_ocr_tasks':
+        return '並列 OCR タスク数';
+      case 'manga_reader_ocr_current':
+        return '表示中のページを認識';
+      case 'manga_reader_back_to_start':
+        return '最初に戻る';
+      case 'reader_settings_panel_move_left':
+        return '設定を左側に移動';
+      case 'reader_settings_panel_move_right':
+        return '設定を右側に移動';
+      case 'manga_reader_ocr_engine_note':
+        return '「読みながら」はローカル ONNX、Google Lens、システム OCR に対応しています。ローカル ONNX は一度に 1 件ずつ処理します。外部 Mokuro とペアリング済みホストは手動の一括 OCR を使用します。';
+      case 'manga_reader_ocr_unavailable':
+        return '使用できる OCR エンジンがありません。OCR 設定でローカルモデルをダウンロードするか、別のエンジンを選択してください。';
       default:
         return null;
     }
@@ -308618,6 +310320,72 @@ extension on _StringsKo {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return '일반';
+      case 'manga_reader_filters':
+        return '사용자 지정 필터';
+      case 'manga_reader_crop_borders':
+        return '여백 자르기';
+      case 'manga_reader_split_wide_pages':
+        return '넓은 페이지 분할';
+      case 'manga_reader_rotate_wide_pages':
+        return '화면에 맞게 회전';
+      case 'manga_reader_automatic_background':
+        return '자동 배경';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return '웹툰 모드 더블 탭 확대';
+      case 'manga_reader_show_page_gaps':
+        return '페이지 간격 표시';
+      case 'manga_reader_auto_scroll':
+        return '자동 스크롤';
+      case 'manga_reader_auto_scroll_speed':
+        return '자동 스크롤 속도(px/초)';
+      case 'manga_reader_hide_threshold':
+        return '스크롤 시 도구 모음 숨김 임계값(px)';
+      case 'manga_reader_eink_mode':
+        return 'E-Ink 모드';
+      case 'manga_reader_invert_colors':
+        return '색상 반전';
+      case 'manga_reader_grayscale':
+        return '흑백';
+      case 'manga_reader_brightness':
+        return '밝기';
+      case 'manga_reader_contrast':
+        return '대비';
+      case 'manga_reader_saturation':
+        return '채도';
+      case 'manga_reader_custom_color_filter':
+        return '사용자 지정 색상 필터';
+      case 'manga_reader_color_filter_color':
+        return '필터 색상';
+      case 'manga_reader_color_filter_opacity':
+        return '필터 불투명도';
+      case 'manga_reader_flash_on_page_change':
+        return '페이지 넘김 시 깜박임';
+      case 'manga_reader_animate_transitions':
+        return '페이지 전환 애니메이션';
+      case 'manga_reader_lookup_on_hover':
+        return '마우스를 올려 OCR 텍스트 검색';
+      case 'manga_reader_ocr_trigger':
+        return 'OCR 실행 방식';
+      case 'manga_reader_ocr_automatic':
+        return '읽는 중 자동';
+      case 'manga_reader_ocr_manual':
+        return '수동';
+      case 'manga_reader_parallel_ocr_tasks':
+        return '병렬 OCR 작업 수';
+      case 'manga_reader_ocr_current':
+        return '보이는 페이지 인식';
+      case 'manga_reader_back_to_start':
+        return '처음으로 돌아가기';
+      case 'reader_settings_panel_move_left':
+        return '설정을 왼쪽으로 이동';
+      case 'reader_settings_panel_move_right':
+        return '설정을 오른쪽으로 이동';
+      case 'manga_reader_ocr_engine_note':
+        return '\'읽는 중 자동\'은 로컬 ONNX, Google Lens, 시스템 OCR을 지원합니다. 로컬 ONNX는 한 번에 하나씩 처리하며, 외부 Mokuro와 페어링된 호스트는 수동 일괄 OCR을 사용합니다.';
+      case 'manga_reader_ocr_unavailable':
+        return '사용 가능한 OCR 엔진이 없습니다. OCR 설정에서 로컬 모델을 다운로드하거나 다른 엔진을 선택하세요.';
       default:
         return null;
     }
@@ -319670,6 +321438,72 @@ extension on _StringsNl {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Algemeen';
+      case 'manga_reader_filters':
+        return 'Aangepast filter';
+      case 'manga_reader_crop_borders':
+        return 'Randen bijsnijden';
+      case 'manga_reader_split_wide_pages':
+        return 'Brede pagina\'s splitsen';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Draaien om passend te maken';
+      case 'manga_reader_automatic_background':
+        return 'Automatische achtergrond';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Dubbeltikken om te zoomen (Webtoon)';
+      case 'manga_reader_show_page_gaps':
+        return 'Paginatussenruimte tonen';
+      case 'manga_reader_auto_scroll':
+        return 'Automatisch scrollen';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Snelheid automatisch scrollen (px/s)';
+      case 'manga_reader_hide_threshold':
+        return 'Drempel voor verbergen van balk (px)';
+      case 'manga_reader_eink_mode':
+        return 'E-Ink-modus';
+      case 'manga_reader_invert_colors':
+        return 'Kleuren omkeren';
+      case 'manga_reader_grayscale':
+        return 'Grijstinten';
+      case 'manga_reader_brightness':
+        return 'Helderheid';
+      case 'manga_reader_contrast':
+        return 'Contrast';
+      case 'manga_reader_saturation':
+        return 'Verzadiging';
+      case 'manga_reader_custom_color_filter':
+        return 'Aangepast kleurfilter';
+      case 'manga_reader_color_filter_color':
+        return 'Filterkleur';
+      case 'manga_reader_color_filter_opacity':
+        return 'Filterdekking';
+      case 'manga_reader_flash_on_page_change':
+        return 'Flitsen bij paginawissel';
+      case 'manga_reader_animate_transitions':
+        return 'Paginaovergangen animeren';
+      case 'manga_reader_lookup_on_hover':
+        return 'OCR-tekst opzoeken bij aanwijzen';
+      case 'manga_reader_ocr_trigger':
+        return 'OCR-activering';
+      case 'manga_reader_ocr_automatic':
+        return 'Tijdens het lezen';
+      case 'manga_reader_ocr_manual':
+        return 'Handmatig';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Parallelle OCR-taken';
+      case 'manga_reader_ocr_current':
+        return 'Zichtbare pagina\'s herkennen';
+      case 'manga_reader_back_to_start':
+        return 'Terug naar het begin';
+      case 'reader_settings_panel_move_left':
+        return 'Instellingen naar links verplaatsen';
+      case 'reader_settings_panel_move_right':
+        return 'Instellingen naar rechts verplaatsen';
+      case 'manga_reader_ocr_engine_note':
+        return '\'Tijdens het lezen\' ondersteunt lokale ONNX, Google Lens en systeem-OCR. Lokale ONNX voert één taak tegelijk uit; externe Mokuro en gekoppelde hosts gebruiken expliciete batch-OCR.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Er is geen OCR-engine gereed. Download het lokale model of kies een andere engine in de OCR-instellingen.';
       default:
         return null;
     }
@@ -330717,6 +332551,72 @@ extension on _StringsPtBr {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Geral';
+      case 'manga_reader_filters':
+        return 'Filtro personalizado';
+      case 'manga_reader_crop_borders':
+        return 'Cortar bordas';
+      case 'manga_reader_split_wide_pages':
+        return 'Dividir páginas largas';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Girar para ajustar';
+      case 'manga_reader_automatic_background':
+        return 'Fundo automático';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Zoom com toque duplo (Webtoon)';
+      case 'manga_reader_show_page_gaps':
+        return 'Mostrar espaço entre páginas';
+      case 'manga_reader_auto_scroll':
+        return 'Rolagem automática';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Velocidade da rolagem automática (px/s)';
+      case 'manga_reader_hide_threshold':
+        return 'Limite para ocultar a barra (px)';
+      case 'manga_reader_eink_mode':
+        return 'Modo E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'Inverter cores';
+      case 'manga_reader_grayscale':
+        return 'Escala de cinza';
+      case 'manga_reader_brightness':
+        return 'Brilho';
+      case 'manga_reader_contrast':
+        return 'Contraste';
+      case 'manga_reader_saturation':
+        return 'Saturação';
+      case 'manga_reader_custom_color_filter':
+        return 'Filtro de cor personalizado';
+      case 'manga_reader_color_filter_color':
+        return 'Cor do filtro';
+      case 'manga_reader_color_filter_opacity':
+        return 'Opacidade do filtro';
+      case 'manga_reader_flash_on_page_change':
+        return 'Piscar ao mudar de página';
+      case 'manga_reader_animate_transitions':
+        return 'Animar transições de página';
+      case 'manga_reader_lookup_on_hover':
+        return 'Consultar texto OCR ao passar o mouse';
+      case 'manga_reader_ocr_trigger':
+        return 'Acionamento do OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'Durante a leitura';
+      case 'manga_reader_ocr_manual':
+        return 'Manual';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Tarefas de OCR em paralelo';
+      case 'manga_reader_ocr_current':
+        return 'Reconhecer páginas visíveis';
+      case 'manga_reader_back_to_start':
+        return 'Voltar ao início';
+      case 'reader_settings_panel_move_left':
+        return 'Mover configurações para a esquerda';
+      case 'reader_settings_panel_move_right':
+        return 'Mover configurações para a direita';
+      case 'manga_reader_ocr_engine_note':
+        return '“Durante a leitura” oferece suporte a ONNX local, Google Lens e OCR do sistema. O ONNX local executa uma tarefa por vez; o Mokuro externo e os hosts pareados usam OCR em lote explícito.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Nenhum mecanismo de OCR está pronto. Baixe o modelo local ou escolha outro mecanismo nas configurações de OCR.';
       default:
         return null;
     }
@@ -341771,6 +343671,72 @@ extension on _StringsRu {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Общие';
+      case 'manga_reader_filters':
+        return 'Пользовательский фильтр';
+      case 'manga_reader_crop_borders':
+        return 'Обрезать поля';
+      case 'manga_reader_split_wide_pages':
+        return 'Разделять широкие страницы';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Поворачивать по размеру экрана';
+      case 'manga_reader_automatic_background':
+        return 'Автоматический фон';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Масштаб двойным касанием (Webtoon)';
+      case 'manga_reader_show_page_gaps':
+        return 'Показывать промежутки между страницами';
+      case 'manga_reader_auto_scroll':
+        return 'Автопрокрутка';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Скорость автопрокрутки (пикс./с)';
+      case 'manga_reader_hide_threshold':
+        return 'Порог скрытия панели (пикс.)';
+      case 'manga_reader_eink_mode':
+        return 'Режим E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'Инвертировать цвета';
+      case 'manga_reader_grayscale':
+        return 'Оттенки серого';
+      case 'manga_reader_brightness':
+        return 'Яркость';
+      case 'manga_reader_contrast':
+        return 'Контрастность';
+      case 'manga_reader_saturation':
+        return 'Насыщенность';
+      case 'manga_reader_custom_color_filter':
+        return 'Пользовательский цветовой фильтр';
+      case 'manga_reader_color_filter_color':
+        return 'Цвет фильтра';
+      case 'manga_reader_color_filter_opacity':
+        return 'Непрозрачность фильтра';
+      case 'manga_reader_flash_on_page_change':
+        return 'Вспышка при смене страницы';
+      case 'manga_reader_animate_transitions':
+        return 'Анимация перелистывания';
+      case 'manga_reader_lookup_on_hover':
+        return 'Поиск текста OCR при наведении';
+      case 'manga_reader_ocr_trigger':
+        return 'Запуск OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'Во время чтения';
+      case 'manga_reader_ocr_manual':
+        return 'Вручную';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Параллельных задач OCR';
+      case 'manga_reader_ocr_current':
+        return 'Распознать видимые страницы';
+      case 'manga_reader_back_to_start':
+        return 'Вернуться в начало';
+      case 'reader_settings_panel_move_left':
+        return 'Переместить настройки влево';
+      case 'reader_settings_panel_move_right':
+        return 'Переместить настройки вправо';
+      case 'manga_reader_ocr_engine_note':
+        return 'Режим «Во время чтения» поддерживает локальный ONNX, Google Lens и системный OCR. Локальный ONNX выполняет задачи по одной; внешний Mokuro и сопряжённые хосты используют явное пакетное распознавание.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Нет готового движка OCR. Скачайте локальную модель или выберите другой движок в настройках OCR.';
       default:
         return null;
     }
@@ -352797,6 +354763,72 @@ extension on _StringsTh {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'ทั่วไป';
+      case 'manga_reader_filters':
+        return 'ฟิลเตอร์กำหนดเอง';
+      case 'manga_reader_crop_borders':
+        return 'ครอปขอบ';
+      case 'manga_reader_split_wide_pages':
+        return 'แยกหน้ากว้าง';
+      case 'manga_reader_rotate_wide_pages':
+        return 'หมุนให้พอดีหน้าจอ';
+      case 'manga_reader_automatic_background':
+        return 'พื้นหลังอัตโนมัติ';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'แตะสองครั้งเพื่อซูมในโหมด Webtoon';
+      case 'manga_reader_show_page_gaps':
+        return 'แสดงช่องว่างระหว่างหน้า';
+      case 'manga_reader_auto_scroll':
+        return 'เลื่อนอัตโนมัติ';
+      case 'manga_reader_auto_scroll_speed':
+        return 'ความเร็วเลื่อนอัตโนมัติ (px/วินาที)';
+      case 'manga_reader_hide_threshold':
+        return 'เกณฑ์การซ่อนแถบเครื่องมือ (px)';
+      case 'manga_reader_eink_mode':
+        return 'โหมด E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'กลับสี';
+      case 'manga_reader_grayscale':
+        return 'ขาวดำ';
+      case 'manga_reader_brightness':
+        return 'ความสว่าง';
+      case 'manga_reader_contrast':
+        return 'คอนทราสต์';
+      case 'manga_reader_saturation':
+        return 'ความอิ่มตัวของสี';
+      case 'manga_reader_custom_color_filter':
+        return 'ฟิลเตอร์สีกำหนดเอง';
+      case 'manga_reader_color_filter_color':
+        return 'สีฟิลเตอร์';
+      case 'manga_reader_color_filter_opacity':
+        return 'ความทึบของฟิลเตอร์';
+      case 'manga_reader_flash_on_page_change':
+        return 'กะพริบเมื่อเปลี่ยนหน้า';
+      case 'manga_reader_animate_transitions':
+        return 'แอนิเมชันเปลี่ยนหน้า';
+      case 'manga_reader_lookup_on_hover':
+        return 'ค้นหาข้อความ OCR เมื่อวางเมาส์';
+      case 'manga_reader_ocr_trigger':
+        return 'การเรียกใช้ OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'ระหว่างอ่าน';
+      case 'manga_reader_ocr_manual':
+        return 'ด้วยตนเอง';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'จำนวนงาน OCR พร้อมกัน';
+      case 'manga_reader_ocr_current':
+        return 'รู้จำหน้าที่มองเห็น';
+      case 'manga_reader_back_to_start':
+        return 'กลับไปที่จุดเริ่มต้น';
+      case 'reader_settings_panel_move_left':
+        return 'ย้ายการตั้งค่าไปทางซ้าย';
+      case 'reader_settings_panel_move_right':
+        return 'ย้ายการตั้งค่าไปทางขวา';
+      case 'manga_reader_ocr_engine_note':
+        return 'โหมด “ระหว่างอ่าน” รองรับ ONNX ในเครื่อง, Google Lens และ OCR ของระบบ ONNX ในเครื่องทำงานทีละงาน ส่วน Mokuro ภายนอกและโฮสต์ที่จับคู่ไว้ใช้ OCR แบบกลุ่มที่สั่งเอง';
+      case 'manga_reader_ocr_unavailable':
+        return 'ไม่มีเอนจิน OCR ที่พร้อมใช้งาน ดาวน์โหลดโมเดลในเครื่องหรือเลือกเอนจินอื่นในการตั้งค่า OCR';
       default:
         return null;
     }
@@ -363838,6 +365870,72 @@ extension on _StringsTr {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Genel';
+      case 'manga_reader_filters':
+        return 'Özel filtre';
+      case 'manga_reader_crop_borders':
+        return 'Kenarları kırp';
+      case 'manga_reader_split_wide_pages':
+        return 'Geniş sayfaları böl';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Sığdırmak için döndür';
+      case 'manga_reader_automatic_background':
+        return 'Otomatik arka plan';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Webtoon\'da çift dokunarak yakınlaştır';
+      case 'manga_reader_show_page_gaps':
+        return 'Sayfa aralıklarını göster';
+      case 'manga_reader_auto_scroll':
+        return 'Otomatik kaydırma';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Otomatik kaydırma hızı (px/sn)';
+      case 'manga_reader_hide_threshold':
+        return 'Çubuğu gizleme eşiği (px)';
+      case 'manga_reader_eink_mode':
+        return 'E-Ink modu';
+      case 'manga_reader_invert_colors':
+        return 'Renkleri ters çevir';
+      case 'manga_reader_grayscale':
+        return 'Gri tonlama';
+      case 'manga_reader_brightness':
+        return 'Parlaklık';
+      case 'manga_reader_contrast':
+        return 'Kontrast';
+      case 'manga_reader_saturation':
+        return 'Doygunluk';
+      case 'manga_reader_custom_color_filter':
+        return 'Özel renk filtresi';
+      case 'manga_reader_color_filter_color':
+        return 'Filtre rengi';
+      case 'manga_reader_color_filter_opacity':
+        return 'Filtre opaklığı';
+      case 'manga_reader_flash_on_page_change':
+        return 'Sayfa değişiminde yanıp sön';
+      case 'manga_reader_animate_transitions':
+        return 'Sayfa geçişlerini canlandır';
+      case 'manga_reader_lookup_on_hover':
+        return 'Üzerine gelince OCR metnini ara';
+      case 'manga_reader_ocr_trigger':
+        return 'OCR tetikleyicisi';
+      case 'manga_reader_ocr_automatic':
+        return 'Okurken';
+      case 'manga_reader_ocr_manual':
+        return 'Manuel';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Paralel OCR görevleri';
+      case 'manga_reader_ocr_current':
+        return 'Görünen sayfaları tanı';
+      case 'manga_reader_back_to_start':
+        return 'Başa dön';
+      case 'reader_settings_panel_move_left':
+        return 'Ayarları sola taşı';
+      case 'reader_settings_panel_move_right':
+        return 'Ayarları sağa taşı';
+      case 'manga_reader_ocr_engine_note':
+        return '“Okurken” modu yerel ONNX, Google Lens ve sistem OCR\'ını destekler. Yerel ONNX görevleri tek tek çalıştırır; harici Mokuro ve eşlenmiş ana makineler açık toplu OCR kullanır.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Hazır OCR motoru yok. Yerel modeli indirin veya OCR ayarlarından başka bir motor seçin.';
       default:
         return null;
     }
@@ -374873,6 +376971,72 @@ extension on _StringsVi {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return 'Chung';
+      case 'manga_reader_filters':
+        return 'Bộ lọc tùy chỉnh';
+      case 'manga_reader_crop_borders':
+        return 'Cắt viền';
+      case 'manga_reader_split_wide_pages':
+        return 'Tách trang rộng';
+      case 'manga_reader_rotate_wide_pages':
+        return 'Xoay cho vừa màn hình';
+      case 'manga_reader_automatic_background':
+        return 'Nền tự động';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return 'Nhấn đúp để thu phóng (Webtoon)';
+      case 'manga_reader_show_page_gaps':
+        return 'Hiện khoảng cách giữa các trang';
+      case 'manga_reader_auto_scroll':
+        return 'Tự động cuộn';
+      case 'manga_reader_auto_scroll_speed':
+        return 'Tốc độ tự động cuộn (px/giây)';
+      case 'manga_reader_hide_threshold':
+        return 'Ngưỡng ẩn thanh công cụ (px)';
+      case 'manga_reader_eink_mode':
+        return 'Chế độ E-Ink';
+      case 'manga_reader_invert_colors':
+        return 'Đảo màu';
+      case 'manga_reader_grayscale':
+        return 'Thang độ xám';
+      case 'manga_reader_brightness':
+        return 'Độ sáng';
+      case 'manga_reader_contrast':
+        return 'Độ tương phản';
+      case 'manga_reader_saturation':
+        return 'Độ bão hòa';
+      case 'manga_reader_custom_color_filter':
+        return 'Bộ lọc màu tùy chỉnh';
+      case 'manga_reader_color_filter_color':
+        return 'Màu bộ lọc';
+      case 'manga_reader_color_filter_opacity':
+        return 'Độ mờ đục của bộ lọc';
+      case 'manga_reader_flash_on_page_change':
+        return 'Nháy khi chuyển trang';
+      case 'manga_reader_animate_transitions':
+        return 'Hiệu ứng chuyển trang';
+      case 'manga_reader_lookup_on_hover':
+        return 'Tra văn bản OCR khi di chuột';
+      case 'manga_reader_ocr_trigger':
+        return 'Cách kích hoạt OCR';
+      case 'manga_reader_ocr_automatic':
+        return 'Trong khi đọc';
+      case 'manga_reader_ocr_manual':
+        return 'Thủ công';
+      case 'manga_reader_parallel_ocr_tasks':
+        return 'Số tác vụ OCR song song';
+      case 'manga_reader_ocr_current':
+        return 'Nhận dạng các trang đang hiển thị';
+      case 'manga_reader_back_to_start':
+        return 'Quay lại đầu';
+      case 'reader_settings_panel_move_left':
+        return 'Chuyển cài đặt sang trái';
+      case 'reader_settings_panel_move_right':
+        return 'Chuyển cài đặt sang phải';
+      case 'manga_reader_ocr_engine_note':
+        return 'Chế độ “Trong khi đọc” hỗ trợ ONNX cục bộ, Google Lens và OCR hệ thống. ONNX cục bộ chạy từng tác vụ một; Mokuro bên ngoài và máy chủ đã ghép nối dùng OCR hàng loạt thủ công.';
+      case 'manga_reader_ocr_unavailable':
+        return 'Không có công cụ OCR nào sẵn sàng. Hãy tải mô hình cục bộ hoặc chọn công cụ khác trong cài đặt OCR.';
       default:
         return null;
     }
@@ -385803,6 +387967,72 @@ extension on _StringsZhCn {
         return '按键映射仅用于本次串流会话。';
       case 'game_stream_key_default':
         return '默认';
+      case 'manga_reader_general':
+        return '常规';
+      case 'manga_reader_filters':
+        return '自定义滤镜';
+      case 'manga_reader_crop_borders':
+        return '裁剪白边';
+      case 'manga_reader_split_wide_pages':
+        return '拆分宽页';
+      case 'manga_reader_rotate_wide_pages':
+        return '旋转以适应屏幕';
+      case 'manga_reader_automatic_background':
+        return '自动背景';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return '长条模式双击缩放';
+      case 'manga_reader_show_page_gaps':
+        return '显示页间距';
+      case 'manga_reader_auto_scroll':
+        return '自动滚动';
+      case 'manga_reader_auto_scroll_speed':
+        return '自动滚动速度（像素/秒）';
+      case 'manga_reader_hide_threshold':
+        return '滚动隐藏工具栏阈值（像素）';
+      case 'manga_reader_eink_mode':
+        return '墨水屏模式';
+      case 'manga_reader_invert_colors':
+        return '反色';
+      case 'manga_reader_grayscale':
+        return '灰度';
+      case 'manga_reader_brightness':
+        return '亮度';
+      case 'manga_reader_contrast':
+        return '对比度';
+      case 'manga_reader_saturation':
+        return '饱和度';
+      case 'manga_reader_custom_color_filter':
+        return '自定义颜色滤镜';
+      case 'manga_reader_color_filter_color':
+        return '滤镜颜色';
+      case 'manga_reader_color_filter_opacity':
+        return '滤镜不透明度';
+      case 'manga_reader_flash_on_page_change':
+        return '翻页闪屏';
+      case 'manga_reader_animate_transitions':
+        return '翻页动画';
+      case 'manga_reader_lookup_on_hover':
+        return '悬停查词';
+      case 'manga_reader_ocr_trigger':
+        return 'OCR 触发方式';
+      case 'manga_reader_ocr_automatic':
+        return '边看边识别';
+      case 'manga_reader_ocr_manual':
+        return '手动';
+      case 'manga_reader_parallel_ocr_tasks':
+        return '并行 OCR 任务数';
+      case 'manga_reader_ocr_current':
+        return '识别当前可见页';
+      case 'manga_reader_back_to_start':
+        return '回到开头';
+      case 'reader_settings_panel_move_left':
+        return '将设置移到左侧';
+      case 'reader_settings_panel_move_right':
+        return '将设置移到右侧';
+      case 'manga_reader_ocr_engine_note':
+        return '边看边识别支持本地 ONNX、Google Lens 和系统 OCR。本地 ONNX 串行执行；外部 Mokuro 和配对主机使用手动批量识别。';
+      case 'manga_reader_ocr_unavailable':
+        return '没有可用的 OCR 引擎：请在 OCR 设置中下载本地模型或换用其他引擎。';
       default:
         return null;
     }
@@ -396767,6 +398997,72 @@ extension on _StringsZhHk {
         return 'These key mappings apply only to this streaming session.';
       case 'game_stream_key_default':
         return 'Default';
+      case 'manga_reader_general':
+        return '一般';
+      case 'manga_reader_filters':
+        return '自訂濾鏡';
+      case 'manga_reader_crop_borders':
+        return '裁剪白邊';
+      case 'manga_reader_split_wide_pages':
+        return '拆分闊頁';
+      case 'manga_reader_rotate_wide_pages':
+        return '旋轉以配合螢幕';
+      case 'manga_reader_automatic_background':
+        return '自動背景';
+      case 'manga_reader_webtoon_double_tap_zoom':
+        return '長條模式雙擊縮放';
+      case 'manga_reader_show_page_gaps':
+        return '顯示頁間距';
+      case 'manga_reader_auto_scroll':
+        return '自動捲動';
+      case 'manga_reader_auto_scroll_speed':
+        return '自動捲動速度（像素/秒）';
+      case 'manga_reader_hide_threshold':
+        return '捲動隱藏工具列閾值（像素）';
+      case 'manga_reader_eink_mode':
+        return '電子墨水屏模式';
+      case 'manga_reader_invert_colors':
+        return '反色';
+      case 'manga_reader_grayscale':
+        return '灰階';
+      case 'manga_reader_brightness':
+        return '亮度';
+      case 'manga_reader_contrast':
+        return '對比度';
+      case 'manga_reader_saturation':
+        return '飽和度';
+      case 'manga_reader_custom_color_filter':
+        return '自訂顏色濾鏡';
+      case 'manga_reader_color_filter_color':
+        return '濾鏡顏色';
+      case 'manga_reader_color_filter_opacity':
+        return '濾鏡不透明度';
+      case 'manga_reader_flash_on_page_change':
+        return '翻頁閃屏';
+      case 'manga_reader_animate_transitions':
+        return '翻頁動畫';
+      case 'manga_reader_lookup_on_hover':
+        return '懸停查詞';
+      case 'manga_reader_ocr_trigger':
+        return 'OCR 觸發方式';
+      case 'manga_reader_ocr_automatic':
+        return '邊看邊識別';
+      case 'manga_reader_ocr_manual':
+        return '手動';
+      case 'manga_reader_parallel_ocr_tasks':
+        return '並行 OCR 任務數';
+      case 'manga_reader_ocr_current':
+        return '識別目前可見頁面';
+      case 'manga_reader_back_to_start':
+        return '返回開頭';
+      case 'reader_settings_panel_move_left':
+        return '將設定移到左側';
+      case 'reader_settings_panel_move_right':
+        return '將設定移到右側';
+      case 'manga_reader_ocr_engine_note':
+        return '邊看邊識別支援本機 ONNX、Google Lens 和系統 OCR。本機 ONNX 逐一執行；外部 Mokuro 和已配對主機使用手動批次識別。';
+      case 'manga_reader_ocr_unavailable':
+        return '沒有可用的 OCR 引擎：請在 OCR 設定中下載本機模型或改用其他引擎。';
       default:
         return null;
     }
