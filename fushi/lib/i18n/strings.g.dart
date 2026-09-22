@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90083 (5299 per locale)
+/// Strings: 90168 (5304 per locale)
 ///
-/// Built on 2026-09-22 at 05:21 UTC
+/// Built on 2026-09-22 at 05:58 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7413,6 +7413,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'the work\'s original language';
   String get ai_video_acquire_evidence_countries => 'country of origin';
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  String get video_mini_window_enter => 'Mini window';
+  String get video_mini_window_exit => 'Exit mini window';
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -19951,6 +19958,18 @@ class _StringsAr extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -32717,6 +32736,18 @@ class _StringsDe extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -45536,6 +45567,18 @@ class _StringsEs extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -58392,6 +58435,18 @@ class _StringsFr extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -71047,6 +71102,18 @@ class _StringsId extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -83794,6 +83861,18 @@ class _StringsIt extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -95922,6 +96001,18 @@ class _StringsJa extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -108060,6 +108151,18 @@ class _StringsKo extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -120767,6 +120870,18 @@ class _StringsNl extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -133527,6 +133642,18 @@ class _StringsPtBr extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -146262,6 +146389,18 @@ class _StringsRu extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -158798,6 +158937,18 @@ class _StringsTh extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -171448,6 +171599,18 @@ class _StringsTr extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -184071,6 +184234,18 @@ class _StringsVi extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 // Path: <root>
@@ -195636,6 +195811,17 @@ class _StringsZhCn extends _StringsEn {
   String get ai_video_acquire_evidence_countries => '制作国';
   @override
   String get ai_video_acquire_evidence_title_script => '标题文字';
+  @override
+  String get video_mini_window_enter => '小窗';
+  @override
+  String get video_mini_window_exit => '退出小窗';
+  @override
+  String get video_setting_slim_progress_bar => '底部细进度条';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      '控制条淡出后，在视频最下方保留一条主题色细进度条。小窗模式下它恒常显示——那里完整进度条已被收起。';
+  @override
+  String get shortcut_action_video_toggle_mini_window => '切换小窗';
 }
 
 // Path: <root>
@@ -207448,6 +207634,18 @@ class _StringsZhHk extends _StringsEn {
   String get ai_video_acquire_evidence_countries => 'country of origin';
   @override
   String get ai_video_acquire_evidence_title_script => 'the title\'s script';
+  @override
+  String get video_mini_window_enter => 'Mini window';
+  @override
+  String get video_mini_window_exit => 'Exit mini window';
+  @override
+  String get video_setting_slim_progress_bar =>
+      'Slim progress bar at the bottom';
+  @override
+  String get video_setting_slim_progress_bar_hint =>
+      'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+  @override
+  String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
 }
 
 /// Flat map(s) containing all translations.
@@ -218376,6 +218574,16 @@ extension on _StringsEn {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -229299,6 +229507,16 @@ extension on _StringsAr {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -240267,6 +240485,16 @@ extension on _StringsDe {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -251226,6 +251454,16 @@ extension on _StringsEs {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -262194,6 +262432,16 @@ extension on _StringsFr {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -273133,6 +273381,16 @@ extension on _StringsId {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -284094,6 +284352,16 @@ extension on _StringsIt {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -294982,6 +295250,16 @@ extension on _StringsJa {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -305874,6 +306152,16 @@ extension on _StringsKo {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -316828,6 +317116,16 @@ extension on _StringsNl {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -327777,6 +328075,16 @@ extension on _StringsPtBr {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -338733,6 +339041,16 @@ extension on _StringsRu {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -349661,6 +349979,16 @@ extension on _StringsTh {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -360604,6 +360932,16 @@ extension on _StringsTr {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -371541,6 +371879,16 @@ extension on _StringsVi {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
@@ -382374,6 +382722,16 @@ extension on _StringsZhCn {
         return '制作国';
       case 'ai_video_acquire_evidence_title_script':
         return '标题文字';
+      case 'video_mini_window_enter':
+        return '小窗';
+      case 'video_mini_window_exit':
+        return '退出小窗';
+      case 'video_setting_slim_progress_bar':
+        return '底部细进度条';
+      case 'video_setting_slim_progress_bar_hint':
+        return '控制条淡出后，在视频最下方保留一条主题色细进度条。小窗模式下它恒常显示——那里完整进度条已被收起。';
+      case 'shortcut_action_video_toggle_mini_window':
+        return '切换小窗';
       default:
         return null;
     }
@@ -393240,6 +393598,16 @@ extension on _StringsZhHk {
         return 'country of origin';
       case 'ai_video_acquire_evidence_title_script':
         return 'the title\'s script';
+      case 'video_mini_window_enter':
+        return 'Mini window';
+      case 'video_mini_window_exit':
+        return 'Exit mini window';
+      case 'video_setting_slim_progress_bar':
+        return 'Slim progress bar at the bottom';
+      case 'video_setting_slim_progress_bar_hint':
+        return 'When the controls fade out, keep a thin accent-coloured progress line along the very bottom of the video. In the mini window it is always shown, since the full seek bar is hidden there.';
+      case 'shortcut_action_video_toggle_mini_window':
+        return 'Toggle mini window';
       default:
         return null;
     }
