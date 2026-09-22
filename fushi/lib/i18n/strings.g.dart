@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90236 (5308 per locale)
+/// Strings: 90253 (5309 per locale)
 ///
-/// Built on 2026-09-22 at 08:34 UTC
+/// Built on 2026-09-22 at 09:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7426,6 +7426,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get settings_video_diag_export_hint =>
       'Timeline plus libmpv\'s own verbose log';
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -19986,6 +19988,9 @@ class _StringsAr extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -32774,6 +32779,9 @@ class _StringsDe extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -45615,6 +45623,9 @@ class _StringsEs extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -58493,6 +58504,9 @@ class _StringsFr extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -71170,6 +71184,9 @@ class _StringsId extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -83939,6 +83956,9 @@ class _StringsIt extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -96089,6 +96109,9 @@ class _StringsJa extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -108249,6 +108272,9 @@ class _StringsKo extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -120978,6 +121004,9 @@ class _StringsNl extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -133760,6 +133789,9 @@ class _StringsPtBr extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -146517,6 +146549,9 @@ class _StringsRu extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -159075,6 +159110,9 @@ class _StringsTh extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -171747,6 +171785,9 @@ class _StringsTr extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -184392,6 +184433,9 @@ class _StringsVi extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 // Path: <root>
@@ -195977,6 +196021,8 @@ class _StringsZhCn extends _StringsEn {
   String get settings_video_diag_export_hint => '统一时间轴 + libmpv 自身的详细日志';
   @override
   String get video_diag_share_subject => 'Fushi 视频诊断日志';
+  @override
+  String get popup_ctx_confirm_failed => '制卡没能开始——回点制卡按钮时查词弹窗已经关掉了。请重试。';
 }
 
 // Path: <root>
@@ -207811,6 +207857,9 @@ class _StringsZhHk extends _StringsEn {
       'Timeline plus libmpv\'s own verbose log';
   @override
   String get video_diag_share_subject => 'Fushi video diagnostics log';
+  @override
+  String get popup_ctx_confirm_failed =>
+      'Mining did not start - the lookup popup closed before the card could be created. Try again.';
 }
 
 /// Flat map(s) containing all translations.
@@ -218757,6 +218806,8 @@ extension on _StringsEn {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -229698,6 +229749,8 @@ extension on _StringsAr {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -240684,6 +240737,8 @@ extension on _StringsDe {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -251661,6 +251716,8 @@ extension on _StringsEs {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -262647,6 +262704,8 @@ extension on _StringsFr {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -273604,6 +273663,8 @@ extension on _StringsId {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -284583,6 +284644,8 @@ extension on _StringsIt {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -295489,6 +295552,8 @@ extension on _StringsJa {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -306399,6 +306464,8 @@ extension on _StringsKo {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -317371,6 +317438,8 @@ extension on _StringsNl {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -328338,6 +328407,8 @@ extension on _StringsPtBr {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -339312,6 +339383,8 @@ extension on _StringsRu {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -350258,6 +350331,8 @@ extension on _StringsTh {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -361219,6 +361294,8 @@ extension on _StringsTr {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -372174,6 +372251,8 @@ extension on _StringsVi {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
@@ -383025,6 +383104,8 @@ extension on _StringsZhCn {
         return '统一时间轴 + libmpv 自身的详细日志';
       case 'video_diag_share_subject':
         return 'Fushi 视频诊断日志';
+      case 'popup_ctx_confirm_failed':
+        return '制卡没能开始——回点制卡按钮时查词弹窗已经关掉了。请重试。';
       default:
         return null;
     }
@@ -393909,6 +393990,8 @@ extension on _StringsZhHk {
         return 'Timeline plus libmpv\'s own verbose log';
       case 'video_diag_share_subject':
         return 'Fushi video diagnostics log';
+      case 'popup_ctx_confirm_failed':
+        return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
       default:
         return null;
     }
