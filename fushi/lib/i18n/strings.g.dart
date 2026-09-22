@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87380 (5140 per locale)
+/// Strings: 87516 (5148 per locale)
 ///
-/// Built on 2026-09-20 at 03:03 UTC
+/// Built on 2026-09-22 at 10:35 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7184,6 +7184,16 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get jellyfin_route_remove => 'Remove route';
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   String get media_server_route_switch => 'Switch route';
+  String get game_stream_start => 'Start streaming';
+  String get game_stream_stop => 'Stop streaming';
+  String get game_stream_join => 'Join game stream';
+  String get game_stream_busy => 'Updating stream…';
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  String get game_stream_failed => 'Could not update the stream';
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -19334,6 +19344,24 @@ class _StringsAr extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -31712,6 +31740,24 @@ class _StringsDe extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -44143,6 +44189,24 @@ class _StringsEs extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -56611,6 +56675,24 @@ class _StringsFr extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -68878,6 +68960,24 @@ class _StringsId extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -81237,6 +81337,24 @@ class _StringsIt extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -92977,6 +93095,24 @@ class _StringsJa extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -104727,6 +104863,24 @@ class _StringsKo extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -117046,6 +117200,24 @@ class _StringsNl extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -129418,6 +129590,24 @@ class _StringsPtBr extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -141765,6 +141955,24 @@ class _StringsRu extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -153913,6 +154121,24 @@ class _StringsTh extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -166175,6 +166401,24 @@ class _StringsTr extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -178410,6 +178654,24 @@ class _StringsVi extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 // Path: <root>
@@ -189615,6 +189877,22 @@ class _StringsZhCn extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => '已切换到 ${url}';
   @override
   String get media_server_route_switch => '切换线路';
+  @override
+  String get game_stream_start => '开始串流';
+  @override
+  String get game_stream_stop => '停止串流';
+  @override
+  String get game_stream_join => '加入游戏串流';
+  @override
+  String get game_stream_busy => '正在更新串流…';
+  @override
+  String get game_stream_waiting => '串流已开启，等待已配对设备加入';
+  @override
+  String get game_stream_hook_required => '请先启动一个已连接 Hook 的游戏';
+  @override
+  String get game_stream_failed => '串流操作失败';
+  @override
+  String get game_stream_connected => '当前连接设备';
 }
 
 // Path: <root>
@@ -201039,6 +201317,24 @@ class _StringsZhHk extends _StringsEn {
   String jellyfin_route_switched({required Object url}) => 'Switched to ${url}';
   @override
   String get media_server_route_switch => 'Switch route';
+  @override
+  String get game_stream_start => 'Start streaming';
+  @override
+  String get game_stream_stop => 'Stop streaming';
+  @override
+  String get game_stream_join => 'Join game stream';
+  @override
+  String get game_stream_busy => 'Updating stream…';
+  @override
+  String get game_stream_waiting =>
+      'Streaming is enabled. Waiting for a paired device.';
+  @override
+  String get game_stream_hook_required =>
+      'Start a game with an active Hook session first.';
+  @override
+  String get game_stream_failed => 'Could not update the stream';
+  @override
+  String get game_stream_connected => 'Connected device';
 }
 
 /// Flat map(s) containing all translations.
@@ -211631,6 +211927,22 @@ extension on _StringsEn {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -222218,6 +222530,22 @@ extension on _StringsAr {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -232850,6 +233178,22 @@ extension on _StringsDe {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -243473,6 +243817,22 @@ extension on _StringsEs {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -254105,6 +254465,22 @@ extension on _StringsFr {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -264708,6 +265084,22 @@ extension on _StringsId {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -275333,6 +275725,22 @@ extension on _StringsIt {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -285885,6 +286293,22 @@ extension on _StringsJa {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -296441,6 +296865,22 @@ extension on _StringsKo {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -307059,6 +307499,22 @@ extension on _StringsNl {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -317672,6 +318128,22 @@ extension on _StringsPtBr {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -328292,6 +328764,22 @@ extension on _StringsRu {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -338884,6 +339372,22 @@ extension on _StringsTh {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -349491,6 +349995,22 @@ extension on _StringsTr {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -360092,6 +360612,22 @@ extension on _StringsVi {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
@@ -370597,6 +371133,22 @@ extension on _StringsZhCn {
         return ({required Object url}) => '已切换到 ${url}';
       case 'media_server_route_switch':
         return '切换线路';
+      case 'game_stream_start':
+        return '开始串流';
+      case 'game_stream_stop':
+        return '停止串流';
+      case 'game_stream_join':
+        return '加入游戏串流';
+      case 'game_stream_busy':
+        return '正在更新串流…';
+      case 'game_stream_waiting':
+        return '串流已开启，等待已配对设备加入';
+      case 'game_stream_hook_required':
+        return '请先启动一个已连接 Hook 的游戏';
+      case 'game_stream_failed':
+        return '串流操作失败';
+      case 'game_stream_connected':
+        return '当前连接设备';
       default:
         return null;
     }
@@ -381127,6 +381679,22 @@ extension on _StringsZhHk {
         return ({required Object url}) => 'Switched to ${url}';
       case 'media_server_route_switch':
         return 'Switch route';
+      case 'game_stream_start':
+        return 'Start streaming';
+      case 'game_stream_stop':
+        return 'Stop streaming';
+      case 'game_stream_join':
+        return 'Join game stream';
+      case 'game_stream_busy':
+        return 'Updating stream…';
+      case 'game_stream_waiting':
+        return 'Streaming is enabled. Waiting for a paired device.';
+      case 'game_stream_hook_required':
+        return 'Start a game with an active Hook session first.';
+      case 'game_stream_failed':
+        return 'Could not update the stream';
+      case 'game_stream_connected':
+        return 'Connected device';
       default:
         return null;
     }
