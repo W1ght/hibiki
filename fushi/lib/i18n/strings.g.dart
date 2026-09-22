@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 89148 (5244 per locale)
+/// Strings: 90083 (5299 per locale)
 ///
-/// Built on 2026-09-21 at 20:12 UTC
+/// Built on 2026-09-22 at 02:29 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -6989,12 +6989,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get video_scrape_ai_matched => 'Matched by AI';
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
-  String get video_search_ai_expand => 'More terms with AI';
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  String get video_search_ai_rank => 'Rank with AI';
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  String get video_search_ai_recommended => 'AI pick';
   String get shortcut_action_video_screenshot_subtitled =>
       'Screenshot (with subtitles)';
   String get video_screenshot_subtitled => 'Screenshot with subtitles';
@@ -7321,6 +7315,104 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_panel_none => 'No panels detected';
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   String get manga_panel_detect_failed => 'Panel detection failed';
+  String get ai_feature_video_acquire => 'AI video download';
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  String get ai_video_download_section => 'AI video download';
+  String get ai_video_download_quality => 'Default quality';
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  String get ai_video_download_quality_ask => 'Ask each time';
+  String get ai_video_download_quality_any => 'Any';
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  String get ai_video_acquire_title => 'AI download';
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  String get ai_video_acquire_send => 'Send';
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  String get ai_video_acquire_ask_season => 'Which season?';
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  String get ai_video_acquire_option_confirm => 'Use this';
+  String get ai_video_acquire_option_next => 'Another version';
+  String get ai_video_acquire_option_continue => 'Continue';
+  String get ai_video_acquire_option_none => 'None of these';
+  String get ai_video_acquire_option_all => 'All';
+  String get ai_video_acquire_option_download => 'Download now';
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -19140,17 +19232,6 @@ class _StringsAr extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'لقطة شاشة (مع الترجمة)';
   @override
@@ -19712,6 +19793,164 @@ class _StringsAr extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -31757,17 +31996,6 @@ class _StringsDe extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Screenshot (mit Untertiteln)';
   @override
@@ -32331,6 +32559,164 @@ class _StringsDe extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -44430,17 +44816,6 @@ class _StringsEs extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Captura de pantalla (con subtítulos)';
   @override
@@ -45003,6 +45378,164 @@ class _StringsEs extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -57135,17 +57668,6 @@ class _StringsFr extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Capture d\'écran (avec sous-titres)';
   @override
@@ -57712,6 +58234,164 @@ class _StringsFr extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -69648,17 +70328,6 @@ class _StringsId extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Tangkapan Layar (dengan subtitle)';
   @override
@@ -70220,6 +70889,164 @@ class _StringsId extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -82247,17 +83074,6 @@ class _StringsIt extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Screenshot (con sottotitoli)';
   @override
@@ -82820,6 +83636,164 @@ class _StringsIt extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -94231,17 +95205,6 @@ class _StringsJa extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled => 'スクリーンショット（字幕あり）';
   @override
   String get video_screenshot_subtitled => '字幕付きスクリーンショット';
@@ -94801,6 +95764,164 @@ class _StringsJa extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -106222,17 +107343,6 @@ class _StringsKo extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled => '스크린샷 (자막 포함)';
   @override
   String get video_screenshot_subtitled => '자막 포함 스크린샷';
@@ -106792,6 +107902,164 @@ class _StringsKo extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -118777,17 +120045,6 @@ class _StringsNl extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Schermafbeelding (met ondertitels)';
   @override
@@ -119352,6 +120609,164 @@ class _StringsNl extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -131390,17 +132805,6 @@ class _StringsPtBr extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Captura de tela (com legendas)';
   @override
@@ -131965,6 +133369,164 @@ class _StringsPtBr extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -143980,17 +145542,6 @@ class _StringsRu extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Скриншот (с субтитрами)';
   @override
@@ -144553,6 +146104,164 @@ class _StringsRu extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -156370,17 +158079,6 @@ class _StringsTh extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'ภาพหน้าจอ (พร้อมคำบรรยาย)';
   @override
@@ -156942,6 +158640,164 @@ class _StringsTh extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -168873,17 +170729,6 @@ class _StringsTr extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Ekran Görüntüsü (altyazılı)';
   @override
@@ -169445,6 +171290,164 @@ class _StringsTr extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -181346,17 +183349,6 @@ class _StringsVi extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled =>
       'Chụp màn hình (kèm phụ đề)';
   @override
@@ -181921,6 +183913,164 @@ class _StringsVi extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 // Path: <root>
@@ -192824,17 +194974,6 @@ class _StringsZhCn extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI 置信度 ${percent}%';
   @override
-  String get video_search_ai_expand => 'AI 补充搜索词';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI 补充了 ${count} 个搜索词';
-  @override
-  String get video_search_ai_rank => 'AI 排序';
-  @override
-  String get video_search_ai_ranked => '结果已由 AI 重新排序';
-  @override
-  String get video_search_ai_recommended => 'AI 推荐';
-  @override
   String get shortcut_action_video_screenshot_subtitled => '截图（含字幕）';
   @override
   String get video_screenshot_subtitled => '带字幕截图';
@@ -193353,6 +195492,150 @@ class _StringsZhCn extends _StringsEn {
   String get manga_panel_model_unavailable => '分镜模型不可用';
   @override
   String get manga_panel_detect_failed => '分镜检测失败';
+  @override
+  String get ai_feature_video_acquire => 'AI 下视频';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      '跟 AI 说作品名，由它解析你的要求、在多义作品与版本里选择，然后下载或订阅';
+  @override
+  String get ai_video_download_section => 'AI 下视频';
+  @override
+  String get ai_video_download_quality => '默认画质';
+  @override
+  String get ai_video_download_quality_hint => 'AI 下载助手选版本时使用；「每次询问」= 每次都问。';
+  @override
+  String get ai_video_download_quality_unset => '未设置（首次使用时询问）';
+  @override
+  String get ai_video_download_quality_ask => '每次询问';
+  @override
+  String get ai_video_download_quality_any => '不限';
+  @override
+  String get ai_video_download_subtitle_language => '字幕语言';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      '字幕总会自动配；这里决定要哪种语言。「跟随作品语言」= 作品原声语言。';
+  @override
+  String get ai_video_download_subtitle_language_unset => '未设置（首次使用时询问）';
+  @override
+  String get ai_video_download_subtitle_language_original => '跟随作品语言';
+  @override
+  String get ai_video_download_subtitle_language_none => '不配字幕';
+  @override
+  String get ai_video_download_subtitle_language_ask => '每次询问';
+  @override
+  String get ai_video_acquire_title => 'AI 下视频';
+  @override
+  String get ai_video_acquire_entry => '让 AI 帮我下';
+  @override
+  String get ai_video_acquire_input_hint => '说作品名，比如「间谍过家家 第二季」';
+  @override
+  String get ai_video_acquire_send => '发送';
+  @override
+  String get ai_video_acquire_greeting => '想下哪部？我来找作品、挑版本，然后下载或订阅。';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      '没找到「${query}」，换个名字试试？';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      '已选：${title}（AI 判定，${confidence}）。想换就点下面的候选。';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) => '已选：${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '「${title}」已经在库里了。';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '「${title}」已经在库里了（已到第 ${episode} 集）。';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '「${title}」已经订阅了。';
+  @override
+  String get ai_video_acquire_airing_unknown => '判不出是否还在放送，订阅选项照样给你。';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      '字幕：${language}（跟随作品语言，依据：${evidence}）。';
+  @override
+  String get ai_video_acquire_subtitle_unresolved => '这部作品的语言判不出来，字幕要哪种？';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      '字幕语言「${language}」已记为这部作品的偏好。';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} 集 · 做种 ${seeders}';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · 整季合集 · 做种 ${seeders}';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      '没找到：第 ${episodes} 集';
+  @override
+  String get ai_video_acquire_no_more_versions => '没有更多版本了。';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      '已入队 ${count} 条下载，进度看下载页。';
+  @override
+  String get ai_video_acquire_submitted_subscribe => '已订阅，新集会自动下载。';
+  @override
+  String ai_video_acquire_failed({required Object message}) => '失败：${message}';
+  @override
+  String get ai_video_acquire_cancelled => '已取消。';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI 暂不可用（${reason}），请点选。';
+  @override
+  String get ai_video_acquire_unclear => '没听懂，请点选或换个说法。';
+  @override
+  String get ai_video_acquire_ask_work => '你要的是哪一部？';
+  @override
+  String get ai_video_acquire_ask_season => '哪一季？';
+  @override
+  String get ai_video_acquire_ask_mode => '这部还在放送。要现在下载已出的，还是订阅追更？';
+  @override
+  String get ai_video_acquire_ask_quality => '要什么画质？';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      '字幕语言怎么配？（只问这一次，之后可在设置里改）';
+  @override
+  String get ai_video_acquire_ask_target_source => '下到哪个视频来源？';
+  @override
+  String get ai_video_acquire_ask_resource => '就用这个版本？';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      '没有 ${wanted} 的版本，要这些里的吗？';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      '没有可订阅的版本（缺发布组 / 清晰度证据），改为直接下载？';
+  @override
+  String get ai_video_acquire_ask_presence => '仍要继续吗？';
+  @override
+  String get ai_video_acquire_option_confirm => '就这个';
+  @override
+  String get ai_video_acquire_option_next => '换一个';
+  @override
+  String get ai_video_acquire_option_continue => '继续';
+  @override
+  String get ai_video_acquire_option_none => '都不是';
+  @override
+  String get ai_video_acquire_option_all => '全部';
+  @override
+  String get ai_video_acquire_option_download => '直接下载';
+  @override
+  String get ai_video_acquire_option_subscribe => '订阅更新';
+  @override
+  String get ai_video_acquire_remember_default => '以后默认';
+  @override
+  String get ai_video_acquire_evidence_original_language => '作品原语言';
+  @override
+  String get ai_video_acquire_evidence_countries => '制作国';
+  @override
+  String get ai_video_acquire_evidence_title_script => '标题文字';
 }
 
 // Path: <root>
@@ -204450,17 +206733,6 @@ class _StringsZhHk extends _StringsEn {
   String video_scrape_ai_confidence({required Object percent}) =>
       'AI confidence ${percent}%';
   @override
-  String get video_search_ai_expand => 'More terms with AI';
-  @override
-  String video_search_ai_expanded({required Object count}) =>
-      'AI suggested ${count} extra search terms';
-  @override
-  String get video_search_ai_rank => 'Rank with AI';
-  @override
-  String get video_search_ai_ranked => 'Results reordered by AI';
-  @override
-  String get video_search_ai_recommended => 'AI pick';
-  @override
   String get shortcut_action_video_screenshot_subtitled => '截圖（含字幕）';
   @override
   String get video_screenshot_subtitled => '帶字幕截圖';
@@ -205018,6 +207290,164 @@ class _StringsZhHk extends _StringsEn {
   String get manga_panel_model_unavailable => 'Panel model unavailable';
   @override
   String get manga_panel_detect_failed => 'Panel detection failed';
+  @override
+  String get ai_feature_video_acquire => 'AI video download';
+  @override
+  String get ai_feature_video_acquire_summary =>
+      'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+  @override
+  String get ai_video_download_section => 'AI video download';
+  @override
+  String get ai_video_download_quality => 'Default quality';
+  @override
+  String get ai_video_download_quality_hint =>
+      'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+  @override
+  String get ai_video_download_quality_unset => 'Not set (ask on first use)';
+  @override
+  String get ai_video_download_quality_ask => 'Ask each time';
+  @override
+  String get ai_video_download_quality_any => 'Any';
+  @override
+  String get ai_video_download_subtitle_language => 'Subtitle language';
+  @override
+  String get ai_video_download_subtitle_language_hint =>
+      'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+  @override
+  String get ai_video_download_subtitle_language_unset =>
+      'Not set (ask on first use)';
+  @override
+  String get ai_video_download_subtitle_language_original =>
+      'Follow the work\'s language';
+  @override
+  String get ai_video_download_subtitle_language_none => 'No subtitles';
+  @override
+  String get ai_video_download_subtitle_language_ask => 'Ask each time';
+  @override
+  String get ai_video_acquire_title => 'AI download';
+  @override
+  String get ai_video_acquire_entry => 'Ask AI to download a work';
+  @override
+  String get ai_video_acquire_input_hint =>
+      'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+  @override
+  String get ai_video_acquire_send => 'Send';
+  @override
+  String get ai_video_acquire_greeting =>
+      'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+  @override
+  String ai_video_acquire_work_not_found({required Object query}) =>
+      'I could not find "${query}". Try another name?';
+  @override
+  String ai_video_acquire_ai_picked(
+          {required Object title, required Object confidence}) =>
+      'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+  @override
+  String ai_video_acquire_work_chosen({required Object title}) =>
+      'Picked: ${title}';
+  @override
+  String ai_video_acquire_already_in_library({required Object title}) =>
+      '${title} is already in your library.';
+  @override
+  String ai_video_acquire_already_in_library_episode(
+          {required Object title, required Object episode}) =>
+      '${title} is already in your library (up to episode ${episode}).';
+  @override
+  String ai_video_acquire_already_subscribed({required Object title}) =>
+      '${title} is already subscribed.';
+  @override
+  String get ai_video_acquire_airing_unknown =>
+      'I could not tell whether it is still airing, so subscribing stays available.';
+  @override
+  String ai_video_acquire_subtitle_resolved(
+          {required Object language, required Object evidence}) =>
+      'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+  @override
+  String get ai_video_acquire_subtitle_unresolved =>
+      'I could not tell this work\'s language. Which subtitle language do you want?';
+  @override
+  String ai_video_acquire_subtitle_remembered({required Object language}) =>
+      'Subtitle language ${language} is saved as this work\'s preference.';
+  @override
+  String ai_video_acquire_summary(
+          {required Object version,
+          required Object count,
+          required Object seeders}) =>
+      '${version} · ${count} episode(s) · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_batch(
+          {required Object version, required Object seeders}) =>
+      '${version} · complete batch · ${seeders} seeders';
+  @override
+  String ai_video_acquire_summary_missing({required Object episodes}) =>
+      'Not found: episode ${episodes}';
+  @override
+  String get ai_video_acquire_no_more_versions => 'No more versions.';
+  @override
+  String ai_video_acquire_submitted_download({required Object count}) =>
+      'Queued ${count} download(s). See the downloads page for progress.';
+  @override
+  String get ai_video_acquire_submitted_subscribe =>
+      'Subscribed. New episodes will download automatically.';
+  @override
+  String ai_video_acquire_failed({required Object message}) =>
+      'Failed: ${message}';
+  @override
+  String get ai_video_acquire_cancelled => 'Cancelled.';
+  @override
+  String ai_video_acquire_ai_unavailable({required Object reason}) =>
+      'AI is unavailable (${reason}); please pick with the buttons.';
+  @override
+  String get ai_video_acquire_unclear =>
+      'I did not get that. Pick an option or say it differently.';
+  @override
+  String get ai_video_acquire_ask_work => 'Which one did you mean?';
+  @override
+  String get ai_video_acquire_ask_season => 'Which season?';
+  @override
+  String get ai_video_acquire_ask_mode =>
+      'It is still airing. Download what is out now, or subscribe for new episodes?';
+  @override
+  String get ai_video_acquire_ask_quality => 'Which quality?';
+  @override
+  String get ai_video_acquire_ask_subtitle_language =>
+      'Which subtitle language? (asked once; change it later in settings)';
+  @override
+  String get ai_video_acquire_ask_target_source =>
+      'Download to which video source?';
+  @override
+  String get ai_video_acquire_ask_resource => 'Use this version?';
+  @override
+  String ai_video_acquire_ask_resolution_fallback({required Object wanted}) =>
+      'No ${wanted} release. Take one of these instead?';
+  @override
+  String get ai_video_acquire_ask_subscribe_fallback =>
+      'No release has enough version evidence to subscribe. Download now instead?';
+  @override
+  String get ai_video_acquire_ask_presence => 'Continue anyway?';
+  @override
+  String get ai_video_acquire_option_confirm => 'Use this';
+  @override
+  String get ai_video_acquire_option_next => 'Another version';
+  @override
+  String get ai_video_acquire_option_continue => 'Continue';
+  @override
+  String get ai_video_acquire_option_none => 'None of these';
+  @override
+  String get ai_video_acquire_option_all => 'All';
+  @override
+  String get ai_video_acquire_option_download => 'Download now';
+  @override
+  String get ai_video_acquire_option_subscribe => 'Subscribe';
+  @override
+  String get ai_video_acquire_remember_default => 'Use as default from now on';
+  @override
+  String get ai_video_acquire_evidence_original_language =>
+      'the work\'s original language';
+  @override
+  String get ai_video_acquire_evidence_countries => 'country of origin';
+  @override
+  String get ai_video_acquire_evidence_title_script => 'the title\'s script';
 }
 
 /// Flat map(s) containing all translations.
@@ -215331,17 +217761,6 @@ extension on _StringsEn {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Screenshot (with subtitles)';
       case 'video_screenshot_subtitled':
@@ -215823,6 +218242,140 @@ extension on _StringsEn {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -226131,17 +228684,6 @@ extension on _StringsAr {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'لقطة شاشة (مع الترجمة)';
       case 'video_screenshot_subtitled':
@@ -226623,6 +229165,140 @@ extension on _StringsAr {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -236976,17 +239652,6 @@ extension on _StringsDe {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Screenshot (mit Untertiteln)';
       case 'video_screenshot_subtitled':
@@ -237468,6 +240133,140 @@ extension on _StringsDe {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -247812,17 +250611,6 @@ extension on _StringsEs {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Captura de pantalla (con subtítulos)';
       case 'video_screenshot_subtitled':
@@ -248304,6 +251092,140 @@ extension on _StringsEs {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -258657,17 +261579,6 @@ extension on _StringsFr {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Capture d\'écran (avec sous-titres)';
       case 'video_screenshot_subtitled':
@@ -259149,6 +262060,140 @@ extension on _StringsFr {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -269473,17 +272518,6 @@ extension on _StringsId {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Tangkapan Layar (dengan subtitle)';
       case 'video_screenshot_subtitled':
@@ -269965,6 +272999,140 @@ extension on _StringsId {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -280311,17 +283479,6 @@ extension on _StringsIt {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Screenshot (con sottotitoli)';
       case 'video_screenshot_subtitled':
@@ -280803,6 +283960,140 @@ extension on _StringsIt {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -291076,17 +294367,6 @@ extension on _StringsJa {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'スクリーンショット（字幕あり）';
       case 'video_screenshot_subtitled':
@@ -291568,6 +294848,140 @@ extension on _StringsJa {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -301845,17 +305259,6 @@ extension on _StringsKo {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return '스크린샷 (자막 포함)';
       case 'video_screenshot_subtitled':
@@ -302337,6 +305740,140 @@ extension on _StringsKo {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -312676,17 +316213,6 @@ extension on _StringsNl {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Schermafbeelding (met ondertitels)';
       case 'video_screenshot_subtitled':
@@ -313168,6 +316694,140 @@ extension on _StringsNl {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -323502,17 +327162,6 @@ extension on _StringsPtBr {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Captura de tela (com legendas)';
       case 'video_screenshot_subtitled':
@@ -323994,6 +327643,140 @@ extension on _StringsPtBr {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -334335,17 +338118,6 @@ extension on _StringsRu {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Скриншот (с субтитрами)';
       case 'video_screenshot_subtitled':
@@ -334827,6 +338599,140 @@ extension on _StringsRu {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -345140,17 +349046,6 @@ extension on _StringsTh {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'ภาพหน้าจอ (พร้อมคำบรรยาย)';
       case 'video_screenshot_subtitled':
@@ -345632,6 +349527,140 @@ extension on _StringsTh {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -355960,17 +359989,6 @@ extension on _StringsTr {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Ekran Görüntüsü (altyazılı)';
       case 'video_screenshot_subtitled':
@@ -356452,6 +360470,140 @@ extension on _StringsTr {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -366774,17 +370926,6 @@ extension on _StringsVi {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return 'Chụp màn hình (kèm phụ đề)';
       case 'video_screenshot_subtitled':
@@ -367266,6 +371407,140 @@ extension on _StringsVi {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
@@ -377494,16 +381769,6 @@ extension on _StringsZhCn {
         return 'AI 判定';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI 置信度 ${percent}%';
-      case 'video_search_ai_expand':
-        return 'AI 补充搜索词';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) => 'AI 补充了 ${count} 个搜索词';
-      case 'video_search_ai_rank':
-        return 'AI 排序';
-      case 'video_search_ai_ranked':
-        return '结果已由 AI 重新排序';
-      case 'video_search_ai_recommended':
-        return 'AI 推荐';
       case 'shortcut_action_video_screenshot_subtitled':
         return '截图（含字幕）';
       case 'video_screenshot_subtitled':
@@ -377981,6 +382246,134 @@ extension on _StringsZhCn {
         return '分镜模型不可用';
       case 'manga_panel_detect_failed':
         return '分镜检测失败';
+      case 'ai_feature_video_acquire':
+        return 'AI 下视频';
+      case 'ai_feature_video_acquire_summary':
+        return '跟 AI 说作品名，由它解析你的要求、在多义作品与版本里选择，然后下载或订阅';
+      case 'ai_video_download_section':
+        return 'AI 下视频';
+      case 'ai_video_download_quality':
+        return '默认画质';
+      case 'ai_video_download_quality_hint':
+        return 'AI 下载助手选版本时使用；「每次询问」= 每次都问。';
+      case 'ai_video_download_quality_unset':
+        return '未设置（首次使用时询问）';
+      case 'ai_video_download_quality_ask':
+        return '每次询问';
+      case 'ai_video_download_quality_any':
+        return '不限';
+      case 'ai_video_download_subtitle_language':
+        return '字幕语言';
+      case 'ai_video_download_subtitle_language_hint':
+        return '字幕总会自动配；这里决定要哪种语言。「跟随作品语言」= 作品原声语言。';
+      case 'ai_video_download_subtitle_language_unset':
+        return '未设置（首次使用时询问）';
+      case 'ai_video_download_subtitle_language_original':
+        return '跟随作品语言';
+      case 'ai_video_download_subtitle_language_none':
+        return '不配字幕';
+      case 'ai_video_download_subtitle_language_ask':
+        return '每次询问';
+      case 'ai_video_acquire_title':
+        return 'AI 下视频';
+      case 'ai_video_acquire_entry':
+        return '让 AI 帮我下';
+      case 'ai_video_acquire_input_hint':
+        return '说作品名，比如「间谍过家家 第二季」';
+      case 'ai_video_acquire_send':
+        return '发送';
+      case 'ai_video_acquire_greeting':
+        return '想下哪部？我来找作品、挑版本，然后下载或订阅。';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) => '没找到「${query}」，换个名字试试？';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            '已选：${title}（AI 判定，${confidence}）。想换就点下面的候选。';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => '已选：${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) => '「${title}」已经在库里了。';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '「${title}」已经在库里了（已到第 ${episode} 集）。';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '「${title}」已经订阅了。';
+      case 'ai_video_acquire_airing_unknown':
+        return '判不出是否还在放送，订阅选项照样给你。';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            '字幕：${language}（跟随作品语言，依据：${evidence}）。';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return '这部作品的语言判不出来，字幕要哪种？';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) => '字幕语言「${language}」已记为这部作品的偏好。';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} 集 · 做种 ${seeders}';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · 整季合集 · 做种 ${seeders}';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => '没找到：第 ${episodes} 集';
+      case 'ai_video_acquire_no_more_versions':
+        return '没有更多版本了。';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) => '已入队 ${count} 条下载，进度看下载页。';
+      case 'ai_video_acquire_submitted_subscribe':
+        return '已订阅，新集会自动下载。';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => '失败：${message}';
+      case 'ai_video_acquire_cancelled':
+        return '已取消。';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) => 'AI 暂不可用（${reason}），请点选。';
+      case 'ai_video_acquire_unclear':
+        return '没听懂，请点选或换个说法。';
+      case 'ai_video_acquire_ask_work':
+        return '你要的是哪一部？';
+      case 'ai_video_acquire_ask_season':
+        return '哪一季？';
+      case 'ai_video_acquire_ask_mode':
+        return '这部还在放送。要现在下载已出的，还是订阅追更？';
+      case 'ai_video_acquire_ask_quality':
+        return '要什么画质？';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return '字幕语言怎么配？（只问这一次，之后可在设置里改）';
+      case 'ai_video_acquire_ask_target_source':
+        return '下到哪个视频来源？';
+      case 'ai_video_acquire_ask_resource':
+        return '就用这个版本？';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) => '没有 ${wanted} 的版本，要这些里的吗？';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return '没有可订阅的版本（缺发布组 / 清晰度证据），改为直接下载？';
+      case 'ai_video_acquire_ask_presence':
+        return '仍要继续吗？';
+      case 'ai_video_acquire_option_confirm':
+        return '就这个';
+      case 'ai_video_acquire_option_next':
+        return '换一个';
+      case 'ai_video_acquire_option_continue':
+        return '继续';
+      case 'ai_video_acquire_option_none':
+        return '都不是';
+      case 'ai_video_acquire_option_all':
+        return '全部';
+      case 'ai_video_acquire_option_download':
+        return '直接下载';
+      case 'ai_video_acquire_option_subscribe':
+        return '订阅更新';
+      case 'ai_video_acquire_remember_default':
+        return '以后默认';
+      case 'ai_video_acquire_evidence_original_language':
+        return '作品原语言';
+      case 'ai_video_acquire_evidence_countries':
+        return '制作国';
+      case 'ai_video_acquire_evidence_title_script':
+        return '标题文字';
       default:
         return null;
     }
@@ -388232,17 +392625,6 @@ extension on _StringsZhHk {
         return 'Matched by AI';
       case 'video_scrape_ai_confidence':
         return ({required Object percent}) => 'AI confidence ${percent}%';
-      case 'video_search_ai_expand':
-        return 'More terms with AI';
-      case 'video_search_ai_expanded':
-        return ({required Object count}) =>
-            'AI suggested ${count} extra search terms';
-      case 'video_search_ai_rank':
-        return 'Rank with AI';
-      case 'video_search_ai_ranked':
-        return 'Results reordered by AI';
-      case 'video_search_ai_recommended':
-        return 'AI pick';
       case 'shortcut_action_video_screenshot_subtitled':
         return '截圖（含字幕）';
       case 'video_screenshot_subtitled':
@@ -388724,6 +393106,140 @@ extension on _StringsZhHk {
         return 'Panel model unavailable';
       case 'manga_panel_detect_failed':
         return 'Panel detection failed';
+      case 'ai_feature_video_acquire':
+        return 'AI video download';
+      case 'ai_feature_video_acquire_summary':
+        return 'Tell AI a work; it parses what you want, picks among matching works and versions, then downloads or subscribes';
+      case 'ai_video_download_section':
+        return 'AI video download';
+      case 'ai_video_download_quality':
+        return 'Default quality';
+      case 'ai_video_download_quality_hint':
+        return 'Used when the AI download assistant picks a release; "Ask each time" asks on every request.';
+      case 'ai_video_download_quality_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_quality_ask':
+        return 'Ask each time';
+      case 'ai_video_download_quality_any':
+        return 'Any';
+      case 'ai_video_download_subtitle_language':
+        return 'Subtitle language';
+      case 'ai_video_download_subtitle_language_hint':
+        return 'Subtitles are always fetched; this decides which language. "Follow the work" uses the work\'s own language.';
+      case 'ai_video_download_subtitle_language_unset':
+        return 'Not set (ask on first use)';
+      case 'ai_video_download_subtitle_language_original':
+        return 'Follow the work\'s language';
+      case 'ai_video_download_subtitle_language_none':
+        return 'No subtitles';
+      case 'ai_video_download_subtitle_language_ask':
+        return 'Ask each time';
+      case 'ai_video_acquire_title':
+        return 'AI download';
+      case 'ai_video_acquire_entry':
+        return 'Ask AI to download a work';
+      case 'ai_video_acquire_input_hint':
+        return 'Tell me which work to download, e.g. "SPY×FAMILY season 2"';
+      case 'ai_video_acquire_send':
+        return 'Send';
+      case 'ai_video_acquire_greeting':
+        return 'Which work do you want? I will find it, pick a release and download or subscribe for you.';
+      case 'ai_video_acquire_work_not_found':
+        return ({required Object query}) =>
+            'I could not find "${query}". Try another name?';
+      case 'ai_video_acquire_ai_picked':
+        return ({required Object title, required Object confidence}) =>
+            'Picked: ${title} (AI, ${confidence}). Tap a candidate below to change.';
+      case 'ai_video_acquire_work_chosen':
+        return ({required Object title}) => 'Picked: ${title}';
+      case 'ai_video_acquire_already_in_library':
+        return ({required Object title}) =>
+            '${title} is already in your library.';
+      case 'ai_video_acquire_already_in_library_episode':
+        return ({required Object title, required Object episode}) =>
+            '${title} is already in your library (up to episode ${episode}).';
+      case 'ai_video_acquire_already_subscribed':
+        return ({required Object title}) => '${title} is already subscribed.';
+      case 'ai_video_acquire_airing_unknown':
+        return 'I could not tell whether it is still airing, so subscribing stays available.';
+      case 'ai_video_acquire_subtitle_resolved':
+        return ({required Object language, required Object evidence}) =>
+            'Subtitles: ${language} (follows the work\'s language, by ${evidence}).';
+      case 'ai_video_acquire_subtitle_unresolved':
+        return 'I could not tell this work\'s language. Which subtitle language do you want?';
+      case 'ai_video_acquire_subtitle_remembered':
+        return ({required Object language}) =>
+            'Subtitle language ${language} is saved as this work\'s preference.';
+      case 'ai_video_acquire_summary':
+        return (
+                {required Object version,
+                required Object count,
+                required Object seeders}) =>
+            '${version} · ${count} episode(s) · ${seeders} seeders';
+      case 'ai_video_acquire_summary_batch':
+        return ({required Object version, required Object seeders}) =>
+            '${version} · complete batch · ${seeders} seeders';
+      case 'ai_video_acquire_summary_missing':
+        return ({required Object episodes}) => 'Not found: episode ${episodes}';
+      case 'ai_video_acquire_no_more_versions':
+        return 'No more versions.';
+      case 'ai_video_acquire_submitted_download':
+        return ({required Object count}) =>
+            'Queued ${count} download(s). See the downloads page for progress.';
+      case 'ai_video_acquire_submitted_subscribe':
+        return 'Subscribed. New episodes will download automatically.';
+      case 'ai_video_acquire_failed':
+        return ({required Object message}) => 'Failed: ${message}';
+      case 'ai_video_acquire_cancelled':
+        return 'Cancelled.';
+      case 'ai_video_acquire_ai_unavailable':
+        return ({required Object reason}) =>
+            'AI is unavailable (${reason}); please pick with the buttons.';
+      case 'ai_video_acquire_unclear':
+        return 'I did not get that. Pick an option or say it differently.';
+      case 'ai_video_acquire_ask_work':
+        return 'Which one did you mean?';
+      case 'ai_video_acquire_ask_season':
+        return 'Which season?';
+      case 'ai_video_acquire_ask_mode':
+        return 'It is still airing. Download what is out now, or subscribe for new episodes?';
+      case 'ai_video_acquire_ask_quality':
+        return 'Which quality?';
+      case 'ai_video_acquire_ask_subtitle_language':
+        return 'Which subtitle language? (asked once; change it later in settings)';
+      case 'ai_video_acquire_ask_target_source':
+        return 'Download to which video source?';
+      case 'ai_video_acquire_ask_resource':
+        return 'Use this version?';
+      case 'ai_video_acquire_ask_resolution_fallback':
+        return ({required Object wanted}) =>
+            'No ${wanted} release. Take one of these instead?';
+      case 'ai_video_acquire_ask_subscribe_fallback':
+        return 'No release has enough version evidence to subscribe. Download now instead?';
+      case 'ai_video_acquire_ask_presence':
+        return 'Continue anyway?';
+      case 'ai_video_acquire_option_confirm':
+        return 'Use this';
+      case 'ai_video_acquire_option_next':
+        return 'Another version';
+      case 'ai_video_acquire_option_continue':
+        return 'Continue';
+      case 'ai_video_acquire_option_none':
+        return 'None of these';
+      case 'ai_video_acquire_option_all':
+        return 'All';
+      case 'ai_video_acquire_option_download':
+        return 'Download now';
+      case 'ai_video_acquire_option_subscribe':
+        return 'Subscribe';
+      case 'ai_video_acquire_remember_default':
+        return 'Use as default from now on';
+      case 'ai_video_acquire_evidence_original_language':
+        return 'the work\'s original language';
+      case 'ai_video_acquire_evidence_countries':
+        return 'country of origin';
+      case 'ai_video_acquire_evidence_title_script':
+        return 'the title\'s script';
       default:
         return null;
     }
