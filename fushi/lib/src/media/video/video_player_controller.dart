@@ -1657,9 +1657,15 @@ class VideoPlayerController extends ChangeNotifier
       );
       // 测试 / 取证钩子（与 runner 的 FUSHI_TEST_* 同类）：FUSHI_TEST_MPV_LOG_FILE 指定
       // 路径时让 libmpv 把 verbose 日志写到该文件（VO / 交换链 / hwdec 协商全在里面，
-      // HDR 直通真机取证靠它）。不设即零行为。
-      final String? mpvLogFile =
-          Platform.environment['FUSHI_TEST_MPV_LOG_FILE'];
+      // HDR 直通真机取证靠它）。不设即零行为。环境变量之外也认同名 `--dart-define`：
+      // Android / iOS 真机的进程环境从外面投不进来，编译期定义是唯一入口
+      // （Android 写进 `/data/user/0/<applicationId>/files/…` 再 `run-as` 取回）。
+      const String mpvLogFileDefine = String.fromEnvironment(
+        'FUSHI_TEST_MPV_LOG_FILE',
+      );
+      final String? mpvLogFile = mpvLogFileDefine.isNotEmpty
+          ? mpvLogFileDefine
+          : Platform.environment['FUSHI_TEST_MPV_LOG_FILE'];
       if (mpvLogFile != null && mpvLogFile.isNotEmpty) {
         unawaited(_setMpvProperties(<String, String>{
           'log-file': mpvLogFile,
