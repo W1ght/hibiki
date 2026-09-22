@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 90168 (5304 per locale)
+/// Strings: 90185 (5305 per locale)
 ///
-/// Built on 2026-09-22 at 07:11 UTC
+/// Built on 2026-09-22 at 09:42 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7421,6 +7421,8 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get shortcut_action_video_toggle_mini_window => 'Toggle mini window';
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -19972,6 +19974,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -32751,6 +32756,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -45583,6 +45591,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -58452,6 +58463,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -71120,6 +71134,9 @@ class _StringsId extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -83880,6 +83897,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -96021,6 +96041,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -108172,6 +108195,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -120892,6 +120918,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -133665,6 +133694,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -146413,6 +146445,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -158962,6 +158997,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -171625,6 +171663,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -184261,6 +184302,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 // Path: <root>
@@ -195837,6 +195881,8 @@ class _StringsZhCn extends _StringsEn {
   String get shortcut_action_video_toggle_mini_window => '切换小窗';
   @override
   String get popup_ctx_confirm_failed => '制卡没能开始——回点制卡按钮时查词弹窗已经关掉了。请重试。';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome => '切换小窗控件';
 }
 
 // Path: <root>
@@ -207662,6 +207708,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get popup_ctx_confirm_failed =>
       'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+  @override
+  String get shortcut_action_video_toggle_mini_chrome =>
+      'Toggle mini window controls';
 }
 
 /// Flat map(s) containing all translations.
@@ -218600,6 +218649,8 @@ extension on _StringsEn {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -229533,6 +229584,8 @@ extension on _StringsAr {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -240511,6 +240564,8 @@ extension on _StringsDe {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -251480,6 +251535,8 @@ extension on _StringsEs {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -262458,6 +262515,8 @@ extension on _StringsFr {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -273407,6 +273466,8 @@ extension on _StringsId {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -284378,6 +284439,8 @@ extension on _StringsIt {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -295276,6 +295339,8 @@ extension on _StringsJa {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -306178,6 +306243,8 @@ extension on _StringsKo {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -317142,6 +317209,8 @@ extension on _StringsNl {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -328101,6 +328170,8 @@ extension on _StringsPtBr {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -339067,6 +339138,8 @@ extension on _StringsRu {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -350005,6 +350078,8 @@ extension on _StringsTh {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -360958,6 +361033,8 @@ extension on _StringsTr {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -371905,6 +371982,8 @@ extension on _StringsVi {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
@@ -382748,6 +382827,8 @@ extension on _StringsZhCn {
         return '切换小窗';
       case 'popup_ctx_confirm_failed':
         return '制卡没能开始——回点制卡按钮时查词弹窗已经关掉了。请重试。';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return '切换小窗控件';
       default:
         return null;
     }
@@ -393624,6 +393705,8 @@ extension on _StringsZhHk {
         return 'Toggle mini window';
       case 'popup_ctx_confirm_failed':
         return 'Mining did not start - the lookup popup closed before the card could be created. Try again.';
+      case 'shortcut_action_video_toggle_mini_chrome':
+        return 'Toggle mini window controls';
       default:
         return null;
     }
