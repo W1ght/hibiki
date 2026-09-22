@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 87805 (5165 per locale)
+/// Strings: 87856 (5168 per locale)
 ///
-/// Built on 2026-09-22 at 10:44 UTC
+/// Built on 2026-09-22 at 10:57 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7215,6 +7215,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Could not notify the host that streaming has ended';
   String get game_stream_available => 'Game stream available';
   String get game_stream_join_action => 'Join';
+  String get game_stream_keys => 'Configure controls';
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -19421,6 +19425,13 @@ class _StringsAr extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -31855,6 +31866,13 @@ class _StringsDe extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -44342,6 +44360,13 @@ class _StringsEs extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -56866,6 +56891,13 @@ class _StringsFr extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -69189,6 +69221,13 @@ class _StringsId extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -81604,6 +81643,13 @@ class _StringsIt extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -93400,6 +93446,13 @@ class _StringsJa extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -105206,6 +105259,13 @@ class _StringsKo extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -117581,6 +117641,13 @@ class _StringsNl extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -130009,6 +130076,13 @@ class _StringsPtBr extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -142412,6 +142486,13 @@ class _StringsRu extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -154616,6 +154697,13 @@ class _StringsTh extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -166934,6 +167022,13 @@ class _StringsTr extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -179225,6 +179320,13 @@ class _StringsVi extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 // Path: <root>
@@ -190480,6 +190582,12 @@ class _StringsZhCn extends _StringsEn {
   String get game_stream_available => '可加入游戏串流';
   @override
   String get game_stream_join_action => '加入';
+  @override
+  String get game_stream_keys => '配置手柄按键';
+  @override
+  String get game_stream_keys_hint => '按键映射仅用于本次串流会话。';
+  @override
+  String get game_stream_key_default => '默认';
 }
 
 // Path: <root>
@@ -201960,6 +202068,13 @@ class _StringsZhHk extends _StringsEn {
   String get game_stream_available => 'Game stream available';
   @override
   String get game_stream_join_action => 'Join';
+  @override
+  String get game_stream_keys => 'Configure controls';
+  @override
+  String get game_stream_keys_hint =>
+      'These key mappings apply only to this streaming session.';
+  @override
+  String get game_stream_key_default => 'Default';
 }
 
 /// Flat map(s) containing all translations.
@@ -212602,6 +212717,12 @@ extension on _StringsEn {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -223239,6 +223360,12 @@ extension on _StringsAr {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -233921,6 +234048,12 @@ extension on _StringsDe {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -244594,6 +244727,12 @@ extension on _StringsEs {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -255276,6 +255415,12 @@ extension on _StringsFr {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -265929,6 +266074,12 @@ extension on _StringsId {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -276604,6 +276755,12 @@ extension on _StringsIt {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -287206,6 +287363,12 @@ extension on _StringsJa {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -297812,6 +297975,12 @@ extension on _StringsKo {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -308480,6 +308649,12 @@ extension on _StringsNl {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -319143,6 +319318,12 @@ extension on _StringsPtBr {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -329813,6 +329994,12 @@ extension on _StringsRu {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -340455,6 +340642,12 @@ extension on _StringsTh {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -351112,6 +351305,12 @@ extension on _StringsTr {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -361763,6 +361962,12 @@ extension on _StringsVi {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
@@ -372318,6 +372523,12 @@ extension on _StringsZhCn {
         return '可加入游戏串流';
       case 'game_stream_join_action':
         return '加入';
+      case 'game_stream_keys':
+        return '配置手柄按键';
+      case 'game_stream_keys_hint':
+        return '按键映射仅用于本次串流会话。';
+      case 'game_stream_key_default':
+        return '默认';
       default:
         return null;
     }
@@ -382898,6 +383109,12 @@ extension on _StringsZhHk {
         return 'Game stream available';
       case 'game_stream_join_action':
         return 'Join';
+      case 'game_stream_keys':
+        return 'Configure controls';
+      case 'game_stream_keys_hint':
+        return 'These key mappings apply only to this streaming session.';
+      case 'game_stream_key_default':
+        return 'Default';
       default:
         return null;
     }
