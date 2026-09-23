@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92854 (5462 per locale)
+/// Strings: 92905 (5465 per locale)
 ///
-/// Built on 2026-09-23 at 10:31 UTC
+/// Built on 2026-09-23 at 15:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7730,6 +7730,10 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -20745,6 +20749,13 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -34001,6 +34012,13 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -47308,6 +47326,13 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -60653,6 +60678,13 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -73788,6 +73820,13 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -87024,6 +87063,13 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -99621,6 +99667,13 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -112228,6 +112281,13 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -125418,6 +125478,13 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -138662,6 +138729,13 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -151880,6 +151954,13 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -164894,6 +164975,13 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -178023,6 +178111,13 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -191123,6 +191218,13 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -203107,6 +203209,13 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       '含横排文字模型约 284 MB。在 Windows 上自动使用 GPU 图像编码与 CPU 文字解码，不可用时使用 CPU。部分名字和手写文字可能更不准确。对新启动的 OCR 任务生效。';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr（NVIDIA GPU 加速）';
+  @override
+  String get manga_ocr_cuda_desc =>
+      '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
+  @override
+  String get manga_ocr_runtime_installing => '正在安装本地 OCR 引擎…';
 }
 
 // Path: <root>
@@ -215386,6 +215495,13 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_ocr_baberu_desc =>
       'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 /// Flat map(s) containing all translations.
@@ -226648,6 +226764,12 @@ extension on _StringsEn {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -237905,6 +238027,12 @@ extension on _StringsAr {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -249211,6 +249339,12 @@ extension on _StringsDe {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -260507,6 +260641,12 @@ extension on _StringsEs {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -271811,6 +271951,12 @@ extension on _StringsFr {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -283085,6 +283231,12 @@ extension on _StringsId {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -294382,6 +294534,12 @@ extension on _StringsIt {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -305603,6 +305761,12 @@ extension on _StringsJa {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -316829,6 +316993,12 @@ extension on _StringsKo {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -328121,6 +328291,12 @@ extension on _StringsNl {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -339408,6 +339584,12 @@ extension on _StringsPtBr {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -350701,6 +350883,12 @@ extension on _StringsRu {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -361963,6 +362151,12 @@ extension on _StringsTh {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -373241,6 +373435,12 @@ extension on _StringsTr {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -384513,6 +384713,12 @@ extension on _StringsVi {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -395677,6 +395883,12 @@ extension on _StringsZhCn {
         return '完全离线。首次使用需下载所选模型，速度和准确度取决于模型与硬件。';
       case 'manga_ocr_baberu_desc':
         return '含横排文字模型约 284 MB。在 Windows 上自动使用 GPU 图像编码与 CPU 文字解码，不可用时使用 CPU。部分名字和手写文字可能更不准确。对新启动的 OCR 任务生效。';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr（NVIDIA GPU 加速）';
+      case 'manga_ocr_cuda_desc':
+        return '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
+      case 'manga_ocr_runtime_installing':
+        return '正在安装本地 OCR 引擎…';
       default:
         return null;
     }
@@ -406876,6 +407088,12 @@ extension on _StringsZhHk {
         return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
       case 'manga_ocr_baberu_desc':
         return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
