@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92701 (5453 per locale)
+/// Strings: 92718 (5454 per locale)
 ///
-/// Built on 2026-09-23 at 03:52 UTC
+/// Built on 2026-09-23 at 06:23 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7716,7 +7716,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
       'Paired Android devices can start games from this PC\'s library and stream them';
   String get manga_reader_ocr_volume => 'Recognize this volume';
   String get manga_reader_ocr_queued => 'Queued';
-  String get manga_reader_ocr_unavailable_short => 'OCR unavailable';
+  String get manga_reader_ocr_unavailable_short =>
+      'No OCR engine · download a model or switch engines in OCR settings';
+  String get manga_reader_ocr_rerun => 'Re-run OCR on this volume…';
 }
 
 // Path: <root>
@@ -20709,7 +20711,10 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'في قائمة الانتظار';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR غير متاح';
+  String get manga_reader_ocr_unavailable_short =>
+      'لا يوجد محرك OCR · نزّل نموذجًا أو غيّر المحرك في إعدادات OCR';
+  @override
+  String get manga_reader_ocr_rerun => 'إعادة تشغيل OCR لهذا المجلد…';
 }
 
 // Path: <root>
@@ -33943,7 +33948,10 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'In Warteschlange';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR nicht verfügbar';
+  String get manga_reader_ocr_unavailable_short =>
+      'Keine OCR-Engine · Modell in den OCR-Einstellungen laden oder Engine wechseln';
+  @override
+  String get manga_reader_ocr_rerun => 'OCR für diesen Band neu ausführen…';
 }
 
 // Path: <root>
@@ -47227,7 +47235,11 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'En cola';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR no disponible';
+  String get manga_reader_ocr_unavailable_short =>
+      'Sin motor de OCR · descarga un modelo o cambia de motor en los ajustes de OCR';
+  @override
+  String get manga_reader_ocr_rerun =>
+      'Volver a ejecutar el OCR de este volumen…';
 }
 
 // Path: <root>
@@ -60550,7 +60562,10 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'En attente';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR indisponible';
+  String get manga_reader_ocr_unavailable_short =>
+      'Aucun moteur OCR · téléchargez un modèle ou changez de moteur dans les réglages OCR';
+  @override
+  String get manga_reader_ocr_rerun => 'Relancer l’OCR de ce volume…';
 }
 
 // Path: <root>
@@ -73663,7 +73678,10 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'Dalam antrean';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR tidak tersedia';
+  String get manga_reader_ocr_unavailable_short =>
+      'Tidak ada mesin OCR · unduh model atau ganti mesin di pengaturan OCR';
+  @override
+  String get manga_reader_ocr_rerun => 'Jalankan ulang OCR untuk volume ini…';
 }
 
 // Path: <root>
@@ -86877,7 +86895,10 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'In coda';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR non disponibile';
+  String get manga_reader_ocr_unavailable_short =>
+      'Nessun motore OCR · scarica un modello o cambia motore nelle impostazioni OCR';
+  @override
+  String get manga_reader_ocr_rerun => 'Riesegui l’OCR di questo volume…';
 }
 
 // Path: <root>
@@ -99452,7 +99473,10 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => '待機中';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR 使用不可';
+  String get manga_reader_ocr_unavailable_short =>
+      '使える OCR エンジンがありません · OCR 設定でモデルをダウンロードするかエンジンを変更してください';
+  @override
+  String get manga_reader_ocr_rerun => 'この巻を再 OCR…';
 }
 
 // Path: <root>
@@ -112037,7 +112061,10 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => '대기 중';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR 사용 불가';
+  String get manga_reader_ocr_unavailable_short =>
+      '사용 가능한 OCR 엔진 없음 · OCR 설정에서 모델을 다운로드하거나 엔진을 바꾸세요';
+  @override
+  String get manga_reader_ocr_rerun => '이 권 OCR 다시 실행…';
 }
 
 // Path: <root>
@@ -125205,7 +125232,10 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'In wachtrij';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR niet beschikbaar';
+  String get manga_reader_ocr_unavailable_short =>
+      'Geen OCR-engine · download een model of kies een andere engine in de OCR-instellingen';
+  @override
+  String get manga_reader_ocr_rerun => 'OCR voor dit deel opnieuw uitvoeren…';
 }
 
 // Path: <root>
@@ -138427,7 +138457,10 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'Na fila';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR indisponível';
+  String get manga_reader_ocr_unavailable_short =>
+      'Nenhum mecanismo de OCR · baixe um modelo ou troque de mecanismo nas configurações de OCR';
+  @override
+  String get manga_reader_ocr_rerun => 'Refazer o OCR deste volume…';
 }
 
 // Path: <root>
@@ -151623,7 +151656,10 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'В очереди';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR недоступно';
+  String get manga_reader_ocr_unavailable_short =>
+      'Нет движка OCR · загрузите модель или смените движок в настройках OCR';
+  @override
+  String get manga_reader_ocr_rerun => 'Повторно распознать этот том…';
 }
 
 // Path: <root>
@@ -164615,7 +164651,10 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'อยู่ในคิว';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR ใช้ไม่ได้';
+  String get manga_reader_ocr_unavailable_short =>
+      'ไม่มีเอนจิน OCR · ดาวน์โหลดโมเดลหรือเปลี่ยนเอนจินในการตั้งค่า OCR';
+  @override
+  String get manga_reader_ocr_rerun => 'รัน OCR เล่มนี้ใหม่…';
 }
 
 // Path: <root>
@@ -177722,7 +177761,10 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'Sırada';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR kullanılamıyor';
+  String get manga_reader_ocr_unavailable_short =>
+      'OCR motoru yok · OCR ayarlarından model indirin veya motoru değiştirin';
+  @override
+  String get manga_reader_ocr_rerun => 'Bu cilt için OCR’ı yeniden çalıştır…';
 }
 
 // Path: <root>
@@ -190800,7 +190842,10 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => 'Đang chờ';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR không khả dụng';
+  String get manga_reader_ocr_unavailable_short =>
+      'Không có công cụ OCR · hãy tải mô hình hoặc đổi công cụ trong cài đặt OCR';
+  @override
+  String get manga_reader_ocr_rerun => 'Chạy lại OCR cho tập này…';
 }
 
 // Path: <root>
@@ -202762,7 +202807,10 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => '排队中';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR 不可用';
+  String get manga_reader_ocr_unavailable_short =>
+      '没有可用的 OCR 引擎 · 请在 OCR 设置中下载模型或换引擎';
+  @override
+  String get manga_reader_ocr_rerun => '重新识别本卷…';
 }
 
 // Path: <root>
@@ -215018,7 +215066,10 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_reader_ocr_queued => '排隊中';
   @override
-  String get manga_reader_ocr_unavailable_short => 'OCR 不可用';
+  String get manga_reader_ocr_unavailable_short =>
+      '沒有可用的 OCR 引擎 · 請在 OCR 設定中下載模型或更換引擎';
+  @override
+  String get manga_reader_ocr_rerun => '重新識別本卷…';
 }
 
 /// Flat map(s) containing all translations.
@@ -226262,7 +226313,9 @@ extension on _StringsEn {
       case 'manga_reader_ocr_queued':
         return 'Queued';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR unavailable';
+        return 'No OCR engine · download a model or switch engines in OCR settings';
+      case 'manga_reader_ocr_rerun':
+        return 'Re-run OCR on this volume…';
       default:
         return null;
     }
@@ -237501,7 +237554,9 @@ extension on _StringsAr {
       case 'manga_reader_ocr_queued':
         return 'في قائمة الانتظار';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR غير متاح';
+        return 'لا يوجد محرك OCR · نزّل نموذجًا أو غيّر المحرك في إعدادات OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'إعادة تشغيل OCR لهذا المجلد…';
       default:
         return null;
     }
@@ -248789,7 +248844,9 @@ extension on _StringsDe {
       case 'manga_reader_ocr_queued':
         return 'In Warteschlange';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR nicht verfügbar';
+        return 'Keine OCR-Engine · Modell in den OCR-Einstellungen laden oder Engine wechseln';
+      case 'manga_reader_ocr_rerun':
+        return 'OCR für diesen Band neu ausführen…';
       default:
         return null;
     }
@@ -260067,7 +260124,9 @@ extension on _StringsEs {
       case 'manga_reader_ocr_queued':
         return 'En cola';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR no disponible';
+        return 'Sin motor de OCR · descarga un modelo o cambia de motor en los ajustes de OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'Volver a ejecutar el OCR de este volumen…';
       default:
         return null;
     }
@@ -271353,7 +271412,9 @@ extension on _StringsFr {
       case 'manga_reader_ocr_queued':
         return 'En attente';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR indisponible';
+        return 'Aucun moteur OCR · téléchargez un modèle ou changez de moteur dans les réglages OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'Relancer l’OCR de ce volume…';
       default:
         return null;
     }
@@ -282609,7 +282670,9 @@ extension on _StringsId {
       case 'manga_reader_ocr_queued':
         return 'Dalam antrean';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR tidak tersedia';
+        return 'Tidak ada mesin OCR · unduh model atau ganti mesin di pengaturan OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'Jalankan ulang OCR untuk volume ini…';
       default:
         return null;
     }
@@ -293888,7 +293951,9 @@ extension on _StringsIt {
       case 'manga_reader_ocr_queued':
         return 'In coda';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR non disponibile';
+        return 'Nessun motore OCR · scarica un modello o cambia motore nelle impostazioni OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'Riesegui l’OCR di questo volume…';
       default:
         return null;
     }
@@ -305091,7 +305156,9 @@ extension on _StringsJa {
       case 'manga_reader_ocr_queued':
         return '待機中';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR 使用不可';
+        return '使える OCR エンジンがありません · OCR 設定でモデルをダウンロードするかエンジンを変更してください';
+      case 'manga_reader_ocr_rerun':
+        return 'この巻を再 OCR…';
       default:
         return null;
     }
@@ -316299,7 +316366,9 @@ extension on _StringsKo {
       case 'manga_reader_ocr_queued':
         return '대기 중';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR 사용 불가';
+        return '사용 가능한 OCR 엔진 없음 · OCR 설정에서 모델을 다운로드하거나 엔진을 바꾸세요';
+      case 'manga_reader_ocr_rerun':
+        return '이 권 OCR 다시 실행…';
       default:
         return null;
     }
@@ -327573,7 +327642,9 @@ extension on _StringsNl {
       case 'manga_reader_ocr_queued':
         return 'In wachtrij';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR niet beschikbaar';
+        return 'Geen OCR-engine · download een model of kies een andere engine in de OCR-instellingen';
+      case 'manga_reader_ocr_rerun':
+        return 'OCR voor dit deel opnieuw uitvoeren…';
       default:
         return null;
     }
@@ -338842,7 +338913,9 @@ extension on _StringsPtBr {
       case 'manga_reader_ocr_queued':
         return 'Na fila';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR indisponível';
+        return 'Nenhum mecanismo de OCR · baixe um modelo ou troque de mecanismo nas configurações de OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'Refazer o OCR deste volume…';
       default:
         return null;
     }
@@ -350117,7 +350190,9 @@ extension on _StringsRu {
       case 'manga_reader_ocr_queued':
         return 'В очереди';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR недоступно';
+        return 'Нет движка OCR · загрузите модель или смените движок в настройках OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'Повторно распознать этот том…';
       default:
         return null;
     }
@@ -361361,7 +361436,9 @@ extension on _StringsTh {
       case 'manga_reader_ocr_queued':
         return 'อยู่ในคิว';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR ใช้ไม่ได้';
+        return 'ไม่มีเอนจิน OCR · ดาวน์โหลดโมเดลหรือเปลี่ยนเอนจินในการตั้งค่า OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'รัน OCR เล่มนี้ใหม่…';
       default:
         return null;
     }
@@ -372621,7 +372698,9 @@ extension on _StringsTr {
       case 'manga_reader_ocr_queued':
         return 'Sırada';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR kullanılamıyor';
+        return 'OCR motoru yok · OCR ayarlarından model indirin veya motoru değiştirin';
+      case 'manga_reader_ocr_rerun':
+        return 'Bu cilt için OCR’ı yeniden çalıştır…';
       default:
         return null;
     }
@@ -383875,7 +383954,9 @@ extension on _StringsVi {
       case 'manga_reader_ocr_queued':
         return 'Đang chờ';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR không khả dụng';
+        return 'Không có công cụ OCR · hãy tải mô hình hoặc đổi công cụ trong cài đặt OCR';
+      case 'manga_reader_ocr_rerun':
+        return 'Chạy lại OCR cho tập này…';
       default:
         return null;
     }
@@ -395021,7 +395102,9 @@ extension on _StringsZhCn {
       case 'manga_reader_ocr_queued':
         return '排队中';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR 不可用';
+        return '没有可用的 OCR 引擎 · 请在 OCR 设置中下载模型或换引擎';
+      case 'manga_reader_ocr_rerun':
+        return '重新识别本卷…';
       default:
         return null;
     }
@@ -406202,7 +406285,9 @@ extension on _StringsZhHk {
       case 'manga_reader_ocr_queued':
         return '排隊中';
       case 'manga_reader_ocr_unavailable_short':
-        return 'OCR 不可用';
+        return '沒有可用的 OCR 引擎 · 請在 OCR 設定中下載模型或更換引擎';
+      case 'manga_reader_ocr_rerun':
+        return '重新識別本卷…';
       default:
         return null;
     }
