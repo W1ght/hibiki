@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92684 (5452 per locale)
+/// Strings: 92701 (5453 per locale)
 ///
-/// Built on 2026-09-23 at 02:50 UTC
+/// Built on 2026-09-23 at 03:52 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7601,15 +7601,13 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_reader_animate_transitions => 'Animate page transitions';
   String get manga_reader_lookup_on_hover => 'Lookup OCR text on hover';
   String get manga_reader_ocr_trigger => 'OCR trigger';
-  String get manga_reader_ocr_automatic => 'While reading';
+  String get manga_reader_ocr_automatic => 'On open';
   String get manga_reader_ocr_manual => 'Manual';
-  String get manga_reader_parallel_ocr_tasks => 'Parallel OCR tasks';
-  String get manga_reader_ocr_current => 'Recognize visible pages';
   String get manga_reader_back_to_start => 'Back to the beginning';
   String get reader_settings_panel_move_left => 'Move settings to the left';
   String get reader_settings_panel_move_right => 'Move settings to the right';
   String get manga_reader_ocr_engine_note =>
-      'While reading supports local ONNX, Google Lens and system OCR. Local ONNX runs one task at a time; external Mokuro and paired hosts use explicit batch OCR.';
+      'With "On open", opening a volume or chapter recognizes the whole volume in the background, starting from the current page; progress shows in the top-right corner. It uses the engine chosen below. "Manual" adds a "Recognize this volume" button to the toolbar instead.';
   String get manga_reader_ocr_unavailable =>
       'No OCR engine is ready. Download the local model or pick another engine in OCR settings.';
   String get game_stream_library_subtitle =>
@@ -7716,6 +7714,9 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get game_stream_remote_launch_title => 'Allow remote launch';
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  String get manga_reader_ocr_volume => 'Recognize this volume';
+  String get manga_reader_ocr_queued => 'Queued';
+  String get manga_reader_ocr_unavailable_short => 'OCR unavailable';
 }
 
 // Path: <root>
@@ -20512,13 +20513,9 @@ class _StringsAr extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'تشغيل OCR';
   @override
-  String get manga_reader_ocr_automatic => 'أثناء القراءة';
+  String get manga_reader_ocr_automatic => 'عند الفتح';
   @override
   String get manga_reader_ocr_manual => 'يدوي';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'مهام OCR المتوازية';
-  @override
-  String get manga_reader_ocr_current => 'التعرف على الصفحات المرئية';
   @override
   String get manga_reader_back_to_start => 'العودة إلى البداية';
   @override
@@ -20527,7 +20524,7 @@ class _StringsAr extends _StringsEn {
   String get reader_settings_panel_move_right => 'نقل الإعدادات إلى اليمين';
   @override
   String get manga_reader_ocr_engine_note =>
-      'يدعم وضع «أثناء القراءة» نموذج ONNX المحلي وGoogle Lens وOCR النظام. ينفّذ ONNX المحلي مهمة واحدة في كل مرة؛ ويستخدم Mokuro الخارجي والمضيفون المقترنون OCR على دفعات يدويًا.';
+      'عند اختيار «عند الفتح»، يؤدي فتح مجلد أو فصل إلى التعرّف على المجلد كاملًا في الخلفية بدءًا من الصفحة الحالية، ويظهر التقدم في الزاوية العلوية اليمنى. يُستخدم المحرك المختار أدناه. أما «يدوي» فيعرض زر «التعرّف على هذا المجلد» في شريط الأدوات.';
   @override
   String get manga_reader_ocr_unavailable =>
       'لا يوجد محرك OCR جاهز. نزّل النموذج المحلي أو اختر محركًا آخر في إعدادات OCR.';
@@ -20707,6 +20704,12 @@ class _StringsAr extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'التعرّف على هذا المجلد';
+  @override
+  String get manga_reader_ocr_queued => 'في قائمة الانتظار';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR غير متاح';
 }
 
 // Path: <root>
@@ -33742,13 +33745,9 @@ class _StringsDe extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'OCR-Auslöser';
   @override
-  String get manga_reader_ocr_automatic => 'Beim Lesen';
+  String get manga_reader_ocr_automatic => 'Beim Öffnen';
   @override
   String get manga_reader_ocr_manual => 'Manuell';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Parallele OCR-Aufgaben';
-  @override
-  String get manga_reader_ocr_current => 'Sichtbare Seiten erkennen';
   @override
   String get manga_reader_back_to_start => 'Zurück zum Anfang';
   @override
@@ -33759,7 +33758,7 @@ class _StringsDe extends _StringsEn {
       'Einstellungen nach rechts verschieben';
   @override
   String get manga_reader_ocr_engine_note =>
-      '„Beim Lesen“ unterstützt lokales ONNX, Google Lens und System-OCR. Lokales ONNX verarbeitet jeweils eine Aufgabe; externes Mokuro und gekoppelte Hosts verwenden explizite Stapel-OCR.';
+      'Bei „Beim Öffnen“ wird beim Öffnen eines Bands oder Kapitels der ganze Band im Hintergrund ab der aktuellen Seite erkannt; der Fortschritt erscheint oben rechts. Verwendet wird die unten gewählte Engine. „Manuell“ zeigt stattdessen die Schaltfläche „Diesen Band erkennen“ in der Symbolleiste.';
   @override
   String get manga_reader_ocr_unavailable =>
       'Keine OCR-Engine bereit. Laden Sie das lokale Modell herunter oder wählen Sie in den OCR-Einstellungen eine andere Engine.';
@@ -33939,6 +33938,12 @@ class _StringsDe extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Diesen Band erkennen';
+  @override
+  String get manga_reader_ocr_queued => 'In Warteschlange';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR nicht verfügbar';
 }
 
 // Path: <root>
@@ -47026,13 +47031,9 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'Activación de OCR';
   @override
-  String get manga_reader_ocr_automatic => 'Durante la lectura';
+  String get manga_reader_ocr_automatic => 'Al abrir';
   @override
   String get manga_reader_ocr_manual => 'Manual';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Tareas de OCR en paralelo';
-  @override
-  String get manga_reader_ocr_current => 'Reconocer páginas visibles';
   @override
   String get manga_reader_back_to_start => 'Volver al principio';
   @override
@@ -47041,7 +47042,7 @@ class _StringsEs extends _StringsEn {
   String get reader_settings_panel_move_right => 'Mover ajustes a la derecha';
   @override
   String get manga_reader_ocr_engine_note =>
-      '«Durante la lectura» admite ONNX local, Google Lens y el OCR del sistema. ONNX local ejecuta una tarea a la vez; Mokuro externo y los hosts vinculados usan OCR por lotes explícito.';
+      'Con «Al abrir», al abrir un volumen o capítulo se reconoce todo el volumen en segundo plano desde la página actual; el progreso aparece arriba a la derecha. Usa el motor elegido abajo. «Manual» muestra en su lugar el botón «Reconocer este volumen» en la barra de herramientas.';
   @override
   String get manga_reader_ocr_unavailable =>
       'No hay ningún motor de OCR disponible. Descarga el modelo local o elige otro motor en los ajustes de OCR.';
@@ -47221,6 +47222,12 @@ class _StringsEs extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Reconocer este volumen';
+  @override
+  String get manga_reader_ocr_queued => 'En cola';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR no disponible';
 }
 
 // Path: <root>
@@ -60345,13 +60352,9 @@ class _StringsFr extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'Déclenchement de l\'OCR';
   @override
-  String get manga_reader_ocr_automatic => 'Pendant la lecture';
+  String get manga_reader_ocr_automatic => 'À l\'ouverture';
   @override
   String get manga_reader_ocr_manual => 'Manuel';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Tâches OCR parallèles';
-  @override
-  String get manga_reader_ocr_current => 'Reconnaître les pages visibles';
   @override
   String get manga_reader_back_to_start => 'Revenir au début';
   @override
@@ -60362,7 +60365,7 @@ class _StringsFr extends _StringsEn {
       'Déplacer les paramètres à droite';
   @override
   String get manga_reader_ocr_engine_note =>
-      'Le mode « Pendant la lecture » prend en charge ONNX local, Google Lens et l\'OCR système. ONNX local traite une tâche à la fois ; Mokuro externe et les hôtes appairés utilisent l\'OCR par lots explicite.';
+      'Avec « À l\'ouverture », ouvrir un volume ou un chapitre reconnaît tout le volume en arrière-plan à partir de la page actuelle ; la progression s\'affiche en haut à droite. Le moteur choisi ci-dessous est utilisé. « Manuel » affiche plutôt le bouton « Reconnaître ce volume » dans la barre d\'outils.';
   @override
   String get manga_reader_ocr_unavailable =>
       'Aucun moteur OCR n\'est prêt. Téléchargez le modèle local ou choisissez un autre moteur dans les paramètres OCR.';
@@ -60542,6 +60545,12 @@ class _StringsFr extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Reconnaître ce volume';
+  @override
+  String get manga_reader_ocr_queued => 'En attente';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR indisponible';
 }
 
 // Path: <root>
@@ -73457,13 +73466,9 @@ class _StringsId extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'Pemicu OCR';
   @override
-  String get manga_reader_ocr_automatic => 'Saat membaca';
+  String get manga_reader_ocr_automatic => 'Saat dibuka';
   @override
   String get manga_reader_ocr_manual => 'Manual';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Tugas OCR paralel';
-  @override
-  String get manga_reader_ocr_current => 'Kenali halaman yang terlihat';
   @override
   String get manga_reader_back_to_start => 'Kembali ke awal';
   @override
@@ -73473,7 +73478,7 @@ class _StringsId extends _StringsEn {
       'Pindahkan pengaturan ke kanan';
   @override
   String get manga_reader_ocr_engine_note =>
-      'Mode “Saat membaca” mendukung ONNX lokal, Google Lens, dan OCR sistem. ONNX lokal menjalankan satu tugas dalam satu waktu; Mokuro eksternal dan host yang dipasangkan menggunakan OCR batch eksplisit.';
+      'Dengan "Saat dibuka", membuka volume atau bab akan mengenali seluruh volume di latar belakang mulai dari halaman saat ini; progres tampil di kanan atas. Menggunakan mesin yang dipilih di bawah. "Manual" menampilkan tombol "Kenali volume ini" di bilah alat.';
   @override
   String get manga_reader_ocr_unavailable =>
       'Tidak ada mesin OCR yang siap. Unduh model lokal atau pilih mesin lain di pengaturan OCR.';
@@ -73653,6 +73658,12 @@ class _StringsId extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Kenali volume ini';
+  @override
+  String get manga_reader_ocr_queued => 'Dalam antrean';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR tidak tersedia';
 }
 
 // Path: <root>
@@ -86668,13 +86679,9 @@ class _StringsIt extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'Attivazione OCR';
   @override
-  String get manga_reader_ocr_automatic => 'Durante la lettura';
+  String get manga_reader_ocr_automatic => 'All\'apertura';
   @override
   String get manga_reader_ocr_manual => 'Manuale';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Attività OCR parallele';
-  @override
-  String get manga_reader_ocr_current => 'Riconosci le pagine visibili';
   @override
   String get manga_reader_back_to_start => 'Torna all\'inizio';
   @override
@@ -86685,7 +86692,7 @@ class _StringsIt extends _StringsEn {
       'Sposta le impostazioni a destra';
   @override
   String get manga_reader_ocr_engine_note =>
-      '«Durante la lettura» supporta ONNX locale, Google Lens e l\'OCR di sistema. ONNX locale esegue un\'attività alla volta; Mokuro esterno e gli host associati usano l\'OCR in batch esplicito.';
+      'Con «All\'apertura», aprendo un volume o un capitolo l\'intero volume viene riconosciuto in background a partire dalla pagina corrente; l\'avanzamento compare in alto a destra. Usa il motore scelto sotto. «Manuale» mostra invece il pulsante «Riconosci questo volume» nella barra degli strumenti.';
   @override
   String get manga_reader_ocr_unavailable =>
       'Nessun motore OCR disponibile. Scarica il modello locale o scegli un altro motore nelle impostazioni OCR.';
@@ -86865,6 +86872,12 @@ class _StringsIt extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Riconosci questo volume';
+  @override
+  String get manga_reader_ocr_queued => 'In coda';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR non disponibile';
 }
 
 // Path: <root>
@@ -99243,13 +99256,9 @@ class _StringsJa extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'OCR の実行タイミング';
   @override
-  String get manga_reader_ocr_automatic => '読みながら';
+  String get manga_reader_ocr_automatic => '開いたら自動';
   @override
   String get manga_reader_ocr_manual => '手動';
-  @override
-  String get manga_reader_parallel_ocr_tasks => '並列 OCR タスク数';
-  @override
-  String get manga_reader_ocr_current => '表示中のページを認識';
   @override
   String get manga_reader_back_to_start => '最初に戻る';
   @override
@@ -99258,7 +99267,7 @@ class _StringsJa extends _StringsEn {
   String get reader_settings_panel_move_right => '設定を右側に移動';
   @override
   String get manga_reader_ocr_engine_note =>
-      '「読みながら」はローカル ONNX、Google Lens、システム OCR に対応しています。ローカル ONNX は一度に 1 件ずつ処理します。外部 Mokuro とペアリング済みホストは手動の一括 OCR を使用します。';
+      '「開いたら自動」では、巻や章を開くと現在のページから巻全体をバックグラウンドで認識し、右上に進捗を表示します。下で選んだエンジンを使います。「手動」ではツールバーに「この巻を認識」ボタンが表示されます。';
   @override
   String get manga_reader_ocr_unavailable =>
       '使用できる OCR エンジンがありません。OCR 設定でローカルモデルをダウンロードするか、別のエンジンを選択してください。';
@@ -99438,6 +99447,12 @@ class _StringsJa extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'この巻を認識';
+  @override
+  String get manga_reader_ocr_queued => '待機中';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR 使用不可';
 }
 
 // Path: <root>
@@ -111826,13 +111841,9 @@ class _StringsKo extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'OCR 실행 방식';
   @override
-  String get manga_reader_ocr_automatic => '읽는 중 자동';
+  String get manga_reader_ocr_automatic => '열면 자동';
   @override
   String get manga_reader_ocr_manual => '수동';
-  @override
-  String get manga_reader_parallel_ocr_tasks => '병렬 OCR 작업 수';
-  @override
-  String get manga_reader_ocr_current => '보이는 페이지 인식';
   @override
   String get manga_reader_back_to_start => '처음으로 돌아가기';
   @override
@@ -111841,7 +111852,7 @@ class _StringsKo extends _StringsEn {
   String get reader_settings_panel_move_right => '설정을 오른쪽으로 이동';
   @override
   String get manga_reader_ocr_engine_note =>
-      '\'읽는 중 자동\'은 로컬 ONNX, Google Lens, 시스템 OCR을 지원합니다. 로컬 ONNX는 한 번에 하나씩 처리하며, 외부 Mokuro와 페어링된 호스트는 수동 일괄 OCR을 사용합니다.';
+      '「열면 자동」이면 권이나 챕터를 열 때 현재 페이지부터 권 전체를 백그라운드에서 인식하고 오른쪽 위에 진행률을 표시합니다. 아래에서 고른 엔진을 사용합니다. 「수동」이면 도구 모음에 「이 권 인식」 버튼이 표시됩니다.';
   @override
   String get manga_reader_ocr_unavailable =>
       '사용 가능한 OCR 엔진이 없습니다. OCR 설정에서 로컬 모델을 다운로드하거나 다른 엔진을 선택하세요.';
@@ -112021,6 +112032,12 @@ class _StringsKo extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => '이 권 인식';
+  @override
+  String get manga_reader_ocr_queued => '대기 중';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR 사용 불가';
 }
 
 // Path: <root>
@@ -124990,13 +125007,9 @@ class _StringsNl extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'OCR-activering';
   @override
-  String get manga_reader_ocr_automatic => 'Tijdens het lezen';
+  String get manga_reader_ocr_automatic => 'Bij openen';
   @override
   String get manga_reader_ocr_manual => 'Handmatig';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Parallelle OCR-taken';
-  @override
-  String get manga_reader_ocr_current => 'Zichtbare pagina\'s herkennen';
   @override
   String get manga_reader_back_to_start => 'Terug naar het begin';
   @override
@@ -125007,7 +125020,7 @@ class _StringsNl extends _StringsEn {
       'Instellingen naar rechts verplaatsen';
   @override
   String get manga_reader_ocr_engine_note =>
-      '\'Tijdens het lezen\' ondersteunt lokale ONNX, Google Lens en systeem-OCR. Lokale ONNX voert één taak tegelijk uit; externe Mokuro en gekoppelde hosts gebruiken expliciete batch-OCR.';
+      'Bij ‘Bij openen’ wordt bij het openen van een deel of hoofdstuk het hele deel op de achtergrond herkend, vanaf de huidige pagina; de voortgang staat rechtsboven. De hieronder gekozen engine wordt gebruikt. ‘Handmatig’ toont in plaats daarvan de knop ‘Dit deel herkennen’ in de werkbalk.';
   @override
   String get manga_reader_ocr_unavailable =>
       'Er is geen OCR-engine gereed. Download het lokale model of kies een andere engine in de OCR-instellingen.';
@@ -125187,6 +125200,12 @@ class _StringsNl extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Dit deel herkennen';
+  @override
+  String get manga_reader_ocr_queued => 'In wachtrij';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR niet beschikbaar';
 }
 
 // Path: <root>
@@ -138210,13 +138229,9 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'Acionamento do OCR';
   @override
-  String get manga_reader_ocr_automatic => 'Durante a leitura';
+  String get manga_reader_ocr_automatic => 'Ao abrir';
   @override
   String get manga_reader_ocr_manual => 'Manual';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Tarefas de OCR em paralelo';
-  @override
-  String get manga_reader_ocr_current => 'Reconhecer páginas visíveis';
   @override
   String get manga_reader_back_to_start => 'Voltar ao início';
   @override
@@ -138227,7 +138242,7 @@ class _StringsPtBr extends _StringsEn {
       'Mover configurações para a direita';
   @override
   String get manga_reader_ocr_engine_note =>
-      '“Durante a leitura” oferece suporte a ONNX local, Google Lens e OCR do sistema. O ONNX local executa uma tarefa por vez; o Mokuro externo e os hosts pareados usam OCR em lote explícito.';
+      'Com "Ao abrir", abrir um volume ou capítulo reconhece o volume inteiro em segundo plano a partir da página atual; o progresso aparece no canto superior direito. Usa o mecanismo escolhido abaixo. "Manual" mostra o botão "Reconhecer este volume" na barra de ferramentas.';
   @override
   String get manga_reader_ocr_unavailable =>
       'Nenhum mecanismo de OCR está pronto. Baixe o modelo local ou escolha outro mecanismo nas configurações de OCR.';
@@ -138407,6 +138422,12 @@ class _StringsPtBr extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Reconhecer este volume';
+  @override
+  String get manga_reader_ocr_queued => 'Na fila';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR indisponível';
 }
 
 // Path: <root>
@@ -151406,13 +151427,9 @@ class _StringsRu extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'Запуск OCR';
   @override
-  String get manga_reader_ocr_automatic => 'Во время чтения';
+  String get manga_reader_ocr_automatic => 'При открытии';
   @override
   String get manga_reader_ocr_manual => 'Вручную';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Параллельных задач OCR';
-  @override
-  String get manga_reader_ocr_current => 'Распознать видимые страницы';
   @override
   String get manga_reader_back_to_start => 'Вернуться в начало';
   @override
@@ -151421,7 +151438,7 @@ class _StringsRu extends _StringsEn {
   String get reader_settings_panel_move_right => 'Переместить настройки вправо';
   @override
   String get manga_reader_ocr_engine_note =>
-      'Режим «Во время чтения» поддерживает локальный ONNX, Google Lens и системный OCR. Локальный ONNX выполняет задачи по одной; внешний Mokuro и сопряжённые хосты используют явное пакетное распознавание.';
+      'В режиме «При открытии» при открытии тома или главы весь том распознаётся в фоне, начиная с текущей страницы; прогресс показан в правом верхнем углу. Используется движок, выбранный ниже. В режиме «Вручную» на панели инструментов появляется кнопка «Распознать том».';
   @override
   String get manga_reader_ocr_unavailable =>
       'Нет готового движка OCR. Скачайте локальную модель или выберите другой движок в настройках OCR.';
@@ -151601,6 +151618,12 @@ class _StringsRu extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Распознать том';
+  @override
+  String get manga_reader_ocr_queued => 'В очереди';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR недоступно';
 }
 
 // Path: <root>
@@ -164396,13 +164419,9 @@ class _StringsTh extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'การเรียกใช้ OCR';
   @override
-  String get manga_reader_ocr_automatic => 'ระหว่างอ่าน';
+  String get manga_reader_ocr_automatic => 'เมื่อเปิด';
   @override
   String get manga_reader_ocr_manual => 'ด้วยตนเอง';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'จำนวนงาน OCR พร้อมกัน';
-  @override
-  String get manga_reader_ocr_current => 'รู้จำหน้าที่มองเห็น';
   @override
   String get manga_reader_back_to_start => 'กลับไปที่จุดเริ่มต้น';
   @override
@@ -164411,7 +164430,7 @@ class _StringsTh extends _StringsEn {
   String get reader_settings_panel_move_right => 'ย้ายการตั้งค่าไปทางขวา';
   @override
   String get manga_reader_ocr_engine_note =>
-      'โหมด “ระหว่างอ่าน” รองรับ ONNX ในเครื่อง, Google Lens และ OCR ของระบบ ONNX ในเครื่องทำงานทีละงาน ส่วน Mokuro ภายนอกและโฮสต์ที่จับคู่ไว้ใช้ OCR แบบกลุ่มที่สั่งเอง';
+      'เมื่อตั้งเป็น "เมื่อเปิด" การเปิดเล่มหรือตอนจะจดจำทั้งเล่มเบื้องหลังโดยเริ่มจากหน้าปัจจุบัน และแสดงความคืบหน้าที่มุมขวาบน ใช้เอนจินที่เลือกด้านล่าง ถ้าตั้งเป็น "ด้วยตนเอง" จะมีปุ่ม "จดจำเล่มนี้" บนแถบเครื่องมือแทน';
   @override
   String get manga_reader_ocr_unavailable =>
       'ไม่มีเอนจิน OCR ที่พร้อมใช้งาน ดาวน์โหลดโมเดลในเครื่องหรือเลือกเอนจินอื่นในการตั้งค่า OCR';
@@ -164591,6 +164610,12 @@ class _StringsTh extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'จดจำเล่มนี้';
+  @override
+  String get manga_reader_ocr_queued => 'อยู่ในคิว';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR ใช้ไม่ได้';
 }
 
 // Path: <root>
@@ -177501,13 +177526,9 @@ class _StringsTr extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'OCR tetikleyicisi';
   @override
-  String get manga_reader_ocr_automatic => 'Okurken';
+  String get manga_reader_ocr_automatic => 'Açılınca';
   @override
   String get manga_reader_ocr_manual => 'Manuel';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Paralel OCR görevleri';
-  @override
-  String get manga_reader_ocr_current => 'Görünen sayfaları tanı';
   @override
   String get manga_reader_back_to_start => 'Başa dön';
   @override
@@ -177516,7 +177537,7 @@ class _StringsTr extends _StringsEn {
   String get reader_settings_panel_move_right => 'Ayarları sağa taşı';
   @override
   String get manga_reader_ocr_engine_note =>
-      '“Okurken” modu yerel ONNX, Google Lens ve sistem OCR\'ını destekler. Yerel ONNX görevleri tek tek çalıştırır; harici Mokuro ve eşlenmiş ana makineler açık toplu OCR kullanır.';
+      '"Açılınca" seçiliyken bir cilt veya bölüm açıldığında tüm cilt, geçerli sayfadan başlayarak arka planda tanınır; ilerleme sağ üstte görünür. Aşağıda seçilen motor kullanılır. "Manuel" seçiliyse araç çubuğunda "Bu cildi tanı" düğmesi gösterilir.';
   @override
   String get manga_reader_ocr_unavailable =>
       'Hazır OCR motoru yok. Yerel modeli indirin veya OCR ayarlarından başka bir motor seçin.';
@@ -177696,6 +177717,12 @@ class _StringsTr extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Bu cildi tanı';
+  @override
+  String get manga_reader_ocr_queued => 'Sırada';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR kullanılamıyor';
 }
 
 // Path: <root>
@@ -190577,13 +190604,9 @@ class _StringsVi extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'Cách kích hoạt OCR';
   @override
-  String get manga_reader_ocr_automatic => 'Trong khi đọc';
+  String get manga_reader_ocr_automatic => 'Khi mở';
   @override
   String get manga_reader_ocr_manual => 'Thủ công';
-  @override
-  String get manga_reader_parallel_ocr_tasks => 'Số tác vụ OCR song song';
-  @override
-  String get manga_reader_ocr_current => 'Nhận dạng các trang đang hiển thị';
   @override
   String get manga_reader_back_to_start => 'Quay lại đầu';
   @override
@@ -190592,7 +190615,7 @@ class _StringsVi extends _StringsEn {
   String get reader_settings_panel_move_right => 'Chuyển cài đặt sang phải';
   @override
   String get manga_reader_ocr_engine_note =>
-      'Chế độ “Trong khi đọc” hỗ trợ ONNX cục bộ, Google Lens và OCR hệ thống. ONNX cục bộ chạy từng tác vụ một; Mokuro bên ngoài và máy chủ đã ghép nối dùng OCR hàng loạt thủ công.';
+      'Khi chọn "Khi mở", mở một tập hoặc chương sẽ nhận dạng cả tập ở nền, bắt đầu từ trang hiện tại; tiến độ hiện ở góc trên bên phải. Dùng công cụ được chọn bên dưới. "Thủ công" sẽ hiện nút "Nhận dạng tập này" trên thanh công cụ.';
   @override
   String get manga_reader_ocr_unavailable =>
       'Không có công cụ OCR nào sẵn sàng. Hãy tải mô hình cục bộ hoặc chọn công cụ khác trong cài đặt OCR.';
@@ -190772,6 +190795,12 @@ class _StringsVi extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => 'Nhận dạng tập này';
+  @override
+  String get manga_reader_ocr_queued => 'Đang chờ';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR không khả dụng';
 }
 
 // Path: <root>
@@ -202565,13 +202594,9 @@ class _StringsZhCn extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'OCR 触发方式';
   @override
-  String get manga_reader_ocr_automatic => '边看边识别';
+  String get manga_reader_ocr_automatic => '打开即识别';
   @override
   String get manga_reader_ocr_manual => '手动';
-  @override
-  String get manga_reader_parallel_ocr_tasks => '并行 OCR 任务数';
-  @override
-  String get manga_reader_ocr_current => '识别当前可见页';
   @override
   String get manga_reader_back_to_start => '回到开头';
   @override
@@ -202580,7 +202605,7 @@ class _StringsZhCn extends _StringsEn {
   String get reader_settings_panel_move_right => '将设置移到右侧';
   @override
   String get manga_reader_ocr_engine_note =>
-      '边看边识别支持本地 ONNX、Google Lens 和系统 OCR。本地 ONNX 串行执行；外部 Mokuro 和配对主机使用手动批量识别。';
+      '设为「打开即识别」时，打开卷或章节会在后台从当前页开始识别整卷，右上角显示进度，使用下方选择的引擎。设为「手动」则在工具栏提供「识别本卷」按钮。';
   @override
   String get manga_reader_ocr_unavailable =>
       '没有可用的 OCR 引擎：请在 OCR 设置中下载本地模型或换用其他引擎。';
@@ -202732,6 +202757,12 @@ class _StringsZhCn extends _StringsEn {
   String get game_stream_remote_launch_title => '允许远程启动';
   @override
   String get game_stream_remote_launch_hint => '已配对的安卓设备可从本机游戏库启动游戏并直接串流';
+  @override
+  String get manga_reader_ocr_volume => '识别本卷';
+  @override
+  String get manga_reader_ocr_queued => '排队中';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR 不可用';
 }
 
 // Path: <root>
@@ -214791,13 +214822,9 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get manga_reader_ocr_trigger => 'OCR 觸發方式';
   @override
-  String get manga_reader_ocr_automatic => '邊看邊識別';
+  String get manga_reader_ocr_automatic => '打開即識別';
   @override
   String get manga_reader_ocr_manual => '手動';
-  @override
-  String get manga_reader_parallel_ocr_tasks => '並行 OCR 任務數';
-  @override
-  String get manga_reader_ocr_current => '識別目前可見頁面';
   @override
   String get manga_reader_back_to_start => '返回開頭';
   @override
@@ -214806,7 +214833,7 @@ class _StringsZhHk extends _StringsEn {
   String get reader_settings_panel_move_right => '將設定移到右側';
   @override
   String get manga_reader_ocr_engine_note =>
-      '邊看邊識別支援本機 ONNX、Google Lens 和系統 OCR。本機 ONNX 逐一執行；外部 Mokuro 和已配對主機使用手動批次識別。';
+      '設為「打開即識別」時，打開卷或章節會在背景從目前頁開始識別整卷，右上角顯示進度，使用下方選擇的引擎。設為「手動」則在工具列提供「識別本卷」按鈕。';
   @override
   String get manga_reader_ocr_unavailable =>
       '沒有可用的 OCR 引擎：請在 OCR 設定中下載本機模型或改用其他引擎。';
@@ -214986,6 +215013,12 @@ class _StringsZhHk extends _StringsEn {
   @override
   String get game_stream_remote_launch_hint =>
       'Paired Android devices can start games from this PC\'s library and stream them';
+  @override
+  String get manga_reader_ocr_volume => '識別本卷';
+  @override
+  String get manga_reader_ocr_queued => '排隊中';
+  @override
+  String get manga_reader_ocr_unavailable_short => 'OCR 不可用';
 }
 
 /// Flat map(s) containing all translations.
@@ -226067,13 +226100,9 @@ extension on _StringsEn {
       case 'manga_reader_ocr_trigger':
         return 'OCR trigger';
       case 'manga_reader_ocr_automatic':
-        return 'While reading';
+        return 'On open';
       case 'manga_reader_ocr_manual':
         return 'Manual';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Parallel OCR tasks';
-      case 'manga_reader_ocr_current':
-        return 'Recognize visible pages';
       case 'manga_reader_back_to_start':
         return 'Back to the beginning';
       case 'reader_settings_panel_move_left':
@@ -226081,7 +226110,7 @@ extension on _StringsEn {
       case 'reader_settings_panel_move_right':
         return 'Move settings to the right';
       case 'manga_reader_ocr_engine_note':
-        return 'While reading supports local ONNX, Google Lens and system OCR. Local ONNX runs one task at a time; external Mokuro and paired hosts use explicit batch OCR.';
+        return 'With "On open", opening a volume or chapter recognizes the whole volume in the background, starting from the current page; progress shows in the top-right corner. It uses the engine chosen below. "Manual" adds a "Recognize this volume" button to the toolbar instead.';
       case 'manga_reader_ocr_unavailable':
         return 'No OCR engine is ready. Download the local model or pick another engine in OCR settings.';
       case 'game_stream_library_subtitle':
@@ -226228,6 +226257,12 @@ extension on _StringsEn {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Recognize this volume';
+      case 'manga_reader_ocr_queued':
+        return 'Queued';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR unavailable';
       default:
         return null;
     }
@@ -237304,13 +237339,9 @@ extension on _StringsAr {
       case 'manga_reader_ocr_trigger':
         return 'تشغيل OCR';
       case 'manga_reader_ocr_automatic':
-        return 'أثناء القراءة';
+        return 'عند الفتح';
       case 'manga_reader_ocr_manual':
         return 'يدوي';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'مهام OCR المتوازية';
-      case 'manga_reader_ocr_current':
-        return 'التعرف على الصفحات المرئية';
       case 'manga_reader_back_to_start':
         return 'العودة إلى البداية';
       case 'reader_settings_panel_move_left':
@@ -237318,7 +237349,7 @@ extension on _StringsAr {
       case 'reader_settings_panel_move_right':
         return 'نقل الإعدادات إلى اليمين';
       case 'manga_reader_ocr_engine_note':
-        return 'يدعم وضع «أثناء القراءة» نموذج ONNX المحلي وGoogle Lens وOCR النظام. ينفّذ ONNX المحلي مهمة واحدة في كل مرة؛ ويستخدم Mokuro الخارجي والمضيفون المقترنون OCR على دفعات يدويًا.';
+        return 'عند اختيار «عند الفتح»، يؤدي فتح مجلد أو فصل إلى التعرّف على المجلد كاملًا في الخلفية بدءًا من الصفحة الحالية، ويظهر التقدم في الزاوية العلوية اليمنى. يُستخدم المحرك المختار أدناه. أما «يدوي» فيعرض زر «التعرّف على هذا المجلد» في شريط الأدوات.';
       case 'manga_reader_ocr_unavailable':
         return 'لا يوجد محرك OCR جاهز. نزّل النموذج المحلي أو اختر محركًا آخر في إعدادات OCR.';
       case 'game_stream_library_subtitle':
@@ -237465,6 +237496,12 @@ extension on _StringsAr {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'التعرّف على هذا المجلد';
+      case 'manga_reader_ocr_queued':
+        return 'في قائمة الانتظار';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR غير متاح';
       default:
         return null;
     }
@@ -248590,13 +248627,9 @@ extension on _StringsDe {
       case 'manga_reader_ocr_trigger':
         return 'OCR-Auslöser';
       case 'manga_reader_ocr_automatic':
-        return 'Beim Lesen';
+        return 'Beim Öffnen';
       case 'manga_reader_ocr_manual':
         return 'Manuell';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Parallele OCR-Aufgaben';
-      case 'manga_reader_ocr_current':
-        return 'Sichtbare Seiten erkennen';
       case 'manga_reader_back_to_start':
         return 'Zurück zum Anfang';
       case 'reader_settings_panel_move_left':
@@ -248604,7 +248637,7 @@ extension on _StringsDe {
       case 'reader_settings_panel_move_right':
         return 'Einstellungen nach rechts verschieben';
       case 'manga_reader_ocr_engine_note':
-        return '„Beim Lesen“ unterstützt lokales ONNX, Google Lens und System-OCR. Lokales ONNX verarbeitet jeweils eine Aufgabe; externes Mokuro und gekoppelte Hosts verwenden explizite Stapel-OCR.';
+        return 'Bei „Beim Öffnen“ wird beim Öffnen eines Bands oder Kapitels der ganze Band im Hintergrund ab der aktuellen Seite erkannt; der Fortschritt erscheint oben rechts. Verwendet wird die unten gewählte Engine. „Manuell“ zeigt stattdessen die Schaltfläche „Diesen Band erkennen“ in der Symbolleiste.';
       case 'manga_reader_ocr_unavailable':
         return 'Keine OCR-Engine bereit. Laden Sie das lokale Modell herunter oder wählen Sie in den OCR-Einstellungen eine andere Engine.';
       case 'game_stream_library_subtitle':
@@ -248751,6 +248784,12 @@ extension on _StringsDe {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Diesen Band erkennen';
+      case 'manga_reader_ocr_queued':
+        return 'In Warteschlange';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR nicht verfügbar';
       default:
         return null;
     }
@@ -259866,13 +259905,9 @@ extension on _StringsEs {
       case 'manga_reader_ocr_trigger':
         return 'Activación de OCR';
       case 'manga_reader_ocr_automatic':
-        return 'Durante la lectura';
+        return 'Al abrir';
       case 'manga_reader_ocr_manual':
         return 'Manual';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Tareas de OCR en paralelo';
-      case 'manga_reader_ocr_current':
-        return 'Reconocer páginas visibles';
       case 'manga_reader_back_to_start':
         return 'Volver al principio';
       case 'reader_settings_panel_move_left':
@@ -259880,7 +259915,7 @@ extension on _StringsEs {
       case 'reader_settings_panel_move_right':
         return 'Mover ajustes a la derecha';
       case 'manga_reader_ocr_engine_note':
-        return '«Durante la lectura» admite ONNX local, Google Lens y el OCR del sistema. ONNX local ejecuta una tarea a la vez; Mokuro externo y los hosts vinculados usan OCR por lotes explícito.';
+        return 'Con «Al abrir», al abrir un volumen o capítulo se reconoce todo el volumen en segundo plano desde la página actual; el progreso aparece arriba a la derecha. Usa el motor elegido abajo. «Manual» muestra en su lugar el botón «Reconocer este volumen» en la barra de herramientas.';
       case 'manga_reader_ocr_unavailable':
         return 'No hay ningún motor de OCR disponible. Descarga el modelo local o elige otro motor en los ajustes de OCR.';
       case 'game_stream_library_subtitle':
@@ -260027,6 +260062,12 @@ extension on _StringsEs {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Reconocer este volumen';
+      case 'manga_reader_ocr_queued':
+        return 'En cola';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR no disponible';
       default:
         return null;
     }
@@ -271150,13 +271191,9 @@ extension on _StringsFr {
       case 'manga_reader_ocr_trigger':
         return 'Déclenchement de l\'OCR';
       case 'manga_reader_ocr_automatic':
-        return 'Pendant la lecture';
+        return 'À l\'ouverture';
       case 'manga_reader_ocr_manual':
         return 'Manuel';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Tâches OCR parallèles';
-      case 'manga_reader_ocr_current':
-        return 'Reconnaître les pages visibles';
       case 'manga_reader_back_to_start':
         return 'Revenir au début';
       case 'reader_settings_panel_move_left':
@@ -271164,7 +271201,7 @@ extension on _StringsFr {
       case 'reader_settings_panel_move_right':
         return 'Déplacer les paramètres à droite';
       case 'manga_reader_ocr_engine_note':
-        return 'Le mode « Pendant la lecture » prend en charge ONNX local, Google Lens et l\'OCR système. ONNX local traite une tâche à la fois ; Mokuro externe et les hôtes appairés utilisent l\'OCR par lots explicite.';
+        return 'Avec « À l\'ouverture », ouvrir un volume ou un chapitre reconnaît tout le volume en arrière-plan à partir de la page actuelle ; la progression s\'affiche en haut à droite. Le moteur choisi ci-dessous est utilisé. « Manuel » affiche plutôt le bouton « Reconnaître ce volume » dans la barre d\'outils.';
       case 'manga_reader_ocr_unavailable':
         return 'Aucun moteur OCR n\'est prêt. Téléchargez le modèle local ou choisissez un autre moteur dans les paramètres OCR.';
       case 'game_stream_library_subtitle':
@@ -271311,6 +271348,12 @@ extension on _StringsFr {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Reconnaître ce volume';
+      case 'manga_reader_ocr_queued':
+        return 'En attente';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR indisponible';
       default:
         return null;
     }
@@ -282404,13 +282447,9 @@ extension on _StringsId {
       case 'manga_reader_ocr_trigger':
         return 'Pemicu OCR';
       case 'manga_reader_ocr_automatic':
-        return 'Saat membaca';
+        return 'Saat dibuka';
       case 'manga_reader_ocr_manual':
         return 'Manual';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Tugas OCR paralel';
-      case 'manga_reader_ocr_current':
-        return 'Kenali halaman yang terlihat';
       case 'manga_reader_back_to_start':
         return 'Kembali ke awal';
       case 'reader_settings_panel_move_left':
@@ -282418,7 +282457,7 @@ extension on _StringsId {
       case 'reader_settings_panel_move_right':
         return 'Pindahkan pengaturan ke kanan';
       case 'manga_reader_ocr_engine_note':
-        return 'Mode “Saat membaca” mendukung ONNX lokal, Google Lens, dan OCR sistem. ONNX lokal menjalankan satu tugas dalam satu waktu; Mokuro eksternal dan host yang dipasangkan menggunakan OCR batch eksplisit.';
+        return 'Dengan "Saat dibuka", membuka volume atau bab akan mengenali seluruh volume di latar belakang mulai dari halaman saat ini; progres tampil di kanan atas. Menggunakan mesin yang dipilih di bawah. "Manual" menampilkan tombol "Kenali volume ini" di bilah alat.';
       case 'manga_reader_ocr_unavailable':
         return 'Tidak ada mesin OCR yang siap. Unduh model lokal atau pilih mesin lain di pengaturan OCR.';
       case 'game_stream_library_subtitle':
@@ -282565,6 +282604,12 @@ extension on _StringsId {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Kenali volume ini';
+      case 'manga_reader_ocr_queued':
+        return 'Dalam antrean';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR tidak tersedia';
       default:
         return null;
     }
@@ -293681,13 +293726,9 @@ extension on _StringsIt {
       case 'manga_reader_ocr_trigger':
         return 'Attivazione OCR';
       case 'manga_reader_ocr_automatic':
-        return 'Durante la lettura';
+        return 'All\'apertura';
       case 'manga_reader_ocr_manual':
         return 'Manuale';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Attività OCR parallele';
-      case 'manga_reader_ocr_current':
-        return 'Riconosci le pagine visibili';
       case 'manga_reader_back_to_start':
         return 'Torna all\'inizio';
       case 'reader_settings_panel_move_left':
@@ -293695,7 +293736,7 @@ extension on _StringsIt {
       case 'reader_settings_panel_move_right':
         return 'Sposta le impostazioni a destra';
       case 'manga_reader_ocr_engine_note':
-        return '«Durante la lettura» supporta ONNX locale, Google Lens e l\'OCR di sistema. ONNX locale esegue un\'attività alla volta; Mokuro esterno e gli host associati usano l\'OCR in batch esplicito.';
+        return 'Con «All\'apertura», aprendo un volume o un capitolo l\'intero volume viene riconosciuto in background a partire dalla pagina corrente; l\'avanzamento compare in alto a destra. Usa il motore scelto sotto. «Manuale» mostra invece il pulsante «Riconosci questo volume» nella barra degli strumenti.';
       case 'manga_reader_ocr_unavailable':
         return 'Nessun motore OCR disponibile. Scarica il modello locale o scegli un altro motore nelle impostazioni OCR.';
       case 'game_stream_library_subtitle':
@@ -293842,6 +293883,12 @@ extension on _StringsIt {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Riconosci questo volume';
+      case 'manga_reader_ocr_queued':
+        return 'In coda';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR non disponibile';
       default:
         return null;
     }
@@ -304882,13 +304929,9 @@ extension on _StringsJa {
       case 'manga_reader_ocr_trigger':
         return 'OCR の実行タイミング';
       case 'manga_reader_ocr_automatic':
-        return '読みながら';
+        return '開いたら自動';
       case 'manga_reader_ocr_manual':
         return '手動';
-      case 'manga_reader_parallel_ocr_tasks':
-        return '並列 OCR タスク数';
-      case 'manga_reader_ocr_current':
-        return '表示中のページを認識';
       case 'manga_reader_back_to_start':
         return '最初に戻る';
       case 'reader_settings_panel_move_left':
@@ -304896,7 +304939,7 @@ extension on _StringsJa {
       case 'reader_settings_panel_move_right':
         return '設定を右側に移動';
       case 'manga_reader_ocr_engine_note':
-        return '「読みながら」はローカル ONNX、Google Lens、システム OCR に対応しています。ローカル ONNX は一度に 1 件ずつ処理します。外部 Mokuro とペアリング済みホストは手動の一括 OCR を使用します。';
+        return '「開いたら自動」では、巻や章を開くと現在のページから巻全体をバックグラウンドで認識し、右上に進捗を表示します。下で選んだエンジンを使います。「手動」ではツールバーに「この巻を認識」ボタンが表示されます。';
       case 'manga_reader_ocr_unavailable':
         return '使用できる OCR エンジンがありません。OCR 設定でローカルモデルをダウンロードするか、別のエンジンを選択してください。';
       case 'game_stream_library_subtitle':
@@ -305043,6 +305086,12 @@ extension on _StringsJa {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'この巻を認識';
+      case 'manga_reader_ocr_queued':
+        return '待機中';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR 使用不可';
       default:
         return null;
     }
@@ -316088,13 +316137,9 @@ extension on _StringsKo {
       case 'manga_reader_ocr_trigger':
         return 'OCR 실행 방식';
       case 'manga_reader_ocr_automatic':
-        return '읽는 중 자동';
+        return '열면 자동';
       case 'manga_reader_ocr_manual':
         return '수동';
-      case 'manga_reader_parallel_ocr_tasks':
-        return '병렬 OCR 작업 수';
-      case 'manga_reader_ocr_current':
-        return '보이는 페이지 인식';
       case 'manga_reader_back_to_start':
         return '처음으로 돌아가기';
       case 'reader_settings_panel_move_left':
@@ -316102,7 +316147,7 @@ extension on _StringsKo {
       case 'reader_settings_panel_move_right':
         return '설정을 오른쪽으로 이동';
       case 'manga_reader_ocr_engine_note':
-        return '\'읽는 중 자동\'은 로컬 ONNX, Google Lens, 시스템 OCR을 지원합니다. 로컬 ONNX는 한 번에 하나씩 처리하며, 외부 Mokuro와 페어링된 호스트는 수동 일괄 OCR을 사용합니다.';
+        return '「열면 자동」이면 권이나 챕터를 열 때 현재 페이지부터 권 전체를 백그라운드에서 인식하고 오른쪽 위에 진행률을 표시합니다. 아래에서 고른 엔진을 사용합니다. 「수동」이면 도구 모음에 「이 권 인식」 버튼이 표시됩니다.';
       case 'manga_reader_ocr_unavailable':
         return '사용 가능한 OCR 엔진이 없습니다. OCR 설정에서 로컬 모델을 다운로드하거나 다른 엔진을 선택하세요.';
       case 'game_stream_library_subtitle':
@@ -316249,6 +316294,12 @@ extension on _StringsKo {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return '이 권 인식';
+      case 'manga_reader_ocr_queued':
+        return '대기 중';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR 사용 불가';
       default:
         return null;
     }
@@ -327360,13 +327411,9 @@ extension on _StringsNl {
       case 'manga_reader_ocr_trigger':
         return 'OCR-activering';
       case 'manga_reader_ocr_automatic':
-        return 'Tijdens het lezen';
+        return 'Bij openen';
       case 'manga_reader_ocr_manual':
         return 'Handmatig';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Parallelle OCR-taken';
-      case 'manga_reader_ocr_current':
-        return 'Zichtbare pagina\'s herkennen';
       case 'manga_reader_back_to_start':
         return 'Terug naar het begin';
       case 'reader_settings_panel_move_left':
@@ -327374,7 +327421,7 @@ extension on _StringsNl {
       case 'reader_settings_panel_move_right':
         return 'Instellingen naar rechts verplaatsen';
       case 'manga_reader_ocr_engine_note':
-        return '\'Tijdens het lezen\' ondersteunt lokale ONNX, Google Lens en systeem-OCR. Lokale ONNX voert één taak tegelijk uit; externe Mokuro en gekoppelde hosts gebruiken expliciete batch-OCR.';
+        return 'Bij ‘Bij openen’ wordt bij het openen van een deel of hoofdstuk het hele deel op de achtergrond herkend, vanaf de huidige pagina; de voortgang staat rechtsboven. De hieronder gekozen engine wordt gebruikt. ‘Handmatig’ toont in plaats daarvan de knop ‘Dit deel herkennen’ in de werkbalk.';
       case 'manga_reader_ocr_unavailable':
         return 'Er is geen OCR-engine gereed. Download het lokale model of kies een andere engine in de OCR-instellingen.';
       case 'game_stream_library_subtitle':
@@ -327521,6 +327568,12 @@ extension on _StringsNl {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Dit deel herkennen';
+      case 'manga_reader_ocr_queued':
+        return 'In wachtrij';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR niet beschikbaar';
       default:
         return null;
     }
@@ -338627,13 +338680,9 @@ extension on _StringsPtBr {
       case 'manga_reader_ocr_trigger':
         return 'Acionamento do OCR';
       case 'manga_reader_ocr_automatic':
-        return 'Durante a leitura';
+        return 'Ao abrir';
       case 'manga_reader_ocr_manual':
         return 'Manual';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Tarefas de OCR em paralelo';
-      case 'manga_reader_ocr_current':
-        return 'Reconhecer páginas visíveis';
       case 'manga_reader_back_to_start':
         return 'Voltar ao início';
       case 'reader_settings_panel_move_left':
@@ -338641,7 +338690,7 @@ extension on _StringsPtBr {
       case 'reader_settings_panel_move_right':
         return 'Mover configurações para a direita';
       case 'manga_reader_ocr_engine_note':
-        return '“Durante a leitura” oferece suporte a ONNX local, Google Lens e OCR do sistema. O ONNX local executa uma tarefa por vez; o Mokuro externo e os hosts pareados usam OCR em lote explícito.';
+        return 'Com "Ao abrir", abrir um volume ou capítulo reconhece o volume inteiro em segundo plano a partir da página atual; o progresso aparece no canto superior direito. Usa o mecanismo escolhido abaixo. "Manual" mostra o botão "Reconhecer este volume" na barra de ferramentas.';
       case 'manga_reader_ocr_unavailable':
         return 'Nenhum mecanismo de OCR está pronto. Baixe o modelo local ou escolha outro mecanismo nas configurações de OCR.';
       case 'game_stream_library_subtitle':
@@ -338788,6 +338837,12 @@ extension on _StringsPtBr {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Reconhecer este volume';
+      case 'manga_reader_ocr_queued':
+        return 'Na fila';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR indisponível';
       default:
         return null;
     }
@@ -349900,13 +349955,9 @@ extension on _StringsRu {
       case 'manga_reader_ocr_trigger':
         return 'Запуск OCR';
       case 'manga_reader_ocr_automatic':
-        return 'Во время чтения';
+        return 'При открытии';
       case 'manga_reader_ocr_manual':
         return 'Вручную';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Параллельных задач OCR';
-      case 'manga_reader_ocr_current':
-        return 'Распознать видимые страницы';
       case 'manga_reader_back_to_start':
         return 'Вернуться в начало';
       case 'reader_settings_panel_move_left':
@@ -349914,7 +349965,7 @@ extension on _StringsRu {
       case 'reader_settings_panel_move_right':
         return 'Переместить настройки вправо';
       case 'manga_reader_ocr_engine_note':
-        return 'Режим «Во время чтения» поддерживает локальный ONNX, Google Lens и системный OCR. Локальный ONNX выполняет задачи по одной; внешний Mokuro и сопряжённые хосты используют явное пакетное распознавание.';
+        return 'В режиме «При открытии» при открытии тома или главы весь том распознаётся в фоне, начиная с текущей страницы; прогресс показан в правом верхнем углу. Используется движок, выбранный ниже. В режиме «Вручную» на панели инструментов появляется кнопка «Распознать том».';
       case 'manga_reader_ocr_unavailable':
         return 'Нет готового движка OCR. Скачайте локальную модель или выберите другой движок в настройках OCR.';
       case 'game_stream_library_subtitle':
@@ -350061,6 +350112,12 @@ extension on _StringsRu {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Распознать том';
+      case 'manga_reader_ocr_queued':
+        return 'В очереди';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR недоступно';
       default:
         return null;
     }
@@ -361142,13 +361199,9 @@ extension on _StringsTh {
       case 'manga_reader_ocr_trigger':
         return 'การเรียกใช้ OCR';
       case 'manga_reader_ocr_automatic':
-        return 'ระหว่างอ่าน';
+        return 'เมื่อเปิด';
       case 'manga_reader_ocr_manual':
         return 'ด้วยตนเอง';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'จำนวนงาน OCR พร้อมกัน';
-      case 'manga_reader_ocr_current':
-        return 'รู้จำหน้าที่มองเห็น';
       case 'manga_reader_back_to_start':
         return 'กลับไปที่จุดเริ่มต้น';
       case 'reader_settings_panel_move_left':
@@ -361156,7 +361209,7 @@ extension on _StringsTh {
       case 'reader_settings_panel_move_right':
         return 'ย้ายการตั้งค่าไปทางขวา';
       case 'manga_reader_ocr_engine_note':
-        return 'โหมด “ระหว่างอ่าน” รองรับ ONNX ในเครื่อง, Google Lens และ OCR ของระบบ ONNX ในเครื่องทำงานทีละงาน ส่วน Mokuro ภายนอกและโฮสต์ที่จับคู่ไว้ใช้ OCR แบบกลุ่มที่สั่งเอง';
+        return 'เมื่อตั้งเป็น "เมื่อเปิด" การเปิดเล่มหรือตอนจะจดจำทั้งเล่มเบื้องหลังโดยเริ่มจากหน้าปัจจุบัน และแสดงความคืบหน้าที่มุมขวาบน ใช้เอนจินที่เลือกด้านล่าง ถ้าตั้งเป็น "ด้วยตนเอง" จะมีปุ่ม "จดจำเล่มนี้" บนแถบเครื่องมือแทน';
       case 'manga_reader_ocr_unavailable':
         return 'ไม่มีเอนจิน OCR ที่พร้อมใช้งาน ดาวน์โหลดโมเดลในเครื่องหรือเลือกเอนจินอื่นในการตั้งค่า OCR';
       case 'game_stream_library_subtitle':
@@ -361303,6 +361356,12 @@ extension on _StringsTh {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'จดจำเล่มนี้';
+      case 'manga_reader_ocr_queued':
+        return 'อยู่ในคิว';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR ใช้ไม่ได้';
       default:
         return null;
     }
@@ -372400,13 +372459,9 @@ extension on _StringsTr {
       case 'manga_reader_ocr_trigger':
         return 'OCR tetikleyicisi';
       case 'manga_reader_ocr_automatic':
-        return 'Okurken';
+        return 'Açılınca';
       case 'manga_reader_ocr_manual':
         return 'Manuel';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Paralel OCR görevleri';
-      case 'manga_reader_ocr_current':
-        return 'Görünen sayfaları tanı';
       case 'manga_reader_back_to_start':
         return 'Başa dön';
       case 'reader_settings_panel_move_left':
@@ -372414,7 +372469,7 @@ extension on _StringsTr {
       case 'reader_settings_panel_move_right':
         return 'Ayarları sağa taşı';
       case 'manga_reader_ocr_engine_note':
-        return '“Okurken” modu yerel ONNX, Google Lens ve sistem OCR\'ını destekler. Yerel ONNX görevleri tek tek çalıştırır; harici Mokuro ve eşlenmiş ana makineler açık toplu OCR kullanır.';
+        return '"Açılınca" seçiliyken bir cilt veya bölüm açıldığında tüm cilt, geçerli sayfadan başlayarak arka planda tanınır; ilerleme sağ üstte görünür. Aşağıda seçilen motor kullanılır. "Manuel" seçiliyse araç çubuğunda "Bu cildi tanı" düğmesi gösterilir.';
       case 'manga_reader_ocr_unavailable':
         return 'Hazır OCR motoru yok. Yerel modeli indirin veya OCR ayarlarından başka bir motor seçin.';
       case 'game_stream_library_subtitle':
@@ -372561,6 +372616,12 @@ extension on _StringsTr {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Bu cildi tanı';
+      case 'manga_reader_ocr_queued':
+        return 'Sırada';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR kullanılamıyor';
       default:
         return null;
     }
@@ -383652,13 +383713,9 @@ extension on _StringsVi {
       case 'manga_reader_ocr_trigger':
         return 'Cách kích hoạt OCR';
       case 'manga_reader_ocr_automatic':
-        return 'Trong khi đọc';
+        return 'Khi mở';
       case 'manga_reader_ocr_manual':
         return 'Thủ công';
-      case 'manga_reader_parallel_ocr_tasks':
-        return 'Số tác vụ OCR song song';
-      case 'manga_reader_ocr_current':
-        return 'Nhận dạng các trang đang hiển thị';
       case 'manga_reader_back_to_start':
         return 'Quay lại đầu';
       case 'reader_settings_panel_move_left':
@@ -383666,7 +383723,7 @@ extension on _StringsVi {
       case 'reader_settings_panel_move_right':
         return 'Chuyển cài đặt sang phải';
       case 'manga_reader_ocr_engine_note':
-        return 'Chế độ “Trong khi đọc” hỗ trợ ONNX cục bộ, Google Lens và OCR hệ thống. ONNX cục bộ chạy từng tác vụ một; Mokuro bên ngoài và máy chủ đã ghép nối dùng OCR hàng loạt thủ công.';
+        return 'Khi chọn "Khi mở", mở một tập hoặc chương sẽ nhận dạng cả tập ở nền, bắt đầu từ trang hiện tại; tiến độ hiện ở góc trên bên phải. Dùng công cụ được chọn bên dưới. "Thủ công" sẽ hiện nút "Nhận dạng tập này" trên thanh công cụ.';
       case 'manga_reader_ocr_unavailable':
         return 'Không có công cụ OCR nào sẵn sàng. Hãy tải mô hình cục bộ hoặc chọn công cụ khác trong cài đặt OCR.';
       case 'game_stream_library_subtitle':
@@ -383813,6 +383870,12 @@ extension on _StringsVi {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return 'Nhận dạng tập này';
+      case 'manga_reader_ocr_queued':
+        return 'Đang chờ';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR không khả dụng';
       default:
         return null;
     }
@@ -394796,13 +394859,9 @@ extension on _StringsZhCn {
       case 'manga_reader_ocr_trigger':
         return 'OCR 触发方式';
       case 'manga_reader_ocr_automatic':
-        return '边看边识别';
+        return '打开即识别';
       case 'manga_reader_ocr_manual':
         return '手动';
-      case 'manga_reader_parallel_ocr_tasks':
-        return '并行 OCR 任务数';
-      case 'manga_reader_ocr_current':
-        return '识别当前可见页';
       case 'manga_reader_back_to_start':
         return '回到开头';
       case 'reader_settings_panel_move_left':
@@ -394810,7 +394869,7 @@ extension on _StringsZhCn {
       case 'reader_settings_panel_move_right':
         return '将设置移到右侧';
       case 'manga_reader_ocr_engine_note':
-        return '边看边识别支持本地 ONNX、Google Lens 和系统 OCR。本地 ONNX 串行执行；外部 Mokuro 和配对主机使用手动批量识别。';
+        return '设为「打开即识别」时，打开卷或章节会在后台从当前页开始识别整卷，右上角显示进度，使用下方选择的引擎。设为「手动」则在工具栏提供「识别本卷」按钮。';
       case 'manga_reader_ocr_unavailable':
         return '没有可用的 OCR 引擎：请在 OCR 设置中下载本地模型或换用其他引擎。';
       case 'game_stream_library_subtitle':
@@ -394957,6 +395016,12 @@ extension on _StringsZhCn {
         return '允许远程启动';
       case 'game_stream_remote_launch_hint':
         return '已配对的安卓设备可从本机游戏库启动游戏并直接串流';
+      case 'manga_reader_ocr_volume':
+        return '识别本卷';
+      case 'manga_reader_ocr_queued':
+        return '排队中';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR 不可用';
       default:
         return null;
     }
@@ -405975,13 +406040,9 @@ extension on _StringsZhHk {
       case 'manga_reader_ocr_trigger':
         return 'OCR 觸發方式';
       case 'manga_reader_ocr_automatic':
-        return '邊看邊識別';
+        return '打開即識別';
       case 'manga_reader_ocr_manual':
         return '手動';
-      case 'manga_reader_parallel_ocr_tasks':
-        return '並行 OCR 任務數';
-      case 'manga_reader_ocr_current':
-        return '識別目前可見頁面';
       case 'manga_reader_back_to_start':
         return '返回開頭';
       case 'reader_settings_panel_move_left':
@@ -405989,7 +406050,7 @@ extension on _StringsZhHk {
       case 'reader_settings_panel_move_right':
         return '將設定移到右側';
       case 'manga_reader_ocr_engine_note':
-        return '邊看邊識別支援本機 ONNX、Google Lens 和系統 OCR。本機 ONNX 逐一執行；外部 Mokuro 和已配對主機使用手動批次識別。';
+        return '設為「打開即識別」時，打開卷或章節會在背景從目前頁開始識別整卷，右上角顯示進度，使用下方選擇的引擎。設為「手動」則在工具列提供「識別本卷」按鈕。';
       case 'manga_reader_ocr_unavailable':
         return '沒有可用的 OCR 引擎：請在 OCR 設定中下載本機模型或改用其他引擎。';
       case 'game_stream_library_subtitle':
@@ -406136,6 +406197,12 @@ extension on _StringsZhHk {
         return 'Allow remote launch';
       case 'game_stream_remote_launch_hint':
         return 'Paired Android devices can start games from this PC\'s library and stream them';
+      case 'manga_reader_ocr_volume':
+        return '識別本卷';
+      case 'manga_reader_ocr_queued':
+        return '排隊中';
+      case 'manga_reader_ocr_unavailable_short':
+        return 'OCR 不可用';
       default:
         return null;
     }
