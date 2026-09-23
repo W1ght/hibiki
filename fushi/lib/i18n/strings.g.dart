@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92905 (5465 per locale)
+/// Strings: 94333 (5549 per locale)
 ///
-/// Built on 2026-09-23 at 15:22 UTC
+/// Built on 2026-09-25 at 07:51 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -7734,6 +7734,160 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_cuda_desc =>
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  String get game_lookup_samples_advanced => 'Advanced options';
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  String get game_lookup_samples_apply => 'Game calibration';
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  String get game_lookup_samples_capture => 'Capture current line';
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  String get game_lookup_samples_continuation_cells => 'cells';
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  String get game_lookup_samples_empty => 'No samples yet';
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  String get game_lookup_samples_narration => 'Narration calibration';
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  String get game_lookup_samples_remove => 'Remove sample';
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -20756,6 +20910,244 @@ class _StringsAr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -34019,6 +34411,244 @@ class _StringsDe extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -47333,6 +47963,244 @@ class _StringsEs extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -60685,6 +61553,244 @@ class _StringsFr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -73827,6 +74933,244 @@ class _StringsId extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -87070,6 +88414,244 @@ class _StringsIt extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -99674,6 +101256,244 @@ class _StringsJa extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -112288,6 +114108,244 @@ class _StringsKo extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -125485,6 +127543,244 @@ class _StringsNl extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -138736,6 +141032,244 @@ class _StringsPtBr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -151961,6 +154495,244 @@ class _StringsRu extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -164982,6 +167754,244 @@ class _StringsTh extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -178118,6 +181128,244 @@ class _StringsTr extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -191225,6 +194473,244 @@ class _StringsVi extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 // Path: <root>
@@ -203216,6 +206702,219 @@ class _StringsZhCn extends _StringsEn {
       '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
   @override
   String get manga_ocr_runtime_installing => '正在安装本地 OCR 引擎…';
+  @override
+  String get game_lookup_samples_advanced => '高级选项';
+  @override
+  String get game_lookup_samples_advanced_hint => '多样本和可视化字格修正';
+  @override
+  String get game_lookup_samples_apply => '游戏校准';
+  @override
+  String get game_lookup_samples_auto_align_all => '用全部校准样本自动对齐';
+  @override
+  String get game_lookup_samples_auto_align_current => '按当前截图自动对齐';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      '高级模式会将所有校准样本共同拟合，并用完整样本集检查结果。';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      '生成的字格与识别位置偏差较大，未应用此次结果。';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      '默认只用当前选中的截图拟合；请选择一张包含至少两行完整台词的截图。';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      '暂时无法可靠确定字格。请使用完整的多行台词，把正文框进来，避开名字和按钮；原草稿未改动。';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds => '拟合范围超出截图。';
+  @override
+  String get game_lookup_samples_auto_geometry_weak => '缺少足够分散的字位置，无法确定排版。';
+  @override
+  String get game_lookup_samples_auto_grid => '已测量字格 · 无需调整字体';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      '大致框住正文，自动测量字距、行距和换行。已有训练样本会共同参与，验证样本用于检查结果。';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      '样本的换行或字格不一致，无法应用同一套排版。请检查标出的样本是否截到了完整台词。';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous => '无法确定续行起点。';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      '未能测出可靠行距，请换一张完整的两行或三行台词图。';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      '按测得字宽无法复现样本换行。';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      '请选择或采集一张完整的两行或三行台词；短句无法确定换行位置。';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      '尚未自动对齐。黄框只需包含各行正文，点击“自动对齐”；无需先调字号、字距或逐字点中心。';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      '自动测量结果未能通过完整台词校验，未应用此次结果。';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow => '拟合文字超出校准正文区。';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable => '原生排版预览不可用。';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      '未找到清晰的正文行。请检查黄框是否包含完整正文，且未包含姓名或界面按钮。';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => '样本 ${sample}：${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      '已测出字格。确认每个框都包含对应文字、后续各行也对应，再应用即可。';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      '检测到的文字与 Hook 正文对应不足。';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      '检测到的文字与 Hook 正文对应较弱。';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      '这张样本含有暂时无法验证宽度的字符，请暂用手动排版。';
+  @override
+  String get game_lookup_samples_capture => '采集当前台词';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      '采集时台词或窗口发生变化。请停在完整台词上，再采集一次。';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      '未能采集样本。请重试；若仍失败，保留当前窗口并反馈此提示。';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      '未能安全隐藏或恢复查词层。请关闭校准窗口并重新附着后再采集。';
+  @override
+  String get game_lookup_samples_capture_replace => '替换当前样本';
+  @override
+  String get game_lookup_samples_capture_source =>
+      '当前没有可采集的台词。请确认游戏已附着，且正文文本正在正常获取。';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      '游戏窗口与超分画面的位置暂时无法对应，无法采集校准截图。';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      '未能采集这个窗口。已保存的校准不受影响；采集失败原因已记录到日志，便于排查。';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      '当前文本包含暂不支持的注音格式，请换一条普通台词采集。';
+  @override
+  String get game_lookup_samples_capture_window =>
+      '未能取得完整的游戏画面。请确认游戏窗口未最小化，再采集一次。';
+  @override
+  String get game_lookup_samples_continuation_cells => '格';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      '自定义第二行及后续行相对第一行的起点，所有文本使用同一数值；0 表示同一起点。';
+  @override
+  String get game_lookup_samples_continuation_label => '文本续行';
+  @override
+  String get game_lookup_samples_continuation_title => '续行起点';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => '当前样本：第 ${sample} / ${total} 张';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => '诊断：${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => '对话校准';
+  @override
+  String get game_lookup_samples_empty => '还没有样本';
+  @override
+  String get game_lookup_samples_fit_all => '将所有校准样本共同拟合';
+  @override
+  String get game_lookup_samples_fit_all_hint => '多张完整台词共用同一字格时使用；完整样本集会一起检查。';
+  @override
+  String get game_lookup_samples_grid_advance => '调整格宽';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      '拖动蓝框内部移动或四角缩放；拖动小格右边缘调整格宽。普通格会同步变化，蓝框从右侧终点同步扩展；特殊字符格保持独立宽度。';
+  @override
+  String get game_lookup_samples_hover => '把鼠标移到框上，检查它对应的字。';
+  @override
+  String get game_lookup_samples_layout_title => '文字排版（蓝色字框）';
+  @override
+  String get game_lookup_samples_limit => '最多保留八个样本，请先删除一个再采集。';
+  @override
+  String get game_lookup_samples_load_failed => '无法读取已保存的样本草稿。';
+  @override
+  String get game_lookup_samples_manual_layout => '手动排版（高级）';
+  @override
+  String get game_lookup_samples_narration => '旁白校准';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      '只有台词和旁白的文字排版不一致时才需要单独校准；排版一致时无需进行旁白校准。';
+  @override
+  String get game_lookup_samples_quoted_text_only => '只用「」内台词';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint => '过滤掉「…」以外的人名等字符。';
+  @override
+  String get game_lookup_samples_region_hint =>
+      '拖动橙色外框内部可移动，拖动边角可缩放。宽高控制排版空间和换行，不改变单个字框大小。';
+  @override
+  String get game_lookup_samples_remove => '删除样本';
+  @override
+  String get game_lookup_samples_save_failed => '自动保存失败，当前样本仍保留在本窗口；请重试。';
+  @override
+  String get game_lookup_samples_saved => '已自动保存到本机';
+  @override
+  String get game_lookup_samples_search_hint =>
+      '框住完整正文即可。只识别橙框内的内容，并保留你的选区；字符小框另行计算。调整选区后需重新自动对齐。';
+  @override
+  String get game_lookup_samples_search_title => '识别范围（橙色外框）';
+  @override
+  String get game_lookup_samples_special_chars_add => '添加特殊字符';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      '为占用较窄或较宽格子的标点单独设置格宽；未添加的字符仍使用普通格宽。';
+  @override
+  String get game_lookup_samples_special_chars_input => '输入特殊字符';
+  @override
+  String get game_lookup_samples_special_chars_input_hint => '可一次输入多个字符，例如 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove => '移除特殊字符';
+  @override
+  String get game_lookup_samples_special_chars_title => '特殊字符格宽';
+  @override
+  String get game_lookup_samples_title => '多句样本校准';
+  @override
+  String get game_lookup_samples_unavailable => '当前排版容不下完整台词，请调整区域或字号。';
+  @override
+  String get game_lookup_samples_zoom_in => '放大截图';
+  @override
+  String get game_lookup_samples_zoom_out => '缩小截图';
+  @override
+  String get game_lookup_samples_zoom_reset => '显示完整截图';
+  @override
+  String get game_lookup_attached_calibration_ended => '校准已结束，请关闭此窗口后重新开始。';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      '游戏在后台或已隐藏，校准暂时暂停。用 Alt+Tab 切回游戏，等字形高亮出现后再点探针；这里仍可调整和确认。';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      '正在准备点击保护，请先不要点击游戏台词。';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      '探针已就绪。请按顺序点击高亮字框内部；点击字框外仍会操作游戏。';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      '请在这里调整正文区域，或在样本编辑器的截图上拖框。游戏中的覆盖层只接收高亮字形探针。';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      '台词已变化，请取消并重新打开校准，以当前台词重新确认。';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      '校准暂不可用。请停止点击游戏台词，调整参数或取消校准。';
+  @override
+  String get game_line_bulk_text_hint => '检测到批量文本，已暂停逐字查词以避免卡顿。';
 }
 
 // Path: <root>
@@ -215502,6 +219201,244 @@ class _StringsZhHk extends _StringsEn {
       'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
   @override
   String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
+  @override
+  String get game_lookup_samples_advanced => 'Advanced options';
+  @override
+  String get game_lookup_samples_advanced_hint =>
+      'Extra samples and visual grid correction';
+  @override
+  String get game_lookup_samples_apply => 'Game calibration';
+  @override
+  String get game_lookup_samples_auto_align_all =>
+      'Align all calibration samples';
+  @override
+  String get game_lookup_samples_auto_align_current =>
+      'Align current screenshot';
+  @override
+  String get game_lookup_samples_auto_all_hint =>
+      'Use all calibration samples together and check the result against the complete set.';
+  @override
+  String get game_lookup_samples_auto_character_positions_inconsistent =>
+      'The generated cells differ too much from the detected positions. This result was not applied.';
+  @override
+  String get game_lookup_samples_auto_current_hint =>
+      'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+  @override
+  String get game_lookup_samples_auto_failed =>
+      'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+  @override
+  String get game_lookup_samples_auto_geometry_out_of_bounds =>
+      'The fitted layout extends beyond the screenshot.';
+  @override
+  String get game_lookup_samples_auto_geometry_weak =>
+      'There are not enough well-spread character positions to determine the layout.';
+  @override
+  String get game_lookup_samples_auto_grid =>
+      'Measured grid · no font adjustment required';
+  @override
+  String get game_lookup_samples_auto_hint =>
+      'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+  @override
+  String get game_lookup_samples_auto_inconsistent =>
+      'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+  @override
+  String get game_lookup_samples_auto_indent_ambiguous =>
+      'The continuation line start could not be determined.';
+  @override
+  String get game_lookup_samples_auto_line_spacing_missing =>
+      'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+  @override
+  String get game_lookup_samples_auto_line_wrap_inconsistent =>
+      'The measured character widths cannot reproduce the sample\'s line wrapping.';
+  @override
+  String get game_lookup_samples_auto_multiline =>
+      'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+  @override
+  String get game_lookup_samples_auto_pending =>
+      'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+  @override
+  String get game_lookup_samples_auto_preview_failed =>
+      'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+  @override
+  String get game_lookup_samples_auto_preview_text_overflow =>
+      'The fitted text exceeds the calibrated body region.';
+  @override
+  String get game_lookup_samples_auto_preview_unavailable =>
+      'The native layout preview was unavailable.';
+  @override
+  String get game_lookup_samples_auto_rows_missing =>
+      'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+  @override
+  String game_lookup_samples_auto_sample_failed({
+    required Object sample,
+    required Object reason,
+  }) => 'Sample ${sample}: ${reason}';
+  @override
+  String get game_lookup_samples_auto_success =>
+      'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_failed =>
+      'The detected text does not match the hooked text closely enough.';
+  @override
+  String get game_lookup_samples_auto_text_alignment_weak =>
+      'The detected text only weakly matches the hooked text.';
+  @override
+  String get game_lookup_samples_auto_unsupported =>
+      'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+  @override
+  String get game_lookup_samples_capture => 'Capture current line';
+  @override
+  String get game_lookup_samples_capture_changed =>
+      'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+  @override
+  String get game_lookup_samples_capture_failed =>
+      'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+  @override
+  String get game_lookup_samples_capture_overlay =>
+      'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+  @override
+  String get game_lookup_samples_capture_replace => 'Replace current sample';
+  @override
+  String get game_lookup_samples_capture_source =>
+      'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+  @override
+  String get game_lookup_samples_capture_surface_mapping =>
+      'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+  @override
+  String get game_lookup_samples_capture_unavailable =>
+      'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+  @override
+  String get game_lookup_samples_capture_unsupported =>
+      'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+  @override
+  String get game_lookup_samples_capture_window =>
+      'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+  @override
+  String get game_lookup_samples_continuation_cells => 'cells';
+  @override
+  String get game_lookup_samples_continuation_hint =>
+      'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+  @override
+  String get game_lookup_samples_continuation_label => 'Text continuation';
+  @override
+  String get game_lookup_samples_continuation_title =>
+      'Continuation line start';
+  @override
+  String game_lookup_samples_current({
+    required Object sample,
+    required Object total,
+  }) => 'Current sample: ${sample} of ${total}';
+  @override
+  String game_lookup_samples_diagnostic({
+    required Object reason,
+    required Object detail,
+  }) => 'Diagnostic: ${reason}${detail}';
+  @override
+  String get game_lookup_samples_dialogue => 'Dialogue calibration';
+  @override
+  String get game_lookup_samples_empty => 'No samples yet';
+  @override
+  String get game_lookup_samples_fit_all =>
+      'Fit all calibration samples together';
+  @override
+  String get game_lookup_samples_fit_all_hint =>
+      'Use this when several complete samples share one grid; the complete set is checked together.';
+  @override
+  String get game_lookup_samples_grid_advance => 'Adjust cell width';
+  @override
+  String get game_lookup_samples_grid_edit_hint =>
+      'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+  @override
+  String get game_lookup_samples_hover =>
+      'Move the pointer over a box to inspect its character.';
+  @override
+  String get game_lookup_samples_layout_title =>
+      'Character layout (blue boxes)';
+  @override
+  String get game_lookup_samples_limit =>
+      'Keep up to eight samples. Remove a sample before capturing another.';
+  @override
+  String get game_lookup_samples_load_failed =>
+      'The saved sample draft could not be read.';
+  @override
+  String get game_lookup_samples_manual_layout => 'Manual layout (advanced)';
+  @override
+  String get game_lookup_samples_narration => 'Narration calibration';
+  @override
+  String get game_lookup_samples_narration_hint =>
+      'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+  @override
+  String get game_lookup_samples_quoted_text_only => 'Use text inside 「」 only';
+  @override
+  String get game_lookup_samples_quoted_text_only_hint =>
+      'Filter speaker names and other characters outside 「…」.';
+  @override
+  String get game_lookup_samples_region_hint =>
+      'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+  @override
+  String get game_lookup_samples_remove => 'Remove sample';
+  @override
+  String get game_lookup_samples_save_failed =>
+      'Automatic save failed. The current samples remain in this window; try again.';
+  @override
+  String get game_lookup_samples_saved => 'Saved automatically on this device';
+  @override
+  String get game_lookup_samples_search_hint =>
+      'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+  @override
+  String get game_lookup_samples_search_title =>
+      'Recognition region (orange frame)';
+  @override
+  String get game_lookup_samples_special_chars_add => 'Add special characters';
+  @override
+  String get game_lookup_samples_special_chars_hint =>
+      'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+  @override
+  String get game_lookup_samples_special_chars_input => 'Characters';
+  @override
+  String get game_lookup_samples_special_chars_input_hint =>
+      'Enter one or more characters, such as 、。';
+  @override
+  String get game_lookup_samples_special_chars_remove =>
+      'Remove special character';
+  @override
+  String get game_lookup_samples_special_chars_title =>
+      'Special-character cell width';
+  @override
+  String get game_lookup_samples_title => 'Calibrate with samples';
+  @override
+  String get game_lookup_samples_unavailable =>
+      'This layout cannot cover the complete line. Adjust the area or font size.';
+  @override
+  String get game_lookup_samples_zoom_in => 'Zoom in';
+  @override
+  String get game_lookup_samples_zoom_out => 'Zoom out';
+  @override
+  String get game_lookup_samples_zoom_reset => 'Fit screenshot';
+  @override
+  String get game_lookup_attached_calibration_ended =>
+      'Calibration has ended. Close this dialog before starting again.';
+  @override
+  String get game_lookup_attached_calibration_paused =>
+      'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+  @override
+  String get game_lookup_attached_calibration_preparing =>
+      'Preparing click protection. Do not click the game dialogue yet.';
+  @override
+  String get game_lookup_attached_calibration_ready =>
+      'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+  @override
+  String get game_lookup_attached_calibration_region_help =>
+      'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+  @override
+  String get game_lookup_attached_calibration_text_changed =>
+      'The dialogue changed. Cancel and reopen calibration for the current line.';
+  @override
+  String get game_lookup_attached_calibration_unavailable =>
+      'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+  @override
+  String get game_line_bulk_text_hint =>
+      'Bulk text detected. Character lookup is paused.';
 }
 
 /// Flat map(s) containing all translations.
@@ -226770,6 +230707,177 @@ extension on _StringsEn {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -238033,6 +242141,177 @@ extension on _StringsAr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -249345,6 +253624,177 @@ extension on _StringsDe {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -260647,6 +265097,177 @@ extension on _StringsEs {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -271957,6 +276578,177 @@ extension on _StringsFr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -283237,6 +288029,177 @@ extension on _StringsId {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -294540,6 +299503,177 @@ extension on _StringsIt {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -305767,6 +310901,177 @@ extension on _StringsJa {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -316999,6 +322304,177 @@ extension on _StringsKo {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -328297,6 +333773,177 @@ extension on _StringsNl {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -339590,6 +345237,177 @@ extension on _StringsPtBr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -350889,6 +356707,177 @@ extension on _StringsRu {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -362157,6 +368146,177 @@ extension on _StringsTh {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -373441,6 +379601,177 @@ extension on _StringsTr {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -384719,6 +391050,177 @@ extension on _StringsVi {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
@@ -395889,6 +402391,177 @@ extension on _StringsZhCn {
         return '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
       case 'manga_ocr_runtime_installing':
         return '正在安装本地 OCR 引擎…';
+      case 'game_lookup_samples_advanced':
+        return '高级选项';
+      case 'game_lookup_samples_advanced_hint':
+        return '多样本和可视化字格修正';
+      case 'game_lookup_samples_apply':
+        return '游戏校准';
+      case 'game_lookup_samples_auto_align_all':
+        return '用全部校准样本自动对齐';
+      case 'game_lookup_samples_auto_align_current':
+        return '按当前截图自动对齐';
+      case 'game_lookup_samples_auto_all_hint':
+        return '高级模式会将所有校准样本共同拟合，并用完整样本集检查结果。';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return '生成的字格与识别位置偏差较大，未应用此次结果。';
+      case 'game_lookup_samples_auto_current_hint':
+        return '默认只用当前选中的截图拟合；请选择一张包含至少两行完整台词的截图。';
+      case 'game_lookup_samples_auto_failed':
+        return '暂时无法可靠确定字格。请使用完整的多行台词，把正文框进来，避开名字和按钮；原草稿未改动。';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return '拟合范围超出截图。';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return '缺少足够分散的字位置，无法确定排版。';
+      case 'game_lookup_samples_auto_grid':
+        return '已测量字格 · 无需调整字体';
+      case 'game_lookup_samples_auto_hint':
+        return '大致框住正文，自动测量字距、行距和换行。已有训练样本会共同参与，验证样本用于检查结果。';
+      case 'game_lookup_samples_auto_inconsistent':
+        return '样本的换行或字格不一致，无法应用同一套排版。请检查标出的样本是否截到了完整台词。';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return '无法确定续行起点。';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return '未能测出可靠行距，请换一张完整的两行或三行台词图。';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return '按测得字宽无法复现样本换行。';
+      case 'game_lookup_samples_auto_multiline':
+        return '请选择或采集一张完整的两行或三行台词；短句无法确定换行位置。';
+      case 'game_lookup_samples_auto_pending':
+        return '尚未自动对齐。黄框只需包含各行正文，点击“自动对齐”；无需先调字号、字距或逐字点中心。';
+      case 'game_lookup_samples_auto_preview_failed':
+        return '自动测量结果未能通过完整台词校验，未应用此次结果。';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return '拟合文字超出校准正文区。';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return '原生排版预览不可用。';
+      case 'game_lookup_samples_auto_rows_missing':
+        return '未找到清晰的正文行。请检查黄框是否包含完整正文，且未包含姓名或界面按钮。';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            '样本 ${sample}：${reason}';
+      case 'game_lookup_samples_auto_success':
+        return '已测出字格。确认每个框都包含对应文字、后续各行也对应，再应用即可。';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return '检测到的文字与 Hook 正文对应不足。';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return '检测到的文字与 Hook 正文对应较弱。';
+      case 'game_lookup_samples_auto_unsupported':
+        return '这张样本含有暂时无法验证宽度的字符，请暂用手动排版。';
+      case 'game_lookup_samples_capture':
+        return '采集当前台词';
+      case 'game_lookup_samples_capture_changed':
+        return '采集时台词或窗口发生变化。请停在完整台词上，再采集一次。';
+      case 'game_lookup_samples_capture_failed':
+        return '未能采集样本。请重试；若仍失败，保留当前窗口并反馈此提示。';
+      case 'game_lookup_samples_capture_overlay':
+        return '未能安全隐藏或恢复查词层。请关闭校准窗口并重新附着后再采集。';
+      case 'game_lookup_samples_capture_replace':
+        return '替换当前样本';
+      case 'game_lookup_samples_capture_source':
+        return '当前没有可采集的台词。请确认游戏已附着，且正文文本正在正常获取。';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return '游戏窗口与超分画面的位置暂时无法对应，无法采集校准截图。';
+      case 'game_lookup_samples_capture_unavailable':
+        return '未能采集这个窗口。已保存的校准不受影响；采集失败原因已记录到日志，便于排查。';
+      case 'game_lookup_samples_capture_unsupported':
+        return '当前文本包含暂不支持的注音格式，请换一条普通台词采集。';
+      case 'game_lookup_samples_capture_window':
+        return '未能取得完整的游戏画面。请确认游戏窗口未最小化，再采集一次。';
+      case 'game_lookup_samples_continuation_cells':
+        return '格';
+      case 'game_lookup_samples_continuation_hint':
+        return '自定义第二行及后续行相对第一行的起点，所有文本使用同一数值；0 表示同一起点。';
+      case 'game_lookup_samples_continuation_label':
+        return '文本续行';
+      case 'game_lookup_samples_continuation_title':
+        return '续行起点';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            '当前样本：第 ${sample} / ${total} 张';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            '诊断：${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return '对话校准';
+      case 'game_lookup_samples_empty':
+        return '还没有样本';
+      case 'game_lookup_samples_fit_all':
+        return '将所有校准样本共同拟合';
+      case 'game_lookup_samples_fit_all_hint':
+        return '多张完整台词共用同一字格时使用；完整样本集会一起检查。';
+      case 'game_lookup_samples_grid_advance':
+        return '调整格宽';
+      case 'game_lookup_samples_grid_edit_hint':
+        return '拖动蓝框内部移动或四角缩放；拖动小格右边缘调整格宽。普通格会同步变化，蓝框从右侧终点同步扩展；特殊字符格保持独立宽度。';
+      case 'game_lookup_samples_hover':
+        return '把鼠标移到框上，检查它对应的字。';
+      case 'game_lookup_samples_layout_title':
+        return '文字排版（蓝色字框）';
+      case 'game_lookup_samples_limit':
+        return '最多保留八个样本，请先删除一个再采集。';
+      case 'game_lookup_samples_load_failed':
+        return '无法读取已保存的样本草稿。';
+      case 'game_lookup_samples_manual_layout':
+        return '手动排版（高级）';
+      case 'game_lookup_samples_narration':
+        return '旁白校准';
+      case 'game_lookup_samples_narration_hint':
+        return '只有台词和旁白的文字排版不一致时才需要单独校准；排版一致时无需进行旁白校准。';
+      case 'game_lookup_samples_quoted_text_only':
+        return '只用「」内台词';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return '过滤掉「…」以外的人名等字符。';
+      case 'game_lookup_samples_region_hint':
+        return '拖动橙色外框内部可移动，拖动边角可缩放。宽高控制排版空间和换行，不改变单个字框大小。';
+      case 'game_lookup_samples_remove':
+        return '删除样本';
+      case 'game_lookup_samples_save_failed':
+        return '自动保存失败，当前样本仍保留在本窗口；请重试。';
+      case 'game_lookup_samples_saved':
+        return '已自动保存到本机';
+      case 'game_lookup_samples_search_hint':
+        return '框住完整正文即可。只识别橙框内的内容，并保留你的选区；字符小框另行计算。调整选区后需重新自动对齐。';
+      case 'game_lookup_samples_search_title':
+        return '识别范围（橙色外框）';
+      case 'game_lookup_samples_special_chars_add':
+        return '添加特殊字符';
+      case 'game_lookup_samples_special_chars_hint':
+        return '为占用较窄或较宽格子的标点单独设置格宽；未添加的字符仍使用普通格宽。';
+      case 'game_lookup_samples_special_chars_input':
+        return '输入特殊字符';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return '可一次输入多个字符，例如 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return '移除特殊字符';
+      case 'game_lookup_samples_special_chars_title':
+        return '特殊字符格宽';
+      case 'game_lookup_samples_title':
+        return '多句样本校准';
+      case 'game_lookup_samples_unavailable':
+        return '当前排版容不下完整台词，请调整区域或字号。';
+      case 'game_lookup_samples_zoom_in':
+        return '放大截图';
+      case 'game_lookup_samples_zoom_out':
+        return '缩小截图';
+      case 'game_lookup_samples_zoom_reset':
+        return '显示完整截图';
+      case 'game_lookup_attached_calibration_ended':
+        return '校准已结束，请关闭此窗口后重新开始。';
+      case 'game_lookup_attached_calibration_paused':
+        return '游戏在后台或已隐藏，校准暂时暂停。用 Alt+Tab 切回游戏，等字形高亮出现后再点探针；这里仍可调整和确认。';
+      case 'game_lookup_attached_calibration_preparing':
+        return '正在准备点击保护，请先不要点击游戏台词。';
+      case 'game_lookup_attached_calibration_ready':
+        return '探针已就绪。请按顺序点击高亮字框内部；点击字框外仍会操作游戏。';
+      case 'game_lookup_attached_calibration_region_help':
+        return '请在这里调整正文区域，或在样本编辑器的截图上拖框。游戏中的覆盖层只接收高亮字形探针。';
+      case 'game_lookup_attached_calibration_text_changed':
+        return '台词已变化，请取消并重新打开校准，以当前台词重新确认。';
+      case 'game_lookup_attached_calibration_unavailable':
+        return '校准暂不可用。请停止点击游戏台词，调整参数或取消校准。';
+      case 'game_line_bulk_text_hint':
+        return '检测到批量文本，已暂停逐字查词以避免卡顿。';
       default:
         return null;
     }
@@ -407094,6 +413767,177 @@ extension on _StringsZhHk {
         return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
       case 'manga_ocr_runtime_installing':
         return 'Installing the local OCR engine…';
+      case 'game_lookup_samples_advanced':
+        return 'Advanced options';
+      case 'game_lookup_samples_advanced_hint':
+        return 'Extra samples and visual grid correction';
+      case 'game_lookup_samples_apply':
+        return 'Game calibration';
+      case 'game_lookup_samples_auto_align_all':
+        return 'Align all calibration samples';
+      case 'game_lookup_samples_auto_align_current':
+        return 'Align current screenshot';
+      case 'game_lookup_samples_auto_all_hint':
+        return 'Use all calibration samples together and check the result against the complete set.';
+      case 'game_lookup_samples_auto_character_positions_inconsistent':
+        return 'The generated cells differ too much from the detected positions. This result was not applied.';
+      case 'game_lookup_samples_auto_current_hint':
+        return 'Use the selected screenshot only. It should show the complete dialogue across at least two lines.';
+      case 'game_lookup_samples_auto_failed':
+        return 'No reliable regular grid was found. Use a complete multiline sample, keep the dialogue inside the frame, and exclude the speaker and buttons. Your draft has not changed.';
+      case 'game_lookup_samples_auto_geometry_out_of_bounds':
+        return 'The fitted layout extends beyond the screenshot.';
+      case 'game_lookup_samples_auto_geometry_weak':
+        return 'There are not enough well-spread character positions to determine the layout.';
+      case 'game_lookup_samples_auto_grid':
+        return 'Measured grid · no font adjustment required';
+      case 'game_lookup_samples_auto_hint':
+        return 'Frame the dialogue roughly and automatically measure character spacing, line spacing, and wrapping. Training samples contribute together; validation samples check the result.';
+      case 'game_lookup_samples_auto_inconsistent':
+        return 'The samples have inconsistent wrapping or character grids, so one layout cannot be applied. Check whether the highlighted sample captured the complete dialogue.';
+      case 'game_lookup_samples_auto_indent_ambiguous':
+        return 'The continuation line start could not be determined.';
+      case 'game_lookup_samples_auto_line_spacing_missing':
+        return 'Reliable line spacing could not be measured. Try a complete two- or three-line sample.';
+      case 'game_lookup_samples_auto_line_wrap_inconsistent':
+        return 'The measured character widths cannot reproduce the sample\'s line wrapping.';
+      case 'game_lookup_samples_auto_multiline':
+        return 'Select or capture one complete sample with two or more lines; a short line cannot determine the wrap position.';
+      case 'game_lookup_samples_auto_pending':
+        return 'Not automatically aligned yet. Let the yellow frame contain each line of dialogue, then select “Align from screenshot”. You do not need to adjust font size, character spacing, or click character centres first.';
+      case 'game_lookup_samples_auto_preview_failed':
+        return 'The automatic measurement did not pass the complete-dialogue check, so this result was not applied.';
+      case 'game_lookup_samples_auto_preview_text_overflow':
+        return 'The fitted text exceeds the calibrated body region.';
+      case 'game_lookup_samples_auto_preview_unavailable':
+        return 'The native layout preview was unavailable.';
+      case 'game_lookup_samples_auto_rows_missing':
+        return 'No clear dialogue lines were found. Check that the yellow frame contains the complete dialogue but not the speaker name or interface buttons.';
+      case 'game_lookup_samples_auto_sample_failed':
+        return ({required Object sample, required Object reason}) =>
+            'Sample ${sample}: ${reason}';
+      case 'game_lookup_samples_auto_success':
+        return 'Grid measured. Check that each box contains its character and that subsequent lines match before applying.';
+      case 'game_lookup_samples_auto_text_alignment_failed':
+        return 'The detected text does not match the hooked text closely enough.';
+      case 'game_lookup_samples_auto_text_alignment_weak':
+        return 'The detected text only weakly matches the hooked text.';
+      case 'game_lookup_samples_auto_unsupported':
+        return 'This sample contains character widths that the grid method cannot verify. Use manual layout for now.';
+      case 'game_lookup_samples_capture':
+        return 'Capture current line';
+      case 'game_lookup_samples_capture_changed':
+        return 'The dialogue or window changed while capturing. Keep a complete line visible, then capture again.';
+      case 'game_lookup_samples_capture_failed':
+        return 'Could not capture a sample. Try again; if it still fails, keep this window open and report this message.';
+      case 'game_lookup_samples_capture_overlay':
+        return 'Could not safely hide or restore the lookup layer. Close the calibration window, reattach to the game, and try again.';
+      case 'game_lookup_samples_capture_replace':
+        return 'Replace current sample';
+      case 'game_lookup_samples_capture_source':
+        return 'There is no dialogue available to capture. Confirm that the game is attached and dialogue text is being received.';
+      case 'game_lookup_samples_capture_surface_mapping':
+        return 'The game window and the upscaled image cannot be aligned right now, so a calibration screenshot cannot be captured.';
+      case 'game_lookup_samples_capture_unavailable':
+        return 'This window could not be captured. Your saved calibration is unchanged; the capture failure has been logged for diagnosis.';
+      case 'game_lookup_samples_capture_unsupported':
+        return 'This text contains a ruby format that is not supported yet. Capture a normal dialogue line instead.';
+      case 'game_lookup_samples_capture_window':
+        return 'Could not get the complete game image. Confirm that the game window is not minimized, then capture again.';
+      case 'game_lookup_samples_continuation_cells':
+        return 'cells';
+      case 'game_lookup_samples_continuation_hint':
+        return 'Set where the second and later lines start relative to the first line. One value applies to all text; 0 keeps the same start.';
+      case 'game_lookup_samples_continuation_label':
+        return 'Text continuation';
+      case 'game_lookup_samples_continuation_title':
+        return 'Continuation line start';
+      case 'game_lookup_samples_current':
+        return ({required Object sample, required Object total}) =>
+            'Current sample: ${sample} of ${total}';
+      case 'game_lookup_samples_diagnostic':
+        return ({required Object reason, required Object detail}) =>
+            'Diagnostic: ${reason}${detail}';
+      case 'game_lookup_samples_dialogue':
+        return 'Dialogue calibration';
+      case 'game_lookup_samples_empty':
+        return 'No samples yet';
+      case 'game_lookup_samples_fit_all':
+        return 'Fit all calibration samples together';
+      case 'game_lookup_samples_fit_all_hint':
+        return 'Use this when several complete samples share one grid; the complete set is checked together.';
+      case 'game_lookup_samples_grid_advance':
+        return 'Adjust cell width';
+      case 'game_lookup_samples_grid_edit_hint':
+        return 'Drag the blue frame to move or resize it; drag the right edge of a cell to adjust its width. Normal cells stay synchronized and the frame expands from the right edge; special-character cells keep their own width.';
+      case 'game_lookup_samples_hover':
+        return 'Move the pointer over a box to inspect its character.';
+      case 'game_lookup_samples_layout_title':
+        return 'Character layout (blue boxes)';
+      case 'game_lookup_samples_limit':
+        return 'Keep up to eight samples. Remove a sample before capturing another.';
+      case 'game_lookup_samples_load_failed':
+        return 'The saved sample draft could not be read.';
+      case 'game_lookup_samples_manual_layout':
+        return 'Manual layout (advanced)';
+      case 'game_lookup_samples_narration':
+        return 'Narration calibration';
+      case 'game_lookup_samples_narration_hint':
+        return 'Only calibrate narration separately when its text layout differs from dialogue. If they use the same layout, no narration calibration is needed.';
+      case 'game_lookup_samples_quoted_text_only':
+        return 'Use text inside 「」 only';
+      case 'game_lookup_samples_quoted_text_only_hint':
+        return 'Filter speaker names and other characters outside 「…」.';
+      case 'game_lookup_samples_region_hint':
+        return 'Drag inside the orange outline to move it; drag its handles to resize. Width and height control wrapping space, not character size.';
+      case 'game_lookup_samples_remove':
+        return 'Remove sample';
+      case 'game_lookup_samples_save_failed':
+        return 'Automatic save failed. The current samples remain in this window; try again.';
+      case 'game_lookup_samples_saved':
+        return 'Saved automatically on this device';
+      case 'game_lookup_samples_search_hint':
+        return 'Enclose all dialogue text. Recognition stays inside this frame and keeps your selection. Character boxes are computed separately. Moving the frame requires aligning again.';
+      case 'game_lookup_samples_search_title':
+        return 'Recognition region (orange frame)';
+      case 'game_lookup_samples_special_chars_add':
+        return 'Add special characters';
+      case 'game_lookup_samples_special_chars_hint':
+        return 'Set a separate width for punctuation that occupies a narrower or wider cell. Other characters keep the normal width.';
+      case 'game_lookup_samples_special_chars_input':
+        return 'Characters';
+      case 'game_lookup_samples_special_chars_input_hint':
+        return 'Enter one or more characters, such as 、。';
+      case 'game_lookup_samples_special_chars_remove':
+        return 'Remove special character';
+      case 'game_lookup_samples_special_chars_title':
+        return 'Special-character cell width';
+      case 'game_lookup_samples_title':
+        return 'Calibrate with samples';
+      case 'game_lookup_samples_unavailable':
+        return 'This layout cannot cover the complete line. Adjust the area or font size.';
+      case 'game_lookup_samples_zoom_in':
+        return 'Zoom in';
+      case 'game_lookup_samples_zoom_out':
+        return 'Zoom out';
+      case 'game_lookup_samples_zoom_reset':
+        return 'Fit screenshot';
+      case 'game_lookup_attached_calibration_ended':
+        return 'Calibration has ended. Close this dialog before starting again.';
+      case 'game_lookup_attached_calibration_paused':
+        return 'Calibration is paused while the game is hidden or in the background. Return with Alt+Tab and wait for the character highlights before clicking. You can still adjust and confirm here.';
+      case 'game_lookup_attached_calibration_preparing':
+        return 'Preparing click protection. Do not click the game dialogue yet.';
+      case 'game_lookup_attached_calibration_ready':
+        return 'Probe clicks are ready. Click inside the highlighted character boxes in order; clicks outside those boxes still control the game.';
+      case 'game_lookup_attached_calibration_region_help':
+        return 'Adjust the region here, or drag it over a screenshot in the sample editor. The game overlay only accepts highlighted character probes.';
+      case 'game_lookup_attached_calibration_text_changed':
+        return 'The dialogue changed. Cancel and reopen calibration for the current line.';
+      case 'game_lookup_attached_calibration_unavailable':
+        return 'Calibration is unavailable. Stop clicking the game dialogue; adjust the parameters or cancel calibration.';
+      case 'game_line_bulk_text_hint':
+        return 'Bulk text detected. Character lookup is paused.';
       default:
         return null;
     }
