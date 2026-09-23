@@ -1,9 +1,9 @@
 /// Generated file. Do not edit.
 ///
 /// Locales: 17
-/// Strings: 92718 (5454 per locale)
+/// Strings: 92905 (5465 per locale)
 ///
-/// Built on 2026-09-23 at 06:23 UTC
+/// Built on 2026-09-23 at 15:22 UTC
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
@@ -3080,8 +3080,6 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_ocr_engine_google_lens_desc =>
       'Needs internet and uploads page images to Google. Fast with no download, but quality is below the local model.';
   String get manga_ocr_engine_local_onnx => 'Local ONNX';
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Fully offline, best quality. Needs a one-time model download and is slow on old hardware.';
   String get manga_ocr_engine_none =>
       'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
   String get manga_ocr_engine_paired_host_desc =>
@@ -7719,6 +7717,23 @@ class _StringsEn implements BaseTranslations<AppLocale, _StringsEn> {
   String get manga_reader_ocr_unavailable_short =>
       'No OCR engine · download a model or switch engines in OCR settings';
   String get manga_reader_ocr_rerun => 'Re-run OCR on this volume…';
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  String get manga_ocr_local_model => 'Local OCR model';
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -12720,9 +12735,6 @@ class _StringsAr extends _StringsEn {
       'يحتاج اتصال بالإنترنت ويرفع صور الصفحات إلى Google. سريع بدون تحميل، لكن الجودة أقل من النموذج المحلي.';
   @override
   String get manga_ocr_engine_local_onnx => 'ONNX محلي';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'غير متصل بالكامل، أفضل جودة. يحتاج تحميل نموذج لمرة واحدة وبطيء على الأجهزة القديمة.';
   @override
   String get manga_ocr_engine_none =>
       'لا يوجد محرك OCR متاح. حمّل النماذج المدمجة أو عيّن مسار Mokuro CLI في الإعدادات.';
@@ -20715,6 +20727,35 @@ class _StringsAr extends _StringsEn {
       'لا يوجد محرك OCR · نزّل نموذجًا أو غيّر المحرك في إعدادات OCR';
   @override
   String get manga_reader_ocr_rerun => 'إعادة تشغيل OCR لهذا المجلد…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -25823,9 +25864,6 @@ class _StringsDe extends _StringsEn {
       'Benötigt Internet und lädt Seitenbilder zu Google hoch. Schnell ohne Download, aber Qualität unter dem lokalen Modell.';
   @override
   String get manga_ocr_engine_local_onnx => 'Lokales ONNX';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Vollständig offline, beste Qualität. Einmaliger Modell-Download erforderlich, auf älterer Hardware langsam.';
   @override
   String get manga_ocr_engine_none =>
       'Keine OCR-Engine verfügbar. Laden Sie die integrierten Modelle herunter oder legen Sie den Mokuro-CLI-Pfad in den Einstellungen fest.';
@@ -33952,6 +33990,35 @@ class _StringsDe extends _StringsEn {
       'Keine OCR-Engine · Modell in den OCR-Einstellungen laden oder Engine wechseln';
   @override
   String get manga_reader_ocr_rerun => 'OCR für diesen Band neu ausführen…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -39081,9 +39148,6 @@ class _StringsEs extends _StringsEn {
       'Necesita internet y sube imágenes de página a Google. Rápido sin descarga, pero la calidad está por debajo del modelo local.';
   @override
   String get manga_ocr_engine_local_onnx => 'ONNX local';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Completamente offline, mejor calidad. Necesita una descarga de modelo única y es lento en hardware antiguo.';
   @override
   String get manga_ocr_engine_none =>
       'No hay motor de OCR disponible. Descargue los modelos integrados o establezca la ruta del CLI de mokuro en los ajustes.';
@@ -47240,6 +47304,35 @@ class _StringsEs extends _StringsEn {
   @override
   String get manga_reader_ocr_rerun =>
       'Volver a ejecutar el OCR de este volumen…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -52379,9 +52472,6 @@ class _StringsFr extends _StringsEn {
       'Nécessite internet et envoie les images de pages à Google. Rapide sans téléchargement, mais la qualité est inférieure au modèle local.';
   @override
   String get manga_ocr_engine_local_onnx => 'ONNX local';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Entièrement hors ligne, meilleure qualité. Nécessite un téléchargement de modèle unique et est lent sur le matériel ancien.';
   @override
   String get manga_ocr_engine_none =>
       'Aucun moteur OCR disponible. Téléchargez les modèles intégrés ou définissez le chemin CLI mokuro dans les paramètres.';
@@ -60566,6 +60656,35 @@ class _StringsFr extends _StringsEn {
       'Aucun moteur OCR · téléchargez un modèle ou changez de moteur dans les réglages OCR';
   @override
   String get manga_reader_ocr_rerun => 'Relancer l’OCR de ce volume…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -65620,9 +65739,6 @@ class _StringsId extends _StringsEn {
       'Perlu internet dan mengunggah gambar halaman ke Google. Cepat tanpa unduhan, tetapi kualitas di bawah model lokal.';
   @override
   String get manga_ocr_engine_local_onnx => 'ONNX lokal';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Sepenuhnya offline, kualitas terbaik. Perlu unduhan model satu kali dan lambat di perangkat keras lama.';
   @override
   String get manga_ocr_engine_none =>
       'Tidak ada mesin OCR yang tersedia. Unduh model bawaan atau atur jalur CLI mokuro di pengaturan.';
@@ -73682,6 +73798,35 @@ class _StringsId extends _StringsEn {
       'Tidak ada mesin OCR · unduh model atau ganti mesin di pengaturan OCR';
   @override
   String get manga_reader_ocr_rerun => 'Jalankan ulang OCR untuk volume ini…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -78774,9 +78919,6 @@ class _StringsIt extends _StringsEn {
       'Richiede internet e carica le immagini delle pagine su Google. Veloce senza download, ma la qualità è inferiore al modello locale.';
   @override
   String get manga_ocr_engine_local_onnx => 'ONNX locale';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Completamente offline, migliore qualità. Richiede un download di modelli una tantum ed è lento su hardware datato.';
   @override
   String get manga_ocr_engine_none =>
       'Nessun motore OCR disponibile. Scarica i modelli integrati o imposta il percorso CLI di mokuro nelle impostazioni.';
@@ -86899,6 +87041,35 @@ class _StringsIt extends _StringsEn {
       'Nessun motore OCR · scarica un modello o cambia motore nelle impostazioni OCR';
   @override
   String get manga_reader_ocr_rerun => 'Riesegui l’OCR di questo volume…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -91719,9 +91890,6 @@ class _StringsJa extends _StringsEn {
       'インターネット接続が必要で、ページ画像をGoogleにアップロードします。ダウンロード不要で高速ですが、品質はローカルモデルより劣ります。';
   @override
   String get manga_ocr_engine_local_onnx => 'ローカルONNX';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      '完全オフライン、最高品質。初回のモデルダウンロードが必要で、古いハードウェアでは遅くなります。';
   @override
   String get manga_ocr_engine_none =>
       'OCRエンジンがありません。内蔵モデルをダウンロードするか、設定でmokuro CLIのパスを指定してください。';
@@ -99477,6 +99645,35 @@ class _StringsJa extends _StringsEn {
       '使える OCR エンジンがありません · OCR 設定でモデルをダウンロードするかエンジンを変更してください';
   @override
   String get manga_reader_ocr_rerun => 'この巻を再 OCR…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -104296,9 +104493,6 @@ class _StringsKo extends _StringsEn {
       '인터넷이 필요하며 페이지 이미지를 Google에 업로드합니다. 다운로드 없이 빠르지만 품질은 로컬 모델보다 낮습니다.';
   @override
   String get manga_ocr_engine_local_onnx => '로컬 ONNX';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      '완전 오프라인, 최고 품질. 일회성 모델 다운로드가 필요하며 오래된 하드웨어에서는 느립니다.';
   @override
   String get manga_ocr_engine_none =>
       '사용 가능한 OCR 엔진이 없습니다. 내장 모델을 다운로드하거나 설정에서 Mokuro CLI 경로를 지정하세요.';
@@ -112065,6 +112259,35 @@ class _StringsKo extends _StringsEn {
       '사용 가능한 OCR 엔진 없음 · OCR 설정에서 모델을 다운로드하거나 엔진을 바꾸세요';
   @override
   String get manga_reader_ocr_rerun => '이 권 OCR 다시 실행…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -117134,9 +117357,6 @@ class _StringsNl extends _StringsEn {
       'Vereist internet en uploadt paginaafbeeldingen naar Google. Snel zonder download, maar kwaliteit is lager dan het lokale model.';
   @override
   String get manga_ocr_engine_local_onnx => 'Lokale ONNX';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Volledig offline, beste kwaliteit. Vereist een eenmalige modeldownload en is traag op oude hardware.';
   @override
   String get manga_ocr_engine_none =>
       'Geen OCR-engine beschikbaar. Download ingebouwde modellen of stel het mokuro CLI-pad in bij instellingen.';
@@ -125236,6 +125456,35 @@ class _StringsNl extends _StringsEn {
       'Geen OCR-engine · download een model of kies een andere engine in de OCR-instellingen';
   @override
   String get manga_reader_ocr_rerun => 'OCR voor dit deel opnieuw uitvoeren…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -130334,9 +130583,6 @@ class _StringsPtBr extends _StringsEn {
       'Requer internet e envia imagens das páginas ao Google. Rápido sem download, mas a qualidade é inferior ao modelo local.';
   @override
   String get manga_ocr_engine_local_onnx => 'ONNX local';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Completamente offline, melhor qualidade. Requer download único de modelo e é lento em hardware antigo.';
   @override
   String get manga_ocr_engine_none =>
       'Nenhum motor de OCR disponível. Baixe os modelos integrados ou defina o caminho do CLI do mokuro nas configurações.';
@@ -138461,6 +138707,35 @@ class _StringsPtBr extends _StringsEn {
       'Nenhum mecanismo de OCR · baixe um modelo ou troque de mecanismo nas configurações de OCR';
   @override
   String get manga_reader_ocr_rerun => 'Refazer o OCR deste volume…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -143535,9 +143810,6 @@ class _StringsRu extends _StringsEn {
       'Требуется интернет, изображения страниц отправляются в Google. Быстро и без загрузки, но качество ниже локальной модели.';
   @override
   String get manga_ocr_engine_local_onnx => 'Локальный ONNX';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Полностью офлайн, лучшее качество. Требуется однократная загрузка модели, на старом оборудовании работает медленно.';
   @override
   String get manga_ocr_engine_none =>
       'Нет доступного движка OCR. Скачайте встроенные модели или укажите путь к mokuro CLI в настройках.';
@@ -151660,6 +151932,35 @@ class _StringsRu extends _StringsEn {
       'Нет движка OCR · загрузите модель или смените движок в настройках OCR';
   @override
   String get manga_reader_ocr_rerun => 'Повторно распознать этот том…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -156650,9 +156951,6 @@ class _StringsTh extends _StringsEn {
       'ต้องใช้อินเทอร์เน็ตและอัปโหลดภาพหน้าไปยัง Google เร็วโดยไม่ต้องดาวน์โหลด แต่คุณภาพต่ำกว่าโมเดลในเครื่อง';
   @override
   String get manga_ocr_engine_local_onnx => 'ONNX ในเครื่อง';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'ออฟไลน์ทั้งหมด คุณภาพดีที่สุด ต้องดาวน์โหลดโมเดลครั้งแรกและอาจช้าบนฮาร์ดแวร์รุ่นเก่า';
   @override
   String get manga_ocr_engine_none =>
       'ไม่มีเอนจิน OCR ที่พร้อมใช้งาน ดาวน์โหลดโมเดลในตัวหรือตั้งค่าเส้นทาง Mokuro CLI ในการตั้งค่า';
@@ -164655,6 +164953,35 @@ class _StringsTh extends _StringsEn {
       'ไม่มีเอนจิน OCR · ดาวน์โหลดโมเดลหรือเปลี่ยนเอนจินในการตั้งค่า OCR';
   @override
   String get manga_reader_ocr_rerun => 'รัน OCR เล่มนี้ใหม่…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -169710,9 +170037,6 @@ class _StringsTr extends _StringsEn {
       'İnternet gerektirir ve sayfa görsellerini Google\'a yükler. İndirme gerektirmez, hızlıdır ancak kalite yerel modelin altındadır.';
   @override
   String get manga_ocr_engine_local_onnx => 'Yerel ONNX';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Tamamen çevrimdışı, en iyi kalite. Tek seferlik bir model indirmesi gerektirir ve eski donanımda yavaştır.';
   @override
   String get manga_ocr_engine_none =>
       'OCR motoru mevcut değil. Yerleşik modelleri indirin veya ayarlardan mokuro CLI yolunu belirleyin.';
@@ -177765,6 +178089,35 @@ class _StringsTr extends _StringsEn {
       'OCR motoru yok · OCR ayarlarından model indirin veya motoru değiştirin';
   @override
   String get manga_reader_ocr_rerun => 'Bu cilt için OCR’ı yeniden çalıştır…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -182813,9 +183166,6 @@ class _StringsVi extends _StringsEn {
       'Cần internet và tải ảnh trang lên Google. Nhanh, không cần tải xuống, nhưng chất lượng kém hơn mô hình cục bộ.';
   @override
   String get manga_ocr_engine_local_onnx => 'ONNX cục bộ';
-  @override
-  String get manga_ocr_engine_local_onnx_desc =>
-      'Hoàn toàn ngoại tuyến, chất lượng tốt nhất. Cần tải mô hình một lần và chạy chậm trên phần cứng cũ.';
   @override
   String get manga_ocr_engine_none =>
       'Không có công cụ OCR. Tải xuống mô hình tích hợp hoặc đặt đường dẫn CLI mokuro trong cài đặt.';
@@ -190846,6 +191196,35 @@ class _StringsVi extends _StringsEn {
       'Không có công cụ OCR · hãy tải mô hình hoặc đổi công cụ trong cài đặt OCR';
   @override
   String get manga_reader_ocr_rerun => 'Chạy lại OCR cho tập này…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 // Path: <root>
@@ -195480,8 +195859,6 @@ class _StringsZhCn extends _StringsEn {
       '需要联网，会把页面图片上传给 Google。速度快、不用下模型，但质量不如本地模型。';
   @override
   String get manga_ocr_engine_local_onnx => '本地 ONNX';
-  @override
-  String get manga_ocr_engine_local_onnx_desc => '完全离线，质量最好。需要一次性下载模型，老设备上较慢。';
   @override
   String get manga_ocr_engine_none =>
       '没有可用的 OCR 引擎。请在设置中下载内置模型或配置 mokuro 命令行路径。';
@@ -202811,6 +203188,34 @@ class _StringsZhCn extends _StringsEn {
       '没有可用的 OCR 引擎 · 请在 OCR 设置中下载模型或换引擎';
   @override
   String get manga_reader_ocr_rerun => '重新识别本卷…';
+  @override
+  String get manga_ocr_parallel_tasks => '并行 OCR 任务';
+  @override
+  String get manga_ocr_parallel_auto => '自动（1–2 个任务）';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      '同时识别不同书籍，同一本书的章节按顺序处理。数量越大占用内存越多；低内存模式下最多运行一个任务。';
+  @override
+  String get manga_ocr_local_model => '本机 OCR 模型';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr（经典）';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu（快速，可用时使用 GPU）';
+  @override
+  String get manga_ocr_manga_model_desc => '日文漫画模型，配合横排文字识别。在 Windows 上使用 CPU。';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      '完全离线。首次使用需下载所选模型，速度和准确度取决于模型与硬件。';
+  @override
+  String get manga_ocr_baberu_desc =>
+      '含横排文字模型约 284 MB。在 Windows 上自动使用 GPU 图像编码与 CPU 文字解码，不可用时使用 CPU。部分名字和手写文字可能更不准确。对新启动的 OCR 任务生效。';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr（NVIDIA GPU 加速）';
+  @override
+  String get manga_ocr_cuda_desc =>
+      '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
+  @override
+  String get manga_ocr_runtime_installing => '正在安装本地 OCR 引擎…';
 }
 
 // Path: <root>
@@ -207483,8 +207888,6 @@ class _StringsZhHk extends _StringsEn {
       '需要聯網，會把頁面圖片上傳給 Google。速度快、不用下模型，但質量不如本地模型。';
   @override
   String get manga_ocr_engine_local_onnx => '本地 ONNX';
-  @override
-  String get manga_ocr_engine_local_onnx_desc => '完全離線，質量最好。需要一次性下載模型，老設備上較慢。';
   @override
   String get manga_ocr_engine_none =>
       '沒有可用的 OCR 引擎。請在設定中下載內置模型或配置 mokuro 命令行路徑。';
@@ -215070,6 +215473,35 @@ class _StringsZhHk extends _StringsEn {
       '沒有可用的 OCR 引擎 · 請在 OCR 設定中下載模型或更換引擎';
   @override
   String get manga_reader_ocr_rerun => '重新識別本卷…';
+  @override
+  String get manga_ocr_parallel_tasks => 'Parallel OCR tasks';
+  @override
+  String get manga_ocr_parallel_auto => 'Automatic (1-2 tasks)';
+  @override
+  String get manga_ocr_parallel_tasks_desc =>
+      'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+  @override
+  String get manga_ocr_local_model => 'Local OCR model';
+  @override
+  String get manga_ocr_manga_model => 'manga-ocr (classic)';
+  @override
+  String get manga_ocr_baberu_model => 'Baberu (fast, GPU when available)';
+  @override
+  String get manga_ocr_manga_model_desc =>
+      'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+  @override
+  String get manga_ocr_engine_local_onnx_desc =>
+      'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+  @override
+  String get manga_ocr_baberu_desc =>
+      'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+  @override
+  String get manga_ocr_cuda_model => 'manga-ocr (NVIDIA GPU)';
+  @override
+  String get manga_ocr_cuda_desc =>
+      'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+  @override
+  String get manga_ocr_runtime_installing => 'Installing the local OCR engine…';
 }
 
 /// Flat map(s) containing all translations.
@@ -219407,8 +219839,6 @@ extension on _StringsEn {
         return 'Needs internet and uploads page images to Google. Fast with no download, but quality is below the local model.';
       case 'manga_ocr_engine_local_onnx':
         return 'Local ONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Fully offline, best quality. Needs a one-time model download and is slow on old hardware.';
       case 'manga_ocr_engine_none':
         return 'No OCR engine available. Download built-in models or set the mokuro CLI path in settings.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -226316,6 +226746,30 @@ extension on _StringsEn {
         return 'No OCR engine · download a model or switch engines in OCR settings';
       case 'manga_reader_ocr_rerun':
         return 'Re-run OCR on this volume…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -230650,8 +231104,6 @@ extension on _StringsAr {
         return 'يحتاج اتصال بالإنترنت ويرفع صور الصفحات إلى Google. سريع بدون تحميل، لكن الجودة أقل من النموذج المحلي.';
       case 'manga_ocr_engine_local_onnx':
         return 'ONNX محلي';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'غير متصل بالكامل، أفضل جودة. يحتاج تحميل نموذج لمرة واحدة وبطيء على الأجهزة القديمة.';
       case 'manga_ocr_engine_none':
         return 'لا يوجد محرك OCR متاح. حمّل النماذج المدمجة أو عيّن مسار Mokuro CLI في الإعدادات.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -237557,6 +238009,30 @@ extension on _StringsAr {
         return 'لا يوجد محرك OCR · نزّل نموذجًا أو غيّر المحرك في إعدادات OCR';
       case 'manga_reader_ocr_rerun':
         return 'إعادة تشغيل OCR لهذا المجلد…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -241917,8 +242393,6 @@ extension on _StringsDe {
         return 'Benötigt Internet und lädt Seitenbilder zu Google hoch. Schnell ohne Download, aber Qualität unter dem lokalen Modell.';
       case 'manga_ocr_engine_local_onnx':
         return 'Lokales ONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Vollständig offline, beste Qualität. Einmaliger Modell-Download erforderlich, auf älterer Hardware langsam.';
       case 'manga_ocr_engine_none':
         return 'Keine OCR-Engine verfügbar. Laden Sie die integrierten Modelle herunter oder legen Sie den Mokuro-CLI-Pfad in den Einstellungen fest.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -248847,6 +249321,30 @@ extension on _StringsDe {
         return 'Keine OCR-Engine · Modell in den OCR-Einstellungen laden oder Engine wechseln';
       case 'manga_reader_ocr_rerun':
         return 'OCR für diesen Band neu ausführen…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -253199,8 +253697,6 @@ extension on _StringsEs {
         return 'Necesita internet y sube imágenes de página a Google. Rápido sin descarga, pero la calidad está por debajo del modelo local.';
       case 'manga_ocr_engine_local_onnx':
         return 'ONNX local';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Completamente offline, mejor calidad. Necesita una descarga de modelo única y es lento en hardware antiguo.';
       case 'manga_ocr_engine_none':
         return 'No hay motor de OCR disponible. Descargue los modelos integrados o establezca la ruta del CLI de mokuro en los ajustes.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -260127,6 +260623,30 @@ extension on _StringsEs {
         return 'Sin motor de OCR · descarga un modelo o cambia de motor en los ajustes de OCR';
       case 'manga_reader_ocr_rerun':
         return 'Volver a ejecutar el OCR de este volumen…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -264484,8 +265004,6 @@ extension on _StringsFr {
         return 'Nécessite internet et envoie les images de pages à Google. Rapide sans téléchargement, mais la qualité est inférieure au modèle local.';
       case 'manga_ocr_engine_local_onnx':
         return 'ONNX local';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Entièrement hors ligne, meilleure qualité. Nécessite un téléchargement de modèle unique et est lent sur le matériel ancien.';
       case 'manga_ocr_engine_none':
         return 'Aucun moteur OCR disponible. Téléchargez les modèles intégrés ou définissez le chemin CLI mokuro dans les paramètres.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -271415,6 +271933,30 @@ extension on _StringsFr {
         return 'Aucun moteur OCR · téléchargez un modèle ou changez de moteur dans les réglages OCR';
       case 'manga_reader_ocr_rerun':
         return 'Relancer l’OCR de ce volume…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -275760,8 +276302,6 @@ extension on _StringsId {
         return 'Perlu internet dan mengunggah gambar halaman ke Google. Cepat tanpa unduhan, tetapi kualitas di bawah model lokal.';
       case 'manga_ocr_engine_local_onnx':
         return 'ONNX lokal';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Sepenuhnya offline, kualitas terbaik. Perlu unduhan model satu kali dan lambat di perangkat keras lama.';
       case 'manga_ocr_engine_none':
         return 'Tidak ada mesin OCR yang tersedia. Unduh model bawaan atau atur jalur CLI mokuro di pengaturan.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -282673,6 +283213,30 @@ extension on _StringsId {
         return 'Tidak ada mesin OCR · unduh model atau ganti mesin di pengaturan OCR';
       case 'manga_reader_ocr_rerun':
         return 'Jalankan ulang OCR untuk volume ini…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -287025,8 +287589,6 @@ extension on _StringsIt {
         return 'Richiede internet e carica le immagini delle pagine su Google. Veloce senza download, ma la qualità è inferiore al modello locale.';
       case 'manga_ocr_engine_local_onnx':
         return 'ONNX locale';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Completamente offline, migliore qualità. Richiede un download di modelli una tantum ed è lento su hardware datato.';
       case 'manga_ocr_engine_none':
         return 'Nessun motore OCR disponibile. Scarica i modelli integrati o imposta il percorso CLI di mokuro nelle impostazioni.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -293954,6 +294516,30 @@ extension on _StringsIt {
         return 'Nessun motore OCR · scarica un modello o cambia motore nelle impostazioni OCR';
       case 'manga_reader_ocr_rerun':
         return 'Riesegui l’OCR di questo volume…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -298274,8 +298860,6 @@ extension on _StringsJa {
         return 'インターネット接続が必要で、ページ画像をGoogleにアップロードします。ダウンロード不要で高速ですが、品質はローカルモデルより劣ります。';
       case 'manga_ocr_engine_local_onnx':
         return 'ローカルONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return '完全オフライン、最高品質。初回のモデルダウンロードが必要で、古いハードウェアでは遅くなります。';
       case 'manga_ocr_engine_none':
         return 'OCRエンジンがありません。内蔵モデルをダウンロードするか、設定でmokuro CLIのパスを指定してください。';
       case 'manga_ocr_engine_paired_host_desc':
@@ -305159,6 +305743,30 @@ extension on _StringsJa {
         return '使える OCR エンジンがありません · OCR 設定でモデルをダウンロードするかエンジンを変更してください';
       case 'manga_reader_ocr_rerun':
         return 'この巻を再 OCR…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -309480,8 +310088,6 @@ extension on _StringsKo {
         return '인터넷이 필요하며 페이지 이미지를 Google에 업로드합니다. 다운로드 없이 빠르지만 품질은 로컬 모델보다 낮습니다.';
       case 'manga_ocr_engine_local_onnx':
         return '로컬 ONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return '완전 오프라인, 최고 품질. 일회성 모델 다운로드가 필요하며 오래된 하드웨어에서는 느립니다.';
       case 'manga_ocr_engine_none':
         return '사용 가능한 OCR 엔진이 없습니다. 내장 모델을 다운로드하거나 설정에서 Mokuro CLI 경로를 지정하세요.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -316369,6 +316975,30 @@ extension on _StringsKo {
         return '사용 가능한 OCR 엔진 없음 · OCR 설정에서 모델을 다운로드하거나 엔진을 바꾸세요';
       case 'manga_reader_ocr_rerun':
         return '이 권 OCR 다시 실행…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -320720,8 +321350,6 @@ extension on _StringsNl {
         return 'Vereist internet en uploadt paginaafbeeldingen naar Google. Snel zonder download, maar kwaliteit is lager dan het lokale model.';
       case 'manga_ocr_engine_local_onnx':
         return 'Lokale ONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Volledig offline, beste kwaliteit. Vereist een eenmalige modeldownload en is traag op oude hardware.';
       case 'manga_ocr_engine_none':
         return 'Geen OCR-engine beschikbaar. Download ingebouwde modellen of stel het mokuro CLI-pad in bij instellingen.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -327645,6 +328273,30 @@ extension on _StringsNl {
         return 'Geen OCR-engine · download een model of kies een andere engine in de OCR-instellingen';
       case 'manga_reader_ocr_rerun':
         return 'OCR voor dit deel opnieuw uitvoeren…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -331996,8 +332648,6 @@ extension on _StringsPtBr {
         return 'Requer internet e envia imagens das páginas ao Google. Rápido sem download, mas a qualidade é inferior ao modelo local.';
       case 'manga_ocr_engine_local_onnx':
         return 'ONNX local';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Completamente offline, melhor qualidade. Requer download único de modelo e é lento em hardware antigo.';
       case 'manga_ocr_engine_none':
         return 'Nenhum motor de OCR disponível. Baixe os modelos integrados ou defina o caminho do CLI do mokuro nas configurações.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -338916,6 +339566,30 @@ extension on _StringsPtBr {
         return 'Nenhum mecanismo de OCR · baixe um modelo ou troque de mecanismo nas configurações de OCR';
       case 'manga_reader_ocr_rerun':
         return 'Refazer o OCR deste volume…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -343274,8 +343948,6 @@ extension on _StringsRu {
         return 'Требуется интернет, изображения страниц отправляются в Google. Быстро и без загрузки, но качество ниже локальной модели.';
       case 'manga_ocr_engine_local_onnx':
         return 'Локальный ONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Полностью офлайн, лучшее качество. Требуется однократная загрузка модели, на старом оборудовании работает медленно.';
       case 'manga_ocr_engine_none':
         return 'Нет доступного движка OCR. Скачайте встроенные модели или укажите путь к mokuro CLI в настройках.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -350193,6 +350865,30 @@ extension on _StringsRu {
         return 'Нет движка OCR · загрузите модель или смените движок в настройках OCR';
       case 'manga_reader_ocr_rerun':
         return 'Повторно распознать этот том…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -354531,8 +355227,6 @@ extension on _StringsTh {
         return 'ต้องใช้อินเทอร์เน็ตและอัปโหลดภาพหน้าไปยัง Google เร็วโดยไม่ต้องดาวน์โหลด แต่คุณภาพต่ำกว่าโมเดลในเครื่อง';
       case 'manga_ocr_engine_local_onnx':
         return 'ONNX ในเครื่อง';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'ออฟไลน์ทั้งหมด คุณภาพดีที่สุด ต้องดาวน์โหลดโมเดลครั้งแรกและอาจช้าบนฮาร์ดแวร์รุ่นเก่า';
       case 'manga_ocr_engine_none':
         return 'ไม่มีเอนจิน OCR ที่พร้อมใช้งาน ดาวน์โหลดโมเดลในตัวหรือตั้งค่าเส้นทาง Mokuro CLI ในการตั้งค่า';
       case 'manga_ocr_engine_paired_host_desc':
@@ -361439,6 +362133,30 @@ extension on _StringsTh {
         return 'ไม่มีเอนจิน OCR · ดาวน์โหลดโมเดลหรือเปลี่ยนเอนจินในการตั้งค่า OCR';
       case 'manga_reader_ocr_rerun':
         return 'รัน OCR เล่มนี้ใหม่…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -365787,8 +366505,6 @@ extension on _StringsTr {
         return 'İnternet gerektirir ve sayfa görsellerini Google\'a yükler. İndirme gerektirmez, hızlıdır ancak kalite yerel modelin altındadır.';
       case 'manga_ocr_engine_local_onnx':
         return 'Yerel ONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Tamamen çevrimdışı, en iyi kalite. Tek seferlik bir model indirmesi gerektirir ve eski donanımda yavaştır.';
       case 'manga_ocr_engine_none':
         return 'OCR motoru mevcut değil. Yerleşik modelleri indirin veya ayarlardan mokuro CLI yolunu belirleyin.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -372701,6 +373417,30 @@ extension on _StringsTr {
         return 'OCR motoru yok · OCR ayarlarından model indirin veya motoru değiştirin';
       case 'manga_reader_ocr_rerun':
         return 'Bu cilt için OCR’ı yeniden çalıştır…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -377045,8 +377785,6 @@ extension on _StringsVi {
         return 'Cần internet và tải ảnh trang lên Google. Nhanh, không cần tải xuống, nhưng chất lượng kém hơn mô hình cục bộ.';
       case 'manga_ocr_engine_local_onnx':
         return 'ONNX cục bộ';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return 'Hoàn toàn ngoại tuyến, chất lượng tốt nhất. Cần tải mô hình một lần và chạy chậm trên phần cứng cũ.';
       case 'manga_ocr_engine_none':
         return 'Không có công cụ OCR. Tải xuống mô hình tích hợp hoặc đặt đường dẫn CLI mokuro trong cài đặt.';
       case 'manga_ocr_engine_paired_host_desc':
@@ -383957,6 +384695,30 @@ extension on _StringsVi {
         return 'Không có công cụ OCR · hãy tải mô hình hoặc đổi công cụ trong cài đặt OCR';
       case 'manga_reader_ocr_rerun':
         return 'Chạy lại OCR cho tập này…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
@@ -388260,8 +389022,6 @@ extension on _StringsZhCn {
         return '需要联网，会把页面图片上传给 Google。速度快、不用下模型，但质量不如本地模型。';
       case 'manga_ocr_engine_local_onnx':
         return '本地 ONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return '完全离线，质量最好。需要一次性下载模型，老设备上较慢。';
       case 'manga_ocr_engine_none':
         return '没有可用的 OCR 引擎。请在设置中下载内置模型或配置 mokuro 命令行路径。';
       case 'manga_ocr_engine_paired_host_desc':
@@ -395105,6 +395865,30 @@ extension on _StringsZhCn {
         return '没有可用的 OCR 引擎 · 请在 OCR 设置中下载模型或换引擎';
       case 'manga_reader_ocr_rerun':
         return '重新识别本卷…';
+      case 'manga_ocr_parallel_tasks':
+        return '并行 OCR 任务';
+      case 'manga_ocr_parallel_auto':
+        return '自动（1–2 个任务）';
+      case 'manga_ocr_parallel_tasks_desc':
+        return '同时识别不同书籍，同一本书的章节按顺序处理。数量越大占用内存越多；低内存模式下最多运行一个任务。';
+      case 'manga_ocr_local_model':
+        return '本机 OCR 模型';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr（经典）';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu（快速，可用时使用 GPU）';
+      case 'manga_ocr_manga_model_desc':
+        return '日文漫画模型，配合横排文字识别。在 Windows 上使用 CPU。';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return '完全离线。首次使用需下载所选模型，速度和准确度取决于模型与硬件。';
+      case 'manga_ocr_baberu_desc':
+        return '含横排文字模型约 284 MB。在 Windows 上自动使用 GPU 图像编码与 CPU 文字解码，不可用时使用 CPU。部分名字和手写文字可能更不准确。对新启动的 OCR 任务生效。';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr（NVIDIA GPU 加速）';
+      case 'manga_ocr_cuda_desc':
+        return '原版 manga-ocr，使用 GPU 批量识别。需要 NVIDIA 显卡；首次下载约 4 GB，应用自动安装独立的 Python 和 CUDA 运行库。';
+      case 'manga_ocr_runtime_installing':
+        return '正在安装本地 OCR 引擎…';
       default:
         return null;
     }
@@ -399414,8 +400198,6 @@ extension on _StringsZhHk {
         return '需要聯網，會把頁面圖片上傳給 Google。速度快、不用下模型，但質量不如本地模型。';
       case 'manga_ocr_engine_local_onnx':
         return '本地 ONNX';
-      case 'manga_ocr_engine_local_onnx_desc':
-        return '完全離線，質量最好。需要一次性下載模型，老設備上較慢。';
       case 'manga_ocr_engine_none':
         return '沒有可用的 OCR 引擎。請在設定中下載內置模型或配置 mokuro 命令行路徑。';
       case 'manga_ocr_engine_paired_host_desc':
@@ -406288,6 +407070,30 @@ extension on _StringsZhHk {
         return '沒有可用的 OCR 引擎 · 請在 OCR 設定中下載模型或更換引擎';
       case 'manga_reader_ocr_rerun':
         return '重新識別本卷…';
+      case 'manga_ocr_parallel_tasks':
+        return 'Parallel OCR tasks';
+      case 'manga_ocr_parallel_auto':
+        return 'Automatic (1-2 tasks)';
+      case 'manga_ocr_parallel_tasks_desc':
+        return 'Recognize different books at once. Chapters of the same book stay in order. Higher values use more memory; low-memory mode limits this to one.';
+      case 'manga_ocr_local_model':
+        return 'Local OCR model';
+      case 'manga_ocr_manga_model':
+        return 'manga-ocr (classic)';
+      case 'manga_ocr_baberu_model':
+        return 'Baberu (fast, GPU when available)';
+      case 'manga_ocr_manga_model_desc':
+        return 'Japanese manga model with horizontal-line recognition. Runs on CPU on Windows.';
+      case 'manga_ocr_engine_local_onnx_desc':
+        return 'Fully offline. Download the selected model once; speed and accuracy depend on the model and hardware.';
+      case 'manga_ocr_baberu_desc':
+        return 'About 284 MB including horizontal-line models. Windows uses GPU image encoding with CPU text decoding when available, otherwise CPU. Some names and handwriting may be less accurate. Applies to new OCR tasks.';
+      case 'manga_ocr_cuda_model':
+        return 'manga-ocr (NVIDIA GPU)';
+      case 'manga_ocr_cuda_desc':
+        return 'Original manga-ocr with GPU batching. Requires NVIDIA GPU; the first download includes a private Python and CUDA runtime (about 4 GB). No separate installation needed.';
+      case 'manga_ocr_runtime_installing':
+        return 'Installing the local OCR engine…';
       default:
         return null;
     }
